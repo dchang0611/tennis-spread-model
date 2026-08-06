@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Evidence-first tennis game-spread recommendations for Novig markets.">
+  <meta name="theme-color" content="#071613">
+  <title>Tennis Spread Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Tennis Spread Lab home">
+      <span class="brand-mark">TS</span>
+      <span>Tennis Spread Lab</span>
+    </a>
+    <div class="header-meta">
+      <span class="source-pill">NOVIG LINES</span>
+      <span id="updatedText">Awaiting first run</span>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">GAME-SPREAD DECISION BOARD</p>
+        <h1>Find the line.<br><span>Price the cover.</span></h1>
+        <p class="hero-copy">A compact, uncertainty-aware tennis model built to identify when a player is more likely to cover than the market price implies.</p>
+      </div>
+      <div class="hero-score" aria-label="Model betting rules">
+        <div><strong>4%+</strong><span>minimum edge</span></div>
+        <div><strong>5%+</strong><span>minimum expected ROI</span></div>
+        <div><strong>1</strong><span>maximum play per match</span></div>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Dashboard sections">
+      <button class="tab active" data-panel="boardPanel">Spread Board</button>
+      <button class="tab" data-panel="historyPanel">Historical Results</button>
+      <button class="tab" data-panel="performancePanel">Model Performance</button>
+      <button class="tab" data-panel="methodPanel">How It Works</button>
+    </nav>
+
+    <section id="boardPanel" class="panel active" aria-labelledby="boardTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">TODAY</p>
+          <h2 id="boardTitle">Qualified spread plays</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter spread decisions">
+          <button class="filter active" data-filter="BET">Bets</button>
+          <button class="filter" data-filter="ALL">All lines</button>
+          <button class="filter" data-filter="PASS">Passes</button>
+        </div>
+      </div>
+      <div id="statusBanner" class="status-banner loading">Loading the latest board…</div>
+      <div id="board" class="board-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="historyPanel" class="panel" aria-labelledby="historyTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">RECORDED BEFORE MATCH TIME</p>
+          <h2 id="historyTitle">Historical betting results</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter historical results">
+          <button class="history-filter active" data-history-filter="ALL">All</button>
+          <button class="history-filter" data-history-filter="WIN">Wins</button>
+          <button class="history-filter" data-history-filter="LOSS">Losses</button>
+        </div>
+      </div>
+      <div id="historyMetrics" class="metric-grid"></div>
+      <div id="historyNotice" class="status-banner closed"></div>
+      <div class="history-table-wrap">
+        <table class="history-table">
+          <thead><tr><th>Date</th><th>Play</th><th>Price</th><th>Model</th><th>Market</th><th>Result</th><th>Units</th></tr></thead>
+          <tbody id="historyRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="performancePanel" class="panel" aria-labelledby="performanceTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">OUT-OF-SAMPLE ONLY</p>
+          <h2 id="performanceTitle">Rolling model performance</h2>
+        </div>
+      </div>
+      <div id="performanceCards" class="metric-grid"></div>
+      <div class="explain-card">
+        <h3>What counts as evidence?</h3>
+        <p>Every performance result shown here comes from a future period the model did not train on. Betting ROI will remain unavailable until historical Novig lines or enough saved forward recommendations exist.</p>
+      </div>
+    </section>
+
+    <section id="methodPanel" class="panel" aria-labelledby="methodTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">COMPACT BY DESIGN</p>
+          <h2 id="methodTitle">One concept, one vote</h2>
+        </div>
+      </div>
+      <div class="method-grid">
+        <article><span>01</span><h3>Project the margin</h3><p>Overall and surface strength, serve and return quality, recent surface margin, matchup fit, workload, and context estimate the final game differential.</p></article>
+        <article><span>02</span><h3>Price each spread</h3><p>Rolling out-of-sample errors create a full range of plausible margins and a cover probability for every Novig alternate line.</p></article>
+        <article><span>03</span><h3>Remove the market hold</h3><p>Both sides of each spread are normalized into a paired no-vig probability before the model claims an edge.</p></article>
+        <article><span>04</span><h3>Apply the safety gates</h3><p>A play needs sufficient probability edge, expected return, data quality, and uncertainty-adjusted support. Otherwise it is a pass.</p></article>
+      </div>
+      <div class="feature-strip" aria-label="Core model feature families">
+        <span>Elo</span><span>Surface</span><span>Serve</span><span>Return</span><span>Margin</span><span>Matchup</span><span>Workload</span><span>Format</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Research tool only. Prices move, edges are uncertain, and no model guarantees profit.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
