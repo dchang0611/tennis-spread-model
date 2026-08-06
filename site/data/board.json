@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "generated_at": null,
+  "status": "awaiting_market_data",
+  "status_message": "No current Novig market file has been scored. The board is intentionally closed.",
+  "source": "Novig game spreads",
+  "model": {
+    "name": "Compact Tennis Spread Model",
+    "version": "1.0",
+    "minimum_probability_edge": 0.04,
+    "minimum_expected_roi": 0.05,
+    "one_bet_per_match": true,
+    "feature_count": 11,
+    "validation_method": "Expanding-window rolling validation"
+  },
+  "picks": [],
+  "validation": [],
+  "history": [],
+  "history_summary": {
+    "tracked_bets": 0,
+    "settled_bets": 0,
+    "wins": 0,
+    "losses": 0,
+    "pushes": 0,
+    "voids": 0,
+    "win_rate": null,
+    "profit_units": 0,
+    "roi": null,
+    "average_clv": null
+  }
+}
