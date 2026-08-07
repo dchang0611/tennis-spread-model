@@ -125,8 +125,11 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today") -> p
             heading = page.get_by_text("Game Spread", exact=True)
             if heading.count() != 1:
                 continue
-            section = heading.locator("..").locator("..")
-            tokens = section.locator('[data-testid="Text"]').all_inner_texts()
+            # The spread ladder is the third ancestor of its heading.  Novig
+            # no longer exposes the old data-testid=Text attributes, so parse
+            # the verified section text instead of depending on those skins.
+            section = heading.locator("..").locator("..").locator("..")
+            tokens = [line.strip() for line in section.inner_text().splitlines() if line.strip()]
             for spread_a, odds_a, spread_b, odds_b in parse_spread_tokens(tokens):
                 rows.append({
                     "date": match_date,
