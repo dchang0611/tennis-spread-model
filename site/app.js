@@ -6,6 +6,7 @@ const fmtOdds = value => { const number = Number(value); return Number.isFinite(
 const safe = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 
 function renderBoard() {
+  // Rationale text is generated from distinct model-driver families upstream.
   const root = document.querySelector('#board');
   const picks = (state.data?.picks || []).filter(row => inDateRange(row.date));
   const filtered = state.filter === 'ALL' ? picks : picks.filter(row => row.recommendation === state.filter);
