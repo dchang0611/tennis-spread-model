@@ -91,14 +91,23 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today") -> p
     match_date = datetime.now(PACIFIC).date().isoformat()
     rows: list[dict] = []
     with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(headless=True)
+        browser = playwright.chromium.launch(
+            headless=True,
+            args=["--disable-blink-features=AutomationControlled"],
+        )
         # Novig derives Today/Tomorrow from the browser timezone.  The hosted
         # runner is UTC, while the board and nightly schedule are Pacific.
         page = browser.new_page(
             viewport={"width": 1440, "height": 1000},
             timezone_id="America/Los_Angeles",
             locale="en-US",
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/138.0.0.0 Safari/537.36"
+            ),
         )
+        page.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
         page.goto(ATP_URL, wait_until="domcontentloaded", timeout=45_000)
         page.get_by_text("7 More", exact=True).first.wait_for(timeout=20_000)
         events = collect_event_cards(page, day_label)
