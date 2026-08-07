@@ -1,4 +1,3 @@
-
 name: Build and deploy tennis spread board
 
 on:
@@ -53,7 +52,7 @@ jobs:
         shell: bash
         run: |
           rm -f data/scrape_ok
-          if python novig_scraper.py --output data/novig_spreads.csv --tournament "ATP Toronto" --surface Hard --day-label Today --minimum-matches 2; then
+          if python novig_scraper.py --output data/novig_spreads.csv --tournament "ATP" --surface Hard --day-label Today --minimum-matches 2; then
             touch data/scrape_ok
           else
             echo "Novig has no usable Today slate yet; publishing a closed board while retaining history."
@@ -93,4 +92,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-

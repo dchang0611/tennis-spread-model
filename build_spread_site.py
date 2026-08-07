@@ -32,7 +32,26 @@ def compact_pick(row: dict) -> dict:
         "probability_edge", "expected_roi", "conservative_expected_roi",
         "residual_sample", "recommendation",
     ]
-    return {key: row.get(key) for key in fields}
+    pick = {key: row.get(key) for key in fields}
+    pick["rationale"] = rationale_for_pick(row)
+    return pick
+
+
+def rationale_for_pick(row: dict) -> str:
+    cover = row.get("cover_probability")
+    market = row.get("market_no_vig_probability")
+    edge = row.get("probability_edge")
+    projected = row.get("predicted_margin_for_player")
+    spread = row.get("spread")
+    if any(value is None for value in [cover, market, edge, projected, spread]):
+        return "Insufficient verified inputs to explain this line."
+    cushion = float(projected) + float(spread)
+    direction = "above" if cushion >= 0 else "below"
+    return (
+        f"The model gives this line a {float(cover) * 100:.1f}% cover chance versus "
+        f"{float(market) * 100:.1f}% from the paired Novig price, a {float(edge) * 100:.1f}-point edge. "
+        f"Its projected game margin sits {abs(cushion):.1f} games {direction} the cover threshold."
+    )
 
 
 def build_payload() -> dict:

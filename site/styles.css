@@ -1,13 +1,13 @@
 :root {
   --ink: #f4f1e8;
   --muted: #a8b6ad;
-  --night: #07100e;
-  --panel: #0d1b17;
-  --panel-2: #12251f;
-  --line: #274038;
-  --lime: #c8ff4a;
-  --mint: #5ee0b5;
-  --orange: #ff9d5c;
+  --night: #06162b;
+  --panel: #0b2340;
+  --panel-2: #10345c;
+  --line: #255487;
+  --lime: #d7f43a;
+  --mint: #39bdf8;
+  --orange: #ff8d3a;
   --red: #ff786f;
   --display: Georgia, 'Times New Roman', serif;
   --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -16,13 +16,13 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--ink); background: var(--night); font-family: var(--sans); min-height: 100vh; }
-body::before { content: ''; position: fixed; inset: 0; pointer-events: none; background: radial-gradient(circle at 78% 8%, rgba(94,224,181,.12), transparent 31%), linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px); background-size: auto, 100% 56px; z-index: -1; }
+body::before { content: ''; position: fixed; inset: 0; pointer-events: none; background: radial-gradient(circle at 78% 8%, rgba(57,189,248,.18), transparent 31%), radial-gradient(circle at 15% 20%, rgba(25,95,165,.20), transparent 34%), linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px); background-size: auto, auto, 100% 56px; z-index: -1; }
 button, a { font: inherit; }
 button { color: inherit; }
 
 .site-header { min-height: 70px; padding: 0 clamp(20px,5vw,72px); border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .brand { color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 11px; font-weight: 750; letter-spacing: -.02em; }
-.brand-mark { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid var(--lime); border-radius: 50%; color: var(--lime); font-size: 12px; letter-spacing: .05em; }
+.brand-mark { width: 34px; height: 34px; display: grid; place-items: center; border: 2px solid #ffe44c; border-radius: 50%; color: #ffe44c; font-size: 27px; line-height: 1; box-shadow: inset -5px -4px 0 rgba(0,0,0,.12); }
 .header-meta { display: flex; align-items: center; gap: 14px; color: var(--muted); font-size: 12px; }
 .source-pill { color: var(--night); background: var(--lime); border-radius: 999px; padding: 6px 9px; font-weight: 850; letter-spacing: .08em; }
 
@@ -33,11 +33,9 @@ h1, h2 { font-family: var(--display); font-weight: 500; letter-spacing: -.045em;
 h1 { font-size: clamp(58px,8vw,112px); line-height: .86; }
 h1 span { color: var(--lime); }
 .hero-copy { color: var(--muted); max-width: 650px; line-height: 1.65; font-size: 16px; margin: 28px 0 0; }
-.hero-score { border: 1px solid var(--line); border-radius: 2px; background: rgba(13,27,23,.72); }
-.hero-score div { padding: 22px 25px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); }
-.hero-score div:last-child { border-bottom: 0; }
-.hero-score strong { color: var(--lime); font-family: var(--display); font-size: 34px; font-weight: 500; }
-.hero-score span { color: var(--muted); font-size: 12px; text-align: right; }
+.global-date-card { border: 1px solid var(--line); background: rgba(11,35,64,.82); padding: 26px; }
+.global-date-card h2 { font-size: 35px; margin-bottom: 20px; }
+.global-date-card > p:last-child { color: var(--muted); font-size: 12px; margin: 18px 0 0; }
 
 .tabs { display: flex; gap: 30px; border-bottom: 1px solid var(--line); overflow-x: auto; }
 .tab { padding: 17px 0 14px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--muted); cursor: pointer; white-space: nowrap; font-weight: 700; }
@@ -62,6 +60,8 @@ h2 { font-size: clamp(34px,5vw,58px); }
 .board-grid { display: grid; gap: 10px; }
 .pick-card { display: grid; grid-template-columns: minmax(220px,1.4fr) repeat(5,minmax(90px,.7fr)); gap: 20px; align-items: center; padding: 22px; background: var(--panel); border: 1px solid var(--line); }
 .pick-card.bet { border-left: 5px solid var(--lime); background: linear-gradient(90deg, rgba(200,255,74,.08), var(--panel) 28%); }
+.rationale { grid-column: 1 / -1; padding-top: 14px; border-top: 1px solid var(--line); }
+.rationale p { margin: 7px 0 0; color: #d7e8f6; line-height: 1.55; font-size: 13px; }
 .player-name { font-family: var(--display); font-size: 25px; }
 .match-context, .metric-label { color: var(--muted); font-size: 11px; }
 .metric-value { display: block; margin-top: 5px; font-size: 17px; font-weight: 750; }
@@ -101,6 +101,13 @@ h2 { font-size: clamp(34px,5vw,58px); }
 .method-grid p { color: var(--muted); line-height: 1.6; margin: 0; max-width: 500px; }
 .feature-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .feature-strip span { border: 1px solid var(--line); color: var(--mint); padding: 8px 11px; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; }
+.method-details { display: grid; grid-template-columns: .8fr 1.2fr; gap: 12px; margin-top: 18px; }
+.method-details > article { background: var(--panel); border: 1px solid var(--line); padding: 24px; }
+.method-details h3 { font-family: var(--display); font-size: 27px; font-weight: 500; margin: 0 0 10px; }
+.method-details p { color: var(--muted); line-height: 1.6; }
+.metric-grid.compact { grid-template-columns: repeat(4,1fr); }
+.metric-grid.compact .metric-card { padding: 14px; }
+.metric-grid.compact .metric-card strong { font-size: 28px; }
 footer { border-top: 1px solid var(--line); color: var(--muted); padding: 28px 20px 42px; text-align: center; font-size: 12px; }
 
 @media (max-width: 900px) {
@@ -121,6 +128,6 @@ footer { border-top: 1px solid var(--line); color: var(--muted); padding: 28px 2
   .pick-card { grid-template-columns: 1fr 1fr; gap: 16px; }
   .pick-card > :first-child, .pick-card > :last-child { grid-column: 1 / -1; }
   .decision { justify-self: start; }
-  .metric-grid, .method-grid { grid-template-columns: 1fr; }
+  .metric-grid, .method-grid, .method-details, .metric-grid.compact { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

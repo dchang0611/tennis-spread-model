@@ -1,5 +1,6 @@
 import unittest
 
+from build_spread_site import rationale_for_pick
 from novig_scraper import parse_event_card, parse_spread_tokens
 from update_spread_history import profit_for_result, score_game_margin
 
@@ -23,6 +24,18 @@ class NovigAutomationTests(unittest.TestCase):
         self.assertAlmostEqual(profit_for_result("WIN", 138), 1.38)
         self.assertAlmostEqual(profit_for_result("WIN", -200), 0.5)
         self.assertEqual(profit_for_result("LOSS", 138), -1.0)
+
+    def test_rationale_is_plain_english_and_line_specific(self):
+        text = rationale_for_pick({
+            "cover_probability": 0.62,
+            "market_no_vig_probability": 0.51,
+            "probability_edge": 0.11,
+            "predicted_margin_for_player": 1.2,
+            "spread": 2.5,
+        })
+        self.assertIn("62.0% cover chance", text)
+        self.assertIn("11.0-point edge", text)
+        self.assertIn("3.7 games above", text)
 
 
 if __name__ == "__main__":

@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Evidence-first tennis game-spread recommendations for Novig markets.">
   <meta name="theme-color" content="#071613">
-  <title>Tennis Spread Lab</title>
+  <title>DC Tennis Betting Model</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Tennis Spread Lab home">
-      <span class="brand-mark">TS</span>
-      <span>Tennis Spread Lab</span>
+    <a class="brand" href="#top" aria-label="DC Tennis Betting Model home">
+      <span class="brand-mark" aria-hidden="true">●</span>
+      <span>DC Tennis Betting Model</span>
     </a>
     <div class="header-meta">
       <span class="source-pill">NOVIG LINES</span>
@@ -23,21 +23,25 @@
   <main id="top">
     <section class="hero">
       <div>
-        <p class="eyebrow">GAME-SPREAD DECISION BOARD</p>
-        <h1>Find the line.<br><span>Price the cover.</span></h1>
+        <p class="eyebrow">NOVIG GAME-SPREAD DECISION BOARD</p>
+        <h1>DC Tennis<br><span>Betting Model</span></h1>
         <p class="hero-copy">A compact, uncertainty-aware tennis model built to identify when a player is more likely to cover than the market price implies.</p>
       </div>
-      <div class="hero-score" aria-label="Model betting rules">
-        <div><strong>4%+</strong><span>minimum edge</span></div>
-        <div><strong>5%+</strong><span>minimum expected ROI</span></div>
-        <div><strong>1</strong><span>maximum play per match</span></div>
+      <div class="global-date-card" aria-label="Filter both dashboard views by date">
+        <p class="eyebrow">DATE RANGE</p>
+        <h2>Choose the slate</h2>
+        <div class="date-filter">
+          <label>From<input id="dateFrom" type="date"></label>
+          <label>To<input id="dateTo" type="date"></label>
+          <button id="dateClear" type="button">All dates</button>
+        </div>
+        <p>Applies to both the spread board and historical results.</p>
       </div>
     </section>
 
     <nav class="tabs" aria-label="Dashboard sections">
       <button class="tab active" data-panel="boardPanel">Spread Board</button>
       <button class="tab" data-panel="historyPanel">Historical Results</button>
-      <button class="tab" data-panel="performancePanel">Model Performance</button>
       <button class="tab" data-panel="methodPanel">How It Works</button>
     </nav>
 
@@ -64,11 +68,6 @@
           <h2 id="historyTitle">Historical betting results</h2>
         </div>
         <div class="history-controls">
-          <div class="date-filter" role="group" aria-label="Filter historical results by date">
-            <label>From<input id="historyDateFrom" type="date"></label>
-            <label>To<input id="historyDateTo" type="date"></label>
-            <button id="historyDateClear" type="button">All dates</button>
-          </div>
           <div class="filters" role="group" aria-label="Filter historical results">
             <button class="history-filter active" data-history-filter="ALL">All</button>
             <button class="history-filter" data-history-filter="WIN">Wins</button>
@@ -79,20 +78,6 @@
       <div id="historyMetrics" class="metric-grid"></div>
       <div id="historyNotice" class="status-banner closed"></div>
       <div id="historyGroups" class="history-groups"></div>
-    </section>
-
-    <section id="performancePanel" class="panel" aria-labelledby="performanceTitle">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">OUT-OF-SAMPLE ONLY</p>
-          <h2 id="performanceTitle">Rolling model performance</h2>
-        </div>
-      </div>
-      <div id="performanceCards" class="metric-grid"></div>
-      <div class="explain-card">
-        <h3>What counts as evidence?</h3>
-        <p>Every performance result shown here comes from a future period the model did not train on. Betting ROI will remain unavailable until historical Novig lines or enough saved forward recommendations exist.</p>
-      </div>
     </section>
 
     <section id="methodPanel" class="panel" aria-labelledby="methodTitle">
@@ -110,6 +95,10 @@
       </div>
       <div class="feature-strip" aria-label="Core model feature families">
         <span>Elo</span><span>Surface</span><span>Serve</span><span>Return</span><span>Margin</span><span>Matchup</span><span>Workload</span><span>Format</span>
+      </div>
+      <div class="method-details">
+        <article><p class="eyebrow">BETTING RULES</p><h3>Safety thresholds</h3><p>A line must clear a 4% probability edge and 5% expected return. The board publishes no more than one play per match, choosing the strongest uncertainty-adjusted candidate.</p></article>
+        <article><p class="eyebrow">MODEL PERFORMANCE</p><h3>Rolling validation</h3><div id="performanceCards" class="metric-grid compact"></div><p>Every figure comes from a future period the model did not train on. Forward betting results remain separate in Historical Results.</p></article>
       </div>
     </section>
   </main>

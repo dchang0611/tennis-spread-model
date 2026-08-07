@@ -6,12 +6,14 @@ import argparse
 import re
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import pandas as pd
 from playwright.sync_api import Page, sync_playwright
 
 
 ATP_URL = "https://novig.com/trading/atp"
+PACIFIC = ZoneInfo("America/Los_Angeles")
 OUTPUT_COLUMNS = [
     "date", "tournament", "surface", "best_of", "player_a", "player_b",
     "spread_a", "odds_a", "spread_b", "odds_b", "collected_at", "event_url",
@@ -86,13 +88,19 @@ def locate_event_card(page: Page, player_a: str, player_b: str, max_scrolls: int
 
 def scrape_markets(tournament: str, surface: str, day_label: str = "Today") -> pd.DataFrame:
     collected_at = datetime.now(timezone.utc).isoformat()
-    match_date = datetime.now().astimezone().date().isoformat()
+    match_date = datetime.now(PACIFIC).date().isoformat()
     rows: list[dict] = []
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True)
-        page = browser.new_page(viewport={"width": 1440, "height": 1000})
+        # Novig derives Today/Tomorrow from the browser timezone.  The hosted
+        # runner is UTC, while the board and nightly schedule are Pacific.
+        page = browser.new_page(
+            viewport={"width": 1440, "height": 1000},
+            timezone_id="America/Los_Angeles",
+            locale="en-US",
+        )
         page.goto(ATP_URL, wait_until="domcontentloaded", timeout=45_000)
-        page.wait_for_timeout(1_800)
+        page.get_by_text("7 More", exact=True).first.wait_for(timeout=20_000)
         events = collect_event_cards(page, day_label)
         if not events:
             browser.close()
