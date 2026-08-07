@@ -2,18 +2,24 @@ name: Build and deploy tennis spread board
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "7 0 * * *"
+      timezone: "America/Los_Angeles"
   push:
     branches: [main]
     paths:
       - "data/novig_spreads.csv"
       - "tennis_spread_model.py"
+      - "novig_scraper.py"
+      - "update_spread_history.py"
+      - "test_novig_automation.py"
       - "build_spread_site.py"
       - "site/**"
       - "requirements.txt"
       - ".github/workflows/spread-board.yml"
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -31,7 +37,10 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - run: python -m unittest -v test_tennis_spread_model.py
+      - run: python -m playwright install --with-deps chromium
+      - run: python -m unittest -v test_tennis_spread_model.py test_novig_automation.py
+      - name: Collect today's Novig ATP spreads
+        run: python novig_scraper.py --output data/novig_spreads.csv --tournament "ATP Toronto" --surface Hard --day-label Today --minimum-matches 2
       - name: Score current Novig markets
         shell: bash
         run: |
@@ -40,7 +49,19 @@ jobs:
           else
             echo "No current Novig rows; publishing a closed board."
           fi
+      - name: Archive picks and settle completed results
+        run: python update_spread_history.py
       - run: python build_spread_site.py
+      - name: Persist nightly market and history data
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/novig_spreads.csv tennis_model_output/spread_results_history.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Update nightly tennis board [skip ci]"
+            git push
+          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -56,3 +77,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
