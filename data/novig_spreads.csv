@@ -1,37 +1,38 @@
 date,tournament,surface,best_of,player_a,player_b,spread_a,odds_a,spread_b,odds_b,collected_at,event_url
-2026-08-07,ATP,Hard,3,Matteo Arnaldi,Tallon Griekspoor,2.5,-125,-2.5,102,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4a7-f4e9-7c43-9e58-9d468306a447
-2026-08-07,ATP,Hard,3,Matteo Arnaldi,Tallon Griekspoor,1.5,113,-1.5,-127,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4a7-f4e9-7c43-9e58-9d468306a447
-2026-08-07,ATP,Hard,3,Matteo Arnaldi,Tallon Griekspoor,-1.5,167,1.5,-239,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4a7-f4e9-7c43-9e58-9d468306a447
-2026-08-07,ATP,Hard,3,Matteo Arnaldi,Tallon Griekspoor,4.5,-388,-4.5,228,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4a7-f4e9-7c43-9e58-9d468306a447
-2026-08-07,ATP,Hard,3,Matteo Arnaldi,Tallon Griekspoor,3.5,-199,-3.5,141,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4a7-f4e9-7c43-9e58-9d468306a447
-2026-08-07,ATP,Hard,3,Alex Michelsen,Daniel Merida Aguilar,-4.5,108,4.5,-144,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5ceb-7a93-9aa3-b116f27d4b82
-2026-08-07,ATP,Hard,3,Alex Michelsen,Daniel Merida Aguilar,-5.5,199,5.5,-326,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5ceb-7a93-9aa3-b116f27d4b82
-2026-08-07,ATP,Hard,3,Alex Michelsen,Daniel Merida Aguilar,-1.5,-257,1.5,174,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5ceb-7a93-9aa3-b116f27d4b82
-2026-08-07,ATP,Hard,3,Alex Michelsen,Daniel Merida Aguilar,-2.5,-182,2.5,156,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5ceb-7a93-9aa3-b116f27d4b82
-2026-08-07,ATP,Hard,3,Alex Michelsen,Daniel Merida Aguilar,-3.5,-127,3.5,113,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5ceb-7a93-9aa3-b116f27d4b82
-2026-08-07,ATP,Hard,3,Hubert Hurkacz,Botic Van De Zandschulp,-2.5,-138,2.5,117,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5cac-7821-8a80-7eebfddce6be
-2026-08-07,ATP,Hard,3,Hubert Hurkacz,Botic Van De Zandschulp,-3.5,130,3.5,-141,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5cac-7821-8a80-7eebfddce6be
-2026-08-07,ATP,Hard,3,Hubert Hurkacz,Botic Van De Zandschulp,-4.5,186,4.5,-335,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5cac-7821-8a80-7eebfddce6be
-2026-08-07,ATP,Hard,3,Hubert Hurkacz,Botic Van De Zandschulp,-1.5,-182,1.5,130,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5cac-7821-8a80-7eebfddce6be
-2026-08-07,ATP,Hard,3,Hubert Hurkacz,Botic Van De Zandschulp,-5.5,355,5.5,-700,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5cac-7821-8a80-7eebfddce6be
-2026-08-07,ATP,Hard,3,Hubert Hurkacz,Botic Van De Zandschulp,-6.5,770,6.5,-5456,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5cac-7821-8a80-7eebfddce6be
-2026-08-07,ATP,Hard,3,Ben Shelton,Zizou Bergs,-3.5,117,3.5,-127,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd3b0-ae0c-7062-aaeb-2f8c23c198a6
-2026-08-07,ATP,Hard,3,Ben Shelton,Zizou Bergs,-2.5,-156,2.5,120,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd3b0-ae0c-7062-aaeb-2f8c23c198a6
-2026-08-07,ATP,Hard,3,Jakub Mensik,Terence Atmane,-2.5,-117,2.5,111,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5c2b-7851-88e0-d7a4782225d2
-2026-08-07,ATP,Hard,3,Jakub Mensik,Terence Atmane,-3.5,130,3.5,-147,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5c2b-7851-88e0-d7a4782225d2
-2026-08-07,ATP,Hard,3,Jakub Mensik,Terence Atmane,-4.5,208,4.5,-308,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5c2b-7851-88e0-d7a4782225d2
-2026-08-07,ATP,Hard,3,Jakub Mensik,Terence Atmane,-1.5,-208,1.5,147,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5c2b-7851-88e0-d7a4782225d2
-2026-08-07,ATP,Hard,3,Jakub Mensik,Terence Atmane,-5.5,335,5.5,-641,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5c2b-7851-88e0-d7a4782225d2
-2026-08-07,ATP,Hard,3,Jakub Mensik,Terence Atmane,-6.5,700,6.5,-3604,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd4c3-5c2b-7851-88e0-d7a4782225d2
-2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,1.5,-113,-1.5,106,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
-2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,0.5,106,-0.5,-125,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
-2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,4.5,-426,-4.5,264,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
-2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,3.5,-264,-3.5,174,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
-2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,2.5,-156,-2.5,122,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
-2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,-1.5,141,1.5,-199,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
-2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,-2.5,170,2.5,-264,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
-2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,-3.5,251,3.5,-413,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
-2026-08-07,ATP,Hard,3,Tommy Paul,Learner Tien,-2.5,-111,2.5,102,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd54c-a1fa-78a2-aaed-4a59c41a78e3
-2026-08-07,ATP,Hard,3,Tommy Paul,Learner Tien,-3.5,117,3.5,-150,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd54c-a1fa-78a2-aaed-4a59c41a78e3
-2026-08-07,ATP,Hard,3,Tommy Paul,Learner Tien,-4.5,174,4.5,-257,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd54c-a1fa-78a2-aaed-4a59c41a78e3
-2026-08-07,ATP,Hard,3,Tommy Paul,Learner Tien,-1.5,-150,1.5,122,2026-08-07T08:24:24.965926+00:00,https://novig.com/event-markets/019fd54c-a1fa-78a2-aaed-4a59c41a78e3
+2026-08-07,ATP,Hard,3,Matteo Arnaldi,Tallon Griekspoor,2.5,-125,-2.5,102,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4a7-f4e9-7c43-9e58-9d468306a447
+2026-08-07,ATP,Hard,3,Matteo Arnaldi,Tallon Griekspoor,1.5,113,-1.5,-127,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4a7-f4e9-7c43-9e58-9d468306a447
+2026-08-07,ATP,Hard,3,Matteo Arnaldi,Tallon Griekspoor,-1.5,167,1.5,-239,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4a7-f4e9-7c43-9e58-9d468306a447
+2026-08-07,ATP,Hard,3,Matteo Arnaldi,Tallon Griekspoor,4.5,-388,-4.5,228,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4a7-f4e9-7c43-9e58-9d468306a447
+2026-08-07,ATP,Hard,3,Matteo Arnaldi,Tallon Griekspoor,3.5,-199,-3.5,141,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4a7-f4e9-7c43-9e58-9d468306a447
+2026-08-07,ATP,Hard,3,Alex Michelsen,Daniel Merida Aguilar,-4.5,108,4.5,-144,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5ceb-7a93-9aa3-b116f27d4b82
+2026-08-07,ATP,Hard,3,Alex Michelsen,Daniel Merida Aguilar,-5.5,199,5.5,-326,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5ceb-7a93-9aa3-b116f27d4b82
+2026-08-07,ATP,Hard,3,Alex Michelsen,Daniel Merida Aguilar,-1.5,-257,1.5,174,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5ceb-7a93-9aa3-b116f27d4b82
+2026-08-07,ATP,Hard,3,Alex Michelsen,Daniel Merida Aguilar,-2.5,-182,2.5,156,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5ceb-7a93-9aa3-b116f27d4b82
+2026-08-07,ATP,Hard,3,Alex Michelsen,Daniel Merida Aguilar,-3.5,-127,3.5,117,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5ceb-7a93-9aa3-b116f27d4b82
+2026-08-07,ATP,Hard,3,Alex Michelsen,Daniel Merida Aguilar,-7.5,590,7.5,-2028,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5ceb-7a93-9aa3-b116f27d4b82
+2026-08-07,ATP,Hard,3,Hubert Hurkacz,Botic Van De Zandschulp,-2.5,-138,2.5,117,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5cac-7821-8a80-7eebfddce6be
+2026-08-07,ATP,Hard,3,Hubert Hurkacz,Botic Van De Zandschulp,-3.5,130,3.5,-141,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5cac-7821-8a80-7eebfddce6be
+2026-08-07,ATP,Hard,3,Hubert Hurkacz,Botic Van De Zandschulp,-4.5,186,4.5,-335,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5cac-7821-8a80-7eebfddce6be
+2026-08-07,ATP,Hard,3,Hubert Hurkacz,Botic Van De Zandschulp,-1.5,-182,1.5,130,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5cac-7821-8a80-7eebfddce6be
+2026-08-07,ATP,Hard,3,Hubert Hurkacz,Botic Van De Zandschulp,-5.5,355,5.5,-700,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5cac-7821-8a80-7eebfddce6be
+2026-08-07,ATP,Hard,3,Hubert Hurkacz,Botic Van De Zandschulp,-6.5,770,6.5,-5456,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5cac-7821-8a80-7eebfddce6be
+2026-08-07,ATP,Hard,3,Ben Shelton,Zizou Bergs,-3.5,117,3.5,-127,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd3b0-ae0c-7062-aaeb-2f8c23c198a6
+2026-08-07,ATP,Hard,3,Ben Shelton,Zizou Bergs,-2.5,-156,2.5,120,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd3b0-ae0c-7062-aaeb-2f8c23c198a6
+2026-08-07,ATP,Hard,3,Jakub Mensik,Terence Atmane,-2.5,-117,2.5,111,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5c2b-7851-88e0-d7a4782225d2
+2026-08-07,ATP,Hard,3,Jakub Mensik,Terence Atmane,-3.5,130,3.5,-147,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5c2b-7851-88e0-d7a4782225d2
+2026-08-07,ATP,Hard,3,Jakub Mensik,Terence Atmane,-4.5,208,4.5,-308,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5c2b-7851-88e0-d7a4782225d2
+2026-08-07,ATP,Hard,3,Jakub Mensik,Terence Atmane,-1.5,-208,1.5,147,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5c2b-7851-88e0-d7a4782225d2
+2026-08-07,ATP,Hard,3,Jakub Mensik,Terence Atmane,-5.5,335,5.5,-641,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5c2b-7851-88e0-d7a4782225d2
+2026-08-07,ATP,Hard,3,Jakub Mensik,Terence Atmane,-6.5,700,6.5,-3604,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd4c3-5c2b-7851-88e0-d7a4782225d2
+2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,1.5,-113,-1.5,106,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
+2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,0.5,106,-0.5,-125,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
+2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,4.5,-426,-4.5,264,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
+2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,3.5,-245,-3.5,167,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
+2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,2.5,-156,-2.5,122,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
+2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,-1.5,141,1.5,-199,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
+2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,-2.5,186,2.5,-270,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
+2026-08-07,ATP,Hard,3,Thiago Agustin Tirante,Alexei Popyrin,-3.5,251,3.5,-413,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd41e-e9e6-71a2-abe1-7feda03f97b7
+2026-08-07,ATP,Hard,3,Tommy Paul,Learner Tien,-2.5,-111,2.5,102,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd54c-a1fa-78a2-aaed-4a59c41a78e3
+2026-08-07,ATP,Hard,3,Tommy Paul,Learner Tien,-3.5,117,3.5,-150,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd54c-a1fa-78a2-aaed-4a59c41a78e3
+2026-08-07,ATP,Hard,3,Tommy Paul,Learner Tien,-4.5,174,4.5,-257,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd54c-a1fa-78a2-aaed-4a59c41a78e3
+2026-08-07,ATP,Hard,3,Tommy Paul,Learner Tien,-1.5,-150,1.5,122,2026-08-07T08:31:13.891509+00:00,https://novig.com/event-markets/019fd54c-a1fa-78a2-aaed-4a59c41a78e3
