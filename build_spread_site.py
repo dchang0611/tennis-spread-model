@@ -38,25 +38,11 @@ def compact_pick(row: dict) -> dict:
 
 
 def rationale_for_pick(row: dict) -> str:
-    cover = row.get("cover_probability")
-    market = row.get("market_no_vig_probability")
-    edge = row.get("probability_edge")
-    projected = row.get("predicted_margin_for_player")
-    spread = row.get("spread")
-    if any(value is None for value in [cover, market, edge, projected, spread]):
-        return "Insufficient verified inputs to explain this line."
-    cushion = float(projected) + float(spread)
-    direction = "above" if cushion >= 0 else "below"
     drivers = str(row.get("feature_rationale") or "").strip()
-    lead = (
-        f"The main supporting signals are {drivers}. "
+    return (
+        f"The main supporting signals are {drivers}."
         if drivers
-        else "The projection is supported by the model's combined strength, form, and matchup profile. "
-    )
-    return lead + (
-        f"It gives this line a {float(cover) * 100:.1f}% cover chance versus "
-        f"{float(market) * 100:.1f}% from the paired Novig price, a {float(edge) * 100:.1f}-point edge. "
-        f"Its projected game margin sits {abs(cushion):.1f} games {direction} the cover threshold."
+        else "The projection is supported by the model's combined strength, form, and matchup profile."
     )
 
 

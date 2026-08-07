@@ -35,9 +35,8 @@ class NovigAutomationTests(unittest.TestCase):
             "feature_rationale": "stronger serve performance, a stronger break-rate proxy",
         })
         self.assertIn("stronger serve performance", text)
-        self.assertIn("62.0% cover chance", text)
-        self.assertIn("11.0-point edge", text)
-        self.assertIn("3.7 games above", text)
+        self.assertNotIn("cover chance", text)
+        self.assertNotIn("point edge", text)
 
 
 if __name__ == "__main__":
