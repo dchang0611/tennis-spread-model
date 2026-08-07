@@ -63,20 +63,22 @@
           <p class="eyebrow">RECORDED BEFORE MATCH TIME</p>
           <h2 id="historyTitle">Historical betting results</h2>
         </div>
-        <div class="filters" role="group" aria-label="Filter historical results">
-          <button class="history-filter active" data-history-filter="ALL">All</button>
-          <button class="history-filter" data-history-filter="WIN">Wins</button>
-          <button class="history-filter" data-history-filter="LOSS">Losses</button>
+        <div class="history-controls">
+          <div class="date-filter" role="group" aria-label="Filter historical results by date">
+            <label>From<input id="historyDateFrom" type="date"></label>
+            <label>To<input id="historyDateTo" type="date"></label>
+            <button id="historyDateClear" type="button">All dates</button>
+          </div>
+          <div class="filters" role="group" aria-label="Filter historical results">
+            <button class="history-filter active" data-history-filter="ALL">All</button>
+            <button class="history-filter" data-history-filter="WIN">Wins</button>
+            <button class="history-filter" data-history-filter="LOSS">Losses</button>
+          </div>
         </div>
       </div>
       <div id="historyMetrics" class="metric-grid"></div>
       <div id="historyNotice" class="status-banner closed"></div>
-      <div class="history-table-wrap">
-        <table class="history-table">
-          <thead><tr><th>Date</th><th>Play</th><th>Price</th><th>Model</th><th>Market</th><th>Result</th><th>Units</th></tr></thead>
-          <tbody id="historyRows"></tbody>
-        </table>
-      </div>
+      <div id="historyGroups" class="history-groups"></div>
     </section>
 
     <section id="performancePanel" class="panel" aria-labelledby="performanceTitle">
