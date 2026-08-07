@@ -1,3 +1,4 @@
+
 name: Build and deploy tennis spread board
 
 on:
@@ -9,6 +10,7 @@ on:
     branches: [main]
     paths:
       - "data/novig_spreads.csv"
+      - "tennis_model_output/spread_results_history.csv"
       - "tennis_spread_model.py"
       - "novig_scraper.py"
       - "update_spread_history.py"
