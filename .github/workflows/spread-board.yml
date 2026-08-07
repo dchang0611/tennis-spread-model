@@ -39,6 +39,12 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m playwright install --with-deps chromium
       - run: python -m unittest -v test_tennis_spread_model.py test_novig_automation.py
+      - name: Recreate prior recommendations for the ledger
+        shell: bash
+        run: |
+          if [ "$(wc -l < data/novig_spreads.csv)" -gt 1 ]; then
+            python tennis_spread_model.py --markets data/novig_spreads.csv --model-rows model_rows_2026-07-06.csv
+          fi
       - name: Archive prior picks and settle completed results
         run: python update_spread_history.py
       - name: Collect today's Novig ATP spreads
