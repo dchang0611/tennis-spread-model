@@ -47,6 +47,19 @@ CORE_NUMERIC_FEATURES = [
 CORE_CATEGORICAL_FEATURES = ["surface", "tourney_level"]
 FEATURES = CORE_NUMERIC_FEATURES + CORE_CATEGORICAL_FEATURES
 
+DRIVER_LABELS = {
+    "elo_diff": ("strength", "higher overall Elo"),
+    "surface_elo_diff": ("strength", "higher surface-adjusted Elo"),
+    "surface_last10_margin_diff": ("form", "better recent game margin on this surface"),
+    "spw_plus_last25_diff": ("serve", "stronger opponent-adjusted serve-point performance"),
+    "hold_proxy_last25_diff": ("serve", "a stronger hold-rate proxy"),
+    "rpw_plus_last25_diff": ("return", "stronger opponent-adjusted return-point performance"),
+    "break_proxy_last25_diff": ("return", "a stronger break-rate proxy"),
+    "serve_return_interaction_diff": ("matchup", "a more favorable serve-versus-return matchup"),
+    "games_last7_diff": ("workload", "a lighter recent workload"),
+    "days_rest_diff": ("workload", "more recovery time"),
+}
+
 
 @dataclass(frozen=True)
 class DecisionThresholds:
@@ -197,6 +210,36 @@ def conservative_probability(prob: float, sample_size: int, z: float, cap: int) 
     return max(0.0, prob - penalty)
 
 
+def driver_phrases(row: pd.Series, side: str, numeric_contributions: np.ndarray, limit: int = 3) -> list[str]:
+    """Return distinct, player-facing concepts that positively support the projected margin."""
+    side_sign = 1.0 if side == "A" else -1.0
+    candidates: list[tuple[float, str, str]] = []
+    for index, feature in enumerate(CORE_NUMERIC_FEATURES):
+        if feature == "best_of" or feature not in DRIVER_LABELS:
+            continue
+        raw = float(row.get(feature) or 0.0) * side_sign
+        contribution = float(numeric_contributions[index]) * side_sign
+        # Only describe a signal as an advantage when its raw direction is
+        # intuitively favorable and it actually pushes this fitted projection
+        # toward the selected player. This avoids dressing up a correlation as
+        # a player strength.
+        favorable = raw < 0 if feature == "games_last7_diff" else raw > 0
+        if favorable and contribution > 0:
+            family, label = DRIVER_LABELS[feature]
+            candidates.append((contribution, family, label))
+    candidates.sort(reverse=True)
+    selected: list[str] = []
+    used_families: set[str] = set()
+    for _, family, label in candidates:
+        if family in used_families:
+            continue
+        selected.append(label)
+        used_families.add(family)
+        if len(selected) >= limit:
+            break
+    return selected
+
+
 def normalize_novig_markets(markets: pd.DataFrame) -> pd.DataFrame:
     aliases = {
         "player_a": ["player_a", "player1", "away_player"],
@@ -239,9 +282,14 @@ def score_markets(
     if live.empty:
         raise ValueError("No Novig rows matched the historical player database.")
     live["predicted_margin_a"] = model.predict(live[FEATURES])
+    numeric_values = model.named_steps["pre"].named_transformers_["numeric"].transform(
+        live[CORE_NUMERIC_FEATURES]
+    )
+    numeric_coefficients = model.named_steps["model"].coef_[:len(CORE_NUMERIC_FEATURES)]
+    numeric_contributions = np.asarray(numeric_values) * np.asarray(numeric_coefficients)
 
     scored: list[dict[str, object]] = []
-    for _, row in live.iterrows():
+    for row_position, (_, row) in enumerate(live.iterrows()):
         residuals = residual_pool(oof, row.get("surface"), row.get("best_of"))
         p_a, push_a, p_b = cover_probabilities(row["predicted_margin_a"], row["spread_a"], residuals)
         # B's cover is A's loss; push probability is shared.
@@ -256,6 +304,7 @@ def score_markets(
             ("A", p_a, row["spread_a"], odds_a, market_a, row["player_a"], row["player_b"]),
             ("B", p_b, spread_b, odds_b, market_b, row["player_b"], row["player_a"]),
         ]:
+            feature_drivers = driver_phrases(row, side, numeric_contributions[row_position])
             conservative = conservative_probability(
                 p_cover, len(residuals), thresholds.confidence_z, thresholds.residual_sample_cap
             )
@@ -286,6 +335,7 @@ def score_markets(
                 "expected_roi": ev,
                 "conservative_expected_roi": conservative_ev,
                 "residual_sample": len(residuals),
+                "feature_rationale": ", ".join(feature_drivers),
                 "passes_thresholds": bool(qualifies),
                 "recommendation": "PASS",
             })

@@ -6,6 +6,7 @@ import pandas as pd
 from tennis_spread_model import (
     american_to_implied,
     cover_probabilities,
+    driver_phrases,
     expected_roi,
     no_vig_pair,
     normalize_novig_markets,
@@ -42,6 +43,21 @@ class SpreadMathTests(unittest.TestCase):
         }])
         self.assertEqual(len(normalize_novig_markets(frame)), 1)
         self.assertAlmostEqual(american_to_implied(106), 100 / 206)
+
+    def test_driver_phrases_are_supportive_and_deduplicated(self):
+        row = pd.Series({
+            "elo_diff": 80.0,
+            "surface_elo_diff": 120.0,
+            "spw_plus_last25_diff": 0.04,
+            "hold_proxy_last25_diff": 0.03,
+            "break_proxy_last25_diff": 0.02,
+            "games_last7_diff": -25.0,
+        })
+        contributions = np.ones(11)
+        phrases = driver_phrases(row, "A", contributions)
+        self.assertEqual(len(phrases), 3)
+        self.assertEqual(sum("Elo" in phrase for phrase in phrases), 1)
+        self.assertEqual(sum("serve" in phrase or "hold" in phrase for phrase in phrases), 1)
 
 
 if __name__ == "__main__":

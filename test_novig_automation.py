@@ -32,7 +32,9 @@ class NovigAutomationTests(unittest.TestCase):
             "probability_edge": 0.11,
             "predicted_margin_for_player": 1.2,
             "spread": 2.5,
+            "feature_rationale": "stronger serve performance, a stronger break-rate proxy",
         })
+        self.assertIn("stronger serve performance", text)
         self.assertIn("62.0% cover chance", text)
         self.assertIn("11.0-point edge", text)
         self.assertIn("3.7 games above", text)

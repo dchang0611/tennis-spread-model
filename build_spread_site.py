@@ -30,7 +30,7 @@ def compact_pick(row: dict) -> dict:
         "predicted_margin_for_player", "cover_probability", "push_probability",
         "conservative_cover_probability", "market_no_vig_probability",
         "probability_edge", "expected_roi", "conservative_expected_roi",
-        "residual_sample", "recommendation",
+        "residual_sample", "feature_rationale", "recommendation",
     ]
     pick = {key: row.get(key) for key in fields}
     pick["rationale"] = rationale_for_pick(row)
@@ -47,8 +47,14 @@ def rationale_for_pick(row: dict) -> str:
         return "Insufficient verified inputs to explain this line."
     cushion = float(projected) + float(spread)
     direction = "above" if cushion >= 0 else "below"
-    return (
-        f"The model gives this line a {float(cover) * 100:.1f}% cover chance versus "
+    drivers = str(row.get("feature_rationale") or "").strip()
+    lead = (
+        f"The main supporting signals are {drivers}. "
+        if drivers
+        else "The projection is supported by the model's combined strength, form, and matchup profile. "
+    )
+    return lead + (
+        f"It gives this line a {float(cover) * 100:.1f}% cover chance versus "
         f"{float(market) * 100:.1f}% from the paired Novig price, a {float(edge) * 100:.1f}-point edge. "
         f"Its projected game margin sits {abs(cushion):.1f} games {direction} the cover threshold."
     )
