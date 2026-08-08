@@ -19,6 +19,13 @@ class NovigAutomationTests(unittest.TestCase):
         tokens = ["Game Spread", "A", "B", "-2.5", "+111", "+2.5", "•", "-4.5", "+170", "+4.5", "-245"]
         self.assertEqual(parse_spread_tokens(tokens), [(-4.5, 170, 4.5, -245)])
 
+    def test_spread_tokens_accept_single_line_player_labels(self):
+        tokens = [
+            "Game Spread", "Traded:", "$6,666", "Brandon Nakashima -2.5", "-115",
+            "Arthur Rinderknech +2.5", "+100", "View Market",
+        ]
+        self.assertEqual(parse_spread_tokens(tokens), [(-2.5, -115, 2.5, 100)])
+
     def test_surface_calendar_is_date_bounded(self):
         self.assertEqual(surface_for_date(date(2026, 8, 8)), "Hard")
         with self.assertRaises(RuntimeError):

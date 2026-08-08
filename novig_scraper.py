@@ -49,9 +49,17 @@ def parse_event_card(text: str) -> dict | None:
 
 
 def parse_spread_tokens(tokens: list[str]) -> list[tuple[float, int, float, int]]:
-    clean = [str(token).strip() for token in tokens if str(token).strip()]
     spread_re = re.compile(r"^[+-]?\d+\.5$")
     odds_re = re.compile(r"^[+-]\d{3,5}$")
+    clean = []
+    for token in tokens:
+        value = str(token).strip()
+        if not value:
+            continue
+        # Single-line spread markets render as "Player Name -2.5" while
+        # multi-line ladders expose a bare "-2.5" token. Normalize both skins.
+        trailing_spread = re.search(r"([+-]?\d+\.5)$", value)
+        clean.append(trailing_spread.group(1) if trailing_spread else value)
     rows: list[tuple[float, int, float, int]] = []
     for index in range(len(clean) - 3):
         quartet = clean[index:index + 4]
