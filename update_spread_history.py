@@ -47,15 +47,34 @@ def grade_spread(player_margin: float, spread: float) -> str:
     return "WIN" if covered > 0 else "LOSS" if covered < 0 else "PUSH"
 
 
+def bet_identity(match_date: object, player: object, opponent: object) -> tuple[str, str, str]:
+    participants = sorted((name_key(player), name_key(opponent)))
+    return str(match_date), participants[0], participants[1]
+
+
+def dedupe_history(history: pd.DataFrame) -> pd.DataFrame:
+    if history.empty:
+        return history.reindex(columns=HISTORY_COLUMNS)
+    ordered = history.copy()
+    ordered["_recorded_sort"] = pd.to_datetime(ordered["recorded_at"], errors="coerce", utc=True)
+    ordered["_original_order"] = range(len(ordered))
+    ordered = ordered.sort_values(["_recorded_sort", "_original_order"], kind="stable", na_position="last")
+    ordered["_bet_identity"] = ordered.apply(
+        lambda row: bet_identity(row.get("date"), row.get("player"), row.get("opponent")), axis=1
+    )
+    return ordered.drop_duplicates("_bet_identity", keep="first").reindex(columns=HISTORY_COLUMNS)
+
+
 def archive_bets(recommendations: pd.DataFrame, history: pd.DataFrame, now: str) -> pd.DataFrame:
+    history = dedupe_history(history)
     bets = recommendations[recommendations["recommendation"].astype(str).str.upper() == "BET"].copy()
     existing = {
-        (str(row.date), name_key(row.player), name_key(row.opponent), float(row.spread), int(float(row.odds)))
+        bet_identity(row.date, row.player, row.opponent)
         for row in history.itertuples(index=False)
     } if not history.empty else set()
     additions = []
     for row in bets.itertuples(index=False):
-        key = (str(row.date), name_key(row.player), name_key(row.opponent), float(row.spread), int(float(row.odds)))
+        key = bet_identity(row.date, row.player, row.opponent)
         if key in existing:
             continue
         additions.append({
@@ -66,6 +85,7 @@ def archive_bets(recommendations: pd.DataFrame, history: pd.DataFrame, now: str)
             "result": "PENDING", "risk_units": 1.0, "profit_units": None,
             "closing_line_value": None, "recorded_at": now, "settled_at": None,
         })
+        existing.add(key)
     if additions:
         history = pd.concat([history, pd.DataFrame(additions)], ignore_index=True)
     return history.reindex(columns=HISTORY_COLUMNS)
@@ -121,6 +141,7 @@ def main() -> None:
     now = datetime.now(timezone.utc).isoformat()
     history_path = Path(args.history)
     history = pd.read_csv(history_path) if history_path.exists() else pd.DataFrame(columns=HISTORY_COLUMNS)
+    history = dedupe_history(history)
     if args.mode in {"all", "archive"}:
         recommendations_path = Path(args.recommendations)
         if recommendations_path.exists():

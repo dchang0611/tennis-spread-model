@@ -1,9 +1,11 @@
 import unittest
 from datetime import date
 
+import pandas as pd
+
 from build_spread_site import rationale_for_pick
 from novig_scraper import parse_event_card, parse_spread_tokens, surface_for_date
-from update_spread_history import grade_spread, profit_for_result, score_game_margin
+from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, profit_for_result, score_game_margin
 
 
 class NovigAutomationTests(unittest.TestCase):
@@ -35,6 +37,17 @@ class NovigAutomationTests(unittest.TestCase):
         self.assertEqual(grade_spread(3, -2.5), "WIN")
         self.assertEqual(grade_spread(3, -4.5), "LOSS")
         self.assertEqual(grade_spread(3, -3), "PUSH")
+
+    def test_archive_keeps_one_earliest_bet_per_match_when_price_changes(self):
+        recommendations = pd.DataFrame([
+            {"date": "2026-08-07", "tournament": "ATP", "surface": "Hard", "player": "Botic Van De Zandschulp",
+             "opponent": "Hubert Hurkacz", "spread": 2.5, "odds": odds, "cover_probability": 0.58,
+             "market_no_vig_probability": 0.45, "recommendation": "BET"}
+            for odds in (117, 104)
+        ])
+        archived = archive_bets(recommendations, pd.DataFrame(columns=HISTORY_COLUMNS), "2026-08-07T08:24:00+00:00")
+        self.assertEqual(len(archived), 1)
+        self.assertEqual(int(archived.iloc[0]["odds"]), 117)
 
     def test_rationale_is_plain_english_and_line_specific(self):
         text = rationale_for_pick({
