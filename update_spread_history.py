@@ -42,6 +42,11 @@ def profit_for_result(result: str, odds: float) -> float:
     return odds / 100.0 if odds > 0 else 100.0 / abs(odds)
 
 
+def grade_spread(player_margin: float, spread: float) -> str:
+    covered = float(player_margin) + float(spread)
+    return "WIN" if covered > 0 else "LOSS" if covered < 0 else "PUSH"
+
+
 def archive_bets(recommendations: pd.DataFrame, history: pd.DataFrame, now: str) -> pd.DataFrame:
     bets = recommendations[recommendations["recommendation"].astype(str).str.upper() == "BET"].copy()
     existing = {
@@ -99,8 +104,7 @@ def settle_history(history: pd.DataFrame, results: pd.DataFrame, now: str) -> pd
             result = "VOID"
         else:
             player_margin = margin if match["winner_key"] == player_key else -margin
-            covered = player_margin + float(pick["spread"])
-            result = "WIN" if covered > 0 else "LOSS" if covered < 0 else "PUSH"
+            result = grade_spread(player_margin, float(pick["spread"]))
         history.at[index, "result"] = result
         history.at[index, "profit_units"] = profit_for_result(result, float(pick["odds"]))
         history.at[index, "settled_at"] = now
