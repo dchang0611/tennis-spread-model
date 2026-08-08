@@ -112,22 +112,29 @@ def main() -> None:
     parser.add_argument("--recommendations", default="tennis_model_output/novig_spread_recommendations.csv")
     parser.add_argument("--history", default="tennis_model_output/spread_results_history.csv")
     parser.add_argument("--results-url", default="https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_matches_2026.csv")
+    parser.add_argument("--mode", choices=["all", "archive", "settle"], default="all")
     args = parser.parse_args()
     now = datetime.now(timezone.utc).isoformat()
-    recommendations = pd.read_csv(args.recommendations)
     history_path = Path(args.history)
     history = pd.read_csv(history_path) if history_path.exists() else pd.DataFrame(columns=HISTORY_COLUMNS)
-    history = archive_bets(recommendations, history, now)
-    try:
-        results = pd.read_csv(args.results_url)
-    except Exception as exc:
-        print(f"Results source unavailable; leaving pending picks unsettled: {exc}")
-        results = pd.DataFrame()
-    history = settle_history(history, results, now)
+    if args.mode in {"all", "archive"}:
+        recommendations_path = Path(args.recommendations)
+        if recommendations_path.exists():
+            history = archive_bets(pd.read_csv(recommendations_path), history, now)
+        else:
+            print("No recommendation file exists; skipping archival without blocking settlement.")
+    if args.mode in {"all", "settle"}:
+        try:
+            results = pd.read_csv(args.results_url)
+        except Exception as exc:
+            print(f"Results source unavailable; leaving pending picks unsettled: {exc}")
+            results = pd.DataFrame()
+        history = settle_history(history, results, now)
     history_path.parent.mkdir(parents=True, exist_ok=True)
     history.to_csv(history_path, index=False)
     settled = history[history["result"].isin(["WIN", "LOSS", "PUSH", "VOID"])]
-    print(f"History now contains {len(history)} tracked bets, {len(settled)} settled.")
+    pending = history[history["result"].astype(str).str.upper() == "PENDING"]
+    print(f"History now contains {len(history)} tracked bets, {len(settled)} settled, {len(pending)} pending.")
 
 
 if __name__ == "__main__":

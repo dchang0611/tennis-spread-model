@@ -3,7 +3,9 @@ from datetime import date
 
 from build_spread_site import rationale_for_pick
 from novig_scraper import parse_event_card, parse_spread_tokens, surface_for_date
-from update_spread_history import profit_for_result, score_game_margin
+import pandas as pd
+
+from update_spread_history import HISTORY_COLUMNS, profit_for_result, score_game_margin, settle_history
 
 
 class NovigAutomationTests(unittest.TestCase):
@@ -30,6 +32,19 @@ class NovigAutomationTests(unittest.TestCase):
         self.assertAlmostEqual(profit_for_result("WIN", 138), 1.38)
         self.assertAlmostEqual(profit_for_result("WIN", -200), 0.5)
         self.assertEqual(profit_for_result("LOSS", 138), -1.0)
+
+    def test_settle_history_scores_win_loss_and_push(self):
+        picks = pd.DataFrame([
+            {"date": "2026-08-07", "surface": "Hard", "player": "Player One", "opponent": "Player Two", "spread": spread,
+             "odds": 100, "result": "PENDING", "risk_units": 1.0}
+            for spread in (-2.5, -4.5, -3.0)
+        ]).reindex(columns=HISTORY_COLUMNS)
+        results = pd.DataFrame([{
+            "tourney_date": 20260803, "surface": "Hard", "winner_name": "Player One",
+            "loser_name": "Player Two", "score": "6-4 7-6(5)",
+        }])
+        settled = settle_history(picks, results, "2026-08-08T12:00:00+00:00")
+        self.assertEqual(settled["result"].tolist(), ["WIN", "LOSS", "PUSH"])
 
     def test_rationale_is_plain_english_and_line_specific(self):
         text = rationale_for_pick({

@@ -47,8 +47,10 @@ jobs:
           if [ "$(wc -l < data/novig_spreads.csv)" -gt 1 ]; then
             python tennis_spread_model.py --markets data/novig_spreads.csv --model-rows model_rows_2026-07-06.csv
           fi
-      - name: Archive prior picks and settle completed results
-        run: python update_spread_history.py
+      - name: Archive yesterday's recommended bets
+        run: python update_spread_history.py --mode archive
+      - name: Score completed bets for Historical Performance
+        run: python update_spread_history.py --mode settle
       - name: Collect today's Novig ATP spreads
         shell: bash
         run: |
