@@ -3,7 +3,8 @@ name: Build and deploy tennis spread board
 on:
   workflow_dispatch:
   schedule:
-    - cron: "7 0 * * *"
+    # Avoid the top-of-hour congestion window documented by GitHub Actions.
+    - cron: "37 0 * * *"
       timezone: "America/Los_Angeles"
   push:
     branches: [main]
@@ -52,7 +53,7 @@ jobs:
         shell: bash
         run: |
           rm -f data/scrape_ok
-          if python novig_scraper.py --output data/novig_spreads.csv --tournament "ATP" --surface Hard --day-label Today --minimum-matches 2; then
+          if python novig_scraper.py --output data/novig_spreads.csv --tournament "ATP" --surface Auto --day-label Today --minimum-matches 2; then
             touch data/scrape_ok
           else
             echo "Novig has no usable Today slate yet; publishing a closed board while retaining history."

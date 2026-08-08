@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import argparse
 import re
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -18,6 +18,23 @@ OUTPUT_COLUMNS = [
     "date", "tournament", "surface", "best_of", "player_a", "player_b",
     "spread_a", "odds_a", "spread_b", "odds_b", "collected_at", "event_url",
 ]
+
+# Novig labels these events only as ATP; its board and event pages do not expose
+# tournament surface. Keep the scheduled assignment explicit and date-bounded so
+# an old seasonal assumption can never silently leak into a new part of the tour.
+ATP_SURFACE_CALENDAR = (
+    (date(2026, 7, 27), date(2026, 9, 13), "Hard"),
+)
+
+
+def surface_for_date(match_date: date) -> str:
+    matches = [surface for start, end, surface in ATP_SURFACE_CALENDAR if start <= match_date <= end]
+    if len(matches) != 1:
+        raise RuntimeError(
+            f"No unambiguous ATP surface calendar entry exists for {match_date.isoformat()}; "
+            "refusing to label the slate."
+        )
+    return matches[0]
 
 
 def parse_event_card(text: str) -> dict | None:
@@ -88,7 +105,9 @@ def locate_event_card(page: Page, player_a: str, player_b: str, max_scrolls: int
 
 def scrape_markets(tournament: str, surface: str, day_label: str = "Today") -> pd.DataFrame:
     collected_at = datetime.now(timezone.utc).isoformat()
-    match_date = datetime.now(PACIFIC).date().isoformat()
+    match_day = datetime.now(PACIFIC).date()
+    match_date = match_day.isoformat()
+    resolved_surface = surface_for_date(match_day) if surface == "Auto" else surface
     rows: list[dict] = []
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(
@@ -134,7 +153,7 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today") -> p
                 rows.append({
                     "date": match_date,
                     "tournament": tournament,
-                    "surface": surface,
+                    "surface": resolved_surface,
                     "best_of": 3,
                     "player_a": event["player_a"],
                     "player_b": event["player_b"],
@@ -156,7 +175,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Scrape Novig ATP game spreads.")
     parser.add_argument("--output", default="data/novig_spreads.csv")
     parser.add_argument("--tournament", required=True)
-    parser.add_argument("--surface", required=True, choices=["Hard", "Clay", "Grass", "Carpet"])
+    parser.add_argument("--surface", required=True, choices=["Auto", "Hard", "Clay", "Grass", "Carpet"])
     parser.add_argument("--day-label", default="Today")
     parser.add_argument("--minimum-matches", type=int, default=2)
     args = parser.parse_args()

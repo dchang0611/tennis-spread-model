@@ -1,7 +1,8 @@
 import unittest
+from datetime import date
 
 from build_spread_site import rationale_for_pick
-from novig_scraper import parse_event_card, parse_spread_tokens
+from novig_scraper import parse_event_card, parse_spread_tokens, surface_for_date
 from update_spread_history import profit_for_result, score_game_margin
 
 
@@ -15,6 +16,11 @@ class NovigAutomationTests(unittest.TestCase):
     def test_spread_tokens_skip_incomplete_price(self):
         tokens = ["Game Spread", "A", "B", "-2.5", "+111", "+2.5", "•", "-4.5", "+170", "+4.5", "-245"]
         self.assertEqual(parse_spread_tokens(tokens), [(-4.5, 170, 4.5, -245)])
+
+    def test_surface_calendar_is_date_bounded(self):
+        self.assertEqual(surface_for_date(date(2026, 8, 8)), "Hard")
+        with self.assertRaises(RuntimeError):
+            surface_for_date(date(2027, 8, 8))
 
     def test_score_margin_and_retirement(self):
         self.assertEqual(score_game_margin("6-4 7-6(5)"), 3)
