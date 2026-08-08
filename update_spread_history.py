@@ -194,6 +194,7 @@ def main() -> None:
     parser.add_argument("--recommendations", default="tennis_model_output/novig_spread_recommendations.csv")
     parser.add_argument("--history", default="tennis_model_output/spread_results_history.csv")
     parser.add_argument("--results-url", default="https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_matches_2026.csv")
+    parser.add_argument("--verified-results", default="data/verified_atp_results.csv")
     parser.add_argument("--mode", choices=["all", "archive", "settle"], default="all")
     args = parser.parse_args()
     now = datetime.now(timezone.utc).isoformat()
@@ -212,6 +213,11 @@ def main() -> None:
         except Exception as exc:
             print(f"Season results source unavailable; using ESPN fallback: {exc}")
             results = pd.DataFrame()
+        verified_path = Path(args.verified_results)
+        if verified_path.exists():
+            verified = pd.read_csv(verified_path)
+            results = pd.concat([results, verified], ignore_index=True)
+            print(f"Loaded {len(verified)} locally verified ATP match results.")
         pending_dates = history.loc[history["result"].astype(str).str.upper() == "PENDING", "date"].astype(str).tolist()
         try:
             espn_results = fetch_espn_results(pending_dates)
