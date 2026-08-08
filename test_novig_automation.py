@@ -5,7 +5,7 @@ import pandas as pd
 
 from build_spread_site import rationale_for_pick
 from novig_scraper import parse_event_card, parse_spread_tokens, surface_for_date
-from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, profit_for_result, score_game_margin
+from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, parse_espn_scoreboard, profit_for_result, score_game_margin
 
 
 class NovigAutomationTests(unittest.TestCase):
@@ -48,6 +48,23 @@ class NovigAutomationTests(unittest.TestCase):
         archived = archive_bets(recommendations, pd.DataFrame(columns=HISTORY_COLUMNS), "2026-08-07T08:24:00+00:00")
         self.assertEqual(len(archived), 1)
         self.assertEqual(int(archived.iloc[0]["odds"]), 117)
+
+    def test_parse_espn_scoreboard(self):
+        payload = {"events": [{"groupings": [{
+            "grouping": {"slug": "mens-singles"},
+            "competitions": [{
+                "date": "2026-08-08T01:25Z",
+                "status": {"type": {"completed": True, "name": "STATUS_FINAL"}},
+                "competitors": [
+                    {"winner": False, "athlete": {"displayName": "Tommy Paul"}, "linescores": [{"value": 3}, {"value": 2}]},
+                    {"winner": True, "athlete": {"displayName": "Learner Tien"}, "linescores": [{"value": 6}, {"value": 6}]},
+                ],
+            }],
+        }]}]}
+        parsed = parse_espn_scoreboard(payload)
+        self.assertEqual(parsed.iloc[0]["winner_name"], "Learner Tien")
+        self.assertEqual(parsed.iloc[0]["score"], "6-3 6-2")
+        self.assertEqual(int(parsed.iloc[0]["tourney_date"]), 20260807)
 
     def test_rationale_is_plain_english_and_line_specific(self):
         text = rationale_for_pick({

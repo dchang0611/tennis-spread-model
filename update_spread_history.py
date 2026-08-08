@@ -3,10 +3,13 @@
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.request import Request, urlopen
+from zoneinfo import ZoneInfo
 
 import pandas as pd
 
@@ -16,6 +19,8 @@ HISTORY_COLUMNS = [
     "cover_probability", "market_no_vig_probability", "result", "risk_units",
     "profit_units", "closing_line_value", "recorded_at", "settled_at",
 ]
+PACIFIC = ZoneInfo("America/Los_Angeles")
+ESPN_SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates={date}&limit=200"
 
 
 def name_key(value: object) -> str:
@@ -63,6 +68,56 @@ def dedupe_history(history: pd.DataFrame) -> pd.DataFrame:
         lambda row: bet_identity(row.get("date"), row.get("player"), row.get("opponent")), axis=1
     )
     return ordered.drop_duplicates("_bet_identity", keep="first").reindex(columns=HISTORY_COLUMNS)
+
+
+def parse_espn_scoreboard(payload: dict) -> pd.DataFrame:
+    rows: list[dict] = []
+    for event in payload.get("events", []):
+        for grouping in event.get("groupings", []):
+            if grouping.get("grouping", {}).get("slug") != "mens-singles":
+                continue
+            for competition in grouping.get("competitions", []):
+                status = competition.get("status", {}).get("type", {})
+                if not status.get("completed"):
+                    continue
+                competitors = competition.get("competitors", [])
+                winner = next((item for item in competitors if item.get("winner") is True), None)
+                loser = next((item for item in competitors if item.get("winner") is False), None)
+                if not winner or not loser:
+                    continue
+                winner_name = winner.get("athlete", {}).get("displayName")
+                loser_name = loser.get("athlete", {}).get("displayName")
+                winner_sets = [item.get("value") for item in winner.get("linescores", [])]
+                loser_sets = [item.get("value") for item in loser.get("linescores", [])]
+                if not winner_name or not loser_name or not winner_sets or len(winner_sets) != len(loser_sets):
+                    continue
+                score = " ".join(f"{int(left)}-{int(right)}" for left, right in zip(winner_sets, loser_sets))
+                if status.get("name") == "STATUS_RETIRED":
+                    score += " RET"
+                played_at = pd.to_datetime(competition.get("date"), utc=True, errors="coerce")
+                if pd.isna(played_at):
+                    continue
+                rows.append({
+                    "tourney_date": int(played_at.tz_convert(PACIFIC).strftime("%Y%m%d")),
+                    "surface": "Hard",
+                    "winner_name": winner_name,
+                    "loser_name": loser_name,
+                    "score": score,
+                })
+    return pd.DataFrame(rows)
+
+
+def fetch_espn_results(pending_dates: list[str]) -> pd.DataFrame:
+    frames = []
+    for value in sorted(set(pending_dates)):
+        compact = pd.to_datetime(value, errors="coerce")
+        if pd.isna(compact):
+            continue
+        request = Request(ESPN_SCOREBOARD.format(date=compact.strftime("%Y%m%d")), headers={"User-Agent": "Mozilla/5.0"})
+        with urlopen(request, timeout=30) as response:
+            frames.append(parse_espn_scoreboard(json.load(response)))
+    populated = [frame for frame in frames if not frame.empty]
+    return pd.concat(populated, ignore_index=True).drop_duplicates() if populated else pd.DataFrame()
 
 
 def archive_bets(recommendations: pd.DataFrame, history: pd.DataFrame, now: str) -> pd.DataFrame:
@@ -152,8 +207,16 @@ def main() -> None:
         try:
             results = pd.read_csv(args.results_url)
         except Exception as exc:
-            print(f"Results source unavailable; leaving pending picks unsettled: {exc}")
+            print(f"Season results source unavailable; using ESPN fallback: {exc}")
             results = pd.DataFrame()
+        pending_dates = history.loc[history["result"].astype(str).str.upper() == "PENDING", "date"].astype(str).tolist()
+        try:
+            espn_results = fetch_espn_results(pending_dates)
+            if not espn_results.empty:
+                results = pd.concat([results, espn_results], ignore_index=True)
+                print(f"Loaded {len(espn_results)} completed ATP matches from ESPN fallback.")
+        except Exception as exc:
+            print(f"ESPN fallback unavailable; unmatched picks will remain pending: {exc}")
         history = settle_history(history, results, now)
     history_path.parent.mkdir(parents=True, exist_ok=True)
     history.to_csv(history_path, index=False)
