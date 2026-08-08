@@ -153,7 +153,7 @@ def settle_history(history: pd.DataFrame, results: pd.DataFrame, now: str) -> pd
     results["winner_key"] = results["winner_name"].map(name_key)
     results["loser_key"] = results["loser_name"].map(name_key)
     results["tourney_date"] = pd.to_datetime(results["tourney_date"].astype(str), format="%Y%m%d", errors="coerce")
-    today = pd.Timestamp.now(tz="UTC").tz_localize(None).normalize()
+    today = pd.to_datetime(now, utc=True).tz_convert(PACIFIC).tz_localize(None).normalize()
     for index, pick in history.iterrows():
         if str(pick.get("result", "")).upper() != "PENDING":
             continue
@@ -164,7 +164,10 @@ def settle_history(history: pd.DataFrame, results: pd.DataFrame, now: str) -> pd
         candidates = results[
             (((results["winner_key"] == player_key) & (results["loser_key"] == opponent_key)) |
              ((results["winner_key"] == opponent_key) & (results["loser_key"] == player_key))) &
-            (results["tourney_date"] <= pick_date) &
+            # Results feeds can roll an evening match into the following UTC
+            # calendar day. Exact player matching remains mandatory, while the
+            # date window allows that one-day boundary.
+            (results["tourney_date"] <= pick_date + pd.Timedelta(days=1)) &
             (results["tourney_date"] >= pick_date - pd.Timedelta(days=14))
         ].copy()
         if "surface" in results.columns and str(pick.get("surface", "")):
