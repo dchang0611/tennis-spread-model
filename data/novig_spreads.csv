@@ -1,6 +1,7 @@
 date,tournament,surface,best_of,player_a,player_b,spread_a,odds_a,spread_b,odds_b,collected_at,event_url
-2026-08-08,ATP,Hard,3,Rafael Jodar,Jiri Lehecka,-0.5,-113,0.5,100,2026-08-08T18:10:44.907262+00:00,https://novig.com/event-markets/019fd9ea-26cc-7961-8194-e4f0ef3ca901
-2026-08-08,ATP,Hard,3,Rafael Jodar,Jiri Lehecka,-1.5,111,1.5,-115,2026-08-08T18:10:44.907262+00:00,https://novig.com/event-markets/019fd9ea-26cc-7961-8194-e4f0ef3ca901
-2026-08-08,ATP,Hard,3,Rafael Jodar,Jiri Lehecka,1.5,-144,-1.5,133,2026-08-08T18:10:44.907262+00:00,https://novig.com/event-markets/019fd9ea-26cc-7961-8194-e4f0ef3ca901
-2026-08-08,ATP,Hard,3,Cameron Norrie,Arthur Fils,3.5,-102,-3.5,-111,2026-08-08T18:10:44.907262+00:00,https://novig.com/event-markets/019fd97b-c487-7673-a7c9-e345066bae41
-2026-08-08,ATP,Hard,3,Cameron Norrie,Arthur Fils,2.5,133,-2.5,-160,2026-08-08T18:10:44.907262+00:00,https://novig.com/event-markets/019fd97b-c487-7673-a7c9-e345066bae41
+2026-08-08,ATP,Hard,3,Brandon Nakashima,Arthur Rinderknech,-2.5,-115,2.5,100,2026-08-08T18:18:03.683828+00:00,https://novig.com/event-markets/019fda57-b815-7b23-b171-8d8260ffcdf5
+2026-08-08,ATP,Hard,3,Rafael Jodar,Jiri Lehecka,-0.5,-113,0.5,100,2026-08-08T18:18:03.683828+00:00,https://novig.com/event-markets/019fd9ea-26cc-7961-8194-e4f0ef3ca901
+2026-08-08,ATP,Hard,3,Rafael Jodar,Jiri Lehecka,-1.5,111,1.5,-115,2026-08-08T18:18:03.683828+00:00,https://novig.com/event-markets/019fd9ea-26cc-7961-8194-e4f0ef3ca901
+2026-08-08,ATP,Hard,3,Rafael Jodar,Jiri Lehecka,1.5,-144,-1.5,133,2026-08-08T18:18:03.683828+00:00,https://novig.com/event-markets/019fd9ea-26cc-7961-8194-e4f0ef3ca901
+2026-08-08,ATP,Hard,3,Cameron Norrie,Arthur Fils,3.5,-102,-3.5,-108,2026-08-08T18:18:03.683828+00:00,https://novig.com/event-markets/019fd97b-c487-7673-a7c9-e345066bae41
+2026-08-08,ATP,Hard,3,Cameron Norrie,Arthur Fils,2.5,133,-2.5,-160,2026-08-08T18:18:03.683828+00:00,https://novig.com/event-markets/019fd97b-c487-7673-a7c9-e345066bae41
