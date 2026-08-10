@@ -65,10 +65,11 @@ jobs:
       - name: Score current Novig markets
         shell: bash
         run: |
-          if [ -f data/scrape_ok ] && [ "$(wc -l < data/novig_spreads.csv)" -gt 1 ]; then
+          if python -c 'import json; raise SystemExit(0 if json.load(open("data/settlement_status.json"))["complete"] else 1)' && [ -f data/scrape_ok ] && [ "$(wc -l < data/novig_spreads.csv)" -gt 1 ]; then
             python tennis_spread_model.py --markets data/novig_spreads.csv --model-rows model_rows_2026-07-06.csv
           else
-            echo "No fresh Novig rows; publishing a closed board."
+            echo "Settlement is incomplete or no fresh Novig rows exist; publishing a closed board."
+            rm -f tennis_model_output/novig_spread_recommendations.csv
           fi
       - run: python build_spread_site.py
       - name: Persist nightly market and history data
