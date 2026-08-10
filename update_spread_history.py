@@ -21,6 +21,7 @@ HISTORY_COLUMNS = [
 ]
 PACIFIC = ZoneInfo("America/Los_Angeles")
 ESPN_SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates={date}&limit=200"
+ATP_SCORES = "https://www.atptour.com/en/scores/current"
 
 
 def name_key(value: object) -> str:
@@ -120,6 +121,83 @@ def fetch_espn_results(pending_dates: list[str]) -> pd.DataFrame:
     return pd.concat(populated, ignore_index=True).drop_duplicates() if populated else pd.DataFrame()
 
 
+def parse_atp_results_text(text: str) -> pd.DataFrame:
+    """Parse completed singles matches from the rendered official ATP results text."""
+    rows: list[dict] = []
+    current_date: pd.Timestamp | None = None
+    block: list[str] = []
+
+    def consume(lines: list[str], played_date: pd.Timestamp | None) -> None:
+        if played_date is None or not lines:
+            return
+        joined = " ".join(item.strip() for item in lines if item.strip())
+        match = re.search(
+            r"Game Set and Match\s+(.+?)\.\s+\1 wins the match\s+(.+?)\s*(?:\.|$)",
+            joined,
+            flags=re.IGNORECASE,
+        )
+        if not match:
+            return
+        winner, score = match.group(1).strip(), match.group(2).strip()
+        # Player names appear before the terminal sentence. Select the last
+        # non-metadata name other than the winner as the opponent.
+        candidates = []
+        for item in lines:
+            value = re.sub(r"\s*\(.*?\)\s*$", "", item.strip())
+            if (value and re.search(r"[A-Za-z]", value) and not re.search(
+                r"^(Round|Quarter|Semi|Final|Court|Ump:|H2H|Stats|Game Set|\d)", value, re.I
+            )):
+                candidates.append(value)
+        winner_key = name_key(winner)
+        loser = next((value for value in reversed(candidates) if name_key(value) != winner_key), None)
+        if not loser:
+            return
+        rows.append({
+            "tourney_date": int(played_date.strftime("%Y%m%d")),
+            "winner_name": winner,
+            "loser_name": loser,
+            "score": score,
+        })
+
+    for raw in text.splitlines():
+        line = raw.strip()
+        date_match = re.match(r"^[A-Za-z]{3},\s+(\d{1,2}\s+[A-Za-z]+,\s+\d{4})", line)
+        if date_match:
+            consume(block, current_date)
+            block = []
+            current_date = pd.to_datetime(date_match.group(1), errors="coerce")
+        elif re.match(r"^(Round of|Quarterfinals|Semifinals|Final)\b", line, re.I):
+            consume(block, current_date)
+            block = [line]
+        elif current_date is not None:
+            block.append(line)
+    consume(block, current_date)
+    return pd.DataFrame(rows).drop_duplicates() if rows else pd.DataFrame()
+
+
+def fetch_atp_results() -> pd.DataFrame:
+    """Collect official ATP results through its rendered scores pages."""
+    from playwright.sync_api import sync_playwright
+
+    frames: list[pd.DataFrame] = []
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=True)
+        page = browser.new_page()
+        page.goto(ATP_SCORES, wait_until="domcontentloaded", timeout=60_000)
+        page.wait_for_timeout(3_000)
+        links = page.locator('a[href*="/en/scores/current/"][href$="/results"]').evaluate_all(
+            "els => [...new Set(els.map(e => e.href))]"
+        )
+        for url in links:
+            page.goto(url, wait_until="domcontentloaded", timeout=60_000)
+            page.wait_for_timeout(2_000)
+            parsed = parse_atp_results_text(page.locator("body").inner_text())
+            if not parsed.empty:
+                frames.append(parsed)
+        browser.close()
+    return pd.concat(frames, ignore_index=True).drop_duplicates() if frames else pd.DataFrame()
+
+
 def archive_bets(recommendations: pd.DataFrame, history: pd.DataFrame, now: str) -> pd.DataFrame:
     history = dedupe_history(history)
     bets = recommendations[recommendations["recommendation"].astype(str).str.upper() == "BET"].copy()
@@ -196,6 +274,7 @@ def main() -> None:
     parser.add_argument("--results-url", default="https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_matches_2026.csv")
     parser.add_argument("--verified-results", default="data/verified_atp_results.csv")
     parser.add_argument("--mode", choices=["all", "archive", "settle"], default="all")
+    parser.add_argument("--status-file", default="data/settlement_status.json")
     args = parser.parse_args()
     now = datetime.now(timezone.utc).isoformat()
     history_path = Path(args.history)
@@ -220,6 +299,13 @@ def main() -> None:
             print(f"Loaded {len(verified)} locally verified ATP match results.")
         pending_dates = history.loc[history["result"].astype(str).str.upper() == "PENDING", "date"].astype(str).tolist()
         try:
+            atp_results = fetch_atp_results()
+            if not atp_results.empty:
+                results = pd.concat([results, atp_results], ignore_index=True)
+                print(f"Loaded {len(atp_results)} completed matches from official ATP results.")
+        except Exception as exc:
+            print(f"Official ATP results unavailable: {exc}")
+        try:
             espn_results = fetch_espn_results(pending_dates)
             if not espn_results.empty:
                 results = pd.concat([results, espn_results], ignore_index=True)
@@ -229,6 +315,27 @@ def main() -> None:
         history = settle_history(history, results, now)
     history_path.parent.mkdir(parents=True, exist_ok=True)
     history.to_csv(history_path, index=False)
+    today = pd.to_datetime(now, utc=True).tz_convert(PACIFIC).tz_localize(None).normalize()
+    prior_pending = history[
+        (history["result"].astype(str).str.upper() == "PENDING") &
+        (pd.to_datetime(history["date"], errors="coerce") < today)
+    ]
+    status_path = Path(args.status_file)
+    status_path.parent.mkdir(parents=True, exist_ok=True)
+    status_path.write_text(json.dumps({
+        "complete": prior_pending.empty,
+        "checked_at": now,
+        "unsettled_prior_bets": [
+            {"date": str(row.date), "player": row.player, "opponent": row.opponent}
+            for row in prior_pending.itertuples(index=False)
+        ],
+    }, indent=2), encoding="utf-8")
+    if not prior_pending.empty:
+        pairs = ", ".join(
+            f"{row.player} vs {row.opponent} ({row.date})"
+            for row in prior_pending.itertuples(index=False)
+        )
+        print(f"Settlement incomplete; the board must remain closed: {pairs}")
     settled = history[history["result"].isin(["WIN", "LOSS", "PUSH", "VOID"])]
     pending = history[history["result"].astype(str).str.upper() == "PENDING"]
     print(f"History now contains {len(history)} tracked bets, {len(settled)} settled, {len(pending)} pending.")
