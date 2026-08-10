@@ -5,7 +5,7 @@ import pandas as pd
 
 from build_spread_site import rationale_for_pick
 from novig_scraper import parse_event_card, parse_spread_tokens, surface_for_date
-from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, parse_espn_scoreboard, profit_for_result, score_game_margin
+from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, parse_atp_results_text, parse_espn_scoreboard, profit_for_result, score_game_margin
 
 
 class NovigAutomationTests(unittest.TestCase):
@@ -72,6 +72,33 @@ class NovigAutomationTests(unittest.TestCase):
         self.assertEqual(parsed.iloc[0]["winner_name"], "Learner Tien")
         self.assertEqual(parsed.iloc[0]["score"], "6-3 6-2")
         self.assertEqual(int(parsed.iloc[0]["tourney_date"]), 20260807)
+
+    def test_parse_official_atp_results_text(self):
+        text = """Sun, 09 August, 2026 Day (9)
+Round of 16 - Center Court 01:49:03
+Learner Tien (12)
+6
+6
+Thiago Agustin Tirante
+4
+4
+Ump: Mohamed Lahyani
+H2H Stats
+Game Set and Match Learner Tien. Learner Tien wins the match 6-4 6-4 .
+Round of 16 - Center Court 01:29:35
+Jakub Mensik (13)
+6
+7
+Botic van de Zandschulp
+4
+5
+Game Set and Match Jakub Mensik. Jakub Mensik wins the match 6-4 7-5 ."""
+        parsed = parse_atp_results_text(text)
+        self.assertEqual(len(parsed), 2)
+        self.assertEqual(parsed.iloc[0]["winner_name"], "Learner Tien")
+        self.assertEqual(parsed.iloc[0]["loser_name"], "Thiago Agustin Tirante")
+        self.assertEqual(parsed.iloc[1]["score"], "6-4 7-5")
+        self.assertEqual(int(parsed.iloc[1]["tourney_date"]), 20260809)
 
 
     def test_rationale_is_plain_english_and_line_specific(self):
