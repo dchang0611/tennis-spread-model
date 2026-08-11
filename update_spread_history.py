@@ -380,7 +380,12 @@ def settle_history(history: pd.DataFrame, results: pd.DataFrame, now: str) -> pd
         if margin is None:
             result = "VOID"
         else:
-            player_margin = margin if match["winner_key"] == player_key else -margin
+            # Feeds such as Tennis Explorer abbreviate names as `Surname F.`.
+            # Candidate matching already verified both players through aliases,
+            # so winner direction must use the same aliases instead of the
+            # full-name key.
+            player_was_winner = bool(match["winner_aliases"] & player_aliases)
+            player_margin = margin if player_was_winner else -margin
             result = grade_spread(player_margin, float(pick["spread"]))
         history.at[index, "result"] = result
         history.at[index, "profit_units"] = profit_for_result(result, float(pick["odds"]))
