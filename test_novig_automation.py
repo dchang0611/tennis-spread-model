@@ -5,7 +5,7 @@ import pandas as pd
 
 from build_spread_site import rationale_for_pick
 from novig_scraper import parse_event_card, parse_spread_tokens, surface_for_date
-from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, parse_atp_results_text, parse_espn_scoreboard, profit_for_result, score_game_margin
+from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, name_aliases, parse_atp_results_text, parse_espn_scoreboard, parse_tennis_explorer_html, profit_for_result, score_game_margin
 
 
 class NovigAutomationTests(unittest.TestCase):
@@ -99,6 +99,16 @@ Game Set and Match Jakub Mensik. Jakub Mensik wins the match 6-4 7-5 ."""
         self.assertEqual(parsed.iloc[0]["loser_name"], "Thiago Agustin Tirante")
         self.assertEqual(parsed.iloc[1]["score"], "6-4 7-5")
         self.assertEqual(int(parsed.iloc[1]["tourney_date"]), 20260809)
+
+    def test_parse_tennis_explorer_results_and_abbreviated_names(self):
+        html = """<table>
+        <tr id="r10"><td class="t-name">Tien L.</td><td class="result">2</td><td class="score">6</td><td class="score">6</td></tr>
+        <tr id="r10b"><td class="t-name">Tirante T.</td><td class="result">0</td><td class="score">4</td><td class="score">4</td></tr>
+        </table>"""
+        parsed = parse_tennis_explorer_html(html, pd.Timestamp("2026-08-09"))
+        self.assertEqual(parsed.iloc[0]["score"], "6-4 6-4")
+        self.assertTrue(name_aliases("Tien L.") & name_aliases("Learner Tien"))
+        self.assertTrue(name_aliases("Van De Zandschulp B.") & name_aliases("Botic Van De Zandschulp"))
 
 
     def test_rationale_is_plain_english_and_line_specific(self):
