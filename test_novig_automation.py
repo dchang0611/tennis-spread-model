@@ -5,7 +5,7 @@ import pandas as pd
 
 from build_spread_site import rationale_for_pick
 from novig_scraper import parse_event_card, parse_spread_tokens, surface_for_date
-from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, name_aliases, parse_atp_results_text, parse_espn_scoreboard, parse_tennis_explorer_html, profit_for_result, score_game_margin
+from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, name_aliases, parse_atp_results_text, parse_espn_scoreboard, parse_tennis_explorer_html, profit_for_result, score_game_margin, settle_history
 
 
 class NovigAutomationTests(unittest.TestCase):
@@ -109,6 +109,23 @@ Game Set and Match Jakub Mensik. Jakub Mensik wins the match 6-4 7-5 ."""
         self.assertEqual(parsed.iloc[0]["score"], "6-4 6-4")
         self.assertTrue(name_aliases("Tien L.") & name_aliases("Learner Tien"))
         self.assertTrue(name_aliases("Van De Zandschulp B.") & name_aliases("Botic Van De Zandschulp"))
+
+    def test_settlement_uses_abbreviated_winner_direction(self):
+        history = pd.DataFrame([{
+            "date": "2026-08-08", "tournament": "ATP", "surface": "Hard",
+            "player": "Luciano Darderi", "opponent": "Nuno Borges", "spread": 1.5,
+            "odds": 122, "cover_probability": 0.64, "market_no_vig_probability": 0.44,
+            "result": "PENDING", "risk_units": 1.0, "profit_units": None,
+            "closing_line_value": None, "recorded_at": "2026-08-08T08:00:00+00:00",
+            "settled_at": None,
+        }], columns=HISTORY_COLUMNS)
+        results = pd.DataFrame([{
+            "tourney_date": 20260808, "winner_name": "Darderi L.",
+            "loser_name": "Borges N.", "score": "4-6 6-3 7-5",
+        }])
+        settled = settle_history(history, results, "2026-08-11T04:00:00+00:00")
+        self.assertEqual(settled.iloc[0]["result"], "WIN")
+        self.assertEqual(settled.iloc[0]["profit_units"], 1.22)
 
 
     def test_rationale_is_plain_english_and_line_specific(self):
