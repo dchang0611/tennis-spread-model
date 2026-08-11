@@ -7,6 +7,7 @@ import json
 import re
 import unicodedata
 from datetime import datetime, timezone
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
@@ -22,11 +23,120 @@ HISTORY_COLUMNS = [
 PACIFIC = ZoneInfo("America/Los_Angeles")
 ESPN_SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates={date}&limit=200"
 ATP_SCORES = "https://www.atptour.com/en/scores/current"
+TENNIS_EXPLORER_RESULTS = "https://www.tennisexplorer.com/results/?type=atp-single&year={year}&month={month}&day={day}"
 
 
 def name_key(value: object) -> str:
     text = unicodedata.normalize("NFKD", str(value)).encode("ascii", "ignore").decode().lower()
     return re.sub(r"[^a-z0-9]", "", text)
+
+
+def name_aliases(value: object) -> set[str]:
+    """Return conservative aliases for full and `Surname F.` score-feed names."""
+    text = unicodedata.normalize("NFKD", str(value)).encode("ascii", "ignore").decode().lower()
+    tokens = re.findall(r"[a-z]+", text)
+    if not tokens:
+        return set()
+    aliases = {"".join(tokens)}
+    if len(tokens) >= 2:
+        if len(tokens[-1]) == 1:
+            aliases.add("".join(tokens[:-1]) + tokens[-1])
+        else:
+            aliases.add(tokens[-1] + tokens[0][0])
+            aliases.add("".join(tokens[1:]) + tokens[0][0])
+    return aliases
+
+
+class TennisExplorerParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.rows: list[dict] = []
+        self.row: dict | None = None
+        self.field: str | None = None
+        self.in_sup = False
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        values = dict(attrs)
+        if tag == "tr" and re.fullmatch(r"r\d+b?", values.get("id", "")):
+            self.row = {"id": values["id"], "player": "", "result": "", "scores": []}
+        elif self.row is not None and tag == "td":
+            classes = set((values.get("class") or "").split())
+            self.field = "player" if "t-name" in classes else "result" if "result" in classes else "score" if "score" in classes else None
+            if self.field == "score":
+                self.row["scores"].append("")
+        elif tag == "sup":
+            self.in_sup = True
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "sup":
+            self.in_sup = False
+        elif tag == "td":
+            self.field = None
+        elif tag == "tr" and self.row is not None:
+            self.rows.append(self.row)
+            self.row = None
+
+    def handle_data(self, data: str) -> None:
+        if self.row is None or self.field is None or self.in_sup:
+            return
+        value = data.strip()
+        if not value:
+            return
+        if self.field == "score":
+            self.row["scores"][-1] += value
+        else:
+            self.row[self.field] += (" " if self.row[self.field] else "") + value
+
+
+def parse_tennis_explorer_html(html: str, played_date: pd.Timestamp) -> pd.DataFrame:
+    parser = TennisExplorerParser()
+    parser.feed(html)
+    indexed = {row["id"]: row for row in parser.rows}
+    results = []
+    for row_id, first in indexed.items():
+        if row_id.endswith("b") or f"{row_id}b" not in indexed:
+            continue
+        second = indexed[f"{row_id}b"]
+        try:
+            first_result, second_result = int(first["result"]), int(second["result"])
+        except (TypeError, ValueError):
+            continue
+        winner, loser = (first, second) if first_result > second_result else (second, first)
+        sets = []
+        for winner_games, loser_games in zip(winner["scores"], loser["scores"]):
+            if winner_games.isdigit() and loser_games.isdigit():
+                sets.append(f"{winner_games}-{loser_games}")
+        if not sets:
+            continue
+        score = " ".join(sets)
+        if "ret" in (first["result"] + second["result"]).lower():
+            score += " RET"
+        results.append({
+            "tourney_date": int(played_date.strftime("%Y%m%d")),
+            "winner_name": winner["player"],
+            "loser_name": loser["player"],
+            "score": score,
+        })
+    return pd.DataFrame(results)
+
+
+def fetch_tennis_explorer_results(pending_dates: list[str]) -> pd.DataFrame:
+    frames = []
+    dates = set()
+    for value in pending_dates:
+        parsed = pd.to_datetime(value, errors="coerce")
+        if pd.notna(parsed):
+            dates.update({parsed.normalize(), parsed.normalize() + pd.Timedelta(days=1)})
+    for played_date in sorted(dates):
+        url = TENNIS_EXPLORER_RESULTS.format(
+            year=played_date.strftime("%Y"), month=played_date.strftime("%m"), day=played_date.strftime("%d")
+        )
+        request = Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urlopen(request, timeout=30) as response:
+            parsed = parse_tennis_explorer_html(response.read().decode("utf-8", errors="replace"), played_date)
+        if not parsed.empty:
+            frames.append(parsed)
+    return pd.concat(frames, ignore_index=True).drop_duplicates() if frames else pd.DataFrame()
 
 
 def score_game_margin(score: object) -> int | None:
@@ -233,6 +343,8 @@ def settle_history(history: pd.DataFrame, results: pd.DataFrame, now: str) -> pd
     results = results.copy()
     results["winner_key"] = results["winner_name"].map(name_key)
     results["loser_key"] = results["loser_name"].map(name_key)
+    results["winner_aliases"] = results["winner_name"].map(name_aliases)
+    results["loser_aliases"] = results["loser_name"].map(name_aliases)
     results["tourney_date"] = pd.to_datetime(results["tourney_date"].astype(str), format="%Y%m%d", errors="coerce")
     today = pd.to_datetime(now, utc=True).tz_convert(PACIFIC).tz_localize(None).normalize()
     for index, pick in history.iterrows():
@@ -242,9 +354,15 @@ def settle_history(history: pd.DataFrame, results: pd.DataFrame, now: str) -> pd
         if pd.isna(pick_date) or pick_date.normalize() >= today:
             continue
         player_key, opponent_key = name_key(pick["player"]), name_key(pick["opponent"])
+        player_aliases, opponent_aliases = name_aliases(pick["player"]), name_aliases(pick["opponent"])
+        player_won = results.apply(
+            lambda row: bool(row["winner_aliases"] & player_aliases) and bool(row["loser_aliases"] & opponent_aliases), axis=1
+        )
+        opponent_won = results.apply(
+            lambda row: bool(row["winner_aliases"] & opponent_aliases) and bool(row["loser_aliases"] & player_aliases), axis=1
+        )
         candidates = results[
-            (((results["winner_key"] == player_key) & (results["loser_key"] == opponent_key)) |
-             ((results["winner_key"] == opponent_key) & (results["loser_key"] == player_key))) &
+            (player_won | opponent_won) &
             # Results feeds can roll an evening match into the following UTC
             # calendar day. Exact player matching remains mandatory, while the
             # date window allows that one-day boundary.
@@ -315,6 +433,13 @@ def main() -> None:
                 print(f"Loaded {len(espn_results)} completed ATP matches from ESPN fallback.")
         except Exception as exc:
             print(f"ESPN fallback unavailable; unmatched picks will remain pending: {exc}")
+        try:
+            explorer_results = fetch_tennis_explorer_results(pending_dates)
+            if not explorer_results.empty:
+                results = pd.concat([results, explorer_results], ignore_index=True)
+                print(f"Loaded {len(explorer_results)} completed tennis matches from Tennis Explorer fallback.")
+        except Exception as exc:
+            print(f"Tennis Explorer fallback unavailable; unmatched picks will remain pending: {exc}")
         history = settle_history(history, results, now)
     history_path.parent.mkdir(parents=True, exist_ok=True)
     history.to_csv(history_path, index=False)
