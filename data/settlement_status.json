@@ -1,0 +1,27 @@
+{
+  "complete": true,
+  "checked_at": "2026-08-12T22:32:35.432365+00:00",
+  "sources": {
+    "season_csv": {
+      "ok": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    "verified_results": {
+      "ok": true,
+      "matches": 5
+    },
+    "official_atp": {
+      "ok": true,
+      "matches": 0
+    },
+    "espn": {
+      "ok": true,
+      "matches": 0
+    },
+    "tennis_explorer": {
+      "ok": true,
+      "matches": 0
+    }
+  },
+  "unsettled_prior_bets": []
+}
