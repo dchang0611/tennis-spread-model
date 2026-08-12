@@ -1,30 +1,28 @@
 {
-  "success": false,
-  "checked_at": "2026-08-12T22:32:39.985976+00:00",
+  "success": true,
+  "checked_at": "2026-08-12T22:43:48.711037+00:00",
   "match_date": "2026-08-12",
   "day_label": "Today",
   "events_found": 8,
   "events": [
     "Dalibor Svrcina vs Mark Lajal",
-    "Henrique Rocha vs Marcos Giron",
+    "Darwin Blanch vs Aleksandar Vukic",
     "Jacob Fearnley vs Nicolas Mejia",
+    "Henrique Rocha vs Marcos Giron",
     "Ben Shelton vs Learner Tien",
     "Christopher O'Connell vs Alexander Shevchenko",
-    "Otto Virtanen vs Chak Lam Coleman Wong",
-    "Dusan Lajovic vs Luca Van Assche",
-    "Michael Zheng vs Trevor Svajda"
+    "Michael Zheng vs Trevor Svajda",
+    "Otto Virtanen vs Chak Lam Coleman Wong"
   ],
   "spread_markets_found": 8,
-  "parser_failures": [
-    "Dalibor Svrcina vs Mark Lajal",
-    "Henrique Rocha vs Marcos Giron",
+  "parser_failures": [],
+  "unpriced_spread_markets": [
+    "Darwin Blanch vs Aleksandar Vukic",
     "Jacob Fearnley vs Nicolas Mejia",
-    "Ben Shelton vs Learner Tien",
-    "Christopher O'Connell vs Alexander Shevchenko",
-    "Otto Virtanen vs Chak Lam Coleman Wong",
-    "Dusan Lajovic vs Luca Van Assche",
-    "Michael Zheng vs Trevor Svajda"
+    "Henrique Rocha vs Marcos Giron"
   ],
-  "matches_parsed": 0,
-  "error": "Game Spread was visible but could not be parsed for: Dalibor Svrcina vs Mark Lajal, Henrique Rocha vs Marcos Giron, Jacob Fearnley vs Nicolas Mejia, Ben Shelton vs Learner Tien, Christopher O'Connell vs Alexander Shevchenko, Otto Virtanen vs Chak Lam Coleman Wong, Dusan Lajovic vs Luca Van Assche, Michael Zheng vs Trevor Svajda"
+  "executable_spread_markets": 5,
+  "matches_parsed": 5,
+  "rows_saved": 10,
+  "error": null
 }
