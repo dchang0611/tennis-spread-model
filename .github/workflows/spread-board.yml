@@ -17,6 +17,7 @@ on:
       - "data/verified_atp_results.csv"
       - "data/scrape_status.json"
       - "data/settlement_status.json"
+      - "data/scoring_status.json"
       - "tennis_model_output/spread_results_history.csv"
       - "tennis_spread_model.py"
       - "novig_scraper.py"
@@ -61,9 +62,9 @@ jobs:
       - name: Collect today's Novig ATP spreads
         shell: bash
         run: |
-          rm -f data/scrape_ok
+          rm -f /tmp/tennis_scrape_ok
           if python novig_scraper.py --output data/novig_spreads.csv --status-file data/scrape_status.json --tournament "ATP" --surface Auto --day-label Today --minimum-matches 1; then
-            touch data/scrape_ok
+            touch /tmp/tennis_scrape_ok
           else
             echo "Novig has no complete Today spread slate; publishing explicit diagnostics instead of stale data."
             rm -f data/novig_spreads.csv
@@ -72,11 +73,12 @@ jobs:
       - name: Score current Novig markets
         shell: bash
         run: |
-          if [ -f data/scrape_ok ] && [ "$(wc -l < data/novig_spreads.csv)" -gt 1 ]; then
-            python tennis_spread_model.py --markets data/novig_spreads.csv --model-rows model_rows_2026-07-06.csv
+          if [ -f /tmp/tennis_scrape_ok ] && [ "$(wc -l < data/novig_spreads.csv)" -gt 1 ]; then
+            python tennis_spread_model.py --markets data/novig_spreads.csv --model-rows model_rows_2026-07-06.csv --status-file data/scoring_status.json
           else
             echo "No fresh complete Novig rows exist; publishing a closed board with diagnostics."
             rm -f tennis_model_output/novig_spread_recommendations.csv
+            rm -f data/scoring_status.json
           fi
       - run: python build_spread_site.py
       - name: Persist nightly market and history data

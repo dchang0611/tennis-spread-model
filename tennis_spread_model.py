@@ -9,6 +9,7 @@ cover probabilities using out-of-fold residuals.
 from __future__ import annotations
 
 import argparse
+import json
 import math
 from dataclasses import dataclass
 from pathlib import Path
@@ -369,12 +370,31 @@ def main() -> None:
     parser.add_argument("--markets", required=True, help="CSV containing paired Novig game-spread prices.")
     parser.add_argument("--model-rows", default=str(OUT_DIR / "model_rows_2026-07-06.csv"))
     parser.add_argument("--folds", type=int, default=5)
+    parser.add_argument("--status-file", default="data/scoring_status.json")
     args = parser.parse_args()
 
     model_rows = pd.read_csv(args.model_rows)
     markets = pd.read_csv(args.markets)
     model, oof, summary = train_spread_model(model_rows, folds=args.folds)
     scored = score_markets(markets, model_rows, model, oof)
+
+    def matchup_key(player: object, opponent: object) -> str:
+        return "|".join(sorted((str(player).strip().casefold(), str(opponent).strip().casefold())))
+
+    market_pairs = {
+        matchup_key(row.player_a, row.player_b): f"{row.player_a} vs {row.player_b}"
+        for row in normalize_novig_markets(markets).itertuples(index=False)
+    }
+    scored_keys = {matchup_key(row.player, row.opponent) for row in scored.itertuples(index=False)}
+    scoring_status = {
+        "success": True,
+        "market_matchups": len(market_pairs),
+        "modeled_matchups": len(scored_keys),
+        "unmatched_model_players": [market_pairs[key] for key in sorted(set(market_pairs) - scored_keys)],
+    }
+    status_path = Path(args.status_file)
+    status_path.parent.mkdir(parents=True, exist_ok=True)
+    status_path.write_text(json.dumps(scoring_status, indent=2), encoding="utf-8")
 
     OUT_DIR.mkdir(exist_ok=True)
     summary.to_csv(OUT_DIR / "spread_validation_summary.csv", index=False)

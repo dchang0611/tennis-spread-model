@@ -64,6 +64,7 @@ def build_payload() -> dict:
     history = records_from_csv(OUTPUT / "spread_results_history.csv")
     scrape_status = read_json(ROOT / "data" / "scrape_status.json")
     settlement_status = read_json(ROOT / "data" / "settlement_status.json")
+    scoring_status = read_json(ROOT / "data" / "scoring_status.json")
 
     settled = [row for row in history if str(row.get("result", "")).upper() in {"WIN", "LOSS"}]
     wins = sum(str(row.get("result", "")).upper() == "WIN" for row in settled)
@@ -91,7 +92,11 @@ def build_payload() -> dict:
     fresh_scrape = scrape_status.get("success") and scrape_status.get("match_date") == today
     if picks:
         status = "ready"
-        message = f"{len(active_bets)} qualified spread play{'s' if len(active_bets) != 1 else ''} from {scrape_status.get('matches_parsed', 0)} Novig matchup(s)."
+        message = (
+            f"{len(active_bets)} qualified spread play{'s' if len(active_bets) != 1 else ''} from "
+            f"{scoring_status.get('modeled_matchups', 0)} modeled matchup(s); "
+            f"{scrape_status.get('matches_parsed', 0)} executable Novig matchup(s) were captured."
+        )
     elif fresh_scrape:
         status = "ready_no_plays"
         message = "Today’s Novig spread markets were checked, but no line qualified."
@@ -107,6 +112,7 @@ def build_payload() -> dict:
         "source": "Novig game spreads",
         "scrape_status": scrape_status,
         "settlement_status": settlement_status,
+        "scoring_status": scoring_status,
         "model": {
             "name": "Compact Tennis Spread Model",
             "version": "1.0",
