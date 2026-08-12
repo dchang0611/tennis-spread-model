@@ -87,7 +87,11 @@ jobs:
           git add -A data/novig_spreads.csv data/scrape_status.json data/settlement_status.json tennis_model_output/spread_results_history.csv
           if ! git diff --cached --quiet; then
             git commit -m "Update nightly tennis board [skip ci]"
-            git push
+            if ! git push; then
+              echo "Remote advanced during this run; rebasing the generated data commit once."
+              git pull --rebase origin main
+              git push
+            fi
           fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
