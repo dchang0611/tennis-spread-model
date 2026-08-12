@@ -1,6 +1,6 @@
 {
   "complete": true,
-  "checked_at": "2026-08-12T22:43:42.993480+00:00",
+  "checked_at": "2026-08-12T22:48:02.369923+00:00",
   "sources": {
     "season_csv": {
       "ok": false,
@@ -15,12 +15,12 @@
       "matches": 0
     },
     "espn": {
-      "ok": true,
-      "matches": 0
+      "ok": false,
+      "error": "HTTP Error 403: Forbidden"
     },
     "tennis_explorer": {
       "ok": true,
-      "matches": 0
+      "matches": 167
     }
   },
   "unsettled_prior_bets": []
