@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import re
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -111,7 +112,7 @@ def locate_event_card(page: Page, player_a: str, player_b: str, max_scrolls: int
     return None
 
 
-def scrape_markets(tournament: str, surface: str, day_label: str = "Today") -> pd.DataFrame:
+def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diagnostics: dict | None = None) -> pd.DataFrame:
     collected_at = datetime.now(timezone.utc).isoformat()
     match_day = datetime.now(PACIFIC).date()
     match_date = match_day.isoformat()
@@ -138,10 +139,15 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today") -> p
         page.goto(ATP_URL, wait_until="domcontentloaded", timeout=45_000)
         page.get_by_text("7 More", exact=True).first.wait_for(timeout=20_000)
         events = collect_event_cards(page, day_label)
+        if diagnostics is not None:
+            diagnostics["events_found"] = len(events)
+            diagnostics["events"] = [f'{event["player_a"]} vs {event["player_b"]}' for event in events]
         if not events:
             browser.close()
             raise RuntimeError(f"No Novig ATP events labeled {day_label!r} were found.")
 
+        spread_markets = 0
+        parser_failures = []
         for event in events:
             card = locate_event_card(page, event["player_a"], event["player_b"])
             if card is None:
@@ -152,12 +158,16 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today") -> p
             heading = page.get_by_text("Game Spread", exact=True)
             if heading.count() != 1:
                 continue
+            spread_markets += 1
             # The spread ladder is the third ancestor of its heading.  Novig
             # no longer exposes the old data-testid=Text attributes, so parse
             # the verified section text instead of depending on those skins.
             section = heading.locator("..").locator("..").locator("..")
             tokens = [line.strip() for line in section.inner_text().splitlines() if line.strip()]
-            for spread_a, odds_a, spread_b, odds_b in parse_spread_tokens(tokens):
+            parsed_prices = parse_spread_tokens(tokens)
+            if not parsed_prices:
+                parser_failures.append(f'{event["player_a"]} vs {event["player_b"]}')
+            for spread_a, odds_a, spread_b, odds_b in parsed_prices:
                 rows.append({
                     "date": match_date,
                     "tournament": tournament,
@@ -173,6 +183,12 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today") -> p
                     "event_url": page.url,
                 })
         browser.close()
+    if diagnostics is not None:
+        diagnostics["spread_markets_found"] = spread_markets
+        diagnostics["parser_failures"] = parser_failures
+        diagnostics["matches_parsed"] = len({(row["player_a"], row["player_b"]) for row in rows})
+    if parser_failures:
+        raise RuntimeError("Game Spread was visible but could not be parsed for: " + ", ".join(parser_failures))
     frame = pd.DataFrame(rows, columns=OUTPUT_COLUMNS)
     if frame.empty:
         raise RuntimeError("Novig events were found, but no complete paired spread prices were extracted.")
@@ -186,16 +202,32 @@ def main() -> None:
     parser.add_argument("--surface", required=True, choices=["Auto", "Hard", "Clay", "Grass", "Carpet"])
     parser.add_argument("--day-label", default="Today")
     parser.add_argument("--minimum-matches", type=int, default=2)
+    parser.add_argument("--status-file", default="data/scrape_status.json")
     args = parser.parse_args()
 
-    frame = scrape_markets(args.tournament, args.surface, args.day_label)
-    match_count = frame[["player_a", "player_b"]].drop_duplicates().shape[0]
-    if match_count < args.minimum_matches:
-        raise RuntimeError(f"Only {match_count} complete matches were scraped; refusing to replace the market file.")
-    output = Path(args.output)
-    output.parent.mkdir(parents=True, exist_ok=True)
-    frame.to_csv(output, index=False)
-    print(f"Saved {len(frame)} paired prices across {match_count} matches to {output}.")
+    status = {
+        "success": False, "checked_at": datetime.now(timezone.utc).isoformat(),
+        "match_date": datetime.now(PACIFIC).date().isoformat(), "day_label": args.day_label,
+    }
+    status_path = Path(args.status_file)
+    status_path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        frame = scrape_markets(args.tournament, args.surface, args.day_label, status)
+        match_count = frame[["player_a", "player_b"]].drop_duplicates().shape[0]
+        if match_count < args.minimum_matches:
+            raise RuntimeError(f"Only {match_count} complete matches were scraped; minimum is {args.minimum_matches}.")
+        output = Path(args.output)
+        output.parent.mkdir(parents=True, exist_ok=True)
+        temporary = output.with_suffix(output.suffix + ".tmp")
+        frame.to_csv(temporary, index=False)
+        temporary.replace(output)
+        status.update({"success": True, "rows_saved": len(frame), "error": None})
+        print(f"Saved {len(frame)} paired prices across {match_count} matches to {output}.")
+    except Exception as exc:
+        status["error"] = str(exc)
+        raise
+    finally:
+        status_path.write_text(json.dumps(status, indent=2), encoding="utf-8")
 
 
 if __name__ == "__main__":

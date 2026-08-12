@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import pandas as pd
 
@@ -22,6 +23,15 @@ def records_from_csv(path: Path) -> list[dict]:
         return []
     frame = frame.astype(object).where(pd.notna(frame), None)
     return frame.to_dict(orient="records")
+
+
+def read_json(path: Path) -> dict:
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
 
 
 def compact_pick(row: dict) -> dict:
@@ -52,6 +62,8 @@ def build_payload() -> dict:
     picks = [compact_pick(row) for row in records_from_csv(recommendations_path)]
     validation = records_from_csv(validation_path)
     history = records_from_csv(OUTPUT / "spread_results_history.csv")
+    scrape_status = read_json(ROOT / "data" / "scrape_status.json")
+    settlement_status = read_json(ROOT / "data" / "settlement_status.json")
 
     settled = [row for row in history if str(row.get("result", "")).upper() in {"WIN", "LOSS"}]
     wins = sum(str(row.get("result", "")).upper() == "WIN" for row in settled)
@@ -75,18 +87,26 @@ def build_payload() -> dict:
     }
 
     active_bets = [row for row in picks if row.get("recommendation") == "BET"]
-    status = "ready" if picks else "awaiting_market_data"
-    message = (
-        f"{len(active_bets)} qualified spread play{'s' if len(active_bets) != 1 else ''}."
-        if picks
-        else "No current Novig market file has been scored. The board is intentionally closed."
-    )
+    today = datetime.now(timezone.utc).astimezone(ZoneInfo("America/Los_Angeles")).date().isoformat()
+    fresh_scrape = scrape_status.get("success") and scrape_status.get("match_date") == today
+    if picks:
+        status = "ready"
+        message = f"{len(active_bets)} qualified spread play{'s' if len(active_bets) != 1 else ''} from {scrape_status.get('matches_parsed', 0)} Novig matchup(s)."
+    elif fresh_scrape:
+        status = "ready_no_plays"
+        message = "Today’s Novig spread markets were checked, but no line qualified."
+    else:
+        status = "awaiting_market_data"
+        reason = scrape_status.get("error") or "No same-day Novig spread scrape is available."
+        message = f"Live board unavailable: {reason}"
     return {
         "schema_version": 1,
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "status": status,
         "status_message": message,
         "source": "Novig game spreads",
+        "scrape_status": scrape_status,
+        "settlement_status": settlement_status,
         "model": {
             "name": "Compact Tennis Spread Model",
             "version": "1.0",

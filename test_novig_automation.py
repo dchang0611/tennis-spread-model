@@ -26,6 +26,10 @@ class NovigAutomationTests(unittest.TestCase):
         ]
         self.assertEqual(parse_spread_tokens(tokens), [(-2.5, -115, 2.5, 100)])
 
+    def test_one_match_is_a_valid_slate(self):
+        tokens = ["Player A -1.5", "+105", "Player B +1.5", "-120"]
+        self.assertEqual(len(parse_spread_tokens(tokens)), 1)
+
     def test_surface_calendar_is_date_bounded(self):
         self.assertEqual(surface_for_date(date(2026, 8, 8)), "Hard")
         with self.assertRaises(RuntimeError):

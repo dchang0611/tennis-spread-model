@@ -413,38 +413,48 @@ def main() -> None:
         else:
             print("No recommendation file exists; skipping archival without blocking settlement.")
     if args.mode in {"all", "settle"}:
+        source_status = {}
         try:
             results = pd.read_csv(args.results_url)
+            source_status["season_csv"] = {"ok": True, "matches": len(results)}
         except Exception as exc:
             print(f"Season results source unavailable; using ESPN fallback: {exc}")
             results = pd.DataFrame()
+            source_status["season_csv"] = {"ok": False, "error": str(exc)}
         verified_path = Path(args.verified_results)
         if verified_path.exists():
             verified = pd.read_csv(verified_path)
             results = pd.concat([results, verified], ignore_index=True)
             print(f"Loaded {len(verified)} locally verified ATP match results.")
+            source_status["verified_results"] = {"ok": True, "matches": len(verified)}
         pending_dates = history.loc[history["result"].astype(str).str.upper() == "PENDING", "date"].astype(str).tolist()
         try:
             atp_results = fetch_atp_results()
             if not atp_results.empty:
                 results = pd.concat([results, atp_results], ignore_index=True)
                 print(f"Loaded {len(atp_results)} completed matches from official ATP results.")
+            source_status["official_atp"] = {"ok": True, "matches": len(atp_results)}
         except Exception as exc:
             print(f"Official ATP results unavailable: {exc}")
+            source_status["official_atp"] = {"ok": False, "error": str(exc)}
         try:
             espn_results = fetch_espn_results(pending_dates)
             if not espn_results.empty:
                 results = pd.concat([results, espn_results], ignore_index=True)
                 print(f"Loaded {len(espn_results)} completed ATP matches from ESPN fallback.")
+            source_status["espn"] = {"ok": True, "matches": len(espn_results)}
         except Exception as exc:
             print(f"ESPN fallback unavailable; unmatched picks will remain pending: {exc}")
+            source_status["espn"] = {"ok": False, "error": str(exc)}
         try:
             explorer_results = fetch_tennis_explorer_results(pending_dates)
             if not explorer_results.empty:
                 results = pd.concat([results, explorer_results], ignore_index=True)
                 print(f"Loaded {len(explorer_results)} completed tennis matches from Tennis Explorer fallback.")
+            source_status["tennis_explorer"] = {"ok": True, "matches": len(explorer_results)}
         except Exception as exc:
             print(f"Tennis Explorer fallback unavailable; unmatched picks will remain pending: {exc}")
+            source_status["tennis_explorer"] = {"ok": False, "error": str(exc)}
         history = settle_history(history, results, now)
     history_path.parent.mkdir(parents=True, exist_ok=True)
     history.to_csv(history_path, index=False)
@@ -458,6 +468,7 @@ def main() -> None:
     status_path.write_text(json.dumps({
         "complete": prior_pending.empty,
         "checked_at": now,
+        "sources": source_status if args.mode in {"all", "settle"} else {},
         "unsettled_prior_bets": [
             {"date": str(row.date), "player": row.player, "opponent": row.opponent}
             for row in prior_pending.itertuples(index=False)
