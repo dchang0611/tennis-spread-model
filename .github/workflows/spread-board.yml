@@ -84,7 +84,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A data/novig_spreads.csv data/scrape_status.json data/settlement_status.json tennis_model_output/spread_results_history.csv
+          git add -A -- data tennis_model_output/spread_results_history.csv
           if ! git diff --cached --quiet; then
             git commit -m "Update nightly tennis board [skip ci]"
             if ! git push; then

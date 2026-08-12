@@ -159,6 +159,7 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
 
         spread_markets = 0
         parser_failures = []
+        unpriced_markets = []
         for event in events:
             card = locate_event_card(page, event["player_a"], event["player_b"])
             if card is None:
@@ -177,7 +178,12 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
             tokens = [line.strip() for line in section.inner_text().splitlines() if line.strip()]
             parsed_prices = parse_spread_tokens(tokens)
             if not parsed_prices:
-                parser_failures.append(f'{event["player_a"]} vs {event["player_b"]}')
+                matchup = f'{event["player_a"]} vs {event["player_b"]}'
+                has_displayed_price = any(
+                    re.fullmatch(r"[+-]\d{3,5}", token) or re.fullmatch(r"\d{1,2}(?:\.\d+)?%", token)
+                    for token in tokens
+                )
+                (parser_failures if has_displayed_price else unpriced_markets).append(matchup)
             for spread_a, odds_a, spread_b, odds_b in parsed_prices:
                 rows.append({
                     "date": match_date,
@@ -197,6 +203,8 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
     if diagnostics is not None:
         diagnostics["spread_markets_found"] = spread_markets
         diagnostics["parser_failures"] = parser_failures
+        diagnostics["unpriced_spread_markets"] = unpriced_markets
+        diagnostics["executable_spread_markets"] = spread_markets - len(unpriced_markets)
         diagnostics["matches_parsed"] = len({(row["player_a"], row["player_b"]) for row in rows})
     if parser_failures:
         raise RuntimeError("Game Spread was visible but could not be parsed for: " + ", ".join(parser_failures))

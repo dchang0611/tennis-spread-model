@@ -34,6 +34,10 @@ class NovigAutomationTests(unittest.TestCase):
         tokens = ["-2.5", "52.5%", "+2.5", "48.5%", "-3.5", "42.0%", "+3.5", "61.0%"]
         self.assertEqual(parse_spread_tokens(tokens), [(-2.5, -111, 2.5, 106), (-3.5, 138, 3.5, -156)])
 
+    def test_unpriced_market_has_no_false_prices(self):
+        tokens = ["Game Spread", "Player A -2.5", "•", "Player B +2.5", "•"]
+        self.assertEqual(parse_spread_tokens(tokens), [])
+
     def test_surface_calendar_is_date_bounded(self):
         self.assertEqual(surface_for_date(date(2026, 8, 8)), "Hard")
         with self.assertRaises(RuntimeError):
