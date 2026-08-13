@@ -1,26 +1,20 @@
 {
   "success": true,
-  "checked_at": "2026-08-13T18:32:06.063739+00:00",
+  "checked_at": "2026-08-13T22:49:07.326507+00:00",
   "match_date": "2026-08-13",
   "day_label": "Today",
-  "events_found": 6,
+  "events_found": 4,
   "events": [
-    "Jan Choinski vs Thiago Agustin Tirante",
-    "Adrian Mannarino vs Denis Shapovalov",
-    "Jan-Lennard Struff vs Roman Andres Burruchaga",
-    "Miomir Kecmanovic vs Camilo Ugo Carabelli",
     "Terence Atmane vs Marton Fucsovics",
-    "Raphael Collignon vs Mariano Navone"
+    "Gael Monfils vs Rinky Hijikata",
+    "Brandon Nakashima vs Ben Shelton",
+    "Mattia Bellucci vs Zachary Svajda"
   ],
-  "spread_markets_found": 6,
+  "spread_markets_found": 4,
   "parser_failures": [],
-  "unpriced_spread_markets": [
-    "Jan Choinski vs Thiago Agustin Tirante",
-    "Jan-Lennard Struff vs Roman Andres Burruchaga",
-    "Miomir Kecmanovic vs Camilo Ugo Carabelli"
-  ],
-  "executable_spread_markets": 3,
-  "matches_parsed": 3,
-  "rows_saved": 6,
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 4,
+  "matches_parsed": 4,
+  "rows_saved": 18,
   "error": null
 }

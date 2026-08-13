@@ -1,7 +1,19 @@
 date,tournament,surface,best_of,player_a,player_b,spread_a,odds_a,spread_b,odds_b,collected_at,event_url
-2026-08-13,ATP,Hard,3,Adrian Mannarino,Denis Shapovalov,1.5,-122,-1.5,-102,2026-08-13T18:32:06.063809+00:00,https://novig.com/event-markets/019ff2ea-7fb2-7790-9c83-c5c2d8912fa0
-2026-08-13,ATP,Hard,3,Adrian Mannarino,Denis Shapovalov,2.5,-144,-2.5,117,2026-08-13T18:32:06.063809+00:00,https://novig.com/event-markets/019ff2ea-7fb2-7790-9c83-c5c2d8912fa0
-2026-08-13,ATP,Hard,3,Terence Atmane,Marton Fucsovics,-3.5,104,3.5,-127,2026-08-13T18:32:06.063809+00:00,https://novig.com/event-markets/019ff2ea-81cb-7903-b34b-054dc1003513
-2026-08-13,ATP,Hard,3,Terence Atmane,Marton Fucsovics,-2.5,-144,2.5,120,2026-08-13T18:32:06.063809+00:00,https://novig.com/event-markets/019ff2ea-81cb-7903-b34b-054dc1003513
-2026-08-13,ATP,Hard,3,Raphael Collignon,Mariano Navone,-1.5,-104,1.5,-100,2026-08-13T18:32:06.063809+00:00,https://novig.com/event-markets/019ff2ea-8022-7c03-971b-bc663fb62d64
-2026-08-13,ATP,Hard,3,Raphael Collignon,Mariano Navone,-2.5,120,2.5,-130,2026-08-13T18:32:06.063809+00:00,https://novig.com/event-markets/019ff2ea-8022-7c03-971b-bc663fb62d64
+2026-08-13,ATP,Hard,3,Terence Atmane,Marton Fucsovics,-3.5,104,3.5,-122,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff2ea-81cb-7903-b34b-054dc1003513
+2026-08-13,ATP,Hard,3,Gael Monfils,Rinky Hijikata,-1.5,-102,1.5,-102,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff2ea-8394-7971-83ca-871f973051a6
+2026-08-13,ATP,Hard,3,Gael Monfils,Rinky Hijikata,-2.5,113,2.5,-144,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff2ea-8394-7971-83ca-871f973051a6
+2026-08-13,ATP,Hard,3,Gael Monfils,Rinky Hijikata,-3.5,141,3.5,-208,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff2ea-8394-7971-83ca-871f973051a6
+2026-08-13,ATP,Hard,3,Gael Monfils,Rinky Hijikata,1.5,-223,-1.5,144,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff2ea-8394-7971-83ca-871f973051a6
+2026-08-13,ATP,Hard,3,Gael Monfils,Rinky Hijikata,-0.5,-138,0.5,102,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff2ea-8394-7971-83ca-871f973051a6
+2026-08-13,ATP,Hard,3,Gael Monfils,Rinky Hijikata,-4.5,199,4.5,-326,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff2ea-8394-7971-83ca-871f973051a6
+2026-08-13,ATP,Hard,3,Brandon Nakashima,Ben Shelton,2.5,-113,-2.5,104,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff93e-dedf-7e71-9f8c-c28968a00c18
+2026-08-13,ATP,Hard,3,Brandon Nakashima,Ben Shelton,1.5,125,-1.5,-160,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff93e-dedf-7e71-9f8c-c28968a00c18
+2026-08-13,ATP,Hard,3,Brandon Nakashima,Ben Shelton,5.5,-1438,-5.5,456,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff93e-dedf-7e71-9f8c-c28968a00c18
+2026-08-13,ATP,Hard,3,Brandon Nakashima,Ben Shelton,4.5,-590,-4.5,300,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff93e-dedf-7e71-9f8c-c28968a00c18
+2026-08-13,ATP,Hard,3,Brandon Nakashima,Ben Shelton,3.5,-228,-3.5,150,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff93e-dedf-7e71-9f8c-c28968a00c18
+2026-08-13,ATP,Hard,3,Mattia Bellucci,Zachary Svajda,2.5,111,-2.5,-115,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff2ea-832d-7980-a617-2109c9dd8fb6
+2026-08-13,ATP,Hard,3,Mattia Bellucci,Zachary Svajda,1.5,111,-1.5,-170,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff2ea-832d-7980-a617-2109c9dd8fb6
+2026-08-13,ATP,Hard,3,Mattia Bellucci,Zachary Svajda,6.5,-2339,-6.5,545,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff2ea-832d-7980-a617-2109c9dd8fb6
+2026-08-13,ATP,Hard,3,Mattia Bellucci,Zachary Svajda,5.5,-590,-5.5,285,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff2ea-832d-7980-a617-2109c9dd8fb6
+2026-08-13,ATP,Hard,3,Mattia Bellucci,Zachary Svajda,4.5,-292,-4.5,182,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff2ea-832d-7980-a617-2109c9dd8fb6
+2026-08-13,ATP,Hard,3,Mattia Bellucci,Zachary Svajda,3.5,-153,-3.5,120,2026-08-13T22:49:07.326574+00:00,https://novig.com/event-markets/019ff2ea-832d-7980-a617-2109c9dd8fb6
