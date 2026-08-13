@@ -69,6 +69,8 @@ def reconcile_board_with_history(picks: list[dict], history: list[dict]) -> list
     for pick in picks:
         key = bet_identity(pick.get("date"), pick.get("player"), pick.get("opponent"))
         if key in archived:
+            if key in represented:
+                continue
             row = {**pick, **archived[key], "recommendation": "BET", "recorded_bet": True}
             row["rationale"] = rationale_for_pick(row)
             reconciled.append(row)
@@ -116,8 +118,11 @@ def build_payload() -> dict:
         "average_clv": sum(clv_values) / len(clv_values) if clv_values else None,
     }
 
-    active_bets = [row for row in picks if row.get("recommendation") == "BET"]
     today = datetime.now(timezone.utc).astimezone(ZoneInfo("America/Los_Angeles")).date().isoformat()
+    active_bets = [
+        row for row in picks
+        if row.get("recommendation") == "BET" and str(row.get("date")) == today
+    ]
     fresh_scrape = scrape_status.get("success") and scrape_status.get("match_date") == today
     if picks:
         status = "ready"

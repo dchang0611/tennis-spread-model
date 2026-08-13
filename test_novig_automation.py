@@ -69,8 +69,12 @@ class NovigAutomationTests(unittest.TestCase):
         self.assertEqual(int(archived.iloc[0]["odds"]), 117)
 
     def test_board_uses_archived_bet_line_and_includes_missing_archived_bets(self):
-        picks = [{"date": "2026-08-12", "player": "A", "opponent": "B", "spread": 2.5,
-                  "odds": 104, "recommendation": "PASS", "feature_rationale": "better serve performance"}]
+        picks = [
+            {"date": "2026-08-12", "player": "A", "opponent": "B", "spread": 2.5,
+             "odds": 104, "recommendation": "PASS", "feature_rationale": "better serve performance"},
+            {"date": "2026-08-12", "player": "A", "opponent": "B", "spread": 3.5,
+             "odds": 117, "recommendation": "BET", "feature_rationale": "better serve performance"},
+        ]
         history = [
             {"date": "2026-08-12", "player": "A", "opponent": "B", "spread": 3.5,
              "odds": 117, "cover_probability": .58, "market_no_vig_probability": .45,
