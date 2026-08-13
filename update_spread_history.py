@@ -323,6 +323,14 @@ def archive_bets(recommendations: pd.DataFrame, history: pd.DataFrame, now: str)
     for row in bets.itertuples(index=False):
         key = bet_identity(row.date, row.player, row.opponent)
         if key in existing:
+            matching = history.apply(
+                lambda item: bet_identity(item.get("date"), item.get("player"), item.get("opponent")) == key,
+                axis=1,
+            )
+            for column in ("probability_edge", "expected_roi", "feature_rationale"):
+                value = getattr(row, column, None)
+                missing = history.loc[matching, column].isna() | (history.loc[matching, column].astype(str).str.strip() == "")
+                history.loc[history.loc[matching].index[missing], column] = value
             continue
         additions.append({
             "date": row.date, "tournament": row.tournament, "surface": row.surface,

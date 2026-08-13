@@ -69,13 +69,47 @@ function renderHistory() {
   }).join('') : '<div class="empty"><strong>No results in this range</strong>Change the dates or result filter.</div>';
 }
 
+const factorDefinitions = [
+  ['Surface-adjusted Elo', /surface-adjusted elo/i],
+  ['Recent surface game margin', /recent game margin/i],
+  ['Opponent-adjusted serve', /serve-point performance/i],
+  ['Opponent-adjusted return', /return-point performance/i],
+  ['Serve-versus-return matchup', /serve-versus-return matchup/i],
+  ['Overall Elo', /overall elo/i],
+  ['Recent form', /recent form/i],
+  ['Workload / rest', /workload|rest advantage/i],
+];
+
+function renderFactors() {
+  const history = selectedHistory();
+  const classified = history.filter(row => String(row.feature_rationale || '').trim());
+  const stats = factorDefinitions.map(([label, pattern]) => {
+    const rows = classified.filter(row => pattern.test(String(row.feature_rationale)));
+    const decided = rows.filter(row => ['WIN','LOSS'].includes(String(row.result).toUpperCase()));
+    const wins = decided.filter(row => String(row.result).toUpperCase() === 'WIN').length;
+    const losses = decided.length - wins;
+    const pending = rows.filter(row => String(row.result).toUpperCase() === 'PENDING').length;
+    const units = decided.reduce((sum, row) => sum + (Number(row.profit_units) || 0), 0);
+    const risk = decided.reduce((sum, row) => sum + (Number(row.risk_units) || 0), 0);
+    return { label, wins, losses, pending, units, risk, sample: rows.length };
+  }).filter(row => row.sample).sort((a,b) => b.sample - a.sample || a.label.localeCompare(b.label));
+  const notice = document.querySelector('#factorNotice');
+  const unclassified = history.length - classified.length;
+  notice.textContent = `${classified.length} of ${history.length} tracked bets have saved factor labels in this date range. ${unclassified ? `${unclassified} older bet${unclassified === 1 ? '' : 's'} remain unclassified because their rationale was not archived.` : 'Every tracked bet is classified.'}`;
+  notice.className = `status-banner ${classified.length ? '' : 'closed'}`;
+  document.querySelector('#factorRows').innerHTML = stats.length ? stats.map(row => {
+    const winRate = row.wins + row.losses ? row.wins / (row.wins + row.losses) : null;
+    return `<tr><td><strong>${safe(row.label)}</strong></td><td>${row.wins}-${row.losses}</td><td>${fmtPct(winRate)}</td><td class="${row.units > 0 ? 'units-positive' : row.units < 0 ? 'units-negative' : ''}">${row.units > 0 ? '+' : ''}${row.units.toFixed(2)}</td><td>${row.risk ? fmtPct(row.units / row.risk) : 'â€”'}</td><td>${row.wins + row.losses}</td><td>${row.pending}</td></tr>`;
+  }).join('') : '<tr><td colspan="7">No factor-tagged bets fall within this date range.</td></tr>';
+}
+
 function bindControls() {
   document.querySelectorAll('.tab').forEach(button => button.addEventListener('click', () => { document.querySelectorAll('.tab').forEach(item => item.classList.toggle('active', item === button)); document.querySelectorAll('.panel').forEach(panel => panel.classList.toggle('active', panel.id === button.dataset.panel)); }));
   document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => { state.filter = button.dataset.filter; document.querySelectorAll('.filter').forEach(item => item.classList.toggle('active', item === button)); renderBoard(); }));
   document.querySelectorAll('.history-filter').forEach(button => button.addEventListener('click', () => { state.historyFilter = button.dataset.historyFilter; document.querySelectorAll('.history-filter').forEach(item => item.classList.toggle('active', item === button)); renderHistory(); }));
-  document.querySelector('#dateFrom').addEventListener('change', event => { state.dateFrom = event.target.value; renderBoard(); renderHistory(); });
-  document.querySelector('#dateTo').addEventListener('change', event => { state.dateTo = event.target.value; renderBoard(); renderHistory(); });
-  document.querySelector('#dateClear').addEventListener('click', () => { state.dateFrom = ''; state.dateTo = ''; document.querySelector('#dateFrom').value = ''; document.querySelector('#dateTo').value = ''; renderBoard(); renderHistory(); });
+  document.querySelector('#dateFrom').addEventListener('change', event => { state.dateFrom = event.target.value; renderBoard(); renderHistory(); renderFactors(); });
+  document.querySelector('#dateTo').addEventListener('change', event => { state.dateTo = event.target.value; renderBoard(); renderHistory(); renderFactors(); });
+  document.querySelector('#dateClear').addEventListener('click', () => { state.dateFrom = ''; state.dateTo = ''; document.querySelector('#dateFrom').value = ''; document.querySelector('#dateTo').value = ''; renderBoard(); renderHistory(); renderFactors(); });
 }
 
 async function load() {
@@ -88,11 +122,11 @@ async function load() {
     banner.textContent = state.data.status_message;
     banner.className = `status-banner ${state.data.status === 'ready' ? '' : 'closed'}`;
     if (state.data.generated_at) document.querySelector('#updatedText').textContent = `Updated ${new Date(state.data.generated_at).toLocaleString([], {dateStyle:'medium', timeStyle:'short'})}`;
-    renderBoard(); renderPerformance(); renderHistory();
+    renderBoard(); renderPerformance(); renderHistory(); renderFactors();
   } catch (error) {
     document.querySelector('#statusBanner').textContent = 'The latest board could not be verified. No plays are displayed.';
     document.querySelector('#statusBanner').className = 'status-banner closed';
-    renderBoard(); renderPerformance(); renderHistory();
+    renderBoard(); renderPerformance(); renderHistory(); renderFactors();
   }
 }
 

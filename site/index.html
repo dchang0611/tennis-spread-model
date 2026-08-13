@@ -42,6 +42,7 @@
     <nav class="tabs" aria-label="Dashboard sections">
       <button class="tab active" data-panel="boardPanel">Spread Board</button>
       <button class="tab" data-panel="historyPanel">Historical Results</button>
+      <button class="tab" data-panel="factorPanel">Factor Performance</button>
       <button class="tab" data-panel="methodPanel">How It Works</button>
     </nav>
 
@@ -78,6 +79,23 @@
       <div id="historyMetrics" class="metric-grid"></div>
       <div id="historyNotice" class="status-banner closed"></div>
       <div id="historyGroups" class="history-groups"></div>
+    </section>
+
+    <section id="factorPanel" class="panel" aria-labelledby="factorTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">WHAT HAS ACTUALLY WORKED</p>
+          <h2 id="factorTitle">Factor performance</h2>
+        </div>
+      </div>
+      <div id="factorNotice" class="status-banner closed"></div>
+      <div class="history-table-wrap">
+        <table class="history-table factor-table">
+          <thead><tr><th>Supporting factor</th><th>Record</th><th>Win rate</th><th>Net units</th><th>ROI</th><th>Settled</th><th>Pending</th></tr></thead>
+          <tbody id="factorRows"></tbody>
+        </table>
+      </div>
+      <article class="explain-card"><h3>How to read this</h3><p>A bet can contain several supporting factors, so its result is credited to each factor named in its saved rationale. These are descriptive records, not proof that one factor caused the result. Small samples should be treated cautiously.</p></article>
     </section>
 
     <section id="methodPanel" class="panel" aria-labelledby="methodTitle">

@@ -88,6 +88,8 @@ h2 { font-size: clamp(34px,5vw,58px); }
 .history-table th, .history-table td { padding: 15px 17px; text-align: left; border-bottom: 1px solid var(--line); font-size: 13px; }
 .history-table th { color: var(--muted); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
 .history-table tr:last-child td { border-bottom: 0; }
+.factor-table { min-width: 820px; }
+.factor-table td:not(:first-child), .factor-table th:not(:first-child) { text-align: right; }
 .result-chip { display: inline-block; min-width: 54px; padding: 5px 7px; border: 1px solid var(--line); text-align: center; font-size: 10px; font-weight: 900; letter-spacing: .08em; }
 .result-chip.win { color: var(--night); background: var(--lime); border-color: var(--lime); }
 .result-chip.loss { color: var(--red); border-color: var(--red); }
