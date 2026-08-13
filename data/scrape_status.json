@@ -1,24 +1,24 @@
 {
   "success": true,
-  "checked_at": "2026-08-13T17:27:31.992317+00:00",
+  "checked_at": "2026-08-13T17:31:57.683311+00:00",
   "match_date": "2026-08-13",
   "day_label": "Today",
   "events_found": 8,
   "events": [
-    "Nicolas Mejia vs Henrique Rocha",
     "Dino Prizmic vs Cameron Norrie",
+    "Nicolas Mejia vs Henrique Rocha",
     "Jan-Lennard Struff vs Roman Andres Burruchaga",
-    "Jan Choinski vs Thiago Agustin Tirante",
     "Adrian Mannarino vs Denis Shapovalov",
+    "Jan Choinski vs Thiago Agustin Tirante",
     "Miomir Kecmanovic vs Camilo Ugo Carabelli",
-    "Raphael Collignon vs Mariano Navone",
-    "Terence Atmane vs Marton Fucsovics"
+    "Terence Atmane vs Marton Fucsovics",
+    "Raphael Collignon vs Mariano Navone"
   ],
   "spread_markets_found": 8,
   "parser_failures": [],
   "unpriced_spread_markets": [],
   "executable_spread_markets": 8,
   "matches_parsed": 8,
-  "rows_saved": 14,
+  "rows_saved": 16,
   "error": null
 }
