@@ -17,7 +17,8 @@ import pandas as pd
 
 HISTORY_COLUMNS = [
     "date", "tournament", "surface", "player", "opponent", "spread", "odds",
-    "cover_probability", "market_no_vig_probability", "result", "risk_units",
+    "cover_probability", "market_no_vig_probability", "probability_edge", "expected_roi",
+    "feature_rationale", "result", "risk_units",
     "profit_units", "closing_line_value", "recorded_at", "settled_at",
 ]
 PACIFIC = ZoneInfo("America/Los_Angeles")
@@ -328,6 +329,9 @@ def archive_bets(recommendations: pd.DataFrame, history: pd.DataFrame, now: str)
             "player": row.player, "opponent": row.opponent, "spread": row.spread,
             "odds": row.odds, "cover_probability": row.cover_probability,
             "market_no_vig_probability": row.market_no_vig_probability,
+            "probability_edge": getattr(row, "probability_edge", None),
+            "expected_roi": getattr(row, "expected_roi", None),
+            "feature_rationale": getattr(row, "feature_rationale", None),
             "result": "PENDING", "risk_units": 1.0, "profit_units": None,
             "closing_line_value": None, "recorded_at": now, "settled_at": None,
         })

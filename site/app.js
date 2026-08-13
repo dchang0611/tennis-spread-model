@@ -8,7 +8,11 @@ const safe = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&am
 function renderBoard() {
   // Rationale text is generated from distinct model-driver families upstream.
   const root = document.querySelector('#board');
-  const picks = (state.data?.picks || []).filter(row => inDateRange(row.date));
+  const currentDate = state.data?.scrape_status?.match_date;
+  const picks = (state.data?.picks || []).filter(row => {
+    if (state.dateFrom || state.dateTo) return inDateRange(row.date);
+    return !currentDate || String(row.date) === String(currentDate);
+  });
   const filtered = state.filter === 'ALL' ? picks : picks.filter(row => row.recommendation === state.filter);
   if (!filtered.length) {
     root.innerHTML = `<div class="empty"><strong>No ${state.filter === 'BET' ? 'qualified plays' : 'matching lines'}</strong>${picks.length ? 'The safety gates rejected the available lines.' : 'Add current paired Novig spread prices and run the hosted model.'}</div>`;

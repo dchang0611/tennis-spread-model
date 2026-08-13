@@ -80,6 +80,8 @@ jobs:
             rm -f tennis_model_output/novig_spread_recommendations.csv
             rm -f data/scoring_status.json
           fi
+      - name: Lock today's first qualified bets into Historical Performance
+        run: python update_spread_history.py --mode archive
       - run: python build_spread_site.py
       - name: Persist nightly market and history data
         shell: bash

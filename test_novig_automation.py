@@ -3,7 +3,7 @@ from datetime import date
 
 import pandas as pd
 
-from build_spread_site import rationale_for_pick
+from build_spread_site import rationale_for_pick, reconcile_board_with_history
 from novig_scraper import parse_event_card, parse_spread_tokens, surface_for_date
 from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, name_aliases, parse_atp_results_text, parse_espn_scoreboard, parse_tennis_explorer_html, profit_for_result, score_game_margin, settle_history
 
@@ -67,6 +67,24 @@ class NovigAutomationTests(unittest.TestCase):
         archived = archive_bets(recommendations, pd.DataFrame(columns=HISTORY_COLUMNS), "2026-08-07T08:24:00+00:00")
         self.assertEqual(len(archived), 1)
         self.assertEqual(int(archived.iloc[0]["odds"]), 117)
+
+    def test_board_uses_archived_bet_line_and_includes_missing_archived_bets(self):
+        picks = [{"date": "2026-08-12", "player": "A", "opponent": "B", "spread": 2.5,
+                  "odds": 104, "recommendation": "PASS", "feature_rationale": "better serve performance"}]
+        history = [
+            {"date": "2026-08-12", "player": "A", "opponent": "B", "spread": 3.5,
+             "odds": 117, "cover_probability": .58, "market_no_vig_probability": .45,
+             "feature_rationale": "better serve performance"},
+            {"date": "2026-08-12", "player": "C", "opponent": "D", "spread": -1.5,
+             "odds": 110, "cover_probability": .57, "market_no_vig_probability": .46,
+             "feature_rationale": "better return performance"},
+        ]
+        board = reconcile_board_with_history(picks, history)
+        self.assertEqual(len(board), 2)
+        self.assertEqual(board[0]["recommendation"], "BET")
+        self.assertEqual(board[0]["spread"], 3.5)
+        self.assertEqual(board[0]["odds"], 117)
+        self.assertTrue(all(row["recorded_bet"] for row in board))
 
     def test_parse_espn_scoreboard(self):
         payload = {"events": [{"groupings": [{

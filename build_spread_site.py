@@ -9,6 +9,8 @@ from zoneinfo import ZoneInfo
 
 import pandas as pd
 
+from update_spread_history import bet_identity
+
 
 ROOT = Path(__file__).resolve().parent
 OUTPUT = ROOT / "tennis_model_output"
@@ -56,12 +58,39 @@ def rationale_for_pick(row: dict) -> str:
     )
 
 
+def reconcile_board_with_history(picks: list[dict], history: list[dict]) -> list[dict]:
+    """Use the first archived bet as the canonical line shown on both tabs."""
+    archived = {
+        bet_identity(row.get("date"), row.get("player"), row.get("opponent")): row
+        for row in history
+    }
+    reconciled: list[dict] = []
+    represented: set[tuple[str, str, str]] = set()
+    for pick in picks:
+        key = bet_identity(pick.get("date"), pick.get("player"), pick.get("opponent"))
+        if key in archived:
+            row = {**pick, **archived[key], "recommendation": "BET", "recorded_bet": True}
+            row["rationale"] = rationale_for_pick(row)
+            reconciled.append(row)
+            represented.add(key)
+        else:
+            reconciled.append(pick)
+    for key, row in archived.items():
+        if key in represented:
+            continue
+        archived_pick = compact_pick({**row, "recommendation": "BET"})
+        archived_pick["recorded_bet"] = True
+        reconciled.append(archived_pick)
+    return reconciled
+
+
 def build_payload() -> dict:
     recommendations_path = OUTPUT / "novig_spread_recommendations.csv"
     validation_path = OUTPUT / "spread_validation_summary.csv"
     picks = [compact_pick(row) for row in records_from_csv(recommendations_path)]
     validation = records_from_csv(validation_path)
     history = records_from_csv(OUTPUT / "spread_results_history.csv")
+    picks = reconcile_board_with_history(picks, history)
     scrape_status = read_json(ROOT / "data" / "scrape_status.json")
     settlement_status = read_json(ROOT / "data" / "settlement_status.json")
     scoring_status = read_json(ROOT / "data" / "scoring_status.json")
