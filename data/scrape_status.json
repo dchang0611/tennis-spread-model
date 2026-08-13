@@ -1,26 +1,24 @@
 {
-  "success": false,
-  "checked_at": "2026-08-13T08:53:44.203576+00:00",
+  "success": true,
+  "checked_at": "2026-08-13T17:27:31.992317+00:00",
   "match_date": "2026-08-13",
   "day_label": "Today",
-  "events_found": 9,
+  "events_found": 8,
   "events": [
-    "Jack Draper vs Martin Landaluce",
-    "Dino Prizmic vs Cameron Norrie",
-    "Mark Lajal vs Aleksandar Vukic",
     "Nicolas Mejia vs Henrique Rocha",
+    "Dino Prizmic vs Cameron Norrie",
+    "Jan-Lennard Struff vs Roman Andres Burruchaga",
+    "Jan Choinski vs Thiago Agustin Tirante",
     "Adrian Mannarino vs Denis Shapovalov",
     "Miomir Kecmanovic vs Camilo Ugo Carabelli",
-    "Jan Choinski vs Thiago Agustin Tirante",
-    "Jan-Lennard Struff vs Roman Andres Burruchaga",
+    "Raphael Collignon vs Mariano Navone",
     "Terence Atmane vs Marton Fucsovics"
   ],
-  "spread_markets_found": 9,
-  "parser_failures": [
-    "Miomir Kecmanovic vs Camilo Ugo Carabelli"
-  ],
+  "spread_markets_found": 8,
+  "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 9,
+  "executable_spread_markets": 8,
   "matches_parsed": 8,
-  "error": "Game Spread was visible but could not be parsed for: Miomir Kecmanovic vs Camilo Ugo Carabelli"
+  "rows_saved": 14,
+  "error": null
 }
