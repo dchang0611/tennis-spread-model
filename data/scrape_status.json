@@ -1,24 +1,26 @@
 {
   "success": true,
-  "checked_at": "2026-08-13T17:35:50.293051+00:00",
+  "checked_at": "2026-08-13T18:32:06.063739+00:00",
   "match_date": "2026-08-13",
   "day_label": "Today",
-  "events_found": 8,
+  "events_found": 6,
   "events": [
-    "Dino Prizmic vs Cameron Norrie",
-    "Nicolas Mejia vs Henrique Rocha",
-    "Jan-Lennard Struff vs Roman Andres Burruchaga",
     "Jan Choinski vs Thiago Agustin Tirante",
     "Adrian Mannarino vs Denis Shapovalov",
+    "Jan-Lennard Struff vs Roman Andres Burruchaga",
     "Miomir Kecmanovic vs Camilo Ugo Carabelli",
     "Terence Atmane vs Marton Fucsovics",
     "Raphael Collignon vs Mariano Navone"
   ],
-  "spread_markets_found": 8,
+  "spread_markets_found": 6,
   "parser_failures": [],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 8,
-  "matches_parsed": 8,
-  "rows_saved": 16,
+  "unpriced_spread_markets": [
+    "Jan Choinski vs Thiago Agustin Tirante",
+    "Jan-Lennard Struff vs Roman Andres Burruchaga",
+    "Miomir Kecmanovic vs Camilo Ugo Carabelli"
+  ],
+  "executable_spread_markets": 3,
+  "matches_parsed": 3,
+  "rows_saved": 6,
   "error": null
 }

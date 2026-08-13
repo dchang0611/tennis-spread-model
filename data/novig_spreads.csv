@@ -1,17 +1,7 @@
 date,tournament,surface,best_of,player_a,player_b,spread_a,odds_a,spread_b,odds_b,collected_at,event_url
-2026-08-13,ATP,Hard,3,Dino Prizmic,Cameron Norrie,2.5,-106,-2.5,-108,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff2ea-82f5-7ca0-9f9f-ce4cf3624217
-2026-08-13,ATP,Hard,3,Nicolas Mejia,Henrique Rocha,0.5,-115,-0.5,-111,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff93e-dc6f-76d0-9eb5-4c357da8d62a
-2026-08-13,ATP,Hard,3,Nicolas Mejia,Henrique Rocha,1.5,-133,-1.5,104,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff93e-dc6f-76d0-9eb5-4c357da8d62a
-2026-08-13,ATP,Hard,3,Jan-Lennard Struff,Roman Andres Burruchaga,-0.5,-115,0.5,102,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff2ea-815a-78b1-9b03-1965de1a7d10
-2026-08-13,ATP,Hard,3,Jan-Lennard Struff,Roman Andres Burruchaga,-1.5,108,1.5,-113,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff2ea-815a-78b1-9b03-1965de1a7d10
-2026-08-13,ATP,Hard,3,Jan Choinski,Thiago Agustin Tirante,2.5,111,-2.5,-117,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff2ea-7fea-74c3-b082-93c4804829ca
-2026-08-13,ATP,Hard,3,Adrian Mannarino,Denis Shapovalov,1.5,-108,-1.5,-102,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff2ea-7fb2-7790-9c83-c5c2d8912fa0
-2026-08-13,ATP,Hard,3,Adrian Mannarino,Denis Shapovalov,2.5,-138,-2.5,117,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff2ea-7fb2-7790-9c83-c5c2d8912fa0
-2026-08-13,ATP,Hard,3,Miomir Kecmanovic,Camilo Ugo Carabelli,-3.5,-138,3.5,113,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff2ea-8281-7842-b965-b091ef5a1b65
-2026-08-13,ATP,Hard,3,Miomir Kecmanovic,Camilo Ugo Carabelli,-4.5,125,4.5,-170,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff2ea-8281-7842-b965-b091ef5a1b65
-2026-08-13,ATP,Hard,3,Terence Atmane,Marton Fucsovics,-3.5,113,3.5,-122,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff2ea-81cb-7903-b34b-054dc1003513
-2026-08-13,ATP,Hard,3,Terence Atmane,Marton Fucsovics,-4.5,156,4.5,-178,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff2ea-81cb-7903-b34b-054dc1003513
-2026-08-13,ATP,Hard,3,Terence Atmane,Marton Fucsovics,-1.5,-163,1.5,150,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff2ea-81cb-7903-b34b-054dc1003513
-2026-08-13,ATP,Hard,3,Terence Atmane,Marton Fucsovics,-2.5,-144,2.5,120,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff2ea-81cb-7903-b34b-054dc1003513
-2026-08-13,ATP,Hard,3,Raphael Collignon,Mariano Navone,-1.5,-104,1.5,-100,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff2ea-8022-7c03-971b-bc663fb62d64
-2026-08-13,ATP,Hard,3,Raphael Collignon,Mariano Navone,-2.5,120,2.5,-130,2026-08-13T17:35:50.293119+00:00,https://novig.com/event-markets/019ff2ea-8022-7c03-971b-bc663fb62d64
+2026-08-13,ATP,Hard,3,Adrian Mannarino,Denis Shapovalov,1.5,-122,-1.5,-102,2026-08-13T18:32:06.063809+00:00,https://novig.com/event-markets/019ff2ea-7fb2-7790-9c83-c5c2d8912fa0
+2026-08-13,ATP,Hard,3,Adrian Mannarino,Denis Shapovalov,2.5,-144,-2.5,117,2026-08-13T18:32:06.063809+00:00,https://novig.com/event-markets/019ff2ea-7fb2-7790-9c83-c5c2d8912fa0
+2026-08-13,ATP,Hard,3,Terence Atmane,Marton Fucsovics,-3.5,104,3.5,-127,2026-08-13T18:32:06.063809+00:00,https://novig.com/event-markets/019ff2ea-81cb-7903-b34b-054dc1003513
+2026-08-13,ATP,Hard,3,Terence Atmane,Marton Fucsovics,-2.5,-144,2.5,120,2026-08-13T18:32:06.063809+00:00,https://novig.com/event-markets/019ff2ea-81cb-7903-b34b-054dc1003513
+2026-08-13,ATP,Hard,3,Raphael Collignon,Mariano Navone,-1.5,-104,1.5,-100,2026-08-13T18:32:06.063809+00:00,https://novig.com/event-markets/019ff2ea-8022-7c03-971b-bc663fb62d64
+2026-08-13,ATP,Hard,3,Raphael Collignon,Mariano Navone,-2.5,120,2.5,-130,2026-08-13T18:32:06.063809+00:00,https://novig.com/event-markets/019ff2ea-8022-7c03-971b-bc663fb62d64
