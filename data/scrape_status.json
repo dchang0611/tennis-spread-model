@@ -1,29 +1,26 @@
 {
-  "success": true,
-  "checked_at": "2026-08-12T22:48:10.156253+00:00",
-  "match_date": "2026-08-12",
+  "success": false,
+  "checked_at": "2026-08-13T08:53:44.203576+00:00",
+  "match_date": "2026-08-13",
   "day_label": "Today",
-  "events_found": 8,
+  "events_found": 9,
   "events": [
-    "Henrique Rocha vs Marcos Giron",
-    "Dalibor Svrcina vs Mark Lajal",
-    "Darwin Blanch vs Aleksandar Vukic",
-    "Jacob Fearnley vs Nicolas Mejia",
-    "Ben Shelton vs Learner Tien",
-    "Dusan Lajovic vs Luca Van Assche",
-    "Otto Virtanen vs Chak Lam Coleman Wong",
-    "Christopher O'Connell vs Alexander Shevchenko"
+    "Jack Draper vs Martin Landaluce",
+    "Dino Prizmic vs Cameron Norrie",
+    "Mark Lajal vs Aleksandar Vukic",
+    "Nicolas Mejia vs Henrique Rocha",
+    "Adrian Mannarino vs Denis Shapovalov",
+    "Miomir Kecmanovic vs Camilo Ugo Carabelli",
+    "Jan Choinski vs Thiago Agustin Tirante",
+    "Jan-Lennard Struff vs Roman Andres Burruchaga",
+    "Terence Atmane vs Marton Fucsovics"
   ],
-  "spread_markets_found": 8,
-  "parser_failures": [],
-  "unpriced_spread_markets": [
-    "Henrique Rocha vs Marcos Giron",
-    "Dalibor Svrcina vs Mark Lajal",
-    "Darwin Blanch vs Aleksandar Vukic",
-    "Jacob Fearnley vs Nicolas Mejia"
+  "spread_markets_found": 9,
+  "parser_failures": [
+    "Miomir Kecmanovic vs Camilo Ugo Carabelli"
   ],
-  "executable_spread_markets": 4,
-  "matches_parsed": 4,
-  "rows_saved": 8,
-  "error": null
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 9,
+  "matches_parsed": 8,
+  "error": "Game Spread was visible but could not be parsed for: Miomir Kecmanovic vs Camilo Ugo Carabelli"
 }

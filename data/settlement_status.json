@@ -1,6 +1,6 @@
 {
   "complete": true,
-  "checked_at": "2026-08-12T22:48:02.369923+00:00",
+  "checked_at": "2026-08-13T08:53:32.743813+00:00",
   "sources": {
     "season_csv": {
       "ok": false,
@@ -20,7 +20,7 @@
     },
     "tennis_explorer": {
       "ok": true,
-      "matches": 167
+      "matches": 202
     }
   },
   "unsettled_prior_bets": []
