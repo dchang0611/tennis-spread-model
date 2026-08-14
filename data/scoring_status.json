@@ -1,8 +1,6 @@
 {
   "success": true,
-  "market_matchups": 9,
-  "modeled_matchups": 8,
-  "unmatched_model_players": [
-    "Daniel Altmaier vs Chak Lam Coleman Wong"
-  ]
+  "market_matchups": 5,
+  "modeled_matchups": 5,
+  "unmatched_model_players": []
 }

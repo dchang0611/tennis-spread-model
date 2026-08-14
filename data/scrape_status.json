@@ -1,25 +1,21 @@
 {
   "success": true,
-  "checked_at": "2026-08-14T14:35:18.972913+00:00",
+  "checked_at": "2026-08-14T18:29:30.815227+00:00",
   "match_date": "2026-08-14",
   "day_label": "Today",
-  "events_found": 9,
+  "events_found": 5,
   "events": [
-    "Hubert Hurkacz vs Sho Shimabukuro",
-    "Quentin Halys vs Vit Kopriva",
-    "Stefanos Tsitsipas vs Valentin Royer",
-    "Daniel Altmaier vs Chak Lam Coleman Wong",
-    "Adolfo Daniel Vallejo vs Kyrian Jacquet",
-    "Luca Van Assche vs Yannick Hanfmann",
-    "Matteo Berrettini vs Titouan Droguet",
-    "Pablo Carreno Busta vs Tomas Machac",
-    "James Duckworth vs J.J. Wolf"
+    "Kamil Majchrzak vs Christopher O'Connell",
+    "Thanasi Kokkinakis vs Nuno Borges",
+    "Juan Manuel Cerundolo vs Mark Lajal",
+    "Jesper De Jong vs Alex Michelsen",
+    "Michael Zheng vs Fabian Marozsan"
   ],
-  "spread_markets_found": 9,
+  "spread_markets_found": 5,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 9,
-  "matches_parsed": 9,
-  "rows_saved": 35,
+  "executable_spread_markets": 5,
+  "matches_parsed": 5,
+  "rows_saved": 7,
   "error": null
 }
