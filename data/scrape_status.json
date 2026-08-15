@@ -1,27 +1,25 @@
 {
-  "success": false,
-  "checked_at": "2026-08-15T07:56:07.084912+00:00",
+  "success": true,
+  "checked_at": "2026-08-15T13:56:36.305053+00:00",
   "match_date": "2026-08-15",
   "day_label": "Today",
   "events_found": 9,
   "events": [
+    "Matteo Arnaldi vs Martin Landaluce",
     "Flavio Cobolli vs Miomir Kecmanovic",
     "Mariano Navone vs Alexander Blockx",
-    "Matteo Arnaldi vs Martin Landaluce",
-    "Thiago Agustin Tirante vs Novak Djokovic",
     "Jakub Mensik vs Mattia Bellucci",
+    "Thiago Agustin Tirante vs Novak Djokovic",
     "Valentin Vacherot vs Adolfo Daniel Vallejo",
+    "James Duckworth vs Arthur Fery",
     "Alex De Minaur vs Quentin Halys",
-    "Rinky Hijikata vs Luciano Darderi",
-    "James Duckworth vs Arthur Fery"
+    "Hubert Hurkacz vs Tommy Paul"
   ],
   "spread_markets_found": 9,
-  "parser_failures": [
-    "Valentin Vacherot vs Adolfo Daniel Vallejo",
-    "James Duckworth vs Arthur Fery"
-  ],
+  "parser_failures": [],
   "unpriced_spread_markets": [],
   "executable_spread_markets": 9,
-  "matches_parsed": 7,
-  "error": "Game Spread was visible but could not be parsed for: Valentin Vacherot vs Adolfo Daniel Vallejo, James Duckworth vs Arthur Fery"
+  "matches_parsed": 9,
+  "rows_saved": 34,
+  "error": null
 }
