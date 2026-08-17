@@ -1,18 +1,24 @@
 {
   "success": true,
-  "checked_at": "2026-08-16T22:50:27.754859+00:00",
-  "match_date": "2026-08-16",
+  "checked_at": "2026-08-17T08:10:39.432089+00:00",
+  "match_date": "2026-08-17",
   "day_label": "Today",
-  "events_found": 2,
+  "events_found": 8,
   "events": [
-    "Jaime Faria vs Ben Shelton",
-    "Frances Tiafoe vs Lorenzo Sonego"
+    "Martin Landaluce vs Thiago Agustin Tirante",
+    "Flavio Cobolli vs Alexander Blockx",
+    "Alex De Minaur vs Arthur Fery",
+    "Jakub Mensik vs Rinky Hijikata",
+    "Alejandro Tabilo vs Rafael Jodar",
+    "Arthur Fils vs Jiri Lehecka",
+    "Terence Atmane vs Alexander Zverev",
+    "Adolfo Daniel Vallejo vs Tommy Paul"
   ],
-  "spread_markets_found": 2,
+  "spread_markets_found": 8,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 2,
-  "matches_parsed": 2,
-  "rows_saved": 7,
+  "executable_spread_markets": 8,
+  "matches_parsed": 8,
+  "rows_saved": 21,
   "error": null
 }

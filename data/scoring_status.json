@@ -1,6 +1,6 @@
 {
   "success": true,
-  "market_matchups": 2,
-  "modeled_matchups": 2,
+  "market_matchups": 8,
+  "modeled_matchups": 8,
   "unmatched_model_players": []
 }
