@@ -1,24 +1,22 @@
 {
   "success": true,
-  "checked_at": "2026-08-17T14:04:51.021839+00:00",
+  "checked_at": "2026-08-17T18:00:01.781637+00:00",
   "match_date": "2026-08-17",
   "day_label": "Today",
-  "events_found": 8,
+  "events_found": 6,
   "events": [
-    "Flavio Cobolli vs Alexander Blockx",
-    "Martin Landaluce vs Thiago Agustin Tirante",
     "Alex De Minaur vs Arthur Fery",
-    "Jakub Mensik vs Rinky Hijikata",
     "Alejandro Tabilo vs Rafael Jodar",
+    "Jakub Mensik vs Rinky Hijikata",
     "Arthur Fils vs Jiri Lehecka",
     "Terence Atmane vs Alexander Zverev",
     "Adolfo Daniel Vallejo vs Tommy Paul"
   ],
-  "spread_markets_found": 8,
+  "spread_markets_found": 6,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 8,
-  "matches_parsed": 8,
-  "rows_saved": 28,
+  "executable_spread_markets": 6,
+  "matches_parsed": 6,
+  "rows_saved": 18,
   "error": null
 }
