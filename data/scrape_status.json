@@ -1,22 +1,23 @@
 {
   "success": true,
-  "checked_at": "2026-08-17T18:00:01.781637+00:00",
-  "match_date": "2026-08-17",
+  "checked_at": "2026-08-18T08:05:59.178952+00:00",
+  "match_date": "2026-08-18",
   "day_label": "Today",
-  "events_found": 6,
+  "events_found": 7,
   "events": [
-    "Alex De Minaur vs Arthur Fery",
-    "Alejandro Tabilo vs Rafael Jodar",
-    "Jakub Mensik vs Rinky Hijikata",
-    "Arthur Fils vs Jiri Lehecka",
-    "Terence Atmane vs Alexander Zverev",
-    "Adolfo Daniel Vallejo vs Tommy Paul"
+    "Nuno Borges vs Andrey Rublev",
+    "Lorenzo Musetti vs Michael Zheng",
+    "Daniel Merida Aguilar vs Taylor Fritz",
+    "Daniil Medvedev vs Brandon Nakashima",
+    "Adam Walton vs Jaime Faria",
+    "Felix Auger-Aliassime vs Juan Manuel Cerundolo",
+    "Frances Tiafoe vs Learner Tien"
   ],
-  "spread_markets_found": 6,
+  "spread_markets_found": 7,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 6,
-  "matches_parsed": 6,
-  "rows_saved": 18,
+  "executable_spread_markets": 7,
+  "matches_parsed": 7,
+  "rows_saved": 16,
   "error": null
 }

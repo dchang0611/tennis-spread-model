@@ -1,6 +1,8 @@
 {
   "success": true,
-  "market_matchups": 6,
+  "market_matchups": 7,
   "modeled_matchups": 6,
-  "unmatched_model_players": []
+  "unmatched_model_players": [
+    "Daniel Merida Aguilar vs Taylor Fritz"
+  ]
 }
