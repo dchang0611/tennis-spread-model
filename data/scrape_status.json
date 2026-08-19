@@ -1,6 +1,6 @@
 {
   "success": false,
-  "checked_at": "2026-08-19T07:21:02.763391+00:00",
+  "checked_at": "2026-08-19T07:42:39.364833+00:00",
   "match_date": "2026-08-19",
   "day_label": "Today",
   "events_found": 8,
@@ -19,8 +19,10 @@
     "Lorenzo Musetti vs Jaime Faria",
     "Felix Auger-Aliassime vs Frances Tiafoe"
   ],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 8,
-  "matches_parsed": 6,
+  "unpriced_spread_markets": [
+    "Tommy Paul vs Alexander Zverev"
+  ],
+  "executable_spread_markets": 7,
+  "matches_parsed": 5,
   "error": "Game Spread was visible but could not be parsed for: Lorenzo Musetti vs Jaime Faria, Felix Auger-Aliassime vs Frances Tiafoe"
 }
