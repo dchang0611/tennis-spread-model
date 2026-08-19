@@ -20,7 +20,7 @@ function renderBoard() {
   }
   root.innerHTML = filtered.map(row => {
     const isBet = row.recommendation === 'BET';
-    return `<article class="pick-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="decision ${isBet ? 'bet' : ''}">${safe(row.recommendation)}</div><div class="factor-chips">${renderFocusChips(focusFactors(row))}</div></article>`;
+    return `<article class="pick-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="decision ${isBet ? 'bet' : ''}">${safe(row.recommendation)}</div><div class="factor-chips">${renderBoardChips(row)}</div></article>`;
   }).join('');
 }
 
@@ -30,6 +30,12 @@ const focusFactorDefinitions = [
   ['Surface-adjusted Elo', /higher surface-adjusted elo/i],
 ];
 
+const boardFactorDefinitions = [
+  ...focusFactorDefinitions,
+  ['Overall Elo', /higher overall elo/i],
+  ['Workload / rest', /a lighter recent workload|more recovery time/i],
+];
+
 function focusFactors(row) {
   const rationale = String(row.feature_rationale || '');
   return focusFactorDefinitions.filter(([, pattern]) => pattern.test(rationale)).map(([label]) => label);
@@ -37,6 +43,14 @@ function focusFactors(row) {
 
 function renderFocusChips(factors) {
   return focusFactorDefinitions.map(([label]) => `<span class="factor-chip ${factors.includes(label) ? 'matched' : ''}">${factors.includes(label) ? '&#10003;' : '&#8212;'} ${safe(label)}</span>`).join('');
+}
+
+function renderBoardChips(row) {
+  const rationale = String(row.feature_rationale || '');
+  return boardFactorDefinitions.map(([label, pattern]) => {
+    const matched = pattern.test(rationale);
+    return `<span class="factor-chip ${matched ? 'matched' : ''}">${matched ? '&#10003;' : '&#8212;'} ${safe(label)}</span>`;
+  }).join('');
 }
 
 function currentPicks() {
