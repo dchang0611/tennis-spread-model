@@ -1,12 +1,10 @@
 {
   "success": true,
-  "checked_at": "2026-08-19T14:17:04.454387+00:00",
+  "checked_at": "2026-08-19T17:55:29.677320+00:00",
   "match_date": "2026-08-19",
   "day_label": "Today",
-  "events_found": 8,
+  "events_found": 6,
   "events": [
-    "Flavio Cobolli vs Rafael Jodar",
-    "Jakub Mensik vs Thiago Agustin Tirante",
     "Tommy Paul vs Alexander Zverev",
     "Alex De Minaur vs Arthur Fils",
     "Brandon Nakashima vs Nuno Borges",
@@ -14,11 +12,11 @@
     "Christopher O'Connell vs Taylor Fritz",
     "Felix Auger-Aliassime vs Frances Tiafoe"
   ],
-  "spread_markets_found": 7,
+  "spread_markets_found": 6,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 7,
-  "matches_parsed": 7,
-  "rows_saved": 20,
+  "executable_spread_markets": 6,
+  "matches_parsed": 6,
+  "rows_saved": 16,
   "error": null
 }
