@@ -1,23 +1,26 @@
 {
-  "success": true,
-  "checked_at": "2026-08-18T14:14:05.897244+00:00",
-  "match_date": "2026-08-18",
+  "success": false,
+  "checked_at": "2026-08-19T07:21:02.763391+00:00",
+  "match_date": "2026-08-19",
   "day_label": "Today",
-  "events_found": 7,
+  "events_found": 8,
   "events": [
-    "Nuno Borges vs Andrey Rublev",
-    "Lorenzo Musetti vs Michael Zheng",
-    "Daniel Merida Aguilar vs Taylor Fritz",
-    "Daniil Medvedev vs Brandon Nakashima",
-    "Adam Walton vs Jaime Faria",
-    "Felix Auger-Aliassime vs Juan Manuel Cerundolo",
-    "Frances Tiafoe vs Learner Tien"
+    "Flavio Cobolli vs Rafael Jodar",
+    "Jakub Mensik vs Thiago Agustin Tirante",
+    "Tommy Paul vs Alexander Zverev",
+    "Alex De Minaur vs Arthur Fils",
+    "Brandon Nakashima vs Nuno Borges",
+    "Lorenzo Musetti vs Jaime Faria",
+    "Christopher O'Connell vs Taylor Fritz",
+    "Felix Auger-Aliassime vs Frances Tiafoe"
   ],
-  "spread_markets_found": 7,
-  "parser_failures": [],
+  "spread_markets_found": 8,
+  "parser_failures": [
+    "Lorenzo Musetti vs Jaime Faria",
+    "Felix Auger-Aliassime vs Frances Tiafoe"
+  ],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 7,
-  "matches_parsed": 7,
-  "rows_saved": 27,
-  "error": null
+  "executable_spread_markets": 8,
+  "matches_parsed": 6,
+  "error": "Game Spread was visible but could not be parsed for: Lorenzo Musetti vs Jaime Faria, Felix Auger-Aliassime vs Frances Tiafoe"
 }
