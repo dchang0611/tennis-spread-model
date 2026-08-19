@@ -1,4 +1,4 @@
-const state = { data: null, filter: 'BET', historyFilter: 'ALL', dateFrom: '', dateTo: '' };
+const state = { data: null, filter: 'BET', historyFilter: 'ALL', focusFilter: 'ALL', dateFrom: '', dateTo: '' };
 
 const fmtPct = value => Number.isFinite(Number(value)) ? `${(Number(value) * 100).toFixed(1)}%` : '—';
 const fmtNum = (value, digits = 1) => Number.isFinite(Number(value)) ? Number(value).toFixed(digits) : '—';
@@ -22,6 +22,41 @@ function renderBoard() {
     const isBet = row.recommendation === 'BET';
     return `<article class="pick-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="decision ${isBet ? 'bet' : ''}">${safe(row.recommendation)}</div><div class="rationale"><span class="metric-label">RATIONALE</span><p>${safe(row.rationale || 'Rationale unavailable for this archived line.')}</p></div></article>`;
   }).join('');
+}
+
+const focusFactorDefinitions = [
+  ['Recent surface game margin', /better recent game margin on this surface/i],
+  ['Opponent-adjusted return', /stronger opponent-adjusted return-point performance/i],
+  ['Surface-adjusted Elo', /higher surface-adjusted elo/i],
+];
+
+function focusFactors(row) {
+  const rationale = String(row.feature_rationale || '');
+  return focusFactorDefinitions.filter(([, pattern]) => pattern.test(rationale)).map(([label]) => label);
+}
+
+function currentPicks() {
+  const currentDate = state.data?.scrape_status?.match_date;
+  return (state.data?.picks || []).filter(row => {
+    if (state.dateFrom || state.dateTo) return inDateRange(row.date);
+    return !currentDate || String(row.date) === String(currentDate);
+  });
+}
+
+function renderFocus() {
+  const qualifying = currentPicks().map(row => ({ row, factors: focusFactors(row) })).filter(item => item.factors.length >= 2);
+  const filtered = state.focusFilter === 'ALL' ? qualifying : qualifying.filter(item => item.factors.length === Number(state.focusFilter));
+  const bets = qualifying.filter(item => item.row.recommendation === 'BET').length;
+  const notice = document.querySelector('#focusNotice');
+  notice.textContent = qualifying.length
+    ? `${qualifying.length} line${qualifying.length === 1 ? '' : 's'} match at least two focus factors; ${bets} retain the model's BET decision and ${qualifying.length - bets} remain PASS.`
+    : 'No lines in this slate match at least two of the three focus factors.';
+  notice.className = `status-banner ${qualifying.length ? '' : 'closed'}`;
+  document.querySelector('#focusBoard').innerHTML = filtered.length ? filtered.map(({ row, factors }) => {
+    const isBet = row.recommendation === 'BET';
+    const chips = focusFactorDefinitions.map(([label]) => `<span class="factor-chip ${factors.includes(label) ? 'matched' : ''}">${factors.includes(label) ? '&#10003;' : '&#8212;'} ${safe(label)}</span>`).join('');
+    return `<article class="pick-card focus-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="confluence-score">${factors.length}/3</div><div class="decision ${isBet ? 'bet' : ''}">${safe(row.recommendation)}</div><div class="factor-chips">${chips}</div></article>`;
+  }).join('') : '<div class="empty"><strong>No matching lines</strong>Try the combined 2/3 + 3/3 view or choose another date range.</div>';
 }
 
 function renderPerformance() {
@@ -107,9 +142,10 @@ function bindControls() {
   document.querySelectorAll('.tab').forEach(button => button.addEventListener('click', () => { document.querySelectorAll('.tab').forEach(item => item.classList.toggle('active', item === button)); document.querySelectorAll('.panel').forEach(panel => panel.classList.toggle('active', panel.id === button.dataset.panel)); }));
   document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => { state.filter = button.dataset.filter; document.querySelectorAll('.filter').forEach(item => item.classList.toggle('active', item === button)); renderBoard(); }));
   document.querySelectorAll('.history-filter').forEach(button => button.addEventListener('click', () => { state.historyFilter = button.dataset.historyFilter; document.querySelectorAll('.history-filter').forEach(item => item.classList.toggle('active', item === button)); renderHistory(); }));
-  document.querySelector('#dateFrom').addEventListener('change', event => { state.dateFrom = event.target.value; renderBoard(); renderHistory(); renderFactors(); });
-  document.querySelector('#dateTo').addEventListener('change', event => { state.dateTo = event.target.value; renderBoard(); renderHistory(); renderFactors(); });
-  document.querySelector('#dateClear').addEventListener('click', () => { state.dateFrom = ''; state.dateTo = ''; document.querySelector('#dateFrom').value = ''; document.querySelector('#dateTo').value = ''; renderBoard(); renderHistory(); renderFactors(); });
+  document.querySelectorAll('.focus-filter').forEach(button => button.addEventListener('click', () => { state.focusFilter = button.dataset.focusFilter; document.querySelectorAll('.focus-filter').forEach(item => item.classList.toggle('active', item === button)); renderFocus(); }));
+  document.querySelector('#dateFrom').addEventListener('change', event => { state.dateFrom = event.target.value; renderBoard(); renderHistory(); renderFactors(); renderFocus(); });
+  document.querySelector('#dateTo').addEventListener('change', event => { state.dateTo = event.target.value; renderBoard(); renderHistory(); renderFactors(); renderFocus(); });
+  document.querySelector('#dateClear').addEventListener('click', () => { state.dateFrom = ''; state.dateTo = ''; document.querySelector('#dateFrom').value = ''; document.querySelector('#dateTo').value = ''; renderBoard(); renderHistory(); renderFactors(); renderFocus(); });
 }
 
 async function load() {
@@ -122,11 +158,11 @@ async function load() {
     banner.textContent = state.data.status_message;
     banner.className = `status-banner ${state.data.status === 'ready' ? '' : 'closed'}`;
     if (state.data.generated_at) document.querySelector('#updatedText').textContent = `Updated ${new Date(state.data.generated_at).toLocaleString([], {dateStyle:'medium', timeStyle:'short'})}`;
-    renderBoard(); renderPerformance(); renderHistory(); renderFactors();
+    renderBoard(); renderPerformance(); renderHistory(); renderFactors(); renderFocus();
   } catch (error) {
     document.querySelector('#statusBanner').textContent = 'The latest board could not be verified. No plays are displayed.';
     document.querySelector('#statusBanner').className = 'status-banner closed';
-    renderBoard(); renderPerformance(); renderHistory(); renderFactors();
+    renderBoard(); renderPerformance(); renderHistory(); renderFactors(); renderFocus();
   }
 }
 

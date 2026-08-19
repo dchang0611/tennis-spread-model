@@ -43,6 +43,7 @@
       <button class="tab active" data-panel="boardPanel">Spread Board</button>
       <button class="tab" data-panel="historyPanel">Historical Results</button>
       <button class="tab" data-panel="factorPanel">Factor Performance</button>
+      <button class="tab" data-panel="focusPanel">Factor Confluence</button>
       <button class="tab" data-panel="methodPanel">How It Works</button>
     </nav>
 
@@ -96,6 +97,23 @@
         </table>
       </div>
       <article class="explain-card"><h3>How to read this</h3><p>A bet can contain several supporting factors, so its result is credited to each factor named in its saved rationale. These are descriptive records, not proof that one factor caused the result. Small samples should be treated cautiously.</p></article>
+    </section>
+
+    <section id="focusPanel" class="panel" aria-labelledby="focusTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">2 OF 3 OR 3 OF 3 SIGNALS</p>
+          <h2 id="focusTitle">Factor confluence</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter factor confluence">
+          <button class="focus-filter active" data-focus-filter="ALL">2/3 + 3/3</button>
+          <button class="focus-filter" data-focus-filter="3">3/3 only</button>
+          <button class="focus-filter" data-focus-filter="2">2/3 only</button>
+        </div>
+      </div>
+      <div id="focusNotice" class="status-banner closed"></div>
+      <div id="focusBoard" class="board-grid" aria-live="polite"></div>
+      <article class="explain-card"><h3>Focused view, same safety gates</h3><p>This tab only includes lines supported by at least two of: recent surface game margin, opponent-adjusted return, and surface-adjusted Elo. A 2/3 or 3/3 match is a descriptive screen, not a new bet signal or proof of causation. BET and PASS still come from the model's existing price, edge, uncertainty, and data-quality rules.</p></article>
     </section>
 
     <section id="methodPanel" class="panel" aria-labelledby="methodTitle">
