@@ -1,4 +1,4 @@
-const state = { data: null, filter: 'BET', historyFilter: 'ALL', focusFilter: 'ALL', dateFrom: '', dateTo: '' };
+const state = { data: null, filter: 'BET', historyFilter: 'ALL', focusSelected: ['Recent surface game margin', 'Opponent-adjusted return', 'Surface-adjusted Elo'], focusMinMatches: 2, dateFrom: '', dateTo: '' };
 
 const fmtPct = value => Number.isFinite(Number(value)) ? `${(Number(value) * 100).toFixed(1)}%` : '—';
 const fmtNum = (value, digits = 1) => Number.isFinite(Number(value)) ? Number(value).toFixed(digits) : '—';
@@ -34,7 +34,11 @@ const boardFactorDefinitions = [
   ...focusFactorDefinitions,
   ['Overall Elo', /higher overall elo/i],
   ['Workload / rest', /a lighter recent workload|more recovery time/i],
+  ['Opponent-adjusted serve', /stronger opponent-adjusted serve-point performance/i],
+  ['Serve-versus-return matchup', /a more favorable serve-versus-return matchup/i],
 ];
+
+const confluenceFactorDefinitions = boardFactorDefinitions;
 
 function focusFactors(row) {
   const rationale = String(row.feature_rationale || '');
@@ -53,6 +57,20 @@ function renderBoardChips(row) {
   }).join('');
 }
 
+function selectedConfluenceFactors(row) {
+  const rationale = String(row.feature_rationale || '');
+  return confluenceFactorDefinitions
+    .filter(([label, pattern]) => state.focusSelected.includes(label) && pattern.test(rationale))
+    .map(([label]) => label);
+}
+
+function renderFocusControls() {
+  document.querySelector('#focusFactorSelectors').innerHTML = confluenceFactorDefinitions.map(([label]) => `<button type="button" class="factor-selector ${state.focusSelected.includes(label) ? 'active' : ''}" data-factor="${safe(label)}" aria-pressed="${state.focusSelected.includes(label)}">${safe(label)}</button>`).join('');
+  const maximum = state.focusSelected.length;
+  if (state.focusMinMatches > maximum) state.focusMinMatches = maximum;
+  document.querySelector('#focusMinMatches').innerHTML = Array.from({length: maximum}, (_, index) => index + 1).map(count => `<option value="${count}" ${count === state.focusMinMatches ? 'selected' : ''}>At least ${count} of ${maximum}</option>`).join('');
+}
+
 function currentPicks() {
   const currentDate = state.data?.scrape_status?.match_date;
   return (state.data?.picks || []).filter(row => {
@@ -62,41 +80,32 @@ function currentPicks() {
 }
 
 function renderFocus() {
-  const qualifying = currentPicks().map(row => ({ row, factors: focusFactors(row) })).filter(item => item.factors.length >= 2);
-  const filtered = state.focusFilter === 'ALL' ? qualifying : qualifying.filter(item => item.factors.length === Number(state.focusFilter));
+  const qualifying = currentPicks().map(row => ({ row, factors: selectedConfluenceFactors(row) })).filter(item => item.factors.length >= state.focusMinMatches);
   const bets = qualifying.filter(item => item.row.recommendation === 'BET').length;
   const notice = document.querySelector('#focusNotice');
   notice.textContent = qualifying.length
-    ? `${qualifying.length} line${qualifying.length === 1 ? '' : 's'} match at least two focus factors; ${bets} retain the model's BET decision and ${qualifying.length - bets} remain PASS.`
-    : 'No lines in this slate match at least two of the three focus factors.';
+    ? `${qualifying.length} line${qualifying.length === 1 ? '' : 's'} match at least ${state.focusMinMatches} of ${state.focusSelected.length} selected factors; ${bets} retain the model's BET decision and ${qualifying.length - bets} remain PASS.`
+    : `No lines in this slate match at least ${state.focusMinMatches} of ${state.focusSelected.length} selected factors.`;
   notice.className = `status-banner ${qualifying.length ? '' : 'closed'}`;
   renderFocusPerformance();
-  document.querySelector('#focusBoard').innerHTML = filtered.length ? filtered.map(({ row, factors }) => {
+  document.querySelector('#focusBoard').innerHTML = qualifying.length ? qualifying.map(({ row, factors }) => {
     const isBet = row.recommendation === 'BET';
-    return `<article class="pick-card focus-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="confluence-score">${factors.length}/3</div><div class="decision ${isBet ? 'bet' : ''}">${safe(row.recommendation)}</div><div class="factor-chips">${renderFocusChips(factors)}</div></article>`;
-  }).join('') : '<div class="empty"><strong>No matching lines</strong>Try the combined 2/3 + 3/3 view or choose another date range.</div>';
+    const chips = state.focusSelected.map(label => `<span class="factor-chip ${factors.includes(label) ? 'matched' : ''}">${factors.includes(label) ? '&#10003;' : '&#8212;'} ${safe(label)}</span>`).join('');
+    return `<article class="pick-card focus-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="confluence-score">${factors.length}/${state.focusSelected.length}</div><div class="decision ${isBet ? 'bet' : ''}">${safe(row.recommendation)}</div><div class="factor-chips">${chips}</div></article>`;
+  }).join('') : '<div class="empty"><strong>No matching lines</strong>Choose a lower match rule, different factors, or another date range.</div>';
 }
 
-const focusCombinations = [
-  { label: 'All three factors', key: '3/3', matches: factors => factors.length === 3 },
-  { label: 'Surface margin + Opponent-adjusted return', key: '2/3', matches: factors => factors.length === 2 && factors.includes('Recent surface game margin') && factors.includes('Opponent-adjusted return') },
-  { label: 'Surface margin + Surface-adjusted Elo', key: '2/3', matches: factors => factors.length === 2 && factors.includes('Recent surface game margin') && factors.includes('Surface-adjusted Elo') },
-  { label: 'Opponent-adjusted return + Surface-adjusted Elo', key: '2/3', matches: factors => factors.length === 2 && factors.includes('Opponent-adjusted return') && factors.includes('Surface-adjusted Elo') },
-];
-
 function renderFocusPerformance() {
-  const history = selectedHistory().map(row => ({ row, factors: focusFactors(row) })).filter(item => item.factors.length >= 2);
-  document.querySelector('#focusPerformanceRows').innerHTML = focusCombinations.map(combination => {
-    const rows = history.filter(item => combination.matches(item.factors)).map(item => item.row);
-    const decided = rows.filter(row => ['WIN','LOSS'].includes(String(row.result).toUpperCase()));
-    const wins = decided.filter(row => String(row.result).toUpperCase() === 'WIN').length;
-    const losses = decided.length - wins;
-    const pending = rows.filter(row => String(row.result).toUpperCase() === 'PENDING').length;
-    const units = decided.reduce((sum, row) => sum + (Number(row.profit_units) || 0), 0);
-    const risk = decided.reduce((sum, row) => sum + (Number(row.risk_units) || 0), 0);
-    const winRate = decided.length ? wins / decided.length : null;
-    return `<tr><td><strong>${safe(combination.label)}</strong><br><span class="combination-label">${combination.key}</span></td><td>${wins}-${losses}</td><td>${fmtPct(winRate)}</td><td class="${units > 0 ? 'units-positive' : units < 0 ? 'units-negative' : ''}">${units > 0 ? '+' : ''}${units.toFixed(2)}</td><td>${risk ? fmtPct(units / risk) : '—'}</td><td>${decided.length}</td><td>${pending}</td></tr>`;
-  }).join('');
+  const rows = selectedHistory().filter(row => selectedConfluenceFactors(row).length >= state.focusMinMatches);
+  const decided = rows.filter(row => ['WIN','LOSS'].includes(String(row.result).toUpperCase()));
+  const wins = decided.filter(row => String(row.result).toUpperCase() === 'WIN').length;
+  const losses = decided.length - wins;
+  const pending = rows.filter(row => String(row.result).toUpperCase() === 'PENDING').length;
+  const units = decided.reduce((sum, row) => sum + (Number(row.profit_units) || 0), 0);
+  const risk = decided.reduce((sum, row) => sum + (Number(row.risk_units) || 0), 0);
+  const winRate = decided.length ? wins / decided.length : null;
+  const label = state.focusSelected.join(' + ');
+  document.querySelector('#focusPerformanceRows').innerHTML = `<tr><td><strong>${safe(label)}</strong><br><span class="combination-label">AT LEAST ${state.focusMinMatches} OF ${state.focusSelected.length}</span></td><td>${wins}-${losses}</td><td>${fmtPct(winRate)}</td><td class="${units > 0 ? 'units-positive' : units < 0 ? 'units-negative' : ''}">${units > 0 ? '+' : ''}${units.toFixed(2)}</td><td>${risk ? fmtPct(units / risk) : '—'}</td><td>${decided.length}</td><td>${pending}</td></tr>`;
 }
 
 function renderPerformance() {
@@ -179,10 +188,24 @@ function renderFactors() {
 }
 
 function bindControls() {
+  renderFocusControls();
   document.querySelectorAll('.tab').forEach(button => button.addEventListener('click', () => { document.querySelectorAll('.tab').forEach(item => item.classList.toggle('active', item === button)); document.querySelectorAll('.panel').forEach(panel => panel.classList.toggle('active', panel.id === button.dataset.panel)); }));
   document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => { state.filter = button.dataset.filter; document.querySelectorAll('.filter').forEach(item => item.classList.toggle('active', item === button)); renderBoard(); }));
   document.querySelectorAll('.history-filter').forEach(button => button.addEventListener('click', () => { state.historyFilter = button.dataset.historyFilter; document.querySelectorAll('.history-filter').forEach(item => item.classList.toggle('active', item === button)); renderHistory(); }));
-  document.querySelectorAll('.focus-filter').forEach(button => button.addEventListener('click', () => { state.focusFilter = button.dataset.focusFilter; document.querySelectorAll('.focus-filter').forEach(item => item.classList.toggle('active', item === button)); renderFocus(); }));
+  document.querySelector('#focusFactorSelectors').addEventListener('click', event => {
+    const button = event.target.closest('.factor-selector');
+    if (!button) return;
+    const factor = button.dataset.factor;
+    if (state.focusSelected.includes(factor)) {
+      if (state.focusSelected.length === 1) return;
+      state.focusSelected = state.focusSelected.filter(label => label !== factor);
+    } else {
+      state.focusSelected = [...state.focusSelected, factor];
+    }
+    renderFocusControls();
+    renderFocus();
+  });
+  document.querySelector('#focusMinMatches').addEventListener('change', event => { state.focusMinMatches = Number(event.target.value); renderFocus(); });
   document.querySelector('#dateFrom').addEventListener('change', event => { state.dateFrom = event.target.value; renderBoard(); renderHistory(); renderFactors(); renderFocus(); });
   document.querySelector('#dateTo').addEventListener('change', event => { state.dateTo = event.target.value; renderBoard(); renderHistory(); renderFactors(); renderFocus(); });
   document.querySelector('#dateClear').addEventListener('click', () => { state.dateFrom = ''; state.dateTo = ''; document.querySelector('#dateFrom').value = ''; document.querySelector('#dateTo').value = ''; renderBoard(); renderHistory(); renderFactors(); renderFocus(); });

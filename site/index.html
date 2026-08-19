@@ -102,14 +102,13 @@
     <section id="focusPanel" class="panel" aria-labelledby="focusTitle">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">2 OF 3 OR 3 OF 3 SIGNALS</p>
+          <p class="eyebrow">BUILD YOUR FACTOR FILTER</p>
           <h2 id="focusTitle">Factor confluence</h2>
         </div>
-        <div class="filters" role="group" aria-label="Filter factor confluence">
-          <button class="focus-filter active" data-focus-filter="ALL">2/3 + 3/3</button>
-          <button class="focus-filter" data-focus-filter="3">3/3 only</button>
-          <button class="focus-filter" data-focus-filter="2">2/3 only</button>
-        </div>
+      </div>
+      <div class="focus-controls">
+        <div><span class="metric-label">SELECT FACTORS</span><div id="focusFactorSelectors" class="factor-selector-list" role="group" aria-label="Select confluence factors"></div></div>
+        <label class="match-control"><span class="metric-label">MATCH RULE</span><select id="focusMinMatches" aria-label="Minimum selected factors required"></select></label>
       </div>
       <div id="focusNotice" class="status-banner closed"></div>
       <div class="history-table-wrap focus-performance-wrap">
@@ -119,7 +118,7 @@
         </table>
       </div>
       <div id="focusBoard" class="board-grid" aria-live="polite"></div>
-      <article class="explain-card"><h3>Focused view, same safety gates</h3><p>This tab only includes lines supported by at least two of: recent surface game margin, opponent-adjusted return, and surface-adjusted Elo. A 2/3 or 3/3 match is a descriptive screen, not a new bet signal or proof of causation. BET and PASS still come from the model's existing price, edge, uncertainty, and data-quality rules.</p></article>
+      <article class="explain-card"><h3>Custom view, same safety gates</h3><p>Select the factors and minimum match count you want to study. The historical summary and current lines update together. This remains a descriptive screen, not proof of causation; BET and PASS still come from the model's existing price, edge, uncertainty, and data-quality rules.</p></article>
     </section>
 
     <section id="methodPanel" class="panel" aria-labelledby="methodTitle">
