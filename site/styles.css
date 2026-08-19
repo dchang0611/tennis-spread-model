@@ -102,6 +102,8 @@ h2 { font-size: clamp(34px,5vw,58px); }
 .factor-chips { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; padding-top: 14px; border-top: 1px solid var(--line); }
 .factor-chip { border: 1px solid var(--line); color: var(--muted); padding: 7px 10px; font-size: 11px; }
 .factor-chip.matched { border-color: var(--lime); color: var(--lime); background: rgba(215,244,58,.06); }
+.focus-performance-wrap { margin-bottom: 18px; }
+.combination-label { display: inline-block; margin-top: 5px; color: var(--mint); font-size: 10px; font-weight: 850; letter-spacing: .08em; }
 
 .method-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
 .method-grid article { position: relative; min-height: 220px; padding: 28px; border: 1px solid var(--line); background: var(--panel); overflow: hidden; }

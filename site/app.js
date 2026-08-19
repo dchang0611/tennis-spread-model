@@ -52,11 +52,34 @@ function renderFocus() {
     ? `${qualifying.length} line${qualifying.length === 1 ? '' : 's'} match at least two focus factors; ${bets} retain the model's BET decision and ${qualifying.length - bets} remain PASS.`
     : 'No lines in this slate match at least two of the three focus factors.';
   notice.className = `status-banner ${qualifying.length ? '' : 'closed'}`;
+  renderFocusPerformance();
   document.querySelector('#focusBoard').innerHTML = filtered.length ? filtered.map(({ row, factors }) => {
     const isBet = row.recommendation === 'BET';
     const chips = focusFactorDefinitions.map(([label]) => `<span class="factor-chip ${factors.includes(label) ? 'matched' : ''}">${factors.includes(label) ? '&#10003;' : '&#8212;'} ${safe(label)}</span>`).join('');
     return `<article class="pick-card focus-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="confluence-score">${factors.length}/3</div><div class="decision ${isBet ? 'bet' : ''}">${safe(row.recommendation)}</div><div class="factor-chips">${chips}</div></article>`;
   }).join('') : '<div class="empty"><strong>No matching lines</strong>Try the combined 2/3 + 3/3 view or choose another date range.</div>';
+}
+
+const focusCombinations = [
+  { label: 'All three factors', key: '3/3', matches: factors => factors.length === 3 },
+  { label: 'Surface margin + Opponent-adjusted return', key: '2/3', matches: factors => factors.length === 2 && factors.includes('Recent surface game margin') && factors.includes('Opponent-adjusted return') },
+  { label: 'Surface margin + Surface-adjusted Elo', key: '2/3', matches: factors => factors.length === 2 && factors.includes('Recent surface game margin') && factors.includes('Surface-adjusted Elo') },
+  { label: 'Opponent-adjusted return + Surface-adjusted Elo', key: '2/3', matches: factors => factors.length === 2 && factors.includes('Opponent-adjusted return') && factors.includes('Surface-adjusted Elo') },
+];
+
+function renderFocusPerformance() {
+  const history = selectedHistory().map(row => ({ row, factors: focusFactors(row) })).filter(item => item.factors.length >= 2);
+  document.querySelector('#focusPerformanceRows').innerHTML = focusCombinations.map(combination => {
+    const rows = history.filter(item => combination.matches(item.factors)).map(item => item.row);
+    const decided = rows.filter(row => ['WIN','LOSS'].includes(String(row.result).toUpperCase()));
+    const wins = decided.filter(row => String(row.result).toUpperCase() === 'WIN').length;
+    const losses = decided.length - wins;
+    const pending = rows.filter(row => String(row.result).toUpperCase() === 'PENDING').length;
+    const units = decided.reduce((sum, row) => sum + (Number(row.profit_units) || 0), 0);
+    const risk = decided.reduce((sum, row) => sum + (Number(row.risk_units) || 0), 0);
+    const winRate = decided.length ? wins / decided.length : null;
+    return `<tr><td><strong>${safe(combination.label)}</strong><br><span class="combination-label">${combination.key}</span></td><td>${wins}-${losses}</td><td>${fmtPct(winRate)}</td><td class="${units > 0 ? 'units-positive' : units < 0 ? 'units-negative' : ''}">${units > 0 ? '+' : ''}${units.toFixed(2)}</td><td>${risk ? fmtPct(units / risk) : '—'}</td><td>${decided.length}</td><td>${pending}</td></tr>`;
+  }).join('');
 }
 
 function renderPerformance() {
