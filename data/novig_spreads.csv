@@ -1,6 +1,7 @@
 date,tournament,surface,best_of,player_a,player_b,spread_a,odds_a,spread_b,odds_b,collected_at,event_url
-2026-08-20,ATP,Hard,3,Flavio Cobolli,Tommy Paul,1.5,-106,-1.5,-113,2026-08-20T14:19:14.013819+00:00,https://novig.com/event-markets/01a01c3a-f986-7011-a2c0-0d0af793d952
-2026-08-20,ATP,Hard,3,Flavio Cobolli,Tommy Paul,2.5,-144,-2.5,133,2026-08-20T14:19:14.013819+00:00,https://novig.com/event-markets/01a01c3a-f986-7011-a2c0-0d0af793d952
-2026-08-20,ATP,Hard,3,Arthur Fils,Thiago Agustin Tirante,-3.5,-117,3.5,111,2026-08-20T14:19:14.013819+00:00,https://novig.com/event-markets/01a01c3a-f954-7982-bb48-fe8b8a464cf6
-2026-08-20,ATP,Hard,3,Arthur Fils,Thiago Agustin Tirante,-4.5,127,4.5,-174,2026-08-20T14:19:14.013819+00:00,https://novig.com/event-markets/01a01c3a-f954-7982-bb48-fe8b8a464cf6
-2026-08-20,ATP,Hard,3,Arthur Fils,Thiago Agustin Tirante,-2.5,-223,2.5,167,2026-08-20T14:19:14.013819+00:00,https://novig.com/event-markets/01a01c3a-f954-7982-bb48-fe8b8a464cf6
+2026-08-20,ATP,Hard,3,Flavio Cobolli,Tommy Paul,1.5,-100,-1.5,-106,2026-08-20T18:00:24.247470+00:00,https://novig.com/event-markets/01a01c3a-f986-7011-a2c0-0d0af793d952
+2026-08-20,ATP,Hard,3,Flavio Cobolli,Tommy Paul,0.5,117,-0.5,-144,2026-08-20T18:00:24.247470+00:00,https://novig.com/event-markets/01a01c3a-f986-7011-a2c0-0d0af793d952
+2026-08-20,ATP,Hard,3,Flavio Cobolli,Tommy Paul,2.5,-138,-2.5,130,2026-08-20T18:00:24.247470+00:00,https://novig.com/event-markets/01a01c3a-f986-7011-a2c0-0d0af793d952
+2026-08-20,ATP,Hard,3,Arthur Fils,Thiago Agustin Tirante,-3.5,-102,3.5,-102,2026-08-20T18:00:24.247470+00:00,https://novig.com/event-markets/01a01c3a-f954-7982-bb48-fe8b8a464cf6
+2026-08-20,ATP,Hard,3,Arthur Fils,Thiago Agustin Tirante,-4.5,141,4.5,-194,2026-08-20T18:00:24.247470+00:00,https://novig.com/event-markets/01a01c3a-f954-7982-bb48-fe8b8a464cf6
+2026-08-20,ATP,Hard,3,Arthur Fils,Thiago Agustin Tirante,-2.5,-203,2.5,153,2026-08-20T18:00:24.247470+00:00,https://novig.com/event-markets/01a01c3a-f954-7982-bb48-fe8b8a464cf6
