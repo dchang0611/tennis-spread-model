@@ -1,22 +1,18 @@
 {
   "success": true,
-  "checked_at": "2026-08-19T17:55:29.677320+00:00",
-  "match_date": "2026-08-19",
+  "checked_at": "2026-08-20T08:09:01.961429+00:00",
+  "match_date": "2026-08-20",
   "day_label": "Today",
-  "events_found": 6,
+  "events_found": 2,
   "events": [
-    "Tommy Paul vs Alexander Zverev",
-    "Alex De Minaur vs Arthur Fils",
-    "Brandon Nakashima vs Nuno Borges",
-    "Lorenzo Musetti vs Jaime Faria",
-    "Christopher O'Connell vs Taylor Fritz",
-    "Felix Auger-Aliassime vs Frances Tiafoe"
+    "Flavio Cobolli vs Tommy Paul",
+    "Arthur Fils vs Thiago Agustin Tirante"
   ],
-  "spread_markets_found": 6,
+  "spread_markets_found": 2,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 6,
-  "matches_parsed": 6,
-  "rows_saved": 16,
+  "executable_spread_markets": 2,
+  "matches_parsed": 2,
+  "rows_saved": 4,
   "error": null
 }
