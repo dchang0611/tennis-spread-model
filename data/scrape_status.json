@@ -1,18 +1,7 @@
 {
-  "success": true,
-  "checked_at": "2026-08-21T08:10:02.721291+00:00",
+  "success": false,
+  "checked_at": "2026-08-21T14:17:34.551927+00:00",
   "match_date": "2026-08-21",
   "day_label": "Today",
-  "events_found": 2,
-  "events": [
-    "Brandon Nakashima vs Taylor Fritz",
-    "Frances Tiafoe vs Lorenzo Musetti"
-  ],
-  "spread_markets_found": 2,
-  "parser_failures": [],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 2,
-  "matches_parsed": 2,
-  "rows_saved": 5,
-  "error": null
+  "error": "Locator.wait_for: Timeout 20000ms exceeded.\nCall log:\n  - waiting for get_by_text(\"7 More\", exact=True).first to be visible\n"
 }
