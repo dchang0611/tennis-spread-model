@@ -1,35 +1,25 @@
 {
   "success": true,
-  "checked_at": "2026-08-22T07:57:42.039337+00:00",
+  "checked_at": "2026-08-22T13:56:39.251692+00:00",
   "match_date": "2026-08-22",
   "day_label": "Today",
-  "events_found": 10,
+  "events_found": 9,
   "events": [
-    "Kenta Miyoshi vs Pierre-Hugues Herbert",
-    "Luca Pow vs Felix Balshaw",
     "Neil Oberleitner vs Hugo Grenier",
+    "Luca Pow vs Felix Balshaw",
+    "Kenta Miyoshi vs Pierre-Hugues Herbert",
+    "Quinn Vandecasteele vs Li Tu",
     "Marc Polmans vs Sebastian Gorzny",
     "Mees Rottgering vs Hunter Heck",
-    "Quinn Vandecasteele vs Li Tu",
-    "Dhakshineswar Suresh vs Roger Pascual Ferra",
     "Ryan Seggerman vs Abdullah Shelbayh",
-    "Arthur Fils vs Flavio Cobolli",
-    "Frances Tiafoe vs Brandon Nakashima"
-  ],
-  "spread_markets_found": 10,
-  "parser_failures": [],
-  "unpriced_spread_markets": [
-    "Kenta Miyoshi vs Pierre-Hugues Herbert",
-    "Luca Pow vs Felix Balshaw",
-    "Neil Oberleitner vs Hugo Grenier",
-    "Marc Polmans vs Sebastian Gorzny",
-    "Mees Rottgering vs Hunter Heck",
-    "Quinn Vandecasteele vs Li Tu",
     "Dhakshineswar Suresh vs Roger Pascual Ferra",
-    "Ryan Seggerman vs Abdullah Shelbayh"
+    "Arthur Fils vs Flavio Cobolli"
   ],
-  "executable_spread_markets": 2,
-  "matches_parsed": 2,
-  "rows_saved": 10,
+  "spread_markets_found": 9,
+  "parser_failures": [],
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 9,
+  "matches_parsed": 9,
+  "rows_saved": 24,
   "error": null
 }
