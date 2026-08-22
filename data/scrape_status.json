@@ -1,25 +1,20 @@
 {
   "success": true,
-  "checked_at": "2026-08-22T13:56:39.251692+00:00",
+  "checked_at": "2026-08-22T17:54:05.498670+00:00",
   "match_date": "2026-08-22",
   "day_label": "Today",
-  "events_found": 9,
+  "events_found": 4,
   "events": [
-    "Neil Oberleitner vs Hugo Grenier",
-    "Luca Pow vs Felix Balshaw",
-    "Kenta Miyoshi vs Pierre-Hugues Herbert",
-    "Quinn Vandecasteele vs Li Tu",
-    "Marc Polmans vs Sebastian Gorzny",
-    "Mees Rottgering vs Hunter Heck",
+    "Arthur Fils vs Flavio Cobolli",
     "Ryan Seggerman vs Abdullah Shelbayh",
     "Dhakshineswar Suresh vs Roger Pascual Ferra",
-    "Arthur Fils vs Flavio Cobolli"
+    "Frances Tiafoe vs Brandon Nakashima"
   ],
-  "spread_markets_found": 9,
+  "spread_markets_found": 4,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 9,
-  "matches_parsed": 9,
-  "rows_saved": 24,
+  "executable_spread_markets": 4,
+  "matches_parsed": 4,
+  "rows_saved": 14,
   "error": null
 }

@@ -1,15 +1,9 @@
 {
   "success": true,
-  "market_matchups": 9,
-  "modeled_matchups": 1,
+  "market_matchups": 4,
+  "modeled_matchups": 2,
   "unmatched_model_players": [
     "Ryan Seggerman vs Abdullah Shelbayh",
-    "Dhakshineswar Suresh vs Roger Pascual Ferra",
-    "Luca Pow vs Felix Balshaw",
-    "Neil Oberleitner vs Hugo Grenier",
-    "Mees Rottgering vs Hunter Heck",
-    "Kenta Miyoshi vs Pierre-Hugues Herbert",
-    "Quinn Vandecasteele vs Li Tu",
-    "Marc Polmans vs Sebastian Gorzny"
+    "Dhakshineswar Suresh vs Roger Pascual Ferra"
   ]
 }
