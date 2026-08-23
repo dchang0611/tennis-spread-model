@@ -1,31 +1,25 @@
 {
-  "success": false,
-  "checked_at": "2026-08-23T07:59:16.437734+00:00",
+  "success": true,
+  "checked_at": "2026-08-23T13:57:53.544065+00:00",
   "match_date": "2026-08-23",
   "day_label": "Today",
   "events_found": 9,
   "events": [
     "Dhakshineswar Suresh vs Abdullah Shelbayh",
-    "Sebastian Gorzny vs Felix Balshaw",
-    "Quinn Vandecasteele vs Pierre-Hugues Herbert",
     "Mees Rottgering vs Hugo Grenier",
+    "Quinn Vandecasteele vs Pierre-Hugues Herbert",
+    "Sebastian Gorzny vs Felix Balshaw",
     "Cruz Hewitt vs Dino Prizmic",
-    "Jenson Brooksby vs Giovanni Mpetshi Perricard",
     "Miomir Kecmanovic vs Sho Shimabukuro",
+    "Jenson Brooksby vs Giovanni Mpetshi Perricard",
     "Mattia Bellucci vs Martin Landaluce",
     "Yibing Wu vs Francisco Comesana"
   ],
   "spread_markets_found": 9,
-  "parser_failures": [
-    "Sebastian Gorzny vs Felix Balshaw",
-    "Quinn Vandecasteele vs Pierre-Hugues Herbert",
-    "Mees Rottgering vs Hugo Grenier",
-    "Mattia Bellucci vs Martin Landaluce"
-  ],
-  "unpriced_spread_markets": [
-    "Dhakshineswar Suresh vs Abdullah Shelbayh"
-  ],
-  "executable_spread_markets": 8,
-  "matches_parsed": 4,
-  "error": "Game Spread was visible but could not be parsed for: Sebastian Gorzny vs Felix Balshaw, Quinn Vandecasteele vs Pierre-Hugues Herbert, Mees Rottgering vs Hugo Grenier, Mattia Bellucci vs Martin Landaluce"
+  "parser_failures": [],
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 9,
+  "matches_parsed": 9,
+  "rows_saved": 24,
+  "error": null
 }
