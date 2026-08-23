@@ -1,25 +1,21 @@
 {
   "success": true,
-  "checked_at": "2026-08-23T13:57:53.544065+00:00",
+  "checked_at": "2026-08-23T17:52:43.496570+00:00",
   "match_date": "2026-08-23",
   "day_label": "Today",
-  "events_found": 9,
+  "events_found": 5,
   "events": [
-    "Dhakshineswar Suresh vs Abdullah Shelbayh",
-    "Mees Rottgering vs Hugo Grenier",
-    "Quinn Vandecasteele vs Pierre-Hugues Herbert",
-    "Sebastian Gorzny vs Felix Balshaw",
-    "Cruz Hewitt vs Dino Prizmic",
     "Miomir Kecmanovic vs Sho Shimabukuro",
     "Jenson Brooksby vs Giovanni Mpetshi Perricard",
+    "Yibing Wu vs Francisco Comesana",
     "Mattia Bellucci vs Martin Landaluce",
-    "Yibing Wu vs Francisco Comesana"
+    "Frances Tiafoe vs Arthur Fils"
   ],
-  "spread_markets_found": 9,
+  "spread_markets_found": 5,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 9,
-  "matches_parsed": 9,
-  "rows_saved": 24,
+  "executable_spread_markets": 5,
+  "matches_parsed": 5,
+  "rows_saved": 17,
   "error": null
 }
