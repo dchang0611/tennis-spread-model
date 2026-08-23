@@ -1,20 +1,35 @@
 {
-  "success": true,
-  "checked_at": "2026-08-22T17:54:05.498670+00:00",
-  "match_date": "2026-08-22",
+  "success": false,
+  "checked_at": "2026-08-23T07:12:08.281986+00:00",
+  "match_date": "2026-08-23",
   "day_label": "Today",
-  "events_found": 4,
+  "events_found": 9,
   "events": [
-    "Arthur Fils vs Flavio Cobolli",
-    "Ryan Seggerman vs Abdullah Shelbayh",
-    "Dhakshineswar Suresh vs Roger Pascual Ferra",
-    "Frances Tiafoe vs Brandon Nakashima"
+    "Mees Rottgering vs Hugo Grenier",
+    "Sebastian Gorzny vs Felix Balshaw",
+    "Dhakshineswar Suresh vs Abdullah Shelbayh",
+    "Quinn Vandecasteele vs Pierre-Hugues Herbert",
+    "Jenson Brooksby vs Giovanni Mpetshi Perricard",
+    "Cruz Hewitt vs Dino Prizmic",
+    "Miomir Kecmanovic vs Sho Shimabukuro",
+    "Yibing Wu vs Francisco Comesana",
+    "Mattia Bellucci vs Martin Landaluce"
   ],
-  "spread_markets_found": 4,
-  "parser_failures": [],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 4,
-  "matches_parsed": 4,
-  "rows_saved": 14,
-  "error": null
+  "spread_markets_found": 9,
+  "parser_failures": [
+    "Mees Rottgering vs Hugo Grenier",
+    "Sebastian Gorzny vs Felix Balshaw",
+    "Quinn Vandecasteele vs Pierre-Hugues Herbert",
+    "Jenson Brooksby vs Giovanni Mpetshi Perricard",
+    "Cruz Hewitt vs Dino Prizmic",
+    "Miomir Kecmanovic vs Sho Shimabukuro",
+    "Yibing Wu vs Francisco Comesana",
+    "Mattia Bellucci vs Martin Landaluce"
+  ],
+  "unpriced_spread_markets": [
+    "Dhakshineswar Suresh vs Abdullah Shelbayh"
+  ],
+  "executable_spread_markets": 8,
+  "matches_parsed": 0,
+  "error": "Game Spread was visible but could not be parsed for: Mees Rottgering vs Hugo Grenier, Sebastian Gorzny vs Felix Balshaw, Quinn Vandecasteele vs Pierre-Hugues Herbert, Jenson Brooksby vs Giovanni Mpetshi Perricard, Cruz Hewitt vs Dino Prizmic, Miomir Kecmanovic vs Sho Shimabukuro, Yibing Wu vs Francisco Comesana, Mattia Bellucci vs Martin Landaluce"
 }
