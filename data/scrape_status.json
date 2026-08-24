@@ -1,25 +1,9 @@
 {
-  "success": true,
-  "checked_at": "2026-08-24T14:23:31.861999+00:00",
+  "success": false,
+  "checked_at": "2026-08-24T18:02:36.646810+00:00",
   "match_date": "2026-08-24",
   "day_label": "Today",
-  "events_found": 9,
-  "events": [
-    "Frederico Ferreira Silva vs Deigo Dedura-Palomero",
-    "Daniel Rincon vs Titouan Droguet",
-    "Roberto Carballes Baena vs Jacob Fearnley",
-    "Jurij Rodionov vs Kimmer Coppejans",
-    "Juan Pablo Varillas vs Luka Pavlovic",
-    "Jordan Lee vs Mark Lajal",
-    "Lautaro Midon vs Kyrian Jacquet",
-    "Tomas Barrios Vera vs Juan Carlos Prado Angelo",
-    "Elias Ymer vs Franco Roncadelli"
-  ],
-  "spread_markets_found": 9,
-  "parser_failures": [],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 9,
-  "matches_parsed": 9,
-  "rows_saved": 28,
-  "error": null
+  "events_found": 0,
+  "events": [],
+  "error": "No Novig ATP events labeled 'Today' were found."
 }
