@@ -1,18 +1,6 @@
 date,tournament,surface,best_of,player_a,player_b,spread_a,odds_a,spread_b,odds_b,collected_at,event_url
-2026-08-23,ATP,Hard,3,Miomir Kecmanovic,Sho Shimabukuro,-3.5,104,3.5,-111,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a0277e-d8c4-74f3-ae52-0f08e9df914a
-2026-08-23,ATP,Hard,3,Miomir Kecmanovic,Sho Shimabukuro,-4.5,167,4.5,-208,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a0277e-d8c4-74f3-ae52-0f08e9df914a
-2026-08-23,ATP,Hard,3,Miomir Kecmanovic,Sho Shimabukuro,-2.5,-156,2.5,120,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a0277e-d8c4-74f3-ae52-0f08e9df914a
-2026-08-23,ATP,Hard,3,Jenson Brooksby,Giovanni Mpetshi Perricard,-2.5,113,2.5,-125,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a0277e-d821-7ea1-a9ea-31690472c81a
-2026-08-23,ATP,Hard,3,Jenson Brooksby,Giovanni Mpetshi Perricard,-3.5,163,3.5,-270,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a0277e-d821-7ea1-a9ea-31690472c81a
-2026-08-23,ATP,Hard,3,Jenson Brooksby,Giovanni Mpetshi Perricard,1.5,-308,-1.5,178,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a0277e-d821-7ea1-a9ea-31690472c81a
-2026-08-23,ATP,Hard,3,Jenson Brooksby,Giovanni Mpetshi Perricard,-1.5,-127,1.5,117,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a0277e-d821-7ea1-a9ea-31690472c81a
-2026-08-23,ATP,Hard,3,Yibing Wu,Francisco Comesana,-2.5,-108,2.5,-104,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a0277e-da5a-75d2-972e-3a8d10254195
-2026-08-23,ATP,Hard,3,Yibing Wu,Francisco Comesana,-3.5,130,3.5,-163,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a0277e-da5a-75d2-972e-3a8d10254195
-2026-08-23,ATP,Hard,3,Yibing Wu,Francisco Comesana,-4.5,174,4.5,-300,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a0277e-da5a-75d2-972e-3a8d10254195
-2026-08-23,ATP,Hard,3,Yibing Wu,Francisco Comesana,-1.5,-144,1.5,111,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a0277e-da5a-75d2-972e-3a8d10254195
-2026-08-23,ATP,Hard,3,Mattia Bellucci,Martin Landaluce,0.5,-104,-0.5,-125,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a0277e-d884-7a70-b546-9169d687d695
-2026-08-23,ATP,Hard,3,Mattia Bellucci,Martin Landaluce,1.5,-115,-1.5,102,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a0277e-d884-7a70-b546-9169d687d695
-2026-08-23,ATP,Hard,3,Frances Tiafoe,Arthur Fils,2.5,113,-2.5,-125,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a02c52-d900-7c91-93e8-79271039d0d6
-2026-08-23,ATP,Hard,3,Frances Tiafoe,Arthur Fils,6.5,-3471,-6.5,614,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a02c52-d900-7c91-93e8-79271039d0d6
-2026-08-23,ATP,Hard,3,Frances Tiafoe,Arthur Fils,4.5,-308,-4.5,186,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a02c52-d900-7c91-93e8-79271039d0d6
-2026-08-23,ATP,Hard,3,Frances Tiafoe,Arthur Fils,3.5,-138,-3.5,125,2026-08-23T17:52:43.496650+00:00,https://novig.com/event-markets/01a02c52-d900-7c91-93e8-79271039d0d6
+2026-08-24,ATP,Hard,3,Juan Pablo Varillas,Luka Pavlovic,3.5,-100,-3.5,-163,2026-08-24T08:23:28.437840+00:00,https://novig.com/event-markets/01a03082-02b0-7681-9355-0e1cbf927cb1
+2026-08-24,ATP,Hard,3,Frederico Ferreira Silva,Deigo Dedura-Palomero,1.5,-127,-1.5,-127,2026-08-24T08:23:28.437840+00:00,https://novig.com/event-markets/01a03081-f9f9-7c73-88b3-d69bb64000bc
+2026-08-24,ATP,Hard,3,Jordan Lee,Mark Lajal,6.5,-223,-6.5,133,2026-08-24T08:23:28.437840+00:00,https://novig.com/event-markets/01a03081-f453-7652-bc41-55b839343fda
+2026-08-24,ATP,Hard,3,Daniel Rincon,Titouan Droguet,5.5,-190,-5.5,115,2026-08-24T08:23:28.437840+00:00,https://novig.com/event-markets/01a03081-fb6d-7a02-a6d1-c819a17de54d
+2026-08-24,ATP,Hard,3,Jurij Rodionov,Kimmer Coppejans,-2.5,-138,2.5,-115,2026-08-24T08:23:28.437840+00:00,https://novig.com/event-markets/01a03081-f600-7db0-b126-2be8980e9127
