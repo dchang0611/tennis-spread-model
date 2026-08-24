@@ -1,30 +1,25 @@
 {
   "success": true,
-  "checked_at": "2026-08-24T08:23:28.437778+00:00",
+  "checked_at": "2026-08-24T14:23:31.861999+00:00",
   "match_date": "2026-08-24",
   "day_label": "Today",
   "events_found": 9,
   "events": [
-    "Juan Pablo Varillas vs Luka Pavlovic",
     "Frederico Ferreira Silva vs Deigo Dedura-Palomero",
-    "Roberto Carballes Baena vs Jacob Fearnley",
-    "Jordan Lee vs Mark Lajal",
     "Daniel Rincon vs Titouan Droguet",
+    "Roberto Carballes Baena vs Jacob Fearnley",
     "Jurij Rodionov vs Kimmer Coppejans",
-    "Elias Ymer vs Franco Roncadelli",
-    "Kilian Feldbausch vs Vilius Gaubas",
-    "Aziz Dougaz vs Federico Agustin Gomez"
+    "Juan Pablo Varillas vs Luka Pavlovic",
+    "Jordan Lee vs Mark Lajal",
+    "Lautaro Midon vs Kyrian Jacquet",
+    "Tomas Barrios Vera vs Juan Carlos Prado Angelo",
+    "Elias Ymer vs Franco Roncadelli"
   ],
   "spread_markets_found": 9,
   "parser_failures": [],
-  "unpriced_spread_markets": [
-    "Roberto Carballes Baena vs Jacob Fearnley",
-    "Elias Ymer vs Franco Roncadelli",
-    "Kilian Feldbausch vs Vilius Gaubas",
-    "Aziz Dougaz vs Federico Agustin Gomez"
-  ],
-  "executable_spread_markets": 5,
-  "matches_parsed": 5,
-  "rows_saved": 5,
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 9,
+  "matches_parsed": 9,
+  "rows_saved": 28,
   "error": null
 }
