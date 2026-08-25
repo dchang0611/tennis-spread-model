@@ -1,11 +1,10 @@
 {
   "success": true,
-  "market_matchups": 7,
-  "modeled_matchups": 3,
+  "market_matchups": 9,
+  "modeled_matchups": 6,
   "unmatched_model_players": [
     "Clement Tabur vs Braden Shick",
     "Daniel Milavsky vs Shintaro Mochizuki",
-    "Jordan Lee vs Daniel Rincon",
     "Henry Searle vs Michael Antonius"
   ]
 }
