@@ -1,25 +1,18 @@
 {
-  "success": true,
-  "checked_at": "2026-08-25T14:26:24.122759+00:00",
+  "success": false,
+  "checked_at": "2026-08-25T18:02:02.236621+00:00",
   "match_date": "2026-08-25",
   "day_label": "Today",
-  "events_found": 9,
+  "events_found": 1,
   "events": [
-    "David Jorda Sanchis vs Henri Squire",
-    "Kei Nishikori vs Sebastian Ofner",
-    "Henry Searle vs Michael Antonius",
-    "Clement Tabur vs Braden Shick",
-    "Gilles Arnaud Bailly vs Timofey Skatov",
-    "Daniel Milavsky vs Shintaro Mochizuki",
-    "Dusan Lajovic vs SoonWoo Kwon",
-    "Michael Mmoh vs Henrique Rocha",
-    "Sumit Nagal vs Arthur Gea"
+    "Michael Mmoh vs Henrique Rocha"
   ],
-  "spread_markets_found": 9,
+  "spread_markets_found": 1,
   "parser_failures": [],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 9,
-  "matches_parsed": 9,
-  "rows_saved": 33,
-  "error": null
+  "unpriced_spread_markets": [
+    "Michael Mmoh vs Henrique Rocha"
+  ],
+  "executable_spread_markets": 0,
+  "matches_parsed": 0,
+  "error": "Novig events were found, but no complete paired spread prices were extracted."
 }
