@@ -1,9 +1,28 @@
 {
-  "success": false,
-  "checked_at": "2026-08-24T18:02:36.646810+00:00",
-  "match_date": "2026-08-24",
+  "success": true,
+  "checked_at": "2026-08-25T08:21:34.626729+00:00",
+  "match_date": "2026-08-25",
   "day_label": "Today",
-  "events_found": 0,
-  "events": [],
-  "error": "No Novig ATP events labeled 'Today' were found."
+  "events_found": 9,
+  "events": [
+    "Jordan Lee vs Daniel Rincon",
+    "Jurij Rodionov vs Frederico Ferreira Silva",
+    "Luka Pavlovic vs Jacob Fearnley",
+    "Dusan Lajovic vs SoonWoo Kwon",
+    "Henry Searle vs Michael Antonius",
+    "David Jorda Sanchis vs Henri Squire",
+    "Gilles Arnaud Bailly vs Timofey Skatov",
+    "Clement Tabur vs Braden Shick",
+    "Daniel Milavsky vs Shintaro Mochizuki"
+  ],
+  "spread_markets_found": 9,
+  "parser_failures": [],
+  "unpriced_spread_markets": [
+    "Jurij Rodionov vs Frederico Ferreira Silva",
+    "Luka Pavlovic vs Jacob Fearnley"
+  ],
+  "executable_spread_markets": 7,
+  "matches_parsed": 7,
+  "rows_saved": 15,
+  "error": null
 }
