@@ -1,25 +1,9 @@
 {
-  "success": true,
-  "checked_at": "2026-08-26T14:23:19.896646+00:00",
+  "success": false,
+  "checked_at": "2026-08-26T19:26:30.827210+00:00",
   "match_date": "2026-08-26",
   "day_label": "Today",
-  "events_found": 9,
-  "events": [
-    "Jordan Lee vs Daniel Rincon",
-    "Joel Josef Schwaerzler vs Andrea Guerrieri",
-    "Aziz Dougaz vs Kyrian Jacquet",
-    "Luka Pavlovic vs Jacob Fearnley",
-    "Tomas Barrios Vera vs Genaro Alberto Olivieri",
-    "Jurij Rodionov vs Frederico Ferreira Silva",
-    "Marco Cecchinato vs Vilius Gaubas",
-    "Grigor Dimitrov vs Timofey Skatov",
-    "Billy Harris vs Toby Samuel"
-  ],
-  "spread_markets_found": 9,
-  "parser_failures": [],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 9,
-  "matches_parsed": 9,
-  "rows_saved": 44,
-  "error": null
+  "events_found": 0,
+  "events": [],
+  "error": "No Novig ATP events labeled 'Today' were found."
 }
