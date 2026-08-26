@@ -1,28 +1,25 @@
 {
   "success": true,
-  "checked_at": "2026-08-26T08:21:36.401028+00:00",
+  "checked_at": "2026-08-26T14:23:19.896646+00:00",
   "match_date": "2026-08-26",
   "day_label": "Today",
   "events_found": 9,
   "events": [
-    "Aziz Dougaz vs Kyrian Jacquet",
     "Jordan Lee vs Daniel Rincon",
-    "Tomas Barrios Vera vs Genaro Alberto Olivieri",
-    "Luka Pavlovic vs Jacob Fearnley",
     "Joel Josef Schwaerzler vs Andrea Guerrieri",
+    "Aziz Dougaz vs Kyrian Jacquet",
+    "Luka Pavlovic vs Jacob Fearnley",
+    "Tomas Barrios Vera vs Genaro Alberto Olivieri",
     "Jurij Rodionov vs Frederico Ferreira Silva",
-    "Cristian Garin vs Elias Ymer",
     "Marco Cecchinato vs Vilius Gaubas",
+    "Grigor Dimitrov vs Timofey Skatov",
     "Billy Harris vs Toby Samuel"
   ],
   "spread_markets_found": 9,
   "parser_failures": [],
-  "unpriced_spread_markets": [
-    "Cristian Garin vs Elias Ymer",
-    "Marco Cecchinato vs Vilius Gaubas"
-  ],
-  "executable_spread_markets": 7,
-  "matches_parsed": 7,
-  "rows_saved": 18,
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 9,
+  "matches_parsed": 9,
+  "rows_saved": 44,
   "error": null
 }

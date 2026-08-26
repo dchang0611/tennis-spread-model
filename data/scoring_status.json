@@ -1,11 +1,12 @@
 {
   "success": true,
-  "market_matchups": 7,
-  "modeled_matchups": 3,
+  "market_matchups": 9,
+  "modeled_matchups": 4,
   "unmatched_model_players": [
     "Joel Josef Schwaerzler vs Andrea Guerrieri",
     "Jordan Lee vs Daniel Rincon",
     "Jurij Rodionov vs Frederico Ferreira Silva",
-    "Tomas Barrios Vera vs Genaro Alberto Olivieri"
+    "Tomas Barrios Vera vs Genaro Alberto Olivieri",
+    "Marco Cecchinato vs Vilius Gaubas"
   ]
 }
