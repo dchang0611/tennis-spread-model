@@ -1,18 +1,28 @@
 {
-  "success": false,
-  "checked_at": "2026-08-25T18:02:02.236621+00:00",
-  "match_date": "2026-08-25",
+  "success": true,
+  "checked_at": "2026-08-26T08:21:36.401028+00:00",
+  "match_date": "2026-08-26",
   "day_label": "Today",
-  "events_found": 1,
+  "events_found": 9,
   "events": [
-    "Michael Mmoh vs Henrique Rocha"
+    "Aziz Dougaz vs Kyrian Jacquet",
+    "Jordan Lee vs Daniel Rincon",
+    "Tomas Barrios Vera vs Genaro Alberto Olivieri",
+    "Luka Pavlovic vs Jacob Fearnley",
+    "Joel Josef Schwaerzler vs Andrea Guerrieri",
+    "Jurij Rodionov vs Frederico Ferreira Silva",
+    "Cristian Garin vs Elias Ymer",
+    "Marco Cecchinato vs Vilius Gaubas",
+    "Billy Harris vs Toby Samuel"
   ],
-  "spread_markets_found": 1,
+  "spread_markets_found": 9,
   "parser_failures": [],
   "unpriced_spread_markets": [
-    "Michael Mmoh vs Henrique Rocha"
+    "Cristian Garin vs Elias Ymer",
+    "Marco Cecchinato vs Vilius Gaubas"
   ],
-  "executable_spread_markets": 0,
-  "matches_parsed": 0,
-  "error": "Novig events were found, but no complete paired spread prices were extracted."
+  "executable_spread_markets": 7,
+  "matches_parsed": 7,
+  "rows_saved": 18,
+  "error": null
 }
