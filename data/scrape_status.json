@@ -1,7 +1,17 @@
 {
-  "success": false,
-  "checked_at": "2026-08-28T19:35:12.986279+00:00",
+  "success": true,
+  "checked_at": "2026-08-28T23:12:00.255668+00:00",
   "match_date": "2026-08-28",
   "day_label": "Today",
-  "error": "Locator.wait_for: Timeout 20000ms exceeded.\nCall log:\n  - waiting for get_by_text(\"7 More\", exact=True).first to be visible\n"
+  "events_found": 1,
+  "events": [
+    "Arthur Fery vs James Duckworth"
+  ],
+  "spread_markets_found": 1,
+  "parser_failures": [],
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 1,
+  "matches_parsed": 1,
+  "rows_saved": 2,
+  "error": null
 }
