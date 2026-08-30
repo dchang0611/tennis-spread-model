@@ -1,9 +1,6 @@
 {
   "success": true,
-  "market_matchups": 9,
-  "modeled_matchups": 7,
-  "unmatched_model_players": [
-    "Tommy Paul vs Chak Lam Coleman Wong",
-    "Marton Fucsovics vs Daniel Merida Aguilar"
-  ]
+  "market_matchups": 3,
+  "modeled_matchups": 3,
+  "unmatched_model_players": []
 }
