@@ -1,20 +1,22 @@
 {
   "success": true,
-  "checked_at": "2026-08-31T20:45:51.667807+00:00",
+  "checked_at": "2026-08-31T22:02:35.548634+00:00",
   "match_date": "2026-08-31",
   "day_label": "Today",
-  "events_found": 4,
+  "events_found": 6,
   "events": [
-    "M. Trungelliti vs J. Shang",
-    "S. Mochizuki vs J. Mensik",
     "L. Tien vs N. Borges",
-    "F. Acosta vs Q. Halys"
+    "S. Mochizuki vs J. Mensik",
+    "F. Acosta vs Q. Halys",
+    "R. Hijikata vs F. Auger-Aliassime",
+    "A. Popyrin vs G. Dimitrov",
+    "Facundo Diaz Acosta vs Quentin Halys"
   ],
-  "spread_markets_found": 4,
+  "spread_markets_found": 6,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 4,
-  "matches_parsed": 4,
-  "rows_saved": 25,
+  "executable_spread_markets": 6,
+  "matches_parsed": 5,
+  "rows_saved": 33,
   "error": null
 }

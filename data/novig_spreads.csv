@@ -1,26 +1,34 @@
 date,tournament,surface,best_of,player_a,player_b,spread_a,odds_a,spread_b,odds_b,collected_at,event_url
-2026-08-31,ATP,Hard,3,Marco Trungelliti,Juncheng Shang,3.5,-100,-3.5,-117,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-5d40-7671-95c8-c86a31133176
-2026-08-31,ATP,Hard,3,Marco Trungelliti,Juncheng Shang,2.5,122,-2.5,-144,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-5d40-7671-95c8-c86a31133176
-2026-08-31,ATP,Hard,3,Marco Trungelliti,Juncheng Shang,1.5,133,-1.5,-203,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-5d40-7671-95c8-c86a31133176
-2026-08-31,ATP,Hard,3,Marco Trungelliti,Juncheng Shang,6.5,-285,-6.5,178,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-5d40-7671-95c8-c86a31133176
-2026-08-31,ATP,Hard,3,Marco Trungelliti,Juncheng Shang,4.5,-133,-4.5,108,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-5d40-7671-95c8-c86a31133176
-2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,8.5,-127,-8.5,104,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
-2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,7.5,113,-7.5,-138,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
-2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,11.5,-1329,-11.5,426,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
-2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,10.5,-456,-10.5,257,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
-2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,9.5,-300,-9.5,163,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
-2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,6.5,150,-6.5,-257,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
-2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,5.5,212,-5.5,-376,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
-2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,4.5,270,-4.5,-488,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
-2026-08-31,ATP,Hard,3,Learner Tien,Nuno Borges,-3.5,-104,3.5,-100,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-6233-7082-adff-d933e2656706
-2026-08-31,ATP,Hard,3,Learner Tien,Nuno Borges,-4.5,108,4.5,-127,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-6233-7082-adff-d933e2656706
-2026-08-31,ATP,Hard,3,Learner Tien,Nuno Borges,-5.5,127,5.5,-194,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-6233-7082-adff-d933e2656706
-2026-08-31,ATP,Hard,3,Learner Tien,Nuno Borges,-1.5,-194,1.5,133,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-6233-7082-adff-d933e2656706
-2026-08-31,ATP,Hard,3,Learner Tien,Nuno Borges,-2.5,-150,2.5,122,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-6233-7082-adff-d933e2656706
-2026-08-31,ATP,Hard,3,Learner Tien,Nuno Borges,-6.5,186,6.5,-300,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-6233-7082-adff-d933e2656706
-2026-08-31,ATP,Hard,3,Facundo Diaz Acosta,Quentin Halys,5.5,-117,-5.5,108,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-5b9b-7ef3-9992-b05a7d735e25
-2026-08-31,ATP,Hard,3,Facundo Diaz Acosta,Quentin Halys,4.5,117,-4.5,-127,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-5b9b-7ef3-9992-b05a7d735e25
-2026-08-31,ATP,Hard,3,Facundo Diaz Acosta,Quentin Halys,3.5,127,-3.5,-213,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-5b9b-7ef3-9992-b05a7d735e25
-2026-08-31,ATP,Hard,3,Facundo Diaz Acosta,Quentin Halys,8.5,-1150,-8.5,400,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-5b9b-7ef3-9992-b05a7d735e25
-2026-08-31,ATP,Hard,3,Facundo Diaz Acosta,Quentin Halys,2.5,150,-2.5,-245,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-5b9b-7ef3-9992-b05a7d735e25
-2026-08-31,ATP,Hard,3,Facundo Diaz Acosta,Quentin Halys,1.5,194,-1.5,-300,2026-08-31T20:45:51.667865+00:00,https://novig.com/event-markets/01a04883-5b9b-7ef3-9992-b05a7d735e25
+2026-08-31,ATP,Hard,3,Learner Tien,Nuno Borges,-3.5,-113,3.5,-100,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-6233-7082-adff-d933e2656706
+2026-08-31,ATP,Hard,3,Learner Tien,Nuno Borges,-4.5,108,4.5,-127,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-6233-7082-adff-d933e2656706
+2026-08-31,ATP,Hard,3,Learner Tien,Nuno Borges,-5.5,122,5.5,-194,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-6233-7082-adff-d933e2656706
+2026-08-31,ATP,Hard,3,Learner Tien,Nuno Borges,-1.5,-203,1.5,122,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-6233-7082-adff-d933e2656706
+2026-08-31,ATP,Hard,3,Learner Tien,Nuno Borges,-2.5,-150,2.5,122,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-6233-7082-adff-d933e2656706
+2026-08-31,ATP,Hard,3,Learner Tien,Nuno Borges,-6.5,178,6.5,-285,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-6233-7082-adff-d933e2656706
+2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,8.5,-122,-8.5,117,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
+2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,7.5,113,-7.5,-138,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
+2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,11.5,-1329,-11.5,426,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
+2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,10.5,-456,-10.5,245,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
+2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,9.5,-245,-9.5,163,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
+2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,6.5,163,-6.5,-245,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
+2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,5.5,223,-5.5,-376,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
+2026-08-31,ATP,Hard,3,Shintaro Mochizuki,Jakub Mensik,4.5,300,-4.5,-525,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04a71-b1f8-7f01-b8eb-69b917faae6f
+2026-08-31,ATP,Hard,3,Facundo Diaz Acosta,Quentin Halys,5.5,-117,-5.5,104,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-5b9b-7ef3-9992-b05a7d735e25
+2026-08-31,ATP,Hard,3,Facundo Diaz Acosta,Quentin Halys,4.5,113,-4.5,-138,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-5b9b-7ef3-9992-b05a7d735e25
+2026-08-31,ATP,Hard,3,Facundo Diaz Acosta,Quentin Halys,8.5,-1011,-8.5,376,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-5b9b-7ef3-9992-b05a7d735e25
+2026-08-31,ATP,Hard,3,Facundo Diaz Acosta,Quentin Halys,7.5,-426,-7.5,233,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-5b9b-7ef3-9992-b05a7d735e25
+2026-08-31,ATP,Hard,3,Facundo Diaz Acosta,Quentin Halys,6.5,-245,-6.5,150,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-5b9b-7ef3-9992-b05a7d735e25
+2026-08-31,ATP,Hard,3,Facundo Diaz Acosta,Quentin Halys,2.5,163,-2.5,-257,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-5b9b-7ef3-9992-b05a7d735e25
+2026-08-31,ATP,Hard,3,Facundo Diaz Acosta,Quentin Halys,1.5,194,-1.5,-335,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-5b9b-7ef3-9992-b05a7d735e25
+2026-08-31,ATP,Hard,3,Rinky Hijikata,Felix Auger-Aliassime,6.5,113,-6.5,-144,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-6350-78e3-8245-51503c8916ba
+2026-08-31,ATP,Hard,3,Rinky Hijikata,Felix Auger-Aliassime,5.5,138,-5.5,-223,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-6350-78e3-8245-51503c8916ba
+2026-08-31,ATP,Hard,3,Rinky Hijikata,Felix Auger-Aliassime,9.5,-900,-9.5,335,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-6350-78e3-8245-51503c8916ba
+2026-08-31,ATP,Hard,3,Rinky Hijikata,Felix Auger-Aliassime,8.5,-376,-8.5,203,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-6350-78e3-8245-51503c8916ba
+2026-08-31,ATP,Hard,3,Rinky Hijikata,Felix Auger-Aliassime,7.5,-156,-7.5,122,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-6350-78e3-8245-51503c8916ba
+2026-08-31,ATP,Hard,3,Rinky Hijikata,Felix Auger-Aliassime,3.5,285,-3.5,-669,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04883-6350-78e3-8245-51503c8916ba
+2026-08-31,ATP,Hard,3,Alexei Popyrin,Grigor Dimitrov,2.5,127,-2.5,-144,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04a71-bacf-7f31-9057-047f31e70719
+2026-08-31,ATP,Hard,3,Alexei Popyrin,Grigor Dimitrov,1.5,117,-1.5,-194,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04a71-bacf-7f31-9057-047f31e70719
+2026-08-31,ATP,Hard,3,Alexei Popyrin,Grigor Dimitrov,6.5,-400,-6.5,223,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04a71-bacf-7f31-9057-047f31e70719
+2026-08-31,ATP,Hard,3,Alexei Popyrin,Grigor Dimitrov,5.5,-270,-5.5,156,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04a71-bacf-7f31-9057-047f31e70719
+2026-08-31,ATP,Hard,3,Alexei Popyrin,Grigor Dimitrov,4.5,-138,-4.5,117,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04a71-bacf-7f31-9057-047f31e70719
+2026-08-31,ATP,Hard,3,Alexei Popyrin,Grigor Dimitrov,3.5,-108,-3.5,-108,2026-08-31T22:02:35.548698+00:00,https://novig.com/event-markets/01a04a71-bacf-7f31-9057-047f31e70719
