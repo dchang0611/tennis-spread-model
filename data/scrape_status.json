@@ -1,18 +1,9 @@
 {
-  "success": true,
-  "checked_at": "2026-08-30T20:01:04.212483+00:00",
-  "match_date": "2026-08-30",
+  "success": false,
+  "checked_at": "2026-08-31T15:21:57.583662+00:00",
+  "match_date": "2026-08-31",
   "day_label": "Today",
-  "events_found": 2,
-  "events": [
-    "Rei Sakamoto vs Aleksandar Vukic",
-    "Adrian Mannarino vs Thiago Agustin Tirante"
-  ],
-  "spread_markets_found": 2,
-  "parser_failures": [],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 2,
-  "matches_parsed": 2,
-  "rows_saved": 14,
-  "error": null
+  "events_found": 0,
+  "events": [],
+  "error": "No Novig ATP events labeled 'Today' were found."
 }
