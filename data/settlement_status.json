@@ -1,17 +1,6 @@
 {
-  "complete": false,
-  "checked_at": "2026-08-31T15:22:03.244115+00:00",
+  "complete": true,
+  "checked_at": "2026-08-31T19:41:37.445069+00:00",
   "sources": {},
-  "unsettled_prior_bets": [
-    {
-      "date": "2026-08-30",
-      "player": "Adrian Mannarino",
-      "opponent": "Thiago Agustin Tirante"
-    },
-    {
-      "date": "2026-08-30",
-      "player": "Aleksandar Vukic",
-      "opponent": "Rei Sakamoto"
-    }
-  ]
+  "unsettled_prior_bets": []
 }
