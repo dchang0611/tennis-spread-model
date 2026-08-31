@@ -1,9 +1,20 @@
 {
-  "success": false,
-  "checked_at": "2026-08-31T19:41:30.930253+00:00",
+  "success": true,
+  "checked_at": "2026-08-31T20:39:29.422949+00:00",
   "match_date": "2026-08-31",
   "day_label": "Today",
-  "events_found": 0,
-  "events": [],
-  "error": "No Novig ATP events labeled 'Today' were found."
+  "events_found": 4,
+  "events": [
+    "M. Trungelliti vs J. Shang",
+    "S. Mochizuki vs J. Mensik",
+    "L. Tien vs N. Borges",
+    "F. Acosta vs Q. Halys"
+  ],
+  "spread_markets_found": 4,
+  "parser_failures": [],
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 4,
+  "matches_parsed": 4,
+  "rows_saved": 24,
+  "error": null
 }

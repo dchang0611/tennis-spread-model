@@ -40,13 +40,39 @@ def surface_for_date(match_date: date) -> str:
 
 def parse_event_card(text: str) -> dict | None:
     lines = [line.strip() for line in str(text).splitlines() if line.strip()]
-    if "vs." not in lines or "7 More" not in lines:
+    # Upcoming matches now live in Novig's horizontal event rail.  Those cards
+    # are clickable but do not show the old "7 More" footer.  Restrict this
+    # fallback to the men's-tennis rail so WTA and other sports never leak in.
+    if "vs." not in lines or "Tennis (M)" not in lines:
         return None
     index = lines.index("vs.")
     if index < 1 or index + 1 >= len(lines):
         return None
     day = next((line for line in lines[:index] if line in {"Today", "Tomorrow"} or re.fullmatch(r"Mon|Tue|Wed|Thu|Fri|Sat|Sun", line)), "")
-    return {"day": day, "player_a": lines[index - 1], "player_b": lines[index + 1]}
+    player_b = next((
+        line for line in lines[index + 1:]
+        if not re.fullmatch(r"\d{1,2}(?:\.\d+)?%|[+-]\d{3,5}|[•·]", line)
+    ), "")
+    if not player_b:
+        return None
+    return {"day": day, "player_a": lines[index - 1], "player_b": player_b}
+
+
+def parse_event_page_players(text: str, day_label: str) -> tuple[str, str] | None:
+    """Resolve abbreviated rail names from the full event-page header."""
+    lines = [line.strip() for line in str(text).splitlines() if line.strip()]
+    if "Main Markets" not in lines:
+        return None
+    main_index = lines.index("Main Markets")
+    candidates = [index for index, value in enumerate(lines[:main_index]) if value == day_label]
+    if not candidates:
+        return None
+    day_index = candidates[-1]
+    if day_index < 2 or day_index + 1 >= main_index:
+        return None
+    if not re.fullmatch(r"\d{1,2}:\d{2}\s(?:AM|PM)", lines[day_index - 1]):
+        return None
+    return lines[day_index - 2], lines[day_index + 1]
 
 
 def parse_spread_tokens(tokens: list[str]) -> list[tuple[float, int, float, int]]:
@@ -92,7 +118,7 @@ def collect_event_cards(page: Page, day_label: str, max_scrolls: int = 18) -> li
     found: dict[tuple[str, str], dict] = {}
     unchanged = 0
     for _ in range(max_scrolls):
-        cards = page.locator('div[tabindex="0"]').filter(has_text="7 More")
+        cards = page.locator('div[tabindex="0"]')
         before = len(found)
         for text in cards.all_inner_texts():
             event = parse_event_card(text)
@@ -114,7 +140,6 @@ def locate_event_card(page: Page, player_a: str, player_b: str, max_scrolls: int
             page.locator('div[tabindex="0"]')
             .filter(has_text=player_a)
             .filter(has_text=player_b)
-            .filter(has_text="7 More")
         )
         if card.count() == 1:
             return card
@@ -167,6 +192,12 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
             card.click()
             page.wait_for_url("**/event-markets/**", timeout=12_000)
             page.wait_for_timeout(350)
+            resolved_players = parse_event_page_players(page.locator("body").inner_text(), day_label)
+            if resolved_players is None:
+                raise RuntimeError(
+                    f"Could not resolve full event-page player names for {event['player_a']} vs {event['player_b']}."
+                )
+            player_a, player_b = resolved_players
             heading = page.get_by_text("Game Spread", exact=True)
             if heading.count() != 1:
                 continue
@@ -178,7 +209,7 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
             tokens = [line.strip() for line in section.inner_text().splitlines() if line.strip()]
             parsed_prices = parse_spread_tokens(tokens)
             if not parsed_prices:
-                matchup = f'{event["player_a"]} vs {event["player_b"]}'
+                matchup = f"{player_a} vs {player_b}"
                 has_displayed_price = any(
                     re.fullmatch(r"[+-]\d{3,5}", token) or re.fullmatch(r"\d{1,2}(?:\.\d+)?%", token)
                     for token in tokens
@@ -190,8 +221,8 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
                     "tournament": tournament,
                     "surface": resolved_surface,
                     "best_of": 3,
-                    "player_a": event["player_a"],
-                    "player_b": event["player_b"],
+                    "player_a": player_a,
+                    "player_b": player_b,
                     "spread_a": spread_a,
                     "odds_a": odds_a,
                     "spread_b": spread_b,

@@ -4,16 +4,23 @@ from datetime import date
 import pandas as pd
 
 from build_spread_site import rationale_for_pick, reconcile_board_with_history
-from novig_scraper import parse_event_card, parse_spread_tokens, surface_for_date
+from novig_scraper import parse_event_card, parse_event_page_players, parse_spread_tokens, surface_for_date
 from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, name_aliases, parse_atp_results_text, parse_espn_scoreboard, parse_tennis_explorer_html, profit_for_result, score_game_margin, settle_history
 
 
 class NovigAutomationTests(unittest.TestCase):
     def test_event_card(self):
-        card = parse_event_card("Today\n9:30 AM\nArthur Fils\nvs.\nMariano Navone\nMoney\n-292\n+264\nATP\nTraded:\n$7,084\n7 More")
-        self.assertEqual(card["player_a"], "Arthur Fils")
-        self.assertEqual(card["player_b"], "Mariano Navone")
+        card = parse_event_card("Tennis (M)\nToday\n9:30 AM\nA. Fils\nvs.\n36%\nM. Navone\n66%")
+        self.assertEqual(card["player_a"], "A. Fils")
+        self.assertEqual(card["player_b"], "M. Navone")
         self.assertEqual(card["day"], "Today")
+
+    def test_event_card_rejects_wta_rail(self):
+        self.assertIsNone(parse_event_card("WTA\nToday\n9:30 AM\nA. Player\nvs.\nB. Player\n50%\n50%"))
+
+    def test_event_page_resolves_full_names(self):
+        text = "Tennis (M)\n(45)\nMarco Trungelliti\n1:45 PM\nToday\nJuncheng Shang\nMain Markets"
+        self.assertEqual(parse_event_page_players(text, "Today"), ("Marco Trungelliti", "Juncheng Shang"))
 
     def test_spread_tokens_skip_incomplete_price(self):
         tokens = ["Game Spread", "A", "B", "-2.5", "+111", "+2.5", "•", "-4.5", "+170", "+4.5", "-245"]
