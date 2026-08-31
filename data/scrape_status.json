@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-08-31T20:39:29.422949+00:00",
+  "checked_at": "2026-08-31T20:45:51.667807+00:00",
   "match_date": "2026-08-31",
   "day_label": "Today",
   "events_found": 4,
@@ -15,6 +15,6 @@
   "unpriced_spread_markets": [],
   "executable_spread_markets": 4,
   "matches_parsed": 4,
-  "rows_saved": 24,
+  "rows_saved": 25,
   "error": null
 }
