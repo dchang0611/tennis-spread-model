@@ -1,29 +1,28 @@
 {
-  "success": false,
-  "checked_at": "2026-09-01T12:44:04.129055+00:00",
+  "success": true,
+  "checked_at": "2026-09-01T17:26:40.510039+00:00",
   "match_date": "2026-09-01",
   "day_label": "Today",
   "events_found": 12,
   "events": [
     "C. Moutet vs D. Sweeny",
     "M. Zheng vs F. Marozsan",
-    "F. Passaro vs J. De Jong",
-    "I. Buse vs M. Giron",
-    "Corentin Moutet vs Dane Sweeny",
+    "J. Struff vs C. Ugo Carabelli",
+    "D. Altmaier vs Z. Svajda",
+    "Darwin Blanch vs Taylor Fritz",
     "Francisco Cerundolo vs Filip Misolic",
     "Tristan Schoolkate vs Nishesh Basavareddy",
+    "Corentin Moutet vs Dane Sweeny",
     "Zsombor Piros vs Mattia Bellucci",
-    "Flavio Cobolli vs Francisco Comesana",
+    "Carlos Taberner vs Zizou Bergs",
     "Lorenzo Musetti vs Arthur Fery",
-    "Jan-Lennard Struff vs Camilo Ugo Carabelli",
-    "Carlos Taberner vs Zizou Bergs"
+    "Francesco Passaro vs Jesper De Jong"
   ],
   "spread_markets_found": 12,
-  "parser_failures": [
-    "Carlos Taberner vs Zizou Bergs"
-  ],
+  "parser_failures": [],
   "unpriced_spread_markets": [],
   "executable_spread_markets": 12,
-  "matches_parsed": 10,
-  "error": "Game Spread was visible but could not be parsed for: Carlos Taberner vs Zizou Bergs"
+  "matches_parsed": 11,
+  "rows_saved": 53,
+  "error": null
 }
