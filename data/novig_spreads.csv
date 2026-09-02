@@ -1,66 +1,23 @@
 date,tournament,surface,best_of,player_a,player_b,spread_a,odds_a,spread_b,odds_b,collected_at,event_url
-2026-09-02,ATP,Hard,3,Michael Zheng,Fabian Marozsan,-2.5,-104,2.5,-108,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-4f2c-73a2-952c-4ed6378301d1
-2026-09-02,ATP,Hard,3,Michael Zheng,Fabian Marozsan,-3.5,113,3.5,-127,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-4f2c-73a2-952c-4ed6378301d1
-2026-09-02,ATP,Hard,3,Michael Zheng,Fabian Marozsan,-5.5,150,5.5,-257,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-4f2c-73a2-952c-4ed6378301d1
-2026-09-02,ATP,Hard,3,Michael Zheng,Fabian Marozsan,-1.5,-127,1.5,113,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-4f2c-73a2-952c-4ed6378301d1
-2026-09-02,ATP,Hard,3,Ignacio Buse,Marcos Giron,-2.5,-113,2.5,-104,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-608b-77c0-b3e6-ab1a0e802aa9
-2026-09-02,ATP,Hard,3,Ignacio Buse,Marcos Giron,-3.5,113,3.5,-133,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-608b-77c0-b3e6-ab1a0e802aa9
-2026-09-02,ATP,Hard,3,Ignacio Buse,Marcos Giron,2.5,-300,-2.5,178,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-608b-77c0-b3e6-ab1a0e802aa9
-2026-09-02,ATP,Hard,3,Ignacio Buse,Marcos Giron,1.5,-245,-1.5,156,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-608b-77c0-b3e6-ab1a0e802aa9
-2026-09-02,ATP,Hard,3,Ignacio Buse,Marcos Giron,-1.5,-138,1.5,113,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-608b-77c0-b3e6-ab1a0e802aa9
-2026-09-02,ATP,Hard,3,Ignacio Buse,Marcos Giron,-5.5,150,5.5,-270,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-608b-77c0-b3e6-ab1a0e802aa9
-2026-09-02,ATP,Hard,3,Daniel Altmaier,Zachary Svajda,1.5,104,-1.5,-127,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-4c0b-7ff3-b1a3-79040b2a0a5a
-2026-09-02,ATP,Hard,3,Daniel Altmaier,Zachary Svajda,-1.5,144,1.5,-233,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-4c0b-7ff3-b1a3-79040b2a0a5a
-2026-09-02,ATP,Hard,3,Daniel Altmaier,Zachary Svajda,5.5,-285,-5.5,163,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-4c0b-7ff3-b1a3-79040b2a0a5a
-2026-09-02,ATP,Hard,3,Daniel Altmaier,Zachary Svajda,3.5,-144,-3.5,113,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-4c0b-7ff3-b1a3-79040b2a0a5a
-2026-09-02,ATP,Hard,3,Daniel Altmaier,Zachary Svajda,2.5,-108,-2.5,-113,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-4c0b-7ff3-b1a3-79040b2a0a5a
-2026-09-02,ATP,Hard,3,Yunchaokete Bu,Rafael Jodar,7.5,-117,-7.5,-104,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05e13-c503-7311-bf6d-55791a127621
-2026-09-02,ATP,Hard,3,Yunchaokete Bu,Rafael Jodar,6.5,150,-6.5,-194,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05e13-c503-7311-bf6d-55791a127621
-2026-09-02,ATP,Hard,3,Yunchaokete Bu,Rafael Jodar,9.5,-400,-9.5,233,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05e13-c503-7311-bf6d-55791a127621
-2026-09-02,ATP,Hard,3,Yunchaokete Bu,Rafael Jodar,8.5,-163,-8.5,127,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05e13-c503-7311-bf6d-55791a127621
-2026-09-02,ATP,Hard,3,Luca Van Assche,Denis Shapovalov,2.5,-104,-2.5,-104,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05864-4103-7612-83ba-97b981592df9
-2026-09-02,ATP,Hard,3,Luca Van Assche,Denis Shapovalov,1.5,-100,-1.5,-122,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05864-4103-7612-83ba-97b981592df9
-2026-09-02,ATP,Hard,3,Luca Van Assche,Denis Shapovalov,5.5,-285,-5.5,163,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05864-4103-7612-83ba-97b981592df9
-2026-09-02,ATP,Hard,3,Luca Van Assche,Denis Shapovalov,3.5,-133,-3.5,113,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05864-4103-7612-83ba-97b981592df9
-2026-09-02,ATP,Hard,3,Alex Michelsen,Brandon Nakashima,3.5,-108,-3.5,-104,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05a37-32b6-7243-b784-2639d3871092
-2026-09-02,ATP,Hard,3,Alex Michelsen,Brandon Nakashima,2.5,117,-2.5,-150,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05a37-32b6-7243-b784-2639d3871092
-2026-09-02,ATP,Hard,3,Alex Michelsen,Brandon Nakashima,1.5,133,-1.5,-223,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05a37-32b6-7243-b784-2639d3871092
-2026-09-02,ATP,Hard,3,Alex Michelsen,Brandon Nakashima,4.5,-133,-4.5,122,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05a37-32b6-7243-b784-2639d3871092
-2026-09-02,ATP,Hard,3,Alex Michelsen,Brandon Nakashima,-1.5,203,1.5,-376,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05a37-32b6-7243-b784-2639d3871092
-2026-09-02,ATP,Hard,3,Toby Samuel,Jiri Lehecka,4.5,-100,-4.5,-113,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05864-40c5-7d83-a3fd-5dd3417c295f
-2026-09-02,ATP,Hard,3,Toby Samuel,Jiri Lehecka,3.5,127,-3.5,-163,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05864-40c5-7d83-a3fd-5dd3417c295f
-2026-09-02,ATP,Hard,3,Toby Samuel,Jiri Lehecka,7.5,-317,-7.5,245,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05864-40c5-7d83-a3fd-5dd3417c295f
-2026-09-02,ATP,Hard,3,Toby Samuel,Jiri Lehecka,5.5,-144,-5.5,113,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05864-40c5-7d83-a3fd-5dd3417c295f
-2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,1.5,-104,-1.5,-108,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b
-2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,0.5,104,-0.5,-133,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b
-2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,-1.5,127,1.5,-194,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b
-2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,4.5,-223,-4.5,138,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b
-2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,2.5,-127,-2.5,104,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b
-2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,-2.5,144,2.5,-233,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b
-2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,-3.5,178,3.5,-300,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b
-2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,-4.5,212,4.5,-426,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b
-2026-09-02,ATP,Hard,3,Hubert Hurkacz,Ben Shelton,3.5,-104,-3.5,-108,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05adb-f243-7942-af52-27a96974015d
-2026-09-02,ATP,Hard,3,Hubert Hurkacz,Ben Shelton,2.5,122,-2.5,-144,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05adb-f243-7942-af52-27a96974015d
-2026-09-02,ATP,Hard,3,Hubert Hurkacz,Ben Shelton,1.5,144,-1.5,-233,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05adb-f243-7942-af52-27a96974015d
-2026-09-02,ATP,Hard,3,Hubert Hurkacz,Ben Shelton,6.5,-400,-6.5,300,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05adb-f243-7942-af52-27a96974015d
-2026-09-02,ATP,Hard,3,Hubert Hurkacz,Ben Shelton,4.5,-163,-4.5,138,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05adb-f243-7942-af52-27a96974015d
-2026-09-02,ATP,Hard,3,Sebastian Gorzny,Daniil Medvedev,8.5,113,-8.5,-122,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05976-e28d-7d50-9caf-7d5740a89c02
-2026-09-02,ATP,Hard,3,Sebastian Gorzny,Daniil Medvedev,11.5,-669,-11.5,300,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05976-e28d-7d50-9caf-7d5740a89c02
-2026-09-02,ATP,Hard,3,Sebastian Gorzny,Daniil Medvedev,10.5,-335,-10.5,178,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05976-e28d-7d50-9caf-7d5740a89c02
-2026-09-02,ATP,Hard,3,Sebastian Gorzny,Daniil Medvedev,9.5,-156,-9.5,122,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05976-e28d-7d50-9caf-7d5740a89c02
-2026-09-02,ATP,Hard,3,Andrey Rublev,Daniel Merida Aguilar,-2.5,-100,2.5,-113,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a0595b-6c6f-74a0-873b-dc8360ce3ec5
-2026-09-02,ATP,Hard,3,Andrey Rublev,Daniel Merida Aguilar,-3.5,117,3.5,-133,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a0595b-6c6f-74a0-873b-dc8360ce3ec5
-2026-09-02,ATP,Hard,3,Andrey Rublev,Daniel Merida Aguilar,-4.5,138,4.5,-233,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a0595b-6c6f-74a0-873b-dc8360ce3ec5
-2026-09-02,ATP,Hard,3,Andrey Rublev,Daniel Merida Aguilar,1.5,-203,-1.5,122,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a0595b-6c6f-74a0-873b-dc8360ce3ec5
-2026-09-02,ATP,Hard,3,Andrey Rublev,Daniel Merida Aguilar,-1.5,-122,1.5,-100,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a0595b-6c6f-74a0-873b-dc8360ce3ec5
-2026-09-02,ATP,Hard,3,Andrey Rublev,Daniel Merida Aguilar,-5.5,186,5.5,-300,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a0595b-6c6f-74a0-873b-dc8360ce3ec5
-2026-09-02,ATP,Hard,3,Andrey Rublev,Daniel Merida Aguilar,-6.5,257,6.5,-525,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a0595b-6c6f-74a0-873b-dc8360ce3ec5
-2026-09-02,ATP,Hard,3,Arthur Rinderknech,Jaume Munar,-2.5,-108,2.5,-104,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05864-4084-76b1-b9a7-d8d10a6bdd76
-2026-09-02,ATP,Hard,3,Arthur Rinderknech,Jaume Munar,-3.5,104,3.5,-133,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05864-4084-76b1-b9a7-d8d10a6bdd76
-2026-09-02,ATP,Hard,3,Arthur Rinderknech,Jaume Munar,-4.5,127,4.5,-194,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05864-4084-76b1-b9a7-d8d10a6bdd76
-2026-09-02,ATP,Hard,3,Arthur Rinderknech,Jaume Munar,-1.5,-138,1.5,117,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05864-4084-76b1-b9a7-d8d10a6bdd76
-2026-09-02,ATP,Hard,3,Arthur Rinderknech,Jaume Munar,-5.5,163,5.5,-285,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05864-4084-76b1-b9a7-d8d10a6bdd76
-2026-09-02,ATP,Hard,3,Arthur Rinderknech,Jaume Munar,-6.5,245,6.5,-488,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a05864-4084-76b1-b9a7-d8d10a6bdd76
-2026-09-02,ATP,Hard,3,Botic Van De Zandschulp,Jan Choinski,-5.5,-113,5.5,-113,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-5843-7231-84a1-b68b3300747c
-2026-09-02,ATP,Hard,3,Botic Van De Zandschulp,Jan Choinski,-6.5,133,6.5,-163,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-5843-7231-84a1-b68b3300747c
-2026-09-02,ATP,Hard,3,Botic Van De Zandschulp,Jan Choinski,-4.5,-163,4.5,133,2026-09-02T12:16:43.468617+00:00,https://novig.com/event-markets/01a04883-5843-7231-84a1-b68b3300747c
+2026-09-02,ATP,Hard,3,Michael Zheng,Fabian Marozsan,-2.5,-108,2.5,-100,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a04883-4f2c-73a2-952c-4ed6378301d1
+2026-09-02,ATP,Hard,3,Michael Zheng,Fabian Marozsan,-3.5,104,3.5,-122,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a04883-4f2c-73a2-952c-4ed6378301d1
+2026-09-02,ATP,Hard,3,Michael Zheng,Fabian Marozsan,-1.5,-138,1.5,117,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a04883-4f2c-73a2-952c-4ed6378301d1
+2026-09-02,ATP,Hard,3,Carlos Alcaraz,Jaime Faria,-6.5,-127,6.5,108,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a059c9-3e4f-7dd1-9ede-670c578fead9
+2026-09-02,ATP,Hard,3,Carlos Alcaraz,Jaime Faria,-7.5,113,7.5,-144,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a059c9-3e4f-7dd1-9ede-670c578fead9
+2026-09-02,ATP,Hard,3,Carlos Alcaraz,Jaime Faria,-8.5,150,8.5,-257,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a059c9-3e4f-7dd1-9ede-670c578fead9
+2026-09-02,ATP,Hard,3,Carlos Alcaraz,Jaime Faria,-3.5,-733,3.5,335,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a059c9-3e4f-7dd1-9ede-670c578fead9
+2026-09-02,ATP,Hard,3,Carlos Alcaraz,Jaime Faria,-9.5,285,9.5,-614,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a059c9-3e4f-7dd1-9ede-670c578fead9
+2026-09-02,ATP,Hard,3,Yunchaokete Bu,Rafael Jodar,7.5,-108,-7.5,-108,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a05e13-c503-7311-bf6d-55791a127621
+2026-09-02,ATP,Hard,3,Yunchaokete Bu,Rafael Jodar,6.5,163,-6.5,-213,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a05e13-c503-7311-bf6d-55791a127621
+2026-09-02,ATP,Hard,3,Yunchaokete Bu,Rafael Jodar,10.5,-733,-10.5,300,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a05e13-c503-7311-bf6d-55791a127621
+2026-09-02,ATP,Hard,3,Yunchaokete Bu,Rafael Jodar,9.5,-400,-9.5,212,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a05e13-c503-7311-bf6d-55791a127621
+2026-09-02,ATP,Hard,3,Yunchaokete Bu,Rafael Jodar,8.5,-150,-8.5,122,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a05e13-c503-7311-bf6d-55791a127621
+2026-09-02,ATP,Hard,3,Yunchaokete Bu,Rafael Jodar,5.5,212,-5.5,-400,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a05e13-c503-7311-bf6d-55791a127621
+2026-09-02,ATP,Hard,3,Yunchaokete Bu,Rafael Jodar,4.5,335,-4.5,-809,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a05e13-c503-7311-bf6d-55791a127621
+2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,2.5,-127,-2.5,-100,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b
+2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,1.5,104,-1.5,-122,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b
+2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,5.5,-300,-5.5,178,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b
+2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,4.5,-233,-4.5,144,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b
+2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,-2.5,150,2.5,-257,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b
+2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,-3.5,186,3.5,-335,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b
+2026-09-02,ATP,Hard,3,Jacob Fearnley,Tomas Martin Etcheverry,-4.5,223,4.5,-400,2026-09-02T17:19:21.127700+00:00,https://novig.com/event-markets/01a05a37-32f5-72f0-b543-05e6cf04856b

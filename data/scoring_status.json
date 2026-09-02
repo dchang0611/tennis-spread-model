@@ -1,9 +1,6 @@
 {
   "success": true,
-  "market_matchups": 13,
-  "modeled_matchups": 11,
-  "unmatched_model_players": [
-    "Andrey Rublev vs Daniel Merida Aguilar",
-    "Sebastian Gorzny vs Daniil Medvedev"
-  ]
+  "market_matchups": 4,
+  "modeled_matchups": 4,
+  "unmatched_model_players": []
 }
