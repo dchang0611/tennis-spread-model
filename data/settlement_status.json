@@ -1,6 +1,32 @@
 {
-  "complete": true,
-  "checked_at": "2026-09-01T20:09:39.752436+00:00",
+  "complete": false,
+  "checked_at": "2026-09-02T12:17:46.172634+00:00",
   "sources": {},
-  "unsettled_prior_bets": []
+  "unsettled_prior_bets": [
+    {
+      "date": "2026-09-01",
+      "player": "Carlos Taberner",
+      "opponent": "Zizou Bergs"
+    },
+    {
+      "date": "2026-09-01",
+      "player": "Fabian Marozsan",
+      "opponent": "Michael Zheng"
+    },
+    {
+      "date": "2026-09-01",
+      "player": "Daniel Altmaier",
+      "opponent": "Zachary Svajda"
+    },
+    {
+      "date": "2026-09-01",
+      "player": "Francesco Passaro",
+      "opponent": "Jesper De Jong"
+    },
+    {
+      "date": "2026-09-01",
+      "player": "Marcos Giron",
+      "opponent": "Ignacio Buse"
+    }
+  ]
 }
