@@ -1,16 +1,24 @@
 {
-  "success": false,
-  "checked_at": "2026-09-02T20:05:17.867406+00:00",
+  "success": true,
+  "checked_at": "2026-09-02T22:39:25.765747+00:00",
   "match_date": "2026-09-02",
   "day_label": "Today",
-  "events_found": 6,
+  "events_found": 8,
   "events": [
     "C. Alcaraz vs J. Faria",
-    "L. Van Assche vs D. Shapovalov",
     "M. Navone vs M. Berrettini",
     "K. Majchrzak vs V. Vacherot",
     "Y. Wu vs J. Duckworth",
-    "T. Samuel vs J. Lehecka"
+    "T. Paul vs D. Prizmic",
+    "F. Tiafoe vs R. Sakamoto",
+    "Yibing Wu vs James Duckworth",
+    "Mariano Navone vs Matteo Berrettini"
   ],
-  "error": "Could not resolve full event-page player names for C. Alcaraz vs J. Faria."
+  "spread_markets_found": 8,
+  "parser_failures": [],
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 8,
+  "matches_parsed": 6,
+  "rows_saved": 33,
+  "error": null
 }
