@@ -1,22 +1,15 @@
 {
-  "success": true,
-  "checked_at": "2026-09-03T17:11:20.310505+00:00",
+  "success": false,
+  "checked_at": "2026-09-03T19:40:45.612126+00:00",
   "match_date": "2026-09-03",
   "day_label": "Today",
-  "events_found": 6,
+  "events_found": 5,
   "events": [
     "I. Buse vs B. Bonzi",
-    "Mattia Bellucci vs Taylor Fritz",
-    "Jurij Rodionov vs Jakub Mensik",
-    "Lorenzo Musetti vs Dane Sweeny",
-    "Flavio Cobolli vs Tristan Schoolkate",
-    "Marco Trungelliti vs Alexander Blockx"
+    "A. De Minaur vs B. Van De Zandschulp",
+    "Ignacio Buse vs Benjamin Bonzi",
+    "Alex De Minaur vs Botic Van De Zandschulp",
+    "Jesper De Jong vs Zizou Bergs"
   ],
-  "spread_markets_found": 6,
-  "parser_failures": [],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 6,
-  "matches_parsed": 6,
-  "rows_saved": 30,
-  "error": null
+  "error": "Could not resolve full event-page player names for I. Buse vs B. Bonzi."
 }
