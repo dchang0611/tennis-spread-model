@@ -1,26 +1,22 @@
 {
   "success": true,
-  "checked_at": "2026-09-03T12:14:34.900540+00:00",
+  "checked_at": "2026-09-03T17:11:20.310505+00:00",
   "match_date": "2026-09-03",
   "day_label": "Today",
-  "events_found": 10,
+  "events_found": 6,
   "events": [
-    "D. Svrcina vs L. Darderi",
-    "F. Cerundolo vs J. Struff",
-    "Karen Khachanov vs Felix Auger-Aliassime",
-    "Dalibor Svrcina vs Luciano Darderi",
-    "Francisco Cerundolo vs Jan-Lennard Struff",
-    "Lorenzo Musetti vs Dane Sweeny",
-    "Marco Trungelliti vs Alexander Blockx",
+    "I. Buse vs B. Bonzi",
     "Mattia Bellucci vs Taylor Fritz",
-    "Alejandro Tabilo vs Alexei Popyrin",
-    "Flavio Cobolli vs Tristan Schoolkate"
+    "Jurij Rodionov vs Jakub Mensik",
+    "Lorenzo Musetti vs Dane Sweeny",
+    "Flavio Cobolli vs Tristan Schoolkate",
+    "Marco Trungelliti vs Alexander Blockx"
   ],
-  "spread_markets_found": 10,
+  "spread_markets_found": 6,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 10,
-  "matches_parsed": 8,
-  "rows_saved": 41,
+  "executable_spread_markets": 6,
+  "matches_parsed": 6,
+  "rows_saved": 30,
   "error": null
 }
