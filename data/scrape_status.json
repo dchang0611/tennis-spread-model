@@ -1,15 +1,15 @@
 {
   "success": false,
-  "checked_at": "2026-09-03T19:40:45.612126+00:00",
+  "checked_at": "2026-09-03T20:07:05.251995+00:00",
   "match_date": "2026-09-03",
   "day_label": "Today",
   "events_found": 5,
   "events": [
     "I. Buse vs B. Bonzi",
-    "A. De Minaur vs B. Van De Zandschulp",
-    "Ignacio Buse vs Benjamin Bonzi",
     "Alex De Minaur vs Botic Van De Zandschulp",
-    "Jesper De Jong vs Zizou Bergs"
+    "Ignacio Buse vs Benjamin Bonzi",
+    "Jesper De Jong vs Zizou Bergs",
+    "Arthur Gea vs Zachary Svajda"
   ],
   "error": "Could not resolve full event-page player names for I. Buse vs B. Bonzi."
 }
