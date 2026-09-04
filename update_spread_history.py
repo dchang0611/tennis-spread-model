@@ -165,7 +165,14 @@ def grade_spread(player_margin: float, spread: float) -> str:
 
 
 def bet_identity(match_date: object, player: object, opponent: object) -> tuple[str, str, str]:
-    participants = sorted((name_key(player), name_key(opponent)))
+    def participant_key(value: object) -> str:
+        text = unicodedata.normalize("NFKD", str(value)).encode("ascii", "ignore").decode().lower()
+        tokens = re.findall(r"[a-z]+", text)
+        if len(tokens) >= 2:
+            return tokens[-1] + tokens[0][0]
+        return "".join(tokens)
+
+    participants = sorted((participant_key(player), participant_key(opponent)))
     return str(match_date), participants[0], participants[1]
 
 

@@ -119,6 +119,14 @@ class NovigAutomationTests(unittest.TestCase):
         self.assertEqual(board[0]["odds"], 117)
         self.assertTrue(all(row["recorded_bet"] for row in board))
 
+    def test_board_reconciles_initials_with_full_player_names(self):
+        picks = [{"date": "2026-09-04", "player": "Jiri Lehecka", "opponent": "Stefanos Tsitsipas",
+                  "spread": -2.5, "odds": -108, "recommendation": "BET"}]
+        history = [{"date": "2026-09-04", "player": "J. Lehecka", "opponent": "S. Tsitsipas",
+                    "spread": -2.5, "odds": -108}]
+        board = reconcile_board_with_history(picks, history)
+        self.assertEqual(len(board), 1)
+
     def test_parse_espn_scoreboard(self):
         payload = {"events": [{"groupings": [{
             "grouping": {"slug": "mens-singles"},
