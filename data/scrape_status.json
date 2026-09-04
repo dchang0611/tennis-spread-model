@@ -1,15 +1,11 @@
 {
   "success": false,
-  "checked_at": "2026-09-04T12:15:40.042355+00:00",
+  "checked_at": "2026-09-04T17:04:09.709091+00:00",
   "match_date": "2026-09-04",
   "day_label": "Today",
-  "events_found": 11,
+  "events_found": 7,
   "events": [
-    "D. Merida Aguilar vs A. Michelsen",
     "C. Alcaraz vs Y. Wu",
-    "S. Tsitsipas vs J. Lehecka",
-    "Tommy Paul vs Alexander Bublik",
-    "Arthur Rinderknech vs Daniil Medvedev",
     "Carlos Alcaraz vs Yibing Wu",
     "Mariano Navone vs Tomas Martin Etcheverry",
     "Daniel Merida Aguilar vs Alex Michelsen",
@@ -17,22 +13,5 @@
     "Frances Tiafoe vs Valentin Vacherot",
     "Denis Shapovalov vs Ben Shelton"
   ],
-  "spread_markets_found": 11,
-  "parser_failures": [],
-  "unpriced_spread_markets": [
-    "D. Merida Aguilar vs A. Michelsen",
-    "C. Alcaraz vs Y. Wu",
-    "S. Tsitsipas vs J. Lehecka",
-    "T. Paul vs A. Bublik",
-    "A. Rinderknech vs D. Medvedev",
-    "C. Alcaraz vs Y. Wu",
-    "M. Navone vs T. Martin E\u2026",
-    "D. Merida Aguilar vs A. Michelsen",
-    "S. Tsitsipas vs J. Lehecka",
-    "F. Tiafoe vs V. Vacherot",
-    "D. Shapovalov vs B. Shelton"
-  ],
-  "executable_spread_markets": 0,
-  "matches_parsed": 0,
-  "error": "Novig events were found, but no complete paired spread prices were extracted."
+  "error": "Could not resolve full event-page player names for C. Alcaraz vs Y. Wu."
 }
