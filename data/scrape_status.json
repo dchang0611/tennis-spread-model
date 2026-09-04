@@ -1,7 +1,26 @@
 {
   "success": false,
-  "checked_at": "2026-09-04T18:59:14.003303+00:00",
+  "checked_at": "2026-09-04T19:04:15.733331+00:00",
   "match_date": "2026-09-04",
   "day_label": "Today",
-  "error": "Locator.wait_for: Timeout 20000ms exceeded.\nCall log:\n  - waiting for get_by_text(\"7 More\", exact=True).first to be visible\n"
+  "events_found": 5,
+  "events": [
+    "Mariano Navone vs Tomas Martin Etcheverry",
+    "Daniel Merida Aguilar vs Alex Michelsen",
+    "Stefanos Tsitsipas vs Jiri Lehecka",
+    "Frances Tiafoe vs Valentin Vacherot",
+    "Denis Shapovalov vs Ben Shelton"
+  ],
+  "spread_markets_found": 5,
+  "parser_failures": [],
+  "unpriced_spread_markets": [
+    "M. Navone vs T. Martin E\u2026",
+    "D. Merida Aguilar vs A. Michelsen",
+    "S. Tsitsipas vs J. Lehecka",
+    "F. Tiafoe vs V. Vacherot",
+    "D. Shapovalov vs B. Shelton"
+  ],
+  "executable_spread_markets": 0,
+  "matches_parsed": 0,
+  "error": "Novig events were found, but no complete paired spread prices were extracted."
 }
