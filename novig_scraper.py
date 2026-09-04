@@ -114,6 +114,19 @@ def parse_spread_tokens(tokens: list[str]) -> list[tuple[float, int, float, int]
     return rows
 
 
+def wait_for_spread_prices(section, timeout_ms: int = 8_000, poll_ms: int = 250):
+    """Wait for Novig's client-rendered prices instead of reading the market shell."""
+    elapsed = 0
+    while elapsed <= timeout_ms:
+        tokens = [line.strip() for line in section.inner_text().splitlines() if line.strip()]
+        parsed = parse_spread_tokens(tokens)
+        if parsed:
+            return tokens, parsed
+        section.page.wait_for_timeout(poll_ms)
+        elapsed += poll_ms
+    return tokens, []
+
+
 def collect_event_cards(page: Page, day_label: str, max_scrolls: int = 18) -> list[dict]:
     found: dict[tuple[str, str], dict] = {}
     unchanged = 0
@@ -189,7 +202,8 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
             card = locate_event_card(page, event["player_a"], event["player_b"])
             if card is None:
                 continue
-            card.click()
+            more = card.get_by_text("7 More", exact=True)
+            (more if more.count() else card).click()
             page.wait_for_url("**/event-markets/**", timeout=12_000)
             page.wait_for_timeout(350)
             resolved_players = parse_event_page_players(page.locator("body").inner_text(), day_label)
@@ -202,12 +216,11 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
             if heading.count() != 1:
                 continue
             spread_markets += 1
-            # The spread ladder is the third ancestor of its heading.  Novig
+            # The spread ladder is the fourth ancestor of its heading.  Novig
             # no longer exposes the old data-testid=Text attributes, so parse
             # the verified section text instead of depending on those skins.
-            section = heading.locator("..").locator("..").locator("..")
-            tokens = [line.strip() for line in section.inner_text().splitlines() if line.strip()]
-            parsed_prices = parse_spread_tokens(tokens)
+            section = heading.locator("..").locator("..").locator("..").locator("..")
+            tokens, parsed_prices = wait_for_spread_prices(section)
             if not parsed_prices:
                 matchup = f"{player_a} vs {player_b}"
                 has_displayed_price = any(
