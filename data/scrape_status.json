@@ -1,6 +1,6 @@
 {
-  "success": true,
-  "checked_at": "2026-09-04T19:27:24.514015+00:00",
+  "success": false,
+  "checked_at": "2026-09-04T19:50:49.920814+00:00",
   "match_date": "2026-09-04",
   "day_label": "Today",
   "events_found": 5,
@@ -11,11 +11,5 @@
     "Frances Tiafoe vs Valentin Vacherot",
     "Denis Shapovalov vs Ben Shelton"
   ],
-  "spread_markets_found": 5,
-  "parser_failures": [],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 5,
-  "matches_parsed": 5,
-  "rows_saved": 27,
-  "error": null
+  "error": "Could not resolve full event-page player names for Mariano Navone vs Tomas Martin Etcheverry."
 }
