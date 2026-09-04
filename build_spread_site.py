@@ -124,16 +124,13 @@ def build_payload() -> dict:
         if row.get("recommendation") == "BET" and str(row.get("date")) == today
     ]
     fresh_scrape = scrape_status.get("success") and scrape_status.get("match_date") == today
-    if picks:
+    if fresh_scrape and scoring_status.get("success"):
         status = "ready"
         message = (
             f"{len(active_bets)} qualified spread play{'s' if len(active_bets) != 1 else ''} from "
             f"{scoring_status.get('modeled_matchups', 0)} modeled matchup(s); "
             f"{scrape_status.get('matches_parsed', 0)} executable Novig matchup(s) were captured."
         )
-    elif fresh_scrape:
-        status = "ready_no_plays"
-        message = "Today’s Novig spread markets were checked, but no line qualified."
     else:
         status = "awaiting_market_data"
         reason = scrape_status.get("error") or "No same-day Novig spread scrape is available."
