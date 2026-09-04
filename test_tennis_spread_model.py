@@ -8,6 +8,7 @@ from tennis_spread_model import (
     cover_probabilities,
     driver_phrases,
     expected_roi,
+    has_eligible_driver_support,
     no_vig_pair,
     normalize_novig_markets,
 )
@@ -58,6 +59,16 @@ class SpreadMathTests(unittest.TestCase):
         self.assertEqual(len(phrases), 3)
         self.assertEqual(sum("Elo" in phrase for phrase in phrases), 1)
         self.assertEqual(sum("serve" in phrase or "hold" in phrase for phrase in phrases), 1)
+
+    def test_sole_matchup_or_workload_support_is_ineligible(self):
+        self.assertFalse(has_eligible_driver_support(["a more favorable serve-versus-return matchup"]))
+        self.assertFalse(has_eligible_driver_support(["a lighter recent workload"]))
+        self.assertFalse(has_eligible_driver_support(["more recovery time"]))
+        self.assertTrue(has_eligible_driver_support(["higher overall Elo"]))
+        self.assertTrue(has_eligible_driver_support([
+            "a more favorable serve-versus-return matchup",
+            "higher surface-adjusted Elo",
+        ]))
 
 
 if __name__ == "__main__":

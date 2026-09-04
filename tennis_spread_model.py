@@ -61,6 +61,12 @@ DRIVER_LABELS = {
     "days_rest_diff": ("workload", "more recovery time"),
 }
 
+SOLE_DRIVER_EXCLUSIONS = {
+    DRIVER_LABELS["serve_return_interaction_diff"][1],
+    DRIVER_LABELS["games_last7_diff"][1],
+    DRIVER_LABELS["days_rest_diff"][1],
+}
+
 
 @dataclass(frozen=True)
 class DecisionThresholds:
@@ -241,6 +247,11 @@ def driver_phrases(row: pd.Series, side: str, numeric_contributions: np.ndarray,
     return selected
 
 
+def has_eligible_driver_support(feature_drivers: list[str]) -> bool:
+    """Reject a side when its sole support is matchup fit or workload/rest."""
+    return not (len(feature_drivers) == 1 and feature_drivers[0] in SOLE_DRIVER_EXCLUSIONS)
+
+
 def normalize_novig_markets(markets: pd.DataFrame) -> pd.DataFrame:
     aliases = {
         "player_a": ["player_a", "player1", "away_player"],
@@ -306,6 +317,8 @@ def score_markets(
             ("B", p_b, spread_b, odds_b, market_b, row["player_b"], row["player_a"]),
         ]:
             feature_drivers = driver_phrases(row, side, numeric_contributions[row_position])
+            if not has_eligible_driver_support(feature_drivers):
+                continue
             conservative = conservative_probability(
                 p_cover, len(residuals), thresholds.confidence_z, thresholds.residual_sample_cap
             )
