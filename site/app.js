@@ -1,4 +1,4 @@
-const state = { data: null, filter: 'BET', historyFilter: 'ALL', focusSelected: ['Recent surface game margin', 'Opponent-adjusted return', 'Surface-adjusted Elo'], focusMinMatches: 2, dateFrom: '', dateTo: '' };
+const state = { data: null, filter: 'BET', historyFilter: 'ALL', historyV2Filter: 'ALL', focusSelected: ['Recent surface game margin', 'Opponent-adjusted return', 'Surface-adjusted Elo'], focusMinMatches: 2, dateFrom: '', dateTo: '' };
 
 const fmtPct = value => Number.isFinite(Number(value)) ? `${(Number(value) * 100).toFixed(1)}%` : '—';
 const fmtNum = (value, digits = 1) => Number.isFinite(Number(value)) ? Number(value).toFixed(digits) : '—';
@@ -125,20 +125,20 @@ function inDateRange(value) {
   return (!state.dateFrom || date >= state.dateFrom) && (!state.dateTo || date <= state.dateTo);
 }
 
-function renderHistory() {
-  const dateFiltered = selectedHistory();
-  const filtered = dateFiltered.filter(row => state.historyFilter === 'ALL' || String(row.result).toUpperCase() === state.historyFilter);
+function renderHistoryView({ rows, resultFilter, metricsId, noticeId, groupsId, noticeSuffix = '' }) {
+  const dateFiltered = rows.filter(row => inDateRange(row.date));
+  const filtered = dateFiltered.filter(row => resultFilter === 'ALL' || String(row.result).toUpperCase() === resultFilter);
   const count = result => dateFiltered.filter(row => String(row.result).toUpperCase() === result).length;
   const wins = count('WIN'), losses = count('LOSS'), pushes = count('PUSH'), voids = count('VOID'), pending = count('PENDING');
   const units = dateFiltered.reduce((sum, row) => sum + (Number(row.profit_units) || 0), 0);
   const decisionRisk = dateFiltered.filter(row => ['WIN','LOSS'].includes(String(row.result).toUpperCase())).reduce((sum, row) => sum + (Number(row.risk_units) || 0), 0);
   const cards = [[`${wins}-${losses}`, 'win-loss record'],[`${units > 0 ? '+' : ''}${units.toFixed(2)}`, 'net units'],[decisionRisk ? fmtPct(units / decisionRisk) : '—', 'return on decided bets'],[dateFiltered.length.toLocaleString(), 'assumed bets tracked']];
-  document.querySelector('#historyMetrics').innerHTML = cards.map(([value,label]) => `<div class="metric-card"><strong>${value}</strong><span>${label}</span></div>`).join('');
-  const notice = document.querySelector('#historyNotice');
-  notice.textContent = dateFiltered.length ? `Assuming one unit on every published bet: ${wins}-${losses}, ${pushes} pushes, ${voids} voids, ${pending} pending, ${units > 0 ? '+' : ''}${units.toFixed(2)} net units.` : 'No tracked bets fall within this date range.';
+  document.querySelector(metricsId).innerHTML = cards.map(([value,label]) => `<div class="metric-card"><strong>${value}</strong><span>${label}</span></div>`).join('');
+  const notice = document.querySelector(noticeId);
+  notice.textContent = dateFiltered.length ? `Assuming one unit on every counted bet: ${wins}-${losses}, ${pushes} pushes, ${voids} voids, ${pending} pending, ${units > 0 ? '+' : ''}${units.toFixed(2)} net units.${noticeSuffix}` : `No counted bets fall within this date range.${noticeSuffix}`;
   notice.className = `status-banner ${dateFiltered.length ? '' : 'closed'}`;
   const dates = [...new Set(filtered.map(row => String(row.date)))].sort().reverse();
-  document.querySelector('#historyGroups').innerHTML = dates.length ? dates.map(date => {
+  document.querySelector(groupsId).innerHTML = dates.length ? dates.map(date => {
     const rows = filtered.filter(row => String(row.date) === date);
     const dayWins = rows.filter(row => String(row.result).toUpperCase() === 'WIN').length;
     const dayLosses = rows.filter(row => String(row.result).toUpperCase() === 'LOSS').length;
@@ -151,6 +151,29 @@ function renderHistory() {
     }).join('');
     return `<section class="history-day"><div class="history-day-heading"><strong>${safe(label)}</strong><span>${dayWins}-${dayLosses} · ${dayUnits > 0 ? '+' : ''}${dayUnits.toFixed(2)} units</span></div><div class="history-table-wrap"><table class="history-table"><thead><tr><th>Play</th><th>Price</th><th>Model</th><th>Market</th><th>Result</th><th>Units</th></tr></thead><tbody>${body}</tbody></table></div></section>`;
   }).join('') : '<div class="empty"><strong>No results in this range</strong>Change the dates or result filter.</div>';
+}
+
+function renderHistory() {
+  renderHistoryView({
+    rows: state.data?.history || [],
+    resultFilter: state.historyFilter,
+    metricsId: '#historyMetrics',
+    noticeId: '#historyNotice',
+    groupsId: '#historyGroups',
+  });
+}
+
+function renderHistoryV2() {
+  const v2Rows = state.data?.history_v2 || [];
+  const excluded = selectedHistory().length - v2Rows.filter(row => inDateRange(row.date)).length;
+  renderHistoryView({
+    rows: v2Rows,
+    resultFilter: state.historyV2Filter,
+    metricsId: '#historyV2Metrics',
+    noticeId: '#historyV2Notice',
+    groupsId: '#historyV2Groups',
+    noticeSuffix: ` ${excluded} weak single-factor bet${excluded === 1 ? '' : 's'} excluded from V2.`,
+  });
 }
 
 const factorDefinitions = [
@@ -192,6 +215,7 @@ function bindControls() {
   document.querySelectorAll('.tab').forEach(button => button.addEventListener('click', () => { document.querySelectorAll('.tab').forEach(item => item.classList.toggle('active', item === button)); document.querySelectorAll('.panel').forEach(panel => panel.classList.toggle('active', panel.id === button.dataset.panel)); }));
   document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => { state.filter = button.dataset.filter; document.querySelectorAll('.filter').forEach(item => item.classList.toggle('active', item === button)); renderBoard(); }));
   document.querySelectorAll('.history-filter').forEach(button => button.addEventListener('click', () => { state.historyFilter = button.dataset.historyFilter; document.querySelectorAll('.history-filter').forEach(item => item.classList.toggle('active', item === button)); renderHistory(); }));
+  document.querySelectorAll('.history-v2-filter').forEach(button => button.addEventListener('click', () => { state.historyV2Filter = button.dataset.historyV2Filter; document.querySelectorAll('.history-v2-filter').forEach(item => item.classList.toggle('active', item === button)); renderHistoryV2(); }));
   document.querySelector('#focusFactorSelectors').addEventListener('click', event => {
     const button = event.target.closest('.factor-selector');
     if (!button) return;
@@ -206,9 +230,9 @@ function bindControls() {
     renderFocus();
   });
   document.querySelector('#focusMinMatches').addEventListener('change', event => { state.focusMinMatches = Number(event.target.value); renderFocus(); });
-  document.querySelector('#dateFrom').addEventListener('change', event => { state.dateFrom = event.target.value; renderBoard(); renderHistory(); renderFactors(); renderFocus(); });
-  document.querySelector('#dateTo').addEventListener('change', event => { state.dateTo = event.target.value; renderBoard(); renderHistory(); renderFactors(); renderFocus(); });
-  document.querySelector('#dateClear').addEventListener('click', () => { state.dateFrom = ''; state.dateTo = ''; document.querySelector('#dateFrom').value = ''; document.querySelector('#dateTo').value = ''; renderBoard(); renderHistory(); renderFactors(); renderFocus(); });
+  document.querySelector('#dateFrom').addEventListener('change', event => { state.dateFrom = event.target.value; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); });
+  document.querySelector('#dateTo').addEventListener('change', event => { state.dateTo = event.target.value; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); });
+  document.querySelector('#dateClear').addEventListener('click', () => { state.dateFrom = ''; state.dateTo = ''; document.querySelector('#dateFrom').value = ''; document.querySelector('#dateTo').value = ''; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); });
 }
 
 async function load() {
@@ -221,11 +245,11 @@ async function load() {
     banner.textContent = state.data.status_message;
     banner.className = `status-banner ${state.data.status === 'ready' ? '' : 'closed'}`;
     if (state.data.generated_at) document.querySelector('#updatedText').textContent = `Updated ${new Date(state.data.generated_at).toLocaleString([], {dateStyle:'medium', timeStyle:'short'})}`;
-    renderBoard(); renderPerformance(); renderHistory(); renderFactors(); renderFocus();
+    renderBoard(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus();
   } catch (error) {
     document.querySelector('#statusBanner').textContent = 'The latest board could not be verified. No plays are displayed.';
     document.querySelector('#statusBanner').className = 'status-banner closed';
-    renderBoard(); renderPerformance(); renderHistory(); renderFactors(); renderFocus();
+    renderBoard(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus();
   }
 }
 

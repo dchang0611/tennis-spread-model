@@ -47,8 +47,8 @@ h2 { font-size: clamp(34px,5vw,58px); }
 .filters { display: flex; gap: 5px; padding: 4px; border: 1px solid var(--line); background: var(--panel); }
 .filter { border: 0; background: transparent; padding: 9px 12px; cursor: pointer; color: var(--muted); font-size: 12px; font-weight: 750; }
 .filter.active { background: var(--lime); color: var(--night); }
-.history-filter { border: 0; background: transparent; padding: 9px 12px; cursor: pointer; color: var(--muted); font-size: 12px; font-weight: 750; }
-.history-filter.active { background: var(--lime); color: var(--night); }
+.history-filter, .history-v2-filter { border: 0; background: transparent; padding: 9px 12px; cursor: pointer; color: var(--muted); font-size: 12px; font-weight: 750; }
+.history-filter.active, .history-v2-filter.active { background: var(--lime); color: var(--night); }
 .focus-filter { border: 0; background: transparent; padding: 9px 12px; cursor: pointer; color: var(--muted); font-size: 12px; font-weight: 750; }
 .focus-filter.active { background: var(--lime); color: var(--night); }
 .focus-controls { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: end; padding: 18px; margin-bottom: 18px; border: 1px solid var(--line); background: var(--panel); }

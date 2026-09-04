@@ -3,12 +3,20 @@ from datetime import date
 
 import pandas as pd
 
-from build_spread_site import rationale_for_pick, reconcile_board_with_history
+from build_spread_site import is_history_v2_eligible, rationale_for_pick, reconcile_board_with_history
 from novig_scraper import more_complete_name, parse_event_card, parse_event_page_players, parse_spread_tokens, surface_for_date
 from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, name_aliases, parse_atp_results_text, parse_espn_scoreboard, parse_tennis_explorer_html, profit_for_result, score_game_margin, settle_history
 
 
 class NovigAutomationTests(unittest.TestCase):
+    def test_history_v2_excludes_only_weak_single_factor_bets(self):
+        self.assertFalse(is_history_v2_eligible({"feature_rationale": "a more favorable serve-versus-return matchup"}))
+        self.assertFalse(is_history_v2_eligible({"feature_rationale": "a lighter recent workload"}))
+        self.assertFalse(is_history_v2_eligible({"feature_rationale": "more recovery time"}))
+        self.assertTrue(is_history_v2_eligible({"feature_rationale": "higher surface-adjusted Elo"}))
+        self.assertTrue(is_history_v2_eligible({"feature_rationale": "a lighter recent workload, higher overall Elo"}))
+        self.assertTrue(is_history_v2_eligible({"feature_rationale": ""}))
+
     def test_event_card(self):
         card = parse_event_card("Tennis (M)\nToday\n9:30 AM\nA. Fils\nvs.\n36%\nM. Navone\n66%")
         self.assertEqual(card["player_a"], "A. Fils")

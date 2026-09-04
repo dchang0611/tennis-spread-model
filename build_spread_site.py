@@ -15,6 +15,11 @@ from update_spread_history import bet_identity
 ROOT = Path(__file__).resolve().parent
 OUTPUT = ROOT / "tennis_model_output"
 SITE_DATA = ROOT / "site" / "data"
+V2_SOLE_FACTOR_EXCLUSIONS = {
+    "a more favorable serve-versus-return matchup",
+    "a lighter recent workload",
+    "more recovery time",
+}
 
 
 def records_from_csv(path: Path) -> list[dict]:
@@ -58,6 +63,12 @@ def rationale_for_pick(row: dict) -> str:
     )
 
 
+def is_history_v2_eligible(row: dict) -> bool:
+    """Exclude only bets whose sole archived factor is matchup or workload/rest."""
+    factors = [part.strip().lower() for part in str(row.get("feature_rationale") or "").split(",") if part.strip()]
+    return not (len(factors) == 1 and factors[0] in V2_SOLE_FACTOR_EXCLUSIONS)
+
+
 def reconcile_board_with_history(picks: list[dict], history: list[dict]) -> list[dict]:
     """Use the first archived bet as the canonical line shown on both tabs."""
     archived = {
@@ -92,6 +103,7 @@ def build_payload() -> dict:
     picks = [compact_pick(row) for row in records_from_csv(recommendations_path)]
     validation = records_from_csv(validation_path)
     history = records_from_csv(OUTPUT / "spread_results_history.csv")
+    history_v2 = [row for row in history if is_history_v2_eligible(row)]
     picks = reconcile_board_with_history(picks, history)
     scrape_status = read_json(ROOT / "data" / "scrape_status.json")
     settlement_status = read_json(ROOT / "data" / "settlement_status.json")
@@ -156,6 +168,8 @@ def build_payload() -> dict:
         "picks": picks,
         "validation": validation,
         "history": history,
+        "history_v2": history_v2,
+        "history_v2_excluded": len(history) - len(history_v2),
         "history_summary": history_summary,
     }
 
