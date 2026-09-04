@@ -1,17 +1,7 @@
 {
   "success": false,
-  "checked_at": "2026-09-04T17:04:09.709091+00:00",
+  "checked_at": "2026-09-04T18:59:14.003303+00:00",
   "match_date": "2026-09-04",
   "day_label": "Today",
-  "events_found": 7,
-  "events": [
-    "C. Alcaraz vs Y. Wu",
-    "Carlos Alcaraz vs Yibing Wu",
-    "Mariano Navone vs Tomas Martin Etcheverry",
-    "Daniel Merida Aguilar vs Alex Michelsen",
-    "Stefanos Tsitsipas vs Jiri Lehecka",
-    "Frances Tiafoe vs Valentin Vacherot",
-    "Denis Shapovalov vs Ben Shelton"
-  ],
-  "error": "Could not resolve full event-page player names for C. Alcaraz vs Y. Wu."
+  "error": "Locator.wait_for: Timeout 20000ms exceeded.\nCall log:\n  - waiting for get_by_text(\"7 More\", exact=True).first to be visible\n"
 }
