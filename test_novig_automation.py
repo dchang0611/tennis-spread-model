@@ -4,7 +4,7 @@ from datetime import date
 import pandas as pd
 
 from build_spread_site import rationale_for_pick, reconcile_board_with_history
-from novig_scraper import parse_event_card, parse_event_page_players, parse_spread_tokens, surface_for_date
+from novig_scraper import more_complete_name, parse_event_card, parse_event_page_players, parse_spread_tokens, surface_for_date
 from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, name_aliases, parse_atp_results_text, parse_espn_scoreboard, parse_tennis_explorer_html, profit_for_result, score_game_margin, settle_history
 
 
@@ -21,6 +21,10 @@ class NovigAutomationTests(unittest.TestCase):
     def test_event_page_resolves_full_names(self):
         text = "Tennis (M)\n(45)\nMarco Trungelliti\n1:45 PM\nToday\nJuncheng Shang\nMain Markets"
         self.assertEqual(parse_event_page_players(text, "Today"), ("Marco Trungelliti", "Juncheng Shang"))
+
+    def test_name_resolution_keeps_whichever_view_is_more_complete(self):
+        self.assertEqual(more_complete_name("Daniel Merida Aguilar", "D. Merida Aguilar"), "Daniel Merida Aguilar")
+        self.assertEqual(more_complete_name("M. Trungelliti", "Marco Trungelliti"), "Marco Trungelliti")
 
     def test_spread_tokens_skip_incomplete_price(self):
         tokens = ["Game Spread", "A", "B", "-2.5", "+111", "+2.5", "•", "-4.5", "+170", "+4.5", "-245"]

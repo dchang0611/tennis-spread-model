@@ -75,6 +75,16 @@ def parse_event_page_players(text: str, day_label: str) -> tuple[str, str] | Non
     return lines[day_index - 2], lines[day_index + 1]
 
 
+def more_complete_name(rail_name: str, event_name: str) -> str:
+    """Keep the name with more spelled-out characters when one view abbreviates it."""
+    def completeness(value: str) -> tuple[int, int]:
+        words = re.findall(r"[A-Za-zÀ-ÖØ-öø-ÿ]+", str(value))
+        spelled_out = sum(len(word) for word in words if len(word) > 1)
+        return spelled_out, len(str(value))
+
+    return max((str(rail_name), str(event_name)), key=completeness)
+
+
 def parse_spread_tokens(tokens: list[str]) -> list[tuple[float, int, float, int]]:
     spread_re = re.compile(r"^[+-]?\d+\.5$")
     odds_re = re.compile(r"^[+-]\d{3,5}$")
@@ -211,7 +221,8 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
                 raise RuntimeError(
                     f"Could not resolve full event-page player names for {event['player_a']} vs {event['player_b']}."
                 )
-            player_a, player_b = resolved_players
+            player_a = more_complete_name(event["player_a"], resolved_players[0])
+            player_b = more_complete_name(event["player_b"], resolved_players[1])
             heading = page.get_by_text("Game Spread", exact=True)
             if heading.count() != 1:
                 continue
