@@ -13,6 +13,8 @@ class NovigAutomationTests(unittest.TestCase):
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "a more favorable serve-versus-return matchup"}))
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "a lighter recent workload"}))
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "more recovery time"}))
+        self.assertFalse(is_history_v2_eligible({"feature_rationale": "a lighter recent workload, a more favorable serve-versus-return matchup"}))
+        self.assertFalse(is_history_v2_eligible({"feature_rationale": "a more favorable serve-versus-return matchup, more recovery time"}))
         self.assertTrue(is_history_v2_eligible({"feature_rationale": "higher surface-adjusted Elo"}))
         self.assertTrue(is_history_v2_eligible({"feature_rationale": "a lighter recent workload, higher overall Elo"}))
         self.assertTrue(is_history_v2_eligible({"feature_rationale": ""}))

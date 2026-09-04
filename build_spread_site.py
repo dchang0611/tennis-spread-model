@@ -64,9 +64,9 @@ def rationale_for_pick(row: dict) -> str:
 
 
 def is_history_v2_eligible(row: dict) -> bool:
-    """Exclude only bets whose sole archived factor is matchup or workload/rest."""
+    """Exclude bets supported only by matchup and/or workload/rest factors."""
     factors = [part.strip().lower() for part in str(row.get("feature_rationale") or "").split(",") if part.strip()]
-    return not (len(factors) == 1 and factors[0] in V2_SOLE_FACTOR_EXCLUSIONS)
+    return not (factors and set(factors).issubset(V2_SOLE_FACTOR_EXCLUSIONS))
 
 
 def reconcile_board_with_history(picks: list[dict], history: list[dict]) -> list[dict]:

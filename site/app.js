@@ -172,7 +172,7 @@ function renderHistoryV2() {
     metricsId: '#historyV2Metrics',
     noticeId: '#historyV2Notice',
     groupsId: '#historyV2Groups',
-    noticeSuffix: ` ${excluded} weak single-factor bet${excluded === 1 ? '' : 's'} excluded from V2.`,
+    noticeSuffix: ` ${excluded} weak-only bet${excluded === 1 ? '' : 's'} excluded from V2.`,
   });
 }
 
