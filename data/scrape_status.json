@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-09-05T08:39:08.082426+00:00",
+  "checked_at": "2026-09-05T11:23:12.108994+00:00",
   "match_date": "2026-09-05",
   "day_label": "Today",
   "events_found": 8,
@@ -11,8 +11,8 @@
     "Benjamin Bonzi vs Karen Khachanov",
     "Dane Sweeny vs Luciano Darderi",
     "Botic Van De Zandschulp vs Zizou Bergs",
-    "Learner Tien vs Jakub Mensik",
-    "Alejandro Tabilo vs Alexander Zverev"
+    "Alejandro Tabilo vs Alexander Zverev",
+    "Learner Tien vs Jakub Mensik"
   ],
   "spread_markets_found": 8,
   "parser_failures": [],
