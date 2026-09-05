@@ -1,10 +1,11 @@
 import unittest
+from unittest.mock import Mock
 from datetime import date
 
 import pandas as pd
 
 from build_spread_site import is_history_v2_eligible, rationale_for_pick, reconcile_board_with_history
-from novig_scraper import more_complete_name, parse_event_card, parse_event_page_players, parse_spread_tokens, surface_for_date
+from novig_scraper import MORE_MARKETS_RE, open_event_card, wait_for_event_cards, more_complete_name, parse_event_card, parse_event_page_players, parse_spread_tokens, surface_for_date
 from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, name_aliases, parse_atp_results_text, parse_espn_scoreboard, parse_tennis_explorer_html, profit_for_result, score_game_margin, settle_history
 
 
@@ -19,6 +20,42 @@ class NovigAutomationTests(unittest.TestCase):
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "a lighter recent workload, higher overall Elo"}))
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "higher surface-adjusted Elo, a more favorable serve-versus-return matchup"}))
         self.assertTrue(is_history_v2_eligible({"feature_rationale": ""}))
+
+    def test_open_event_with_variable_market_count(self):
+        for label in ("1 More", "7 More", "12 More", " 25  more "):
+            with self.subTest(label=label):
+                self.assertIsNotNone(MORE_MARKETS_RE.fullmatch(label))
+                card = Mock()
+                link = Mock()
+                card.get_by_text.side_effect = lambda pattern: link if pattern.search(label) else Mock()
+                link.count.return_value = 1
+                open_event_card(card)
+                link.click.assert_called_once()
+                card.click.assert_not_called()
+        for label in ("More", "7", "7 More markets", "Player 7 More"):
+            self.assertIsNone(MORE_MARKETS_RE.fullmatch(label))
+
+    def test_open_event_without_more_or_with_ambiguous_links(self):
+        for count in (0, 2):
+            card = Mock()
+            card.get_by_text.return_value.count.return_value = count
+            open_event_card(card)
+            card.click.assert_called_once()
+            card.get_by_text.return_value.click.assert_not_called()
+
+    def test_event_readiness_accepts_delayed_card_without_more(self):
+        page = Mock()
+        page.locator.return_value.all_inner_texts.side_effect = [
+            [], ["Loading"], ["Tennis (M)\nTomorrow\n9:30 AM\nA. Fils\nvs.\nM. Navone"],
+        ]
+        wait_for_event_cards(page, timeout_ms=500, poll_ms=250)
+        self.assertEqual(page.wait_for_timeout.call_count, 2)
+
+    def test_event_readiness_does_not_accept_unrelated_more_link(self):
+        page = Mock()
+        page.locator.return_value.all_inner_texts.return_value = ["7 More"]
+        with self.assertRaisesRegex(RuntimeError, "cannot verify market availability"):
+            wait_for_event_cards(page, timeout_ms=250, poll_ms=250)
 
     def test_event_card(self):
         card = parse_event_card("Tennis (M)\nToday\n9:30 AM\nA. Fils\nvs.\n36%\nM. Navone\n66%")

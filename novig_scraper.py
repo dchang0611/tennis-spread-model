@@ -14,6 +14,7 @@ from playwright.sync_api import Page, sync_playwright
 
 
 ATP_URL = "https://novig.com/trading/atp"
+MORE_MARKETS_RE = re.compile(r"^\s*\d+\s+More\s*$", re.IGNORECASE)
 PACIFIC = ZoneInfo("America/Los_Angeles")
 OUTPUT_COLUMNS = [
     "date", "tournament", "surface", "best_of", "player_a", "player_b",
@@ -137,6 +138,21 @@ def wait_for_spread_prices(section, timeout_ms: int = 8_000, poll_ms: int = 250)
     return tokens, []
 
 
+def wait_for_event_cards(page: Page, timeout_ms: int = 20_000, poll_ms: int = 250) -> None:
+    """Wait for a recognizable tennis card, independent of its market count."""
+    for _ in range(timeout_ms // poll_ms + 1):
+        if any(parse_event_card(text) for text in page.locator('div[tabindex="0"]').all_inner_texts()):
+            return
+        page.wait_for_timeout(poll_ms)
+    raise RuntimeError("Novig tennis event cards did not load; cannot verify market availability.")
+
+
+def open_event_card(card) -> None:
+    """Use a variable-count market link when present, otherwise the card."""
+    more = card.get_by_text(MORE_MARKETS_RE)
+    (more if more.count() == 1 else card).click()
+
+
 def collect_event_cards(page: Page, day_label: str, max_scrolls: int = 18) -> list[dict]:
     found: dict[tuple[str, str], dict] = {}
     unchanged = 0
@@ -157,7 +173,7 @@ def collect_event_cards(page: Page, day_label: str, max_scrolls: int = 18) -> li
 
 def locate_event_card(page: Page, player_a: str, player_b: str, max_scrolls: int = 18):
     page.goto(ATP_URL, wait_until="domcontentloaded", timeout=45_000)
-    page.wait_for_timeout(1_400)
+    wait_for_event_cards(page)
     for _ in range(max_scrolls):
         card = (
             page.locator('div[tabindex="0"]')
@@ -196,7 +212,7 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
         )
         page.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
         page.goto(ATP_URL, wait_until="domcontentloaded", timeout=45_000)
-        page.get_by_text("7 More", exact=True).first.wait_for(timeout=20_000)
+        wait_for_event_cards(page)
         events = collect_event_cards(page, day_label)
         if diagnostics is not None:
             diagnostics["events_found"] = len(events)
@@ -212,8 +228,7 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
             card = locate_event_card(page, event["player_a"], event["player_b"])
             if card is None:
                 continue
-            more = card.get_by_text("7 More", exact=True)
-            (more if more.count() else card).click()
+            open_event_card(card)
             page.wait_for_url("**/event-markets/**", timeout=12_000)
             page.wait_for_timeout(350)
             resolved_players = parse_event_page_players(page.locator("body").inner_text(), day_label)
