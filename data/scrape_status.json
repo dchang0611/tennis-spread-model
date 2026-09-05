@@ -1,9 +1,24 @@
 {
-  "success": false,
-  "checked_at": "2026-09-05T06:46:15.814408+00:00",
-  "match_date": "2026-09-04",
+  "success": true,
+  "checked_at": "2026-09-05T07:03:42.375505+00:00",
+  "match_date": "2026-09-05",
   "day_label": "Today",
-  "events_found": 0,
-  "events": [],
-  "error": "No Novig ATP events labeled 'Today' were found."
+  "events_found": 8,
+  "events": [
+    "Francisco Cerundolo vs Taylor Fritz",
+    "Flavio Cobolli vs Alexander Blockx",
+    "Arthur Gea vs Michael Zheng",
+    "Benjamin Bonzi vs Karen Khachanov",
+    "Dane Sweeny vs Luciano Darderi",
+    "Botic Van De Zandschulp vs Zizou Bergs",
+    "Alejandro Tabilo vs Alexander Zverev",
+    "Learner Tien vs Jakub Mensik"
+  ],
+  "spread_markets_found": 8,
+  "parser_failures": [],
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 8,
+  "matches_parsed": 8,
+  "rows_saved": 33,
+  "error": null
 }
