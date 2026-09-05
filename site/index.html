@@ -6,7 +6,7 @@
   <meta name="description" content="Evidence-first tennis game-spread recommendations for Novig markets.">
   <meta name="theme-color" content="#071613">
   <title>DC Tennis Betting Model</title>
-  <link rel="stylesheet" href="styles.css?v=20260904-v2b">
+  <link rel="stylesheet" href="styles.css?v=20260904-strict-v2">
 </head>
 <body>
   <header class="site-header">
@@ -41,6 +41,7 @@
 
     <nav class="tabs" aria-label="Dashboard sections">
       <button class="tab active" data-panel="boardPanel">Spread Board</button>
+      <button class="tab" data-panel="strictV2Panel">Strict V2 Plays</button>
       <button class="tab" data-panel="historyPanel">Historical Results</button>
       <button class="tab" data-panel="historyV2Panel">Historical Performance V2</button>
       <button class="tab" data-panel="factorPanel">Factor Performance</button>
@@ -62,6 +63,17 @@
       </div>
       <div id="statusBanner" class="status-banner loading">Loading the latest board…</div>
       <div id="board" class="board-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="strictV2Panel" class="panel" aria-labelledby="strictV2Title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">TODAY · STRICT FILTER</p>
+          <h2 id="strictV2Title">Strict V2 qualified plays</h2>
+        </div>
+      </div>
+      <div id="strictV2Notice" class="status-banner loading">Loading today’s strict V2 plays…</div>
+      <div id="strictV2Board" class="board-grid" aria-live="polite"></div>
     </section>
 
     <section id="historyPanel" class="panel" aria-labelledby="historyTitle">
@@ -86,7 +98,7 @@
     <section id="historyV2Panel" class="panel" aria-labelledby="historyV2Title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">WEAK-ONLY PLAYS REMOVED</p>
+          <p class="eyebrow">BAD-FACTOR PLAYS REMOVED</p>
           <h2 id="historyV2Title">Historical performance V2</h2>
         </div>
         <div class="history-controls">
@@ -167,6 +179,6 @@
   <footer>
     <p>Research tool only. Prices move, edges are uncertain, and no model guarantees profit.</p>
   </footer>
-  <script src="app.js?v=20260904-v2b"></script>
+  <script src="app.js?v=20260904-strict-v2"></script>
 </body>
 </html>

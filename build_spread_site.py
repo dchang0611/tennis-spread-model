@@ -15,7 +15,7 @@ from update_spread_history import bet_identity
 ROOT = Path(__file__).resolve().parent
 OUTPUT = ROOT / "tennis_model_output"
 SITE_DATA = ROOT / "site" / "data"
-V2_SOLE_FACTOR_EXCLUSIONS = {
+STRICT_V2_EXCLUDED_FACTORS = {
     "a more favorable serve-versus-return matchup",
     "a lighter recent workload",
     "more recovery time",
@@ -64,9 +64,9 @@ def rationale_for_pick(row: dict) -> str:
 
 
 def is_history_v2_eligible(row: dict) -> bool:
-    """Exclude bets supported only by matchup and/or workload/rest factors."""
+    """Exclude any bet containing a serve/return matchup or workload/rest factor."""
     factors = [part.strip().lower() for part in str(row.get("feature_rationale") or "").split(",") if part.strip()]
-    return not (factors and set(factors).issubset(V2_SOLE_FACTOR_EXCLUSIONS))
+    return not any(factor in STRICT_V2_EXCLUDED_FACTORS for factor in factors)
 
 
 def reconcile_board_with_history(picks: list[dict], history: list[dict]) -> list[dict]:
@@ -135,6 +135,7 @@ def build_payload() -> dict:
         row for row in picks
         if row.get("recommendation") == "BET" and str(row.get("date")) == today
     ]
+    strict_v2_current_picks = [row for row in active_bets if is_history_v2_eligible(row)]
     fresh_scrape = scrape_status.get("success") and scrape_status.get("match_date") == today
     if fresh_scrape and scoring_status.get("success"):
         status = "ready"
@@ -166,6 +167,7 @@ def build_payload() -> dict:
             "validation_method": "Expanding-window rolling validation",
         },
         "picks": picks,
+        "strict_v2_current_picks": strict_v2_current_picks,
         "validation": validation,
         "history": history,
         "history_v2": history_v2,

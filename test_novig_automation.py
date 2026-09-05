@@ -9,14 +9,15 @@ from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, n
 
 
 class NovigAutomationTests(unittest.TestCase):
-    def test_history_v2_excludes_only_weak_single_factor_bets(self):
+    def test_history_v2_excludes_any_bet_containing_a_bad_factor(self):
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "a more favorable serve-versus-return matchup"}))
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "a lighter recent workload"}))
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "more recovery time"}))
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "a lighter recent workload, a more favorable serve-versus-return matchup"}))
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "a more favorable serve-versus-return matchup, more recovery time"}))
         self.assertTrue(is_history_v2_eligible({"feature_rationale": "higher surface-adjusted Elo"}))
-        self.assertTrue(is_history_v2_eligible({"feature_rationale": "a lighter recent workload, higher overall Elo"}))
+        self.assertFalse(is_history_v2_eligible({"feature_rationale": "a lighter recent workload, higher overall Elo"}))
+        self.assertFalse(is_history_v2_eligible({"feature_rationale": "higher surface-adjusted Elo, a more favorable serve-versus-return matchup"}))
         self.assertTrue(is_history_v2_eligible({"feature_rationale": ""}))
 
     def test_event_card(self):
