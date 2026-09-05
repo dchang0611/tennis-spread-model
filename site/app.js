@@ -230,12 +230,13 @@ function renderFactors() {
   }).filter(row => row.sample).sort((a,b) => b.sample - a.sample || a.label.localeCompare(b.label));
   const notice = document.querySelector('#factorNotice');
   const unclassified = history.length - classified.length;
-  notice.textContent = `${classified.length} of ${history.length} tracked bets have saved factor labels in this date range. ${unclassified ? `${unclassified} older bet${unclassified === 1 ? '' : 's'} remain unclassified because their rationale was not archived.` : 'Every tracked bet is classified.'}`;
+  notice.textContent = `${classified.length} of ${history.length} tracked bets have saved factor labels in this date range. ${unclassified ? `${unclassified} bet${unclassified === 1 ? '' : 's'} have no recorded factors and appear in the comparison row below.` : 'Every tracked bet is classified.'}`;
   notice.className = `status-banner ${classified.length ? '' : 'closed'}`;
   document.querySelector('#factorRows').innerHTML = stats.length ? stats.map(row => {
     const winRate = row.wins + row.losses ? row.wins / (row.wins + row.losses) : null;
     return `<tr><td><strong>${safe(row.label)}</strong></td><td>${row.wins}-${row.losses}</td><td>${fmtPct(winRate)}</td><td class="${row.units > 0 ? 'units-positive' : row.units < 0 ? 'units-negative' : ''}">${row.units > 0 ? '+' : ''}${row.units.toFixed(2)}</td><td>${row.risk ? fmtPct(row.units / row.risk) : 'â€”'}</td><td>${row.wins + row.losses}</td><td>${row.pending}</td></tr>`;
   }).join('') : '<tr><td colspan="7">No factor-tagged bets fall within this date range.</td></tr>';
+  document.querySelector('#factorRows').innerHTML += noRecordedFactorsRow('Comparison group; no saved factor rationale');
 }
 
 function bindControls() {
