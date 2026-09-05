@@ -95,6 +95,20 @@ function renderFocus() {
   }).join('') : '<div class="empty"><strong>No matching lines</strong>Choose a lower match rule, different factors, or another date range.</div>';
 }
 
+function noRecordedFactorsRow(context) {
+  const rows = selectedHistory().filter(row => !String(row.feature_rationale || '').trim());
+  const count = result => rows.filter(row => String(row.result).toUpperCase() === result).length;
+  const wins = count('WIN'), losses = count('LOSS'), decided = wins + losses;
+  const settled = rows.filter(row => ['WIN', 'LOSS', 'PUSH', 'VOID'].includes(String(row.result).toUpperCase()));
+  const units = settled.reduce((sum, row) => sum + (Number(row.profit_units) || 0), 0);
+  const risk = rows.filter(row => ['WIN', 'LOSS'].includes(String(row.result).toUpperCase())).reduce((sum, row) => sum + (Number(row.risk_units) || 0), 0);
+  return `<tr><td><strong>No recorded factors</strong><br><span class="combination-label">${safe(context)} · ${count('PUSH')} pushes · ${count('VOID')} voids</span></td><td>${wins}-${losses}</td><td>${decided ? fmtPct(wins / decided) : '—'}</td><td class="${units > 0 ? 'units-positive' : units < 0 ? 'units-negative' : ''}">${units > 0 ? '+' : ''}${units.toFixed(2)}</td><td>${risk ? fmtPct(units / risk) : '—'}</td><td>${decided}</td><td>${count('PENDING')}</td></tr>`;
+}
+
+function renderNoRecordedFactors(target, context) {
+  document.querySelector(target).innerHTML = `<div class="history-table-wrap"><table class="history-table"><thead><tr><th>Comparison group</th><th>Record</th><th>Win rate</th><th>Units</th><th>ROI</th><th>Decided</th><th>Pending</th></tr></thead><tbody>${noRecordedFactorsRow(context)}</tbody></table></div>`;
+}
+
 function renderFocusPerformance() {
   const rows = selectedHistory().filter(row => selectedConfluenceFactors(row).length >= state.focusMinMatches);
   const decided = rows.filter(row => ['WIN','LOSS'].includes(String(row.result).toUpperCase()));
@@ -106,6 +120,7 @@ function renderFocusPerformance() {
   const winRate = decided.length ? wins / decided.length : null;
   const label = state.focusSelected.join(' + ');
   document.querySelector('#focusPerformanceRows').innerHTML = `<tr><td><strong>${safe(label)}</strong><br><span class="combination-label">AT LEAST ${state.focusMinMatches} OF ${state.focusSelected.length}</span></td><td>${wins}-${losses}</td><td>${fmtPct(winRate)}</td><td class="${units > 0 ? 'units-positive' : units < 0 ? 'units-negative' : ''}">${units > 0 ? '+' : ''}${units.toFixed(2)}</td><td>${risk ? fmtPct(units / risk) : '—'}</td><td>${decided.length}</td><td>${pending}</td></tr>`;
+  document.querySelector('#focusPerformanceRows').innerHTML += noRecordedFactorsRow('Comparison only; independent of selected factors');
 }
 
 function renderPerformance() {
@@ -165,6 +180,7 @@ function renderStrictV2() {
 }
 
 function renderHistory() {
+  renderNoRecordedFactors('#historyNoFactors', 'Included in full history totals');
   renderHistoryView({
     rows: state.data?.history || [],
     resultFilter: state.historyFilter,
@@ -175,6 +191,7 @@ function renderHistory() {
 }
 
 function renderHistoryV2() {
+  renderNoRecordedFactors('#historyV2NoFactors', 'Comparison only; excluded from V2 totals');
   const v2Rows = state.data?.history_v2 || [];
   const excluded = selectedHistory().length - v2Rows.filter(row => inDateRange(row.date)).length;
   renderHistoryView({
