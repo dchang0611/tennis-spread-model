@@ -1,17 +1,14 @@
 {
   "success": false,
-  "checked_at": "2026-09-05T16:14:35.796459+00:00",
+  "checked_at": "2026-09-05T19:25:51.918198+00:00",
   "match_date": "2026-09-05",
   "day_label": "Today",
-  "events_found": 7,
+  "events_found": 4,
   "events": [
-    "Flavio Cobolli vs Alexander Blockx",
     "Arthur Gea vs Michael Zheng",
-    "Benjamin Bonzi vs Karen Khachanov",
-    "Dane Sweeny vs Luciano Darderi",
     "Botic Van De Zandschulp vs Zizou Bergs",
     "Alejandro Tabilo vs Alexander Zverev",
     "Learner Tien vs Jakub Mensik"
   ],
-  "error": "Could not resolve full event-page player names for Flavio Cobolli vs Alexander Blockx."
+  "error": "Could not resolve full event-page player names for Arthur Gea vs Michael Zheng."
 }
