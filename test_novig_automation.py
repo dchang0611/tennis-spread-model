@@ -19,7 +19,17 @@ class NovigAutomationTests(unittest.TestCase):
         self.assertTrue(is_history_v2_eligible({"feature_rationale": "higher surface-adjusted Elo"}))
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "a lighter recent workload, higher overall Elo"}))
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "higher surface-adjusted Elo, a more favorable serve-versus-return matchup"}))
-        self.assertTrue(is_history_v2_eligible({"feature_rationale": ""}))
+        self.assertFalse(is_history_v2_eligible({"feature_rationale": ""}))
+
+    def test_v2_requires_recognized_support(self):
+        for rationale in (None, "", "  ,  ", "unrecognized factor", "nan"):
+            self.assertFalse(is_history_v2_eligible({"feature_rationale": rationale}))
+        self.assertFalse(is_history_v2_eligible({}))
+        for rationale in ("higher overall Elo", "better recent game margin on this surface",
+                          "stronger opponent-adjusted return-point performance",
+                          "higher surface-adjusted Elo", "stronger opponent-adjusted serve-point performance"):
+            self.assertTrue(is_history_v2_eligible({"feature_rationale": rationale}))
+        self.assertTrue(is_history_v2_eligible({"feature_rationale": "  HIGHER OVERALL ELO  "}))
 
     def test_open_event_with_variable_market_count(self):
         for label in ("1 More", "7 More", "12 More", " 25  more "):

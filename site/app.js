@@ -158,10 +158,10 @@ function renderStrictV2() {
   const notice = document.querySelector('#strictV2Notice');
   const root = document.querySelector('#strictV2Board');
   notice.textContent = rows.length
-    ? `${rows.length} current play${rows.length === 1 ? '' : 's'} contain neither Serve vs Return nor Workload/Rest.`
+    ? `${rows.length} current play${rows.length === 1 ? '' : 's'} qualify with at least one recognized supporting factor and neither Serve vs Return nor Workload/Rest.`
     : 'No current BET selections pass the strict V2 rule.';
   notice.className = `status-banner ${rows.length ? '' : 'closed'}`;
-  root.innerHTML = rows.length ? rows.map(row => `<article class="pick-card bet"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="decision bet">BET</div><div class="factor-chips">${renderBoardChips(row)}</div></article>`).join('') : '<div class="empty"><strong>No strict V2 plays today</strong>Every current BET includes Serve vs Return or Workload/Rest, or no current BET lines are available.</div>';
+  root.innerHTML = rows.length ? rows.map(row => `<article class="pick-card bet"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="decision bet">BET</div><div class="factor-chips">${renderBoardChips(row)}</div></article>`).join('') : '<div class="empty"><strong>No strict V2 plays today</strong>Current BET selections need at least one recognized supporting factor and must exclude Serve vs Return and Workload/Rest.</div>';
 }
 
 function renderHistory() {
@@ -183,7 +183,7 @@ function renderHistoryV2() {
     metricsId: '#historyV2Metrics',
     noticeId: '#historyV2Notice',
     groupsId: '#historyV2Groups',
-    noticeSuffix: ` ${excluded} bet${excluded === 1 ? '' : 's'} containing Serve vs Return or Workload/Rest excluded from V2.`,
+    noticeSuffix: ` ${excluded} bet${excluded === 1 ? '' : 's'} excluded from V2 for missing recognized support or containing Serve vs Return or Workload/Rest.`,
   });
 }
 

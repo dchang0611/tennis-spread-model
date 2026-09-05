@@ -15,6 +15,13 @@ from update_spread_history import bet_identity
 ROOT = Path(__file__).resolve().parent
 OUTPUT = ROOT / "tennis_model_output"
 SITE_DATA = ROOT / "site" / "data"
+STRICT_V2_SUPPORTED_FACTORS = {
+    "better recent game margin on this surface",
+    "stronger opponent-adjusted return-point performance",
+    "higher surface-adjusted elo",
+    "higher overall elo",
+    "stronger opponent-adjusted serve-point performance",
+}
 STRICT_V2_EXCLUDED_FACTORS = {
     "a more favorable serve-versus-return matchup",
     "a lighter recent workload",
@@ -64,9 +71,11 @@ def rationale_for_pick(row: dict) -> str:
 
 
 def is_history_v2_eligible(row: dict) -> bool:
-    """Exclude any bet containing a serve/return matchup or workload/rest factor."""
+    """Require a recognized supporting chip and reject excluded factors."""
     factors = [part.strip().lower() for part in str(row.get("feature_rationale") or "").split(",") if part.strip()]
-    return not any(factor in STRICT_V2_EXCLUDED_FACTORS for factor in factors)
+    return bool(set(factors) & STRICT_V2_SUPPORTED_FACTORS) and not any(
+        factor in STRICT_V2_EXCLUDED_FACTORS for factor in factors
+    )
 
 
 def reconcile_board_with_history(picks: list[dict], history: list[dict]) -> list[dict]:
