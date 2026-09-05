@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-09-05T07:56:27.662791+00:00",
+  "checked_at": "2026-09-05T08:30:06.172774+00:00",
   "match_date": "2026-09-05",
   "day_label": "Today",
   "events_found": 8,
@@ -8,17 +8,17 @@
     "Francisco Cerundolo vs Taylor Fritz",
     "Flavio Cobolli vs Alexander Blockx",
     "Benjamin Bonzi vs Karen Khachanov",
-    "Arthur Gea vs Michael Zheng",
     "Dane Sweeny vs Luciano Darderi",
+    "Arthur Gea vs Michael Zheng",
     "Botic Van De Zandschulp vs Zizou Bergs",
-    "Alejandro Tabilo vs Alexander Zverev",
-    "Learner Tien vs Jakub Mensik"
+    "Learner Tien vs Jakub Mensik",
+    "Alejandro Tabilo vs Alexander Zverev"
   ],
   "spread_markets_found": 8,
   "parser_failures": [],
   "unpriced_spread_markets": [],
   "executable_spread_markets": 8,
   "matches_parsed": 8,
-  "rows_saved": 35,
+  "rows_saved": 37,
   "error": null
 }
