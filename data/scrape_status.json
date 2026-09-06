@@ -1,13 +1,12 @@
 {
   "success": false,
-  "checked_at": "2026-09-06T19:28:39.454354+00:00",
+  "checked_at": "2026-09-06T22:46:23.128003+00:00",
   "match_date": "2026-09-06",
   "day_label": "Today",
-  "events_found": 3,
+  "events_found": 2,
   "events": [
-    "F. Tiafoe vs D. Medvedev",
-    "Frances Tiafoe vs Daniil Medvedev",
+    "S. Tsitsipas vs B. Shelton",
     "Stefanos Tsitsipas vs Ben Shelton"
   ],
-  "error": "Could not resolve full event-page player names for F. Tiafoe vs D. Medvedev."
+  "error": "Could not resolve full event-page player names for S. Tsitsipas vs B. Shelton."
 }
