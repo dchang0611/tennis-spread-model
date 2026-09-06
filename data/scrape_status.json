@@ -1,23 +1,21 @@
 {
   "success": true,
-  "checked_at": "2026-09-06T11:44:55.377864+00:00",
+  "checked_at": "2026-09-06T16:25:51.983972+00:00",
   "match_date": "2026-09-06",
   "day_label": "Today",
-  "events_found": 7,
+  "events_found": 5,
   "events": [
     "C. Alcaraz vs T. Paul",
-    "T. Etcheverry vs A. Michelsen",
-    "F. Tiafoe vs D. Medvedev",
     "Carlos Alcaraz vs Tommy Paul",
     "Tomas Martin Etcheverry vs Alex Michelsen",
     "Frances Tiafoe vs Daniil Medvedev",
     "Stefanos Tsitsipas vs Ben Shelton"
   ],
-  "spread_markets_found": 7,
+  "spread_markets_found": 5,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 7,
-  "matches_parsed": 7,
-  "rows_saved": 42,
+  "executable_spread_markets": 5,
+  "matches_parsed": 5,
+  "rows_saved": 35,
   "error": null
 }

@@ -1,9 +1,8 @@
 {
   "success": true,
-  "market_matchups": 7,
-  "modeled_matchups": 5,
+  "market_matchups": 5,
+  "modeled_matchups": 4,
   "unmatched_model_players": [
-    "C. Alcaraz vs T. Paul",
-    "F. Tiafoe vs D. Medvedev"
+    "C. Alcaraz vs T. Paul"
   ]
 }
