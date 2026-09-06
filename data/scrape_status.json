@@ -1,14 +1,23 @@
 {
-  "success": false,
-  "checked_at": "2026-09-05T19:25:51.918198+00:00",
-  "match_date": "2026-09-05",
+  "success": true,
+  "checked_at": "2026-09-06T11:44:55.377864+00:00",
+  "match_date": "2026-09-06",
   "day_label": "Today",
-  "events_found": 4,
+  "events_found": 7,
   "events": [
-    "Arthur Gea vs Michael Zheng",
-    "Botic Van De Zandschulp vs Zizou Bergs",
-    "Alejandro Tabilo vs Alexander Zverev",
-    "Learner Tien vs Jakub Mensik"
+    "C. Alcaraz vs T. Paul",
+    "T. Etcheverry vs A. Michelsen",
+    "F. Tiafoe vs D. Medvedev",
+    "Carlos Alcaraz vs Tommy Paul",
+    "Tomas Martin Etcheverry vs Alex Michelsen",
+    "Frances Tiafoe vs Daniil Medvedev",
+    "Stefanos Tsitsipas vs Ben Shelton"
   ],
-  "error": "Could not resolve full event-page player names for Arthur Gea vs Michael Zheng."
+  "spread_markets_found": 7,
+  "parser_failures": [],
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 7,
+  "matches_parsed": 7,
+  "rows_saved": 42,
+  "error": null
 }
