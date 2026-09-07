@@ -1,12 +1,23 @@
 {
-  "success": false,
-  "checked_at": "2026-09-06T22:46:23.128003+00:00",
-  "match_date": "2026-09-06",
+  "success": true,
+  "checked_at": "2026-09-07T09:15:39.589574+00:00",
+  "match_date": "2026-09-07",
   "day_label": "Today",
-  "events_found": 2,
+  "events_found": 7,
   "events": [
-    "S. Tsitsipas vs B. Shelton",
-    "Stefanos Tsitsipas vs Ben Shelton"
+    "B. Van De Zandschulp vs A. Gea",
+    "A. Blockx vs F. Cerundolo",
+    "L. Tien vs K. Khachanov",
+    "Alexander Blockx vs Francisco Cerundolo",
+    "Botic Van De Zandschulp vs Arthur Gea",
+    "Learner Tien vs Karen Khachanov",
+    "Luciano Darderi vs Alexander Zverev"
   ],
-  "error": "Could not resolve full event-page player names for S. Tsitsipas vs B. Shelton."
+  "spread_markets_found": 7,
+  "parser_failures": [],
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 7,
+  "matches_parsed": 7,
+  "rows_saved": 28,
+  "error": null
 }
