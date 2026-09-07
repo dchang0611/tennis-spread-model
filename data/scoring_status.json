@@ -1,10 +1,10 @@
 {
   "success": true,
-  "market_matchups": 7,
-  "modeled_matchups": 4,
+  "market_matchups": 6,
+  "modeled_matchups": 3,
   "unmatched_model_players": [
-    "A. Blockx vs F. Cerundolo",
     "B. Van De Zandschulp vs A. Gea",
+    "L. Darderi vs A. Zverev",
     "L. Tien vs K. Khachanov"
   ]
 }
