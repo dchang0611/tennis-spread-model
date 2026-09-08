@@ -1,6 +1,6 @@
 {
-  "success": true,
-  "checked_at": "2026-09-08T12:17:07.006773+00:00",
+  "success": false,
+  "checked_at": "2026-09-08T17:28:01.428268+00:00",
   "match_date": "2026-09-08",
   "day_label": "Today",
   "events_found": 4,
@@ -10,11 +10,5 @@
     "Alex Michelsen vs Frances Tiafoe",
     "Carlos Alcaraz vs Ben Shelton"
   ],
-  "spread_markets_found": 4,
-  "parser_failures": [],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 4,
-  "matches_parsed": 4,
-  "rows_saved": 18,
-  "error": null
+  "error": "Could not resolve full event-page player names for A. Michelsen vs F. Tiafoe."
 }
