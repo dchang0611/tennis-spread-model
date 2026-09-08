@@ -1,13 +1,20 @@
 {
-  "success": false,
-  "checked_at": "2026-09-07T20:46:57.895692+00:00",
-  "match_date": "2026-09-07",
+  "success": true,
+  "checked_at": "2026-09-08T07:04:08.233415+00:00",
+  "match_date": "2026-09-08",
   "day_label": "Today",
-  "events_found": 3,
+  "events_found": 4,
   "events": [
-    "L. Tien vs K. Khachanov",
-    "L. Darderi vs A. Zverev",
-    "B. Van De Zandschulp vs A. Gea"
+    "A. Michelsen vs F. Tiafoe",
+    "C. Alcaraz vs B. Shelton",
+    "Alex Michelsen vs Frances Tiafoe",
+    "Carlos Alcaraz vs Ben Shelton"
   ],
-  "error": "Could not resolve full event-page player names for L. Tien vs K. Khachanov."
+  "spread_markets_found": 4,
+  "parser_failures": [],
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 4,
+  "matches_parsed": 4,
+  "rows_saved": 14,
+  "error": null
 }
