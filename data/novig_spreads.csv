@@ -1,19 +1,21 @@
 date,tournament,surface,best_of,player_a,player_b,spread_a,odds_a,spread_b,odds_b,collected_at,event_url
-2026-09-09,ATP,Hard,3,A. Blockx,K. Khachanov,2.5,-108,-2.5,-100,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
-2026-09-09,ATP,Hard,3,A. Blockx,K. Khachanov,1.5,117,-1.5,-127,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
-2026-09-09,ATP,Hard,3,A. Blockx,K. Khachanov,5.5,-317,-5.5,186,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
-2026-09-09,ATP,Hard,3,A. Blockx,K. Khachanov,4.5,-300,-4.5,122,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
-2026-09-09,ATP,Hard,3,A. Blockx,K. Khachanov,3.5,-127,-3.5,117,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
-2026-09-09,ATP,Hard,3,A. Blockx,K. Khachanov,-1.5,156,1.5,-257,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
-2026-09-09,ATP,Hard,3,B. Van De Zandschulp,A. Zverev,6.5,104,-6.5,-113,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07f50-13ee-7071-b7fc-cb617545989d
-2026-09-09,ATP,Hard,3,B. Van De Zandschulp,A. Zverev,5.5,178,-5.5,-194,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07f50-13ee-7071-b7fc-cb617545989d
-2026-09-09,ATP,Hard,3,B. Van De Zandschulp,A. Zverev,7.5,-156,-7.5,144,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07f50-13ee-7071-b7fc-cb617545989d
-2026-09-09,ATP,Hard,3,Alexander Blockx,Karen Khachanov,2.5,-108,-2.5,-100,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
-2026-09-09,ATP,Hard,3,Alexander Blockx,Karen Khachanov,1.5,117,-1.5,-127,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
-2026-09-09,ATP,Hard,3,Alexander Blockx,Karen Khachanov,5.5,-317,-5.5,186,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
-2026-09-09,ATP,Hard,3,Alexander Blockx,Karen Khachanov,4.5,-300,-4.5,122,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
-2026-09-09,ATP,Hard,3,Alexander Blockx,Karen Khachanov,3.5,-127,-3.5,117,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
-2026-09-09,ATP,Hard,3,Alexander Blockx,Karen Khachanov,-1.5,156,1.5,-257,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
-2026-09-09,ATP,Hard,3,Botic Van De Zandschulp,Alexander Zverev,6.5,104,-6.5,-113,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07f50-13ee-7071-b7fc-cb617545989d
-2026-09-09,ATP,Hard,3,Botic Van De Zandschulp,Alexander Zverev,5.5,178,-5.5,-194,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07f50-13ee-7071-b7fc-cb617545989d
-2026-09-09,ATP,Hard,3,Botic Van De Zandschulp,Alexander Zverev,7.5,-156,-7.5,144,2026-09-09T12:28:49.589774+00:00,https://novig.com/event-markets/01a07f50-13ee-7071-b7fc-cb617545989d
+2026-09-09,ATP,Hard,3,A. Blockx,K. Khachanov,2.5,-104,-2.5,-104,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
+2026-09-09,ATP,Hard,3,A. Blockx,K. Khachanov,1.5,122,-1.5,-133,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
+2026-09-09,ATP,Hard,3,A. Blockx,K. Khachanov,5.5,-317,-5.5,178,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
+2026-09-09,ATP,Hard,3,A. Blockx,K. Khachanov,4.5,-203,-4.5,170,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
+2026-09-09,ATP,Hard,3,A. Blockx,K. Khachanov,3.5,-122,-3.5,117,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
+2026-09-09,ATP,Hard,3,A. Blockx,K. Khachanov,-1.5,163,1.5,-270,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
+2026-09-09,ATP,Hard,3,B. Van De Zandschulp,A. Zverev,6.5,104,-6.5,-108,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07f50-13ee-7071-b7fc-cb617545989d
+2026-09-09,ATP,Hard,3,B. Van De Zandschulp,A. Zverev,5.5,170,-5.5,-186,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07f50-13ee-7071-b7fc-cb617545989d
+2026-09-09,ATP,Hard,3,B. Van De Zandschulp,A. Zverev,8.5,-376,-8.5,194,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07f50-13ee-7071-b7fc-cb617545989d
+2026-09-09,ATP,Hard,3,B. Van De Zandschulp,A. Zverev,7.5,-163,-7.5,144,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07f50-13ee-7071-b7fc-cb617545989d
+2026-09-09,ATP,Hard,3,Alexander Blockx,Karen Khachanov,2.5,-104,-2.5,-104,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
+2026-09-09,ATP,Hard,3,Alexander Blockx,Karen Khachanov,1.5,122,-1.5,-133,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
+2026-09-09,ATP,Hard,3,Alexander Blockx,Karen Khachanov,5.5,-317,-5.5,178,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
+2026-09-09,ATP,Hard,3,Alexander Blockx,Karen Khachanov,4.5,-203,-4.5,170,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
+2026-09-09,ATP,Hard,3,Alexander Blockx,Karen Khachanov,3.5,-122,-3.5,117,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
+2026-09-09,ATP,Hard,3,Alexander Blockx,Karen Khachanov,-1.5,163,1.5,-270,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07ee2-40d7-7142-a8cf-faeb5bea6b37
+2026-09-09,ATP,Hard,3,Botic Van De Zandschulp,Alexander Zverev,6.5,104,-6.5,-108,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07f50-13ee-7071-b7fc-cb617545989d
+2026-09-09,ATP,Hard,3,Botic Van De Zandschulp,Alexander Zverev,5.5,170,-5.5,-186,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07f50-13ee-7071-b7fc-cb617545989d
+2026-09-09,ATP,Hard,3,Botic Van De Zandschulp,Alexander Zverev,8.5,-376,-8.5,194,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07f50-13ee-7071-b7fc-cb617545989d
+2026-09-09,ATP,Hard,3,Botic Van De Zandschulp,Alexander Zverev,7.5,-163,-7.5,144,2026-09-09T17:16:20.113965+00:00,https://novig.com/event-markets/01a07f50-13ee-7071-b7fc-cb617545989d
