@@ -1,18 +1,20 @@
 {
   "success": true,
-  "checked_at": "2026-09-08T20:13:05.725605+00:00",
-  "match_date": "2026-09-08",
+  "checked_at": "2026-09-09T07:25:11.393619+00:00",
+  "match_date": "2026-09-09",
   "day_label": "Today",
-  "events_found": 2,
+  "events_found": 4,
   "events": [
-    "C. Alcaraz vs B. Shelton",
-    "Carlos Alcaraz vs Ben Shelton"
+    "A. Blockx vs K. Khachanov",
+    "B. Van De Zandschulp vs A. Zverev",
+    "Alexander Blockx vs Karen Khachanov",
+    "Botic Van De Zandschulp vs Alexander Zverev"
   ],
-  "spread_markets_found": 2,
+  "spread_markets_found": 4,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 2,
-  "matches_parsed": 2,
+  "executable_spread_markets": 4,
+  "matches_parsed": 4,
   "rows_saved": 12,
   "error": null
 }
