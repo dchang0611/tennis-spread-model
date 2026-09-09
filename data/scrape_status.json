@@ -1,6 +1,6 @@
 {
-  "success": true,
-  "checked_at": "2026-09-09T17:16:20.113892+00:00",
+  "success": false,
+  "checked_at": "2026-09-09T20:00:17.536644+00:00",
   "match_date": "2026-09-09",
   "day_label": "Today",
   "events_found": 4,
@@ -10,11 +10,5 @@
     "Alexander Blockx vs Karen Khachanov",
     "Botic Van De Zandschulp vs Alexander Zverev"
   ],
-  "spread_markets_found": 4,
-  "parser_failures": [],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 4,
-  "matches_parsed": 4,
-  "rows_saved": 20,
-  "error": null
+  "error": "Could not resolve full event-page player names for A. Blockx vs K. Khachanov."
 }
