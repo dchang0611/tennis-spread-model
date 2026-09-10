@@ -1,14 +1,9 @@
 {
   "success": false,
-  "checked_at": "2026-09-09T20:00:17.536644+00:00",
-  "match_date": "2026-09-09",
+  "checked_at": "2026-09-10T12:21:57.622299+00:00",
+  "match_date": "2026-09-10",
   "day_label": "Today",
-  "events_found": 4,
-  "events": [
-    "A. Blockx vs K. Khachanov",
-    "B. Van De Zandschulp vs A. Zverev",
-    "Alexander Blockx vs Karen Khachanov",
-    "Botic Van De Zandschulp vs Alexander Zverev"
-  ],
-  "error": "Could not resolve full event-page player names for A. Blockx vs K. Khachanov."
+  "events_found": 0,
+  "events": [],
+  "error": "No Novig ATP events labeled 'Today' were found."
 }
