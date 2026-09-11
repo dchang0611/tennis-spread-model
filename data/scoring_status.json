@@ -1,9 +1,6 @@
 {
   "success": true,
-  "market_matchups": 4,
-  "modeled_matchups": 2,
-  "unmatched_model_players": [
-    "K. Khachanov vs A. Zverev",
-    "B. Shelton vs F. Tiafoe"
-  ]
+  "market_matchups": 1,
+  "modeled_matchups": 1,
+  "unmatched_model_players": []
 }
