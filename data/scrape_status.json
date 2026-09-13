@@ -1,11 +1,7 @@
 {
   "success": false,
-  "checked_at": "2026-09-13T17:03:36.240571+00:00",
+  "checked_at": "2026-09-13T19:43:39.446868+00:00",
   "match_date": "2026-09-13",
   "day_label": "Today",
-  "events_found": 1,
-  "events": [
-    "Ben Shelton vs Alexander Zverev"
-  ],
-  "error": "Could not resolve full event-page player names for Ben Shelton vs Alexander Zverev."
+  "error": "Novig tennis event cards did not load; cannot verify market availability."
 }
