@@ -1,9 +1,18 @@
 {
-  "success": false,
-  "checked_at": "2026-09-12T21:39:23.656860+00:00",
-  "match_date": "2026-09-12",
+  "success": true,
+  "checked_at": "2026-09-13T07:51:45.529307+00:00",
+  "match_date": "2026-09-13",
   "day_label": "Today",
-  "events_found": 0,
-  "events": [],
-  "error": "No Novig ATP events labeled 'Today' were found."
+  "events_found": 2,
+  "events": [
+    "B. Shelton vs A. Zverev",
+    "Ben Shelton vs Alexander Zverev"
+  ],
+  "spread_markets_found": 2,
+  "parser_failures": [],
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 2,
+  "matches_parsed": 2,
+  "rows_saved": 6,
+  "error": null
 }
