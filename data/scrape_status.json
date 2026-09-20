@@ -1,7 +1,7 @@
 {
   "success": false,
-  "checked_at": "2026-09-19T19:34:44.022014+00:00",
-  "match_date": "2026-09-19",
+  "checked_at": "2026-09-20T12:36:13.784154+00:00",
+  "match_date": "2026-09-20",
   "day_label": "Today",
-  "error": "No unambiguous ATP surface calendar entry exists for 2026-09-19; refusing to label the slate."
+  "error": "No unambiguous ATP surface calendar entry exists for 2026-09-20; refusing to label the slate."
 }
