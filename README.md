@@ -15,12 +15,13 @@ The public dashboard fails closed when current Novig lines have not been scored.
 
 ## Current market input
 
-Surface assignments live in `surface_calendar.py`, with named tournaments and
-verified ATP dates through November 1, 2026. Novig currently exposes only ATP on
-the event page: generic ATP slates require all active calendar entries to agree
-on surface; mixed/unknown dates stay closed. This is calendar consensus, not
-verified per-match tournament identity. Update the registry from the linked ATP
-source before expiry; the workflow warns within 14 days of the coverage end.
+Surface assignments are fetched afresh for each run from Tennis Explorer match
+pages. The lookup matches both players against dated singles schedules for the
+Pacific date and following European date, then verifies the match header's date,
+tournament and surface. There is no hardcoded tournament list or expiry date.
+Unknown or ambiguous matches are excluded with diagnostics; verified matches
+continue. Source URLs are retained in scrape diagnostics. Source availability
+and markup remain external dependencies; there is no default-to-Hard fallback.
 Successful raw captures are retained under `data/market_history/`. Failed market
 refreshes still deploy diagnostics, then mark the workflow failed.
 

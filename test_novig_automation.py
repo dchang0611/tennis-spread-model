@@ -3,10 +3,10 @@ from unittest.mock import Mock
 from datetime import date
 
 import pandas as pd
-from surface_calendar import resolve_surface
+from surface_calendar import LiveSurfaceLookup, parse_match_surface, aliases
 
 from build_spread_site import is_history_v2_eligible, rationale_for_pick, reconcile_board_with_history
-from novig_scraper import MORE_MARKETS_RE, open_event_card, wait_for_event_cards, more_complete_name, parse_event_card, parse_event_page_players, parse_spread_tokens, surface_for_date
+from novig_scraper import MORE_MARKETS_RE, open_event_card, wait_for_event_cards, more_complete_name, parse_event_card, parse_event_page_players, parse_spread_tokens
 from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, name_aliases, parse_atp_results_text, parse_espn_scoreboard, parse_tennis_explorer_html, profit_for_result, score_game_margin, settle_history
 
 
@@ -108,26 +108,43 @@ class NovigAutomationTests(unittest.TestCase):
         tokens = ["Game Spread", "Player A -2.5", "•", "Player B +2.5", "•"]
         self.assertEqual(parse_spread_tokens(tokens), [])
 
-    def test_surface_calendar_is_date_bounded(self):
-        self.assertEqual(surface_for_date(date(2026, 8, 8)), "Hard")
-        with self.assertRaises(RuntimeError):
-            surface_for_date(date(2027, 8, 8))
+    def test_live_surface_has_no_calendar_expiry(self):
+        for year, month, day in ((2026, 11, 2), (2027, 1, 5), (2031, 7, 8)):
+            played = date(year, month, day)
+            schedule = '<tr class="head flags"><td><a href="/event/2031/atp-men/">Test Open</a></td></tr><tr id="r1"><td><a href="/player/a/">Machac T.</a></td><td><a href="/match-detail/?id=1">info</a></td></tr><tr id="r1b"><td><a href="/player/b/">Gea A.</a></td></tr>'
+            header = f'<div class="box boxBasic lGray"><span class="upper">{played:%d.%m.%Y}</span>, <a href="/event/2031/atp-men/">Test Open</a>, final, clay</div>'
+            fetch = Mock(side_effect=lambda url: header if 'match-detail' in url else schedule if f'day={played:%d}' in url else '')
+            lookup = LiveSurfaceLookup(played, fetch)
+            self.assertEqual(lookup.resolve('Tomas Machac', 'Arthur Gea')['surface'], 'Clay')
+            self.assertEqual(lookup.resolve('A. Gea', 'T. Machac')['tournament'], 'Test Open')
 
-    def test_asian_swing_and_indoor_calendar(self):
-        for day in (date(2026, 9, 28), date(2026, 10, 6), date(2026, 10, 25), date(2026, 11, 1)):
-            self.assertEqual(surface_for_date(day), "Hard")
-        self.assertEqual(resolve_surface(date(2026, 9, 28), "Hangzhou")["tournaments"], ["Hangzhou"])
-        for day in (date(2026, 9, 18), date(2026, 11, 2)):
+    def test_live_surface_rejects_unknown_and_ambiguous_pair(self):
+        lookup = LiveSurfaceLookup(date(2030, 1, 1), lambda url: '')
+        with self.assertRaises(RuntimeError):
+            lookup.resolve('A. Player', 'B. Other')
+        lookup.matches = [dict(player_a='Player A.', player_b='Other B.', source=url) for url in ('one', 'two')]
+        with self.assertRaises(RuntimeError):
+            lookup.resolve('A. Player', 'B. Other')
+
+    def test_surface_reads_only_dated_match_header(self):
+        html = '<div class="box boxBasic lGray">02.11.2026, <a href="/event/2026/atp-men/">Test Open</a>, indoor hard</div><div>Clay Grass historical stats</div>'
+        self.assertEqual(parse_match_surface(html, date(2026,11,2), 'Test Open'), 'Hard')
+        for day, event in ((date(2026,11,3), 'Test Open'), (date(2026,11,2), 'Wrong Open')):
             with self.assertRaises(RuntimeError):
-                surface_for_date(day)
+                parse_match_surface(html, day, event)
+        with self.assertRaises(RuntimeError):
+            parse_match_surface(html.replace('indoor hard', 'unknown'), date(2026,11,2), 'Test Open')
 
-    def test_mixed_surface_requires_named_tournament(self):
-        calendar = [("A", "2026-09-28", "2026-09-29", "Hard"), ("B", "2026-09-28", "2026-09-29", "Clay")]
+    def test_compound_name_aliases(self):
+        self.assertTrue(aliases('Pablo Carreno Busta') & aliases('Carreno-Busta P.'))
+        self.assertTrue(aliases('Botic Van De Zandschulp') & aliases('Van De Zandschulp B.'))
+        self.assertFalse(aliases('Arthur Gea') & aliases('Tomas Machac'))
+
+    def test_relative_source_date_at_year_boundary(self):
+        html = '<div class="box boxBasic lGray">Today, 05:00, <a href="/event/2027/atp-men/">Test Open</a>, Qualification, hard</div>'
+        self.assertEqual(parse_match_surface(html, date(2027,1,1), 'Test Open', date(2027,1,1)), 'Hard')
         with self.assertRaises(RuntimeError):
-            resolve_surface(date(2026, 9, 28), calendar=calendar)
-        self.assertEqual(resolve_surface(date(2026, 9, 28), "B", calendar)["surface"], "Clay")
-        with self.assertRaises(RuntimeError):
-            resolve_surface(date(2026, 9, 28), "Unknown", calendar)
+            parse_match_surface(html, date(2026,12,31), 'Test Open', date(2027,1,1))
 
     def test_score_margin_and_retirement(self):
         self.assertEqual(score_game_margin("6-4 7-6(5)"), 3)

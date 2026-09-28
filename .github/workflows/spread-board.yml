@@ -94,13 +94,9 @@ jobs:
           from pathlib import Path
           from datetime import date
           board = json.loads(Path('site/data/board.json').read_text())
-          ready = bool(board['scrape_status'].get('success') and board['scoring_status'].get('success'))
+          ready = bool(board['scrape_status'].get('success') and board['scoring_status'].get('success') and not board['scrape_status'].get('surface_failures'))
           with open(os.environ['GITHUB_OUTPUT'], 'a') as out:
               out.write(f'market_ready={str(ready).lower()}\n')
-          assignment = board['scrape_status'].get('surface_assignment', {})
-          end = assignment.get('coverage_through')
-          if end and (date.fromisoformat(end) - date.fromisoformat(board['scrape_status']['match_date'])).days <= 14:
-              print(f'::warning::Verified surface calendar ends {end}; update tournament coverage before expiry.')
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
               out.write(board['status_message'] + '\n')
           PY

@@ -11,7 +11,7 @@ from zoneinfo import ZoneInfo
 
 import pandas as pd
 from playwright.sync_api import Page, sync_playwright
-from surface_calendar import resolve_surface
+from surface_calendar import LiveSurfaceLookup
 
 
 ATP_URL = "https://novig.com/trading/atp"
@@ -21,13 +21,6 @@ OUTPUT_COLUMNS = [
     "date", "tournament", "surface", "best_of", "player_a", "player_b",
     "spread_a", "odds_a", "spread_b", "odds_b", "collected_at", "event_url",
 ]
-
-# Novig labels these events only as ATP; its board and event pages do not expose
-# tournament surface. Keep the scheduled assignment explicit and date-bounded so
-# an old seasonal assumption can never silently leak into a new part of the tour.
-def surface_for_date(match_date: date) -> str:
-    return resolve_surface(match_date)["surface"]
-
 
 def parse_event_card(text: str) -> dict | None:
     lines = [line.strip() for line in str(text).splitlines() if line.strip()]
@@ -181,10 +174,13 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
     collected_at = datetime.now(timezone.utc).isoformat()
     match_day = datetime.now(PACIFIC).date()
     match_date = match_day.isoformat()
-    assignment = resolve_surface(match_day, tournament) if surface == "Auto" else {"surface": surface, "method": "explicit_override"}
-    resolved_surface = assignment["surface"]
+    lookup = LiveSurfaceLookup(match_day) if surface == "Auto" else None
+    surface_failures = []
+    surface_assignments = []
     if diagnostics is not None:
-        diagnostics["surface_assignment"] = assignment
+        diagnostics["surface_lookup_errors"] = lookup.errors if lookup else []
+        diagnostics["surface_failures"] = surface_failures
+        diagnostics["surface_assignments"] = surface_assignments
     rows: list[dict] = []
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(
@@ -231,6 +227,13 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
                 )
             player_a = more_complete_name(event["player_a"], resolved_players[0])
             player_b = more_complete_name(event["player_b"], resolved_players[1])
+            try:
+                assignment = lookup.resolve(player_a, player_b) if lookup else {"surface": surface, "tournament": tournament, "method": "explicit_override"}
+            except Exception as exc:
+                surface_failures.append({"match": f"{player_a} vs {player_b}", "error": str(exc)})
+                continue
+            resolved_surface = assignment["surface"]
+            surface_assignments.append(assignment)
             heading = page.get_by_text("Game Spread", exact=True)
             if heading.count() != 1:
                 continue
@@ -250,7 +253,7 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
             for spread_a, odds_a, spread_b, odds_b in parsed_prices:
                 rows.append({
                     "date": match_date,
-                    "tournament": tournament,
+                    "tournament": assignment["tournament"],
                     "surface": resolved_surface,
                     "best_of": 3,
                     "player_a": player_a,

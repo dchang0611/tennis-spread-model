@@ -1,39 +1,109 @@
-"""Sourced, tournament-scoped surface assignments; unknown dates stay closed."""
-from datetime import date
+"""Resolve each Novig matchup from current public match metadata; no season cutoff."""
+from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
+from html import unescape
+import re
+import unicodedata
+from urllib.request import Request, urlopen
 
-SOURCE = "https://www.atptour.com/en/news/what-is-the-2026-atp-tour-calendar/"
-# Main-draw dates from the ATP calendar. Do not extend these over Davis Cup,
-# qualifying, or a new season without verifying the relevant event.
-TOURNAMENTS = [
-    ("Washington", "2026-07-27", "2026-08-02", "Hard"),
-    ("Los Cabos", "2026-07-27", "2026-08-02", "Hard"),
-    ("Montreal", "2026-08-02", "2026-08-12", "Hard"),
-    ("Cincinnati", "2026-08-13", "2026-08-23", "Hard"),
-    ("Winston-Salem", "2026-08-23", "2026-08-29", "Hard"),
-    ("US Open", "2026-08-31", "2026-09-13", "Hard"),
-    ("Chengdu", "2026-09-23", "2026-09-29", "Hard"),
-    ("Hangzhou", "2026-09-23", "2026-09-29", "Hard"),
-    ("Laver Cup", "2026-09-25", "2026-09-27", "Hard"),
-    ("Tokyo", "2026-09-30", "2026-10-06", "Hard"),
-    ("Beijing", "2026-09-30", "2026-10-06", "Hard"),
-    ("Shanghai", "2026-10-07", "2026-10-18", "Hard"),
-    ("Almaty", "2026-10-19", "2026-10-25", "Hard"),
-    ("Brussels", "2026-10-19", "2026-10-25", "Hard"),
-    ("Lyon", "2026-10-19", "2026-10-25", "Hard"),
-    ("Vienna", "2026-10-26", "2026-11-01", "Hard"),
-    ("Basel", "2026-10-26", "2026-11-01", "Hard"),
-]
+BASE = 'https://www.tennisexplorer.com'
 
 
-def resolve_surface(match_date: date, tournament: str = "ATP", calendar=None) -> dict:
-    entries = TOURNAMENTS if calendar is None else calendar
-    active = [row for row in entries if date.fromisoformat(row[1]) <= match_date <= date.fromisoformat(row[2])]
-    if tournament.strip().lower() != "atp":
-        active = [row for row in active if row[0].casefold() == tournament.strip().casefold()]
-    surfaces = {row[3] for row in active}
-    if len(surfaces) != 1:
-        raise RuntimeError(f"No unambiguous ATP surface calendar entry exists for {match_date.isoformat()} ({tournament}); refusing to label the slate.")
-    return {"surface": surfaces.pop(), "tournaments": [row[0] for row in active],
-            "method": "named_tournament" if tournament.strip().lower() != "atp" else "same_surface_calendar_consensus",
-            "source": SOURCE, "verified_on": "2026-09-28",
-            "coverage_through": max(row[2] for row in entries)}
+def clean(value):
+    return ' '.join(unescape(re.sub(r'<[^>]+>', '', value)).split())
+
+
+def aliases(name):
+    words = re.findall(r'[a-z]+', unicodedata.normalize('NFKD', name).encode('ascii', 'ignore').decode().lower())
+    if len(words) < 2:
+        return set()
+    if len(words[-1]) == 1:
+        surname, initial = words[:-1], words[-1]
+    else:
+        surname, initial = words[1:], words[0][0]
+    return {''.join(surname) + initial, surname[-1] + initial}
+
+
+def parse_schedule(html, source_date):
+    tournament = None
+    pairs = {}
+    for attrs, body in re.findall(r'<tr\b([^>]*)>(.*?)</tr>', html, re.S | re.I):
+        if 'head flags' in attrs:
+            heading = re.search(r'<a href="([^\"]*/atp-men/)">(.*?)</a>', body, re.S)
+            tournament = clean(heading[2]) if heading else None
+            continue
+        row_id = re.search(r'id="(r\d+b?)"', attrs)
+        players = re.findall(r'<a href="/player/[^\"]+">(.*?)</a>', body, re.S)
+        if not tournament or not row_id or len(players) != 1:
+            continue
+        detail = re.search(r'href="(/match-detail/\?id=\d+)"', body)
+        pairs[row_id[1]] = {'player': clean(players[0]), 'tournament': tournament,
+                            'url': BASE + detail[1] if detail else None}
+    rows = []
+    for key, first in pairs.items():
+        second = pairs.get(key + 'b')
+        if key.endswith('b') or not second or not first['url'] or first['tournament'] != second['tournament']:
+            continue
+        rows.append({'player_a': first['player'], 'player_b': second['player'], 'tournament': first['tournament'],
+                     'source': first['url'], 'source_date': source_date.isoformat()})
+    return rows
+
+
+def parse_match_surface(html, expected_date, tournament, source_today=None):
+    # Read only the match header, never historical H2H or player surface stats.
+    headers = re.findall(r'<div class="box boxBasic lGray">(.*?)</div>', html, re.S)
+    matches = []
+    for header in headers:
+        text = clean(header.split('<iframe', 1)[0])
+        source_today = source_today or datetime.now(ZoneInfo('Europe/Prague')).date()
+        labels = {source_today: 'Today', source_today + timedelta(days=1): 'Tomorrow', source_today - timedelta(days=1): 'Yesterday'}
+        accepted = [expected_date.strftime('%d.%m.%Y')]
+        if expected_date in labels:
+            accepted.append(labels[expected_date])
+        if not any(text.startswith(label + ',') for label in accepted):
+            continue
+        names = re.findall(r'<a href="[^\"]*/atp-men/">(.*?)</a>', header, re.S)
+        if not any(clean(name) == tournament for name in names):
+            continue
+        surfaces = {s.capitalize() for s in re.findall(r'\b(hard|clay|grass|carpet)\b', text.lower())}
+        if len(surfaces) == 1:
+            matches.append(surfaces.pop())
+    if len(matches) != 1:
+        raise RuntimeError('Match header has no unique verified surface/date/tournament.')
+    return matches[0]
+
+
+def fetch_html(url):
+    if not url.startswith(BASE + '/'):
+        raise RuntimeError('Unexpected surface source host.')
+    with urlopen(Request(url, headers={'User-Agent': 'Mozilla/5.0'}), timeout=30) as response:
+        return response.read().decode('utf-8')
+
+
+class LiveSurfaceLookup:
+    def __init__(self, match_date, fetch=fetch_html):
+        self.match_date, self.fetch = match_date, fetch
+        self.matches, self.errors, self.cache = [], [], {}
+        # Source is in Europe; its date can be one day ahead of Pacific.
+        for offset in (0, 1):
+            day = match_date + timedelta(days=offset)
+            url = f'{BASE}/next/?type=atp-single&year={day.year}&month={day:%m}&day={day:%d}'
+            try:
+                self.matches.extend(parse_schedule(fetch(url), day))
+            except Exception as exc:
+                self.errors.append(f'{day}: {exc}')
+
+    def resolve(self, player_a, player_b):
+        aa, bb = aliases(player_a), aliases(player_b)
+        candidates = {}
+        for row in self.matches:
+            ra, rb = aliases(row['player_a']), aliases(row['player_b'])
+            if (aa & ra and bb & rb) or (aa & rb and bb & ra):
+                candidates[row['source']] = row
+        if len(candidates) != 1:
+            raise RuntimeError(f'Expected one live schedule match for {player_a} vs {player_b}; found {len(candidates)}.')
+        row = next(iter(candidates.values()))
+        if row['source'] not in self.cache:
+            surface = parse_match_surface(self.fetch(row['source']), date.fromisoformat(row['source_date']), row['tournament'])
+            self.cache[row['source']] = {**row, 'surface': surface, 'method': 'live_match_metadata'}
+        return self.cache[row['source']]

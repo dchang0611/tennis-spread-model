@@ -153,6 +153,10 @@ def build_payload() -> dict:
             f"{scoring_status.get('modeled_matchups', 0)} modeled matchup(s); "
             f"{scrape_status.get('matches_parsed', 0)} executable Novig matchup(s) were captured."
         )
+        surface_failures = scrape_status.get("surface_failures", [])
+        if surface_failures:
+            status = "partial_market_data"
+            message += f" Partial coverage: {len(surface_failures)} event(s) excluded because their surface could not be verified."
     else:
         status = "awaiting_market_data"
         reason = scrape_status.get("error") or "No same-day Novig spread scrape is available."
