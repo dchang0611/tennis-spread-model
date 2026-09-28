@@ -1,19 +1,147 @@
 {
   "success": true,
-  "checked_at": "2026-09-28T21:40:15.548154+00:00",
+  "checked_at": "2026-09-28T22:04:30.767167+00:00",
   "match_date": "2026-09-28",
   "day_label": "Today",
-  "surface_assignment": {
-    "surface": "Hard",
-    "tournaments": [
-      "Chengdu",
-      "Hangzhou"
-    ],
-    "method": "same_surface_calendar_consensus",
-    "source": "https://www.atptour.com/en/news/what-is-the-2026-atp-tour-calendar/",
-    "verified_on": "2026-09-28",
-    "coverage_through": "2026-11-01"
-  },
+  "surface_lookup_errors": [],
+  "surface_failures": [],
+  "surface_assignments": [
+    {
+      "player_a": "Machac T.",
+      "player_b": "Gea A.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335462",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Mannarino A.",
+      "player_b": "Carreno-Busta P.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335514",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Munar J.",
+      "player_b": "Kovacevic A.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335468",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Trungelliti M.",
+      "player_b": "Molcan A.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335460",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Tsitsipas S.",
+      "player_b": "Hijikata R.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3334964",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Vallejo A.",
+      "player_b": "Faria J.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335470",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Fils A.",
+      "player_b": "Majchrzak K.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335472",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Tsitsipas S.",
+      "player_b": "Hijikata R.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3334964",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Machac T.",
+      "player_b": "Gea A.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335462",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Munar J.",
+      "player_b": "Kovacevic A.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335468",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Fils A.",
+      "player_b": "Majchrzak K.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335472",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Trungelliti M.",
+      "player_b": "Molcan A.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335460",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Vallejo A.",
+      "player_b": "Faria J.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335470",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Van De Zandschulp B.",
+      "player_b": "Cui J.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335512",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Mannarino A.",
+      "player_b": "Carreno-Busta P.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335514",
+      "source_date": "2026-09-29",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    }
+  ],
   "events_found": 15,
   "events": [
     "A. Gea vs T. Machac",
