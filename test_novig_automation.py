@@ -3,6 +3,8 @@ from unittest.mock import Mock
 from datetime import date
 
 import pandas as pd
+from surface_calendar import resolve_surface
+from backfill_results import parse_results
 
 from build_spread_site import is_history_v2_eligible, rationale_for_pick, reconcile_board_with_history
 from novig_scraper import MORE_MARKETS_RE, open_event_card, wait_for_event_cards, more_complete_name, parse_event_card, parse_event_page_players, parse_spread_tokens, surface_for_date
@@ -10,6 +12,18 @@ from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, n
 
 
 class NovigAutomationTests(unittest.TestCase):
+    def test_results_only_scope_and_tiebreak_scores(self):
+        def match(tournament, number):
+            return f'''<tr class="head flags"><td><a href="/event/2026/atp-men/">{tournament}</a></td></tr>
+            <tr id="r{number}"><td><a href="/player/a/">Player A.</a></td><td class="result">2</td><td class="score">7</td><td class="score">6</td><td><a href="/match-detail/?id={number}">info</a></td></tr>
+            <tr id="r{number}b"><td><a href="/player/b/">Player B.</a></td><td class="result">0</td><td class="score">6<sup>4</sup></td><td class="score">3</td></tr>'''
+        html = match('Chengdu', 1) + match('UTR Pro Tennis Series', 2) + match('Porto challenger', 3)
+        rows = parse_results(html, '2026-09-28', 'https://www.tennisexplorer.com/results/')
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]['score'], '7-6 6-3')
+        self.assertEqual(rows[0]['record_type'], 'results_only')
+        self.assertNotIn('profit_units', rows[0])
+
     def test_history_v2_excludes_any_bet_containing_a_bad_factor(self):
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "a more favorable serve-versus-return matchup"}))
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "a lighter recent workload"}))
@@ -111,6 +125,22 @@ class NovigAutomationTests(unittest.TestCase):
         self.assertEqual(surface_for_date(date(2026, 8, 8)), "Hard")
         with self.assertRaises(RuntimeError):
             surface_for_date(date(2027, 8, 8))
+
+    def test_asian_swing_and_indoor_calendar(self):
+        for day in (date(2026, 9, 28), date(2026, 10, 6), date(2026, 10, 25), date(2026, 11, 1)):
+            self.assertEqual(surface_for_date(day), "Hard")
+        self.assertEqual(resolve_surface(date(2026, 9, 28), "Hangzhou")["tournaments"], ["Hangzhou"])
+        for day in (date(2026, 9, 18), date(2026, 11, 2)):
+            with self.assertRaises(RuntimeError):
+                surface_for_date(day)
+
+    def test_mixed_surface_requires_named_tournament(self):
+        calendar = [("A", "2026-09-28", "2026-09-29", "Hard"), ("B", "2026-09-28", "2026-09-29", "Clay")]
+        with self.assertRaises(RuntimeError):
+            resolve_surface(date(2026, 9, 28), calendar=calendar)
+        self.assertEqual(resolve_surface(date(2026, 9, 28), "B", calendar)["surface"], "Clay")
+        with self.assertRaises(RuntimeError):
+            resolve_surface(date(2026, 9, 28), "Unknown", calendar)
 
     def test_score_margin_and_retirement(self):
         self.assertEqual(score_game_margin("6-4 7-6(5)"), 3)

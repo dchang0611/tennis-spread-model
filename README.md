@@ -15,6 +15,21 @@ The public dashboard fails closed when current Novig lines have not been scored.
 
 ## Current market input
 
+Surface assignments live in `surface_calendar.py`, with named tournaments and
+verified ATP dates through November 1, 2026. Novig currently exposes only ATP on
+the event page: generic ATP slates require all active calendar entries to agree
+on surface; mixed/unknown dates stay closed. This is calendar consensus, not
+verified per-match tournament identity. Update the registry from the linked ATP
+source before expiry; the workflow warns within 14 days of the coverage end.
+Successful raw captures are retained under `data/market_history/`. Failed market
+refreshes still deploy diagnostics, then mark the workflow failed.
+
+The Missed Games tab contains a separate September 13–28 results-only recovery.
+`backfill_results.py` records source URLs and per-date counts in
+`data/missed_results.json`; source dates are not Pacific-converted. It includes
+qualifying and the named team events, excludes UTR/Challenger/ITF, and never adds
+retrospective bets, prices, ROI, or factor labels to the forward ledger.
+
 Update `data/novig_spreads.csv` with one row per paired spread. Pushing that file to `main`, or manually running the workflow, rebuilds and publishes the dashboard.
 
 ## Model safeguards

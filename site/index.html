@@ -43,6 +43,7 @@
       <button class="tab active" data-panel="boardPanel">Spread Board</button>
       <button class="tab" data-panel="strictV2Panel">Strict V2 Plays</button>
       <button class="tab" data-panel="historyPanel">Historical Results</button>
+      <button class="tab" data-panel="missedPanel">Missed Games</button>
       <button class="tab" data-panel="historyV2Panel">Historical Performance V2</button>
       <button class="tab" data-panel="factorPanel">Factor Performance</button>
       <button class="tab" data-panel="focusPanel">Factor Confluence</button>
@@ -63,6 +64,13 @@
       </div>
       <div id="statusBanner" class="status-banner loading">Loading the latest board…</div>
       <div id="board" class="board-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="missedPanel" class="panel" aria-labelledby="missedTitle">
+      <div class="section-heading"><div><p class="eyebrow">RESULTS ONLY · SEPTEMBER 13–28</p><h2 id="missedTitle">Games during the data gap</h2></div></div>
+      <div id="missedNotice" class="status-banner closed"></div>
+      <p>These are source-reported match results, not model recommendations. Historical Novig spreads and prices were not captured, so these games do not count toward betting records, ROI, or factor performance. Dates follow the results source and may differ from Pacific dates.</p>
+      <div class="history-table-wrap"><table class="history-table"><thead><tr><th>Date</th><th>Tournament</th><th>Winner</th><th>Opponent</th><th>Score</th><th>Status</th><th>Source</th></tr></thead><tbody id="missedRows"></tbody></table></div>
     </section>
 
     <section id="strictV2Panel" class="panel" aria-labelledby="strictV2Title">
@@ -181,6 +189,6 @@
   <footer>
     <p>Research tool only. Prices move, edges are uncertain, and no model guarantees profit.</p>
   </footer>
-  <script src="app.js?v=20260905-no-factors"></script>
+  <script src="app.js?v=20260928-missed-games"></script>
 </body>
 </html>

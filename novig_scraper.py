@@ -11,6 +11,7 @@ from zoneinfo import ZoneInfo
 
 import pandas as pd
 from playwright.sync_api import Page, sync_playwright
+from surface_calendar import resolve_surface
 
 
 ATP_URL = "https://novig.com/trading/atp"
@@ -24,19 +25,8 @@ OUTPUT_COLUMNS = [
 # Novig labels these events only as ATP; its board and event pages do not expose
 # tournament surface. Keep the scheduled assignment explicit and date-bounded so
 # an old seasonal assumption can never silently leak into a new part of the tour.
-ATP_SURFACE_CALENDAR = (
-    (date(2026, 7, 27), date(2026, 9, 13), "Hard"),
-)
-
-
 def surface_for_date(match_date: date) -> str:
-    matches = [surface for start, end, surface in ATP_SURFACE_CALENDAR if start <= match_date <= end]
-    if len(matches) != 1:
-        raise RuntimeError(
-            f"No unambiguous ATP surface calendar entry exists for {match_date.isoformat()}; "
-            "refusing to label the slate."
-        )
-    return matches[0]
+    return resolve_surface(match_date)["surface"]
 
 
 def parse_event_card(text: str) -> dict | None:
@@ -191,7 +181,10 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
     collected_at = datetime.now(timezone.utc).isoformat()
     match_day = datetime.now(PACIFIC).date()
     match_date = match_day.isoformat()
-    resolved_surface = surface_for_date(match_day) if surface == "Auto" else surface
+    assignment = resolve_surface(match_day, tournament) if surface == "Auto" else {"surface": surface, "method": "explicit_override"}
+    resolved_surface = assignment["surface"]
+    if diagnostics is not None:
+        diagnostics["surface_assignment"] = assignment
     rows: list[dict] = []
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(
@@ -310,6 +303,10 @@ def main() -> None:
         temporary = output.with_suffix(output.suffix + ".tmp")
         frame.to_csv(temporary, index=False)
         temporary.replace(output)
+        # Retain every successful capture so future outages can be audited/backfilled.
+        archive = output.parent / "market_history" / status["match_date"]
+        archive.mkdir(parents=True, exist_ok=True)
+        frame.to_csv(archive / (datetime.now(timezone.utc).strftime("%H%M%S%f") + ".csv"), index=False)
         status.update({"success": True, "rows_saved": len(frame), "error": None})
         print(f"Saved {len(frame)} paired prices across {match_count} matches to {output}.")
     except Exception as exc:

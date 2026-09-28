@@ -21,6 +21,8 @@ on:
       - "tennis_model_output/spread_results_history.csv"
       - "tennis_spread_model.py"
       - "novig_scraper.py"
+      - "surface_calendar.py"
+      - "data/missed_results.json"
       - "update_spread_history.py"
       - "test_novig_automation.py"
       - "build_spread_site.py"
@@ -40,6 +42,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      market_ready: ${{ steps.health.outputs.market_ready }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -83,6 +87,24 @@ jobs:
       - name: Lock today's first qualified bets into Historical Performance
         run: python update_spread_history.py --mode archive
       - run: python build_spread_site.py
+      - name: Record market refresh health
+        id: health
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          from datetime import date
+          board = json.loads(Path('site/data/board.json').read_text())
+          ready = bool(board['scrape_status'].get('success') and board['scoring_status'].get('success'))
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as out:
+              out.write(f'market_ready={str(ready).lower()}\n')
+          assignment = board['scrape_status'].get('surface_assignment', {})
+          end = assignment.get('coverage_through')
+          if end and (date.fromisoformat(end) - date.fromisoformat(board['scrape_status']['match_date'])).days <= 14:
+              print(f'::warning::Verified surface calendar ends {end}; update tournament coverage before expiry.')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
+              out.write(board['status_message'] + '\n')
+          PY
       - name: Persist nightly market and history data
         shell: bash
         run: |
@@ -112,3 +134,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Flag unavailable market refresh after publishing diagnostics
+        if: needs.build.outputs.market_ready != 'true'
+        run: |
+          echo "::error::Site deployed, but fresh Novig collection/scoring failed. See the published diagnostics."
+          exit 1
