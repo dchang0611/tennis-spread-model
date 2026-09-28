@@ -1,7 +1,42 @@
 {
-  "success": false,
-  "checked_at": "2026-09-28T21:08:43.044245+00:00",
+  "success": true,
+  "checked_at": "2026-09-28T21:27:14.071833+00:00",
   "match_date": "2026-09-28",
   "day_label": "Today",
-  "error": "No unambiguous ATP surface calendar entry exists for 2026-09-28; refusing to label the slate."
+  "surface_assignment": {
+    "surface": "Hard",
+    "tournaments": [
+      "Chengdu",
+      "Hangzhou"
+    ],
+    "method": "same_surface_calendar_consensus",
+    "source": "https://www.atptour.com/en/news/what-is-the-2026-atp-tour-calendar/",
+    "verified_on": "2026-09-28",
+    "coverage_through": "2026-11-01"
+  },
+  "events_found": 15,
+  "events": [
+    "A. Gea vs T. Machac",
+    "P. Carreno Busta vs A. Mannarino",
+    "A. Kovacevic vs J. Munar",
+    "A. Molcan vs M. Trungelliti",
+    "R. Hijikata vs S. Tsitsipas",
+    "J. Faria vs A. Vallejo",
+    "K. Majchrzak vs A. Fils",
+    "Rinky Hijikata vs Stefanos Tsitsipas",
+    "Arthur Gea vs Tomas Machac",
+    "Aleksandar Kovacevic vs Jaume Munar",
+    "Kamil Majchrzak vs Arthur Fils",
+    "Alex Molcan vs Marco Trungelliti",
+    "Jaime Faria vs Adolfo Daniel Vallejo",
+    "Jie Cui vs Botic Van De Zandschulp",
+    "Pablo Carreno Busta vs Adrian Mannarino"
+  ],
+  "spread_markets_found": 15,
+  "parser_failures": [],
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 15,
+  "matches_parsed": 15,
+  "rows_saved": 51,
+  "error": null
 }
