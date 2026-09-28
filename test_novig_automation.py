@@ -4,7 +4,6 @@ from datetime import date
 
 import pandas as pd
 from surface_calendar import resolve_surface
-from backfill_results import parse_results
 
 from build_spread_site import is_history_v2_eligible, rationale_for_pick, reconcile_board_with_history
 from novig_scraper import MORE_MARKETS_RE, open_event_card, wait_for_event_cards, more_complete_name, parse_event_card, parse_event_page_players, parse_spread_tokens, surface_for_date
@@ -12,18 +11,6 @@ from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, n
 
 
 class NovigAutomationTests(unittest.TestCase):
-    def test_results_only_scope_and_tiebreak_scores(self):
-        def match(tournament, number):
-            return f'''<tr class="head flags"><td><a href="/event/2026/atp-men/">{tournament}</a></td></tr>
-            <tr id="r{number}"><td><a href="/player/a/">Player A.</a></td><td class="result">2</td><td class="score">7</td><td class="score">6</td><td><a href="/match-detail/?id={number}">info</a></td></tr>
-            <tr id="r{number}b"><td><a href="/player/b/">Player B.</a></td><td class="result">0</td><td class="score">6<sup>4</sup></td><td class="score">3</td></tr>'''
-        html = match('Chengdu', 1) + match('UTR Pro Tennis Series', 2) + match('Porto challenger', 3)
-        rows = parse_results(html, '2026-09-28', 'https://www.tennisexplorer.com/results/')
-        self.assertEqual(len(rows), 1)
-        self.assertEqual(rows[0]['score'], '7-6 6-3')
-        self.assertEqual(rows[0]['record_type'], 'results_only')
-        self.assertNotIn('profit_units', rows[0])
-
     def test_history_v2_excludes_any_bet_containing_a_bad_factor(self):
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "a more favorable serve-versus-return matchup"}))
         self.assertFalse(is_history_v2_eligible({"feature_rationale": "a lighter recent workload"}))

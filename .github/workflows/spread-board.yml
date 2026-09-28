@@ -22,7 +22,6 @@ on:
       - "tennis_spread_model.py"
       - "novig_scraper.py"
       - "surface_calendar.py"
-      - "data/missed_results.json"
       - "update_spread_history.py"
       - "test_novig_automation.py"
       - "build_spread_site.py"

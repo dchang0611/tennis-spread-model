@@ -5,13 +5,6 @@ const fmtNum = (value, digits = 1) => Number.isFinite(Number(value)) ? Number(va
 const fmtOdds = value => { const number = Number(value); return Number.isFinite(number) ? `${number > 0 ? '+' : ''}${number}` : '—'; };
 const safe = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 
-function renderMissedResults() {
-  const archive = state.data?.missed_results || {};
-  const rows = (archive.matches || []).filter(row => inDateRange(row.date));
-  document.querySelector('#missedNotice').textContent = `${rows.length} source-reported results in this date range. Coverage: ${archive.start_date || '—'} through ${archive.end_date || '—'}. Results only; excluded from betting performance.`;
-  document.querySelector('#missedRows').innerHTML = rows.length ? [...rows].sort((a,b) => b.date.localeCompare(a.date)).map(row => `<tr><td>${safe(row.date)}</td><td>${safe(row.tournament)}</td><td>${safe(row.winner)}</td><td>${safe(row.loser)}</td><td>${safe(row.score)}</td><td>${safe(row.status)}</td><td><a href="${safe(row.source_url)}" target="_blank" rel="noopener noreferrer">Result</a></td></tr>`).join('') : '<tr><td colspan="7">No recovered results in this date range.</td></tr>';
-}
-
 function renderBoard() {
   // Rationale text is generated from distinct model-driver families upstream.
   const root = document.querySelector('#board');
@@ -266,9 +259,9 @@ function bindControls() {
     renderFocus();
   });
   document.querySelector('#focusMinMatches').addEventListener('change', event => { state.focusMinMatches = Number(event.target.value); renderFocus(); });
-  document.querySelector('#dateFrom').addEventListener('change', event => { state.dateFrom = event.target.value; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderMissedResults(); });
-  document.querySelector('#dateTo').addEventListener('change', event => { state.dateTo = event.target.value; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderMissedResults(); });
-  document.querySelector('#dateClear').addEventListener('click', () => { state.dateFrom = ''; state.dateTo = ''; document.querySelector('#dateFrom').value = ''; document.querySelector('#dateTo').value = ''; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderMissedResults(); });
+  document.querySelector('#dateFrom').addEventListener('change', event => { state.dateFrom = event.target.value; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); });
+  document.querySelector('#dateTo').addEventListener('change', event => { state.dateTo = event.target.value; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); });
+  document.querySelector('#dateClear').addEventListener('click', () => { state.dateFrom = ''; state.dateTo = ''; document.querySelector('#dateFrom').value = ''; document.querySelector('#dateTo').value = ''; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); });
 }
 
 async function load() {
@@ -281,11 +274,11 @@ async function load() {
     banner.textContent = state.data.status_message;
     banner.className = `status-banner ${state.data.status === 'ready' ? '' : 'closed'}`;
     if (state.data.generated_at) document.querySelector('#updatedText').textContent = `Updated ${new Date(state.data.generated_at).toLocaleString([], {dateStyle:'medium', timeStyle:'short'})}`;
-    renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderMissedResults();
+    renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus();
   } catch (error) {
     document.querySelector('#statusBanner').textContent = 'The latest board could not be verified. No plays are displayed.';
     document.querySelector('#statusBanner').className = 'status-banner closed';
-    renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderMissedResults();
+    renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus();
   }
 }
 

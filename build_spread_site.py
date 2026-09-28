@@ -182,7 +182,6 @@ def build_payload() -> dict:
         "history_v2": history_v2,
         "history_v2_excluded": len(history) - len(history_v2),
         "history_summary": history_summary,
-        "missed_results": read_json(ROOT / "data" / "missed_results.json"),
     }
 
 

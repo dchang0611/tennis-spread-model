@@ -24,12 +24,6 @@ source before expiry; the workflow warns within 14 days of the coverage end.
 Successful raw captures are retained under `data/market_history/`. Failed market
 refreshes still deploy diagnostics, then mark the workflow failed.
 
-The Missed Games tab contains a separate September 13–28 results-only recovery.
-`backfill_results.py` records source URLs and per-date counts in
-`data/missed_results.json`; source dates are not Pacific-converted. It includes
-qualifying and the named team events, excludes UTR/Challenger/ITF, and never adds
-retrospective bets, prices, ROI, or factor labels to the forward ledger.
-
 Update `data/novig_spreads.csv` with one row per paired spread. Pushing that file to `main`, or manually running the workflow, rebuilds and publishes the dashboard.
 
 ## Model safeguards
