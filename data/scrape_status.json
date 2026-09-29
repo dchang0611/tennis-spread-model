@@ -1,14 +1,10 @@
 {
   "success": true,
-  "checked_at": "2026-09-29T18:52:13.725887+00:00",
+  "checked_at": "2026-09-29T21:32:15.826689+00:00",
   "match_date": "2026-09-29",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Y. Bu vs J. Cerundolo",
-      "error": "Expected one live schedule match for Y. Bu vs J. Cerundolo; found 0."
-    },
     {
       "match": "Yunchaokete Bu vs Juan Manuel Cerundolo",
       "error": "Expected one live schedule match for Yunchaokete Bu vs Juan Manuel Cerundolo; found 0."
@@ -25,19 +21,19 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Lehecka J.",
-      "player_b": "Bergs Z.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335190",
+      "player_a": "Khachanov K.",
+      "player_b": "Auger Aliassime F.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335250",
       "source_date": "2026-09-30",
       "surface": "Hard",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Tabilo A.",
-      "player_b": "Paul T.",
+      "player_a": "Lehecka J.",
+      "player_b": "Bergs Z.",
       "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335180",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335190",
       "source_date": "2026-09-30",
       "surface": "Hard",
       "method": "live_match_metadata"
@@ -97,12 +93,11 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 11,
+  "events_found": 10,
   "events": [
     "A. Blockx vs V. Vacherot",
-    "Y. Bu vs J. Cerundolo",
+    "F. Auger-Aliassime vs K. Khachanov",
     "Z. Bergs vs J. Lehecka",
-    "T. Paul vs A. Tabilo",
     "Zizou Bergs vs Jiri Lehecka",
     "Alexander Blockx vs Valentin Vacherot",
     "Felix Auger-Aliassime vs Karen Khachanov",
