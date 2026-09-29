@@ -1,97 +1,25 @@
 {
   "success": true,
-  "checked_at": "2026-09-29T08:43:58.415698+00:00",
+  "checked_at": "2026-09-29T14:18:49.832757+00:00",
   "match_date": "2026-09-29",
   "day_label": "Today",
   "surface_lookup_errors": [],
-  "surface_failures": [],
+  "surface_failures": [
+    {
+      "match": "Y. Bu vs J. Cerundolo",
+      "error": "Expected one live schedule match for Y. Bu vs J. Cerundolo; found 0."
+    },
+    {
+      "match": "Yunchaokete Bu vs Juan Manuel Cerundolo",
+      "error": "Expected one live schedule match for Yunchaokete Bu vs Juan Manuel Cerundolo; found 0."
+    }
+  ],
   "surface_assignments": [
     {
-      "player_a": "Hurkacz H.",
-      "player_b": "Davidovich Fokina A.",
-      "tournament": "Chengdu",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335520",
-      "source_date": "2026-09-29",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Medvedev D.",
-      "player_b": "Rublev A.",
-      "tournament": "Hangzhou",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335516",
-      "source_date": "2026-09-29",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Buse I.",
-      "player_b": "Halys Q.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335242",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Tien L.",
-      "player_b": "Hurkacz H.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335248",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Safiullin R.",
-      "player_b": "Cobolli F.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335246",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Hurkacz H.",
-      "player_b": "Davidovich Fokina A.",
-      "tournament": "Chengdu",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335520",
-      "source_date": "2026-09-29",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Medvedev D.",
-      "player_b": "Rublev A.",
-      "tournament": "Hangzhou",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335516",
-      "source_date": "2026-09-29",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Alcaraz C.",
-      "player_b": "Michelsen A.",
+      "player_a": "Vacherot V.",
+      "player_b": "Blockx A.",
       "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335174",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Darderi L.",
-      "player_b": "Ruud C.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335186",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Shapovalov D.",
-      "player_b": "Shimabukuro S.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335178",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335172",
       "source_date": "2026-09-30",
       "surface": "Hard",
       "method": "live_match_metadata"
@@ -106,24 +34,6 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Musetti L.",
-      "player_b": "Fery A.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335182",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Nakashima B.",
-      "player_b": "Humbert U.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335188",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
       "player_a": "Vacherot V.",
       "player_b": "Blockx A.",
       "tournament": "Tokyo (Japan Open)",
@@ -131,30 +41,61 @@
       "source_date": "2026-09-30",
       "surface": "Hard",
       "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Khachanov K.",
+      "player_b": "Auger Aliassime F.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335250",
+      "source_date": "2026-09-30",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Tabilo A.",
+      "player_b": "Paul T.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335180",
+      "source_date": "2026-09-30",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Etcheverry T.",
+      "player_b": "Tsitsipas S.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3336604",
+      "source_date": "2026-09-30",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Struff J.",
+      "player_b": "Tirante T.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335236",
+      "source_date": "2026-09-30",
+      "surface": "Hard",
+      "method": "live_match_metadata"
     }
   ],
-  "events_found": 14,
+  "events_found": 9,
   "events": [
-    "A. Davidovich Fokina vs H. Hurkacz",
-    "A. Rublev vs D. Medvedev",
-    "Q. Halys vs I. Buse",
-    "H. Hurkacz vs L. Tien",
-    "F. Cobolli vs R. Safiullin",
-    "Alejandro Davidovich Fokina vs Hubert Hurkacz",
-    "Andrey Rublev vs Daniil Medvedev",
-    "Alex Michelsen vs Carlos Alcaraz",
-    "Casper Ruud vs Luciano Darderi",
-    "Sho Shimabukuro vs Denis Shapovalov",
+    "A. Blockx vs V. Vacherot",
+    "Y. Bu vs J. Cerundolo",
     "Zizou Bergs vs Jiri Lehecka",
-    "Arthur Fery vs Lorenzo Musetti",
-    "Ugo Humbert vs Brandon Nakashima",
-    "Alexander Blockx vs Valentin Vacherot"
+    "Alexander Blockx vs Valentin Vacherot",
+    "Felix Auger-Aliassime vs Karen Khachanov",
+    "Tommy Paul vs Alejandro Tabilo",
+    "Stefanos Tsitsipas vs Tomas Martin Etcheverry",
+    "Thiago Agustin Tirante vs Jan-Lennard Struff",
+    "Yunchaokete Bu vs Juan Manuel Cerundolo"
   ],
-  "spread_markets_found": 14,
+  "spread_markets_found": 7,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 14,
-  "matches_parsed": 14,
-  "rows_saved": 49,
+  "executable_spread_markets": 7,
+  "matches_parsed": 7,
+  "rows_saved": 26,
   "error": null
 }
