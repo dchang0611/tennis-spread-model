@@ -1,8 +1,10 @@
 {
   "success": true,
-  "market_matchups": 7,
+  "market_matchups": 9,
   "modeled_matchups": 6,
   "unmatched_model_players": [
-    "A. Blockx vs V. Vacherot"
+    "A. Blockx vs V. Vacherot",
+    "T. Paul vs A. Tabilo",
+    "Z. Bergs vs J. Lehecka"
   ]
 }
