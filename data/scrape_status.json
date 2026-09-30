@@ -1,28 +1,162 @@
 {
-  "success": false,
-  "checked_at": "2026-09-30T07:51:35.513189+00:00",
+  "success": true,
+  "checked_at": "2026-09-30T14:12:49.063653+00:00",
   "match_date": "2026-09-30",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
-  "surface_assignments": [],
-  "events_found": 15,
+  "surface_assignments": [
+    {
+      "player_a": "Etcheverry T.",
+      "player_b": "Tsitsipas S.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3336604",
+      "source_date": "2026-10-01",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Buse I.",
+      "player_b": "Halys Q.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335242",
+      "source_date": "2026-10-01",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "De Minaur A.",
+      "player_b": "Navone M.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335240",
+      "source_date": "2026-10-01",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Safiullin R.",
+      "player_b": "Cobolli F.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335246",
+      "source_date": "2026-10-01",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Davidovich Fokina A.",
+      "player_b": "Berrettini M.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335192",
+      "source_date": "2026-10-01",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Darderi L.",
+      "player_b": "Ruud C.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335186",
+      "source_date": "2026-10-01",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Nakashima B.",
+      "player_b": "Humbert U.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335188",
+      "source_date": "2026-10-01",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Fritz T.",
+      "player_b": "Munar J.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3336600",
+      "source_date": "2026-10-01",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Faria J.",
+      "player_b": "Fery A.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3337324",
+      "source_date": "2026-10-01",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "De Minaur A.",
+      "player_b": "Navone M.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335240",
+      "source_date": "2026-10-01",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Molcan A.",
+      "player_b": "Rinderknech A.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3336624",
+      "source_date": "2026-10-01",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Rune H.",
+      "player_b": "Jacquet K.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335184",
+      "source_date": "2026-10-01",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Nishikori K.",
+      "player_b": "Tiafoe F.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335194",
+      "source_date": "2026-10-01",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Etcheverry T.",
+      "player_b": "Tsitsipas S.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3336604",
+      "source_date": "2026-10-01",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    }
+  ],
+  "events_found": 14,
   "events": [
     "S. Tsitsipas vs T. Etcheverry",
-    "R. Sakamoto vs M. Arnaldi",
-    "H. Hurkacz vs L. Tien",
-    "N. Djokovic vs N. Borges",
-    "A. Rublev vs T. Griekspoor",
-    "A. Gea vs Z. Zhang",
     "Q. Halys vs I. Buse",
+    "M. Navone vs A. De Minaur",
     "F. Cobolli vs R. Safiullin",
-    "C. Norrie vs A. Zverev",
-    "Rei Sakamoto vs Matteo Arnaldi",
-    "Stefanos Tsitsipas vs Tomas Martin Etcheverry",
-    "Arthur Gea vs Zhizhen Zhang",
-    "Novak Djokovic vs Nuno Borges",
-    "Alex Michelsen vs Carlos Alcaraz",
-    "Casper Ruud vs Luciano Darderi"
+    "M. Berrettini vs A. Davidovich Fokina",
+    "Casper Ruud vs Luciano Darderi",
+    "Ugo Humbert vs Brandon Nakashima",
+    "Jaume Munar vs Taylor Fritz",
+    "Arthur Fery vs Jaime Faria",
+    "Mariano Navone vs Alex De Minaur",
+    "Arthur Rinderknech vs Alex Molcan",
+    "Kyrian Jacquet vs Holger Rune",
+    "Frances Tiafoe vs Kei Nishikori",
+    "Stefanos Tsitsipas vs Tomas Martin Etcheverry"
   ],
-  "error": "Could not resolve full event-page player names for S. Tsitsipas vs T. Etcheverry."
+  "spread_markets_found": 14,
+  "parser_failures": [],
+  "unpriced_spread_markets": [
+    "F. Cobolli vs R. Safiullin"
+  ],
+  "executable_spread_markets": 13,
+  "matches_parsed": 13,
+  "rows_saved": 39,
+  "error": null
 }
