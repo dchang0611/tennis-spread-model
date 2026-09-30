@@ -1,10 +1,9 @@
 {
   "success": true,
   "market_matchups": 13,
-  "modeled_matchups": 10,
+  "modeled_matchups": 11,
   "unmatched_model_players": [
     "M. Navone vs A. De Minaur",
-    "Q. Halys vs I. Buse",
     "S. Tsitsipas vs T. Etcheverry"
   ]
 }

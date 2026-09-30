@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-09-30T14:12:49.063653+00:00",
+  "checked_at": "2026-09-30T18:34:02.771669+00:00",
   "match_date": "2026-09-30",
   "day_label": "Today",
   "surface_lookup_errors": [],
@@ -16,10 +16,10 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Buse I.",
-      "player_b": "Halys Q.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335242",
+      "player_a": "Nakashima B.",
+      "player_b": "Humbert U.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3335188",
       "source_date": "2026-10-01",
       "surface": "Hard",
       "method": "live_match_metadata"
@@ -38,15 +38,6 @@
       "player_b": "Cobolli F.",
       "tournament": "Beijing",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3335246",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Davidovich Fokina A.",
-      "player_b": "Berrettini M.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335192",
       "source_date": "2026-10-01",
       "surface": "Hard",
       "method": "live_match_metadata"
@@ -133,13 +124,12 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 14,
+  "events_found": 13,
   "events": [
     "S. Tsitsipas vs T. Etcheverry",
-    "Q. Halys vs I. Buse",
+    "U. Humbert vs B. Nakashima",
     "M. Navone vs A. De Minaur",
     "F. Cobolli vs R. Safiullin",
-    "M. Berrettini vs A. Davidovich Fokina",
     "Casper Ruud vs Luciano Darderi",
     "Ugo Humbert vs Brandon Nakashima",
     "Jaume Munar vs Taylor Fritz",
@@ -150,13 +140,11 @@
     "Frances Tiafoe vs Kei Nishikori",
     "Stefanos Tsitsipas vs Tomas Martin Etcheverry"
   ],
-  "spread_markets_found": 14,
+  "spread_markets_found": 13,
   "parser_failures": [],
-  "unpriced_spread_markets": [
-    "F. Cobolli vs R. Safiullin"
-  ],
+  "unpriced_spread_markets": [],
   "executable_spread_markets": 13,
   "matches_parsed": 13,
-  "rows_saved": 39,
+  "rows_saved": 47,
   "error": null
 }
