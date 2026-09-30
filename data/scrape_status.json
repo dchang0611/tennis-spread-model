@@ -1,116 +1,28 @@
 {
-  "success": true,
-  "checked_at": "2026-09-29T21:32:15.826689+00:00",
-  "match_date": "2026-09-29",
+  "success": false,
+  "checked_at": "2026-09-30T07:51:35.513189+00:00",
+  "match_date": "2026-09-30",
   "day_label": "Today",
   "surface_lookup_errors": [],
-  "surface_failures": [
-    {
-      "match": "Yunchaokete Bu vs Juan Manuel Cerundolo",
-      "error": "Expected one live schedule match for Yunchaokete Bu vs Juan Manuel Cerundolo; found 0."
-    }
-  ],
-  "surface_assignments": [
-    {
-      "player_a": "Vacherot V.",
-      "player_b": "Blockx A.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335172",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Khachanov K.",
-      "player_b": "Auger Aliassime F.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335250",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Lehecka J.",
-      "player_b": "Bergs Z.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335190",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Lehecka J.",
-      "player_b": "Bergs Z.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335190",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Vacherot V.",
-      "player_b": "Blockx A.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335172",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Khachanov K.",
-      "player_b": "Auger Aliassime F.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335250",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Tabilo A.",
-      "player_b": "Paul T.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335180",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Etcheverry T.",
-      "player_b": "Tsitsipas S.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3336604",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Struff J.",
-      "player_b": "Tirante T.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335236",
-      "source_date": "2026-09-30",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    }
-  ],
-  "events_found": 10,
+  "surface_failures": [],
+  "surface_assignments": [],
+  "events_found": 15,
   "events": [
-    "A. Blockx vs V. Vacherot",
-    "F. Auger-Aliassime vs K. Khachanov",
-    "Z. Bergs vs J. Lehecka",
-    "Zizou Bergs vs Jiri Lehecka",
-    "Alexander Blockx vs Valentin Vacherot",
-    "Felix Auger-Aliassime vs Karen Khachanov",
-    "Tommy Paul vs Alejandro Tabilo",
+    "S. Tsitsipas vs T. Etcheverry",
+    "R. Sakamoto vs M. Arnaldi",
+    "H. Hurkacz vs L. Tien",
+    "N. Djokovic vs N. Borges",
+    "A. Rublev vs T. Griekspoor",
+    "A. Gea vs Z. Zhang",
+    "Q. Halys vs I. Buse",
+    "F. Cobolli vs R. Safiullin",
+    "C. Norrie vs A. Zverev",
+    "Rei Sakamoto vs Matteo Arnaldi",
     "Stefanos Tsitsipas vs Tomas Martin Etcheverry",
-    "Thiago Agustin Tirante vs Jan-Lennard Struff",
-    "Yunchaokete Bu vs Juan Manuel Cerundolo"
+    "Arthur Gea vs Zhizhen Zhang",
+    "Novak Djokovic vs Nuno Borges",
+    "Alex Michelsen vs Carlos Alcaraz",
+    "Casper Ruud vs Luciano Darderi"
   ],
-  "spread_markets_found": 9,
-  "parser_failures": [],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 9,
-  "matches_parsed": 9,
-  "rows_saved": 36,
-  "error": null
+  "error": "Could not resolve full event-page player names for S. Tsitsipas vs T. Etcheverry."
 }

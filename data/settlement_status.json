@@ -1,6 +1,6 @@
 {
   "complete": false,
-  "checked_at": "2026-09-29T21:33:01.479532+00:00",
+  "checked_at": "2026-09-30T07:51:47.884230+00:00",
   "sources": {},
   "unsettled_prior_bets": [
     {
@@ -12,6 +12,36 @@
       "date": "2026-09-02",
       "player": "Yunchaokete Bu",
       "opponent": "Rafael Jodar"
+    },
+    {
+      "date": "2026-09-29",
+      "player": "Sho Shimabukuro",
+      "opponent": "Denis Shapovalov"
+    },
+    {
+      "date": "2026-09-29",
+      "player": "Ugo Humbert",
+      "opponent": "Brandon Nakashima"
+    },
+    {
+      "date": "2026-09-29",
+      "player": "Carlos Alcaraz",
+      "opponent": "Alex Michelsen"
+    },
+    {
+      "date": "2026-09-29",
+      "player": "F. Cobolli",
+      "opponent": "R. Safiullin"
+    },
+    {
+      "date": "2026-09-29",
+      "player": "Zizou Bergs",
+      "opponent": "Jiri Lehecka"
+    },
+    {
+      "date": "2026-09-29",
+      "player": "Tomas Martin Etcheverry",
+      "opponent": "Stefanos Tsitsipas"
     }
   ]
 }
