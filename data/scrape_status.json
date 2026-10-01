@@ -1,27 +1,70 @@
 {
-  "success": false,
-  "checked_at": "2026-10-01T07:53:42.215082+00:00",
+  "success": true,
+  "checked_at": "2026-10-01T14:50:00.294153+00:00",
   "match_date": "2026-10-01",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
-  "surface_assignments": [],
-  "events_found": 14,
-  "events": [
-    "S. Baez vs J. Shang",
-    "H. Hurkacz vs L. Tien",
-    "A. Rublev vs T. Griekspoor",
-    "C. Norrie vs A. Zverev",
-    "M. Berrettini vs A. Davidovich Fokina",
-    "J. Mensik vs A. Bublik",
-    "R. Jodar vs A. Vallejo",
-    "Sebastian Baez vs Juncheng Shang",
-    "Cameron Norrie vs Alexander Zverev",
-    "Andrey Rublev vs Tallon Griekspoor",
-    "Rafael Jodar vs Adolfo Daniel Vallejo",
-    "Matteo Berrettini vs Alejandro Davidovich Fokina",
-    "Hubert Hurkacz vs Learner Tien",
-    "Jakub Mensik vs Alexander Bublik"
+  "surface_assignments": [
+    {
+      "player_a": "Vacherot V.",
+      "player_b": "Tsitsipas S.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338087",
+      "source_date": "2026-10-02",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Munar J.",
+      "player_b": "Faria J.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338039",
+      "source_date": "2026-10-02",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Munar J.",
+      "player_b": "Faria J.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338039",
+      "source_date": "2026-10-02",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Vacherot V.",
+      "player_b": "Tsitsipas S.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338087",
+      "source_date": "2026-10-02",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Molcan A.",
+      "player_b": "Khachanov K.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338045",
+      "source_date": "2026-10-02",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    }
   ],
-  "error": "Could not resolve full event-page player names for S. Baez vs J. Shang."
+  "events_found": 5,
+  "events": [
+    "S. Tsitsipas vs V. Vacherot",
+    "J. Faria vs J. Munar",
+    "Jaime Faria vs Jaume Munar",
+    "Stefanos Tsitsipas vs Valentin Vacherot",
+    "Karen Khachanov vs Alex Molcan"
+  ],
+  "spread_markets_found": 5,
+  "parser_failures": [],
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 5,
+  "matches_parsed": 5,
+  "rows_saved": 15,
+  "error": null
 }
