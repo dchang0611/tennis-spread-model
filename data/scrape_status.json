@@ -1,29 +1,11 @@
 {
   "success": true,
-  "checked_at": "2026-10-01T14:50:00.294153+00:00",
+  "checked_at": "2026-10-01T19:02:12.097324+00:00",
   "match_date": "2026-10-01",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
   "surface_assignments": [
-    {
-      "player_a": "Vacherot V.",
-      "player_b": "Tsitsipas S.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338087",
-      "source_date": "2026-10-02",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Munar J.",
-      "player_b": "Faria J.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338039",
-      "source_date": "2026-10-02",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
     {
       "player_a": "Munar J.",
       "player_b": "Faria J.",
@@ -52,19 +34,17 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 5,
+  "events_found": 3,
   "events": [
-    "S. Tsitsipas vs V. Vacherot",
-    "J. Faria vs J. Munar",
     "Jaime Faria vs Jaume Munar",
     "Stefanos Tsitsipas vs Valentin Vacherot",
     "Karen Khachanov vs Alex Molcan"
   ],
-  "spread_markets_found": 5,
+  "spread_markets_found": 3,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 5,
-  "matches_parsed": 5,
-  "rows_saved": 15,
+  "executable_spread_markets": 3,
+  "matches_parsed": 3,
+  "rows_saved": 12,
   "error": null
 }

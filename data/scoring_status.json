@@ -1,9 +1,6 @@
 {
   "success": true,
-  "market_matchups": 5,
+  "market_matchups": 3,
   "modeled_matchups": 3,
-  "unmatched_model_players": [
-    "J. Faria vs J. Munar",
-    "S. Tsitsipas vs V. Vacherot"
-  ]
+  "unmatched_model_players": []
 }
