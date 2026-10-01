@@ -1,6 +1,6 @@
 {
   "complete": false,
-  "checked_at": "2026-09-30T21:33:58.717176+00:00",
+  "checked_at": "2026-10-01T07:47:09.051900+00:00",
   "sources": {},
   "unsettled_prior_bets": [
     {
@@ -42,6 +42,26 @@
       "date": "2026-09-29",
       "player": "Tomas Martin Etcheverry",
       "opponent": "Stefanos Tsitsipas"
+    },
+    {
+      "date": "2026-09-30",
+      "player": "M. Berrettini",
+      "opponent": "A. Davidovich Fokina"
+    },
+    {
+      "date": "2026-09-30",
+      "player": "Alex Molcan",
+      "opponent": "Arthur Rinderknech"
+    },
+    {
+      "date": "2026-09-30",
+      "player": "F. Cobolli",
+      "opponent": "R. Safiullin"
+    },
+    {
+      "date": "2026-09-30",
+      "player": "S. Shimabukuro",
+      "opponent": "D. Shapovalov"
     }
   ]
 }

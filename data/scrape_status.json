@@ -1,170 +1,27 @@
 {
-  "success": true,
-  "checked_at": "2026-09-30T21:32:46.115735+00:00",
-  "match_date": "2026-09-30",
+  "success": false,
+  "checked_at": "2026-10-01T07:46:57.215943+00:00",
+  "match_date": "2026-10-01",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
-  "surface_assignments": [
-    {
-      "player_a": "Etcheverry T.",
-      "player_b": "Tsitsipas S.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3336604",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Nakashima B.",
-      "player_b": "Humbert U.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335188",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Safiullin R.",
-      "player_b": "Cobolli F.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335246",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "De Minaur A.",
-      "player_b": "Navone M.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335240",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Shapovalov D.",
-      "player_b": "Shimabukuro S.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335178",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Buse I.",
-      "player_b": "Halys Q.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335242",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Darderi L.",
-      "player_b": "Ruud C.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335186",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Nakashima B.",
-      "player_b": "Humbert U.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335188",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Fritz T.",
-      "player_b": "Munar J.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3336600",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Faria J.",
-      "player_b": "Fery A.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3337324",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "De Minaur A.",
-      "player_b": "Navone M.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335240",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Molcan A.",
-      "player_b": "Rinderknech A.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3336624",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Rune H.",
-      "player_b": "Jacquet K.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335184",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Nishikori K.",
-      "player_b": "Tiafoe F.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3335194",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Etcheverry T.",
-      "player_b": "Tsitsipas S.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3336604",
-      "source_date": "2026-10-01",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    }
-  ],
-  "events_found": 15,
+  "surface_assignments": [],
+  "events_found": 14,
   "events": [
-    "S. Tsitsipas vs T. Etcheverry",
-    "U. Humbert vs B. Nakashima",
-    "F. Cobolli vs R. Safiullin",
-    "M. Navone vs A. De Minaur",
-    "S. Shimabukuro vs D. Shapovalov",
-    "Q. Halys vs I. Buse",
-    "Casper Ruud vs Luciano Darderi",
-    "Ugo Humbert vs Brandon Nakashima",
-    "Jaume Munar vs Taylor Fritz",
-    "Arthur Fery vs Jaime Faria",
-    "Mariano Navone vs Alex De Minaur",
-    "Arthur Rinderknech vs Alex Molcan",
-    "Kyrian Jacquet vs Holger Rune",
-    "Frances Tiafoe vs Kei Nishikori",
-    "Stefanos Tsitsipas vs Tomas Martin Etcheverry"
+    "S. Baez vs J. Shang",
+    "H. Hurkacz vs L. Tien",
+    "A. Rublev vs T. Griekspoor",
+    "C. Norrie vs A. Zverev",
+    "M. Berrettini vs A. Davidovich Fokina",
+    "J. Mensik vs A. Bublik",
+    "R. Jodar vs A. Vallejo",
+    "Sebastian Baez vs Juncheng Shang",
+    "Cameron Norrie vs Alexander Zverev",
+    "Andrey Rublev vs Tallon Griekspoor",
+    "Rafael Jodar vs Adolfo Daniel Vallejo",
+    "Matteo Berrettini vs Alejandro Davidovich Fokina",
+    "Hubert Hurkacz vs Learner Tien",
+    "Jakub Mensik vs Alexander Bublik"
   ],
-  "spread_markets_found": 15,
-  "parser_failures": [],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 15,
-  "matches_parsed": 15,
-  "rows_saved": 53,
-  "error": null
+  "error": "Could not resolve full event-page player names for S. Baez vs J. Shang."
 }
