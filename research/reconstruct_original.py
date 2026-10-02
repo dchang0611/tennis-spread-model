@@ -42,8 +42,14 @@ decisions=[];receipts=[];errors=[];audit=[];locked=set();locked_picks=[]
 for cutoff,day in q.groupby('cutoff',sort=True):
     with (CACHE/(str(cutoff.date())+'.pickle')).open('rb') as f:rows,states=cloudpickle.load(f)
     assert_training_boundary(rows,cutoff.tz_localize('UTC'))
-    fitted,oof,_=model.train_spread_model(rows)
-    audit.append({'as_of_day':str(cutoff.date()),'training_rows':len(rows),'training_max_date':str(rows.date.max().date()),'oof_rows':len(oof)})
+    fitted_by_format={};oof_by_format={}
+    for fmt in [3,5]:
+        fmt_rows=rows[rows.best_of.astype(int)==fmt].copy()
+        if len(fmt_rows)<500:
+            errors.append({'observation_id':'','reason':f'Best-of-{fmt} model closed: only {len(fmt_rows)} training rows'})
+            continue
+        fitted_by_format[fmt],oof_by_format[fmt],_=model.train_spread_model(fmt_rows)
+    audit.append({'as_of_day':str(cutoff.date()),'training_rows':len(rows),'training_max_date':str(rows.date.max().date()),'oof_rows':sum(len(x) for x in oof_by_format.values())})
     print('scoring',cutoff.date(),len(rows),len(day),flush=True)
     batches=list(day.groupby(['archive_commit','competition_id'],sort=False));batches.sort(key=lambda x:x[1].effective_time.min())
     for (_,cid),batch in batches:
@@ -66,7 +72,10 @@ for cutoff,day in q.groupby('cutoff',sort=True):
             except ValueError as e:errors.append({'observation_id':r.observation_id,'reason':str(e)})
         if not live:continue
         frame=pd.DataFrame(live)
-        try:scored=model.score_markets(frame,rows,fitted,oof,live_features=frame)
+        fmt=int(frame.best_of.iloc[0])
+        if fmt not in fitted_by_format: continue
+        fmt_rows=rows[rows.best_of.astype(int)==fmt].copy()
+        try:scored=model.score_markets(frame,fmt_rows,fitted_by_format[fmt],oof_by_format[fmt],live_features=frame)
         except (KeyError,ValueError) as e:
             errors.extend({'observation_id':r['observation_id'],'reason':str(e)} for r in live);continue
         for s in scored.to_dict('records'):
@@ -77,7 +86,7 @@ for cutoff,day in q.groupby('cutoff',sort=True):
             if line.result_a in ['WIN','LOSS','PUSH']:
                 margin=float(line.margin_a)*(1 if side=='a' else -1);z=margin+s['spread']
                 outcome='WIN' if z>0 else 'LOSS' if z<0 else 'PUSH';profit=model.american_profit(s['odds']) if z>0 else -1 if z<0 else 0
-            record={**s,'observation_id':line.observation_id,'competition_id':cid,'captured_at':str(line.effective_time),'scheduled_start':str(line.scheduled_start),'archive_commit':line.archive_commit,'training_max_date':str(rows.date.max().date()),'as_of_day':str(cutoff.date()),'result':outcome,'profit_units':profit,'risk_units':1.0,'locked_pick':lock,'snapshot_selected':selected,'strict_v2':is_history_v2_eligible(s),'evidence_kind':'RETROSPECTIVE_ORIGINAL_PROTOCOL','recommendation':'RECONSTRUCTED_BET' if selected else 'PASS'}
+            record={**s,'best_of':fmt,'observation_id':line.observation_id,'competition_id':cid,'captured_at':str(line.effective_time),'scheduled_start':str(line.scheduled_start),'archive_commit':line.archive_commit,'training_max_date':str(rows.date.max().date()),'as_of_day':str(cutoff.date()),'result':outcome,'profit_units':profit,'risk_units':1.0,'locked_pick':lock,'snapshot_selected':selected,'strict_v2':is_history_v2_eligible(s),'evidence_kind':'RETROSPECTIVE_ORIGINAL_PROTOCOL_FORMAT_SEPARATED','recommendation':'RECONSTRUCTED_BET' if selected else 'PASS'}
             decisions.append(record)
             if lock:locked.add(cid);locked_picks.append(record)
 pd.DataFrame(decisions).to_csv(OUT/'all_reconstructed_lines.csv',index=False)
@@ -94,9 +103,9 @@ groups=defaultdict(list)
 for r in locked_picks:
     factors=sorted(set(str(r['feature_rationale']).split(', ')))
     for n in range(1,len(factors)+1):
-        for combo in combinations(factors,n):groups[combo].append(r)
-confluence=[{'factors':list(k),'factor_count':len(k),**stats(v)} for k,v in groups.items()]
-summary={'protocol':'Original compact spread model, refreshed chronological states','data_fingerprint':fingerprint,'original_formulas_preserved':True,'same_day_results_used':False,'availability_basis':'next UTC day; corrected historical source, original publication timestamps unavailable','history':stats(locked_picks),'strict_v2':stats([r for r in locked_picks if r['strict_v2']]),'training_dates':audit,'factor_confluence':confluence,'market_observations':len(q),'scored_sides':len(decisions),'excluded_observations':len(excluded)+len(errors)}
+        for combo in combinations(factors,n):groups[(int(r.get('best_of',0)),combo)].append(r)
+confluence=[{'best_of':k[0],'factors':list(k[1]),'factor_count':len(k[1]),**stats(v)} for k,v in groups.items()]
+summary={'protocol':'Original compact spread model with separate best-of-3 and best-of-5 models, refreshed chronological states','format_separated':True,'original_formulas_preserved':True,'same_day_results_used':False,'availability_basis':'next UTC day; corrected historical source, original publication timestamps unavailable','history':stats(locked_picks),'strict_v2':stats([r for r in locked_picks if r['strict_v2']]),'by_format':{str(fmt):stats([r for r in locked_picks if int(r.get('best_of',0))==fmt]) for fmt in [3,5]},'training_dates':audit,'factor_confluence':confluence,'market_observations':len(q),'scored_sides':len(decisions),'excluded_observations':len(excluded)+len(errors)}
 (OUT/'summary.json').write_text(json.dumps(summary,indent=2,allow_nan=False))
 pd.DataFrame([{**r,'factors':' + '.join(r['factors'])} for r in confluence]).to_csv(OUT/'factor_confluence.csv',index=False)
 # Dedicated research data: never overwrite history.csv or prospective paper_history.

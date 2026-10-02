@@ -213,19 +213,19 @@ const factorDefinitions = [
 function renderFactors() {
   const history = selectedHistory();
   const classified = history.filter(row => String(row.feature_rationale || '').trim());
-  const stats = factorDefinitions.map(([label, pattern]) => {
-    const rows = classified.filter(row => pattern.test(String(row.feature_rationale)));
+  const stats = factorDefinitions.flatMap(([label, pattern]) => [3,5].map(format => {
+    const rows = classified.filter(row => Number(row.best_of) === format && pattern.test(String(row.feature_rationale)));
     const decided = rows.filter(row => ['WIN','LOSS'].includes(String(row.result).toUpperCase()));
     const wins = decided.filter(row => String(row.result).toUpperCase() === 'WIN').length;
     const losses = decided.length - wins;
     const pending = rows.filter(row => String(row.result).toUpperCase() === 'PENDING').length;
     const units = decided.reduce((sum, row) => sum + (Number(row.profit_units) || 0), 0);
     const risk = decided.reduce((sum, row) => sum + (Number(row.risk_units) || 0), 0);
-    return { label, wins, losses, pending, units, risk, sample: rows.length };
-  }).filter(row => row.sample).sort((a,b) => b.sample - a.sample || a.label.localeCompare(b.label));
+    return { label: `${label} · Best of ${format}`, wins, losses, pending, units, risk, sample: rows.length };
+  })).filter(row => row.sample).sort((a,b) => b.sample - a.sample || a.label.localeCompare(b.label));
   const notice = document.querySelector('#factorNotice');
   const unclassified = history.length - classified.length;
-  notice.textContent = `Reconstructed factors from inputs available before each quote under the stated next-day assumption. ${classified.length} of ${history.length} hypothetical selections have recomputed labels. Descriptive retrospective groups, not independently validated strategies.`;
+  notice.textContent = `Reconstructed factors use inputs available before each quote and are separated by best-of format. ${classified.length} of ${history.length} hypothetical selections have recomputed labels. Descriptive retrospective groups, not independently validated strategies.`;
   notice.className = `status-banner ${classified.length ? '' : 'closed'}`;
   document.querySelector('#factorRows').innerHTML = stats.length ? stats.map(row => {
     const winRate = row.wins + row.losses ? row.wins / (row.wins + row.losses) : null;
