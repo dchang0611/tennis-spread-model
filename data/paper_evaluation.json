@@ -6,5 +6,6 @@
   "minimum_settled": 200,
   "minimum_days": 60,
   "status": "collecting_evidence",
-  "historical_v1_excluded": true
+  "historical_v1_excluded": true,
+  "overdue_unsettled": 0
 }

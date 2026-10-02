@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-02T21:39:14.799957+00:00",
+  "checked_at": "2026-10-02T21:49:44.482021+00:00",
   "mode": "paper",
   "model_version": "2.0.0",
   "excluded": [],
@@ -9,5 +9,5 @@
   "training_matches": 718,
   "training_max_date": "2026-10-01",
   "paper_candidates": 4,
-  "source_hash": "d663a794fbe41774e832366bae9c3781d7a2d5ad14604bf486e8e7fae7bdc4af"
+  "source_hash": "c73169f2f861c0b2a4701496e4ed44b9a2151dc714e38f7020232380a9f3bfa6"
 }
