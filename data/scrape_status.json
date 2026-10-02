@@ -1,70 +1,35 @@
 {
-  "success": true,
-  "checked_at": "2026-10-01T21:59:52.933039+00:00",
-  "match_date": "2026-10-01",
+  "success": false,
+  "checked_at": "2026-10-02T07:53:43.248664+00:00",
+  "match_date": "2026-10-02",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
   "surface_assignments": [
     {
-      "player_a": "Vacherot V.",
-      "player_b": "Tsitsipas S.",
+      "player_a": "Fils A.",
+      "player_b": "Tiafoe F.",
       "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338087",
-      "source_date": "2026-10-02",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Munar J.",
-      "player_b": "Faria J.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338039",
-      "source_date": "2026-10-02",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Munar J.",
-      "player_b": "Faria J.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338039",
-      "source_date": "2026-10-02",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Vacherot V.",
-      "player_b": "Tsitsipas S.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338087",
-      "source_date": "2026-10-02",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Molcan A.",
-      "player_b": "Khachanov K.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338045",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338089",
       "source_date": "2026-10-02",
       "surface": "Hard",
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 5,
+  "events_found": 12,
   "events": [
-    "S. Tsitsipas vs V. Vacherot",
-    "J. Faria vs J. Munar",
-    "Jaime Faria vs Jaume Munar",
-    "Stefanos Tsitsipas vs Valentin Vacherot",
-    "Karen Khachanov vs Alex Molcan"
+    "F. Tiafoe vs A. Fils",
+    "L. Darderi vs K. Jacquet",
+    "A. Gea vs H. Hurkacz",
+    "N. Djokovic vs Y. Bu",
+    "Luciano Darderi vs Kyrian Jacquet",
+    "Frances Tiafoe vs Arthur Fils",
+    "Arthur Gea vs Hubert Hurkacz",
+    "Novak Djokovic vs Yunchaokete Bu",
+    "Jiri Lehecka vs Ugo Humbert",
+    "Alejandro Tabilo vs Denis Shapovalov",
+    "Matteo Arnaldi vs Carlos Alcaraz",
+    "Adolfo Daniel Vallejo vs Matteo Berrettini"
   ],
-  "spread_markets_found": 5,
-  "parser_failures": [],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 5,
-  "matches_parsed": 5,
-  "rows_saved": 25,
-  "error": null
+  "error": "Could not resolve full event-page player names for L. Darderi vs K. Jacquet."
 }
