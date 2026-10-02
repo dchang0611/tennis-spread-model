@@ -1,9 +1,6 @@
 {
   "success": true,
-  "market_matchups": 7,
-  "modeled_matchups": 5,
-  "unmatched_model_players": [
-    "Q. Halys vs A. De Minaur",
-    "A. Tabilo vs D. Shapovalov"
-  ]
+  "market_matchups": 4,
+  "modeled_matchups": 4,
+  "unmatched_model_players": []
 }

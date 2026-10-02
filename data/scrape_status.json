@@ -1,38 +1,11 @@
 {
   "success": true,
-  "checked_at": "2026-10-02T14:05:37.610141+00:00",
+  "checked_at": "2026-10-02T18:41:06.592447+00:00",
   "match_date": "2026-10-02",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
   "surface_assignments": [
-    {
-      "player_a": "Alcaraz C.",
-      "player_b": "Arnaldi M.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338145",
-      "source_date": "2026-10-03",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Shapovalov D.",
-      "player_b": "Tabilo A.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338129",
-      "source_date": "2026-10-03",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "De Minaur A.",
-      "player_b": "Halys Q.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338083",
-      "source_date": "2026-10-03",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
     {
       "player_a": "Shapovalov D.",
       "player_b": "Tabilo A.",
@@ -70,21 +43,18 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 7,
+  "events_found": 4,
   "events": [
-    "M. Arnaldi vs C. Alcaraz",
-    "A. Tabilo vs D. Shapovalov",
-    "Q. Halys vs A. De Minaur",
     "Alejandro Tabilo vs Denis Shapovalov",
     "Quentin Halys vs Alex De Minaur",
     "Matteo Arnaldi vs Carlos Alcaraz",
     "Roman Safiullin vs Andrey Rublev"
   ],
-  "spread_markets_found": 7,
+  "spread_markets_found": 4,
   "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 7,
-  "matches_parsed": 7,
-  "rows_saved": 25,
+  "executable_spread_markets": 4,
+  "matches_parsed": 4,
+  "rows_saved": 15,
   "error": null
 }
