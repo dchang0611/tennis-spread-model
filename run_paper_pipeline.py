@@ -14,6 +14,7 @@ from player_features import build_training_and_state, live_features, name_key
 from tennis_spread_model import FEATURES, score_markets, train_spread_model
 from paper_evaluation import chronological_cover_validation, prospective_report
 from update_spread_history import HISTORY_COLUMNS, settle_history
+from asof_history import assert_current_training
 
 ROOT=Path(__file__).resolve().parent
 
@@ -100,6 +101,7 @@ def main():
         # Match the live minimum-history policy in training.
         eligible=(rows.a_matches>=policy['minimum_player_matches'])&(rows.b_matches>=policy['minimum_player_matches'])&(rows.a_surface_matches>=policy['minimum_surface_matches'])&(rows.b_surface_matches>=policy['minimum_surface_matches'])
         rows=rows[eligible].dropna(subset=FEATURES)
+        assert_current_training(rows,receipt['last_match_date'],now,policy['max_completed_date_lag_days'])
         rows.to_csv(output/'model_rows.csv',index=False)
         model,oof,summary=train_spread_model(rows)
         oof.to_csv(output/'spread_rolling_predictions.csv',index=False)

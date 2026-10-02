@@ -1,0 +1,18 @@
+{
+  "DecisionThresholds": "a3bc871867e43a5886589505258e82f3293ab1e7a39afd536cdfdb31da136dd5",
+  "american_to_implied": "8797936a7917c8aa0776049919aca5df404321b1451d459acab5a6dbdd1975d4",
+  "american_profit": "3686c8d142bd32da15efacf647e41813a3039186b98988da9262219a8045a81b",
+  "no_vig_pair": "89b1e5b50f0a8e47538823bb19bd5873f28a9b7636ad102c25eefc98c2748e0f",
+  "make_margin_model": "17fc1c4cf8e6ce5e4f9fbbca77197a43b9734a2d5b68663abb1ee5ed1c52090c",
+  "validate_model_rows": "9c9435ed01915247fcc013b1e9a94b7946ab7423610d53977e9a351d6e830254",
+  "rolling_oof_predictions": "f2b0ab9e47d5d69a73c4a2e22e20c7f72411a5688a75a5d5bbcbcd077dc632b3",
+  "validation_summary": "7b44c992a7b9db10ad0ae9befc55ebf665c9d03a2fb59b5338475d7dbf223a76",
+  "residual_pool": "227e2d46f59ddab59a102c294acbe70baf865038658f93656c7de929330e7d64",
+  "cover_probabilities": "7393cfbfb84ef38b27b3819e3b6dc54a11f6049ce19c65f9c2f59d3b9f106fa1",
+  "expected_roi": "be98aad18fd5ebf64af94f6ac5abc96221c08850c723168c0fa9c6b1fbae7e61",
+  "conservative_probability": "460858447005b36ee2cb7d9595680db3498dba303515141120f6ec8170371c05",
+  "driver_phrases": "a9869545833a314883afa83f737b29a874ea1015e985fca9c88e9e7f4cfd665b",
+  "has_eligible_driver_support": "a52499ad139e5686112c4b359ad467f09702e9a21c8319dce27d133752fe493e",
+  "normalize_novig_markets": "1fdadeff502d853e49c96c6141b76363b57fecf5c18f7b2d23f61725c2eea352",
+  "train_spread_model": "ccc16bc800236e981a324c58bf037fc3e3f6a09a7bda38dffe3e269191b3f864"
+}

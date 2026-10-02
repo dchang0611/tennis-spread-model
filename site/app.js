@@ -131,7 +131,7 @@ function renderPerformance() {
 }
 
 function selectedHistory() {
-  return (state.data?.history || []).filter(row => {
+  return (state.data?.reconstruction?.history || []).filter(row => {
     return inDateRange(row.date);
   });
 }
@@ -141,7 +141,7 @@ function inDateRange(value) {
   return (!state.dateFrom || date >= state.dateFrom) && (!state.dateTo || date <= state.dateTo);
 }
 
-function renderHistoryView({ rows, resultFilter, metricsId, noticeId, groupsId, noticeSuffix = ' Legacy records: pre-start capture was not enforced; excluded from prospective evaluation.' }) {
+function renderHistoryView({ rows, resultFilter, metricsId, noticeId, groupsId, noticeSuffix = ' RETROSPECTIVE RECONSTRUCTION: original model rules with as-of inputs. Not prospective evidence. Ungraded finishes are excluded from ROI.' }) {
   const dateFiltered = rows.filter(row => inDateRange(row.date));
   const filtered = dateFiltered.filter(row => resultFilter === 'ALL' || String(row.result).toUpperCase() === resultFilter);
   const count = result => dateFiltered.filter(row => String(row.result).toUpperCase() === result).length;
@@ -177,7 +177,7 @@ function renderStrictV2() {
 function renderHistory() {
   renderNoRecordedFactors('#historyNoFactors', 'Included in full history totals');
   renderHistoryView({
-    rows: state.data?.history || [],
+    rows: state.data?.reconstruction?.history || [],
     resultFilter: state.historyFilter,
     metricsId: '#historyMetrics',
     noticeId: '#historyNotice',
@@ -187,7 +187,7 @@ function renderHistory() {
 
 function renderHistoryV2() {
   renderNoRecordedFactors('#historyV2NoFactors', 'Comparison only; excluded from V2 totals');
-  const v2Rows = state.data?.history_v2 || [];
+  const v2Rows = (state.data?.reconstruction?.history || []).filter(row => row.strict_v2);
   const excluded = selectedHistory().length - v2Rows.filter(row => inDateRange(row.date)).length;
   renderHistoryView({
     rows: v2Rows,
@@ -195,7 +195,7 @@ function renderHistoryV2() {
     metricsId: '#historyV2Metrics',
     noticeId: '#historyV2Notice',
     groupsId: '#historyV2Groups',
-    noticeSuffix: ` ${excluded} bet${excluded === 1 ? '' : 's'} excluded from V2 for missing recognized support or containing Serve vs Return or Workload/Rest.`,
+    noticeSuffix: ` RETROSPECTIVE RECONSTRUCTION, not prospective validation. ${excluded} selections excluded by the unchanged original V2 factor rules.`,
   });
 }
 
@@ -225,7 +225,7 @@ function renderFactors() {
   }).filter(row => row.sample).sort((a,b) => b.sample - a.sample || a.label.localeCompare(b.label));
   const notice = document.querySelector('#factorNotice');
   const unclassified = history.length - classified.length;
-  notice.textContent = `${classified.length} of ${history.length} tracked bets have saved factor labels in this date range. ${unclassified ? `${unclassified} bet${unclassified === 1 ? '' : 's'} have no recorded factors and appear in the comparison row below.` : 'Every tracked bet is classified.'}`;
+  notice.textContent = `Reconstructed factors from inputs available before each quote under the stated next-day assumption. ${classified.length} of ${history.length} hypothetical selections have recomputed labels. Descriptive retrospective groups, not independently validated strategies.`;
   notice.className = `status-banner ${classified.length ? '' : 'closed'}`;
   document.querySelector('#factorRows').innerHTML = stats.length ? stats.map(row => {
     const winRate = row.wins + row.losses ? row.wins / (row.wins + row.losses) : null;
@@ -236,6 +236,7 @@ function renderFactors() {
 
 function bindControls() {
   renderFocusControls();
+  document.querySelector('#replayDate').addEventListener('change', renderReplay);
   document.querySelectorAll('.tab').forEach(button => button.addEventListener('click', () => { document.querySelectorAll('.tab').forEach(item => item.classList.toggle('active', item === button)); document.querySelectorAll('.panel').forEach(panel => panel.classList.toggle('active', panel.id === button.dataset.panel)); }));
   document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => { state.filter = button.dataset.filter; document.querySelectorAll('.filter').forEach(item => item.classList.toggle('active', item === button)); renderBoard(); }));
   document.querySelectorAll('.history-filter').forEach(button => button.addEventListener('click', () => { state.historyFilter = button.dataset.historyFilter; document.querySelectorAll('.history-filter').forEach(item => item.classList.toggle('active', item === button)); renderHistory(); }));
@@ -270,6 +271,22 @@ function renderPaper() {
   document.querySelector('#paperNotice').textContent = `Paper trading only. ${report.settled || 0} settled selections; at least ${report.minimum_settled || 200} over ${report.minimum_days || 60} days are required before manual review. There is no automatic switch to live betting.`;
   renderHistoryView({rows: state.data?.paper_history || [], resultFilter: 'ALL', metricsId:'#paperMetrics', noticeId:'#paperHistoryNotice', groupsId:'#paperGroups', noticeSuffix:' Prospective paper selections; displayed prices are not confirmed fills.'});
 }
+function renderReplay() {
+  const research = state.data?.reconstruction || {};
+  const all = research.lines || [];
+  const select = document.querySelector('#replayDate');
+  if (!select.options.length) {
+    select.innerHTML = [...new Set(all.map(row => row.date))].sort().reverse().map(date => `<option value="${safe(date)}">${safe(date)}</option>`).join('');
+  }
+  const rows = all.filter(row => row.date === select.value);
+  const captured = new Set(rows.map(row => row.observation_id)).size;
+  const through = [...new Set(rows.map(row => row.training_max_date))].sort().join(', ');
+  document.querySelector('#replayNotice').textContent = rows.length ? `${captured} recovered paired quotes; ${rows.length} assessed sides. Training through ${through}. Repeated captures and alternate lines are shown for inspection; performance counts only the first qualifying pick per match.` : 'No verified reconstruction is available. Legacy stale-input selections are not used as a fallback.';
+  document.querySelector('#replayRows').innerHTML = rows.map(row => `<tr><td>${safe(row.captured_at)}<br>Training: ${safe(row.training_max_date)}</td><td><strong>${safe(row.player)} ${Number(row.spread)>0?'+':''}${fmtNum(row.spread)}</strong><br>vs ${safe(row.opponent)}</td><td>${fmtOdds(row.odds)}</td><td>${fmtPct(row.cover_probability)}</td><td>${row.locked_pick?'LOCKED RECONSTRUCTED PICK':row.snapshot_selected?'QUALIFIES AT THIS CAPTURE':'PASS'}</td><td>${safe(row.feature_rationale)}</td><td>${safe(row.result)}</td></tr>`).join('');
+}
+function renderLegacy() {
+  renderHistoryView({rows:state.data?.history || [],resultFilter:'ALL',metricsId:'#legacyMetrics',noticeId:'#legacyNotice',groupsId:'#legacyGroups',noticeSuffix:' INVALID MODEL INPUTS: archived outcomes only. Frozen-input probabilities and factors do not validate the rebuilt model.'});
+}
 async function load() {
   bindControls();
   try {
@@ -280,11 +297,11 @@ async function load() {
     banner.textContent = state.data.status_message;
     banner.className = `status-banner ${state.data.status === 'ready' ? '' : 'closed'}`;
     if (state.data.generated_at) document.querySelector('#updatedText').textContent = `Updated ${new Date(state.data.generated_at).toLocaleString([], {dateStyle:'medium', timeStyle:'short'})}`;
-    renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus();
+    renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderReplay(); renderLegacy();
   } catch (error) {
     document.querySelector('#statusBanner').textContent = 'The latest board could not be verified. No plays are displayed.';
     document.querySelector('#statusBanner').className = 'status-banner closed';
-    renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus();
+    renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderReplay(); renderLegacy();
   }
 }
 

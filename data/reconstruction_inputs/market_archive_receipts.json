@@ -1,0 +1,877 @@
+[
+  {
+    "commit": "e4ca88893fe2fe9b88f2c7b080a1d0dd75997751",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-06T01:24:16-07:00",
+    "sha256": "8cd3e55a8ab9a698628b1fb3db377b985ad8c8ffd501df68af62ac1530f4eef0",
+    "rows": 0
+  },
+  {
+    "commit": "f5910736c699ef4c80fc9b07d5726536bc71d338",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-06T01:59:38-07:00",
+    "sha256": "8545fd4d0474a0d1905f652e5557a6d449a0c95121e909370a5418d58e243739",
+    "rows": 15
+  },
+  {
+    "commit": "cd3d5d4a085172038c6be1a25f53c94947a67175",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-06T02:11:12-07:00",
+    "sha256": "e94e760e4d116c7506087686ef1426f114af50886c68704ac06470c0e400d2ca",
+    "rows": 35
+  },
+  {
+    "commit": "588f22cf7236ff2e9fe70564165fcbeca1079338",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-07T08:04:49Z",
+    "sha256": "0ef8c9fa545291e1c802f9a83ac76d5957c9026458c0d103d2774403c5e99f1a",
+    "rows": 37
+  },
+  {
+    "commit": "afa8e8840a454ebf8512d059a96cb4396766c056",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-07T08:25:00Z",
+    "sha256": "a124d3c76284dc78f92b0e0ca28e58238119650b92550adf762ed2133ad0849e",
+    "rows": 36
+  },
+  {
+    "commit": "c15e0a024c1ee26d8415cb2341a0a0619900722f",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-07T08:31:45Z",
+    "sha256": "a88bf76cd63e2179886d48791d64be0d33d6978aa7571df6616a7e167b7ebfa3",
+    "rows": 37
+  },
+  {
+    "commit": "5525d73ae1e007d43b3b5cd54d9d9d1974168888",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-07T10:17:49Z",
+    "sha256": "ec044a3f56d4229aeca7f655bd2359f36a94474670a9333b458aa4d289b6acf5",
+    "rows": 37
+  },
+  {
+    "commit": "e11e1c54661927438b21e463b98eb3b0b4877956",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-08T08:05:12Z",
+    "sha256": "ef091622e3e73af5595700808e7d0bb4452b47f008cbbbd1ea9378826c50aa20",
+    "rows": 21
+  },
+  {
+    "commit": "e7195c1a3fa82c32033ec8670162e1d4896e387d",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-08T08:14:59Z",
+    "sha256": "3a6f92f8cdfca2121236e057ac1959773dfea263c1ee2bbd05a98bf11d84ab72",
+    "rows": 21
+  },
+  {
+    "commit": "8e6f26702766fbe2a5377b002b54294c6d4dece3",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-08T08:24:14Z",
+    "sha256": "c49dfacac50df779137b6347f6b26356c607e9236fbd3420a0b51249dccf50b8",
+    "rows": 22
+  },
+  {
+    "commit": "cc388fe40b3a6941f88a508aa65a31af7b22d73a",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-08T18:11:06Z",
+    "sha256": "36b7fcc415ee5771ef30f6162a27711bbac7d9ddcd8d318e0e77c88d244f605a",
+    "rows": 5
+  },
+  {
+    "commit": "d94c12b9d26461f71c61b00c8dffdf973ccad989",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-08T18:18:23Z",
+    "sha256": "d0f107a1458735bddcab3aecdd08a64479e6774ed5d48daa0e02abd6a4b03e9a",
+    "rows": 6
+  },
+  {
+    "commit": "5ac9f36f3b8be9235094002fec573d09091353d5",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-09T09:01:53Z",
+    "sha256": "5f4667b8e30e8dc6fb2ae77f74d8f8f792f6a9a94212d49a01c9b342d252f599",
+    "rows": 24
+  },
+  {
+    "commit": "340d9d78c52eee08007645c749cc6e04f9161403",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-09T09:26:27Z",
+    "sha256": "f33550c7135c81eb2a3d67a3a4ae3e032eae33879543be1a54cca75c19db39c2",
+    "rows": 24
+  },
+  {
+    "commit": "abadea306850e3c93266d371093066d7f708d324",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-10T11:30:28Z",
+    "sha256": "481dc59ad02551ed0da6130ec744654c6391b3dd842ac044c8a97bcbf173b550",
+    "rows": 13
+  },
+  {
+    "commit": "d82c443e3c4942bb2f03ecd7588fd5735a5e489c",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-10T22:06:25Z",
+    "sha256": "6229e0dd950c330912e063009751b01ca7a952be50a2d08a46123ce034153610",
+    "rows": 4
+  },
+  {
+    "commit": "0e3b4ecc96c5400511d3ad62fa3f7abd43f94d96",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-12T22:44:25Z",
+    "sha256": "eade21f1e9e73a21e7aa6a50e4f449bb050bcd7ad21f026883bc1d5ca0425961",
+    "rows": 10
+  },
+  {
+    "commit": "1fbe7a98372c1f9d0fc55795cac0e8d5a2de6691",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-12T22:48:53Z",
+    "sha256": "74d0c0062dba6142aaa7f7f418d4012dd7e917335edcb5f6c487d8287e6cabdd",
+    "rows": 8
+  },
+  {
+    "commit": "707404aa94ec4f82b5440c792224d4569ddf5586",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-13T17:28:01Z",
+    "sha256": "96a6402bd574d0e69ffc9d0b05b11dfa06271d0884801ca92ce0f1013ec425e9",
+    "rows": 14
+  },
+  {
+    "commit": "5188444074f8579b7bdcf64b23e8a5c2eda9980d",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-13T17:32:35Z",
+    "sha256": "9e33bc4041064427125f3a2ed5b3312fb4b12ac01b1f6bee78168c106624c5c8",
+    "rows": 16
+  },
+  {
+    "commit": "c8f75846115846f624b019b3d6c448f85201eec5",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-13T17:36:28Z",
+    "sha256": "1115cfaa09e3c3a3bd06fdf0a43a0685e9a78228624c9ea51c89c480a248cc28",
+    "rows": 16
+  },
+  {
+    "commit": "4e10df2fa0ec74da844a30fda0cba7bfc65ec398",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-13T18:32:38Z",
+    "sha256": "66506e2be37d44235431afa242ba50e9b4150f626473835b6cf05a3d90b66d1d",
+    "rows": 6
+  },
+  {
+    "commit": "987647b7eb31888d70c66e9ac9ff4e0b011d3eff",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-13T22:49:25Z",
+    "sha256": "2893533bc2b6f2faf8cb6b0e9ef0f3b86ad754428143069708d1dc2c297e423e",
+    "rows": 18
+  },
+  {
+    "commit": "79f63acfaf3c4fd05fa394e155fa228a6f7824ba",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-14T07:16:24Z",
+    "sha256": "a69b05591a9c40718912456cdbdb6ecfa1ae107e5d3a2d0cdf801779dc25b513",
+    "rows": 5
+  },
+  {
+    "commit": "f6702191cc766bc9bb5e9c220afa362d3a9e2d73",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-14T08:48:21Z",
+    "sha256": "5b7be47d0163267c4e6785231b5d35993f6d9767a19408441fbb19709efa29bd",
+    "rows": 18
+  },
+  {
+    "commit": "8de853ab1b520c845cea75471e0f9463fe9305e6",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-14T14:35:56Z",
+    "sha256": "fecaf59585755aac60cef0c71fcad6f27d4dc60385efa1ea8298b32a49985556",
+    "rows": 35
+  },
+  {
+    "commit": "60ac65061df96c33f4626d9308c5547ab8b3dc18",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-14T18:30:01Z",
+    "sha256": "8e6d0231fbdb06a6ee450912f932246bb3706d3cbb9b85f3fea030c5bdebc3dc",
+    "rows": 7
+  },
+  {
+    "commit": "e277adc9e42cbf7605317834a5ea32c88627d439",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-15T13:57:24Z",
+    "sha256": "b6eb9e5a1dc298626edb03c3c59ea64653ce55a43e36b8bb20fd2124ee785812",
+    "rows": 34
+  },
+  {
+    "commit": "86d629392895faea36e361d236310ca564f3e385",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-15T17:53:25Z",
+    "sha256": "271a378101cca605cfc86419c63551db795dc27fb51aaa47bb26c921f5a46d4e",
+    "rows": 11
+  },
+  {
+    "commit": "ffb8621275b2a7c33aaf59c3920988b10366a8a5",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-16T07:57:41Z",
+    "sha256": "d4532cceda25934cf924feb9ebd63ac079db8498cd9b096829db12d527faec96",
+    "rows": 26
+  },
+  {
+    "commit": "b116da1f74eeb99a8d286d02d5cfd6fdea011e01",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-16T13:57:35Z",
+    "sha256": "3d5b04349a0b3677e4e9d4d376fa7d9d6d5b5f848d22227963629a4d44c0a5f2",
+    "rows": 33
+  },
+  {
+    "commit": "d56535c024ac9f6a2457c7f3f0070d68895e849a",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-16T17:53:09Z",
+    "sha256": "c1fe0ede517d4aa33c9624b2731e66ff72495785e4797c147fcba71caae283e7",
+    "rows": 13
+  },
+  {
+    "commit": "2b717084498a3f29d8bd77b219046503c0e3f68f",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-16T22:50:45Z",
+    "sha256": "1d31ad9242a0ce464792813774558485b0e5a937b68f8d4cd3e88a7fe51af084",
+    "rows": 7
+  },
+  {
+    "commit": "e3312b1f142a09d2cc1b40ced504bff27b534ced",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-17T08:11:17Z",
+    "sha256": "0c60af30bc22693858dde030791133cb86656bf33a521b81a194b6709255ad07",
+    "rows": 21
+  },
+  {
+    "commit": "5972bd9b0b56822ac51b17f8e92efb51c2ead8f8",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-17T14:05:37Z",
+    "sha256": "260c569c645ea7650698188cc2736decec7e778f8b9c4e37fd0093c0fce908b9",
+    "rows": 28
+  },
+  {
+    "commit": "f40c1eb44b5b32a9f90903cb7d6cf2568fd13a57",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-17T18:00:30Z",
+    "sha256": "2a0bc4cf78425a29181a627a733aa5b12e9324cfb97738f083724d1523adbb48",
+    "rows": 18
+  },
+  {
+    "commit": "6149deceb8688fb7ef2b5caa8081b9188235d1c1",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-18T08:06:30Z",
+    "sha256": "34f85c3935f5351e06e613ddbbd1321913c56651febf5c25990a09db4efa23d4",
+    "rows": 16
+  },
+  {
+    "commit": "fd53bf6804f12ecb97ca8daca5b4fe604e075e85",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-18T14:14:32Z",
+    "sha256": "9c5d5ca313c8ec2d1c3dc067828b4eb5507429c5554bdcb46b3708b1fbb4e885",
+    "rows": 27
+  },
+  {
+    "commit": "9f71f82c8f4de98ddf01c9e60424966b40543488",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-19T07:58:27Z",
+    "sha256": "decf144d2a2b7b238d03fd2ad5ac44c4fd475777854b3d59258844e4f632b9a1",
+    "rows": 19
+  },
+  {
+    "commit": "f7c131a7f162b7b5571b9075193024642c5371bf",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-19T08:08:56Z",
+    "sha256": "13e39420e5750cc8cd045a0567e5f5969b375a01966e6c9a0abab96c2fbdee7f",
+    "rows": 22
+  },
+  {
+    "commit": "656ccf67d1646f1e38a3e65f39fb6217dec44207",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-19T08:23:57Z",
+    "sha256": "314786915cd01ca97370296d8698cbe9680d92b58690b35ff0ffc090d81e8051",
+    "rows": 19
+  },
+  {
+    "commit": "429cef51cdbabb66d271401485ea234e41fe0368",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-19T14:17:39Z",
+    "sha256": "fcb6eb1f9278e0f3f92d9ddcd017515eea16efe056d9cc49c216d85a17f7be61",
+    "rows": 20
+  },
+  {
+    "commit": "08a42b8c0f62c348005f37e5d5fa20c38f16da16",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-19T17:55:51Z",
+    "sha256": "0feec6c5b2237a27f6b274d28e39f89f64c1fd301d59be7cb237d4be4f1f1e3d",
+    "rows": 16
+  },
+  {
+    "commit": "0b6205749f293ae0188136b1a3f3c80008aa379d",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-20T08:09:19Z",
+    "sha256": "ee07d808b222fb0408751e8eacead089748a0522277e6e5e5d9a70bc5fd9e9e1",
+    "rows": 4
+  },
+  {
+    "commit": "12d0dd40eb3924f9afb99dbe251d72ae5f21491f",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-20T14:19:28Z",
+    "sha256": "91600478a08e57aa293eedfa1fb00eb65e3f2a2e9b9fb78734aa0e9eb626604f",
+    "rows": 5
+  },
+  {
+    "commit": "39b92291a2bee1271d2b7f63ab6663d7abe9b850",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-20T18:00:40Z",
+    "sha256": "c75f678db04083a50f885ce11485aef758a414e0477dc6a6457d8005721e8891",
+    "rows": 6
+  },
+  {
+    "commit": "70688cd9f21c02aa119e8851d4dcd59fbf4b8d5e",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-21T08:10:19Z",
+    "sha256": "d2c58df22aeef5bb10e6b44c3d6bf8c6f006f366f55a26523bb2e5b8697a0621",
+    "rows": 5
+  },
+  {
+    "commit": "a94576dc09ccfd5aca4a6d3f93ecd8afa4712783",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-21T18:00:52Z",
+    "sha256": "651802f91573ca4810bc6451d1891cd23f1787d473afd709c62f246dcf2d2cc0",
+    "rows": 12
+  },
+  {
+    "commit": "09490cef48a6442ea0241168656601f077c6566a",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-22T07:58:19Z",
+    "sha256": "c308b89dc2af6bb9c977605634b52e3d883c44920f7ca14b03597f3b7631e176",
+    "rows": 10
+  },
+  {
+    "commit": "e0cc3aad9e51a39ed567eb04d3aa1b0ac11de1db",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-22T13:57:15Z",
+    "sha256": "424c80f5a08c87ee6bab400d8c0df6af9a535b4f1a439bade64cf84e7e825cfb",
+    "rows": 24
+  },
+  {
+    "commit": "b6ce8d6cd34c373b3beac7f0e76a7bdefaa571a7",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-22T17:54:27Z",
+    "sha256": "fe8ba4b434288373b4801a65518651f01d3b564f3e14307cea8952aaf5c19d5c",
+    "rows": 14
+  },
+  {
+    "commit": "2fb9a4b9a699884fa5461102bbfb7fbe09cf40c6",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-23T13:58:25Z",
+    "sha256": "7ece430f087a9a9d916a9ebc5e5aadd06ef60b364be48934f9f7b5c6f8eb3153",
+    "rows": 24
+  },
+  {
+    "commit": "dc4c25bb8c9ecabd70e1c4e5ec36489e3c0a0f59",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-23T17:53:09Z",
+    "sha256": "a74b757d82a1e35727c08f1dbb9dd9d41ff5918b6aeaa18139b67b3032a77553",
+    "rows": 17
+  },
+  {
+    "commit": "629b6237d40506a6cfc76ba862001cb256893c2a",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-24T08:24:07Z",
+    "sha256": "9bef3980426431b7a698b081cb9bd9dc586e239a814348e853bddaa094507462",
+    "rows": 5
+  },
+  {
+    "commit": "d1818734a6633c737f024c85940b2437f98a1668",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-24T14:24:10Z",
+    "sha256": "5c7e3c5cf57fb990d06f8de63382f645abd1b2399254cce6a1603d50b83a5751",
+    "rows": 28
+  },
+  {
+    "commit": "3527007d23812f19f19e444c058cdc2a3cd3287c",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-25T08:22:10Z",
+    "sha256": "e144a22e620ec41d54c47a1dca5bd5e538f2a171256c3d34c9ae81b228321ffb",
+    "rows": 15
+  },
+  {
+    "commit": "a6c9011b267e691e468b74580e7798371b0ea087",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-25T14:27:01Z",
+    "sha256": "9582a9c1fe1d79bb966d54fb6a07ecc33c77096e362d6f7f09463c8a0bfa2434",
+    "rows": 33
+  },
+  {
+    "commit": "771f718d94def02a480a5c0fd77dcd8bb0b8a14f",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-26T08:22:07Z",
+    "sha256": "6a429d3b0675557b1095ed60a9e8981300a52e353b3b380512696e0c804da400",
+    "rows": 18
+  },
+  {
+    "commit": "69d13c6395235125eafe5498a2842eba7692dde0",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-26T14:23:57Z",
+    "sha256": "a87e030cc7b9662acd1af0ec14ce4fad6211bec756fa3051aceb8008313c6244",
+    "rows": 44
+  },
+  {
+    "commit": "2ca9d277faff7967763ac07f852608b7fc2a39d9",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-27T18:24:46Z",
+    "sha256": "70a13aafa5563b75bf30df07adacbde2fe49f74e96bcd5055052abf719ba5cfb",
+    "rows": 10
+  },
+  {
+    "commit": "f9ee14544d7d872e3c4dcbd632aa86e02cfbfb26",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-27T23:04:07Z",
+    "sha256": "215440a54b2eb5cea8f4549f9313089e3d7380a5083b46f4cfa1353a87ead15c",
+    "rows": 10
+  },
+  {
+    "commit": "31b6c6078015a39163cbb6462317c88ada97a2cf",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-28T01:38:16Z",
+    "sha256": "1c2f560b6cd7758e744ae9c23e5659566697b9c38bea08cd67fece5599befe67",
+    "rows": 5
+  },
+  {
+    "commit": "a785568022e11225084a737751ce8d02763d2cfa",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-28T23:12:11Z",
+    "sha256": "4606f5e4d0fd8487fbcca0b7d0918cc2b1577d3b297527b878d10dabc92181f8",
+    "rows": 2
+  },
+  {
+    "commit": "a73e895a09b30854873b3c634102e8674b991423",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-29T13:21:06Z",
+    "sha256": "3c47e983badf651e1f6e8453801509ac70501789eb74876d26a747147d006b28",
+    "rows": 5
+  },
+  {
+    "commit": "da2caec5cf68cf732ae9ee3c79872d7739aff816",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-29T17:22:50Z",
+    "sha256": "0494f56de7f668bf3a4518ccc08af7807b4eaecb7a1d5d603c7f49f7998fdb51",
+    "rows": 5
+  },
+  {
+    "commit": "4ac782f81cefc4c41527b025f45f39de4d573238",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-29T19:59:07Z",
+    "sha256": "f694eeee307119763ccd285ae54032a5411c76ab89f171863c66707307162d65",
+    "rows": 6
+  },
+  {
+    "commit": "65e275c01271ea3d7a0c5884ed639accee5ecbdb",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-30T13:15:32Z",
+    "sha256": "01171aab608adcc32c23e7858f86791bf6dc59d41b253384b8d26aad51f0204f",
+    "rows": 48
+  },
+  {
+    "commit": "513d388380fd894d1647233c89c4aad62ac1a00f",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-30T17:46:11Z",
+    "sha256": "eeb7a197968c00cc4f515bed454a467e9aa38dc6c8342efcee4ccc30fe925267",
+    "rows": 15
+  },
+  {
+    "commit": "2dea3bc4d26d69a72216f51b72f4fccd6a772566",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-30T20:01:22Z",
+    "sha256": "cc584b8b4de2e1662907f7d0b33b9068f62b40396daeb6df376a2797ea9a6a5c",
+    "rows": 14
+  },
+  {
+    "commit": "8cf1f7e6e2fcd457bef09439f4f6e7905cffd57e",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-31T13:43:52-07:00",
+    "sha256": "64e00cca7358f4f2b24ec75556759c07a121f7de558821c607d627b31fba4880",
+    "rows": 24
+  },
+  {
+    "commit": "9d5e52652ed38848d6a83ba47e6c01d5c4780ea0",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-31T20:46:12Z",
+    "sha256": "f4112be6bb781270d05fa8c4fb30c65b86d857d8666017255c67546fe388e6f7",
+    "rows": 25
+  },
+  {
+    "commit": "980726e0d799f5f4224e1072f9b7e6cc46920d72",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-08-31T22:03:03Z",
+    "sha256": "3ee88093361831006c4fb6c07b4b7e400d1106f3e50ec898b3780f5e3e1c56a8",
+    "rows": 33
+  },
+  {
+    "commit": "5a3accac192d1c890a4d1ab1eefb5a9fc71adef3",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-01T17:27:28Z",
+    "sha256": "c93a999a1385ad18e8ef3f316233d2d6fed03bde59c825e710ea6c29d80d8d2a",
+    "rows": 53
+  },
+  {
+    "commit": "61e347a1c8c9bdc2704d1dfd009ff75310be8b92",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-01T20:09:40Z",
+    "sha256": "c9de0d10419e6e8de4f3d6243581c97b717df07e8658dc1b3a27e1c1c3083838",
+    "rows": 32
+  },
+  {
+    "commit": "e4dbe1a0af6f276b8adba20937962debcdc2d67d",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-02T12:17:46Z",
+    "sha256": "dd7437dcc4ce2ebde9e89018aba6c66733fdb67bcb4e7b2151f7e961eb5b5bd7",
+    "rows": 65
+  },
+  {
+    "commit": "92f9e6fd4a0c02fa68e3a4b78cc5306fc002c572",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-02T17:19:50Z",
+    "sha256": "2b0331bcf2c45546c4da59c289c07323dcca1ea3a143527b8a66e88acbcb4167",
+    "rows": 22
+  },
+  {
+    "commit": "1f1ac03b2c581c840349aee5d8b89e9fb8c4e4e9",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-02T22:40:02Z",
+    "sha256": "e0976b4c3e5c591c9f520d5807ce7ae82511bfdff2112cf65aee88f5c3c80dfa",
+    "rows": 33
+  },
+  {
+    "commit": "c3b41e24d0ca753f66b5b0f069480d9ba7873509",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-03T12:15:18Z",
+    "sha256": "bece8324fbd7e2b915a96dedae2dd330dab92429fd37182cd9fcf793d8be27f7",
+    "rows": 41
+  },
+  {
+    "commit": "3b3ec03c8a6866012d35e75cfee69f63fa8b926a",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-03T17:11:44Z",
+    "sha256": "15359e4df3ffd4f521e36fd2166422c09d205e02d2f128c9fb782741eccc29ff",
+    "rows": 30
+  },
+  {
+    "commit": "4bc645e4c0118821557f0ecaeb01e2fb9f248677",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-04T12:17:14-07:00",
+    "sha256": "9477b028fb1314cfa85c37ec81f2fccd55f6affeaa32c4b4e404b7637d318426",
+    "rows": 24
+  },
+  {
+    "commit": "54bb484a25c917c9a29f0f07f0b569afce651b21",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-04T19:19:00Z",
+    "sha256": "3e4660bbda346ed454990c1f066553fbfbe166d089217d9923fa3a07a4c0883c",
+    "rows": 24
+  },
+  {
+    "commit": "4adea002d2356f1aa5f6aca38719dcebc148a579",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-04T19:23:30Z",
+    "sha256": "c29a544063c939875de4ae3c77cdbe5d0e397b24854c6a091d3cb04df6b3b322",
+    "rows": 24
+  },
+  {
+    "commit": "25ac8d19e0df625a844f5846b1d10efdba913ca6",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-04T19:27:49Z",
+    "sha256": "df921a4f10f3fa963d8e4dcce93f2cca717dfc5ff480386ef8dc0e49f54b58b6",
+    "rows": 27
+  },
+  {
+    "commit": "c7f008df24ef700827806b3f907cb369dd7eb829",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-05T07:04:14Z",
+    "sha256": "914c5ffa8674fb824fd2598db0bb10ba0349d5a31d992082af4c31d612951e76",
+    "rows": 33
+  },
+  {
+    "commit": "6608d239d7a94eb13bae7c72dba29c3ac568c1ed",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-05T07:57:02Z",
+    "sha256": "1f8ca955087cecb1c0d6dc7ec6bdd0af5d29335489ccb2471a01855c8441fd4e",
+    "rows": 35
+  },
+  {
+    "commit": "51c3d38e9dcad162a14167fdef4c34ecad65995f",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-05T08:30:40Z",
+    "sha256": "56a9c5f939dcb2d1ff6ea8f6ccf35ac566951b2c71bd268a7bc021c6f5dead88",
+    "rows": 37
+  },
+  {
+    "commit": "9f01592c4800dfc6af6f78da99aacafb06c2a95c",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-05T08:36:26Z",
+    "sha256": "5f68dac164b9833751479952cd1698808c2a27b71b01a489e8b73307df9f8c18",
+    "rows": 37
+  },
+  {
+    "commit": "abc45679df168929268a7834780bcffde1dfb9db",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-05T08:39:40Z",
+    "sha256": "a5bc39b660ea627b6b9b623d1e194395b25aaeb4d7b404cee226e0fe1b060d48",
+    "rows": 38
+  },
+  {
+    "commit": "f509f6158c84d903d71875ea547fec5ef5766bfa",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-05T11:23:49Z",
+    "sha256": "b56eb8821b3b2dbd15ddf0218f66d00116348bd1e1b1c270a0986a1f84d83454",
+    "rows": 38
+  },
+  {
+    "commit": "46903499227f924096af2bf8c25aa6fe22feddbe",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-06T11:45:23Z",
+    "sha256": "d05fe0f239bc466a0585321ab94aeeb3b61b628107ae0ddeae44b451f6ae4d14",
+    "rows": 42
+  },
+  {
+    "commit": "99de3acdf15610b634bb07f24dfa549494a1f3a2",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-06T16:26:18Z",
+    "sha256": "8e4ada459a1f9ca4304cf188865d8a4e91bb26b06004ed9a9337d64f85c3d084",
+    "rows": 35
+  },
+  {
+    "commit": "87f5151bc549ca06998f34a6d40ffb708891fa3d",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-07T09:16:10Z",
+    "sha256": "6aebd066094da84b42d72ec1adaafe1d210cc3f25a97978d3624f21aee1138d5",
+    "rows": 28
+  },
+  {
+    "commit": "c8df01cc226a52590753df8618ef001e84bb30a4",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-07T13:41:01Z",
+    "sha256": "c85ef8ba4e18961850e9d280b2199866184a7ecd7fb61be41c9a01b40fe972a6",
+    "rows": 32
+  },
+  {
+    "commit": "9ee7937e47740a936d4755febb06c773cefdd250",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-07T18:23:59Z",
+    "sha256": "212439313f4d40e6c188e536d83572b1628a79446f141c9307290b51143d0bb0",
+    "rows": 30
+  },
+  {
+    "commit": "1546b19b205b51b94258a5f0ab7ff992b538e616",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-08T07:04:26Z",
+    "sha256": "21df0f0a534ff190f8826406c2cf87e081406fc5268d3c5efc05d9f97f105bc5",
+    "rows": 14
+  },
+  {
+    "commit": "5d232589af812232f23e602c7e386d2b7c027b44",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-08T12:17:30Z",
+    "sha256": "3df5991a29afdc6efc604d2f89bb3c1577a9490f12a342c7d03783fbf48fcd14",
+    "rows": 18
+  },
+  {
+    "commit": "c783dfe67e9c3afe44dacb0d9024755055c5e527",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-08T20:13:23Z",
+    "sha256": "9943943365be7cc2948a487942fab8f53cfecfcfd777245e805c6eec4b6a7778",
+    "rows": 12
+  },
+  {
+    "commit": "0c3873243a59b36d16a50b70e727872f1bfdd913",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-09T07:25:37Z",
+    "sha256": "9decb72f98dabadd39f549d65b5ae059164ce2a1907f3c3d2649c45cd62f0786",
+    "rows": 12
+  },
+  {
+    "commit": "ab91cb176ccd1312270775fdc507c0c5c2564f16",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-09T12:29:11Z",
+    "sha256": "f16cb96449d27e6a1ab56b222ff5db7522ba879e0a60f6a50bf6c30ddba02dee",
+    "rows": 18
+  },
+  {
+    "commit": "c1052f43a4cb8b1cc31aff92bef5e0b08eb957f0",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-09T17:16:43Z",
+    "sha256": "539d082d5911c5f2eefe4004b65591c67a72233918342b67f8eb70076ee96a6e",
+    "rows": 20
+  },
+  {
+    "commit": "4675cb27deff5a406d9c04e4b489ef42afa32641",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-11T12:21:10Z",
+    "sha256": "1471e12641930e935363a294a8c3e10264ef5d67609f32019f48e489d51ea23a",
+    "rows": 16
+  },
+  {
+    "commit": "4772eaa3e2f3d0e82286627462b4a7e6490fe7e1",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-11T16:16:39Z",
+    "sha256": "d94e2d8ce223ecc54bfc4de51ac83349201cc5afacf1e44850f01d2b8ebd100f",
+    "rows": 24
+  },
+  {
+    "commit": "5cd44af8730a37f74f41e0286a61915a064b406b",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-11T17:11:44Z",
+    "sha256": "c69291b7a07a71ff4c2e4a9a531b9e12345836f5c33bcb541de7b77f87cace76",
+    "rows": 24
+  },
+  {
+    "commit": "63ea60c4e4cb4589cc03c586b389ea1db3f02e28",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-11T20:00:57Z",
+    "sha256": "6a09649e3285aa2cf176d8964f2ea3317383fb2ad35aeedf868d6569439ae9ca",
+    "rows": 6
+  },
+  {
+    "commit": "282177b58a750040065a4f4f490bb52f9dcbb545",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-13T07:52:02Z",
+    "sha256": "482ef68a57bd738e779dfede5503742670b0ccb70d5e38e41712bce7d8d72e8d",
+    "rows": 6
+  },
+  {
+    "commit": "116b529dbed4cd5527d5570835d1bc907acb439f",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-13T12:50:39Z",
+    "sha256": "6f40eb4d737a7809c0379c7089b44ee4a022e568bd99dfe91f1f732d671dcb22",
+    "rows": 4
+  },
+  {
+    "commit": "3161a8187f7f43209bbd06846ac2335e826832c6",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-28T21:28:02Z",
+    "sha256": "bf74006ae1dd53ba40ad2e1e80ab7ad4f0b345c555bf8dad94546f6f048207f8",
+    "rows": 51
+  },
+  {
+    "commit": "50ce9c5d2599447a1fa0eb1ec466f53f217eaa0a",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-28T21:41:08Z",
+    "sha256": "7ef34e8a9a603c26cdfe1015b762fbb4211bb87458d1988f1fcedac517139523",
+    "rows": 51
+  },
+  {
+    "commit": "6544ec6f17e3d2ca49cb133a742ea51596f63641",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-28T22:05:37Z",
+    "sha256": "2ac6b23ec3a783c6d23ff7bf86ce2f12256a05a658397910f313672e4edbfb6c",
+    "rows": 51
+  },
+  {
+    "commit": "00c7029631e0b119bf860ed70f15fee0430ab842",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-29T08:45:06Z",
+    "sha256": "31eac0b3a6c731e754fdd25386ef19ce9a9bf1edf76f39372edac38c4ee08e87",
+    "rows": 49
+  },
+  {
+    "commit": "81276ca110169c7d9b5dc4a4b38b17b3615cb543",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-29T14:19:30Z",
+    "sha256": "e7f846e55afbfc7adeac8fdf29b0c4f24f2357348e24aa785b026c2df8b727cf",
+    "rows": 26
+  },
+  {
+    "commit": "3fb31f84d3cb151fa2394df4b60eefbaa8813b88",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-29T18:53:15Z",
+    "sha256": "5e94c2e4252fc4c9ca396a691c4ba0e426ff0f2aede2400885ec3055c4f47822",
+    "rows": 36
+  },
+  {
+    "commit": "65ca7a888ed282cc33f8a0919bb93c57391b18b9",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-29T21:33:02Z",
+    "sha256": "3ebe8e7e071eeb05c6727e7944ddbb914fa957b0b7eeeefad42986b8de2b3e2d",
+    "rows": 36
+  },
+  {
+    "commit": "8d07654af39fbc2fdff1d351e44ce04e9f722ff3",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-30T14:14:08Z",
+    "sha256": "51695829c25ea91b11f53639fa54e75e1f65df7a392738f64f811a1807053d9f",
+    "rows": 39
+  },
+  {
+    "commit": "d2734270c41fec439025f88e233c37371cc079ce",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-30T18:35:11Z",
+    "sha256": "82dbfc16eaaa6db573ae0720cf6f58f39d1531f3ebdd0fa16f023efad13d2bc6",
+    "rows": 47
+  },
+  {
+    "commit": "f95d7856909aee079970275fb4e9aae406fa08d7",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-09-30T21:33:59Z",
+    "sha256": "d6d1976f254ba4c1548b3356e5eb5d13ee36980a3ede3525e47b4669d672f5fb",
+    "rows": 53
+  },
+  {
+    "commit": "af5abf2fcbc549051373f684a82238269130b0f4",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-10-01T14:50:29Z",
+    "sha256": "cb4fa7346c5d2f4ab3103c2d9b1e2168c46ebf576d55f52df00cc5ff4b999922",
+    "rows": 15
+  },
+  {
+    "commit": "181909ed0ca0dc45a7e1a1d798e13fc43d4f3a63",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-10-01T19:02:36Z",
+    "sha256": "a92bfbae624dc9cdf7221ca96885990ed6776336074603d7a85e0be5d346ad42",
+    "rows": 12
+  },
+  {
+    "commit": "5bece550fc8eb985f876dc43945729c9f0bc08ad",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-10-01T22:00:25Z",
+    "sha256": "6b0239034dbd71d54f7df02abc6c83f4b62a94179ad5e9b0ce3c44593d0e3607",
+    "rows": 25
+  },
+  {
+    "commit": "0ddb90b296e030071e842c994fcf4bc9756fd258",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-10-02T14:06:18Z",
+    "sha256": "68a68b086474417358c39e47eefaa2d252ed2155db47495e151ac1adbf44d1cc",
+    "rows": 25
+  },
+  {
+    "commit": "9f96ddfffdcb4305baaaac262fb4e57bf9079747",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-10-02T18:41:35Z",
+    "sha256": "c8d6368ec804b3fa91c1cb7b974a5eee6cc5ac539718cc40de960434b87c2094",
+    "rows": 15
+  },
+  {
+    "commit": "2ee057c01a9a2adf7ecf58078e817abae8d194aa",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-10-02T21:27:37Z",
+    "sha256": "1720563a82da4b0946c392896c1f7a9b13665f3d58f30f93cf9dff2ce31569ec",
+    "rows": 17
+  },
+  {
+    "commit": "fda2fd4d327f52e2cae8fbad20377448c2a79383",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-10-02T14:44:43-07:00",
+    "sha256": "4fbe26afd994f712281a9cf18aeaf879a0bf645073adf7fa7ec9488f21478fa4",
+    "rows": 15
+  },
+  {
+    "commit": "050b6e7724abf8827ac2d651daaaf71f82fcfc76",
+    "path": "data/novig_spreads.csv",
+    "archived_at": "2026-10-02T21:49:59Z",
+    "sha256": "7baf79f504cfac2202fa2b70594f987193b5499743f92a54f1f977ceb0b2dd4e",
+    "rows": 17
+  },
+  {
+    "commit": "fda2fd4d327f52e2cae8fbad20377448c2a79383",
+    "path": "data/market_history/2026-10-02/082715856356.csv",
+    "archived_at": "2026-10-02T14:44:43-07:00",
+    "sha256": "05cbc7fc7feef06da2554e5925094bc72fe0a110c235b88d90968239eab8ca69",
+    "rows": 28
+  }
+]

@@ -43,8 +43,10 @@
       <button class="tab active" data-panel="boardPanel">Spread Board</button>
       <button class="tab" data-panel="strictV2Panel">Strict V2 Plays</button>
       <button class="tab" data-panel="paperPanel">Paper Results</button>
-      <button class="tab" data-panel="historyPanel">Historical Results</button>
-      <button class="tab" data-panel="historyV2Panel">Historical Performance V2</button>
+      <button class="tab" data-panel="replayPanel">Reconstructed Slates</button>
+      <button class="tab" data-panel="historyPanel">Reconstructed Results</button>
+      <button class="tab" data-panel="historyV2Panel">Reconstructed V2</button>
+      <button class="tab" data-panel="legacyPanel">Legacy Archive</button>
       <button class="tab" data-panel="factorPanel">Factor Performance</button>
       <button class="tab" data-panel="focusPanel">Factor Confluence</button>
       <button class="tab" data-panel="methodPanel">How It Works</button>
@@ -88,7 +90,7 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">LEGACY RECORDED SELECTIONS</p>
-          <h2 id="historyTitle">Historical betting results</h2>
+          <h2 id="historyTitle">Reconstructed original-model results</h2>
         </div>
         <div class="history-controls">
           <div class="filters" role="group" aria-label="Filter historical results">
@@ -108,7 +110,7 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">BAD-FACTOR PLAYS REMOVED</p>
-          <h2 id="historyV2Title">Historical performance V2</h2>
+          <h2 id="historyV2Title">Reconstructed original-model V2</h2>
         </div>
         <div class="history-controls">
           <div class="filters" role="group" aria-label="Filter V2 historical results">
@@ -124,10 +126,21 @@
       <div id="historyV2Groups" class="history-groups"></div>
     </section>
 
+    <section id="replayPanel" class="panel" aria-labelledby="replayTitle">
+      <div class="section-heading"><div><p class="eyebrow">ORIGINAL RULES · INPUTS REBUILT AS OF EACH QUOTE</p><h2 id="replayTitle">Reconstructed historical slates</h2></div><label>Slate date <select id="replayDate"></select></label></div>
+      <div id="replayNotice" class="status-banner"></div>
+      <p>Research reconstruction, not bets recorded at the time. Original source publication timestamps are unavailable; date-only results enter on the following UTC day. Saved prices and each quote's cutoff are preserved. Missing lines are not invented.</p>
+      <div class="history-table-wrap"><table class="history-table"><thead><tr><th>Captured / training through</th><th>Line</th><th>Price</th><th>Cover</th><th>Decision</th><th>Recomputed factors</th><th>Outcome</th></tr></thead><tbody id="replayRows"></tbody></table></div>
+    </section>
+    <section id="legacyPanel" class="panel" aria-labelledby="legacyTitle">
+      <h2 id="legacyTitle">Legacy archive — invalid model inputs</h2>
+      <p>The original selections and outcomes are preserved. Their probabilities, factors, and V2 performance used frozen inputs and must not be treated as validation of the rebuilt model.</p>
+      <div id="legacyMetrics" class="metric-grid"></div><div id="legacyNotice" class="status-banner closed"></div><div id="legacyGroups" class="history-groups"></div>
+    </section>
     <section id="factorPanel" class="panel" aria-labelledby="factorTitle">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">WHAT HAS ACTUALLY WORKED</p>
+          <p class="eyebrow">RECONSTRUCTED ORIGINAL MODEL · RETROSPECTIVE</p>
           <h2 id="factorTitle">Factor performance</h2>
         </div>
       </div>
@@ -145,7 +158,8 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">BUILD YOUR FACTOR FILTER</p>
-          <h2 id="focusTitle">Factor confluence</h2>
+          <h2 id="focusTitle">Factor confluence — reconstructed history</h2>
+          <p>Historical comparisons use recomputed original-model factors. These are retrospective groups, not validated strategies. Current cards below remain prospective paper observations.</p>
         </div>
       </div>
       <div class="focus-controls">

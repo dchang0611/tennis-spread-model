@@ -1,0 +1,9 @@
+{
+  "dated_training_history.csv": "79738899a31b7d193b8ec328bae32d35be665f20384c275a2784ba4cdb6cbc82",
+  "date_source_receipts.json": "2d2e1312a3fffe78cefc06800b8121af55e06873b51613273b5b8d4fe4a33cbb",
+  "manifest.json": "2a66c32811179167137d65eeea6338125bc68007bb091c76288228c9ccd92e5e",
+  "market_archive_receipts.json": "5402b28aff2fab53b9f50d8a89e4b00d2a89cb0ce073d12f23f1dc9b4db9fd7a",
+  "match_source_receipt.json": "9e005b8ae3fc709f489ebb73b6df6e9b6f4d1afaee1bbf56bb9293c93c5291ae",
+  "reconciled_lines.csv": "6c5f35414edcb977a13473b1ce91c41458df44334dbc01058e1a5cf1cf4fe520",
+  "undated_training_exclusions.csv": "f47307c63fc51e08362ab6bc4fed8801dcf9bcd39b31fa411db2af284c9a3fd0"
+}
