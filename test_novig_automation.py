@@ -164,14 +164,14 @@ class NovigAutomationTests(unittest.TestCase):
         recommendations = pd.DataFrame([
             {"date": "2026-08-07", "tournament": "ATP", "surface": "Hard", "player": "Botic Van De Zandschulp",
              "opponent": "Hubert Hurkacz", "spread": 2.5, "odds": odds, "cover_probability": 0.58,
-             "market_no_vig_probability": 0.45, "recommendation": "BET"}
+             "market_no_vig_probability": 0.45, "recommendation": "BET", "scheduled_start":"2026-08-07T12:00:00Z", "collected_at":"2026-08-07T08:20:00Z"}
             for odds in (117, 104)
         ])
         archived = archive_bets(recommendations, pd.DataFrame(columns=HISTORY_COLUMNS), "2026-08-07T08:24:00+00:00")
         self.assertEqual(len(archived), 1)
         self.assertEqual(int(archived.iloc[0]["odds"]), 117)
 
-    def test_archive_backfills_factor_metadata_without_changing_locked_line(self):
+    def test_archive_never_backfills_factor_metadata_after_recording(self):
         history = pd.DataFrame([{
             "date": "2026-08-13", "tournament": "ATP", "surface": "Hard", "player": "A", "opponent": "B",
             "spread": 3.5, "odds": 117, "cover_probability": .58, "market_no_vig_probability": .45,
@@ -187,7 +187,7 @@ class NovigAutomationTests(unittest.TestCase):
         archived = archive_bets(recommendations, history, "later")
         self.assertEqual(archived.iloc[0]["spread"], 3.5)
         self.assertEqual(archived.iloc[0]["odds"], 117)
-        self.assertEqual(archived.iloc[0]["feature_rationale"], "higher surface-adjusted Elo")
+        self.assertTrue(pd.isna(archived.iloc[0]["feature_rationale"]))
 
     def test_board_uses_archived_bet_line_and_includes_missing_archived_bets(self):
         picks = [

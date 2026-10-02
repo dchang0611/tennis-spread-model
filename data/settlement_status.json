@@ -1,23 +1,29 @@
 {
   "complete": false,
-  "checked_at": "2026-10-02T21:27:36.499012+00:00",
-  "sources": {},
+  "checked_at": "2026-10-02T21:38:24.045171+00:00",
+  "sources": {
+    "season_csv": {
+      "ok": true,
+      "matches": 2419
+    },
+    "verified_results": {
+      "ok": true,
+      "matches": 5
+    },
+    "official_atp": {
+      "ok": true,
+      "matches": 0
+    },
+    "espn": {
+      "ok": true,
+      "matches": 374
+    },
+    "tennis_explorer": {
+      "ok": true,
+      "matches": 1096
+    }
+  },
   "unsettled_prior_bets": [
-    {
-      "date": "2026-09-02",
-      "player": "Yunchaokete Bu",
-      "opponent": "Rafael Jodar"
-    },
-    {
-      "date": "2026-09-29",
-      "player": "Sho Shimabukuro",
-      "opponent": "Denis Shapovalov"
-    },
-    {
-      "date": "2026-09-29",
-      "player": "Carlos Alcaraz",
-      "opponent": "Alex Michelsen"
-    },
     {
       "date": "2026-09-30",
       "player": "Alex Molcan",

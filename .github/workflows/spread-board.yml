@@ -1,124 +1,86 @@
 name: Build and deploy tennis spread board
-
 on:
   workflow_dispatch:
   schedule:
-    # Avoid the top-of-hour congestion window documented by GitHub Actions.
-    - cron: "37 0 * * *"
-      timezone: "America/Los_Angeles"
-    - cron: "37 6 * * *"
-      timezone: "America/Los_Angeles"
-    - cron: "37 10 * * *"
-      timezone: "America/Los_Angeles"
+    - cron: '37 0 * * *'
+      timezone: America/Los_Angeles
+    - cron: '37 6 * * *'
+      timezone: America/Los_Angeles
+    - cron: '37 10 * * *'
+      timezone: America/Los_Angeles
   push:
     branches: [main]
-    paths:
-      - "data/novig_spreads.csv"
-      - "data/verified_atp_results.csv"
-      - "data/scrape_status.json"
-      - "data/settlement_status.json"
-      - "data/scoring_status.json"
-      - "tennis_model_output/spread_results_history.csv"
-      - "tennis_spread_model.py"
-      - "novig_scraper.py"
-      - "surface_calendar.py"
-      - "update_spread_history.py"
-      - "test_novig_automation.py"
-      - "build_spread_site.py"
-      - "site/**"
-      - "requirements.txt"
-      - ".github/workflows/spread-board.yml"
-
+    paths: ['*.py', 'model_policy.json', 'site/**', 'requirements.txt', '.github/workflows/spread-board.yml', 'data/verified_atp_results.csv']
 permissions:
   contents: write
   pages: write
   id-token: write
-
 concurrency:
   group: pages
-  cancel-in-progress: true
-
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     outputs:
-      market_ready: ${{ steps.health.outputs.market_ready }}
+      pipeline_ready: ${{ steps.health.outputs.pipeline_ready }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: '3.12'
           cache: pip
       - run: pip install -r requirements.txt
       - run: python -m playwright install --with-deps chromium
-      - run: python -m unittest -v test_tennis_spread_model.py test_novig_automation.py
-      - name: Recreate prior recommendations for the ledger
-        shell: bash
-        run: |
-          if [ "$(wc -l < data/novig_spreads.csv)" -gt 1 ]; then
-            python tennis_spread_model.py --markets data/novig_spreads.csv --model-rows model_rows_2026-07-06.csv
-          fi
-      - name: Archive yesterday's recommended bets
-        run: python update_spread_history.py --mode archive
-      - name: Score completed bets for Historical Performance
+      - run: python -m unittest discover -v
+      - name: Reconcile legacy results without recreating old predictions
         run: python update_spread_history.py --mode settle
-      - name: Collect today's Novig ATP spreads
-        shell: bash
-        run: |
-          rm -f /tmp/tennis_scrape_ok
-          if python novig_scraper.py --output data/novig_spreads.csv --status-file data/scrape_status.json --tournament "ATP" --surface Auto --day-label Today --minimum-matches 1; then
-            touch /tmp/tennis_scrape_ok
-          else
-            echo "Novig has no complete Today spread slate; publishing explicit diagnostics instead of stale data."
-            rm -f data/novig_spreads.csv
-            rm -f tennis_model_output/novig_spread_recommendations.csv
-          fi
-      - name: Score current Novig markets
-        shell: bash
-        run: |
-          if [ -f /tmp/tennis_scrape_ok ] && [ "$(wc -l < data/novig_spreads.csv)" -gt 1 ]; then
-            python tennis_spread_model.py --markets data/novig_spreads.csv --model-rows model_rows_2026-07-06.csv --status-file data/scoring_status.json
-          else
-            echo "No fresh complete Novig rows exist; publishing a closed board with diagnostics."
-            rm -f tennis_model_output/novig_spread_recommendations.csv
-            rm -f data/scoring_status.json
-          fi
-      - name: Lock today's first qualified bets into Historical Performance
-        run: python update_spread_history.py --mode archive
-      - run: python build_spread_site.py
-      - name: Record market refresh health
+      - name: Collect current Novig spreads
+        continue-on-error: true
+        run: python novig_scraper.py --output data/novig_spreads.csv --status-file data/scrape_status.json --tournament ATP --surface Auto --day-label Today --minimum-matches 1
+      - name: Refresh sources and build prospective paper predictions
+        run: python run_paper_pipeline.py
+      - name: Publish paper-only or closed status
+        run: python build_spread_site.py
+      - name: Record health independently from deployment
         id: health
         run: |
           python - <<'PY'
           import json, os
           from pathlib import Path
-          from datetime import date
           board = json.loads(Path('site/data/board.json').read_text())
-          ready = bool(board['scrape_status'].get('success') and board['scoring_status'].get('success') and not board['scrape_status'].get('surface_failures'))
+          assert board['model']['live_enabled'] is False
+          assert not any(p['recommendation'] == 'BET' for p in board['picks'])
+          ready = board['status'] == 'paper_only'
           with open(os.environ['GITHUB_OUTPUT'], 'a') as out:
-              out.write(f'market_ready={str(ready).lower()}\n')
+              out.write(f'pipeline_ready={str(ready).lower()}\n')
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
               out.write(board['status_message'] + '\n')
           PY
-      - name: Persist nightly market and history data
-        shell: bash
+      - name: Persist immutable paper evidence and history
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A -- data tennis_model_output/spread_results_history.csv
           if ! git diff --cached --quiet; then
-            git commit -m "Update nightly tennis board [skip ci]"
-            if ! git push; then
-              echo "Remote advanced during this run; rebasing the generated data commit once."
-              git pull --rebase origin main
-              git push
-            fi
+            git commit -m 'Update tennis paper evidence and diagnostics [skip ci]'
+            git pull --rebase origin main
+            git push
           fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: model-inputs-and-evaluation
+          path: |
+            data/match_sources
+            data/source_status.json
+            data/scoring_status.json
+            tennis_model_output/spread_validation_summary.csv
+            tennis_model_output/spread_rolling_predictions.csv
+          retention-days: 90
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
-
   deploy:
     environment:
       name: github-pages
@@ -126,11 +88,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy paper-only board and diagnostics
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Flag unavailable market refresh after publishing diagnostics
-        if: needs.build.outputs.market_ready != 'true'
+      - name: Fail closed when paper inputs are unavailable
+        if: needs.build.outputs.pipeline_ready != 'true'
         run: |
-          echo "::error::Site deployed, but fresh Novig collection/scoring failed. See the published diagnostics."
+          echo '::error::Closed board deployed; paper inputs or validation gates failed. Live betting remains disabled.'
           exit 1

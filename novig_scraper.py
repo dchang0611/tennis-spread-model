@@ -222,9 +222,10 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
             page.wait_for_timeout(350)
             resolved_players = parse_event_page_players(page.locator("body").inner_text(), day_label)
             if resolved_players is None:
-                raise RuntimeError(
-                    f"Could not resolve full event-page player names for {event['player_a']} vs {event['player_b']}."
-                )
+                parser_failures.append(f"Unresolved event header: {event['player_a']} vs {event['player_b']}")
+                page.goto(ATP_URL, wait_until='domcontentloaded', timeout=45_000)
+                wait_for_event_cards(page)
+                continue
             player_a = more_complete_name(event["player_a"], resolved_players[0])
             player_b = more_complete_name(event["player_b"], resolved_players[1])
             try:
@@ -255,14 +256,14 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
                     "date": match_date,
                     "tournament": assignment["tournament"],
                     "surface": resolved_surface,
-                    "best_of": 3,
+                    "best_of": None,  # Verified from current event metadata by the pipeline.
                     "player_a": player_a,
                     "player_b": player_b,
                     "spread_a": spread_a,
                     "odds_a": odds_a,
                     "spread_b": spread_b,
                     "odds_b": odds_b,
-                    "collected_at": collected_at,
+                    "collected_at": datetime.now(timezone.utc).isoformat(),
                     "event_url": page.url,
                 })
         browser.close()
@@ -272,8 +273,10 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
         diagnostics["unpriced_spread_markets"] = unpriced_markets
         diagnostics["executable_spread_markets"] = spread_markets - len(unpriced_markets)
         diagnostics["matches_parsed"] = len({(row["player_a"], row["player_b"]) for row in rows})
-    if parser_failures:
-        raise RuntimeError("Game Spread was visible but could not be parsed for: " + ", ".join(parser_failures))
+    # An unresolved event is excluded and disclosed, never supplied guessed
+    # names/prices. Other independently verified events may be paper-tested.
+    if diagnostics is not None:
+        diagnostics['partial_coverage'] = bool(parser_failures or surface_failures)
     frame = pd.DataFrame(rows, columns=OUTPUT_COLUMNS)
     if frame.empty:
         raise RuntimeError("Novig events were found, but no complete paired spread prices were extracted.")

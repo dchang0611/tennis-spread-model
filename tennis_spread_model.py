@@ -183,11 +183,12 @@ def validation_summary(oof: pd.DataFrame) -> pd.DataFrame:
 
 
 def residual_pool(oof: pd.DataFrame, surface: object, best_of: object) -> np.ndarray:
-    same = oof[(oof["surface"].astype(str) == str(surface)) & (oof["best_of"].astype(str) == str(best_of))]
+    format_match = pd.to_numeric(oof['best_of']) == float(best_of)
+    same = oof[(oof["surface"].astype(str) == str(surface)) & format_match]
     if len(same) < 150:
-        same = oof[oof["best_of"].astype(str) == str(best_of)]
+        same = oof[format_match]
     if len(same) < 150:
-        same = oof
+        raise ValueError('Insufficient same-format out-of-sample residuals')
     return same["residual"].dropna().to_numpy(dtype=float)
 
 
@@ -285,12 +286,13 @@ def score_markets(
     model: Pipeline,
     oof: pd.DataFrame,
     thresholds: DecisionThresholds = DecisionThresholds(),
+    live_features: pd.DataFrame | None = None,
 ) -> pd.DataFrame:
     markets = normalize_novig_markets(markets)
     # Reuse the battle-tested player matching and pre-match snapshot builder.
-    normalized = legacy.normalize_slate_columns(markets)
-    snapshots = legacy.latest_player_snapshot(model_rows)
-    live = legacy.build_slate_features(normalized, snapshots)
+    if live_features is None:
+        raise ValueError('Frozen snapshots are disabled; supply verified chronological live features.')
+    live = live_features.copy()
     if live.empty:
         raise ValueError("No Novig rows matched the historical player database.")
     live["predicted_margin_a"] = model.predict(live[FEATURES])
@@ -332,6 +334,7 @@ def score_markets(
                 and conservative_edge >= thresholds.min_conservative_edge
             )
             scored.append({
+                **{key: row.get(key) for key in ['scheduled_start', 'collected_at', 'event_url', 'metadata_source', 'format_source', 'best_of', 'tourney_level', 'feature_id', 'model_version', 'source_hash']},
                 "date": row.get("date"),
                 "tournament": row.get("tournament"),
                 "surface": row.get("surface"),
@@ -365,7 +368,7 @@ def score_markets(
     candidates = result[result["passes_thresholds"]]
     if not candidates.empty:
         best_indexes = candidates.groupby("match_key")["conservative_expected_roi"].idxmax()
-        result.loc[best_indexes, "recommendation"] = "BET"
+        result.loc[best_indexes, "recommendation"] = "PAPER"
     return result.sort_values(["recommendation", "expected_roi"], ascending=[True, False]).reset_index(drop=True)
 
 
@@ -379,47 +382,7 @@ def train_spread_model(model_rows: pd.DataFrame, folds: int = 5) -> tuple[Pipeli
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Score Novig tennis game spreads.")
-    parser.add_argument("--markets", required=True, help="CSV containing paired Novig game-spread prices.")
-    parser.add_argument("--model-rows", default=str(OUT_DIR / "model_rows_2026-07-06.csv"))
-    parser.add_argument("--folds", type=int, default=5)
-    parser.add_argument("--status-file", default="data/scoring_status.json")
-    args = parser.parse_args()
-
-    model_rows = pd.read_csv(args.model_rows)
-    markets = pd.read_csv(args.markets)
-    model, oof, summary = train_spread_model(model_rows, folds=args.folds)
-    scored = score_markets(markets, model_rows, model, oof)
-
-    def matchup_key(player: object, opponent: object) -> str:
-        return "|".join(sorted((str(player).strip().casefold(), str(opponent).strip().casefold())))
-
-    market_pairs = {
-        matchup_key(row.player_a, row.player_b): f"{row.player_a} vs {row.player_b}"
-        for row in normalize_novig_markets(markets).itertuples(index=False)
-    }
-    scored_keys = {matchup_key(row.player, row.opponent) for row in scored.itertuples(index=False)}
-    scoring_status = {
-        "success": True,
-        "market_matchups": len(market_pairs),
-        "modeled_matchups": len(scored_keys),
-        "unmatched_model_players": [market_pairs[key] for key in sorted(set(market_pairs) - scored_keys)],
-    }
-    status_path = Path(args.status_file)
-    status_path.parent.mkdir(parents=True, exist_ok=True)
-    status_path.write_text(json.dumps(scoring_status, indent=2), encoding="utf-8")
-
-    OUT_DIR.mkdir(exist_ok=True)
-    summary.to_csv(OUT_DIR / "spread_validation_summary.csv", index=False)
-    oof.to_csv(OUT_DIR / "spread_rolling_predictions.csv", index=False)
-    scored.to_csv(OUT_DIR / "novig_spread_recommendations.csv", index=False)
-
-    print("\n=== ROLLING SPREAD VALIDATION ===")
-    print(summary.to_string(index=False))
-    print("\n=== NOVIG SPREAD DECISIONS ===")
-    cols = ["player", "opponent", "spread", "odds", "cover_probability", "market_no_vig_probability", "probability_edge", "expected_roi", "recommendation"]
-    print(scored[cols].to_string(index=False))
-    print(f"\nSaved: {(OUT_DIR / 'novig_spread_recommendations.csv').resolve()}")
+    raise SystemExit('Legacy scoring is disabled. Run run_paper_pipeline.py; no live BET output is permitted.')
 
 
 if __name__ == "__main__":

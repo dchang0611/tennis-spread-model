@@ -1,76 +1,82 @@
-# Novig tennis game-spread model
+# Repaired spread model: version 2.0.0
 
-This spread-first model replaces the old pick'em restriction with a direct
-estimate of the probability that each player covers each offered game line.
-The original feature builder remains intact and supplies pre-match player
-snapshots.
+## What changed
 
-## What decides a play
+The July snapshot scoring path is disabled. `player_features.py` rebuilds player
+states after each verified completed match and calls one shared feature function
+for historical and live observations. It keeps per-surface Elo and margin
+histories and recomputes workload and rest for the requested date. Opponent
+adjustment now compares serve points won to 1 minus the opponent's return points
+won, and return points won to 1 minus the opponent's serve points won. Matchup
+interaction treats stronger opposing return as unfavorable to the server.
 
-The model predicts the final game differential with a compact Elastic Net
-using one or two representatives from each feature family. Rolling,
-chronological out-of-sample residuals turn the margin estimate into a cover
-probability for every Novig line.
+## Sources and dates
 
-A line is marked `BET` only when all default gates pass:
+Seasonal and ongoing ATP statistics: https://stats.tennismylife.org/tennis-match-database
+Independent competition timestamps/results: ESPN ATP scoreboard.
+Live surface: the matched Tennis Explorer event header.
+Current paired spread prices: Novig event pages.
 
-- probability edge versus the paired no-vig market is at least 4 percentage points;
-- expected ROI at the displayed American odds is at least 5%; and
-- the conservative cover probability remains above the raw break-even probability.
+The seasonal schema is not uniformly day-resolved: older files have one date for
+an entire tournament. The loader excludes events with only a tournament-level
+date and nonstandard Next Gen scoring. Events with distinct match dates are
+replayed by date; current result pairs/scores are independently checked. This
+exclusion currently removes much of the older history and reduces the training
+sample. A future source schema change must be checked before accepting more rows.
 
-Everything else is a `PASS`. These thresholds are intentionally conservative
-and should not be tuned on the final evaluation period.
+Date-only results become available the next UTC day, not at an invented completion
+time. All observations within a day are created before any outcome from that day
+updates state. Unknown within-day ordering is therefore never used for prediction.
+Live players with a known same-day result are excluded. A result feed fetched today
+but ending more than one completed calendar day ago fails freshness checks.
 
-When several alternate lines from the same match qualify, only the line with
-the highest uncertainty-adjusted expected ROI is marked `BET`. This prevents
-the output from recommending several strongly correlated positions on one
-match.
+The current and previous two years are selected dynamically. Every required source
+is freshly fetched; local copies are evidence, never silent fallback inputs. Unknown
+or new events without unique current surface, format, level, and start evidence
+are excluded. No year-end surface calendar or fixed best-of-three fallback remains
+in the active pipeline.
 
-## Core feature families
+## Decisions and evidence
 
-- overall and surface Elo;
-- surface-specific recent game margin;
-- opponent-adjusted serve and return quality;
-- hold and break proxies;
-- serve-versus-return matchup interaction;
-- recent workload and days of rest;
-- surface, tournament level, and match format.
+The existing compact Elastic Net and default 4 percentage point probability-edge,
+5% expected-return gates are frozen for research. Same-format rolling residuals
+are required; best-of-three errors never substitute for best-of-five errors.
+Only the strongest qualifying line per match becomes PAPER; other lines are PASS.
+These probabilities remain unvalidated, and no live BET output is supported.
 
-The compact list prevents several transformations of the same tennis concept
-from receiving several independent votes.
+The archive only accepts a quote captured before its independently verified start,
+within 30 minutes of capture. The first qualifying quote is immutable. Results
+settle separately. Feature receipts include all live features, training cutoff,
+model version, and source hashes. Workflow artifacts retain raw input captures
+for 90 days; committed paper feature receipts and prediction records persist.
+Raw source hashes alone do not guarantee that a mutable upstream source can be
+reconstructed after artifact expiry.
 
-## Novig input
+## Evaluation and return to live use
 
-Copy `novig_spreads_template.csv` and enter one row for every paired spread.
-Alternate spreads for the same match are separate rows. Required columns are:
+Expanding-window folds train only on earlier dates. Hypothetical half-game spread
+calibration uses only residuals from earlier folds. Those lines have no captured
+prices, so they are explicitly diagnostics, never a historical betting ROI claim.
 
-```text
-player_a,player_b,spread_a,odds_a,spread_b,odds_b
-```
+`data/paper_history.json` is prospective and separate from the legacy ledger.
+Its evaluation records calibration, Brier score versus the captured paired-market
+baseline, returns on decided stakes, and a day-cluster bootstrap interval. At least
+200 settled selections over 60 days and a positive lower ROI interval are necessary
+for manual review; they do not establish a profitable strategy. There is no automatic
+promotion. Review must additionally examine selection, quote execution, source
+coverage, closing prices, and an independent untouched holdout before a live release.
 
-Recommended context columns are:
+## Legacy reconciliation
 
-```text
-date,tournament,surface,best_of
-```
+Legacy prices, selected players and model probabilities remain locked. Missing
+factor rationales are not filled retrospectively. Newly resolved outcomes have
+source receipts; uncertain or conflicting matches remain pending. Legacy date-only
+records cannot prove that a bet was executable before the actual match start and
+are excluded from prospective validation.
 
-Run:
+## Checks
 
-```powershell
-python tennis_spread_model.py --markets novig_spreads_template.csv
-```
-
-Outputs are written to `tennis_model_output`:
-
-- `spread_validation_summary.csv`
-- `spread_rolling_predictions.csv`
-- `novig_spread_recommendations.csv`
-- `spread_results_history.csv` stores only recommendations recorded before match time and their later verified settlement. The dashboard keeps these actual betting results separate from model validation.
-
-## Settlement safeguards
-
-Half-game lines cannot push. Whole-game lines can push and are represented
-explicitly in expected-value calculations. Future historical feature builds
-exclude partial retirement scores from completed game-margin targets. Live
-grading must still apply Novig's rule that an unfinished spread stands only
-when its result was already unequivocally determined; otherwise it is void.
+`python -m unittest discover -v` tests post-match updates, surface separation,
+shared live/training features, within-day leakage prevention, age-out of workload,
+missing metadata, source conflicts, quote expiry, immutable selections, and the
+publication-level prohibition on live BET picks.

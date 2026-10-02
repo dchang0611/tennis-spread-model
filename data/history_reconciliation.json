@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-10-02T21:38:24.045171+00:00",
+  "scope": "Four unresolved legacy records. Locked wagers unchanged; two observed result dates differ from the original recorded day. These are theoretical grades, not proof of accepted pre-match wagers.",
+  "entries": [
+    {
+      "recorded_date": "2026-09-02",
+      "player": "Yunchaokete Bu",
+      "opponent": "Rafael Jodar",
+      "actual_result_date": "2026-09-02",
+      "winner": "Yunchaokete Bu",
+      "score": "6-2 6-1 6-1",
+      "resolution": "WIN",
+      "sources": [
+        "https://stats.tennismylife.org/data/2026.csv"
+      ]
+    },
+    {
+      "recorded_date": "2026-09-29",
+      "player": "Sho Shimabukuro",
+      "opponent": "Denis Shapovalov",
+      "actual_result_date": "2026-10-01",
+      "winner": "Denis Shapovalov",
+      "score": "7-5 6-1",
+      "resolution": "LOSS",
+      "sources": [
+        "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261001",
+        "https://www.tennisexplorer.com/results/?type=atp-single&year=2026&month=10&day=01"
+      ]
+    },
+    {
+      "recorded_date": "2026-09-29",
+      "player": "Carlos Alcaraz",
+      "opponent": "Alex Michelsen",
+      "actual_result_date": "2026-10-01",
+      "winner": "Carlos Alcaraz",
+      "score": "7-6(1) 4-6 6-1",
+      "resolution": "LOSS",
+      "sources": [
+        "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261001",
+        "https://www.tennisexplorer.com/results/?type=atp-single&year=2026&month=10&day=01"
+      ]
+    },
+    {
+      "recorded_date": "2026-09-30",
+      "player": "Alex Molcan",
+      "opponent": "Arthur Rinderknech",
+      "resolution": "PENDING",
+      "reason": "No matching completed result in reviewed sources. Do not infer a void, win or loss from absence.",
+      "sources": [
+        "https://stats.tennismylife.org/data/2026.csv",
+        "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20260930",
+        "https://www.tennisexplorer.com/results/?type=atp-single&year=2026&month=09&day=30"
+      ]
+    }
+  ]
+}

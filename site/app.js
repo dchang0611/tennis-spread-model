@@ -1,7 +1,7 @@
-const state = { data: null, filter: 'BET', historyFilter: 'ALL', historyV2Filter: 'ALL', focusSelected: ['Recent surface game margin', 'Opponent-adjusted return', 'Surface-adjusted Elo'], focusMinMatches: 2, dateFrom: '', dateTo: '' };
+const state = { data: null, filter: 'PAPER', historyFilter: 'ALL', historyV2Filter: 'ALL', focusSelected: ['Recent surface game margin', 'Opponent-adjusted return', 'Surface-adjusted Elo'], focusMinMatches: 2, dateFrom: '', dateTo: '' };
 
-const fmtPct = value => Number.isFinite(Number(value)) ? `${(Number(value) * 100).toFixed(1)}%` : '—';
-const fmtNum = (value, digits = 1) => Number.isFinite(Number(value)) ? Number(value).toFixed(digits) : '—';
+const fmtPct = value => value !== null && value !== undefined && value !== '' && Number.isFinite(Number(value)) ? `${(Number(value) * 100).toFixed(1)}%` : '—';
+const fmtNum = (value, digits = 1) => value !== null && value !== undefined && value !== '' && Number.isFinite(Number(value)) ? Number(value).toFixed(digits) : '—';
 const fmtOdds = value => { const number = Number(value); return Number.isFinite(number) ? `${number > 0 ? '+' : ''}${number}` : '—'; };
 const safe = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 
@@ -9,13 +9,14 @@ function renderBoard() {
   // Rationale text is generated from distinct model-driver families upstream.
   const root = document.querySelector('#board');
   const currentDate = state.data?.scrape_status?.match_date;
-  const picks = (state.data?.picks || []).filter(row => {
+  const picks = visiblePaperPicks().filter(row => {
     if (state.dateFrom || state.dateTo) return inDateRange(row.date);
     return !currentDate || String(row.date) === String(currentDate);
   });
   const filtered = state.filter === 'ALL' ? picks : picks.filter(row => row.recommendation === state.filter);
   if (!filtered.length) {
-    root.innerHTML = `<div class="empty"><strong>No ${state.filter === 'BET' ? 'qualified plays' : 'matching lines'}</strong>${picks.length ? 'The safety gates rejected the available lines.' : 'Add current paired Novig spread prices and run the hosted model.'}</div>`;
+    if (state.data?.status === 'paper_only' && !visiblePaperPicks().length) document.querySelector('#statusBanner').textContent = 'Live betting disabled. Current paper quotes have expired or their matches have started.';
+    root.innerHTML = `<div class="empty"><strong>No ${state.filter === 'PAPER' ? 'paper candidates' : 'matching lines'}</strong>${picks.length ? 'The safety gates rejected the available lines.' : 'Live betting is disabled. Awaiting verified inputs for paper trading.'}</div>`;
     return;
   }
   root.innerHTML = filtered.map(row => {
@@ -73,7 +74,7 @@ function renderFocusControls() {
 
 function currentPicks() {
   const currentDate = state.data?.scrape_status?.match_date;
-  return (state.data?.picks || []).filter(row => {
+  return visiblePaperPicks().filter(row => {
     if (state.dateFrom || state.dateTo) return inDateRange(row.date);
     return !currentDate || String(row.date) === String(currentDate);
   });
@@ -140,7 +141,7 @@ function inDateRange(value) {
   return (!state.dateFrom || date >= state.dateFrom) && (!state.dateTo || date <= state.dateTo);
 }
 
-function renderHistoryView({ rows, resultFilter, metricsId, noticeId, groupsId, noticeSuffix = '' }) {
+function renderHistoryView({ rows, resultFilter, metricsId, noticeId, groupsId, noticeSuffix = ' Legacy records: pre-start capture was not enforced; excluded from prospective evaluation.' }) {
   const dateFiltered = rows.filter(row => inDateRange(row.date));
   const filtered = dateFiltered.filter(row => resultFilter === 'ALL' || String(row.result).toUpperCase() === resultFilter);
   const count = result => dateFiltered.filter(row => String(row.result).toUpperCase() === result).length;
@@ -169,14 +170,8 @@ function renderHistoryView({ rows, resultFilter, metricsId, noticeId, groupsId, 
 }
 
 function renderStrictV2() {
-  const rows = state.data?.strict_v2_current_picks || [];
-  const notice = document.querySelector('#strictV2Notice');
-  const root = document.querySelector('#strictV2Board');
-  notice.textContent = rows.length
-    ? `${rows.length} current play${rows.length === 1 ? '' : 's'} qualify with at least one recognized supporting factor and neither Serve vs Return nor Workload/Rest.`
-    : 'No current BET selections pass the strict V2 rule.';
-  notice.className = `status-banner ${rows.length ? '' : 'closed'}`;
-  root.innerHTML = rows.length ? rows.map(row => `<article class="pick-card bet"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="decision bet">BET</div><div class="factor-chips">${renderBoardChips(row)}</div></article>`).join('') : '<div class="empty"><strong>No strict V2 plays today</strong>Current BET selections need at least one recognized supporting factor and must exclude Serve vs Return and Workload/Rest.</div>';
+  document.querySelector('#strictV2Notice').textContent = 'Live betting is disabled. Strict V2 is a legacy filter and does not validate the repaired model.';
+  document.querySelector('#strictV2Board').innerHTML = '';
 }
 
 function renderHistory() {
@@ -264,6 +259,17 @@ function bindControls() {
   document.querySelector('#dateClear').addEventListener('click', () => { state.dateFrom = ''; state.dateTo = ''; document.querySelector('#dateFrom').value = ''; document.querySelector('#dateTo').value = ''; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); });
 }
 
+function visiblePaperPicks() {
+  if (state.data?.status !== 'paper_only' || state.data?.model?.live_enabled !== false) return [];
+  const now = Date.now();
+  return (state.data.picks || []).filter(row => ['PAPER','PASS'].includes(row.recommendation) &&
+    Date.parse(row.scheduled_start) > now && Date.parse(row.collected_at) <= now && now-Date.parse(row.collected_at) <= 30*60*1000);
+}
+function renderPaper() {
+  const report = state.data?.paper_evaluation || {};
+  document.querySelector('#paperNotice').textContent = `Paper trading only. ${report.settled || 0} settled selections; at least ${report.minimum_settled || 200} over ${report.minimum_days || 60} days are required before manual review. There is no automatic switch to live betting.`;
+  renderHistoryView({rows: state.data?.paper_history || [], resultFilter: 'ALL', metricsId:'#paperMetrics', noticeId:'#paperHistoryNotice', groupsId:'#paperGroups', noticeSuffix:' Prospective paper selections; displayed prices are not confirmed fills.'});
+}
 async function load() {
   bindControls();
   try {
@@ -274,12 +280,14 @@ async function load() {
     banner.textContent = state.data.status_message;
     banner.className = `status-banner ${state.data.status === 'ready' ? '' : 'closed'}`;
     if (state.data.generated_at) document.querySelector('#updatedText').textContent = `Updated ${new Date(state.data.generated_at).toLocaleString([], {dateStyle:'medium', timeStyle:'short'})}`;
-    renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus();
+    renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus();
   } catch (error) {
     document.querySelector('#statusBanner').textContent = 'The latest board could not be verified. No plays are displayed.';
     document.querySelector('#statusBanner').className = 'status-banner closed';
-    renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus();
+    renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus();
   }
 }
 
 load();
+
+setInterval(() => { renderBoard(); renderFocus(); }, 30000);

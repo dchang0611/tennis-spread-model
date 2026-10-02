@@ -1,0 +1,13 @@
+{
+  "mode": "paper",
+  "model_version": "2.0.0",
+  "reason": "Live betting suspended: repaired player-state pipeline requires prospective validation.",
+  "max_completed_date_lag_days": 1,
+  "max_match_age_days": 45,
+  "max_quote_age_minutes": 30,
+  "minimum_player_matches": 10,
+  "minimum_surface_matches": 5,
+  "minimum_paper_settled": 200,
+  "minimum_paper_days": 60,
+  "automatic_live_promotion": false
+}

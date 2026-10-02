@@ -1,45 +1,31 @@
-# Tennis Spread Lab
+# Tennis Spread Lab — paper-only repair release
 
-An evidence-first tennis game-spread model and GitHub Pages dashboard designed for paired Novig lines.
+Live betting is disabled. Version 2 produces PAPER/PASS research observations;
+it cannot emit BET or automatically promote itself to live betting.
 
-## What it does
+Run `python -m unittest discover -v`, then `python novig_scraper.py --tournament ATP --surface Auto --minimum-matches 1`, `python run_paper_pipeline.py`, and `python build_spread_site.py`.
+The scheduled workflow does this automatically and publishes an explicit CLOSED
+board when any required input fails. A deployed page does not imply healthy data.
 
-- predicts the final game differential with a compact, regularized model;
-- converts rolling out-of-sample errors into cover probabilities;
-- removes the paired market hold from both sides of each spread;
-- calculates probability edge and expected ROI;
-- applies an uncertainty haircut and conservative decision gates; and
-- recommends no more than one alternate line per match.
+Every run downloads the current and preceding two seasonal statistics files plus
+ongoing tournaments. No cached or fixed-date model file supplies player state.
+Tournament-only dates are excluded rather than used as match dates. Same-day
+results are withheld until the next UTC day; players with known same-day results
+are excluded until their state can include those results. The latest completed
+match date must be within one calendar day, and recent player results are checked
+against an independent schedule/results feed.
 
-The public dashboard fails closed when current Novig lines have not been scored. Sample markets are never published as live recommendations.
+Training and inference use the same feature function and post-match state engine.
+Surface histories are separate; workload/rest are computed for the target start.
+Missing player data, ambiguous identities, unresolved event format, expired
+quotes, or already-started matches are excluded. Every paper pick has an immutable
+feature receipt, model version, source hashes, price, start time and capture time.
 
-## Current market input
+The old results ledger is preserved and clearly labeled as legacy records whose
+pre-start capture was not enforced. It is never mixed into new prospective results.
+Paper promotion requires at least 200 settled selections spanning 60 days,
+favorable calibration/market comparison and uncertainty checks, plus manual
+review of execution and an independent holdout. Reaching those counts alone is
+not approval and never enables live betting.
 
-Surface assignments are fetched afresh for each run from Tennis Explorer match
-pages. The lookup matches both players against dated singles schedules for the
-Pacific date and following European date, then verifies the match header's date,
-tournament and surface. There is no hardcoded tournament list or expiry date.
-Unknown or ambiguous matches are excluded with diagnostics; verified matches
-continue. Source URLs are retained in scrape diagnostics. Source availability
-and markup remain external dependencies; there is no default-to-Hard fallback.
-Successful raw captures are retained under `data/market_history/`. Failed market
-refreshes still deploy diagnostics, then mark the workflow failed.
-
-Update `data/novig_spreads.csv` with one row per paired spread. Pushing that file to `main`, or manually running the workflow, rebuilds and publishes the dashboard.
-
-## Model safeguards
-
-- expanding-window rolling validation;
-- compact feature families to reduce correlated duplicate signals;
-- Elastic Net shrinkage;
-- explicit whole-game push handling;
-- partial retirement scores excluded from completed-margin training targets;
-- minimum 4 percentage-point edge and 5% expected ROI;
-- conservative probability requirement; and
-- one qualified position per match.
-
-See `TENNIS_SPREAD_MODEL.md` for the full methodology.
-
-## Disclaimer
-
-This is a research tool, not a guarantee of profit or financial advice. Prices move, historical performance may not persist, and incomplete or stale inputs must produce no play.
+See TENNIS_SPREAD_MODEL.md for the date policy, evaluation limits and data sources.

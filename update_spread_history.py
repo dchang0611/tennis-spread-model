@@ -334,10 +334,12 @@ def archive_bets(recommendations: pd.DataFrame, history: pd.DataFrame, now: str)
                 lambda item: bet_identity(item.get("date"), item.get("player"), item.get("opponent")) == key,
                 axis=1,
             )
-            for column in ("probability_edge", "expected_roi", "feature_rationale"):
-                value = getattr(row, column, None)
-                missing = history.loc[matching, column].isna() | (history.loc[matching, column].astype(str).str.strip() == "")
-                history.loc[history.loc[matching].index[missing], column] = value
+            # Do not retroactively invent factor evidence for a locked wager.
+            continue
+        start = pd.to_datetime(getattr(row, 'scheduled_start', None), utc=True, errors='coerce')
+        quote = pd.to_datetime(getattr(row, 'collected_at', None), utc=True, errors='coerce')
+        stamp = pd.to_datetime(now, utc=True, errors='coerce')
+        if pd.isna(start) or pd.isna(quote) or pd.isna(stamp) or not quote <= stamp < start or (stamp-quote).total_seconds() > 1800:
             continue
         additions.append({
             "date": row.date, "tournament": row.tournament, "surface": row.surface,
@@ -386,7 +388,7 @@ def settle_history(history: pd.DataFrame, results: pd.DataFrame, now: str) -> pd
             # calendar day. Exact player matching remains mandatory, while the
             # date window allows that one-day boundary.
             (results["tourney_date"] <= pick_date + pd.Timedelta(days=1)) &
-            (results["tourney_date"] >= pick_date - pd.Timedelta(days=14))
+            (results["tourney_date"] >= pick_date - pd.Timedelta(days=1))
         ].copy()
         if "surface" in results.columns and str(pick.get("surface", "")):
             same_surface = candidates[candidates["surface"].astype(str).str.lower() == str(pick["surface"]).lower()]
@@ -394,6 +396,9 @@ def settle_history(history: pd.DataFrame, results: pd.DataFrame, now: str) -> pd
                 candidates = same_surface
         if candidates.empty:
             continue
+        outcomes = {(name_key(row.winner_name), name_key(row.loser_name), str(row.score)) for row in candidates.itertuples()}
+        if len(outcomes) != 1:
+            continue  # Conflicting outcomes require reconciliation, not latest-row wins.
         match = candidates.sort_values("tourney_date", ascending=False).iloc[0]
         margin = score_game_margin(match.get("score"))
         if margin is None:
@@ -416,7 +421,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Archive and settle tennis spread recommendations.")
     parser.add_argument("--recommendations", default="tennis_model_output/novig_spread_recommendations.csv")
     parser.add_argument("--history", default="tennis_model_output/spread_results_history.csv")
-    parser.add_argument("--results-url", default="https://raw.githubusercontent.com/JeffSackmann/tennis_atp/master/atp_matches_2026.csv")
+    parser.add_argument("--results-url", default=f"https://stats.tennismylife.org/data/{datetime.now(timezone.utc).year}.csv")
     parser.add_argument("--verified-results", default="data/verified_atp_results.csv")
     parser.add_argument("--mode", choices=["all", "archive", "settle"], default="all")
     parser.add_argument("--status-file", default="data/settlement_status.json")
