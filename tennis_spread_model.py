@@ -8,11 +8,8 @@ cover probabilities using out-of-fold residuals.
 
 from __future__ import annotations
 
-import argparse
-import json
 import math
 from dataclasses import dataclass
-from pathlib import Path
 from typing import Iterable
 
 import numpy as np
@@ -23,11 +20,6 @@ from sklearn.linear_model import ElasticNet
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
-
-import tennis_betting_model_priority_features_v2_snapshotfix as legacy
-
-
-OUT_DIR = Path("tennis_model_output")
 
 # One or two representatives from each tennis concept, instead of allowing
 # multiple transformations of the same underlying statistic to dominate.
@@ -379,6 +371,28 @@ def train_spread_model(model_rows: pd.DataFrame, folds: int = 5) -> tuple[Pipeli
     model = make_margin_model()
     model.fit(rows[FEATURES], rows["game_margin"])
     return model, oof, summary
+
+
+def train_format_models(model_rows: pd.DataFrame, folds: int = 5) -> dict[int, tuple[Pipeline, pd.DataFrame, pd.DataFrame]]:
+    """Fit independent models; format is a hard boundary, never a feature toggle."""
+    models = {}
+    for best_of, group in model_rows.groupby("best_of", dropna=True):
+        fmt = int(best_of)
+        models[fmt] = train_spread_model(group, folds=folds)
+    return models
+
+
+def score_format_markets(markets: pd.DataFrame, model_rows: pd.DataFrame, format_models: dict[int, tuple[Pipeline, pd.DataFrame, pd.DataFrame]], live_features: pd.DataFrame) -> pd.DataFrame:
+    """Score each format with its own model, calibration sample, and features."""
+    scored = []
+    for best_of, group in live_features.groupby("best_of", dropna=True):
+        fmt = int(best_of)
+        if fmt not in format_models:
+            continue
+        model, oof, _ = format_models[fmt]
+        rows = model_rows[model_rows.best_of == fmt]
+        scored.append(score_markets(markets, rows, model, oof, live_features=group))
+    return pd.concat(scored, ignore_index=True) if scored else pd.DataFrame()
 
 
 def main() -> None:

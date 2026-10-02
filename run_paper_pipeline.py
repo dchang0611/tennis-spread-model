@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 from match_data import fetch_inputs, enrich_markets, result_coverage
 from player_features import build_training_and_state, live_features, name_key
-from tennis_spread_model import FEATURES, score_markets, train_spread_model
+from tennis_spread_model import FEATURES, score_format_markets, train_format_models
 from paper_evaluation import chronological_cover_validation, prospective_report
 from update_spread_history import HISTORY_COLUMNS, settle_history
 from asof_history import assert_current_training
@@ -103,7 +103,9 @@ def main():
         rows=rows[eligible].dropna(subset=FEATURES)
         assert_current_training(rows,receipt['last_match_date'],now,policy['max_completed_date_lag_days'])
         rows.to_csv(output/'model_rows.csv',index=False)
-        model,oof,summary=train_spread_model(rows)
+        format_models=train_format_models(rows)
+        oof=pd.concat([value[1] for value in format_models.values()],ignore_index=True)
+        summary=pd.concat([value[2] for value in format_models.values()],ignore_index=True)
         oof.to_csv(output/'spread_rolling_predictions.csv',index=False)
         summary.to_csv(output/'spread_validation_summary.csv',index=False)
         write_json(ROOT/'data/cover_validation.json',chronological_cover_validation(oof))
@@ -118,7 +120,7 @@ def main():
             live.loc[idx,'feature_id']=key
             path=feature_dir/(key+'.json')
             if not path.exists(): path.write_text(encoded,encoding='utf-8')
-        scored=score_markets(enriched,rows,model,oof,live_features=live)
+        scored=score_format_markets(enriched,rows,format_models,live_features=live)
         # Recheck age/start at actual publication time after training finishes.
         finished=datetime.now(timezone.utc).isoformat()
         safe=(pd.to_datetime(scored.scheduled_start,utc=True)>pd.Timestamp(finished)) & ((pd.Timestamp(finished)-pd.to_datetime(scored.collected_at,utc=True))<=pd.Timedelta(minutes=policy['max_quote_age_minutes']))
