@@ -1,35 +1,90 @@
 {
-  "success": false,
-  "checked_at": "2026-10-02T07:56:11.083664+00:00",
+  "success": true,
+  "checked_at": "2026-10-02T14:05:37.610141+00:00",
   "match_date": "2026-10-02",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
   "surface_assignments": [
     {
-      "player_a": "Fils A.",
-      "player_b": "Tiafoe F.",
+      "player_a": "Alcaraz C.",
+      "player_b": "Arnaldi M.",
       "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338089",
-      "source_date": "2026-10-02",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338145",
+      "source_date": "2026-10-03",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Shapovalov D.",
+      "player_b": "Tabilo A.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338129",
+      "source_date": "2026-10-03",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "De Minaur A.",
+      "player_b": "Halys Q.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338083",
+      "source_date": "2026-10-03",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Shapovalov D.",
+      "player_b": "Tabilo A.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338129",
+      "source_date": "2026-10-03",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "De Minaur A.",
+      "player_b": "Halys Q.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338083",
+      "source_date": "2026-10-03",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Alcaraz C.",
+      "player_b": "Arnaldi M.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338145",
+      "source_date": "2026-10-03",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Rublev A.",
+      "player_b": "Safiullin R.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338181",
+      "source_date": "2026-10-03",
       "surface": "Hard",
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 12,
+  "events_found": 7,
   "events": [
-    "F. Tiafoe vs A. Fils",
-    "L. Darderi vs K. Jacquet",
-    "A. Gea vs H. Hurkacz",
-    "N. Djokovic vs Y. Bu",
-    "Luciano Darderi vs Kyrian Jacquet",
-    "Frances Tiafoe vs Arthur Fils",
-    "Arthur Gea vs Hubert Hurkacz",
-    "Novak Djokovic vs Yunchaokete Bu",
-    "Jiri Lehecka vs Ugo Humbert",
+    "M. Arnaldi vs C. Alcaraz",
+    "A. Tabilo vs D. Shapovalov",
+    "Q. Halys vs A. De Minaur",
     "Alejandro Tabilo vs Denis Shapovalov",
+    "Quentin Halys vs Alex De Minaur",
     "Matteo Arnaldi vs Carlos Alcaraz",
-    "Adolfo Daniel Vallejo vs Matteo Berrettini"
+    "Roman Safiullin vs Andrey Rublev"
   ],
-  "error": "Could not resolve full event-page player names for L. Darderi vs K. Jacquet."
+  "spread_markets_found": 7,
+  "parser_failures": [],
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 7,
+  "matches_parsed": 7,
+  "rows_saved": 25,
+  "error": null
 }
