@@ -67,8 +67,10 @@ run identity). Dependencies are pinned to the tested versions.
 - The whole historical period is development data. No untouched holdout is
   claimed. All prospective results are separated by model version and format.
 
-The website has four views: Paper Board, Results, Factor Research and Factor
-Confluence. Confluence uses numeric feature differences on the simple baseline's
-reconstructed picks, not regex matches against top-three rationale text. Its
-groups overlap and are descriptive. Legacy ledgers remain preserved and clearly
-labeled in the Results archive. Nothing automatically enables live bets.
+The website retains its original branding, stylesheet, cards, date controls and
+tab layout. A dataset selector keeps current versioned paper history separate
+from the fixed historical baseline replay; the format selector applies to the
+board, history and factor views. Confluence uses numeric feature differences,
+not regex matches against top-three rationale text. Its groups overlap and are
+descriptive. Legacy ledgers and comparison receipts remain preserved. Nothing
+automatically enables live bets.

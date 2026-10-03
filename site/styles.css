@@ -14,12 +14,6 @@
 }
 
 * { box-sizing: border-box; }
-select { color: var(--ink); background: var(--panel-2); border: 1px solid var(--line); border-radius: 5px; padding: 9px 12px; font: inherit; margin: 8px 0 16px 10px; max-width: 100%; }
-label { line-height: 1.5; }
-summary { cursor: pointer; line-height: 1.6; }
-.panel p, details p { line-height: 1.65; color: var(--muted); }
-details a { color: var(--mint); }
-@media (max-width: 600px) { nav.tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; } nav.tabs .tab { text-align: left; } select { display: block; margin-left: 0; } }
 html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--ink); background: var(--night); font-family: var(--sans); min-height: 100vh; }
 body::before { content: ''; position: fixed; inset: 0; pointer-events: none; background: radial-gradient(circle at 78% 8%, rgba(57,189,248,.18), transparent 31%), radial-gradient(circle at 15% 20%, rgba(25,95,165,.20), transparent 34%), linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px); background-size: auto, auto, 100% 56px; z-index: -1; }

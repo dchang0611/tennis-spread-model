@@ -8,9 +8,38 @@ from research.evaluate_baseline import freeze_quotes, probability_report, pick_r
 from paper_evaluation import chronological_cover_validation
 from test_model_repair import match, POLICY
 from match_data import apply_verified_dates
+from match_data import fetch_inputs
+import json
+import tempfile
+from pathlib import Path
 
 
 class BaselineTests(unittest.TestCase):
+    def test_refresh_succeeds_in_future_years_without_expiring_dataset(self):
+        for year in (2027,2031):
+            requested=[]
+            def fetch(url):
+                requested.append(url)
+                if 'scoreboard?' in url:
+                    return json.dumps({'events':[{'name':'Future event','groupings':[{'grouping':{'slug':'mens-singles'},'competitions':[{'id':'future'}]}]}]}).encode()
+                season=year if 'ongoing_tourneys' in url else int(url.rsplit('/',1)[1][:4])
+                return pd.DataFrame([match(f'{season}0714',number=1),match(f'{season}0715',number=2)]).to_csv(index=False).encode()
+            with tempfile.TemporaryDirectory() as directory:
+                root=Path(directory);(root/'model_policy.json').write_text(json.dumps(POLICY))
+                matches,_,receipt=fetch_inputs(f'{year}-07-16T08:00:00Z',root,fetch)
+            self.assertEqual(receipt['last_match_date'],f'{year}-07-15')
+            self.assertTrue(all(any(url.endswith(f'/{season}.csv') for url in requested) for season in range(year-2,year+1)))
+            self.assertTrue((matches.date<pd.Timestamp(f'{year}-07-16')).all())
+
+    def test_current_feature_engine_cannot_see_future_outcome_changes(self):
+        raw=pd.DataFrame([match('20260912'),match('20260914',number=2)])
+        first,states=build_training_and_state(normalize_matches(raw,'2026-09-13T12:00:00Z'))
+        previous=states['alphaone'].player.overall_elo
+        raw.loc[1,'winner_name']='Gamma Three';raw.loc[1,'score']='6-0 6-0'
+        second,states=build_training_and_state(normalize_matches(raw,'2026-09-13T12:00:00Z'))
+        pd.testing.assert_frame_equal(first,second)
+        self.assertEqual(states['alphaone'].player.overall_elo,previous)
+
     def test_missing_date_join_key_never_crashes_or_matches(self):
         original=match('20260901');original['date_precision']='tournament_only'
         reference=pd.DataFrame([{**original,'date_precision':'day','date':'2026-09-04','original_tourney_date':20260901}])
