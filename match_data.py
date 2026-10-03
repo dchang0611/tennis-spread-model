@@ -32,19 +32,23 @@ def apply_verified_dates(raw, reference):
     reference = reference[reference.date_precision.eq('day')].copy()
     def identities(frame):
         fields = frame[keys].copy()
+        complete = fields.notna().all(axis=1)
         for col in ('match_num','best_of'):
             fields[col] = pd.to_numeric(fields[col],errors='raise').astype(float).astype(str)
         for col in ('winner_name','loser_name'):
             fields[col] = fields[col].map(name_key)
-        return fields.astype(str).agg('|'.join,axis=1)
+        # pandas 3 preserves missing values when casting to str. Missing keys
+        # must never match a reference or reach str.join as floating NaN.
+        return fields.astype('string').fillna('').agg('|'.join,axis=1).where(complete)
     reference['_key'] = identities(reference)
+    reference = reference.dropna(subset=['_key'])
     reference['_day'] = pd.to_datetime(reference.date,errors='raise').dt.strftime('%Y%m%d')
     if reference.groupby('_key')._day.nunique().gt(1).any():
         raise ValueError('Conflicting independently recovered match dates')
     lookup = reference.drop_duplicates('_key').set_index('_key')
     count = 0
     for idx, key in identities(raw).items():
-        if key not in lookup.index: continue
+        if pd.isna(key) or key not in lookup.index: continue
         row = lookup.loc[key]
         observed = str(int(raw.loc[idx,'tourney_date']))
         if observed not in [str(int(row.original_tourney_date)), row._day]: continue

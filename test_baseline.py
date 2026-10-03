@@ -11,6 +11,17 @@ from match_data import apply_verified_dates
 
 
 class BaselineTests(unittest.TestCase):
+    def test_missing_date_join_key_never_crashes_or_matches(self):
+        original=match('20260901');original['date_precision']='tournament_only'
+        reference=pd.DataFrame([{**original,'date_precision':'day','date':'2026-09-04','original_tourney_date':20260901}])
+        for key in ('match_num','tourney_id','score','winner_name'):
+            raw=pd.DataFrame([{**original,key:np.nan}])
+            revised,count=apply_verified_dates(raw,reference)
+            self.assertEqual(count,0)
+            self.assertEqual(revised.iloc[0].date_precision,'tournament_only')
+            bad_reference=reference.copy();bad_reference[key]=np.nan
+            _,count=apply_verified_dates(pd.DataFrame([original]),bad_reference)
+            self.assertEqual(count,0)
     def test_recovered_dates_require_exact_fresh_match_and_preserve_fresh_stats(self):
         original=match('20260901');original['date_precision']='tournament_only'
         reference=pd.DataFrame([{**original,'date_precision':'day','date':'2026-09-04','original_tourney_date':20260901,'w_ace':100}])
