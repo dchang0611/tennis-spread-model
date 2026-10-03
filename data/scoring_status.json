@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-03T07:03:34.226659+00:00",
+  "checked_at": "2026-10-03T07:07:16.511679+00:00",
   "mode": "paper",
   "model_version": "2.0.0",
   "excluded": [
@@ -20,39 +20,19 @@
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Kyrian Jacquet",
-      "player_b": "Jaume Munar",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Kyrian Jacquet",
-      "player_b": "Jaume Munar",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Kyrian Jacquet",
-      "player_b": "Jaume Munar",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Kyrian Jacquet",
-      "player_b": "Jaume Munar",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Arthur Fils",
+      "player_b": "Valentin Vacherot",
+      "reason": "Scraped day disagrees with independently scheduled match day"
     },
     {
       "player_a": "Arthur Fils",
       "player_b": "Valentin Vacherot",
-      "reason": "No unique independently verified future start time"
+      "reason": "Scraped day disagrees with independently scheduled match day"
     },
     {
       "player_a": "Arthur Fils",
       "player_b": "Valentin Vacherot",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Arthur Fils",
-      "player_b": "Valentin Vacherot",
-      "reason": "No unique independently verified future start time"
+      "reason": "Scraped day disagrees with independently scheduled match day"
     },
     {
       "player_a": "Karen Khachanov",
@@ -73,6 +53,26 @@
       "player_a": "Karen Khachanov",
       "player_b": "Hubert Hurkacz",
       "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Kyrian Jacquet",
+      "player_b": "Jaume Munar",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Kyrian Jacquet",
+      "player_b": "Jaume Munar",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Kyrian Jacquet",
+      "player_b": "Jaume Munar",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Kyrian Jacquet",
+      "player_b": "Jaume Munar",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     }
   ],
   "market_matchups": 7,
@@ -80,5 +80,5 @@
   "training_matches": 725,
   "training_max_date": "2026-10-02",
   "paper_candidates": 1,
-  "source_hash": "05b002150ea8a0214da7842f92a61e76c313a77462e5525646d1f008cd0a2afd"
+  "source_hash": "7ae7c3bcd4c369a7886ef812e4d1a4022518f114fb4ac2d5327bcc98136e1282"
 }
