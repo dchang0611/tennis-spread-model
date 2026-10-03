@@ -1,49 +1,5 @@
 {
-  "success": true,
-  "checked_at": "2026-10-03T07:07:16.511679+00:00",
-  "last_match_date": "2026-10-02",
-  "source_hash": "7ae7c3bcd4c369a7886ef812e4d1a4022518f114fb4ac2d5327bcc98136e1282",
-  "sources": [
-    {
-      "url": "https://stats.tennismylife.org/data/2024.csv",
-      "fetched_at": "2026-10-03T07:07:16.511679+00:00",
-      "sha256": "8e6030eb9c3a2622a289377aa19977513cf01b4d5f60ecfcf1b68372702c62bc",
-      "rows": 3076
-    },
-    {
-      "url": "https://stats.tennismylife.org/data/2025.csv",
-      "fetched_at": "2026-10-03T07:07:16.511679+00:00",
-      "sha256": "f10ff8ce35c705bcfe3c39abad89fbd502fa23050e703dc8e1ccb65aecc4ea88",
-      "rows": 2944
-    },
-    {
-      "url": "https://stats.tennismylife.org/data/2026.csv",
-      "fetched_at": "2026-10-03T07:07:16.511679+00:00",
-      "sha256": "8ecebd69ac84f6cffd474c25244fc9b9bb6dcc7781ec8042560934e4eb61ac45",
-      "rows": 2419
-    },
-    {
-      "url": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
-      "fetched_at": "2026-10-03T07:07:16.511679+00:00",
-      "sha256": "490dbfb25123d6377bf18d72e1b3e95db2c088dce9978de92ca06102f53ff7c1",
-      "rows": 40
-    },
-    {
-      "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261004&limit=1000",
-      "fetched_at": "2026-10-03T07:07:16.511679+00:00",
-      "sha256": "9f0fab678dfa4372ba5d0dea9e901282aef693a4006894ea8d27612b51d4b6ed"
-    },
-    {
-      "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261003&limit=1000",
-      "fetched_at": "2026-10-03T07:07:16.511679+00:00",
-      "sha256": "9f0fab678dfa4372ba5d0dea9e901282aef693a4006894ea8d27612b51d4b6ed"
-    },
-    {
-      "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261002&limit=1000",
-      "fetched_at": "2026-10-03T07:07:16.511679+00:00",
-      "sha256": "9f0fab678dfa4372ba5d0dea9e901282aef693a4006894ea8d27612b51d4b6ed"
-    }
-  ],
-  "excluded_coarse_date_rows": 6004,
-  "date_policy": "Only events with observed per-match dates; tournament-only dates are excluded. Recent dates independently cross-checked."
+  "success": false,
+  "checked_at": "2026-10-03T08:08:08.052445+00:00",
+  "error": "sequence item 1: expected str instance, float found"
 }
