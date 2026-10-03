@@ -1,3 +1,4 @@
 # Research receipts hash exact source bytes; preserve those across platforms.
 data/reconstruction_inputs/* -text whitespace=cr-at-eol
 data/reconstructions/*.json -text
+data/baseline_evaluation/** -text whitespace=cr-at-eol

@@ -19,6 +19,41 @@ def download(url):
         return response.read()
 
 
+def apply_verified_dates(raw, reference):
+    """Reuse independently recovered dates, never stale statistics or guessed days.
+
+    A reference must agree on event, match, players, outcome, surface and format.
+    The fresh provider date must equal either the original coarse date or the
+    independently recovered date. Corrections that do not match are not forced.
+    """
+    raw = raw.copy()
+    raw['tourney_date'] = pd.to_numeric(raw.tourney_date,errors='raise')
+    keys = ['tourney_id', 'match_num', 'winner_name', 'loser_name', 'score', 'surface', 'best_of']
+    reference = reference[reference.date_precision.eq('day')].copy()
+    def identities(frame):
+        fields = frame[keys].copy()
+        for col in ('match_num','best_of'):
+            fields[col] = pd.to_numeric(fields[col],errors='raise').astype(float).astype(str)
+        for col in ('winner_name','loser_name'):
+            fields[col] = fields[col].map(name_key)
+        return fields.astype(str).agg('|'.join,axis=1)
+    reference['_key'] = identities(reference)
+    reference['_day'] = pd.to_datetime(reference.date,errors='raise').dt.strftime('%Y%m%d')
+    if reference.groupby('_key')._day.nunique().gt(1).any():
+        raise ValueError('Conflicting independently recovered match dates')
+    lookup = reference.drop_duplicates('_key').set_index('_key')
+    count = 0
+    for idx, key in identities(raw).items():
+        if key not in lookup.index: continue
+        row = lookup.loc[key]
+        observed = str(int(raw.loc[idx,'tourney_date']))
+        if observed not in [str(int(row.original_tourney_date)), row._day]: continue
+        raw.loc[idx,'tourney_date'] = int(row._day)
+        raw.loc[idx,'date_precision'] = 'day'
+        count += 1
+    return raw, count
+
+
 def fetch_inputs(now, root=Path('.'), fetch=download):
     now = pd.Timestamp(now)
     frames, receipts = [], []
@@ -37,6 +72,11 @@ def fetch_inputs(now, root=Path('.'), fetch=download):
         frames.append(frame)
     raw = pd.concat(frames, ignore_index=True)
     raw = mark_date_precision(raw)
+    recovered_dates = root/'data/reconstruction_inputs/dated_training_history.csv'
+    if recovered_dates.exists():
+        content = recovered_dates.read_bytes()
+        raw, matched = apply_verified_dates(raw,pd.read_csv(io.BytesIO(content)))
+        receipts.append({'source':'independently recovered historical dates only','sha256':hashlib.sha256(content).hexdigest(),'matched_fresh_rows':matched})
     undated = int((raw.date_precision != 'day').sum())
     matches = normalize_matches(raw, now)
     # A successful download of old data must not satisfy freshness.

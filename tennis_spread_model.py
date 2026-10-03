@@ -40,6 +40,16 @@ CORE_NUMERIC_FEATURES = [
 CORE_CATEGORICAL_FEATURES = ["surface", "tourney_level"]
 FEATURES = CORE_NUMERIC_FEATURES + CORE_CATEGORICAL_FEATURES
 
+# Predeclared nested comparisons. No outcome-driven feature or threshold search.
+FEATURE_SETS = {
+    'elo': ['elo_diff', 'surface_elo_diff'],
+    'elo_serve_return': ['elo_diff', 'surface_elo_diff', 'spw_plus_last25_diff', 'rpw_plus_last25_diff'],
+    'elo_serve_return_margin': ['elo_diff', 'surface_elo_diff', 'spw_plus_last25_diff', 'rpw_plus_last25_diff', 'surface_last10_margin_diff'],
+}
+
+def model_features(candidate=None):
+    return (FEATURE_SETS[candidate] if candidate else CORE_NUMERIC_FEATURES) + CORE_CATEGORICAL_FEATURES
+
 DRIVER_LABELS = {
     "elo_diff": ("strength", "higher overall Elo"),
     "surface_elo_diff": ("strength", "higher surface-adjusted Elo"),
@@ -89,7 +99,7 @@ def no_vig_pair(odds_a: float, odds_b: float) -> tuple[float, float]:
     return a / total, b / total
 
 
-def make_margin_model() -> Pipeline:
+def make_margin_model(candidate=None) -> Pipeline:
     numeric = Pipeline([
         ("impute", SimpleImputer(strategy="median", keep_empty_features=True)),
         ("scale", StandardScaler()),
@@ -99,7 +109,7 @@ def make_margin_model() -> Pipeline:
         ("onehot", OneHotEncoder(handle_unknown="ignore")),
     ])
     pre = ColumnTransformer([
-        ("numeric", numeric, CORE_NUMERIC_FEATURES),
+        ("numeric", numeric, FEATURE_SETS[candidate] if candidate else CORE_NUMERIC_FEATURES),
         ("categorical", categorical, CORE_CATEGORICAL_FEATURES),
     ])
     # Elastic Net both shrinks correlated features and can zero weak ones.
@@ -125,6 +135,7 @@ def rolling_oof_predictions(
     rows: pd.DataFrame,
     folds: int = 5,
     min_train_fraction: float = 0.50,
+    candidate=None,
 ) -> pd.DataFrame:
     """Generate expanding-window predictions without training on future matches."""
     rows = validate_model_rows(rows)
@@ -142,13 +153,14 @@ def rolling_oof_predictions(
         test = rows[rows["date"].dt.normalize().isin(test_dates)]
         if train.empty or test.empty:
             continue
-        model = make_margin_model()
+        model = make_margin_model(candidate)
         model.fit(train[FEATURES], train["game_margin"])
         pred = model.predict(test[FEATURES])
         out = test[["date", "surface", "best_of", "game_margin"]].copy()
         out["predicted_margin"] = pred
         out["residual"] = out["game_margin"] - out["predicted_margin"]
         out["fold"] = fold + 1
+        out['training_max_date'] = train.date.max()
         outputs.append(out)
 
     if not outputs:
@@ -279,6 +291,7 @@ def score_markets(
     oof: pd.DataFrame,
     thresholds: DecisionThresholds = DecisionThresholds(),
     live_features: pd.DataFrame | None = None,
+    candidate=None,
 ) -> pd.DataFrame:
     markets = normalize_novig_markets(markets)
     # Reuse the battle-tested player matching and pre-match snapshot builder.
@@ -288,11 +301,12 @@ def score_markets(
     if live.empty:
         raise ValueError("No Novig rows matched the historical player database.")
     live["predicted_margin_a"] = model.predict(live[FEATURES])
-    numeric_values = model.named_steps["pre"].named_transformers_["numeric"].transform(
-        live[CORE_NUMERIC_FEATURES]
-    )
-    numeric_coefficients = model.named_steps["model"].coef_[:len(CORE_NUMERIC_FEATURES)]
-    numeric_contributions = np.asarray(numeric_values) * np.asarray(numeric_coefficients)
+    numeric_features = FEATURE_SETS[candidate] if candidate else CORE_NUMERIC_FEATURES
+    numeric_values = model.named_steps['pre'].named_transformers_['numeric'].transform(live[numeric_features])
+    coefficients = model.named_steps['model'].coef_[:len(numeric_features)]
+    numeric_contributions = np.zeros((len(live), len(CORE_NUMERIC_FEATURES)))
+    for index, feature in enumerate(numeric_features):
+        numeric_contributions[:, CORE_NUMERIC_FEATURES.index(feature)] = np.asarray(numeric_values)[:, index] * coefficients[index]
 
     scored: list[dict[str, object]] = []
     for row_position, (_, row) in enumerate(live.iterrows()):
@@ -326,6 +340,8 @@ def score_markets(
                 and conservative_edge >= thresholds.min_conservative_edge
             )
             scored.append({
+                **{key: row.get(key) for key in ['observation_id', 'competition_id', 'candidate']},
+                **{feature: float(row[feature]) * (1 if side == 'A' else -1) for feature in FEATURE_SETS['elo_serve_return_margin']},
                 **{key: row.get(key) for key in ['scheduled_start', 'collected_at', 'event_url', 'metadata_source', 'format_source', 'best_of', 'tourney_level', 'feature_id', 'model_version', 'source_hash']},
                 "date": row.get("date"),
                 "tournament": row.get("tournament"),
@@ -349,6 +365,8 @@ def score_markets(
                 "recommendation": "PASS",
             })
     result = pd.DataFrame(scored)
+    if result.empty:
+        return result
     # Alternate lines on the same match are highly correlated. Allow at most
     # one bet per match and choose the candidate with the strongest EV after
     # applying the uncertainty haircut.
@@ -364,34 +382,51 @@ def score_markets(
     return result.sort_values(["recommendation", "expected_roi"], ascending=[True, False]).reset_index(drop=True)
 
 
-def train_spread_model(model_rows: pd.DataFrame, folds: int = 5) -> tuple[Pipeline, pd.DataFrame, pd.DataFrame]:
+def train_spread_model(model_rows: pd.DataFrame, folds: int = 5, candidate=None) -> tuple[Pipeline, pd.DataFrame, pd.DataFrame]:
     rows = validate_model_rows(model_rows)
-    oof = rolling_oof_predictions(rows, folds=folds)
+    oof = rolling_oof_predictions(rows, folds=folds, candidate=candidate)
     summary = validation_summary(oof)
-    model = make_margin_model()
+    model = make_margin_model(candidate)
     model.fit(rows[FEATURES], rows["game_margin"])
     return model, oof, summary
 
 
-def train_format_models(model_rows: pd.DataFrame, folds: int = 5) -> dict[int, tuple[Pipeline, pd.DataFrame, pd.DataFrame]]:
-    """Fit independent models; format is a hard boundary, never a feature toggle."""
+def train_format_models(model_rows: pd.DataFrame, folds: int = 5, candidate=None, diagnostics=None) -> dict[int, tuple[Pipeline, pd.DataFrame, pd.DataFrame]]:
+    """Insufficient evidence closes only that format; malformed input still fails."""
+    if not model_rows.best_of.isin([3, 5]).all():
+        raise ValueError('Unresolved training format')
+    diagnostics = diagnostics if diagnostics is not None else {}
     models = {}
-    for best_of, group in model_rows.groupby("best_of", dropna=True):
-        fmt = int(best_of)
-        models[fmt] = train_spread_model(group, folds=folds)
+    for fmt in (3, 5):
+        group = model_rows[model_rows.best_of == fmt]
+        diagnostics[str(fmt)] = {'status': 'closed', 'training_rows': len(group)}
+        if len(group) < 500:
+            diagnostics[str(fmt)]['reason'] = 'At least 500 eligible same-format training matches required'
+            continue
+        fitted, oof, summary = train_spread_model(group, folds=folds, candidate=candidate)
+        if len(oof.residual.dropna()) < 150:
+            diagnostics[str(fmt)]['reason'] = 'At least 150 same-format chronological residuals required'
+            continue
+        summary['best_of'] = fmt
+        models[fmt] = fitted, oof, summary
+        diagnostics[str(fmt)].update(status='paper_only', residuals=len(oof), training_max_date=str(group.date.max()))
     return models
 
 
-def score_format_markets(markets: pd.DataFrame, model_rows: pd.DataFrame, format_models: dict[int, tuple[Pipeline, pd.DataFrame, pd.DataFrame]], live_features: pd.DataFrame) -> pd.DataFrame:
+def score_format_markets(markets: pd.DataFrame, model_rows: pd.DataFrame, format_models: dict[int, tuple[Pipeline, pd.DataFrame, pd.DataFrame]], live_features: pd.DataFrame, candidate=None, excluded=None) -> pd.DataFrame:
     """Score each format with its own model, calibration sample, and features."""
     scored = []
+    excluded = excluded if excluded is not None else []
+    if not live_features.best_of.isin([3, 5]).all():
+        raise ValueError('Unresolved live format')
     for best_of, group in live_features.groupby("best_of", dropna=True):
         fmt = int(best_of)
         if fmt not in format_models:
+            excluded.extend({'player_a': r.player_a, 'player_b': r.player_b, 'reason': f'BO{fmt} model closed: insufficient training/calibration evidence'} for r in group.itertuples())
             continue
         model, oof, _ = format_models[fmt]
         rows = model_rows[model_rows.best_of == fmt]
-        scored.append(score_markets(markets, rows, model, oof, live_features=group))
+        scored.append(score_markets(markets, rows, model, oof, live_features=group, candidate=candidate))
     return pd.concat(scored, ignore_index=True) if scored else pd.DataFrame()
 
 

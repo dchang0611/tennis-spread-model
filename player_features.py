@@ -94,6 +94,7 @@ class State:
     matches: int = 0
     surfaces: dict = field(default_factory=lambda: defaultdict(int))
     latest_id: str = ''
+    point_stat_coverage: list = field(default_factory=list)
 
 
 def feature_row(a, b, day, surface, best_of, tourney_level):
@@ -107,6 +108,8 @@ def feature_row(a, b, day, surface, best_of, tourney_level):
                a_matches=a.matches, b_matches=b.matches,
                a_surface_matches=a.surfaces[surface], b_surface_matches=b.surfaces[surface],
                a_last_match_id=a.latest_id, b_last_match_id=b.latest_id)
+    row['a_stats_complete'] = bool(a.point_stat_coverage) and all(a.point_stat_coverage[-25:])
+    row['b_stats_complete'] = bool(b.point_stat_coverage) and all(b.point_stat_coverage[-25:])
     return row
 
 
@@ -121,6 +124,14 @@ def update(states, row):
         stats['spw_plus'] = stats['spw'] - (1 - opp['rpw_last25'])
         stats['rpw_plus'] = stats['rpw'] - (1 - opp['spw_last25'])
     margin = ast['games'] - bst['games']
+    complete_stats = True
+    for side in ('w', 'l'):
+        values = [row.get(f'{side}_{key}', np.nan) for key in ('svpt', '1stIn', '1stWon', '2ndWon')]
+        if not all(pd.notna(v) and np.isfinite(float(v)) for v in values):
+            complete_stats = False
+            continue
+        points, first_in, first_won, second_won = values
+        complete_stats &= points > 0 and 0 <= first_won <= first_in <= points and 0 <= second_won <= points-first_in
     A.overall_elo, B.overall_elo = base.update_elo(A.overall_elo, B.overall_elo, 1, base.ELO_K)
     A.surface_elo[row.surface], B.surface_elo[row.surface] = base.update_elo(A.surface_elo[row.surface], B.surface_elo[row.surface], 1, base.SURFACE_ELO_K)
     for state, result, m, stats in [(a, 1, margin, ast), (b, 0, -margin, bst)]:
@@ -128,12 +139,15 @@ def update(states, row):
         state.matches += 1
         state.surfaces[row.surface] += 1
         state.latest_id = row.match_id
+        state.point_stat_coverage.append(bool(complete_stats))
 
 
-def build_training_and_state(matches):
+def build_training_and_state(matches, before_day=None):
     states = defaultdict(State)
     rows = []
     for day, group in matches.groupby('date', sort=True):
+        if before_day is not None:
+            before_day(day, states)
         complete = group[group.completed]
         for _, match in complete.iterrows():
             # Stable identity-based orientation, independent of source row order.
@@ -151,6 +165,19 @@ def build_training_and_state(matches):
     return pd.DataFrame(rows), states
 
 
+def eligible_training_rows(rows, policy):
+    """Common-support gate used unchanged by research and production."""
+    from tennis_spread_model import FEATURE_SETS
+    mask = (rows.a_matches >= policy['minimum_player_matches']) & (rows.b_matches >= policy['minimum_player_matches'])
+    mask &= (rows.a_surface_matches >= policy['minimum_surface_matches']) & (rows.b_surface_matches >= policy['minimum_surface_matches'])
+    mask &= rows.a_stats_complete & rows.b_stats_complete
+    for side in ('a', 'b'):
+        age = (pd.to_datetime(rows.date) - pd.to_datetime(rows[f'{side}_last_match'],format='mixed',errors='coerce')).dt.total_seconds()/86400
+        mask &= age.between(0, policy['max_match_age_days'])
+    mask &= np.isfinite(rows[FEATURE_SETS['elo_serve_return_margin']].to_numpy(dtype=float)).all(axis=1)
+    return rows[mask].copy()
+
+
 def live_features(markets, states, policy, now):
     rows, excluded = [], []
     now = pd.Timestamp(now)
@@ -164,7 +191,7 @@ def live_features(markets, states, policy, now):
                 raise ValueError('Started event, future quote, or expired quote')
             if not market.get('metadata_source') or not market.get('format_source'):
                 raise ValueError('Unverified event metadata')
-            if market['surface'] not in ['Hard', 'Clay', 'Grass', 'Carpet'] or int(market['best_of']) not in [3, 5]:
+            if market['surface'] not in ['Hard', 'Clay', 'Grass', 'Carpet'] or market['best_of'] not in [3, 5]:
                 raise ValueError('Unresolved surface/format')
             ak, bk = name_key(market.player_a), name_key(market.player_b)
             if ak not in states or bk not in states or ak == bk:
@@ -176,7 +203,10 @@ def live_features(markets, states, policy, now):
                 if (now.tz_convert('UTC').tz_localize(None)-s.player.last_date).days > policy['max_match_age_days']:
                     raise ValueError('Player state too old')
             features = feature_row(a, b, start.tz_convert('UTC').tz_localize(None), market.surface, market.best_of, market.tourney_level)
-            if any(not np.isfinite(features[k]) for k in features if k.endswith('_diff')):
+            from tennis_spread_model import FEATURE_SETS
+            if not features['a_stats_complete'] or not features['b_stats_complete']:
+                raise ValueError('Incomplete point statistics in recent player history')
+            if any(not np.isfinite(features[k]) for k in FEATURE_SETS['elo_serve_return_margin']):
                 raise ValueError('Missing required live features')
             rows.append({**market.to_dict(), **features, 'player_a_ml':market.odds_a, 'player_b_ml':market.odds_b})
         except (ValueError, KeyError, TypeError) as exc:

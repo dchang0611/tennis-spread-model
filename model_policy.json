@@ -1,6 +1,7 @@
 {
   "mode": "paper",
-  "model_version": "2.0.0",
+  "model_version": "3.0.0-elo-paper",
+  "candidate": "elo",
   "reason": "Live betting suspended: repaired player-state pipeline requires prospective validation.",
   "max_completed_date_lag_days": 1,
   "max_match_age_days": 45,

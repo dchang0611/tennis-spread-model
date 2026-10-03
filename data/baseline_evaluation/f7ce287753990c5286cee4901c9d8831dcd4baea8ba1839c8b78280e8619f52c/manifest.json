@@ -1,0 +1,36 @@
+{
+  "protocol": {
+    "version": "baseline-comparison-1",
+    "candidates": [
+      "elo",
+      "elo_serve_return",
+      "elo_serve_return_margin"
+    ],
+    "fit": "Separate BO3/BO5 ElasticNet alpha=.08 l1_ratio=.2; five expanding chronological folds; at least 500 training matches and 150 calibration residuals",
+    "eligibility": "Common complete predictor universe; 10 prior matches, 5 surface matches, all point statistics in last 25 observed matches, latest match within 45 days",
+    "timing": "Capture and archive both before scheduled start; archive within 30 minutes of capture; earlier UTC days only",
+    "availability": "Corrected historical records, original publication timestamps unavailable; retrospective only",
+    "lags_days": [
+      1,
+      2
+    ],
+    "primary_probability_sample": "One paired line per match: earliest eligible capture, closest no-vig probability to 50%, observation ID tie-break",
+    "bet_selection": "Production thresholds unchanged; first qualifying capture, maximum conservative EV, at most one selection per match per candidate",
+    "settlement": "Two agreeing sources and conventional completed score for reported metrics; all other outcomes remain separately unresolved",
+    "uncertainty": "95% percentile bootstrap by match for primary probabilities and by UTC capture week for pick ROI; descriptive, not multiple-search corrected",
+    "costs": "Displayed prices; no fill/liquidity proof. Gross ROI and 1% stake-cost sensitivity, not estimated actual fees",
+    "holdout": "None: this historical period has already informed development. New prospective data required",
+    "paper_candidate": "elo chosen for simplicity before comparison; no automatic winner selection or live promotion"
+  },
+  "input_hashes": {
+    "dated_training_history.csv": "79738899a31b7d193b8ec328bae32d35be665f20384c275a2784ba4cdb6cbc82",
+    "reconciled_lines.csv": "6c5f35414edcb977a13473b1ce91c41458df44334dbc01058e1a5cf1cf4fe520"
+  },
+  "code_hashes": {
+    "player_features.py": "ee9e8bc3f2447603197a3f99e49e175c33c8aab2105c8676ea52750fedd0375b",
+    "tennis_spread_model.py": "6e7e01df1e29ec6d6025270f78d30d96e3bbfd6233d30d194855b10abc16347e",
+    "research/evaluate_baseline.py": "c31206de33158ce01ad36c60e6b013d2933a893f112951b8020a576c0bee2f9c",
+    "model_policy.json": "c2fed4c20c03fbfcb8cf9f2891d6923ae094aeebea956a7d6fe1e6cb7604aace",
+    "tennis_betting_model_priority_features_v2_snapshotfix.py": "aa83778ce40eca6fbf02d556656729b003a9bc179389d18587a4fd1988920881"
+  }
+}

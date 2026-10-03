@@ -1,0 +1,3992 @@
+[
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-07",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3024,
+        "residuals": 1649,
+        "training_max_date": "2026-08-06 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-07",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3024,
+        "residuals": 1649,
+        "training_max_date": "2026-08-06 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-07",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3024,
+        "residuals": 1649,
+        "training_max_date": "2026-08-06 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-08",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3029,
+        "residuals": 1654,
+        "training_max_date": "2026-08-07 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-08",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3029,
+        "residuals": 1654,
+        "training_max_date": "2026-08-07 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-08",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3029,
+        "residuals": 1654,
+        "training_max_date": "2026-08-07 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-09",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3033,
+        "residuals": 1654,
+        "training_max_date": "2026-08-08 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-09",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3033,
+        "residuals": 1654,
+        "training_max_date": "2026-08-08 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-09",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3033,
+        "residuals": 1654,
+        "training_max_date": "2026-08-08 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-10",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3037,
+        "residuals": 1658,
+        "training_max_date": "2026-08-09 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-10",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3037,
+        "residuals": 1658,
+        "training_max_date": "2026-08-09 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-10",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3037,
+        "residuals": 1658,
+        "training_max_date": "2026-08-09 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-12",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3042,
+        "residuals": 1661,
+        "training_max_date": "2026-08-11 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-12",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3042,
+        "residuals": 1661,
+        "training_max_date": "2026-08-11 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-12",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3042,
+        "residuals": 1661,
+        "training_max_date": "2026-08-11 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-13",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3043,
+        "residuals": 1661,
+        "training_max_date": "2026-08-12 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-13",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3043,
+        "residuals": 1661,
+        "training_max_date": "2026-08-12 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-13",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3043,
+        "residuals": 1661,
+        "training_max_date": "2026-08-12 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-14",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3050,
+        "residuals": 1668,
+        "training_max_date": "2026-08-13 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-14",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3050,
+        "residuals": 1668,
+        "training_max_date": "2026-08-13 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-14",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3050,
+        "residuals": 1668,
+        "training_max_date": "2026-08-13 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-15",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3066,
+        "residuals": 1682,
+        "training_max_date": "2026-08-14 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-15",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3066,
+        "residuals": 1682,
+        "training_max_date": "2026-08-14 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-15",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3066,
+        "residuals": 1682,
+        "training_max_date": "2026-08-14 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-16",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3079,
+        "residuals": 1695,
+        "training_max_date": "2026-08-15 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-16",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3079,
+        "residuals": 1695,
+        "training_max_date": "2026-08-15 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-16",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3079,
+        "residuals": 1695,
+        "training_max_date": "2026-08-15 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-17",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3093,
+        "residuals": 1708,
+        "training_max_date": "2026-08-16 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-17",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3093,
+        "residuals": 1708,
+        "training_max_date": "2026-08-16 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-17",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3093,
+        "residuals": 1708,
+        "training_max_date": "2026-08-16 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-18",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3100,
+        "residuals": 1715,
+        "training_max_date": "2026-08-17 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-18",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3100,
+        "residuals": 1715,
+        "training_max_date": "2026-08-17 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-18",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3100,
+        "residuals": 1715,
+        "training_max_date": "2026-08-17 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-19",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3107,
+        "residuals": 1721,
+        "training_max_date": "2026-08-18 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-19",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3107,
+        "residuals": 1721,
+        "training_max_date": "2026-08-18 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-19",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3107,
+        "residuals": 1721,
+        "training_max_date": "2026-08-18 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-20",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3113,
+        "residuals": 1727,
+        "training_max_date": "2026-08-19 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-20",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3113,
+        "residuals": 1727,
+        "training_max_date": "2026-08-19 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-20",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3113,
+        "residuals": 1727,
+        "training_max_date": "2026-08-19 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-21",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3117,
+        "residuals": 1729,
+        "training_max_date": "2026-08-20 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-21",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3117,
+        "residuals": 1729,
+        "training_max_date": "2026-08-20 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-21",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3117,
+        "residuals": 1729,
+        "training_max_date": "2026-08-20 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-22",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3120,
+        "residuals": 1732,
+        "training_max_date": "2026-08-21 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-22",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3120,
+        "residuals": 1732,
+        "training_max_date": "2026-08-21 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-22",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3120,
+        "residuals": 1732,
+        "training_max_date": "2026-08-21 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-23",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3122,
+        "residuals": 1732,
+        "training_max_date": "2026-08-22 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-23",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3122,
+        "residuals": 1732,
+        "training_max_date": "2026-08-22 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-23",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3122,
+        "residuals": 1732,
+        "training_max_date": "2026-08-22 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-27",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3145,
+        "residuals": 1749,
+        "training_max_date": "2026-08-26 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-27",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3145,
+        "residuals": 1749,
+        "training_max_date": "2026-08-26 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-27",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3145,
+        "residuals": 1749,
+        "training_max_date": "2026-08-26 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-28",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3148,
+        "residuals": 1752,
+        "training_max_date": "2026-08-27 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-28",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3148,
+        "residuals": 1752,
+        "training_max_date": "2026-08-27 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-28",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3148,
+        "residuals": 1752,
+        "training_max_date": "2026-08-27 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-29",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3151,
+        "residuals": 1749,
+        "training_max_date": "2026-08-28 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-29",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3151,
+        "residuals": 1749,
+        "training_max_date": "2026-08-28 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-29",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3151,
+        "residuals": 1749,
+        "training_max_date": "2026-08-28 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-30",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-30",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-30",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-31",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 658,
+        "residuals": 363,
+        "training_max_date": "2026-08-30 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-31",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 658,
+        "residuals": 363,
+        "training_max_date": "2026-08-30 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-08-31",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 658,
+        "residuals": 363,
+        "training_max_date": "2026-08-30 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-01",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 675,
+        "residuals": 380,
+        "training_max_date": "2026-08-31 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-01",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 675,
+        "residuals": 380,
+        "training_max_date": "2026-08-31 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-01",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 675,
+        "residuals": 380,
+        "training_max_date": "2026-08-31 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-02",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 681,
+        "residuals": 381,
+        "training_max_date": "2026-09-01 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-02",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 681,
+        "residuals": 381,
+        "training_max_date": "2026-09-01 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-02",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 681,
+        "residuals": 381,
+        "training_max_date": "2026-09-01 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-03",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 697,
+        "residuals": 397,
+        "training_max_date": "2026-09-02 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-03",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 697,
+        "residuals": 397,
+        "training_max_date": "2026-09-02 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-03",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 697,
+        "residuals": 397,
+        "training_max_date": "2026-09-02 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-04",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 710,
+        "residuals": 405,
+        "training_max_date": "2026-09-03 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-04",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 710,
+        "residuals": 405,
+        "training_max_date": "2026-09-03 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-04",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 710,
+        "residuals": 405,
+        "training_max_date": "2026-09-03 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-05",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 718,
+        "residuals": 413,
+        "training_max_date": "2026-09-04 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-05",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 718,
+        "residuals": 413,
+        "training_max_date": "2026-09-04 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-05",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 718,
+        "residuals": 413,
+        "training_max_date": "2026-09-04 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-06",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 724,
+        "residuals": 411,
+        "training_max_date": "2026-09-05 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-06",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 724,
+        "residuals": 411,
+        "training_max_date": "2026-09-05 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-06",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 724,
+        "residuals": 411,
+        "training_max_date": "2026-09-05 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-07",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 730,
+        "residuals": 417,
+        "training_max_date": "2026-09-06 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-07",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 730,
+        "residuals": 417,
+        "training_max_date": "2026-09-06 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-07",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 730,
+        "residuals": 417,
+        "training_max_date": "2026-09-06 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-08",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 733,
+        "residuals": 411,
+        "training_max_date": "2026-09-07 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-08",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 733,
+        "residuals": 411,
+        "training_max_date": "2026-09-07 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-08",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 733,
+        "residuals": 411,
+        "training_max_date": "2026-09-07 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-09",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 735,
+        "residuals": 413,
+        "training_max_date": "2026-09-08 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-09",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 735,
+        "residuals": 413,
+        "training_max_date": "2026-09-08 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-09",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 735,
+        "residuals": 413,
+        "training_max_date": "2026-09-08 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-11",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 737,
+        "residuals": 409,
+        "training_max_date": "2026-09-10 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-11",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 737,
+        "residuals": 409,
+        "training_max_date": "2026-09-10 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-11",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 737,
+        "residuals": 409,
+        "training_max_date": "2026-09-10 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-13",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 739,
+        "residuals": 409,
+        "training_max_date": "2026-09-11 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-13",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 739,
+        "residuals": 409,
+        "training_max_date": "2026-09-11 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-13",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 739,
+        "residuals": 409,
+        "training_max_date": "2026-09-11 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-29",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3192,
+        "residuals": 1772,
+        "training_max_date": "2026-09-28 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-29",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3192,
+        "residuals": 1772,
+        "training_max_date": "2026-09-28 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-29",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3192,
+        "residuals": 1772,
+        "training_max_date": "2026-09-28 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-30",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3194,
+        "residuals": 1770,
+        "training_max_date": "2026-09-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-30",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3194,
+        "residuals": 1770,
+        "training_max_date": "2026-09-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-09-30",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3194,
+        "residuals": 1770,
+        "training_max_date": "2026-09-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-10-01",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3201,
+        "residuals": 1777,
+        "training_max_date": "2026-09-30 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-10-01",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3201,
+        "residuals": 1777,
+        "training_max_date": "2026-09-30 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 1,
+    "cutoff_exclusive": "2026-10-01",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3201,
+        "residuals": 1777,
+        "training_max_date": "2026-09-30 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-06",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3014,
+        "residuals": 1647,
+        "training_max_date": "2026-08-05 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-06",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3014,
+        "residuals": 1647,
+        "training_max_date": "2026-08-05 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-06",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3014,
+        "residuals": 1647,
+        "training_max_date": "2026-08-05 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-07",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3024,
+        "residuals": 1649,
+        "training_max_date": "2026-08-06 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-07",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3024,
+        "residuals": 1649,
+        "training_max_date": "2026-08-06 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-07",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3024,
+        "residuals": 1649,
+        "training_max_date": "2026-08-06 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-08",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3029,
+        "residuals": 1654,
+        "training_max_date": "2026-08-07 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-08",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3029,
+        "residuals": 1654,
+        "training_max_date": "2026-08-07 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-08",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3029,
+        "residuals": 1654,
+        "training_max_date": "2026-08-07 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-09",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3033,
+        "residuals": 1654,
+        "training_max_date": "2026-08-08 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-09",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3033,
+        "residuals": 1654,
+        "training_max_date": "2026-08-08 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-09",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3033,
+        "residuals": 1654,
+        "training_max_date": "2026-08-08 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-11",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3038,
+        "residuals": 1657,
+        "training_max_date": "2026-08-10 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-11",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3038,
+        "residuals": 1657,
+        "training_max_date": "2026-08-10 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-11",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3038,
+        "residuals": 1657,
+        "training_max_date": "2026-08-10 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-12",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3042,
+        "residuals": 1661,
+        "training_max_date": "2026-08-11 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-12",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3042,
+        "residuals": 1661,
+        "training_max_date": "2026-08-11 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-12",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3042,
+        "residuals": 1661,
+        "training_max_date": "2026-08-11 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-13",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3043,
+        "residuals": 1661,
+        "training_max_date": "2026-08-12 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-13",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3043,
+        "residuals": 1661,
+        "training_max_date": "2026-08-12 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-13",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3043,
+        "residuals": 1661,
+        "training_max_date": "2026-08-12 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-14",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3050,
+        "residuals": 1668,
+        "training_max_date": "2026-08-13 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-14",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3050,
+        "residuals": 1668,
+        "training_max_date": "2026-08-13 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-14",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3050,
+        "residuals": 1668,
+        "training_max_date": "2026-08-13 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-15",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3066,
+        "residuals": 1682,
+        "training_max_date": "2026-08-14 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-15",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3066,
+        "residuals": 1682,
+        "training_max_date": "2026-08-14 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-15",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3066,
+        "residuals": 1682,
+        "training_max_date": "2026-08-14 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-16",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3079,
+        "residuals": 1695,
+        "training_max_date": "2026-08-15 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-16",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3079,
+        "residuals": 1695,
+        "training_max_date": "2026-08-15 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-16",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3079,
+        "residuals": 1695,
+        "training_max_date": "2026-08-15 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-17",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3093,
+        "residuals": 1708,
+        "training_max_date": "2026-08-16 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-17",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3093,
+        "residuals": 1708,
+        "training_max_date": "2026-08-16 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-17",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3093,
+        "residuals": 1708,
+        "training_max_date": "2026-08-16 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-18",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3100,
+        "residuals": 1715,
+        "training_max_date": "2026-08-17 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-18",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3100,
+        "residuals": 1715,
+        "training_max_date": "2026-08-17 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-18",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3100,
+        "residuals": 1715,
+        "training_max_date": "2026-08-17 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-19",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3107,
+        "residuals": 1721,
+        "training_max_date": "2026-08-18 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-19",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3107,
+        "residuals": 1721,
+        "training_max_date": "2026-08-18 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-19",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3107,
+        "residuals": 1721,
+        "training_max_date": "2026-08-18 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-20",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3113,
+        "residuals": 1727,
+        "training_max_date": "2026-08-19 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-20",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3113,
+        "residuals": 1727,
+        "training_max_date": "2026-08-19 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-20",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3113,
+        "residuals": 1727,
+        "training_max_date": "2026-08-19 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-21",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3117,
+        "residuals": 1729,
+        "training_max_date": "2026-08-20 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-21",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3117,
+        "residuals": 1729,
+        "training_max_date": "2026-08-20 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-21",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3117,
+        "residuals": 1729,
+        "training_max_date": "2026-08-20 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-22",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3120,
+        "residuals": 1732,
+        "training_max_date": "2026-08-21 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-22",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3120,
+        "residuals": 1732,
+        "training_max_date": "2026-08-21 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-22",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3120,
+        "residuals": 1732,
+        "training_max_date": "2026-08-21 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-26",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3137,
+        "residuals": 1745,
+        "training_max_date": "2026-08-25 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-26",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3137,
+        "residuals": 1745,
+        "training_max_date": "2026-08-25 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-26",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3137,
+        "residuals": 1745,
+        "training_max_date": "2026-08-25 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-27",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3145,
+        "residuals": 1749,
+        "training_max_date": "2026-08-26 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-27",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3145,
+        "residuals": 1749,
+        "training_max_date": "2026-08-26 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-27",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3145,
+        "residuals": 1749,
+        "training_max_date": "2026-08-26 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-28",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3148,
+        "residuals": 1752,
+        "training_max_date": "2026-08-27 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-28",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3148,
+        "residuals": 1752,
+        "training_max_date": "2026-08-27 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-28",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3148,
+        "residuals": 1752,
+        "training_max_date": "2026-08-27 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-29",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3151,
+        "residuals": 1749,
+        "training_max_date": "2026-08-28 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-29",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3151,
+        "residuals": 1749,
+        "training_max_date": "2026-08-28 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-29",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3151,
+        "residuals": 1749,
+        "training_max_date": "2026-08-28 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-30",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-30",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-30",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 645,
+        "residuals": 357,
+        "training_max_date": "2026-07-12 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-31",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 658,
+        "residuals": 363,
+        "training_max_date": "2026-08-30 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-31",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 658,
+        "residuals": 363,
+        "training_max_date": "2026-08-30 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-08-31",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 658,
+        "residuals": 363,
+        "training_max_date": "2026-08-30 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-01",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 675,
+        "residuals": 380,
+        "training_max_date": "2026-08-31 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-01",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 675,
+        "residuals": 380,
+        "training_max_date": "2026-08-31 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-01",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 675,
+        "residuals": 380,
+        "training_max_date": "2026-08-31 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-02",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 681,
+        "residuals": 381,
+        "training_max_date": "2026-09-01 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-02",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 681,
+        "residuals": 381,
+        "training_max_date": "2026-09-01 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-02",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 681,
+        "residuals": 381,
+        "training_max_date": "2026-09-01 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-03",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 697,
+        "residuals": 397,
+        "training_max_date": "2026-09-02 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-03",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 697,
+        "residuals": 397,
+        "training_max_date": "2026-09-02 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-03",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 697,
+        "residuals": 397,
+        "training_max_date": "2026-09-02 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-04",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 710,
+        "residuals": 405,
+        "training_max_date": "2026-09-03 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-04",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 710,
+        "residuals": 405,
+        "training_max_date": "2026-09-03 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-04",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 710,
+        "residuals": 405,
+        "training_max_date": "2026-09-03 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-05",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 718,
+        "residuals": 413,
+        "training_max_date": "2026-09-04 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-05",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 718,
+        "residuals": 413,
+        "training_max_date": "2026-09-04 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-05",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 718,
+        "residuals": 413,
+        "training_max_date": "2026-09-04 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-06",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 724,
+        "residuals": 411,
+        "training_max_date": "2026-09-05 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-06",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 724,
+        "residuals": 411,
+        "training_max_date": "2026-09-05 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-06",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 724,
+        "residuals": 411,
+        "training_max_date": "2026-09-05 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-07",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 730,
+        "residuals": 417,
+        "training_max_date": "2026-09-06 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-07",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 730,
+        "residuals": 417,
+        "training_max_date": "2026-09-06 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-07",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 730,
+        "residuals": 417,
+        "training_max_date": "2026-09-06 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-08",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 733,
+        "residuals": 411,
+        "training_max_date": "2026-09-07 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-08",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 733,
+        "residuals": 411,
+        "training_max_date": "2026-09-07 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-08",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 733,
+        "residuals": 411,
+        "training_max_date": "2026-09-07 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-10",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 736,
+        "residuals": 408,
+        "training_max_date": "2026-09-09 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-10",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 736,
+        "residuals": 408,
+        "training_max_date": "2026-09-09 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-10",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 736,
+        "residuals": 408,
+        "training_max_date": "2026-09-09 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-12",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 739,
+        "residuals": 409,
+        "training_max_date": "2026-09-11 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-12",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 739,
+        "residuals": 409,
+        "training_max_date": "2026-09-11 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-12",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3152,
+        "residuals": 1750,
+        "training_max_date": "2026-08-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 739,
+        "residuals": 409,
+        "training_max_date": "2026-09-11 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-28",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3188,
+        "residuals": 1768,
+        "training_max_date": "2026-09-27 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-28",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3188,
+        "residuals": 1768,
+        "training_max_date": "2026-09-27 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-28",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3188,
+        "residuals": 1768,
+        "training_max_date": "2026-09-27 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-29",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3192,
+        "residuals": 1772,
+        "training_max_date": "2026-09-28 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-29",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3192,
+        "residuals": 1772,
+        "training_max_date": "2026-09-28 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-29",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3192,
+        "residuals": 1772,
+        "training_max_date": "2026-09-28 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-30",
+    "candidate": "elo",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3194,
+        "residuals": 1770,
+        "training_max_date": "2026-09-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-30",
+    "candidate": "elo_serve_return",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3194,
+        "residuals": 1770,
+        "training_max_date": "2026-09-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  },
+  {
+    "lag_days": 2,
+    "cutoff_exclusive": "2026-09-30",
+    "candidate": "elo_serve_return_margin",
+    "formats": {
+      "3": {
+        "status": "paper_only",
+        "training_rows": 3194,
+        "residuals": 1770,
+        "training_max_date": "2026-09-29 00:00:00"
+      },
+      "5": {
+        "status": "paper_only",
+        "training_rows": 740,
+        "residuals": 410,
+        "training_max_date": "2026-09-13 00:00:00"
+      }
+    }
+  }
+]

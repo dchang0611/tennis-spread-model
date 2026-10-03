@@ -6,18 +6,20 @@ from tennis_spread_model import cover_probabilities, residual_pool
 
 def chronological_cover_validation(oof):
     records=[]
-    for fold in sorted(oof.fold.unique()):
-        past=oof[oof.fold<fold]
+    # Fold numbers are local to each format and are not comparable timestamps.
+    oof=oof.copy(); oof['date']=pd.to_datetime(oof.date)
+    for date, current in oof.groupby('date',sort=True):
+        past=oof[oof.date<date]
         if len(past)<150:
             continue
-        for row in oof[oof.fold==fold].itertuples():
+        for row in current.itertuples():
             try:
                 pool=residual_pool(past,row.surface,row.best_of)
             except ValueError:
                 continue
             for spread in [-6.5,-4.5,-2.5,2.5,4.5,6.5]:
                 prob,_,_=cover_probabilities(row.predicted_margin,spread,pool)
-                records.append({'fold':int(fold),'probability':prob,'covered':float(row.game_margin+spread>0)})
+                records.append({'best_of':int(row.best_of),'probability':prob,'covered':float(row.game_margin+spread>0)})
     if not records:
         return {'status':'insufficient_data'}
     frame=pd.DataFrame(records)
@@ -26,11 +28,21 @@ def chronological_cover_validation(oof):
     for lo in np.arange(0,1,.1):
         group=frame[(frame.probability>=lo)&(frame.probability<lo+.1)]
         if len(group): bins.append({'lower':round(float(lo),1),'n':len(group),'predicted':float(group.probability.mean()),'actual':float(group.covered.mean())})
-    return {'status':'diagnostic_only','description':'Fixed hypothetical half-game lines; earlier-fold residuals only. Correlated lines, no historical quote/ROI claim.',
+    formats={str(int(fmt)):{'lines':len(g),'brier':float(((g.probability-g.covered)**2).mean())} for fmt,g in frame.groupby('best_of')}
+    return {'status':'diagnostic_only','description':'Fixed hypothetical half-game lines; strictly earlier-date same-format residuals only. Correlated lines, no historical quote/ROI claim.', 'by_format':formats,
             'lines':len(frame),'brier':float(((p-y)**2).mean()),'log_loss':float(-(y*np.log(p)+(1-y)*np.log(1-p)).mean()),'bins':bins}
 
 
 def prospective_report(history, policy):
+    report = _prospective_report(history, policy)
+    report['by_format'] = {str(fmt): _prospective_report([r for r in history if r.get('best_of') == fmt], policy) for fmt in (3,5)}
+    # Pooled evidence can never qualify an under-supported format for review.
+    report['status'] = 'eligible_for_manual_review' if any(r['status']=='eligible_for_manual_review' for r in report['by_format'].values()) else 'collecting_evidence'
+    report['review_scope'] = 'Only separately eligible formats; no automatic live promotion'
+    return report
+
+
+def _prospective_report(history, policy):
     settled=[r for r in history if r.get('result') in ['WIN','LOSS'] and r.get('model_version')==policy['model_version']]
     report={'model_version':policy['model_version'],'settled':len(settled),'live_enabled':False,
             'automatic_promotion':False,'minimum_settled':policy['minimum_paper_settled'],'minimum_days':policy['minimum_paper_days'],

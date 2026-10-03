@@ -1,5 +1,10 @@
 # Original-model reconstruction
 
+> Legacy audit notes for the initial pooled reconstruction. Later format-separated
+> artifacts have different counts. The current production model and new fixed
+> comparison are documented in [BASELINE.md](BASELINE.md); do not use these old
+> dashboard descriptions or counts as current validation.
+
 The original compact spread model was replayed with refreshed player state and chronological training, without the new model's 10-match, 5-surface-match, or 150 same-format-residual exclusion gates. Original Elastic Net settings, imputation, feature formulas, residual fallback, thresholds, driver labels and V2 filter were preserved. Each day is retrained using only earlier dated outcomes. First qualifying prices are locked once per match; later quotes never improve historical fills.
 
 Recovered 7,226 independently dated training matches (2,638 in 2024; 2,440 in 2025; 2,148 in 2026). 888 source rows could not be uniquely dated and remain explicitly excluded. The original market recovery preserves 2,822 distinct paired quote observations. This reconstruction assessed 4,362 sides across 219 matches; metadata/player gaps remain preserved in exclusion files. Five selected matches have ungraded finishes; no settlement rules were invented for them.

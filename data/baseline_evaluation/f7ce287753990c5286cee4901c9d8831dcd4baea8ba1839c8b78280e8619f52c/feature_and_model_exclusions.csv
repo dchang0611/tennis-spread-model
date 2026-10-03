@@ -1,0 +1,611 @@
+observation_id,lag_days,reason
+89aa4fff97da5240b417,1,Insufficient player/surface history
+040666877fc12193ced8,1,Insufficient player/surface history
+9113730552bb716a746a,1,Insufficient player/surface history
+b910ca89203ba38f82e3,1,Insufficient player/surface history
+08d8028523e0d1c35e52,1,Insufficient player/surface history
+7a0215991331d01090df,1,Insufficient player/surface history
+e1fe5b8f20144f61572e,1,Insufficient player/surface history
+6b063cab72851016dc69,1,Insufficient player/surface history
+312626626ef00e296691,1,Insufficient player/surface history
+c93d048f47f6be9eebbb,1,Insufficient player/surface history
+551a62ad786618dae964,1,Insufficient player/surface history
+3ed7975a0fb213c40bdd,1,Insufficient player/surface history
+ae0495625b66f2dd5d25,1,Insufficient player/surface history
+068a5a22d8f67d2c8f11,1,Insufficient player/surface history
+dfabdd9d38df55470303,1,Insufficient player/surface history
+edac665e09ce31c635c7,1,Insufficient player/surface history
+dc6fb24805970cc8b80d,1,Insufficient player/surface history
+6ad28fdf17ed5bcd0014,1,Insufficient player/surface history
+aa49ac017685503c82d7,1,Insufficient player/surface history
+4252e7eecdfebe981248,1,Insufficient player/surface history
+08a2240c01e410a709e7,1,Insufficient player/surface history
+2cdee310e2a72da05410,1,Insufficient player/surface history
+febfa6adb9fed0d60ab9,1,Insufficient player/surface history
+a0c42c575885aa09025e,1,Insufficient player/surface history
+65d561c6b09656a9e4c8,1,Insufficient player/surface history
+644f022adf6a3b1be063,1,Insufficient player/surface history
+14e837445eb26343b1ca,1,Insufficient player/surface history
+2334e0d276026ab4d3bd,1,Insufficient player/surface history
+91026e55970c7d3e8524,1,Insufficient player/surface history
+4da7d4c328bc59dce603,1,Insufficient player/surface history
+7012d1fe13594320c3e9,1,Insufficient player/surface history
+d6a0bf387af6e0d35ad5,1,Insufficient player/surface history
+33aa61b4a3281e19636f,1,Insufficient player/surface history
+5653b5c30b761e14a773,1,Insufficient player/surface history
+bbb43af1882a7de8c4b4,1,Insufficient player/surface history
+48c682a6809d0bda233b,1,Insufficient player/surface history
+d620680df86af61578e1,1,Insufficient player/surface history
+21a19e8b9f2c071816ef,1,Insufficient player/surface history
+bc8ab0a66d9151c5098e,1,Insufficient player/surface history
+ea3bd9bf0bfcb4cb85e6,1,Insufficient player/surface history
+716f666348d9471690f9,1,Insufficient player/surface history
+cf40ec4bbd2962a8bc22,1,Insufficient player/surface history
+4361bad7afa90d719381,1,Insufficient player/surface history
+8af8b43dcf9ff7bd3099,1,Insufficient player/surface history
+00a323bb08e5da5a04b6,1,Insufficient player/surface history
+d28a1199d0d22ed43b23,1,Insufficient player/surface history
+2fb86bff3202ee39fd38,1,No unambiguous player state
+dc231aa0a4a30a704efe,1,Insufficient player/surface history
+0b06796da336242c8ce1,1,Insufficient player/surface history
+fc8f0bd0f9c2526e873d,1,No unambiguous player state
+202e36a27564fcc17346,1,No unambiguous player state
+d2bc5928d8726d115358,1,No unambiguous player state
+c282559b472502e223aa,1,Player state too old
+ff42834d53e82a69603d,1,Player state too old
+4f808ca3b4480ab6100d,1,Player state too old
+5fe8ec8b82097f54271c,1,Player state too old
+3e3ae477751bba268b1b,1,Player state too old
+f99bdc1dd9d2578a2f6b,1,Player state too old
+4a409580907b3207399d,1,Player state too old
+02cde6c4e865a37106d2,1,Player state too old
+c8c88b5dfe307d304bbe,1,Player state too old
+a4ba5b232bd48f8a4936,1,Player state too old
+a49df4439596f8550cef,1,Insufficient player/surface history
+f2626037e277d4b6eeda,1,No unambiguous player state
+9c40e2d8de8c9caf8b96,1,Insufficient player/surface history
+9658e99e27bc6a714889,1,Insufficient player/surface history
+14b56506c470c7380377,1,No unambiguous player state
+d0697ba293a765f24788,1,Insufficient player/surface history
+fb96ecec9dc790d97211,1,Insufficient player/surface history
+26df2ba93ff31ec9a42d,1,Insufficient player/surface history
+d1341856b1c8f9ee00b6,1,Insufficient player/surface history
+3fea68d3f0c23b65ce8b,1,Insufficient player/surface history
+01ac99900f7b9c8de302,1,Insufficient player/surface history
+0b3cc6ae8b95f2c5cf60,1,Insufficient player/surface history
+1cfc18a0df93e47b2ff9,1,Insufficient player/surface history
+041936e53301b65501a3,1,Insufficient player/surface history
+1cc2bb6dbce927309a41,1,Insufficient player/surface history
+811c72b3a24b879b4135,1,Insufficient player/surface history
+6796036984d5116a51b5,1,Insufficient player/surface history
+869642a98fe0c15cadc7,1,Insufficient player/surface history
+0489e83aa2f3dc635b05,1,Insufficient player/surface history
+c94ca504f4a9131f4161,1,Insufficient player/surface history
+a3742d92e9b4329472e4,1,Insufficient player/surface history
+776f6b38879c96d1f17c,1,Insufficient player/surface history
+5d8764fbc53a3f33c5ae,1,Insufficient player/surface history
+170bbbf2de8b4b162c24,1,Insufficient player/surface history
+fb6de5b72ed49d703b2e,1,Insufficient player/surface history
+c2dd158c0d7e6239cf74,1,Insufficient player/surface history
+712344889000fae03da1,1,Insufficient player/surface history
+a4c82a811e376e94e45f,1,Insufficient player/surface history
+178a6d5ca151841b22a1,1,Insufficient player/surface history
+74009cd5aa9967c324ee,1,Player state too old
+c5ff3166b1eb62ad099f,1,Player state too old
+0895bca4931da70dc1d1,1,Player state too old
+42d7e4a437925d917a2e,1,Player state too old
+2fbb881c545f5d570381,1,Player state too old
+07d10fa6deadcd218d6b,1,Player state too old
+33974615f525b72e23ac,1,Player state too old
+027fab3863929b868047,1,No unambiguous player state
+6f02beaac49e5d266a83,1,Insufficient player/surface history
+459f66095ea3ab56d911,1,Insufficient player/surface history
+0d61888bf51266e400aa,1,Insufficient player/surface history
+11bea6d910fe4d922b5f,1,No unambiguous player state
+6312027dbd1b7aef4555,1,Insufficient player/surface history
+11d8764b904f712e301a,1,No unambiguous player state
+b7e2b561a84f3bef97bd,1,No unambiguous player state
+90be8ccaf4ac099daa9c,1,No unambiguous player state
+0a90857bd2d747bd8dd9,1,Insufficient player/surface history
+7f07150da32921a7465d,1,Insufficient player/surface history
+582fa5559d1afef7b613,1,Insufficient player/surface history
+51bd549afb6d6f44d9d0,1,No unambiguous player state
+d05580de02c285005569,1,Insufficient player/surface history
+54288f697c3606e289a7,1,Insufficient player/surface history
+52909a9289b6ca88578c,1,Insufficient player/surface history
+005abbd15e9d7c2cc14e,1,Insufficient player/surface history
+ac0fc58a69d92eedcc5b,1,Insufficient player/surface history
+e14db55a1549218d266f,1,Insufficient player/surface history
+a4df834865f859dc34ba,1,Insufficient player/surface history
+f31e6aebbbd139f12df4,1,Insufficient player/surface history
+da0446590af9f82aedd0,1,Insufficient player/surface history
+9700e69b8efe6312b6be,1,Insufficient player/surface history
+6659fa413de869aea027,1,Insufficient player/surface history
+1433851853157196f2e8,1,Insufficient player/surface history
+dec4dc5f9e0d75b73834,1,Insufficient player/surface history
+59fc242c9dfd583078a6,1,Insufficient player/surface history
+fcefd14a4bfe95dae399,1,Insufficient player/surface history
+6e72b4a69deeba10faea,1,Insufficient player/surface history
+f69fbee7f213572c3437,1,Insufficient player/surface history
+4395f91c92b42fecce12,1,Insufficient player/surface history
+f7dca40b772f16f3c18d,1,Insufficient player/surface history
+039eed3b9dafbf4a8c7c,1,Insufficient player/surface history
+170c0995793963d217f2,1,Insufficient player/surface history
+ba8e1dd0e6f3c00f782c,1,Insufficient player/surface history
+1be56e1de2eef68bde0f,1,Insufficient player/surface history
+a6d32bba9beb273f50d1,1,Insufficient player/surface history
+5b0dd9d369acc532a71b,1,Insufficient player/surface history
+606e3d1d74c026e8398a,1,Insufficient player/surface history
+ff01d6f4518489433b6e,1,Insufficient player/surface history
+aafe0f94522c92b39b6c,1,Insufficient player/surface history
+f3af3311f533034c0626,1,Insufficient player/surface history
+34726a87a88ebf549142,1,Insufficient player/surface history
+688929ed941734eb2116,1,Player state too old
+d69ad0a7a08de4b0ae0c,1,Player state too old
+3303b31bcf7f1d40eba7,1,Insufficient player/surface history
+312bc6de6d7cc719fba9,1,Player state too old
+dbfc0784e0c18c65d764,1,Insufficient player/surface history
+7c81931c79a9a643ce9f,1,Insufficient player/surface history
+042da67d64ba05b85825,1,Insufficient player/surface history
+64436d8ac553b5254a75,1,Insufficient player/surface history
+c7f71cdb20e2698d547a,1,Insufficient player/surface history
+3dfabd5a298c178e527b,1,Insufficient player/surface history
+a6107a079efc561f0864,1,Player state too old
+7040c134dea8d566f8ea,1,Insufficient player/surface history
+4319616495f0db05db90,1,Player state too old
+dcda907f253df3d17e56,1,Insufficient player/surface history
+3edf52c6cf64b8b4e5d7,1,Player state too old
+a89e5b811909b18eb8c3,1,Player state too old
+542c55c6074cc8d507d5,1,Insufficient player/surface history
+e9b65e677f35d056105d,1,Insufficient player/surface history
+1d6d7293c7d2667a38a7,1,Insufficient player/surface history
+1e403547146e77a3ce6a,1,Player state too old
+ce1dbec983063a951d6b,1,Player state too old
+507f8ec373576f13f578,1,Player state too old
+18e208c7b1e80e2cb00f,1,Player state too old
+ca9566ec35f3bbb78f15,1,Player state too old
+42cd0ee167034d0240bf,1,Player state too old
+9a794fa3f46e2ab1b4b8,1,Insufficient player/surface history
+50a246280b7bcb37275a,1,Insufficient player/surface history
+b4844aa221bbf0260f62,1,Player state too old
+6689dded9778973152e6,1,Insufficient player/surface history
+e25e3c3f8705b16dbbc3,1,Insufficient player/surface history
+6f1178563fc625d8c05f,1,Insufficient player/surface history
+5873cf08cd6f8b82fb29,1,Insufficient player/surface history
+82652d47521a7cb5d164,1,Insufficient player/surface history
+d5a585b37b301f1ccfbf,1,Insufficient player/surface history
+896523b69818bf8014ca,1,Insufficient player/surface history
+0120940ab948d8a89fe3,1,Insufficient player/surface history
+42d4d1b8ebd93531266d,1,Insufficient player/surface history
+4e133084c181ed1fc104,1,Insufficient player/surface history
+88cfe1c8ca99cf350285,1,Insufficient player/surface history
+eeb16d171171ba600792,1,Player state too old
+8b4492804fd02f84bf32,1,Player state too old
+1aa3702563769a32f492,1,Insufficient player/surface history
+d35790dcc329474029d2,1,Insufficient player/surface history
+7e8d656814105c2cfa55,1,Player state too old
+02df28989afc3b2383fd,1,Insufficient player/surface history
+453efd5d76faa00b885a,1,Player state too old
+1fa386a002a5ff91881a,1,Player state too old
+d55e8a74b5b60db1ea1c,1,Player state too old
+c24dcb851f5b39ab39ee,1,Player state too old
+437a3001955485a4abe5,1,Player state too old
+bcd254c4d3b868f5e4f5,1,Player state too old
+3d879aa53ea70d66de77,1,Player state too old
+739018427aee2cfd0e1a,1,Player state too old
+648908638db54059eda4,1,Insufficient player/surface history
+febc2439596bf1099bf6,1,Insufficient player/surface history
+69b6c4955ba8a3efbf7e,1,Insufficient player/surface history
+938492df55dfd0faabff,1,Insufficient player/surface history
+c8c7833a48ef56aeb2f2,1,Insufficient player/surface history
+09476f4cde11d1b6bcf2,1,Insufficient player/surface history
+9aa90fc857674bfdd462,1,Insufficient player/surface history
+aa5908e23386e42d62e9,1,Insufficient player/surface history
+af588c24f81518da8364,1,Insufficient player/surface history
+d004536edc2567008088,1,Insufficient player/surface history
+687789f924dfd7e08618,1,Insufficient player/surface history
+758821243a43a3a5a9ef,1,Insufficient player/surface history
+5e2166ceca47b2629385,1,Insufficient player/surface history
+8aa099e82bd479d5a74f,1,Insufficient player/surface history
+5c017e87866076df1cb9,1,Insufficient player/surface history
+29e5b6f8a57e30c46390,1,Insufficient player/surface history
+a14fca5f98031a3b169f,1,Insufficient player/surface history
+f4ec10d7fcc63a2bc70b,1,Insufficient player/surface history
+087d9a562ce8bc9e5534,1,Insufficient player/surface history
+de37d023ea8fb2ddd516,1,Insufficient player/surface history
+01548995ce664e75b133,1,Insufficient player/surface history
+164118b8df9b58bd6900,1,Insufficient player/surface history
+9c6f48247dc9801b4d55,1,Insufficient player/surface history
+7ded08f29d7b75812234,1,Insufficient player/surface history
+e7730b4c0ca2142c5dc2,1,Insufficient player/surface history
+3b720b74bd7469cbcc42,1,Insufficient player/surface history
+0ddb8b3691ac018f5bf6,1,Insufficient player/surface history
+537c371422abd08637ac,1,Insufficient player/surface history
+e6b7f60bfbff36453438,1,Insufficient player/surface history
+89a31e0db9d85e1417c9,1,Insufficient player/surface history
+8f8fe73ae39502116cfb,1,Insufficient player/surface history
+2d967ffc544927073763,1,Insufficient player/surface history
+b41b839760c27eefbd71,1,Insufficient player/surface history
+db0b2f4cdaeb9530b57e,1,Insufficient player/surface history
+cce9b310ccbc21a5ed00,1,Insufficient player/surface history
+ce3a8119eaba8c02349c,1,Insufficient player/surface history
+ed0a3d5e316113279fd7,1,Insufficient player/surface history
+57ef42feeba9ce03e52d,1,Insufficient player/surface history
+ef0a6c8165b855691515,1,Insufficient player/surface history
+2cb7f279fb872c65a9ee,1,Insufficient player/surface history
+c66dfee8f0c296bbb2f4,1,Insufficient player/surface history
+155df97572d53299f953,1,Insufficient player/surface history
+8c2b30f24fc8c7797472,1,Insufficient player/surface history
+3c71af6bdf53758a1360,1,Insufficient player/surface history
+4a48b60591b28629db05,1,Insufficient player/surface history
+a9805c5e5f146f0021cc,1,Insufficient player/surface history
+1b01385e2a8e380bdd02,1,Insufficient player/surface history
+e1da864248649254f0b5,1,Insufficient player/surface history
+88c85054b131253e6de9,1,Insufficient player/surface history
+8d53b61c5209f7b0cd9a,1,Insufficient player/surface history
+5fd27f306585e2b51a83,1,Insufficient player/surface history
+c2fc59131c36d0a500ab,1,Insufficient player/surface history
+69951a33382910e59a41,1,Insufficient player/surface history
+09b59be61d40fe0c0ea9,1,Insufficient player/surface history
+06bff633631659d4b8cf,1,Insufficient player/surface history
+daf430dbca900bf4573e,1,Insufficient player/surface history
+982b7042c32efb5d2b1a,1,Insufficient player/surface history
+f283c40774c01e409227,1,Insufficient player/surface history
+162a25e0d5da2874dec1,1,Insufficient player/surface history
+1bbb4e413e823bc7e40e,1,Insufficient player/surface history
+b064b32e5e7a3351c221,1,Insufficient player/surface history
+5cc3f5675c70e9176450,1,Insufficient player/surface history
+587b14f691e43f5b6e18,1,Insufficient player/surface history
+a321f569a5c934da7aab,1,Insufficient player/surface history
+5291561219c311379dd5,1,Insufficient player/surface history
+c1e39b4e8dd005c3c1a0,1,Insufficient player/surface history
+4f7be3d948b5b5bc5a6a,1,Insufficient player/surface history
+d314b43be63a04b061b5,1,Player state too old
+6f626a1a521ec8757065,1,Player state too old
+c2bfec5072352605b472,1,Player state too old
+02e2ec024e9a1df34786,1,Player state too old
+b4708d43ddeaaecc4080,1,Player state too old
+552e2512ba86182f2655,1,Player state too old
+d7596ba4ce63310bc1fe,1,Player state too old
+7dc94d76e766736e574e,1,Player state too old
+7af47f79f6ada155eb87,1,Player state too old
+b7f26c9c178d411539e0,1,Player state too old
+7f23da85711bfe145979,1,Player state too old
+adcd088df7f699e6e46f,1,Player state too old
+9711d2814c846d64e4fd,1,Player state too old
+5d80f0f530e31b97a6a8,1,Player state too old
+4b70f50eb44f743a1db7,1,Player state too old
+01f67bb811cba915cc2b,1,Player state too old
+34dd81bf00e042c0397c,1,Player state too old
+4ca9da6872fb7d9fa126,1,Player state too old
+8942ccb7b349f4b5bcbc,1,Player state too old
+97da978bb414cc80d976,1,Player state too old
+17ae33eda49a200c5b9d,1,Player state too old
+bba929d036c6a212a553,1,Player state too old
+ad54a69461c7d8fc5287,1,Player state too old
+aafb2aea03b03f9a8a47,1,Player state too old
+72ed915630ed36a60d81,1,Player state too old
+38337748e7bd93fcd3f7,1,Player state too old
+2b9a2b7a53f6bdd9774e,1,Player state too old
+ecde859fdd7a532a2228,1,Player state too old
+285240470ac851a6a1b8,1,Player state too old
+e6f79c5be7b64736284a,1,Player state too old
+e7512736cc84407194f5,1,Player state too old
+642ab587987287743925,1,Player state too old
+655d8bc2d9b1f6d46803,1,Player state too old
+b98360fa2f7391c7a11f,1,Player state too old
+df8fab80f06181b706de,1,Player state too old
+49579a29a2df3c457f9a,1,Insufficient player/surface history
+5cc75745f1b3e5652b63,1,Insufficient player/surface history
+b559e19a26bea0d419e0,1,Insufficient player/surface history
+021ec3e3ecd4944435da,1,Insufficient player/surface history
+cb67a240d83f42ef9b5c,1,Insufficient player/surface history
+741e1f6a18116804065c,1,Insufficient player/surface history
+19bdd56910c826ae00a8,1,Insufficient player/surface history
+664b0b8da4b0627db628,1,Insufficient player/surface history
+ffbf50af81a1a41f5837,1,Insufficient player/surface history
+89aa4fff97da5240b417,2,Insufficient player/surface history
+040666877fc12193ced8,2,Insufficient player/surface history
+9113730552bb716a746a,2,Insufficient player/surface history
+b910ca89203ba38f82e3,2,Insufficient player/surface history
+08d8028523e0d1c35e52,2,Insufficient player/surface history
+7a0215991331d01090df,2,Insufficient player/surface history
+e1fe5b8f20144f61572e,2,Insufficient player/surface history
+6b063cab72851016dc69,2,Insufficient player/surface history
+312626626ef00e296691,2,Insufficient player/surface history
+c93d048f47f6be9eebbb,2,Insufficient player/surface history
+551a62ad786618dae964,2,Insufficient player/surface history
+3ed7975a0fb213c40bdd,2,Insufficient player/surface history
+ae0495625b66f2dd5d25,2,Insufficient player/surface history
+068a5a22d8f67d2c8f11,2,Insufficient player/surface history
+dfabdd9d38df55470303,2,Insufficient player/surface history
+edac665e09ce31c635c7,2,Insufficient player/surface history
+dc6fb24805970cc8b80d,2,Insufficient player/surface history
+6ad28fdf17ed5bcd0014,2,Insufficient player/surface history
+aa49ac017685503c82d7,2,Insufficient player/surface history
+4252e7eecdfebe981248,2,Insufficient player/surface history
+08a2240c01e410a709e7,2,Insufficient player/surface history
+2cdee310e2a72da05410,2,Insufficient player/surface history
+febfa6adb9fed0d60ab9,2,Insufficient player/surface history
+a0c42c575885aa09025e,2,Insufficient player/surface history
+65d561c6b09656a9e4c8,2,Insufficient player/surface history
+644f022adf6a3b1be063,2,Insufficient player/surface history
+14e837445eb26343b1ca,2,Insufficient player/surface history
+2334e0d276026ab4d3bd,2,Insufficient player/surface history
+91026e55970c7d3e8524,2,Insufficient player/surface history
+4da7d4c328bc59dce603,2,Insufficient player/surface history
+7012d1fe13594320c3e9,2,Insufficient player/surface history
+d6a0bf387af6e0d35ad5,2,Insufficient player/surface history
+33aa61b4a3281e19636f,2,Insufficient player/surface history
+5653b5c30b761e14a773,2,Insufficient player/surface history
+bbb43af1882a7de8c4b4,2,Insufficient player/surface history
+48c682a6809d0bda233b,2,Insufficient player/surface history
+d620680df86af61578e1,2,Insufficient player/surface history
+21a19e8b9f2c071816ef,2,Insufficient player/surface history
+bc8ab0a66d9151c5098e,2,Insufficient player/surface history
+ea3bd9bf0bfcb4cb85e6,2,Insufficient player/surface history
+716f666348d9471690f9,2,Insufficient player/surface history
+cf40ec4bbd2962a8bc22,2,Insufficient player/surface history
+4361bad7afa90d719381,2,Insufficient player/surface history
+8af8b43dcf9ff7bd3099,2,Insufficient player/surface history
+00a323bb08e5da5a04b6,2,Insufficient player/surface history
+d28a1199d0d22ed43b23,2,Insufficient player/surface history
+2fb86bff3202ee39fd38,2,No unambiguous player state
+dc231aa0a4a30a704efe,2,Insufficient player/surface history
+0b06796da336242c8ce1,2,Insufficient player/surface history
+fc8f0bd0f9c2526e873d,2,No unambiguous player state
+202e36a27564fcc17346,2,No unambiguous player state
+d2bc5928d8726d115358,2,No unambiguous player state
+c282559b472502e223aa,2,Player state too old
+ff42834d53e82a69603d,2,Player state too old
+4f808ca3b4480ab6100d,2,Player state too old
+5fe8ec8b82097f54271c,2,Player state too old
+3e3ae477751bba268b1b,2,Player state too old
+f99bdc1dd9d2578a2f6b,2,Player state too old
+4a409580907b3207399d,2,Player state too old
+02cde6c4e865a37106d2,2,Player state too old
+c8c88b5dfe307d304bbe,2,Player state too old
+a4ba5b232bd48f8a4936,2,Player state too old
+a49df4439596f8550cef,2,Insufficient player/surface history
+f2626037e277d4b6eeda,2,No unambiguous player state
+9c40e2d8de8c9caf8b96,2,Insufficient player/surface history
+9658e99e27bc6a714889,2,Insufficient player/surface history
+14b56506c470c7380377,2,No unambiguous player state
+d0697ba293a765f24788,2,Insufficient player/surface history
+fb96ecec9dc790d97211,2,Insufficient player/surface history
+26df2ba93ff31ec9a42d,2,Insufficient player/surface history
+d1341856b1c8f9ee00b6,2,Insufficient player/surface history
+3fea68d3f0c23b65ce8b,2,Insufficient player/surface history
+01ac99900f7b9c8de302,2,Insufficient player/surface history
+0b3cc6ae8b95f2c5cf60,2,Insufficient player/surface history
+1cfc18a0df93e47b2ff9,2,Insufficient player/surface history
+041936e53301b65501a3,2,Insufficient player/surface history
+1cc2bb6dbce927309a41,2,Insufficient player/surface history
+811c72b3a24b879b4135,2,Insufficient player/surface history
+6796036984d5116a51b5,2,Insufficient player/surface history
+869642a98fe0c15cadc7,2,Insufficient player/surface history
+0489e83aa2f3dc635b05,2,Insufficient player/surface history
+c94ca504f4a9131f4161,2,Insufficient player/surface history
+a3742d92e9b4329472e4,2,Insufficient player/surface history
+776f6b38879c96d1f17c,2,Insufficient player/surface history
+5d8764fbc53a3f33c5ae,2,Insufficient player/surface history
+170bbbf2de8b4b162c24,2,Insufficient player/surface history
+fb6de5b72ed49d703b2e,2,Insufficient player/surface history
+c2dd158c0d7e6239cf74,2,Insufficient player/surface history
+712344889000fae03da1,2,Insufficient player/surface history
+a4c82a811e376e94e45f,2,Insufficient player/surface history
+178a6d5ca151841b22a1,2,Insufficient player/surface history
+74009cd5aa9967c324ee,2,Player state too old
+c5ff3166b1eb62ad099f,2,Player state too old
+0895bca4931da70dc1d1,2,Player state too old
+42d7e4a437925d917a2e,2,Player state too old
+2fbb881c545f5d570381,2,Player state too old
+07d10fa6deadcd218d6b,2,Player state too old
+33974615f525b72e23ac,2,Player state too old
+027fab3863929b868047,2,No unambiguous player state
+6f02beaac49e5d266a83,2,Insufficient player/surface history
+459f66095ea3ab56d911,2,Insufficient player/surface history
+0d61888bf51266e400aa,2,Insufficient player/surface history
+11bea6d910fe4d922b5f,2,No unambiguous player state
+6312027dbd1b7aef4555,2,Insufficient player/surface history
+11d8764b904f712e301a,2,No unambiguous player state
+b7e2b561a84f3bef97bd,2,No unambiguous player state
+90be8ccaf4ac099daa9c,2,No unambiguous player state
+0a90857bd2d747bd8dd9,2,Insufficient player/surface history
+7f07150da32921a7465d,2,Insufficient player/surface history
+582fa5559d1afef7b613,2,Insufficient player/surface history
+51bd549afb6d6f44d9d0,2,No unambiguous player state
+d05580de02c285005569,2,Insufficient player/surface history
+54288f697c3606e289a7,2,Insufficient player/surface history
+52909a9289b6ca88578c,2,Insufficient player/surface history
+005abbd15e9d7c2cc14e,2,Insufficient player/surface history
+ac0fc58a69d92eedcc5b,2,Insufficient player/surface history
+e14db55a1549218d266f,2,Insufficient player/surface history
+a4df834865f859dc34ba,2,Insufficient player/surface history
+f31e6aebbbd139f12df4,2,Insufficient player/surface history
+da0446590af9f82aedd0,2,Insufficient player/surface history
+9700e69b8efe6312b6be,2,Insufficient player/surface history
+6659fa413de869aea027,2,Insufficient player/surface history
+1433851853157196f2e8,2,Insufficient player/surface history
+dec4dc5f9e0d75b73834,2,Insufficient player/surface history
+59fc242c9dfd583078a6,2,Insufficient player/surface history
+fcefd14a4bfe95dae399,2,Insufficient player/surface history
+6e72b4a69deeba10faea,2,Insufficient player/surface history
+f69fbee7f213572c3437,2,Insufficient player/surface history
+4395f91c92b42fecce12,2,Insufficient player/surface history
+f7dca40b772f16f3c18d,2,Insufficient player/surface history
+039eed3b9dafbf4a8c7c,2,Insufficient player/surface history
+170c0995793963d217f2,2,Insufficient player/surface history
+ba8e1dd0e6f3c00f782c,2,Insufficient player/surface history
+1be56e1de2eef68bde0f,2,Insufficient player/surface history
+a6d32bba9beb273f50d1,2,Insufficient player/surface history
+5b0dd9d369acc532a71b,2,Insufficient player/surface history
+606e3d1d74c026e8398a,2,Insufficient player/surface history
+ff01d6f4518489433b6e,2,Insufficient player/surface history
+aafe0f94522c92b39b6c,2,Insufficient player/surface history
+f3af3311f533034c0626,2,Insufficient player/surface history
+34726a87a88ebf549142,2,Insufficient player/surface history
+688929ed941734eb2116,2,Player state too old
+d69ad0a7a08de4b0ae0c,2,Player state too old
+3303b31bcf7f1d40eba7,2,Insufficient player/surface history
+312bc6de6d7cc719fba9,2,Player state too old
+dbfc0784e0c18c65d764,2,Insufficient player/surface history
+7c81931c79a9a643ce9f,2,Insufficient player/surface history
+042da67d64ba05b85825,2,Insufficient player/surface history
+64436d8ac553b5254a75,2,Insufficient player/surface history
+c7f71cdb20e2698d547a,2,Insufficient player/surface history
+3dfabd5a298c178e527b,2,Insufficient player/surface history
+a6107a079efc561f0864,2,Player state too old
+7040c134dea8d566f8ea,2,Insufficient player/surface history
+4319616495f0db05db90,2,Player state too old
+dcda907f253df3d17e56,2,Insufficient player/surface history
+3edf52c6cf64b8b4e5d7,2,Player state too old
+a89e5b811909b18eb8c3,2,Player state too old
+542c55c6074cc8d507d5,2,Insufficient player/surface history
+e9b65e677f35d056105d,2,Insufficient player/surface history
+1d6d7293c7d2667a38a7,2,Insufficient player/surface history
+1e403547146e77a3ce6a,2,Player state too old
+ce1dbec983063a951d6b,2,Player state too old
+507f8ec373576f13f578,2,Player state too old
+18e208c7b1e80e2cb00f,2,Player state too old
+ca9566ec35f3bbb78f15,2,Player state too old
+42cd0ee167034d0240bf,2,Player state too old
+9a794fa3f46e2ab1b4b8,2,Insufficient player/surface history
+50a246280b7bcb37275a,2,Insufficient player/surface history
+b4844aa221bbf0260f62,2,Player state too old
+6689dded9778973152e6,2,Insufficient player/surface history
+e25e3c3f8705b16dbbc3,2,Insufficient player/surface history
+6f1178563fc625d8c05f,2,Insufficient player/surface history
+5873cf08cd6f8b82fb29,2,Insufficient player/surface history
+82652d47521a7cb5d164,2,Insufficient player/surface history
+d5a585b37b301f1ccfbf,2,Insufficient player/surface history
+896523b69818bf8014ca,2,Insufficient player/surface history
+0120940ab948d8a89fe3,2,Insufficient player/surface history
+42d4d1b8ebd93531266d,2,Insufficient player/surface history
+4e133084c181ed1fc104,2,Insufficient player/surface history
+88cfe1c8ca99cf350285,2,Insufficient player/surface history
+eeb16d171171ba600792,2,Player state too old
+8b4492804fd02f84bf32,2,Player state too old
+1aa3702563769a32f492,2,Insufficient player/surface history
+d35790dcc329474029d2,2,Insufficient player/surface history
+7e8d656814105c2cfa55,2,Player state too old
+02df28989afc3b2383fd,2,Insufficient player/surface history
+453efd5d76faa00b885a,2,Player state too old
+1fa386a002a5ff91881a,2,Player state too old
+d55e8a74b5b60db1ea1c,2,Player state too old
+c24dcb851f5b39ab39ee,2,Player state too old
+437a3001955485a4abe5,2,Player state too old
+bcd254c4d3b868f5e4f5,2,Player state too old
+3d879aa53ea70d66de77,2,Player state too old
+739018427aee2cfd0e1a,2,Player state too old
+648908638db54059eda4,2,Insufficient player/surface history
+febc2439596bf1099bf6,2,Insufficient player/surface history
+69b6c4955ba8a3efbf7e,2,Insufficient player/surface history
+938492df55dfd0faabff,2,Insufficient player/surface history
+c8c7833a48ef56aeb2f2,2,Insufficient player/surface history
+09476f4cde11d1b6bcf2,2,Insufficient player/surface history
+9aa90fc857674bfdd462,2,Insufficient player/surface history
+aa5908e23386e42d62e9,2,Insufficient player/surface history
+af588c24f81518da8364,2,Insufficient player/surface history
+d004536edc2567008088,2,Insufficient player/surface history
+687789f924dfd7e08618,2,Insufficient player/surface history
+758821243a43a3a5a9ef,2,Insufficient player/surface history
+5e2166ceca47b2629385,2,Insufficient player/surface history
+8aa099e82bd479d5a74f,2,Insufficient player/surface history
+5c017e87866076df1cb9,2,Insufficient player/surface history
+29e5b6f8a57e30c46390,2,Insufficient player/surface history
+a14fca5f98031a3b169f,2,Insufficient player/surface history
+f4ec10d7fcc63a2bc70b,2,Insufficient player/surface history
+087d9a562ce8bc9e5534,2,Insufficient player/surface history
+de37d023ea8fb2ddd516,2,Insufficient player/surface history
+01548995ce664e75b133,2,Insufficient player/surface history
+164118b8df9b58bd6900,2,Insufficient player/surface history
+9c6f48247dc9801b4d55,2,Insufficient player/surface history
+7ded08f29d7b75812234,2,Insufficient player/surface history
+e7730b4c0ca2142c5dc2,2,Insufficient player/surface history
+3b720b74bd7469cbcc42,2,Insufficient player/surface history
+0ddb8b3691ac018f5bf6,2,Insufficient player/surface history
+537c371422abd08637ac,2,Insufficient player/surface history
+e6b7f60bfbff36453438,2,Insufficient player/surface history
+89a31e0db9d85e1417c9,2,Insufficient player/surface history
+8f8fe73ae39502116cfb,2,Insufficient player/surface history
+2d967ffc544927073763,2,Insufficient player/surface history
+b41b839760c27eefbd71,2,Insufficient player/surface history
+db0b2f4cdaeb9530b57e,2,Insufficient player/surface history
+cce9b310ccbc21a5ed00,2,Insufficient player/surface history
+ce3a8119eaba8c02349c,2,Insufficient player/surface history
+ed0a3d5e316113279fd7,2,Insufficient player/surface history
+57ef42feeba9ce03e52d,2,Insufficient player/surface history
+ef0a6c8165b855691515,2,Insufficient player/surface history
+2cb7f279fb872c65a9ee,2,Insufficient player/surface history
+c66dfee8f0c296bbb2f4,2,Insufficient player/surface history
+155df97572d53299f953,2,Insufficient player/surface history
+8c2b30f24fc8c7797472,2,Insufficient player/surface history
+3c71af6bdf53758a1360,2,Insufficient player/surface history
+4a48b60591b28629db05,2,Insufficient player/surface history
+a9805c5e5f146f0021cc,2,Insufficient player/surface history
+1b01385e2a8e380bdd02,2,Insufficient player/surface history
+e1da864248649254f0b5,2,Insufficient player/surface history
+88c85054b131253e6de9,2,Insufficient player/surface history
+8d53b61c5209f7b0cd9a,2,Insufficient player/surface history
+5fd27f306585e2b51a83,2,Insufficient player/surface history
+c2fc59131c36d0a500ab,2,Insufficient player/surface history
+69951a33382910e59a41,2,Insufficient player/surface history
+09b59be61d40fe0c0ea9,2,Insufficient player/surface history
+06bff633631659d4b8cf,2,Insufficient player/surface history
+daf430dbca900bf4573e,2,Insufficient player/surface history
+982b7042c32efb5d2b1a,2,Insufficient player/surface history
+f283c40774c01e409227,2,Insufficient player/surface history
+162a25e0d5da2874dec1,2,Insufficient player/surface history
+1bbb4e413e823bc7e40e,2,Insufficient player/surface history
+b064b32e5e7a3351c221,2,Insufficient player/surface history
+5cc3f5675c70e9176450,2,Insufficient player/surface history
+587b14f691e43f5b6e18,2,Insufficient player/surface history
+a321f569a5c934da7aab,2,Insufficient player/surface history
+5291561219c311379dd5,2,Insufficient player/surface history
+c1e39b4e8dd005c3c1a0,2,Insufficient player/surface history
+4f7be3d948b5b5bc5a6a,2,Insufficient player/surface history
+d314b43be63a04b061b5,2,Player state too old
+6f626a1a521ec8757065,2,Player state too old
+c2bfec5072352605b472,2,Player state too old
+02e2ec024e9a1df34786,2,Player state too old
+b4708d43ddeaaecc4080,2,Player state too old
+552e2512ba86182f2655,2,Player state too old
+d7596ba4ce63310bc1fe,2,Player state too old
+7dc94d76e766736e574e,2,Player state too old
+7af47f79f6ada155eb87,2,Player state too old
+b7f26c9c178d411539e0,2,Player state too old
+7f23da85711bfe145979,2,Player state too old
+adcd088df7f699e6e46f,2,Player state too old
+9711d2814c846d64e4fd,2,Player state too old
+5d80f0f530e31b97a6a8,2,Player state too old
+4b70f50eb44f743a1db7,2,Player state too old
+01f67bb811cba915cc2b,2,Player state too old
+34dd81bf00e042c0397c,2,Player state too old
+4ca9da6872fb7d9fa126,2,Player state too old
+8942ccb7b349f4b5bcbc,2,Player state too old
+97da978bb414cc80d976,2,Player state too old
+17ae33eda49a200c5b9d,2,Player state too old
+bba929d036c6a212a553,2,Player state too old
+ad54a69461c7d8fc5287,2,Player state too old
+aafb2aea03b03f9a8a47,2,Player state too old
+72ed915630ed36a60d81,2,Player state too old
+38337748e7bd93fcd3f7,2,Player state too old
+2b9a2b7a53f6bdd9774e,2,Player state too old
+ecde859fdd7a532a2228,2,Player state too old
+285240470ac851a6a1b8,2,Player state too old
+e6f79c5be7b64736284a,2,Player state too old
+e7512736cc84407194f5,2,Player state too old
+642ab587987287743925,2,Player state too old
+655d8bc2d9b1f6d46803,2,Player state too old
+b98360fa2f7391c7a11f,2,Player state too old
+df8fab80f06181b706de,2,Player state too old
+49579a29a2df3c457f9a,2,Insufficient player/surface history
+5cc75745f1b3e5652b63,2,Insufficient player/surface history
+b559e19a26bea0d419e0,2,Insufficient player/surface history
+021ec3e3ecd4944435da,2,Insufficient player/surface history
+cb67a240d83f42ef9b5c,2,Insufficient player/surface history
+741e1f6a18116804065c,2,Insufficient player/surface history
+19bdd56910c826ae00a8,2,Insufficient player/surface history
+664b0b8da4b0627db628,2,Insufficient player/surface history
+ffbf50af81a1a41f5837,2,Insufficient player/surface history

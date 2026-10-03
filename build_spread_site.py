@@ -55,6 +55,7 @@ def compact_pick(row: dict) -> dict:
         "conservative_cover_probability", "market_no_vig_probability",
         "probability_edge", "expected_roi", "conservative_expected_roi",
         "residual_sample", "feature_rationale", "recommendation", "scheduled_start", "collected_at", "model_version", "feature_id", "source_hash",
+        "best_of", "candidate", "elo_diff", "surface_elo_diff", "spw_plus_last25_diff", "rpw_plus_last25_diff", "surface_last10_margin_diff",
     ]
     pick = {key: row.get(key) for key in fields}
     pick["rationale"] = rationale_for_pick(row)
@@ -212,7 +213,8 @@ def build_payload() -> dict:
             "minimum_probability_edge": 0.04,
             "minimum_expected_roi": 0.05,
             "one_bet_per_match": True,
-            "feature_count": 11,
+            "candidate": policy.get('candidate', 'unknown'),
+            "feature_count": 2,
             "validation_method": "Expanding-window rolling validation",
         },
         "picks": picks,
@@ -224,6 +226,7 @@ def build_payload() -> dict:
         "history_provenance": 'INVALID MODEL INPUTS: legacy selections used frozen June 28 inputs from the July training file. Outcomes are preserved as an archive, not valid evidence for current factors or V2.',
         "legacy_history_status": 'INVALID_MODEL_INPUTS',
         "reconstruction": read_json(ROOT / 'data' / 'reconstructed_history.json'),
+        "baseline_comparison": read_json(ROOT / 'data' / 'baseline_comparison.json'),
         "validation": validation,
         "history": history,
         "history_v2": history_v2,

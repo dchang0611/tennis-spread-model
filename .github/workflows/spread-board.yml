@@ -10,7 +10,7 @@ on:
       timezone: America/Los_Angeles
   push:
     branches: [main]
-    paths: ['*.py', 'research/**', 'model_policy.json', 'site/**', 'requirements.txt', '.github/workflows/spread-board.yml', 'data/verified_atp_results.csv', 'data/reconstructed_history.json']
+    paths: ['*.py', 'research/**', 'model_policy.json', 'site/**', 'requirements.txt', '.github/workflows/spread-board.yml', 'data/verified_atp_results.csv', 'data/reconstructed_history.json', 'data/baseline_comparison.json']
 permissions:
   contents: write
   pages: write
@@ -33,6 +33,8 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m playwright install --with-deps chromium
       - run: python -m unittest discover -v
+      - name: Verify frozen baseline research receipts
+        run: python research/verify_baseline.py
       - name: Reconcile legacy results without recreating old predictions
         run: python update_spread_history.py --mode settle
       - name: Collect current Novig spreads

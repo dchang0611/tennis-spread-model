@@ -10,7 +10,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from match_data import fetch_inputs, enrich_markets, result_coverage
-from player_features import build_training_and_state, live_features, name_key
+from player_features import build_training_and_state, live_features, name_key, eligible_training_rows
 from tennis_spread_model import FEATURES, score_format_markets, train_format_models
 from paper_evaluation import chronological_cover_validation, prospective_report
 from update_spread_history import HISTORY_COLUMNS, settle_history
@@ -99,11 +99,13 @@ def main():
         status['excluded'].extend(excluded)
         if live.empty: raise ValueError('No players pass feature quality gates')
         # Match the live minimum-history policy in training.
-        eligible=(rows.a_matches>=policy['minimum_player_matches'])&(rows.b_matches>=policy['minimum_player_matches'])&(rows.a_surface_matches>=policy['minimum_surface_matches'])&(rows.b_surface_matches>=policy['minimum_surface_matches'])
-        rows=rows[eligible].dropna(subset=FEATURES)
+        rows=eligible_training_rows(rows,policy)
         assert_current_training(rows,receipt['last_match_date'],now,policy['max_completed_date_lag_days'])
         rows.to_csv(output/'model_rows.csv',index=False)
-        format_models=train_format_models(rows)
+        status['formats']={}
+        candidate=policy['candidate']
+        format_models=train_format_models(rows,candidate=candidate,diagnostics=status['formats'])
+        if not format_models: raise ValueError('All formats closed: insufficient training/calibration evidence')
         oof=pd.concat([value[1] for value in format_models.values()],ignore_index=True)
         summary=pd.concat([value[2] for value in format_models.values()],ignore_index=True)
         oof.to_csv(output/'spread_rolling_predictions.csv',index=False)
@@ -113,14 +115,17 @@ def main():
         # in the repository; each paper pick points to its exact inputs.
         feature_dir=ROOT/'data/paper_features'; feature_dir.mkdir(exist_ok=True)
         live['model_version']=policy['model_version']; live['source_hash']=receipt['source_hash']
+        live['candidate']=candidate
         for idx,row in live.iterrows():
-            content=json_safe({'features':row.to_dict(),'training_max_date':rows.date.max(),'training_rows':len(rows),'sources':receipt})
+            format_rows=rows[rows.best_of==row.best_of]
+            content=json_safe({'features':row.to_dict(),'candidate':candidate,'training_max_date':format_rows.date.max(),'training_rows':len(format_rows),'sources':receipt})
             encoded=json.dumps(content,sort_keys=True,allow_nan=False)
             key=hashlib.sha256(encoded.encode()).hexdigest()
             live.loc[idx,'feature_id']=key
             path=feature_dir/(key+'.json')
             if not path.exists(): path.write_text(encoded,encoding='utf-8')
-        scored=score_format_markets(enriched,rows,format_models,live_features=live)
+        scored=score_format_markets(enriched,rows,format_models,live_features=live,candidate=candidate,excluded=status['excluded'])
+        if scored.empty: raise ValueError('No scoreable markets in supported formats')
         # Recheck age/start at actual publication time after training finishes.
         finished=datetime.now(timezone.utc).isoformat()
         safe=(pd.to_datetime(scored.scheduled_start,utc=True)>pd.Timestamp(finished)) & ((pd.Timestamp(finished)-pd.to_datetime(scored.collected_at,utc=True))<=pd.Timedelta(minutes=policy['max_quote_age_minutes']))

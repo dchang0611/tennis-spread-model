@@ -1,310 +1,74 @@
-const state = { data: null, filter: 'PAPER', historyFilter: 'ALL', historyV2Filter: 'ALL', focusSelected: ['Recent surface game margin', 'Opponent-adjusted return', 'Surface-adjusted Elo'], focusMinMatches: 2, dateFrom: '', dateTo: '' };
-
-const fmtPct = value => value !== null && value !== undefined && value !== '' && Number.isFinite(Number(value)) ? `${(Number(value) * 100).toFixed(1)}%` : '—';
-const fmtNum = (value, digits = 1) => value !== null && value !== undefined && value !== '' && Number.isFinite(Number(value)) ? Number(value).toFixed(digits) : '—';
-const fmtOdds = value => { const number = Number(value); return Number.isFinite(number) ? `${number > 0 ? '+' : ''}${number}` : '—'; };
-const safe = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
-
+const state = { data: null, format: 3, lag: 1, selected: ['surface_elo_diff', 'rpw_plus_last25_diff', 'surface_last10_margin_diff'], minimum: 2 };
+const factors = {
+  elo_diff: 'Overall Elo', surface_elo_diff: 'Surface Elo', spw_plus_last25_diff: 'Opponent-adjusted serve',
+  rpw_plus_last25_diff: 'Opponent-adjusted return', surface_last10_margin_diff: 'Recent surface game margin',
+};
+const names = {elo:'Overall + surface Elo',elo_serve_return:'Elo + serve / return',elo_serve_return_margin:'Elo + serve / return + margin'};
+const safe = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const number = (v,n=2) => v === null || v === undefined || !Number.isFinite(Number(v)) ? '—' : Number(v).toFixed(n);
+const percent = v => v === null || v === undefined ? '—' : `${number(v*100,1)}%`;
+const interval = v => Array.isArray(v) ? `${number(v[0],4)} to ${number(v[1],4)}` : 'Insufficient data';
+const rowsForFormat = rows => (rows || []).filter(r => Number(r.best_of) === state.format);
+const table = (heads,rows) => `<div class="history-table-wrap"><table class="history-table"><thead><tr>${heads.map(h=>`<th>${safe(h)}</th>`).join('')}</tr></thead><tbody>${rows.length?rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join(''):`<tr><td colspan="${heads.length}">No eligible observations for this format.</td></tr>`}</tbody></table></div>`;
+function summary(rows) {
+  const settled=rows.filter(r=>['WIN','LOSS','PUSH'].includes(r.result));
+  const units=settled.reduce((s,r)=>s+Number(r.profit_units || 0),0);
+  return [rows.filter(r=>r.result==='WIN').length+'–'+rows.filter(r=>r.result==='LOSS').length, settled.filter(r=>r.result==='PUSH').length, number(units), settled.length?percent(units/settled.length):'—', rows.length-settled.length];
+}
 function renderBoard() {
-  // Rationale text is generated from distinct model-driver families upstream.
-  const root = document.querySelector('#board');
-  const currentDate = state.data?.scrape_status?.match_date;
-  const picks = visiblePaperPicks().filter(row => {
-    if (state.dateFrom || state.dateTo) return inDateRange(row.date);
-    return !currentDate || String(row.date) === String(currentDate);
+  const d=state.data || {};
+  document.querySelector('#statusBanner').textContent=d.status_message || 'Latest board unavailable; no paper candidates displayed.';
+  const status=d.scoring_status?.formats?.[String(state.format)];
+  document.querySelector('#formatStatus').textContent=status?`BO${state.format}: ${status.status}. ${status.training_rows} eligible training matches. ${status.reason || 'Paper evaluation only.'}`:`BO${state.format}: current format readiness has not been verified.`;
+  const now=Date.now();
+  const picks=d.status==='paper_only'?rowsForFormat(d.picks).filter(r=>r.model_version===d.model?.version && r.recommendation==='PAPER' && Date.parse(r.scheduled_start)>now && Date.parse(r.collected_at)<=now && now-Date.parse(r.collected_at)<=30*60*1000):[];
+  document.querySelector('#board').innerHTML=picks.length?picks.map(r=>`<article class="pick-card"><div class="player-name">${safe(r.player)} ${number(r.spread,1)}</div><div class="match-context">vs ${safe(r.opponent)} · ${safe(r.tournament)} · BO${state.format}</div><div>Price ${number(r.odds,0)}</div><div>Cover ${percent(r.cover_probability)}</div><div>Market ${percent(r.market_no_vig_probability)}</div><div class="decision">PAPER</div></article>`).join(''):'<div class="empty">No current, verified paper candidates in this format.</div>';
+}
+function renderResults() {
+  const d=state.data || {};
+  const rows=rowsForFormat(d.paper_history).filter(r=>r.model_version===d.model?.version);
+  document.querySelector('#paperNotice').textContent=`${d.model?.version || 'Unverified version'} · BO${state.format} · New prospective evidence only. Earlier model versions are excluded. Displayed prices are not confirmed fills.`;
+  document.querySelector('#paperResults').innerHTML=table(['Record','Pushes','Units','Gross ROI','Unresolved'],[summary(rows)])+table(['Date','Selection','Price','Outcome'],rows.map(r=>[safe(r.date),`${safe(r.player)} ${number(r.spread,1)}`,number(r.odds,0),safe(r.result)]));
+  const archive=rowsForFormat(d.reconstruction?.history);
+  document.querySelector('#archiveResults').innerHTML=table(['Reconstruction record','Pushes','Units','Gross ROI','Unresolved'],[summary(archive)])+`<p>${(d.history || []).length} original legacy records are preserved in the download. Missing original format labels are not guessed.</p>`;
+}
+function renderResearch() {
+  const r=state.data?.baseline_comparison;
+  document.querySelector('#researchNotice').textContent=r?`Retrospective development comparison · BO${state.format} · No untouched holdout. Run ${r.run_id.slice(0,12)}.`:'Comparison not available. No legacy results are substituted.';
+  const rows=(r?.comparisons || []).filter(c=>c.best_of===state.format && c.lag_days===state.lag);
+  const benchmark=rows[0]?.probabilities;
+  const records=benchmark?[['Market benchmark',benchmark.matches,number(benchmark.market_brier,4),'—','—','—','No betting rule','—']]:[];
+  rows.forEach(c=>{
+    const p=c.probabilities,s=c.selections;
+    records.push([safe(names[c.candidate]),p.matches,number(p.brier,4),interval(p.brier_difference_95),`${s.wins}–${s.losses}`,number(s.profit_units),percent(s.roi),s.unresolved]);
   });
-  const filtered = state.filter === 'ALL' ? picks : picks.filter(row => row.recommendation === state.filter);
-  if (!filtered.length) {
-    if (state.data?.status === 'paper_only' && !visiblePaperPicks().length) document.querySelector('#statusBanner').textContent = 'Live betting disabled. Current paper quotes have expired or their matches have started.';
-    root.innerHTML = `<div class="empty"><strong>No ${state.filter === 'PAPER' ? 'paper candidates' : 'matching lines'}</strong>${picks.length ? 'The safety gates rejected the available lines.' : 'Live betting is disabled. Awaiting verified inputs for paper trading.'}</div>`;
-    return;
-  }
-  root.innerHTML = filtered.map(row => {
-    const isBet = row.recommendation === 'BET';
-    return `<article class="pick-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="decision ${isBet ? 'bet' : ''}">${safe(row.recommendation)}</div><div class="factor-chips">${renderBoardChips(row)}</div></article>`;
-  }).join('');
+  document.querySelector('#comparison').innerHTML=table(['Candidate','Matches','Brier','Difference vs market: 95% interval','Pick record','Gross units','Gross ROI','Unresolved picks'],records);
+  document.querySelector('#increments').innerHTML=table(['Addition','Matches','Brier change','Paired 95% interval'],(r?.incremental_factors || []).filter(c=>c.best_of===state.format && c.lag_days===state.lag).map(c=>[c.to==='elo_serve_return'?'Serve / return':'Recent surface margin',c.matches,number(c.brier_change,4),interval(c.paired_95)]));
+  const coverage=r?.coverage;
+  document.querySelector('#coverage').textContent=coverage?`${coverage.archived_quotes} archived quotes; ${coverage.identified_matches} identified matches. ${coverage.predictor_eligible_quotes} quotes pass metadata/timing gates before player-history checks. Across both formats, ${coverage.primary_matches_by_lag[String(state.lag)] || 0} distinct matches reach this delay's primary comparison; ${coverage.unresolved_primary_matches_by_lag[String(state.lag)] || 0} remain unresolved. Quotes are not independent matches.`:'';
 }
-
-const focusFactorDefinitions = [
-  ['Recent surface game margin', /better recent game margin on this surface/i],
-  ['Opponent-adjusted return', /stronger opponent-adjusted return-point performance/i],
-  ['Surface-adjusted Elo', /higher surface-adjusted elo/i],
-];
-
-const boardFactorDefinitions = [
-  ...focusFactorDefinitions,
-  ['Overall Elo', /higher overall elo/i],
-  ['Workload / rest', /a lighter recent workload|more recovery time/i],
-  ['Opponent-adjusted serve', /stronger opponent-adjusted serve-point performance/i],
-  ['Serve-versus-return matchup', /a more favorable serve-versus-return matchup/i],
-];
-
-const confluenceFactorDefinitions = boardFactorDefinitions;
-
-function focusFactors(row) {
-  const rationale = String(row.feature_rationale || '');
-  return focusFactorDefinitions.filter(([, pattern]) => pattern.test(rationale)).map(([label]) => label);
+function renderConfluence() {
+  document.querySelector('#focusFactorSelectors').innerHTML=Object.entries(factors).map(([key,label])=>`<button class="factor-selector ${state.selected.includes(key)?'active':''}" aria-pressed="${state.selected.includes(key)}" data-factor="${key}">${safe(label)}</button>`).join('');
+  document.querySelector('#focusMinMatches').innerHTML=state.selected.map((_,i)=>`<option value="${i+1}" ${state.minimum===i+1?'selected':''}>At least ${i+1} of ${state.selected.length}</option>`).join('');
+  const rows=rowsForFormat(state.data?.baseline_comparison?.confluence_history).filter(r=>state.selected.filter(f=>r[f]!==null && r[f]!==undefined && Number.isFinite(Number(r[f])) && Number(r[f])>0).length>=state.minimum);
+  document.querySelector('#confluence').innerHTML=table(['Record','Pushes','Units','Gross ROI','Unresolved'],[summary(rows)])+table(['Date','Selection',...state.selected.map(f=>factors[f]),'Outcome'],rows.map(r=>[safe(r.date),`${safe(r.player)} ${number(r.spread,1)}`,...state.selected.map(f=>number(r[f],4)),safe(r.result)]));
 }
-
-function renderFocusChips(factors) {
-  return focusFactorDefinitions.map(([label]) => `<span class="factor-chip ${factors.includes(label) ? 'matched' : ''}">${factors.includes(label) ? '&#10003;' : '&#8212;'} ${safe(label)}</span>`).join('');
-}
-
-function renderBoardChips(row) {
-  const rationale = String(row.feature_rationale || '');
-  return boardFactorDefinitions.map(([label, pattern]) => {
-    const matched = pattern.test(rationale);
-    return `<span class="factor-chip ${matched ? 'matched' : ''}">${matched ? '&#10003;' : '&#8212;'} ${safe(label)}</span>`;
-  }).join('');
-}
-
-function selectedConfluenceFactors(row) {
-  const rationale = String(row.feature_rationale || '');
-  return confluenceFactorDefinitions
-    .filter(([label, pattern]) => state.focusSelected.includes(label) && pattern.test(rationale))
-    .map(([label]) => label);
-}
-
-function renderFocusControls() {
-  document.querySelector('#focusFactorSelectors').innerHTML = confluenceFactorDefinitions.map(([label]) => `<button type="button" class="factor-selector ${state.focusSelected.includes(label) ? 'active' : ''}" data-factor="${safe(label)}" aria-pressed="${state.focusSelected.includes(label)}">${safe(label)}</button>`).join('');
-  const maximum = state.focusSelected.length;
-  if (state.focusMinMatches > maximum) state.focusMinMatches = maximum;
-  document.querySelector('#focusMinMatches').innerHTML = Array.from({length: maximum}, (_, index) => index + 1).map(count => `<option value="${count}" ${count === state.focusMinMatches ? 'selected' : ''}>At least ${count} of ${maximum}</option>`).join('');
-}
-
-function currentPicks() {
-  const currentDate = state.data?.scrape_status?.match_date;
-  return visiblePaperPicks().filter(row => {
-    if (state.dateFrom || state.dateTo) return inDateRange(row.date);
-    return !currentDate || String(row.date) === String(currentDate);
-  });
-}
-
-function renderFocus() {
-  const qualifying = currentPicks().map(row => ({ row, factors: selectedConfluenceFactors(row) })).filter(item => item.factors.length >= state.focusMinMatches);
-  const bets = qualifying.filter(item => item.row.recommendation === 'BET').length;
-  const notice = document.querySelector('#focusNotice');
-  notice.textContent = qualifying.length
-    ? `${qualifying.length} line${qualifying.length === 1 ? '' : 's'} match at least ${state.focusMinMatches} of ${state.focusSelected.length} selected factors; ${bets} retain the model's BET decision and ${qualifying.length - bets} remain PASS.`
-    : `No lines in this slate match at least ${state.focusMinMatches} of ${state.focusSelected.length} selected factors.`;
-  notice.className = `status-banner ${qualifying.length ? '' : 'closed'}`;
-  renderFocusPerformance();
-  document.querySelector('#focusBoard').innerHTML = qualifying.length ? qualifying.map(({ row, factors }) => {
-    const isBet = row.recommendation === 'BET';
-    const chips = state.focusSelected.map(label => `<span class="factor-chip ${factors.includes(label) ? 'matched' : ''}">${factors.includes(label) ? '&#10003;' : '&#8212;'} ${safe(label)}</span>`).join('');
-    return `<article class="pick-card focus-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="confluence-score">${factors.length}/${state.focusSelected.length}</div><div class="decision ${isBet ? 'bet' : ''}">${safe(row.recommendation)}</div><div class="factor-chips">${chips}</div></article>`;
-  }).join('') : '<div class="empty"><strong>No matching lines</strong>Choose a lower match rule, different factors, or another date range.</div>';
-}
-
-function noRecordedFactorsRow(context) {
-  const rows = selectedHistory().filter(row => !String(row.feature_rationale || '').trim());
-  const count = result => rows.filter(row => String(row.result).toUpperCase() === result).length;
-  const wins = count('WIN'), losses = count('LOSS'), decided = wins + losses;
-  const settled = rows.filter(row => ['WIN', 'LOSS', 'PUSH', 'VOID'].includes(String(row.result).toUpperCase()));
-  const units = settled.reduce((sum, row) => sum + (Number(row.profit_units) || 0), 0);
-  const risk = rows.filter(row => ['WIN', 'LOSS'].includes(String(row.result).toUpperCase())).reduce((sum, row) => sum + (Number(row.risk_units) || 0), 0);
-  return `<tr><td><strong>No recorded factors</strong><br><span class="combination-label">${safe(context)} · ${count('PUSH')} pushes · ${count('VOID')} voids</span></td><td>${wins}-${losses}</td><td>${decided ? fmtPct(wins / decided) : '—'}</td><td class="${units > 0 ? 'units-positive' : units < 0 ? 'units-negative' : ''}">${units > 0 ? '+' : ''}${units.toFixed(2)}</td><td>${risk ? fmtPct(units / risk) : '—'}</td><td>${decided}</td><td>${count('PENDING')}</td></tr>`;
-}
-
-function renderNoRecordedFactors(target, context) {
-  document.querySelector(target).innerHTML = `<div class="history-table-wrap"><table class="history-table"><thead><tr><th>Comparison group</th><th>Record</th><th>Win rate</th><th>Units</th><th>ROI</th><th>Decided</th><th>Pending</th></tr></thead><tbody>${noRecordedFactorsRow(context)}</tbody></table></div>`;
-}
-
-function renderFocusPerformance() {
-  const rows = selectedHistory().filter(row => selectedConfluenceFactors(row).length >= state.focusMinMatches);
-  const decided = rows.filter(row => ['WIN','LOSS'].includes(String(row.result).toUpperCase()));
-  const wins = decided.filter(row => String(row.result).toUpperCase() === 'WIN').length;
-  const losses = decided.length - wins;
-  const pending = rows.filter(row => String(row.result).toUpperCase() === 'PENDING').length;
-  const units = decided.reduce((sum, row) => sum + (Number(row.profit_units) || 0), 0);
-  const risk = decided.reduce((sum, row) => sum + (Number(row.risk_units) || 0), 0);
-  const winRate = decided.length ? wins / decided.length : null;
-  const label = state.focusSelected.join(' + ');
-  document.querySelector('#focusPerformanceRows').innerHTML = `<tr><td><strong>${safe(label)}</strong><br><span class="combination-label">AT LEAST ${state.focusMinMatches} OF ${state.focusSelected.length}</span></td><td>${wins}-${losses}</td><td>${fmtPct(winRate)}</td><td class="${units > 0 ? 'units-positive' : units < 0 ? 'units-negative' : ''}">${units > 0 ? '+' : ''}${units.toFixed(2)}</td><td>${risk ? fmtPct(units / risk) : '—'}</td><td>${decided.length}</td><td>${pending}</td></tr>`;
-  document.querySelector('#focusPerformanceRows').innerHTML += noRecordedFactorsRow('Comparison only; independent of selected factors');
-}
-
-function renderPerformance() {
-  const all = (state.data?.validation || []).find(row => row.segment === 'all');
-  const cards = all ? [[Number(all.matches).toLocaleString(), 'rolling validation matches'],[fmtNum(all.mae, 2), 'game-margin MAE'],[fmtNum(all.rmse, 2), 'game-margin RMSE'],[fmtNum(all.bias, 2), 'average margin bias']] : [['Pending','hosted validation run'],['—','game-margin MAE'],['—','game-margin RMSE'],['—','average margin bias']];
-  document.querySelector('#performanceCards').innerHTML = cards.map(([value,label]) => `<div class="metric-card"><strong>${value}</strong><span>${label}</span></div>`).join('');
-}
-
-function selectedHistory() {
-  return (state.data?.reconstruction?.history || []).filter(row => {
-    return inDateRange(row.date);
-  });
-}
-
-function inDateRange(value) {
-  const date = String(value || '');
-  return (!state.dateFrom || date >= state.dateFrom) && (!state.dateTo || date <= state.dateTo);
-}
-
-function renderHistoryView({ rows, resultFilter, metricsId, noticeId, groupsId, noticeSuffix = ' RETROSPECTIVE RECONSTRUCTION: original model rules with as-of inputs. Not prospective evidence. Ungraded finishes are excluded from ROI.' }) {
-  const dateFiltered = rows.filter(row => inDateRange(row.date));
-  const filtered = dateFiltered.filter(row => resultFilter === 'ALL' || String(row.result).toUpperCase() === resultFilter);
-  const count = result => dateFiltered.filter(row => String(row.result).toUpperCase() === result).length;
-  const wins = count('WIN'), losses = count('LOSS'), pushes = count('PUSH'), voids = count('VOID'), pending = count('PENDING');
-  const units = dateFiltered.reduce((sum, row) => sum + (Number(row.profit_units) || 0), 0);
-  const decisionRisk = dateFiltered.filter(row => ['WIN','LOSS'].includes(String(row.result).toUpperCase())).reduce((sum, row) => sum + (Number(row.risk_units) || 0), 0);
-  const cards = [[`${wins}-${losses}`, 'win-loss record'],[`${units > 0 ? '+' : ''}${units.toFixed(2)}`, 'net units'],[decisionRisk ? fmtPct(units / decisionRisk) : '—', 'return on decided bets'],[dateFiltered.length.toLocaleString(), 'assumed bets tracked']];
-  document.querySelector(metricsId).innerHTML = cards.map(([value,label]) => `<div class="metric-card"><strong>${value}</strong><span>${label}</span></div>`).join('');
-  const notice = document.querySelector(noticeId);
-  notice.textContent = dateFiltered.length ? `Assuming one unit on every counted bet: ${wins}-${losses}, ${pushes} pushes, ${voids} voids, ${pending} pending, ${units > 0 ? '+' : ''}${units.toFixed(2)} net units.${noticeSuffix}` : `No counted bets fall within this date range.${noticeSuffix}`;
-  notice.className = `status-banner ${dateFiltered.length ? '' : 'closed'}`;
-  const dates = [...new Set(filtered.map(row => String(row.date)))].sort().reverse();
-  document.querySelector(groupsId).innerHTML = dates.length ? dates.map(date => {
-    const rows = filtered.filter(row => String(row.date) === date);
-    const dayWins = rows.filter(row => String(row.result).toUpperCase() === 'WIN').length;
-    const dayLosses = rows.filter(row => String(row.result).toUpperCase() === 'LOSS').length;
-    const dayUnits = rows.reduce((sum, row) => sum + (Number(row.profit_units) || 0), 0);
-    const label = new Date(`${date}T12:00:00`).toLocaleDateString([], {weekday:'long', month:'long', day:'numeric', year:'numeric'});
-    const body = rows.map(row => {
-      const result = String(row.result || '').toUpperCase();
-      const rowUnits = Number(row.profit_units);
-      return `<tr><td><strong>${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</strong><br><span class="match-context">vs ${safe(row.opponent)}</span></td><td>${fmtOdds(row.odds)}</td><td>${fmtPct(row.cover_probability)}</td><td>${fmtPct(row.market_no_vig_probability)}</td><td><span class="result-chip ${result.toLowerCase()}">${safe(result)}</span></td><td class="${rowUnits > 0 ? 'units-positive' : rowUnits < 0 ? 'units-negative' : ''}">${Number.isFinite(rowUnits) ? `${rowUnits > 0 ? '+' : ''}${rowUnits.toFixed(2)}` : '—'}</td></tr>`;
-    }).join('');
-    return `<section class="history-day"><div class="history-day-heading"><strong>${safe(label)}</strong><span>${dayWins}-${dayLosses} · ${dayUnits > 0 ? '+' : ''}${dayUnits.toFixed(2)} units</span></div><div class="history-table-wrap"><table class="history-table"><thead><tr><th>Play</th><th>Price</th><th>Model</th><th>Market</th><th>Result</th><th>Units</th></tr></thead><tbody>${body}</tbody></table></div></section>`;
-  }).join('') : '<div class="empty"><strong>No results in this range</strong>Change the dates or result filter.</div>';
-}
-
-function renderStrictV2() {
-  document.querySelector('#strictV2Notice').textContent = 'Live betting is disabled. Strict V2 is a legacy filter and does not validate the repaired model.';
-  document.querySelector('#strictV2Board').innerHTML = '';
-}
-
-function renderHistory() {
-  renderNoRecordedFactors('#historyNoFactors', 'Included in full history totals');
-  renderHistoryView({
-    rows: state.data?.reconstruction?.history || [],
-    resultFilter: state.historyFilter,
-    metricsId: '#historyMetrics',
-    noticeId: '#historyNotice',
-    groupsId: '#historyGroups',
-  });
-}
-
-function renderHistoryV2() {
-  renderNoRecordedFactors('#historyV2NoFactors', 'Comparison only; excluded from V2 totals');
-  const v2Rows = (state.data?.reconstruction?.history || []).filter(row => row.strict_v2);
-  const excluded = selectedHistory().length - v2Rows.filter(row => inDateRange(row.date)).length;
-  renderHistoryView({
-    rows: v2Rows,
-    resultFilter: state.historyV2Filter,
-    metricsId: '#historyV2Metrics',
-    noticeId: '#historyV2Notice',
-    groupsId: '#historyV2Groups',
-    noticeSuffix: ` RETROSPECTIVE RECONSTRUCTION, not prospective validation. ${excluded} selections excluded by the unchanged original V2 factor rules.`,
-  });
-}
-
-const factorDefinitions = [
-  ['Surface-adjusted Elo', /surface-adjusted elo/i],
-  ['Recent surface game margin', /recent game margin/i],
-  ['Opponent-adjusted serve', /serve-point performance/i],
-  ['Opponent-adjusted return', /return-point performance/i],
-  ['Serve-versus-return matchup', /serve-versus-return matchup/i],
-  ['Overall Elo', /overall elo/i],
-  ['Recent form', /recent form/i],
-  ['Workload / rest', /workload|rest advantage/i],
-];
-
-function renderFactors() {
-  const history = selectedHistory();
-  const classified = history.filter(row => String(row.feature_rationale || '').trim());
-  const stats = factorDefinitions.flatMap(([label, pattern]) => [3,5].map(format => {
-    const rows = classified.filter(row => Number(row.best_of) === format && pattern.test(String(row.feature_rationale)));
-    const decided = rows.filter(row => ['WIN','LOSS'].includes(String(row.result).toUpperCase()));
-    const wins = decided.filter(row => String(row.result).toUpperCase() === 'WIN').length;
-    const losses = decided.length - wins;
-    const pending = rows.filter(row => String(row.result).toUpperCase() === 'PENDING').length;
-    const units = decided.reduce((sum, row) => sum + (Number(row.profit_units) || 0), 0);
-    const risk = decided.reduce((sum, row) => sum + (Number(row.risk_units) || 0), 0);
-    return { label: `${label} · Best of ${format}`, wins, losses, pending, units, risk, sample: rows.length };
-  })).filter(row => row.sample).sort((a,b) => b.sample - a.sample || a.label.localeCompare(b.label));
-  const notice = document.querySelector('#factorNotice');
-  const unclassified = history.length - classified.length;
-  notice.textContent = `Reconstructed factors use inputs available before each quote and are separated by best-of format. ${classified.length} of ${history.length} hypothetical selections have recomputed labels. Descriptive retrospective groups, not independently validated strategies.`;
-  notice.className = `status-banner ${classified.length ? '' : 'closed'}`;
-  document.querySelector('#factorRows').innerHTML = stats.length ? stats.map(row => {
-    const winRate = row.wins + row.losses ? row.wins / (row.wins + row.losses) : null;
-    return `<tr><td><strong>${safe(row.label)}</strong></td><td>${row.wins}-${row.losses}</td><td>${fmtPct(winRate)}</td><td class="${row.units > 0 ? 'units-positive' : row.units < 0 ? 'units-negative' : ''}">${row.units > 0 ? '+' : ''}${row.units.toFixed(2)}</td><td>${row.risk ? fmtPct(row.units / row.risk) : 'â€”'}</td><td>${row.wins + row.losses}</td><td>${row.pending}</td></tr>`;
-  }).join('') : '<tr><td colspan="7">No factor-tagged bets fall within this date range.</td></tr>';
-  document.querySelector('#factorRows').innerHTML += noRecordedFactorsRow('Comparison group; no saved factor rationale');
-}
-
-function bindControls() {
-  renderFocusControls();
-  document.querySelector('#replayDate').addEventListener('change', renderReplay);
-  document.querySelectorAll('.tab').forEach(button => button.addEventListener('click', () => { document.querySelectorAll('.tab').forEach(item => item.classList.toggle('active', item === button)); document.querySelectorAll('.panel').forEach(panel => panel.classList.toggle('active', panel.id === button.dataset.panel)); }));
-  document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => { state.filter = button.dataset.filter; document.querySelectorAll('.filter').forEach(item => item.classList.toggle('active', item === button)); renderBoard(); }));
-  document.querySelectorAll('.history-filter').forEach(button => button.addEventListener('click', () => { state.historyFilter = button.dataset.historyFilter; document.querySelectorAll('.history-filter').forEach(item => item.classList.toggle('active', item === button)); renderHistory(); }));
-  document.querySelectorAll('.history-v2-filter').forEach(button => button.addEventListener('click', () => { state.historyV2Filter = button.dataset.historyV2Filter; document.querySelectorAll('.history-v2-filter').forEach(item => item.classList.toggle('active', item === button)); renderHistoryV2(); }));
-  document.querySelector('#focusFactorSelectors').addEventListener('click', event => {
-    const button = event.target.closest('.factor-selector');
-    if (!button) return;
-    const factor = button.dataset.factor;
-    if (state.focusSelected.includes(factor)) {
-      if (state.focusSelected.length === 1) return;
-      state.focusSelected = state.focusSelected.filter(label => label !== factor);
-    } else {
-      state.focusSelected = [...state.focusSelected, factor];
-    }
-    renderFocusControls();
-    renderFocus();
-  });
-  document.querySelector('#focusMinMatches').addEventListener('change', event => { state.focusMinMatches = Number(event.target.value); renderFocus(); });
-  document.querySelector('#dateFrom').addEventListener('change', event => { state.dateFrom = event.target.value; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); });
-  document.querySelector('#dateTo').addEventListener('change', event => { state.dateTo = event.target.value; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); });
-  document.querySelector('#dateClear').addEventListener('click', () => { state.dateFrom = ''; state.dateTo = ''; document.querySelector('#dateFrom').value = ''; document.querySelector('#dateTo').value = ''; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); });
-}
-
-function visiblePaperPicks() {
-  if (state.data?.status !== 'paper_only' || state.data?.model?.live_enabled !== false) return [];
-  const now = Date.now();
-  return (state.data.picks || []).filter(row => ['PAPER','PASS'].includes(row.recommendation) &&
-    Date.parse(row.scheduled_start) > now && Date.parse(row.collected_at) <= now && now-Date.parse(row.collected_at) <= 30*60*1000);
-}
-function renderPaper() {
-  const report = state.data?.paper_evaluation || {};
-  document.querySelector('#paperNotice').textContent = `Paper trading only. ${report.settled || 0} settled selections; at least ${report.minimum_settled || 200} over ${report.minimum_days || 60} days are required before manual review. There is no automatic switch to live betting.`;
-  renderHistoryView({rows: state.data?.paper_history || [], resultFilter: 'ALL', metricsId:'#paperMetrics', noticeId:'#paperHistoryNotice', groupsId:'#paperGroups', noticeSuffix:' Prospective paper selections; displayed prices are not confirmed fills.'});
-}
-function renderReplay() {
-  const research = state.data?.reconstruction || {};
-  const all = research.lines || [];
-  const select = document.querySelector('#replayDate');
-  if (!select.options.length) {
-    select.innerHTML = [...new Set(all.map(row => row.date))].sort().reverse().map(date => `<option value="${safe(date)}">${safe(date)}</option>`).join('');
-  }
-  const rows = all.filter(row => row.date === select.value);
-  const captured = new Set(rows.map(row => row.observation_id)).size;
-  const through = [...new Set(rows.map(row => row.training_max_date))].sort().join(', ');
-  document.querySelector('#replayNotice').textContent = rows.length ? `${captured} recovered paired quotes; ${rows.length} assessed sides. Training through ${through}. Repeated captures and alternate lines are shown for inspection; performance counts only the first qualifying pick per match.` : 'No verified reconstruction is available. Legacy stale-input selections are not used as a fallback.';
-  document.querySelector('#replayRows').innerHTML = rows.map(row => `<tr><td>${safe(row.captured_at)}<br>Training: ${safe(row.training_max_date)}</td><td><strong>${safe(row.player)} ${Number(row.spread)>0?'+':''}${fmtNum(row.spread)}</strong><br>vs ${safe(row.opponent)}</td><td>${fmtOdds(row.odds)}</td><td>${fmtPct(row.cover_probability)}</td><td>${row.locked_pick?'LOCKED RECONSTRUCTED PICK':row.snapshot_selected?'QUALIFIES AT THIS CAPTURE':'PASS'}</td><td>${safe(row.feature_rationale)}</td><td>${safe(row.result)}</td></tr>`).join('');
-}
-function renderLegacy() {
-  renderHistoryView({rows:state.data?.history || [],resultFilter:'ALL',metricsId:'#legacyMetrics',noticeId:'#legacyNotice',groupsId:'#legacyGroups',noticeSuffix:' INVALID MODEL INPUTS: archived outcomes only. Frozen-input probabilities and factors do not validate the rebuilt model.'});
-}
+function render() {renderBoard();renderResults();renderResearch();renderConfluence();}
+document.querySelectorAll('.tab').forEach(button=>button.addEventListener('click',()=>{
+  document.querySelectorAll('.tab,.panel').forEach(el=>el.classList.remove('active'));
+  button.classList.add('active');document.getElementById(button.dataset.panel).classList.add('active');
+}));
+document.querySelector('#format').addEventListener('change',event=>{state.format=Number(event.target.value);render();});
+document.querySelector('#lag').addEventListener('change',event=>{state.lag=Number(event.target.value);renderResearch();});
+document.querySelector('#focusMinMatches').addEventListener('change',event=>{state.minimum=Number(event.target.value);renderConfluence();});
+document.querySelector('#focusFactorSelectors').addEventListener('click',event=>{
+  const factor=event.target.closest('[data-factor]')?.dataset.factor;if(!factor)return;
+  if(state.selected.includes(factor)){if(state.selected.length===1)return;state.selected=state.selected.filter(f=>f!==factor);}else state.selected.push(factor);
+  state.minimum=Math.min(state.minimum,state.selected.length);renderConfluence();
+});
 async function load() {
-  bindControls();
-  try {
-    const response = await fetch('data/board.json', { cache: 'no-store' });
-    if (!response.ok) throw new Error('Board data unavailable');
-    state.data = await response.json();
-    const banner = document.querySelector('#statusBanner');
-    banner.textContent = state.data.status_message;
-    banner.className = `status-banner ${state.data.status === 'ready' ? '' : 'closed'}`;
-    if (state.data.generated_at) document.querySelector('#updatedText').textContent = `Updated ${new Date(state.data.generated_at).toLocaleString([], {dateStyle:'medium', timeStyle:'short'})}`;
-    renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderReplay(); renderLegacy();
-  } catch (error) {
-    document.querySelector('#statusBanner').textContent = 'The latest board could not be verified. No plays are displayed.';
-    document.querySelector('#statusBanner').className = 'status-banner closed';
-    renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderReplay(); renderLegacy();
-  }
+  try {const response=await fetch('data/board.json',{cache:'no-store'});if(!response.ok)throw new Error('Unavailable');state.data=await response.json();document.querySelector('#updatedText').textContent=`Updated ${new Date(state.data.generated_at).toLocaleString()}`;}
+  catch {state.data=null;}
+  render();
 }
-
-load();
-
-setInterval(() => { renderBoard(); renderFocus(); }, 30000);
+load();setInterval(renderBoard,30000);

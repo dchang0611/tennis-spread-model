@@ -8,3 +8,4 @@ tennis_model_output/spread_rolling_predictions.csv
 tennis_model_output/spread_validation_summary.csv
 site/data/
 tennis_model_output/reconstruction/
+baseline_run.log
