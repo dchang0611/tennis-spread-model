@@ -1,6 +1,6 @@
 {
   "complete": false,
-  "checked_at": "2026-10-02T21:49:06.859248+00:00",
+  "checked_at": "2026-10-03T07:06:25.037984+00:00",
   "sources": {
     "season_csv": {
       "ok": true,
@@ -16,11 +16,11 @@
     },
     "espn": {
       "ok": true,
-      "matches": 63
+      "matches": 66
     },
     "tennis_explorer": {
       "ok": true,
-      "matches": 505
+      "matches": 546
     }
   },
   "unsettled_prior_bets": [
@@ -28,6 +28,11 @@
       "date": "2026-09-30",
       "player": "Alex Molcan",
       "opponent": "Arthur Rinderknech"
+    },
+    {
+      "date": "2026-10-02",
+      "player": "Andrey Rublev",
+      "opponent": "Roman Safiullin"
     }
   ]
 }

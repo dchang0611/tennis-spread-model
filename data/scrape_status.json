@@ -1,61 +1,94 @@
 {
   "success": true,
-  "checked_at": "2026-10-02T21:49:19.859401+00:00",
-  "match_date": "2026-10-02",
+  "checked_at": "2026-10-03T07:06:37.523954+00:00",
+  "match_date": "2026-10-03",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
   "surface_assignments": [
     {
-      "player_a": "Shapovalov D.",
-      "player_b": "Tabilo A.",
+      "player_a": "Humbert U.",
+      "player_b": "Lehecka J.",
       "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338129",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338085",
       "source_date": "2026-10-03",
       "surface": "Hard",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "De Minaur A.",
-      "player_b": "Halys Q.",
+      "player_a": "Medvedev D.",
+      "player_b": "Struff J.",
       "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338083",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338523",
       "source_date": "2026-10-03",
       "surface": "Hard",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Alcaraz C.",
-      "player_b": "Arnaldi M.",
+      "player_a": "Cerundolo F.",
+      "player_b": "Mensik J.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338289",
+      "source_date": "2026-10-03",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Zverev A.",
+      "player_b": "Shang J.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338183",
+      "source_date": "2026-10-03",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Munar J.",
+      "player_b": "Jacquet K.",
       "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338145",
-      "source_date": "2026-10-03",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338541",
+      "source_date": "2026-10-04",
       "surface": "Hard",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Rublev A.",
-      "player_b": "Safiullin R.",
+      "player_a": "Vacherot V.",
+      "player_b": "Fils A.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338563",
+      "source_date": "2026-10-04",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Hurkacz H.",
+      "player_b": "Khachanov K.",
       "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338181",
-      "source_date": "2026-10-03",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338651",
+      "source_date": "2026-10-04",
       "surface": "Hard",
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 4,
+  "events_found": 8,
   "events": [
-    "Alejandro Tabilo vs Denis Shapovalov",
-    "Quentin Halys vs Alex De Minaur",
-    "Matteo Arnaldi vs Carlos Alcaraz",
-    "Roman Safiullin vs Andrey Rublev"
+    "Adolfo Daniel Vallejo vs Matteo Berrettini",
+    "Jiri Lehecka vs Ugo Humbert",
+    "Jan-Lennard Struff vs Daniil Medvedev",
+    "Jakub Mensik vs Francisco Cerundolo",
+    "Juncheng Shang vs Alexander Zverev",
+    "Kyrian Jacquet vs Jaume Munar",
+    "Arthur Fils vs Valentin Vacherot",
+    "Karen Khachanov vs Hubert Hurkacz"
   ],
-  "spread_markets_found": 4,
-  "parser_failures": [],
+  "spread_markets_found": 7,
+  "parser_failures": [
+    "Unresolved event header: Adolfo Daniel Vallejo vs Matteo Berrettini"
+  ],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 4,
-  "matches_parsed": 4,
-  "partial_coverage": false,
-  "rows_saved": 17,
+  "executable_spread_markets": 7,
+  "matches_parsed": 7,
+  "partial_coverage": true,
+  "rows_saved": 26,
   "error": null
 }
