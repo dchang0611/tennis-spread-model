@@ -1,43 +1,25 @@
 {
   "success": true,
-  "checked_at": "2026-10-03T08:07:34.593948+00:00",
+  "checked_at": "2026-10-03T12:43:26.145268+00:00",
   "match_date": "2026-10-03",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
   "surface_assignments": [
     {
-      "player_a": "Medvedev D.",
-      "player_b": "Struff J.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338523",
-      "source_date": "2026-10-03",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Cerundolo F.",
-      "player_b": "Mensik J.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338289",
-      "source_date": "2026-10-03",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Zverev A.",
-      "player_b": "Shang J.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338183",
-      "source_date": "2026-10-03",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
       "player_a": "Munar J.",
       "player_b": "Jacquet K.",
       "tournament": "Tokyo (Japan Open)",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3338541",
+      "source_date": "2026-10-04",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Alcaraz C.",
+      "player_b": "Shapovalov D.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338895",
       "source_date": "2026-10-04",
       "surface": "Hard",
       "method": "live_match_metadata"
@@ -50,25 +32,30 @@
       "source_date": "2026-10-04",
       "surface": "Hard",
       "method": "live_match_metadata"
+    },
+    {
+      "player_a": "De Minaur A.",
+      "player_b": "Rublev A.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3338901",
+      "source_date": "2026-10-04",
+      "surface": "Hard",
+      "method": "live_match_metadata"
     }
   ],
-  "events_found": 6,
+  "events_found": 4,
   "events": [
-    "Jiri Lehecka vs Ugo Humbert",
-    "Jan-Lennard Struff vs Daniil Medvedev",
-    "Jakub Mensik vs Francisco Cerundolo",
-    "Juncheng Shang vs Alexander Zverev",
     "Kyrian Jacquet vs Jaume Munar",
-    "Karen Khachanov vs Hubert Hurkacz"
+    "Denis Shapovalov vs Carlos Alcaraz",
+    "Karen Khachanov vs Hubert Hurkacz",
+    "Andrey Rublev vs Alex De Minaur"
   ],
-  "spread_markets_found": 5,
-  "parser_failures": [
-    "Unresolved event header: Jiri Lehecka vs Ugo Humbert"
-  ],
+  "spread_markets_found": 4,
+  "parser_failures": [],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 5,
-  "matches_parsed": 5,
-  "partial_coverage": true,
-  "rows_saved": 20,
+  "executable_spread_markets": 4,
+  "matches_parsed": 4,
+  "partial_coverage": false,
+  "rows_saved": 12,
   "error": null
 }
