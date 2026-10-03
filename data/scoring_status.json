@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-03T21:55:42.847473+00:00",
+  "checked_at": "2026-10-03T22:15:58.999412+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
@@ -84,5 +84,5 @@
   "training_matches": 3598,
   "training_max_date": "2026-10-02",
   "paper_candidates": 1,
-  "source_hash": "6bcb9c6979cbdb831f1d56907227eb4c6f75d5258153715f6d959abfd3820ac3"
+  "source_hash": "38c5550bd0d66f52bf964318ad2a25adabf4e304bcdc10466429a33fc6327b93"
 }
