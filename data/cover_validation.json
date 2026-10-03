@@ -1,69 +1,79 @@
 {
   "status": "diagnostic_only",
-  "description": "Fixed hypothetical half-game lines; earlier-fold residuals only. Correlated lines, no historical quote/ROI claim.",
-  "lines": 726,
-  "brier": 0.1602708728568941,
-  "log_loss": 0.5207212112752385,
+  "description": "Fixed hypothetical half-game lines; strictly earlier-date same-format residuals only. Correlated lines, no historical quote/ROI claim.",
+  "by_format": {
+    "3": {
+      "lines": 8610,
+      "brier": 0.15297485658187696
+    },
+    "5": {
+      "lines": 1356,
+      "brier": 0.19101389256827517
+    }
+  },
+  "lines": 9966,
+  "brier": 0.158150546808417,
+  "log_loss": 0.48651672308096044,
   "bins": [
     {
       "lower": 0.0,
-      "n": 127,
-      "predicted": 0.035521917384840375,
-      "actual": 0.10236220472440945
+      "n": 1478,
+      "predicted": 0.049345597756528733,
+      "actual": 0.07442489851150202
     },
     {
       "lower": 0.1,
-      "n": 86,
-      "predicted": 0.13721030303085213,
-      "actual": 0.16279069767441862
+      "n": 1092,
+      "predicted": 0.1465961739108385,
+      "actual": 0.17032967032967034
     },
     {
       "lower": 0.2,
-      "n": 47,
-      "predicted": 0.2433981924173338,
-      "actual": 0.19148936170212766
+      "n": 888,
+      "predicted": 0.251938499665847,
+      "actual": 0.25675675675675674
     },
     {
       "lower": 0.3,
-      "n": 52,
-      "predicted": 0.3396583985962226,
-      "actual": 0.36538461538461536
+      "n": 878,
+      "predicted": 0.34488692786241554,
+      "actual": 0.3838268792710706
     },
     {
       "lower": 0.4,
-      "n": 48,
-      "predicted": 0.44197015147383295,
-      "actual": 0.4166666666666667
+      "n": 839,
+      "predicted": 0.45100413956439594,
+      "actual": 0.4600715137067938
     },
     {
       "lower": 0.5,
-      "n": 70,
-      "predicted": 0.553358743403155,
-      "actual": 0.5285714285714286
+      "n": 575,
+      "predicted": 0.5501586269117209,
+      "actual": 0.5391304347826087
     },
     {
       "lower": 0.6,
-      "n": 75,
-      "predicted": 0.6460308566989778,
-      "actual": 0.68
+      "n": 726,
+      "predicted": 0.6499270810234642,
+      "actual": 0.6294765840220385
     },
     {
       "lower": 0.7,
-      "n": 53,
-      "predicted": 0.7493055976444278,
-      "actual": 0.7924528301886793
+      "n": 960,
+      "predicted": 0.749542593871946,
+      "actual": 0.7510416666666667
     },
     {
       "lower": 0.8,
-      "n": 67,
-      "predicted": 0.8397332695917493,
-      "actual": 0.8059701492537313
+      "n": 1121,
+      "predicted": 0.8536319374638182,
+      "actual": 0.8260481712756468
     },
     {
       "lower": 0.9,
-      "n": 99,
-      "predicted": 0.949608799114216,
-      "actual": 0.9191919191919192
+      "n": 1283,
+      "predicted": 0.9558936786400798,
+      "actual": 0.9290724863600935
     }
   ]
 }
