@@ -1,14 +1,97 @@
 {
-  "success": false,
-  "checked_at": "2026-10-04T13:25:43.194523+00:00",
+  "success": true,
+  "checked_at": "2026-10-04T17:07:44.597453+00:00",
   "match_date": "2026-10-04",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
-  "surface_assignments": [],
-  "events_found": 8,
+  "surface_assignments": [
+    {
+      "player_a": "Sonego L.",
+      "player_b": "Dougaz A.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340307",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Xiao L.",
+      "player_b": "Cina F.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340345",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Gaston H.",
+      "player_b": "Draxl L.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340313",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Daniel T.",
+      "player_b": "Mochizuki S.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340311",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Ilagan A.",
+      "player_b": "Basilashvili N.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340315",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Safiullin R.",
+      "player_b": "Galarneau A.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340309",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Zheng M.",
+      "player_b": "Gomez F.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340317",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Atmane T.",
+      "player_b": "Tomic B.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340325",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Pavlovic L.",
+      "player_b": "Simakin I.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340323",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    }
+  ],
+  "events_found": 9,
   "events": [
     "Aziz Dougaz vs Lorenzo Sonego",
+    "Federico Cina vs Linang Xiao",
     "Liam Draxl vs Hugo Gaston",
     "Shintaro Mochizuki vs Taro Daniel",
     "Nikoloz Basilashvili vs Andre Ilagan",
@@ -17,20 +100,14 @@
     "Bernard Tomic vs Terence Atmane",
     "Ilia Simakin vs Luka Pavlovic"
   ],
-  "spread_markets_found": 0,
+  "spread_markets_found": 9,
   "parser_failures": [
-    "Unresolved event header: Aziz Dougaz vs Lorenzo Sonego",
-    "Unresolved event header: Liam Draxl vs Hugo Gaston",
-    "Unresolved event header: Shintaro Mochizuki vs Taro Daniel",
-    "Unresolved event header: Nikoloz Basilashvili vs Andre Ilagan",
-    "Unresolved event header: Alexis Galarneau vs Roman Safiullin",
-    "Unresolved event header: Federico Agustin Gomez vs Michael Zheng",
-    "Unresolved event header: Bernard Tomic vs Terence Atmane",
-    "Unresolved event header: Ilia Simakin vs Luka Pavlovic"
+    "Nikoloz Basilashvili vs Andre Ilagan"
   ],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 0,
-  "matches_parsed": 0,
+  "executable_spread_markets": 9,
+  "matches_parsed": 8,
   "partial_coverage": true,
-  "error": "Novig events were found, but no complete paired spread prices were extracted."
+  "rows_saved": 15,
+  "error": null
 }
