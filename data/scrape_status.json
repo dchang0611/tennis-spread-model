@@ -1,20 +1,32 @@
 {
   "success": false,
-  "checked_at": "2026-10-04T05:22:22.837264+00:00",
-  "match_date": "2026-10-03",
+  "checked_at": "2026-10-04T13:25:43.194523+00:00",
+  "match_date": "2026-10-04",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
   "surface_assignments": [],
-  "events_found": 2,
+  "events_found": 8,
   "events": [
-    "A. Rublev vs A. De Minaur",
-    "Andrey Rublev vs Alex De Minaur"
+    "Aziz Dougaz vs Lorenzo Sonego",
+    "Liam Draxl vs Hugo Gaston",
+    "Shintaro Mochizuki vs Taro Daniel",
+    "Nikoloz Basilashvili vs Andre Ilagan",
+    "Alexis Galarneau vs Roman Safiullin",
+    "Federico Agustin Gomez vs Michael Zheng",
+    "Bernard Tomic vs Terence Atmane",
+    "Ilia Simakin vs Luka Pavlovic"
   ],
   "spread_markets_found": 0,
   "parser_failures": [
-    "Unresolved event header: A. Rublev vs A. De Minaur",
-    "Unresolved event header: Andrey Rublev vs Alex De Minaur"
+    "Unresolved event header: Aziz Dougaz vs Lorenzo Sonego",
+    "Unresolved event header: Liam Draxl vs Hugo Gaston",
+    "Unresolved event header: Shintaro Mochizuki vs Taro Daniel",
+    "Unresolved event header: Nikoloz Basilashvili vs Andre Ilagan",
+    "Unresolved event header: Alexis Galarneau vs Roman Safiullin",
+    "Unresolved event header: Federico Agustin Gomez vs Michael Zheng",
+    "Unresolved event header: Bernard Tomic vs Terence Atmane",
+    "Unresolved event header: Ilia Simakin vs Luka Pavlovic"
   ],
   "unpriced_spread_markets": [],
   "executable_spread_markets": 0,

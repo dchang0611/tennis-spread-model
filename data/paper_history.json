@@ -184,10 +184,10 @@
     "recommendation": "PAPER",
     "match_key": "Francisco Cerundolo|Jakub Mensik|2026-10-03|Beijing",
     "recorded_at": "2026-10-03T07:03:51.937374+00:00",
-    "result": "PENDING",
+    "result": "WIN",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": 1.04,
+    "settled_at": "2026-10-04T13:26:26.026116+00:00"
   },
   {
     "observation_id": null,
