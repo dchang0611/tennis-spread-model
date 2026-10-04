@@ -221,6 +221,11 @@ def build_payload() -> dict:
         "strict_v2_current_picks": [],
         "paper_history": paper_history,
         "paper_evaluation": read_json(ROOT / 'data' / 'paper_evaluation.json'),
+        "small_edge_experiment": {
+            "definition": read_json(ROOT / 'small_edge_experiment.json'),
+            "history": read_json(ROOT / 'data' / 'small_edge_history.json') or [],
+            "evaluation": read_json(ROOT / 'data' / 'small_edge_evaluation.json'),
+        },
         "cover_validation": read_json(ROOT / 'data' / 'cover_validation.json'),
         "source_status": source_status,
         "history_provenance": 'INVALID MODEL INPUTS: legacy selections used frozen June 28 inputs from the July training file. Outcomes are preserved as an archive, not valid evidence for current factors or V2.',

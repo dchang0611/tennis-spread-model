@@ -15,6 +15,7 @@ from tennis_spread_model import FEATURES, score_format_markets, train_format_mod
 from paper_evaluation import chronological_cover_validation, prospective_report
 from update_spread_history import HISTORY_COLUMNS, settle_history
 from asof_history import assert_current_training
+from small_edge_experiment import update_experiment, experiment_report
 
 ROOT=Path(__file__).resolve().parent
 
@@ -60,6 +61,20 @@ def settle_paper(history,matches,now):
         for field in ['result','profit_units','settled_at']:
             row[field]=json_safe(graded.iloc[i][field])
     return history
+
+
+def refresh_small_edge_experiment(history, policy, now):
+    """An experiment failure never changes the baseline or erases its own ledger."""
+    path = ROOT / 'data/small_edge_history.json'
+    try:
+        definition = json.loads((ROOT / 'small_edge_experiment.json').read_text())
+        previous = json.loads(path.read_text()) if path.exists() else []
+        updated = update_experiment(history, previous, definition, policy, now)
+        report = experiment_report(updated, definition, policy, now)
+        write_json(path, updated)
+    except Exception as exc:
+        report = {'success': False, 'checked_at': now, 'error': str(exc), 'live_enabled': False}
+    write_json(ROOT / 'data/small_edge_evaluation.json', report)
 
 
 def main():
@@ -145,6 +160,7 @@ def main():
     finally:
         write_json(history_path,history)
         write_json(ROOT/'data/paper_evaluation.json',prospective_report(history,policy))
+        refresh_small_edge_experiment(history, policy, datetime.now(timezone.utc).isoformat())
         write_json(ROOT/'data/scoring_status.json',status)
     print(json.dumps(status,indent=2))
 

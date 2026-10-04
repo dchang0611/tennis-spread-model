@@ -160,17 +160,17 @@ function inDateRange(value) {
   return (!state.dateFrom || date >= state.dateFrom) && (!state.dateTo || date <= state.dateTo);
 }
 
-function renderHistoryView({ rows, resultFilter, metricsId, noticeId, groupsId, noticeSuffix = ' RETROSPECTIVE RECONSTRUCTION: original model rules with as-of inputs. Not prospective evidence. Ungraded finishes are excluded from ROI.' }) {
+function renderHistoryView({ rows, resultFilter, metricsId, noticeId, groupsId, lineLabels = false, showEdge = false, noticeSuffix = ' RETROSPECTIVE RECONSTRUCTION: original model rules with as-of inputs. Not prospective evidence. Ungraded finishes are excluded from ROI.' }) {
   const dateFiltered = rows.filter(row => inDateRange(row.date));
   const filtered = dateFiltered.filter(row => resultFilter === 'ALL' || String(row.result).toUpperCase() === resultFilter);
   const count = result => dateFiltered.filter(row => String(row.result).toUpperCase() === result).length;
   const wins = count('WIN'), losses = count('LOSS'), pushes = count('PUSH'), voids = count('VOID'), pending = count('PENDING') + count('UNRESOLVED') + count('UNGRADED');
   const units = dateFiltered.reduce((sum, row) => sum + (Number(row.profit_units) || 0), 0);
   const decisionRisk = dateFiltered.filter(row => ['WIN','LOSS'].includes(String(row.result).toUpperCase())).reduce((sum, row) => sum + (Number(row.risk_units) || 0), 0);
-  const cards = [[`${wins}-${losses}`, 'win-loss record'],[`${units > 0 ? '+' : ''}${units.toFixed(2)}`, 'net units'],[decisionRisk ? fmtPct(units / decisionRisk) : '—', 'return on decided bets'],[dateFiltered.length.toLocaleString(), 'assumed bets tracked']];
+  const cards = [[`${wins}-${losses}`, 'win-loss record'],[`${units > 0 ? '+' : ''}${units.toFixed(2)}`, 'net units'],[decisionRisk ? fmtPct(units / decisionRisk) : '—', lineLabels ? 'return on decided lines' : 'return on decided bets'],[dateFiltered.length.toLocaleString(), lineLabels ? 'lines tracked' : 'assumed bets tracked']];
   document.querySelector(metricsId).innerHTML = cards.map(([value,label]) => `<div class="metric-card"><strong>${value}</strong><span>${label}</span></div>`).join('');
   const notice = document.querySelector(noticeId);
-  notice.textContent = dateFiltered.length ? `Assuming one unit on every counted bet: ${wins}-${losses}, ${pushes} pushes, ${voids} voids, ${pending} pending, ${units > 0 ? '+' : ''}${units.toFixed(2)} net units.${noticeSuffix}` : `No counted bets fall within this date range.${noticeSuffix}`;
+  notice.textContent = dateFiltered.length ? `Assuming one unit on every counted ${lineLabels ? 'line' : 'bet'}: ${wins}-${losses}, ${pushes} pushes, ${voids} voids, ${pending} pending, ${units > 0 ? '+' : ''}${units.toFixed(2)} net units.${noticeSuffix}` : `No ${lineLabels ? 'recorded lines' : 'counted bets'} fall within this date range.${noticeSuffix}`;
   notice.className = `status-banner ${dateFiltered.length ? '' : 'closed'}`;
   const dates = [...new Set(filtered.map(row => String(row.date)))].sort().reverse();
   document.querySelector(groupsId).innerHTML = dates.length ? dates.map(date => {
@@ -182,10 +182,10 @@ function renderHistoryView({ rows, resultFilter, metricsId, noticeId, groupsId, 
     const body = rows.map(row => {
       const result = String(row.result || '').toUpperCase();
       const rowUnits = row.profit_units === null || row.profit_units === undefined ? NaN : Number(row.profit_units);
-      return `<tr><td><strong>${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</strong><br><span class="match-context">vs ${safe(row.opponent)}</span></td><td>${fmtOdds(row.odds)}</td><td>${fmtPct(row.cover_probability)}</td><td>${fmtPct(row.market_no_vig_probability)}</td><td><span class="result-chip ${result.toLowerCase()}">${safe(result)}</span></td><td class="${rowUnits > 0 ? 'units-positive' : rowUnits < 0 ? 'units-negative' : ''}">${Number.isFinite(rowUnits) ? `${rowUnits > 0 ? '+' : ''}${rowUnits.toFixed(2)}` : '—'}</td></tr>`;
+      return `<tr><td><strong>${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</strong><br><span class="match-context">vs ${safe(row.opponent)}</span>${showEdge ? `<br><span class="match-context">Recorded ${safe(new Date(row.recorded_at).toLocaleString())}</span>` : ''}</td><td>${fmtOdds(row.odds)}</td><td>${fmtPct(row.cover_probability)}</td><td>${fmtPct(row.market_no_vig_probability)}</td>${showEdge ? `<td>${fmtNum(Number(row.probability_edge) * 100, 2)} pp</td>` : ''}<td><span class="result-chip ${result.toLowerCase()}">${safe(result)}</span></td><td class="${rowUnits > 0 ? 'units-positive' : rowUnits < 0 ? 'units-negative' : ''}">${Number.isFinite(rowUnits) ? `${rowUnits > 0 ? '+' : ''}${rowUnits.toFixed(2)}` : '—'}</td></tr>`;
     }).join('');
-    return `<section class="history-day"><div class="history-day-heading"><strong>${safe(label)}</strong><span>${dayWins}-${dayLosses} · ${dayUnits > 0 ? '+' : ''}${dayUnits.toFixed(2)} units</span></div><div class="history-table-wrap"><table class="history-table"><thead><tr><th>Play</th><th>Price</th><th>Model</th><th>Market</th><th>Result</th><th>Units</th></tr></thead><tbody>${body}</tbody></table></div></section>`;
-  }).join('') : '<div class="empty"><strong>No results in this range</strong>Change the dates or result filter.</div>';
+    return `<section class="history-day"><div class="history-day-heading"><strong>${safe(label)}</strong><span>${dayWins}-${dayLosses} · ${dayUnits > 0 ? '+' : ''}${dayUnits.toFixed(2)} units</span></div><div class="history-table-wrap"><table class="history-table"><thead><tr><th>${lineLabels ? 'Line' : 'Play'}</th><th>Price</th><th>Model</th><th>Market</th>${showEdge ? '<th>Claimed edge</th>' : ''}<th>Result</th><th>Units</th></tr></thead><tbody>${body}</tbody></table></div></section>`;
+  }).join('') : `<div class="empty"><strong>No results in this range</strong>${lineLabels ? 'Qualifying lines will appear here as they are recorded.' : 'Change the dates or result filter.'}</div>`;
 }
 
 function renderStrictV2() {
@@ -255,7 +255,7 @@ function renderFactors() {
 }
 
 function bindControls() {
-  const refreshViews = () => { renderBoard(); renderHistory(); renderFactors(); renderFocus(); renderPaper(); renderPerformance(); };
+  const refreshViews = () => { renderBoard(); renderHistory(); renderFactors(); renderFocus(); renderPaper(); renderPerformance(); renderExperiment(); };
   document.querySelector('#formatSelect').addEventListener('change', event => { state.format = Number(event.target.value); refreshViews(); });
   document.querySelector('#historySource').addEventListener('change', event => { state.historySource = event.target.value; refreshViews(); });
   renderFocusControls();
@@ -278,9 +278,36 @@ function bindControls() {
     renderFocus();
   });
   document.querySelector('#focusMinMatches').addEventListener('change', event => { state.focusMinMatches = Number(event.target.value); renderFocus(); });
-  document.querySelector('#dateFrom').addEventListener('change', event => { state.dateFrom = event.target.value; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); });
-  document.querySelector('#dateTo').addEventListener('change', event => { state.dateTo = event.target.value; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); });
-  document.querySelector('#dateClear').addEventListener('click', () => { state.dateFrom = ''; state.dateTo = ''; document.querySelector('#dateFrom').value = ''; document.querySelector('#dateTo').value = ''; renderBoard(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); });
+  document.querySelector('#dateFrom').addEventListener('change', event => { state.dateFrom = event.target.value; refreshViews(); renderHistoryV2(); });
+  document.querySelector('#dateTo').addEventListener('change', event => { state.dateTo = event.target.value; refreshViews(); renderHistoryV2(); });
+  document.querySelector('#dateClear').addEventListener('click', () => { state.dateFrom = ''; state.dateTo = ''; document.querySelector('#dateFrom').value = ''; document.querySelector('#dateTo').value = ''; refreshViews(); renderHistoryV2(); });
+}
+
+function renderExperiment() {
+  const experiment = state.data?.small_edge_experiment || {};
+  const definition = experiment.definition || {};
+  const evaluation = experiment.evaluation || {};
+  const history = Array.isArray(experiment.history) ? experiment.history : [];
+  const rows = formatRows(history.filter(row => row.experiment_id === definition.experiment_id && row.model_version === definition.baseline_model_version));
+  const report = evaluation.by_format?.[String(state.format)] || {};
+  const notice = document.querySelector('#experimentNotice');
+  const start = definition.activated_at ? new Date(definition.activated_at).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' }) : null;
+  const checked = Date.parse(evaluation.checked_at);
+  const fresh = Number.isFinite(checked) && Date.now() >= checked && Date.now() - checked <= 3600000;
+  let status = !start ? 'Experiment data are unavailable.' : `Tracking from ${start}. BO${state.format} only; date and format filters apply. `;
+  if (start) {
+    if (evaluation.success === false) status += `Collection needs attention: ${evaluation.error || 'the experiment could not be updated'}.`;
+    else if (!fresh) status += 'Awaiting the next verified refresh. Recorded lines below retain their original prices.';
+    else if (state.data?.status === 'closed') status += 'No current lines passed the refresh checks. Existing results remain tracked.';
+    else status += rows.length ? 'New qualifying lines are recorded automatically.' : 'Waiting for the first qualifying line in this format.';
+  }
+  notice.textContent = status;
+  notice.className = `status-banner ${!fresh || evaluation.success !== true || state.data?.status === 'closed' ? 'closed' : ''}`;
+  renderHistoryView({ rows, resultFilter: 'ALL', metricsId: '#experimentMetrics', noticeId: '#experimentHistoryNotice', groupsId: '#experimentGroups', lineLabels: true, showEdge: true,
+    noticeSuffix: ` BO${state.format} experiment only. Pending lines are excluded from returns.` });
+  document.querySelector('#experimentProgress').textContent = evaluation.success === true
+    ? `Overall BO${state.format} review progress: ${report.settled || 0} of ${definition.minimum_settled || 200} decided lines across ${report.elapsed_days || 0} of ${definition.minimum_days || 60} required calendar days. This checkpoint uses the full experiment, independent of the date filter; reaching it does not establish profitability.`
+    : 'Review progress is unavailable until the experiment update succeeds. Recorded results remain visible.';
 }
 
 function visiblePaperPicks() {
@@ -320,14 +347,14 @@ async function load() {
     banner.textContent = state.data.status_message;
     banner.className = `status-banner ${state.data.status === 'ready' ? '' : 'closed'}`;
     if (state.data.generated_at) document.querySelector('#updatedText').textContent = `Updated ${new Date(state.data.generated_at).toLocaleString([], {dateStyle:'medium', timeStyle:'short'})}`;
-    renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderReplay(); renderLegacy();
+    renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderReplay(); renderLegacy(); renderExperiment();
   } catch (error) {
     document.querySelector('#statusBanner').textContent = 'The latest board could not be verified. No plays are displayed.';
     document.querySelector('#statusBanner').className = 'status-banner closed';
-    renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderReplay(); renderLegacy();
+    renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderReplay(); renderLegacy(); renderExperiment();
   }
 }
 
 load();
 
-setInterval(() => { renderBoard(); renderFocus(); }, 30000);
+setInterval(() => { renderBoard(); renderFocus(); renderExperiment(); }, 30000);

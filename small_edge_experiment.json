@@ -1,0 +1,13 @@
+{
+  "experiment_id": "small-edge-4-8-v1",
+  "name": "Small-edge experiment",
+  "activated_at": "2026-10-04T05:09:01+00:00",
+  "baseline_model_version": "3.0.0-elo-paper",
+  "candidate": "elo",
+  "minimum_edge": 0.04,
+  "maximum_edge_exclusive": 0.08,
+  "selection": "Filter the baseline's first locked selection; never search alternate lines or later captures.",
+  "minimum_settled": 200,
+  "minimum_days": 60,
+  "automatic_live_promotion": false
+}

@@ -10,7 +10,7 @@ on:
       timezone: America/Los_Angeles
   push:
     branches: [main]
-    paths: ['*.py', 'research/**', 'model_policy.json', 'site/**', 'requirements.txt', '.github/workflows/spread-board.yml', 'data/verified_atp_results.csv', 'data/reconstructed_history.json', 'data/baseline_comparison.json']
+    paths: ['*.py', 'research/**', 'model_policy.json', 'small_edge_experiment.json', 'site/**', 'requirements.txt', '.github/workflows/spread-board.yml', 'data/verified_atp_results.csv', 'data/reconstructed_history.json', 'data/baseline_comparison.json']
 permissions:
   contents: write
   pages: write

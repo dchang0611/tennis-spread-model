@@ -45,6 +45,7 @@
       <button class="tab" data-panel="historyPanel">Historical Performance</button>
       <button class="tab" data-panel="factorPanel">Factor Research</button>
       <button class="tab" data-panel="focusPanel">Factor Confluence</button>
+      <button class="tab" data-panel="experimentPanel">Small-edge experiment</button>
       <button class="tab" data-panel="methodPanel">How It Works</button>
     </nav>
 
@@ -173,6 +174,25 @@
       <article class="explain-card"><h3>Custom view, same safety gates</h3><p>Select the factors and minimum match count you want to study. The historical summary and current lines update together. This remains a descriptive screen, not proof of causation; PAPER and PASS labels are research observations; live betting remains disabled.</p></article>
     </section>
 
+    <section id="experimentPanel" class="panel" aria-labelledby="experimentTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SEPARATE EXPERIMENT · 4–8 POINT EDGE</p>
+          <h2 id="experimentTitle">Small-edge experiment</h2>
+        </div>
+      </div>
+      <div id="experimentNotice" class="status-banner loading">Loading the experiment…</div>
+      <div id="experimentMetrics" class="metric-grid"></div>
+      <div id="experimentHistoryNotice" class="status-banner"></div>
+      <div id="experimentGroups" class="history-groups"></div>
+      <article class="explain-card">
+        <h3>One fixed rule, tracked forward</h3>
+        <p>Keep the baseline’s first locked line only when its claimed probability edge is at least 4 and below 8 percentage points. Keep the same matchup, spread, price, and data checks. A later quote or alternate line cannot replace it. Best-of-3 and best-of-5 results stay separate.</p>
+        <p id="experimentProgress"></p>
+        <p>Results assume one unit per recorded line, before execution costs. The historical pattern suggested this experiment; historical replay results are not included here.</p>
+      </article>
+    </section>
+
     <section id="methodPanel" class="panel" aria-labelledby="methodTitle">
       <div class="section-heading">
         <div>
@@ -199,6 +219,6 @@
   <footer>
     <p>Research tool only. Prices move, edges are uncertain, and no model guarantees profit.</p>
   </footer>
-  <script src="app.js?v=restored-1"></script>
+  <script src="app.js?v=small-edge-1"></script>
 </body>
 </html>

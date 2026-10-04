@@ -33,3 +33,29 @@ not approval and never enables live betting.
 See [research/BASELINE.md](research/BASELINE.md) for the current fixed comparison,
 reproduction steps, data-quality limits and prospective protocol. Historical
 original-model reconstructions are audit artifacts, not the current model.
+
+## Small-edge experiment
+
+The separate Small-edge experiment tab tracks `small-edge-4-8-v1`. Its frozen
+definition and activation timestamp are in `small_edge_experiment.json`. It
+filters the current Elo baseline's first locked selection to an original claimed
+edge of at least 0.04 and strictly below 0.08. It does not select another line,
+rescore a match, change calibration, or modify the baseline. All existing data,
+price-age, and pre-start checks still apply. Matches locked before activation
+are excluded; historical replay is never backfilled into prospective results.
+
+Every scheduled refresh enrolls eligible lines before start, preserves their
+original prediction/price/provenance, and copies only verified settlement fields
+from the baseline. The independent `data/small_edge_history.json` ledger and
+`data/small_edge_evaluation.json` report are persisted by the existing workflow.
+Definition and prediction hashes detect changes to locked evidence. An experiment
+error preserves its ledger and reports the failure without changing the baseline.
+The activation date is a lower bound, not an expiry; collection has no end date.
+
+The tab shows the line, captured price, probabilities, claimed edge and outcome.
+Date and format filters apply; the historical dataset selector never substitutes
+replay results. BO3/BO5 progress and returns remain separate. Returns assume one
+unit per line before execution costs; pending/void rows do not count as decided
+risk. The 200-decision/60-day minimum is a review checkpoint, not proof of an edge
+or permission to enable live betting. Offline recalibration is a separate study
+and is not part of this experiment.
