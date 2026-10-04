@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-04T17:12:18.695470+00:00",
+  "checked_at": "2026-10-04T17:49:53.852779+00:00",
   "match_date": "2026-10-04",
   "day_label": "Today",
   "surface_lookup_errors": [],
@@ -101,13 +101,13 @@
     "Ilia Simakin vs Luka Pavlovic"
   ],
   "spread_markets_found": 9,
-  "parser_failures": [
+  "parser_failures": [],
+  "unpriced_spread_markets": [
     "Nikoloz Basilashvili vs Andre Ilagan"
   ],
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 9,
+  "executable_spread_markets": 8,
   "matches_parsed": 8,
-  "partial_coverage": true,
-  "rows_saved": 15,
+  "partial_coverage": false,
+  "rows_saved": 18,
   "error": null
 }

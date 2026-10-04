@@ -1,6 +1,6 @@
 {
   "success": false,
-  "checked_at": "2026-10-04T17:13:12.010094+00:00",
+  "checked_at": "2026-10-04T17:50:48.938197+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
@@ -55,8 +55,23 @@
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
+      "player_a": "Alexis Galarneau",
+      "player_b": "Roman Safiullin",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
       "player_a": "Federico Agustin Gomez",
       "player_b": "Michael Zheng",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
+      "player_a": "Federico Agustin Gomez",
+      "player_b": "Michael Zheng",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
+      "player_a": "Bernard Tomic",
+      "player_b": "Terence Atmane",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
