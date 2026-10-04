@@ -32,10 +32,10 @@
     "recommendation": "PAPER",
     "match_key": "Carlos Alcaraz|Matteo Arnaldi|2026-10-02|Tokyo (Japan Open)",
     "recorded_at": "2026-10-02T21:39:32.583815+00:00",
-    "result": "PENDING",
+    "result": "LOSS",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": -1.0,
+    "settled_at": "2026-10-04T05:22:40.628241+00:00"
   },
   {
     "scheduled_start": "2026-10-03T03:00:00+00:00",
@@ -70,10 +70,10 @@
     "recommendation": "PAPER",
     "match_key": "Alex de Minaur|Quentin Halys|2026-10-02|Beijing",
     "recorded_at": "2026-10-02T21:39:32.583815+00:00",
-    "result": "PENDING",
+    "result": "WIN",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": 1.38,
+    "settled_at": "2026-10-04T05:22:40.628241+00:00"
   },
   {
     "scheduled_start": "2026-10-03T05:00:00+00:00",
@@ -108,10 +108,10 @@
     "recommendation": "PAPER",
     "match_key": "Andrey Rublev|Roman Safiullin|2026-10-02|Beijing",
     "recorded_at": "2026-10-02T21:39:32.583815+00:00",
-    "result": "PENDING",
+    "result": "LOSS",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": -1.0,
+    "settled_at": "2026-10-04T05:22:40.628241+00:00"
   },
   {
     "scheduled_start": "2026-10-03T02:00:00+00:00",
@@ -146,10 +146,10 @@
     "recommendation": "PAPER",
     "match_key": "Alejandro Tabilo|Denis Shapovalov|2026-10-02|Tokyo (Japan Open)",
     "recorded_at": "2026-10-02T21:39:32.583815+00:00",
-    "result": "PENDING",
+    "result": "WIN",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": 1.0,
+    "settled_at": "2026-10-04T05:22:40.628241+00:00"
   },
   {
     "scheduled_start": "2026-10-03T09:00:00+00:00",

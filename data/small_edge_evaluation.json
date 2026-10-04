@@ -1,0 +1,41 @@
+{
+  "model_version": "3.0.0-elo-paper",
+  "settled": 0,
+  "live_enabled": false,
+  "automatic_promotion": false,
+  "minimum_settled": 200,
+  "minimum_days": 60,
+  "status": "collecting_evidence",
+  "historical_v1_excluded": true,
+  "overdue_unsettled": 0,
+  "by_format": {
+    "3": {
+      "model_version": "3.0.0-elo-paper",
+      "settled": 0,
+      "live_enabled": false,
+      "automatic_promotion": false,
+      "minimum_settled": 200,
+      "minimum_days": 60,
+      "status": "collecting_evidence",
+      "historical_v1_excluded": true,
+      "overdue_unsettled": 0
+    },
+    "5": {
+      "model_version": "3.0.0-elo-paper",
+      "settled": 0,
+      "live_enabled": false,
+      "automatic_promotion": false,
+      "minimum_settled": 200,
+      "minimum_days": 60,
+      "status": "collecting_evidence",
+      "historical_v1_excluded": true,
+      "overdue_unsettled": 0
+    }
+  },
+  "review_scope": "Only separately eligible formats; no automatic live promotion",
+  "experiment_id": "small-edge-4-8-v1",
+  "experiment_rule_hash": "086ca1cf89c41220e349feb0936ad8384301cff03f6d0cf732cae74bfa6f234c",
+  "checked_at": "2026-10-04T05:22:58.154722+00:00",
+  "success": true,
+  "activated_at": "2026-10-04T05:09:01+00:00"
+}

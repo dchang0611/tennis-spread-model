@@ -1,61 +1,24 @@
 {
-  "success": true,
-  "checked_at": "2026-10-03T22:15:30.032759+00:00",
+  "success": false,
+  "checked_at": "2026-10-04T05:22:22.837264+00:00",
   "match_date": "2026-10-03",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
-  "surface_assignments": [
-    {
-      "player_a": "Munar J.",
-      "player_b": "Jacquet K.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338541",
-      "source_date": "2026-10-04",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Alcaraz C.",
-      "player_b": "Shapovalov D.",
-      "tournament": "Tokyo (Japan Open)",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338895",
-      "source_date": "2026-10-04",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Hurkacz H.",
-      "player_b": "Khachanov K.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338651",
-      "source_date": "2026-10-04",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "De Minaur A.",
-      "player_b": "Rublev A.",
-      "tournament": "Beijing",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3338901",
-      "source_date": "2026-10-04",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    }
-  ],
-  "events_found": 4,
+  "surface_assignments": [],
+  "events_found": 2,
   "events": [
-    "Kyrian Jacquet vs Jaume Munar",
-    "Denis Shapovalov vs Carlos Alcaraz",
-    "Karen Khachanov vs Hubert Hurkacz",
+    "A. Rublev vs A. De Minaur",
     "Andrey Rublev vs Alex De Minaur"
   ],
-  "spread_markets_found": 4,
-  "parser_failures": [],
+  "spread_markets_found": 0,
+  "parser_failures": [
+    "Unresolved event header: A. Rublev vs A. De Minaur",
+    "Unresolved event header: Andrey Rublev vs Alex De Minaur"
+  ],
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 4,
-  "matches_parsed": 4,
-  "partial_coverage": false,
-  "rows_saved": 16,
-  "error": null
+  "executable_spread_markets": 0,
+  "matches_parsed": 0,
+  "partial_coverage": true,
+  "error": "Novig events were found, but no complete paired spread prices were extracted."
 }
