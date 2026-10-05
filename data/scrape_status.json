@@ -1,44 +1,126 @@
 {
   "success": true,
-  "checked_at": "2026-10-05T06:53:21.088688+00:00",
-  "match_date": "2026-10-04",
+  "checked_at": "2026-10-05T07:03:05.755263+00:00",
+  "match_date": "2026-10-05",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
   "surface_assignments": [
     {
-      "player_a": "Walton A.",
-      "player_b": "Te R.",
-      "tournament": "Shanghai",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3340321",
+      "player_a": "De Minaur A.",
+      "player_b": "Hurkacz H.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340123",
       "source_date": "2026-10-05",
       "surface": "Hard",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Hong S.",
-      "player_b": "Sakamoto R.",
+      "player_a": "Djokovic N.",
+      "player_b": "Medvedev D.",
+      "tournament": "Beijing",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340421",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Alcaraz C.",
+      "player_b": "Munar J.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340053",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Noguchi R.",
+      "player_b": "Muller A.",
       "tournament": "Shanghai",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3340329",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340335",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Lehecka J.",
+      "player_b": "Vacherot V.",
+      "tournament": "Tokyo (Japan Open)",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340135",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Wong C.",
+      "player_b": "Hewitt C.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340337",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Bolt A.",
+      "player_b": "Harris L.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340339",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Shevchenko A.",
+      "player_b": "Nishioka Y.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340351",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Cui J.",
+      "player_b": "Vukic A.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340327",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Damm M.",
+      "player_b": "Kotov P.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340331",
       "source_date": "2026-10-05",
       "surface": "Hard",
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 3,
+  "events_found": 13,
   "events": [
-    "R. Te vs A. Walton",
-    "Rei Sakamoto vs Seong-Chan Hong",
-    "Rigele Te vs Adam Walton"
+    "H. Hurkacz vs A. De Minaur",
+    "D. Medvedev vs N. Djokovic",
+    "J. Munar vs C. Alcaraz",
+    "A. Muller vs R. Noguchi",
+    "V. Vacherot vs J. Lehecka",
+    "C. Hewitt vs C. Wong",
+    "L. Harris vs A. Bolt",
+    "Y. Nishioka vs A. Shevchenko",
+    "A. Vukic vs J. Cui",
+    "P. Kotov vs M. Damm",
+    "Jaume Munar vs Carlos Alcaraz",
+    "Hubert Hurkacz vs Alex De Minaur",
+    "Pavel Kotov vs Martin Damm"
   ],
-  "spread_markets_found": 2,
+  "spread_markets_found": 10,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 2,
+  "unique_event_pages": 10,
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 2,
-  "matches_parsed": 2,
+  "executable_spread_markets": 10,
+  "matches_parsed": 10,
   "partial_coverage": false,
-  "rows_saved": 6,
+  "rows_saved": 35,
   "error": null
 }
