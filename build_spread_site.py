@@ -190,8 +190,7 @@ def build_payload() -> dict:
                 continue
         picks = valid
     status = 'paper_only' if healthy and picks else 'closed'
-    message = 'LIVE BETTING DISABLED — paper trading only. '
-    message += (f"{sum(p['recommendation']=='PAPER' for p in picks)} paper candidates; prospective validation is incomplete." if healthy and picks else 'FAILED/CLOSED: ' + str(scoring_status.get('error') or scrape_status.get('error') or 'No verified, unexpired paper candidates.'))
+    message = (f"{len(picks)} scored sides at verified, unexpired prices. Model evaluation is ongoing." if healthy and picks else 'FAILED/CLOSED: ' + str(scoring_status.get('error') or scrape_status.get('error') or 'No verified, unexpired model lines.'))
     if scoring_status.get('excluded'):
         message += f" {len(scoring_status['excluded'])} market rows excluded by data checks."
     if scrape_status.get('partial_coverage'):

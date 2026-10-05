@@ -25,7 +25,7 @@
       <div>
         <p class="eyebrow">NOVIG GAME-SPREAD DECISION BOARD</p>
         <h1>DC Tennis<br><span>Betting Model</span></h1>
-        <p class="hero-copy">Live betting is suspended. The repaired model is evaluated through prospective paper trading; no current predictions are betting recommendations.</p>
+        <p class="hero-copy">Tennis spread lines, model probabilities, and tracked results. The rebuilt model and small-edge experiment are being evaluated separately.</p>
       </div>
       <div class="global-date-card" aria-label="Filter both dashboard views by date">
         <p class="eyebrow">DATE RANGE</p>
@@ -35,8 +35,8 @@
           <label>To<input id="dateTo" type="date"></label>
           <button id="dateClear" type="button">All dates</button>
         </div>
-        <div class="date-filter"><label class="match-control">Format<select id="formatSelect"><option value="3">Best of 3</option><option value="5">Best of 5</option></select></label><label class="match-control">History dataset<select id="historySource"><option value="paper">Current paper model</option><option value="reconstruction">Historical baseline replay</option></select></label></div>
-        <p>Filters apply to the board, history and factor views. Current paper history updates with each refresh; the replay is a fixed research sample.</p>
+        <div class="date-filter"><label class="match-control">Format<select id="formatSelect"><option value="3">Best of 3</option><option value="5">Best of 5</option></select></label><label class="match-control">History dataset<select id="historySource"><option value="paper">Current model</option><option value="reconstruction">Historical baseline replay</option></select></label></div>
+        <p>Filters apply to the board, history and factor views. Current model history updates with each refresh; the replay is a fixed research sample.</p>
       </div>
     </section>
 
@@ -53,15 +53,11 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">TODAY</p>
-          <h2 id="boardTitle">Paper spread candidates</h2>
-        </div>
-        <div class="filters" role="group" aria-label="Filter spread decisions">
-          <button class="filter active" data-filter="PAPER">Paper candidates</button>
-          <button class="filter" data-filter="ALL">All lines</button>
-          <button class="filter" data-filter="PASS">Passes</button>
+          <h2 id="boardTitle">Spread lines</h2>
         </div>
       </div>
       <div id="statusBanner" class="status-banner loading">Loading the latest board…</div>
+      <div id="boardExclusions"></div>
       <div id="board" class="board-grid" aria-live="polite"></div>
     </section>
 
@@ -171,7 +167,7 @@
         </table>
       </div>
       <div id="focusBoard" class="board-grid" aria-live="polite"></div>
-      <article class="explain-card"><h3>Custom view, same safety gates</h3><p>Select the factors and minimum match count you want to study. The historical summary and current lines update together. This remains a descriptive screen, not proof of causation; PAPER and PASS labels are research observations; live betting remains disabled.</p></article>
+      <article class="explain-card"><h3>Custom view, same data checks</h3><p>Select the factors and minimum match count you want to study. The historical summary and current lines update together. These overlapping groups describe recorded factors; they do not establish a predictive edge.</p></article>
     </section>
 
     <section id="experimentPanel" class="panel" aria-labelledby="experimentTitle">
@@ -210,7 +206,7 @@
         <span>Elo</span><span>Surface</span><span>Serve</span><span>Return</span><span>Margin</span><span>Matchup</span><span>Workload</span><span>Format</span>
       </div>
       <div class="method-details">
-        <article><p class="eyebrow">PAPER RESEARCH RULES</p><h3>Safety thresholds</h3><p>A line must clear a 4% probability edge and 5% expected return. The board publishes no more than one play per match, choosing the strongest uncertainty-adjusted candidate.</p></article>
+        <article><p class="eyebrow">MODEL RESEARCH RULES</p><h3>Safety thresholds</h3><p>A line must clear a 4% probability edge and 5% expected return. The board publishes no more than one play per match, choosing the strongest uncertainty-adjusted candidate.</p></article>
         <article><p class="eyebrow">MODEL PERFORMANCE</p><h3>Rolling validation</h3><div id="performanceCards" class="metric-grid compact"></div><p>Validation uses chronological predictions and the selected match format. New paper results are kept separate by model version. Sources refresh on a rolling schedule with no fixed end date; same-day and future results are excluded using UTC dates.</p></article>
       </div>
     </section>
@@ -219,6 +215,6 @@
   <footer>
     <p>Research tool only. Prices move, edges are uncertain, and no model guarantees profit.</p>
   </footer>
-  <script src="app.js?v=small-edge-1"></script>
+  <script src="app.js?v=spread-lines-1"></script>
 </body>
 </html>

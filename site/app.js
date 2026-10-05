@@ -1,4 +1,4 @@
-const state = { data: null, format: 3, historySource: 'paper', filter: 'PAPER', historyFilter: 'ALL', historyV2Filter: 'ALL', focusSelected: ['Recent surface game margin', 'Opponent-adjusted return', 'Surface-adjusted Elo'], focusMinMatches: 2, dateFrom: '', dateTo: '' };
+const state = { data: null, format: 3, historySource: 'paper', historyFilter: 'ALL', historyV2Filter: 'ALL', focusSelected: ['Recent surface game margin', 'Opponent-adjusted return', 'Surface-adjusted Elo'], focusMinMatches: 2, dateFrom: '', dateTo: '' };
 
 const fmtPct = value => value !== null && value !== undefined && value !== '' && Number.isFinite(Number(value)) ? `${(Number(value) * 100).toFixed(1)}%` : '—';
 const fmtNum = (value, digits = 1) => value !== null && value !== undefined && value !== '' && Number.isFinite(Number(value)) ? Number(value).toFixed(digits) : '—';
@@ -13,15 +13,19 @@ function renderBoard() {
     if (state.dateFrom || state.dateTo) return inDateRange(row.date);
     return !currentDate || String(row.date) === String(currentDate);
   });
-  const filtered = state.filter === 'ALL' ? picks : picks.filter(row => row.recommendation === state.filter);
-  if (!filtered.length) {
-    if (state.data?.status === 'paper_only' && !visiblePaperPicks().length) document.querySelector('#statusBanner').textContent = 'Live betting disabled. Current paper quotes have expired or their matches have started.';
-    root.innerHTML = `<div class="empty"><strong>No ${state.filter === 'PAPER' ? 'paper candidates' : 'matching lines'}</strong>${picks.length ? 'The safety gates rejected the available lines.' : 'Live betting is disabled. Awaiting verified inputs for paper trading.'}</div>`;
+  const excluded = [...new Map((state.data?.scoring_status?.excluded || []).map(row => [JSON.stringify([row.player_a, row.player_b, row.reason]), row])).values()];
+  const scrape = state.data?.scrape_status || {};
+  document.querySelector('#boardExclusions').innerHTML = excluded.length
+    ? `<div class="status-banner">Latest collection${scrape.checked_at ? ` · ${safe(new Date(scrape.checked_at).toLocaleString())}` : ''}: ${Number(scrape.matches_parsed) || 0} priced matchups, ${Number(scrape.rows_saved) || 0} paired spread lines. ${new Set(excluded.map(row => JSON.stringify([row.player_a,row.player_b]))).size} matchups excluded before scoring. These exclusions cover the full collected slate.</div><div class="history-table-wrap"><table class="history-table"><thead><tr><th>Matchup</th><th>Why no model line is shown</th></tr></thead><tbody>${excluded.map(row => `<tr><td>${safe(row.player_a)} vs ${safe(row.player_b)}</td><td>${safe(row.reason)}</td></tr>`).join('')}</tbody></table></div>` : '';
+  if (!picks.length) {
+    const expired = state.data?.status === 'paper_only' && !(state.data.picks || []).some(row => Date.parse(row.scheduled_start) > Date.now() && Date.parse(row.collected_at) <= Date.now() && Date.now() - Date.parse(row.collected_at) <= 30*60*1000);
+    if (expired) document.querySelector('#statusBanner').textContent = 'Recorded quotes have expired or their matches have started. Awaiting fresh prices.';
+    root.innerHTML = `<div class="empty"><strong>No current model lines</strong>${expired ? 'The board does not present expired prices as current.' : excluded.length ? 'The captured matchups did not pass the checks listed above.' : `Awaiting verified lines for the selected dates and BO${state.format} format.`}</div>`;
     return;
   }
-  root.innerHTML = filtered.map(row => {
+  root.innerHTML = picks.map(row => {
     const isBet = row.recommendation === 'BET';
-    return `<article class="pick-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="decision ${isBet ? 'bet' : ''}">${safe(row.recommendation)}</div><div class="factor-chips">${renderBoardChips(row)}</div></article>`;
+    return `<article class="pick-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div><span class="metric-label">START</span><span class="metric-value">${safe(new Date(row.scheduled_start).toLocaleTimeString([], {hour: 'numeric', minute: '2-digit'}))}</span></div><div class="factor-chips">${renderBoardChips(row)}</div></article>`;
   }).join('');
 }
 
@@ -55,7 +59,7 @@ function historyRows() {
 }
 function datasetNotice() {
   return state.historySource === 'paper'
-    ? ` BO${state.format} · Current paper model ${state.data?.model?.version || ''}. Prior model versions excluded. Displayed prices are not confirmed fills.`
+    ? ` BO${state.format} · Current model ${state.data?.model?.version || ''}. Prior model versions excluded. Displayed prices are not confirmed fills.`
     : ` BO${state.format} · Fixed retrospective baseline replay, not prospective validation. Original publication timestamps are unavailable; prior-UTC-day availability is assumed. Unresolved outcomes remain visible.`;
 }
 
@@ -100,17 +104,16 @@ function currentPicks() {
 
 function renderFocus() {
   const qualifying = currentPicks().map(row => ({ row, factors: selectedConfluenceFactors(row) })).filter(item => item.factors.length >= state.focusMinMatches);
-  const bets = qualifying.filter(item => item.row.recommendation === 'PAPER').length;
   const notice = document.querySelector('#focusNotice');
   notice.textContent = qualifying.length
-    ? `${qualifying.length} line${qualifying.length === 1 ? '' : 's'} match at least ${state.focusMinMatches} of ${state.focusSelected.length} selected factors; ${bets} retain the model's PAPER decision and ${qualifying.length - bets} remain PASS.`
+    ? `${qualifying.length} line${qualifying.length === 1 ? '' : 's'} match at least ${state.focusMinMatches} of ${state.focusSelected.length} selected factors.`
     : `No lines in this slate match at least ${state.focusMinMatches} of ${state.focusSelected.length} selected factors.`;
   notice.className = `status-banner ${qualifying.length ? '' : 'closed'}`;
   renderFocusPerformance();
   document.querySelector('#focusBoard').innerHTML = qualifying.length ? qualifying.map(({ row, factors }) => {
     const isBet = row.recommendation === 'BET';
     const chips = state.focusSelected.map(label => `<span class="factor-chip ${factors.includes(label) ? 'matched' : ''}">${factors.includes(label) ? '&#10003;' : '&#8212;'} ${safe(label)}</span>`).join('');
-    return `<article class="pick-card focus-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="confluence-score">${factors.length}/${state.focusSelected.length}</div><div class="decision ${isBet ? 'bet' : ''}">${safe(row.recommendation)}</div><div class="factor-chips">${chips}</div></article>`;
+    return `<article class="pick-card focus-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="confluence-score">${factors.length}/${state.focusSelected.length}</div><div><span class="metric-label">START</span><span class="metric-value">${safe(new Date(row.scheduled_start).toLocaleTimeString([], {hour: 'numeric', minute: '2-digit'}))}</span></div><div class="factor-chips">${chips}</div></article>`;
   }).join('') : '<div class="empty"><strong>No matching lines</strong>Choose a lower match rule, different factors, or another date range.</div>';
 }
 
@@ -261,7 +264,6 @@ function bindControls() {
   renderFocusControls();
   document.querySelector('#replayDate').addEventListener('change', renderReplay);
   document.querySelectorAll('.tab').forEach(button => button.addEventListener('click', () => { document.querySelectorAll('.tab').forEach(item => item.classList.toggle('active', item === button)); document.querySelectorAll('.panel').forEach(panel => panel.classList.toggle('active', panel.id === button.dataset.panel)); }));
-  document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => { state.filter = button.dataset.filter; document.querySelectorAll('.filter').forEach(item => item.classList.toggle('active', item === button)); renderBoard(); }));
   document.querySelectorAll('.history-filter').forEach(button => button.addEventListener('click', () => { state.historyFilter = button.dataset.historyFilter; document.querySelectorAll('.history-filter').forEach(item => item.classList.toggle('active', item === button)); renderHistory(); }));
   document.querySelectorAll('.history-v2-filter').forEach(button => button.addEventListener('click', () => { state.historyV2Filter = button.dataset.historyV2Filter; document.querySelectorAll('.history-v2-filter').forEach(item => item.classList.toggle('active', item === button)); renderHistoryV2(); }));
   document.querySelector('#focusFactorSelectors').addEventListener('click', event => {
