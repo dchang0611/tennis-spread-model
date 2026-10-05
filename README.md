@@ -17,6 +17,12 @@ are excluded until their state can include those results. The latest completed
 match date must be within one calendar day, and recent player results are checked
 against an independent schedule/results feed.
 
+Novig collection supports both scheduled-time and near-start countdown headers.
+The event overview must match the selected card, and spread-column names must
+match that same ordered pair. The collector waits for rendered identity content,
+deduplicates repeated event URLs, and reports already-live events separately
+from parsing failures. Independent match-day/start checks still control scoring.
+
 Training and inference use the same feature function and post-match state engine.
 Surface histories are separate; workload/rest are computed for the target start.
 Missing player data, ambiguous identities, unresolved event format, expired

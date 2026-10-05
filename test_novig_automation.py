@@ -7,6 +7,7 @@ from surface_calendar import LiveSurfaceLookup, parse_match_surface, aliases
 
 from build_spread_site import is_history_v2_eligible, rationale_for_pick, reconcile_board_with_history
 from novig_scraper import MORE_MARKETS_RE, open_event_card, wait_for_event_cards, more_complete_name, parse_event_card, parse_event_page_players, parse_spread_tokens
+from novig_scraper import match_event_players, wait_for_event_players, spread_player_order_matches
 from update_spread_history import HISTORY_COLUMNS, archive_bets, grade_spread, name_aliases, parse_atp_results_text, parse_espn_scoreboard, parse_tennis_explorer_html, profit_for_result, score_game_margin, settle_history
 
 
@@ -84,6 +85,44 @@ class NovigAutomationTests(unittest.TestCase):
     def test_name_resolution_keeps_whichever_view_is_more_complete(self):
         self.assertEqual(more_complete_name("Daniel Merida Aguilar", "D. Merida Aguilar"), "Daniel Merida Aguilar")
         self.assertEqual(more_complete_name("M. Trungelliti", "Marco Trungelliti"), "Marco Trungelliti")
+
+    def test_countdown_header_uses_own_overview_not_other_events_in_rail(self):
+        text = ('Tennis (M)\nToday\n11:35 PM\nS. Sakellaridis\nvs.\nT. Skatov\n'
+                'Tennis (M) (21)\nR. Te\n9%\nStarts in\n12m 34s\nA. Walton\n94%\n'
+                'Spread\nTotal\nWinner\nRigele Te\nat\nAdam Walton\n+5.5\n56%\n-5.5\n47%\n'
+                'Game Lines\nGame Props\nMain Markets\nGame Spread')
+        self.assertEqual(parse_event_page_players(text, 'Today'), ('Rigele Te', 'Adam Walton'))
+        self.assertIsNone(parse_event_page_players(text.replace('Tennis (M) (21)', 'Tennis (W) (21)'), 'Today'))
+        self.assertIsNone(parse_event_page_players(text.replace('Starts in\n12m 34s', 'Live'), 'Today'))
+
+    def test_event_identity_rejects_wrong_page_and_keeps_reversed_side_order(self):
+        event = dict(player_a='R. Te', player_b='Adam Walton')
+        self.assertEqual(match_event_players(('Rigele Te', 'A. Walton'), event), ('Rigele Te', 'Adam Walton'))
+        self.assertEqual(match_event_players(('A. Walton', 'Rigele Te'), event), ('Adam Walton', 'Rigele Te'))
+        self.assertIsNone(match_event_players(('Timofey Skatov', 'Stefanos Sakellaridis'), event))
+        self.assertIsNone(match_event_players(('Rigele Te', 'Rigele Te'), event))
+
+    def test_header_readiness_waits_for_delayed_overview(self):
+        page = Mock()
+        page.locator.return_value.inner_text.side_effect = ['Loading',
+            'Tennis (M) (21)\nStarts in\n12m 34s\nWinner\nRigele Te\nat\nAdam Walton\nGame Lines']
+        players, live = wait_for_event_players(page, 'Today', dict(player_a='R. Te', player_b='A. Walton'), timeout_ms=500)
+        self.assertEqual(players, ('Rigele Te', 'Adam Walton'))
+        self.assertFalse(live)
+        page.wait_for_timeout.assert_called_once()
+
+    def test_live_event_is_disclosed_not_treated_as_header_failure(self):
+        page = Mock()
+        page.locator.return_value.inner_text.return_value = 'Tennis (M) (0)\nR. Te\nLive\nA. Walton\nGame Lines'
+        self.assertEqual(wait_for_event_players(page, 'Today', dict(player_a='R. Te', player_b='A. Walton')), (None, True))
+        page.wait_for_timeout.assert_not_called()
+
+    def test_spread_prices_require_matching_column_order(self):
+        players = ('Rigele Te', 'Adam Walton')
+        self.assertTrue(spread_player_order_matches(['Game Spread', 'R. Te', 'A. Walton', '+5.5', '56%', '-5.5', '47%'], players))
+        self.assertTrue(spread_player_order_matches(['Rigele Te +5.5', '56%', 'Adam Walton -5.5', '47%'], players))
+        self.assertFalse(spread_player_order_matches(['A. Walton', 'R. Te', '+5.5', '56%', '-5.5', '47%'], players))
+        self.assertFalse(spread_player_order_matches(['Unknown A', 'Unknown B', '+5.5', '56%', '-5.5', '47%'], players))
 
     def test_spread_tokens_skip_incomplete_price(self):
         tokens = ["Game Spread", "A", "B", "-2.5", "+111", "+2.5", "•", "-4.5", "+170", "+4.5", "-245"]

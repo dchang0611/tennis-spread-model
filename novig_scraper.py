@@ -11,7 +11,7 @@ from zoneinfo import ZoneInfo
 
 import pandas as pd
 from playwright.sync_api import Page, sync_playwright
-from surface_calendar import LiveSurfaceLookup
+from surface_calendar import LiveSurfaceLookup, aliases
 
 
 ATP_URL = "https://novig.com/trading/atp"
@@ -42,21 +42,74 @@ def parse_event_card(text: str) -> dict | None:
     return {"day": day, "player_a": lines[index - 1], "player_b": player_b}
 
 
-def parse_event_page_players(text: str, day_label: str) -> tuple[str, str] | None:
-    """Resolve abbreviated rail names from the full event-page header."""
+def event_header_lines(text: str) -> list[str]:
+    """Exclude the cross-sport rail and other events from the match overview."""
     lines = [line.strip() for line in str(text).splitlines() if line.strip()]
-    if "Main Markets" not in lines:
+    boundaries = [lines.index(label) for label in ('Game Lines', 'Main Markets') if label in lines]
+    if not boundaries:
+        return []
+    end = min(boundaries)
+    headings = [i for i, value in enumerate(lines[:end]) if re.fullmatch(r'Tennis \([MW]\)(?: \(\d+\))?', value)]
+    if not headings or not lines[headings[-1]].startswith('Tennis (M)'):
+        return []
+    return lines[headings[-1] + 1:end]
+
+
+def parse_event_page_players(text: str, day_label: str) -> tuple[str, str] | None:
+    """Support dated and countdown headers without using a time label as identity."""
+    lines = event_header_lines(text)
+    if 'Live' in lines:
         return None
-    main_index = lines.index("Main Markets")
-    candidates = [index for index, value in enumerate(lines[:main_index]) if value == day_label]
+    overview = [(lines[i - 1], lines[i + 1]) for i, value in enumerate(lines)
+                if value in ('at', 'vs.') and 0 < i < len(lines) - 1]
+    if len(overview) == 1:
+        return overview[0]
+    if overview:
+        return None
+    candidates = [index for index, value in enumerate(lines) if value == day_label]
     if not candidates:
         return None
     day_index = candidates[-1]
-    if day_index < 2 or day_index + 1 >= main_index:
+    if day_index < 2 or day_index + 1 >= len(lines):
         return None
     if not re.fullmatch(r"\d{1,2}:\d{2}\s(?:AM|PM)", lines[day_index - 1]):
         return None
     return lines[day_index - 2], lines[day_index + 1]
+
+
+def match_event_players(players, event):
+    """Verify the opened event, preserving event-page side order if the rail flips."""
+    if players is None:
+        return None
+    rail = (event['player_a'], event['player_b'])
+    matches = [[i for i, name in enumerate(rail) if aliases(name) & aliases(player)] for player in players]
+    if any(len(found) != 1 for found in matches) or matches[0] == matches[1]:
+        return None
+    return tuple(more_complete_name(rail[found[0]], player) for player, found in zip(players, matches))
+
+
+def wait_for_event_players(page, day_label, event, timeout_ms=8000, poll_ms=250):
+    """Wait for identity-bearing content, not a fixed post-navigation delay."""
+    for _ in range(timeout_ms // poll_ms + 1):
+        text = page.locator('body').inner_text()
+        if 'Live' in event_header_lines(text):
+            return None, True
+        players = match_event_players(parse_event_page_players(text, day_label), event)
+        if players:
+            return players, False
+        page.wait_for_timeout(poll_ms)
+    return None, False
+
+
+def spread_player_order_matches(tokens, players):
+    """Never attach prices to reversed or unrelated participant columns."""
+    order = []
+    for token in tokens:
+        name = re.sub(r'\s+[+-]?\d+\.5$', '', token)
+        matches = [i for i, player in enumerate(players) if aliases(name) & aliases(player)]
+        if len(matches) == 1 and matches[0] not in order:
+            order.append(matches[0])
+    return order == [0, 1]
 
 
 def more_complete_name(rail_name: str, event_name: str) -> str:
@@ -213,21 +266,28 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
         spread_markets = 0
         parser_failures = []
         unpriced_markets = []
+        started_events = []
+        visited_urls = set()
         for event in events:
             card = locate_event_card(page, event["player_a"], event["player_b"])
             if card is None:
+                parser_failures.append(f"Event card unavailable: {event['player_a']} vs {event['player_b']}")
                 continue
             open_event_card(card)
             page.wait_for_url("**/event-markets/**", timeout=12_000)
-            page.wait_for_timeout(350)
-            resolved_players = parse_event_page_players(page.locator("body").inner_text(), day_label)
+            if page.url in visited_urls:
+                continue
+            visited_urls.add(page.url)
+            resolved_players, already_live = wait_for_event_players(page, day_label, event)
+            if already_live:
+                started_events.append(f"{event['player_a']} vs {event['player_b']}")
+                continue
             if resolved_players is None:
                 parser_failures.append(f"Unresolved event header: {event['player_a']} vs {event['player_b']}")
                 page.goto(ATP_URL, wait_until='domcontentloaded', timeout=45_000)
                 wait_for_event_cards(page)
                 continue
-            player_a = more_complete_name(event["player_a"], resolved_players[0])
-            player_b = more_complete_name(event["player_b"], resolved_players[1])
+            player_a, player_b = resolved_players
             try:
                 assignment = lookup.resolve(player_a, player_b) if lookup else {"surface": surface, "tournament": tournament, "method": "explicit_override"}
             except Exception as exc:
@@ -244,6 +304,9 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
             # the verified section text instead of depending on those skins.
             section = heading.locator("..").locator("..").locator("..").locator("..")
             tokens, parsed_prices = wait_for_spread_prices(section)
+            if parsed_prices and not spread_player_order_matches(tokens, resolved_players):
+                parser_failures.append(f"Spread participant order could not be verified: {player_a} vs {player_b}")
+                continue
             if not parsed_prices:
                 matchup = f"{player_a} vs {player_b}"
                 has_displayed_price = any(
@@ -270,8 +333,10 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
     if diagnostics is not None:
         diagnostics["spread_markets_found"] = spread_markets
         diagnostics["parser_failures"] = parser_failures
+        diagnostics["already_live_events"] = started_events
+        diagnostics["unique_event_pages"] = len(visited_urls)
         diagnostics["unpriced_spread_markets"] = unpriced_markets
-        diagnostics["executable_spread_markets"] = spread_markets - len(unpriced_markets)
+        diagnostics["executable_spread_markets"] = len({row['event_url'] for row in rows})
         diagnostics["matches_parsed"] = len({(row["player_a"], row["player_b"]) for row in rows})
     # An unresolved event is excluded and disclosed, never supplied guessed
     # names/prices. Other independently verified events may be paper-tested.
