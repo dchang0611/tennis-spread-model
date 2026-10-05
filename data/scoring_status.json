@@ -1,163 +1,180 @@
 {
-  "success": true,
-  "checked_at": "2026-10-05T07:03:56.022178+00:00",
+  "success": false,
+  "checked_at": "2026-10-05T16:22:13.070080+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
     {
       "player_a": "Alexandre Muller",
-      "player_b": "Rio Noguchi",
+      "player_b": "Mattia Bellucci",
+      "reason": "Scraped day disagrees with independently scheduled match day"
+    },
+    {
+      "player_a": "Shintaro Mochizuki",
+      "player_b": "Roman Safiullin",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Alexandre Muller",
-      "player_b": "Rio Noguchi",
+      "player_a": "Shintaro Mochizuki",
+      "player_b": "Roman Safiullin",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Alexandre Muller",
-      "player_b": "Rio Noguchi",
+      "player_a": "Shintaro Mochizuki",
+      "player_b": "Roman Safiullin",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Cruz Hewitt",
-      "player_b": "Chak Lam Coleman Wong",
+      "player_a": "Federico Cina",
+      "player_b": "Aziz Dougaz",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Cruz Hewitt",
-      "player_b": "Chak Lam Coleman Wong",
+      "player_a": "Federico Cina",
+      "player_b": "Aziz Dougaz",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Cruz Hewitt",
-      "player_b": "Chak Lam Coleman Wong",
+      "player_a": "Federico Cina",
+      "player_b": "Aziz Dougaz",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Lloyd Harris",
-      "player_b": "Alex Bolt",
+      "player_a": "Federico Cina",
+      "player_b": "Aziz Dougaz",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Lloyd Harris",
-      "player_b": "Alex Bolt",
+      "player_a": "Nikoloz Basilashvili",
+      "player_b": "Liam Draxl",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Lloyd Harris",
-      "player_b": "Alex Bolt",
+      "player_a": "Nikoloz Basilashvili",
+      "player_b": "Liam Draxl",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Yoshihito Nishioka",
-      "player_b": "Alexander Shevchenko",
+      "player_a": "Nikoloz Basilashvili",
+      "player_b": "Liam Draxl",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Yoshihito Nishioka",
-      "player_b": "Alexander Shevchenko",
+      "player_a": "Nikoloz Basilashvili",
+      "player_b": "Liam Draxl",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Yoshihito Nishioka",
-      "player_b": "Alexander Shevchenko",
+      "player_a": "Timofey Skatov",
+      "player_b": "Bernard Tomic",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Aleksandar Vukic",
-      "player_b": "Jie Cui",
+      "player_a": "Timofey Skatov",
+      "player_b": "Bernard Tomic",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
+      "player_a": "Timofey Skatov",
+      "player_b": "Bernard Tomic",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
+      "player_a": "Timofey Skatov",
+      "player_b": "Bernard Tomic",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
+      "player_a": "Timofey Skatov",
+      "player_b": "Bernard Tomic",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
+      "player_a": "Timofey Skatov",
+      "player_b": "Bernard Tomic",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
+      "player_a": "Nicolas Mejia",
+      "player_b": "Michael Zheng",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
+      "player_a": "Nicolas Mejia",
+      "player_b": "Michael Zheng",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
+      "player_a": "Nicolas Mejia",
+      "player_b": "Michael Zheng",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
+      "player_a": "Nicolas Mejia",
+      "player_b": "Michael Zheng",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
+      "player_a": "Ilia Simakin",
+      "player_b": "Rigele Te",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Aleksandar Vukic",
-      "player_b": "Jie Cui",
+      "player_a": "Ilia Simakin",
+      "player_b": "Rigele Te",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Aleksandar Vukic",
-      "player_b": "Jie Cui",
+      "player_a": "Ilia Simakin",
+      "player_b": "Rigele Te",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Aleksandar Vukic",
-      "player_b": "Jie Cui",
+      "player_a": "Ilia Simakin",
+      "player_b": "Rigele Te",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Pavel Kotov",
-      "player_b": "Martin Damm",
+      "player_a": "Dalibor Svrcina",
+      "player_b": "Yoshihito Nishioka",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Pavel Kotov",
-      "player_b": "Martin Damm",
+      "player_a": "Dalibor Svrcina",
+      "player_b": "Yoshihito Nishioka",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Pavel Kotov",
-      "player_b": "Martin Damm",
+      "player_a": "Dalibor Svrcina",
+      "player_b": "Yoshihito Nishioka",
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Daniil Medvedev",
-      "player_b": "Novak Djokovic",
-      "reason": "Recent result missing or ambiguous in statistics feed"
+      "player_a": "Dalibor Svrcina",
+      "player_b": "Yoshihito Nishioka",
+      "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Daniil Medvedev",
-      "player_b": "Novak Djokovic",
-      "reason": "Recent result missing or ambiguous in statistics feed"
+      "player_a": "Rei Sakamoto",
+      "player_b": "Kyrian Jacquet",
+      "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Daniil Medvedev",
-      "player_b": "Novak Djokovic",
-      "reason": "Recent result missing or ambiguous in statistics feed"
+      "player_a": "Rei Sakamoto",
+      "player_b": "Kyrian Jacquet",
+      "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Daniil Medvedev",
-      "player_b": "Novak Djokovic",
-      "reason": "Recent result missing or ambiguous in statistics feed"
+      "player_a": "Rei Sakamoto",
+      "player_b": "Kyrian Jacquet",
+      "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Jaume Munar",
-      "player_b": "Carlos Alcaraz",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Jaume Munar",
-      "player_b": "Carlos Alcaraz",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Jaume Munar",
-      "player_b": "Carlos Alcaraz",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Jaume Munar",
-      "player_b": "Carlos Alcaraz",
-      "reason": "Recent result missing or ambiguous in statistics feed"
+      "player_a": "Rei Sakamoto",
+      "player_b": "Kyrian Jacquet",
+      "reason": "Unverified main-draw format; qualifying excluded"
     }
   ],
-  "market_matchups": 10,
-  "formats": {
-    "3": {
-      "status": "paper_only",
-      "training_rows": 2949,
-      "residuals": 1595,
-      "training_max_date": "2026-10-04 00:00:00"
-    },
-    "5": {
-      "status": "paper_only",
-      "training_rows": 665,
-      "residuals": 377,
-      "training_max_date": "2026-09-13 00:00:00"
-    }
-  },
-  "modeled_matchups": 2,
-  "training_matches": 3614,
-  "training_max_date": "2026-10-04",
-  "paper_candidates": 1,
-  "source_hash": "e2e2484aa9daad41fe216680a56366b567d7f5ce9c253a34c6addd75d9eb69b0"
+  "market_matchups": 9,
+  "error": "No markets have verified metadata"
 }

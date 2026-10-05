@@ -1,6 +1,6 @@
 {
   "complete": false,
-  "checked_at": "2026-10-05T07:02:57.201402+00:00",
+  "checked_at": "2026-10-05T16:21:20.398807+00:00",
   "sources": {
     "season_csv": {
       "ok": true,
@@ -16,7 +16,7 @@
     },
     "espn": {
       "ok": true,
-      "matches": 80
+      "matches": 84
     },
     "tennis_explorer": {
       "ok": true,
