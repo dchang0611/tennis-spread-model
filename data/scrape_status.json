@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-05T21:25:04.372312+00:00",
+  "checked_at": "2026-10-05T23:21:36.683785+00:00",
   "match_date": "2026-10-05",
   "day_label": "Today",
   "surface_lookup_errors": [],
@@ -16,19 +16,19 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Dougaz A.",
-      "player_b": "Cina F.",
+      "player_a": "Kotov P.",
+      "player_b": "Vukic A.",
       "tournament": "Shanghai",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341263",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341521",
       "source_date": "2026-10-06",
       "surface": "Hard",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Kotov P.",
-      "player_b": "Vukic A.",
+      "player_a": "Dougaz A.",
+      "player_b": "Cina F.",
       "tournament": "Shanghai",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341521",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341263",
       "source_date": "2026-10-06",
       "surface": "Hard",
       "method": "live_match_metadata"
@@ -86,22 +86,13 @@
       "source_date": "2026-10-06",
       "surface": "Hard",
       "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Sweeny D.",
-      "player_b": "Coppejans K.",
-      "tournament": "Shanghai",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341523",
-      "source_date": "2026-10-06",
-      "surface": "Hard",
-      "method": "live_match_metadata"
     }
   ],
-  "events_found": 14,
+  "events_found": 13,
   "events": [
     "N. Basilashvili vs L. Draxl",
-    "F. Cina vs A. Dougaz",
     "A. Vukic vs P. Kotov",
+    "F. Cina vs A. Dougaz",
     "T. Skatov vs B. Tomic",
     "Shintaro Mochizuki vs Roman Safiullin",
     "Federico Cina vs Aziz Dougaz",
@@ -111,17 +102,16 @@
     "Ilia Simakin vs Rigele Te",
     "Dalibor Svrcina vs Yoshihito Nishioka",
     "Rei Sakamoto vs Kyrian Jacquet",
-    "Aleksandar Vukic vs Pavel Kotov",
-    "Kimmer Coppejans vs Dane Sweeny"
+    "Aleksandar Vukic vs Pavel Kotov"
   ],
-  "spread_markets_found": 10,
+  "spread_markets_found": 9,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 10,
+  "unique_event_pages": 9,
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 10,
-  "matches_parsed": 10,
+  "executable_spread_markets": 9,
+  "matches_parsed": 9,
   "partial_coverage": false,
-  "rows_saved": 45,
+  "rows_saved": 37,
   "error": null
 }

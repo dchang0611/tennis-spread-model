@@ -1,6 +1,6 @@
 {
   "success": false,
-  "checked_at": "2026-10-05T21:26:09.158375+00:00",
+  "checked_at": "2026-10-05T23:22:34.406409+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
@@ -30,26 +30,6 @@
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Federico Cina",
-      "player_b": "Aziz Dougaz",
-      "reason": "Unverified main-draw format; qualifying excluded"
-    },
-    {
-      "player_a": "Federico Cina",
-      "player_b": "Aziz Dougaz",
-      "reason": "Unverified main-draw format; qualifying excluded"
-    },
-    {
-      "player_a": "Federico Cina",
-      "player_b": "Aziz Dougaz",
-      "reason": "Unverified main-draw format; qualifying excluded"
-    },
-    {
-      "player_a": "Federico Cina",
-      "player_b": "Aziz Dougaz",
-      "reason": "Unverified main-draw format; qualifying excluded"
-    },
-    {
       "player_a": "Aleksandar Vukic",
       "player_b": "Pavel Kotov",
       "reason": "Scraped day disagrees with independently scheduled match day"
@@ -68,6 +48,26 @@
       "player_a": "Aleksandar Vukic",
       "player_b": "Pavel Kotov",
       "reason": "Scraped day disagrees with independently scheduled match day"
+    },
+    {
+      "player_a": "Federico Cina",
+      "player_b": "Aziz Dougaz",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
+      "player_a": "Federico Cina",
+      "player_b": "Aziz Dougaz",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
+      "player_a": "Federico Cina",
+      "player_b": "Aziz Dougaz",
+      "reason": "Unverified main-draw format; qualifying excluded"
+    },
+    {
+      "player_a": "Federico Cina",
+      "player_b": "Aziz Dougaz",
+      "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
       "player_a": "Timofey Skatov",
@@ -175,11 +175,6 @@
       "reason": "Unverified main-draw format; qualifying excluded"
     },
     {
-      "player_a": "Dalibor Svrcina",
-      "player_b": "Yoshihito Nishioka",
-      "reason": "Unverified main-draw format; qualifying excluded"
-    },
-    {
       "player_a": "Rei Sakamoto",
       "player_b": "Kyrian Jacquet",
       "reason": "Unverified main-draw format; qualifying excluded"
@@ -193,43 +188,8 @@
       "player_a": "Rei Sakamoto",
       "player_b": "Kyrian Jacquet",
       "reason": "Unverified main-draw format; qualifying excluded"
-    },
-    {
-      "player_a": "Rei Sakamoto",
-      "player_b": "Kyrian Jacquet",
-      "reason": "Unverified main-draw format; qualifying excluded"
-    },
-    {
-      "player_a": "Rei Sakamoto",
-      "player_b": "Kyrian Jacquet",
-      "reason": "Unverified main-draw format; qualifying excluded"
-    },
-    {
-      "player_a": "Rei Sakamoto",
-      "player_b": "Kyrian Jacquet",
-      "reason": "Unverified main-draw format; qualifying excluded"
-    },
-    {
-      "player_a": "Kimmer Coppejans",
-      "player_b": "Dane Sweeny",
-      "reason": "Scraped day disagrees with independently scheduled match day"
-    },
-    {
-      "player_a": "Kimmer Coppejans",
-      "player_b": "Dane Sweeny",
-      "reason": "Scraped day disagrees with independently scheduled match day"
-    },
-    {
-      "player_a": "Kimmer Coppejans",
-      "player_b": "Dane Sweeny",
-      "reason": "Scraped day disagrees with independently scheduled match day"
-    },
-    {
-      "player_a": "Kimmer Coppejans",
-      "player_b": "Dane Sweeny",
-      "reason": "Scraped day disagrees with independently scheduled match day"
     }
   ],
-  "market_matchups": 10,
+  "market_matchups": 9,
   "error": "No markets have verified metadata"
 }
