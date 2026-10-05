@@ -1,25 +1,16 @@
 {
   "success": true,
-  "checked_at": "2026-10-05T16:21:29.896863+00:00",
+  "checked_at": "2026-10-05T21:25:04.372312+00:00",
   "match_date": "2026-10-05",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
   "surface_assignments": [
     {
-      "player_a": "Bellucci M.",
-      "player_b": "Muller A.",
+      "player_a": "Draxl L.",
+      "player_b": "Basilashvili N.",
       "tournament": "Shanghai",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341601",
-      "source_date": "2026-10-06",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Safiullin R.",
-      "player_b": "Mochizuki S.",
-      "tournament": "Shanghai",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341203",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341265",
       "source_date": "2026-10-06",
       "surface": "Hard",
       "method": "live_match_metadata"
@@ -34,10 +25,10 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Draxl L.",
-      "player_b": "Basilashvili N.",
+      "player_a": "Kotov P.",
+      "player_b": "Vukic A.",
       "tournament": "Shanghai",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341265",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341521",
       "source_date": "2026-10-06",
       "surface": "Hard",
       "method": "live_match_metadata"
@@ -47,6 +38,15 @@
       "player_b": "Skatov T.",
       "tournament": "Shanghai",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3341267",
+      "source_date": "2026-10-06",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Safiullin R.",
+      "player_b": "Mochizuki S.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341203",
       "source_date": "2026-10-06",
       "surface": "Hard",
       "method": "live_match_metadata"
@@ -86,11 +86,23 @@
       "source_date": "2026-10-06",
       "surface": "Hard",
       "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Sweeny D.",
+      "player_b": "Coppejans K.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341523",
+      "source_date": "2026-10-06",
+      "surface": "Hard",
+      "method": "live_match_metadata"
     }
   ],
-  "events_found": 9,
+  "events_found": 14,
   "events": [
-    "Alexandre Muller vs Mattia Bellucci",
+    "N. Basilashvili vs L. Draxl",
+    "F. Cina vs A. Dougaz",
+    "A. Vukic vs P. Kotov",
+    "T. Skatov vs B. Tomic",
     "Shintaro Mochizuki vs Roman Safiullin",
     "Federico Cina vs Aziz Dougaz",
     "Nikoloz Basilashvili vs Liam Draxl",
@@ -98,16 +110,18 @@
     "Nicolas Mejia vs Michael Zheng",
     "Ilia Simakin vs Rigele Te",
     "Dalibor Svrcina vs Yoshihito Nishioka",
-    "Rei Sakamoto vs Kyrian Jacquet"
+    "Rei Sakamoto vs Kyrian Jacquet",
+    "Aleksandar Vukic vs Pavel Kotov",
+    "Kimmer Coppejans vs Dane Sweeny"
   ],
-  "spread_markets_found": 9,
+  "spread_markets_found": 10,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 9,
+  "unique_event_pages": 10,
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 9,
-  "matches_parsed": 9,
+  "executable_spread_markets": 10,
+  "matches_parsed": 10,
   "partial_coverage": false,
-  "rows_saved": 34,
+  "rows_saved": 45,
   "error": null
 }
