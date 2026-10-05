@@ -1,34 +1,44 @@
 {
-  "success": false,
-  "checked_at": "2026-10-05T04:38:48.426151+00:00",
+  "success": true,
+  "checked_at": "2026-10-05T06:53:21.088688+00:00",
   "match_date": "2026-10-04",
   "day_label": "Today",
   "surface_lookup_errors": [],
   "surface_failures": [],
-  "surface_assignments": [],
-  "events_found": 7,
+  "surface_assignments": [
+    {
+      "player_a": "Walton A.",
+      "player_b": "Te R.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340321",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Hong S.",
+      "player_b": "Sakamoto R.",
+      "tournament": "Shanghai",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3340329",
+      "source_date": "2026-10-05",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    }
+  ],
+  "events_found": 3,
   "events": [
-    "B. Tomic vs T. Atmane",
-    "N. Mejia vs C. Tseng",
-    "F. Gomez vs M. Zheng",
-    "S. Sakellaridis vs T. Skatov",
-    "Federico Agustin Gomez vs Michael Zheng",
-    "Bernard Tomic vs Terence Atmane",
-    "Ilia Simakin vs Luka Pavlovic"
+    "R. Te vs A. Walton",
+    "Rei Sakamoto vs Seong-Chan Hong",
+    "Rigele Te vs Adam Walton"
   ],
-  "spread_markets_found": 0,
-  "parser_failures": [
-    "Unresolved event header: B. Tomic vs T. Atmane",
-    "Unresolved event header: N. Mejia vs C. Tseng",
-    "Unresolved event header: F. Gomez vs M. Zheng",
-    "Unresolved event header: S. Sakellaridis vs T. Skatov",
-    "Unresolved event header: Federico Agustin Gomez vs Michael Zheng",
-    "Unresolved event header: Bernard Tomic vs Terence Atmane",
-    "Unresolved event header: Ilia Simakin vs Luka Pavlovic"
-  ],
+  "spread_markets_found": 2,
+  "parser_failures": [],
+  "already_live_events": [],
+  "unique_event_pages": 2,
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 0,
-  "matches_parsed": 0,
-  "partial_coverage": true,
-  "error": "Novig events were found, but no complete paired spread prices were extracted."
+  "executable_spread_markets": 2,
+  "matches_parsed": 2,
+  "partial_coverage": false,
+  "rows_saved": 6,
+  "error": null
 }

@@ -1,8 +1,40 @@
 {
   "success": false,
-  "checked_at": "2026-10-05T04:39:30.433923+00:00",
+  "checked_at": "2026-10-05T06:53:42.553382+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
-  "excluded": [],
-  "error": "No fresh complete market collection"
+  "excluded": [
+    {
+      "player_a": "Rigele Te",
+      "player_b": "Adam Walton",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Rigele Te",
+      "player_b": "Adam Walton",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Rigele Te",
+      "player_b": "Adam Walton",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Rei Sakamoto",
+      "player_b": "Seong-Chan Hong",
+      "reason": "Scraped day disagrees with independently scheduled match day"
+    },
+    {
+      "player_a": "Rei Sakamoto",
+      "player_b": "Seong-Chan Hong",
+      "reason": "Scraped day disagrees with independently scheduled match day"
+    },
+    {
+      "player_a": "Rei Sakamoto",
+      "player_b": "Seong-Chan Hong",
+      "reason": "Scraped day disagrees with independently scheduled match day"
+    }
+  ],
+  "market_matchups": 2,
+  "error": "No markets have verified metadata"
 }
