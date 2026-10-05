@@ -230,9 +230,9 @@
     "recommendation": "PAPER",
     "match_key": "Hubert Hurkacz|Karen Khachanov|2026-10-03|Beijing",
     "recorded_at": "2026-10-03T21:56:36.141670+00:00",
-    "result": "PENDING",
+    "result": "WIN",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": 1.0,
+    "settled_at": "2026-10-05T04:39:30.433923+00:00"
   }
 ]
