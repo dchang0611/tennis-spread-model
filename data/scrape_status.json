@@ -1,7 +1,7 @@
 {
   "success": true,
-  "checked_at": "2026-10-06T06:35:44.820938+00:00",
-  "match_date": "2026-10-05",
+  "checked_at": "2026-10-06T07:15:01.784226+00:00",
+  "match_date": "2026-10-06",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
@@ -11,16 +11,6 @@
     }
   ],
   "surface_assignments": [
-    {
-      "player_a": "Jacquet K.",
-      "player_b": "Sakamoto R.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341513",
-      "source_date": "2026-10-06",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
     {
       "player_a": "Bellucci M.",
       "player_b": "Muller A.",
@@ -272,9 +262,8 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 27,
+  "events_found": 26,
   "events": [
-    "Rei Sakamoto vs Kyrian Jacquet",
     "Alexandre Muller vs Mattia Bellucci",
     "Lloyd Harris vs Chak Lam Coleman Wong",
     "Kimmer Coppejans vs Dane Sweeny",
@@ -302,18 +291,21 @@
     "Daniel Altmaier vs Holger Rune",
     "Jan-Lennard Struff vs Martin Landaluce"
   ],
-  "spread_markets_found": 26,
+  "spread_markets_found": 25,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 27,
+  "unique_event_pages": 26,
   "unpriced_spread_markets": [
+    "Tomas Machac vs Zhizhen Zhang",
+    "Sebastian Baez vs Marcos Giron",
     "Miomir Kecmanovic vs Sho Shimabukuro",
     "Daniel Merida Aguilar vs Botic Van De Zandschulp",
-    "James Duckworth vs Hubert Hurkacz"
+    "James Duckworth vs Hubert Hurkacz",
+    "Jan-Lennard Struff vs Martin Landaluce"
   ],
-  "executable_spread_markets": 23,
-  "matches_parsed": 23,
+  "executable_spread_markets": 19,
+  "matches_parsed": 19,
   "partial_coverage": true,
-  "rows_saved": 61,
+  "rows_saved": 58,
   "error": null
 }

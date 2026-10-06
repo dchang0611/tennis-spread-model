@@ -276,9 +276,9 @@
     "recommendation": "PAPER",
     "match_key": "Jiri Lehecka|Valentin Vacherot|2026-10-05|Tokyo (Japan Open)",
     "recorded_at": "2026-10-05T07:04:25.250667+00:00",
-    "result": "PENDING",
+    "result": "LOSS",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": -1.0,
+    "settled_at": "2026-10-06T07:17:04.255947+00:00"
   }
 ]
