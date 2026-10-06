@@ -20,7 +20,54 @@ PACIFIC = ZoneInfo("America/Los_Angeles")
 OUTPUT_COLUMNS = [
     "date", "tournament", "surface", "best_of", "player_a", "player_b",
     "spread_a", "odds_a", "spread_b", "odds_b", "collected_at", "event_url",
+    "event_id", "market_start", "surface_source", "surface_source_date",
+    "tourney_level", "format_source", "format_source_hash", "metadata_error",
+    "event_description",
 ]
+
+
+def scheduled_events(payload, now):
+    """Use the public ATP page's event IDs and absolute timestamps, not labels."""
+    if payload.get('target') != 'ATP' or not isinstance(payload.get('sections'), list):
+        raise ValueError('Invalid ATP event inventory')
+    sections = [s for s in payload['sections'] if s.get('title') == 'Events']
+    if len(sections) != 1 or not isinstance(sections[0].get('content', {}).get('components'), list):
+        raise ValueError('ATP event inventory schema changed; availability cannot be verified')
+    found = {}
+    for section in sections:
+        for item in section.get('content', {}).get('components', []):
+            if item.get('type') != 'game_event_card' or item.get('league') != 'ATP':
+                continue
+            if item.get('isLive') is not False or item.get('eventStatus') != 'OPEN_PREGAME':
+                continue
+            start = pd.Timestamp(item['scheduledStart'])
+            if start.tzinfo is None:
+                raise ValueError('Novig start has no timezone')
+            if not pd.Timestamp(now) < start <= pd.Timestamp(now) + pd.Timedelta(days=2):
+                continue
+            ident = item['eventId']
+            if not re.fullmatch(r'[a-f0-9-]{36}', ident):
+                raise ValueError('Invalid Novig event identity')
+            event = dict(event_id=ident, player_a=item['awayTeam']['name'], player_b=item['homeTeam']['name'],
+                         market_start=start.isoformat(), day='Upcoming')
+            if ident in found and found[ident] != event:
+                raise ValueError('Conflicting Novig event inventory')
+            found[ident] = event
+    return sorted(found.values(), key=lambda e: pd.Timestamp(e['market_start']))
+
+
+def verify_event_metadata(item, event, now):
+    if item.get('id') != event['event_id'] or item.get('league') != 'ATP':
+        raise ValueError('Event metadata identity mismatch')
+    if item.get('status') != 'OPEN_PREGAME' or item.get('game', {}).get('status') != 'Scheduled':
+        raise ValueError('Event is no longer scheduled pregame')
+    players = tuple(item['game'][side]['name'] for side in ('awayTeam', 'homeTeam'))
+    if not match_event_players(players, event):
+        raise ValueError('Event participants changed')
+    start = pd.Timestamp(item['scheduled_start'])
+    if start.tzinfo is None or not pd.Timestamp(now) < start <= pd.Timestamp(now) + pd.Timedelta(days=2):
+        raise ValueError('Event start is missing, past or outside the collection window')
+    return start
 
 def parse_event_card(text: str) -> dict | None:
     lines = [line.strip() for line in str(text).splitlines() if line.strip()]
@@ -66,7 +113,8 @@ def parse_event_page_players(text: str, day_label: str) -> tuple[str, str] | Non
         return overview[0]
     if overview:
         return None
-    candidates = [index for index, value in enumerate(lines) if value == day_label]
+    candidates = [index for index, value in enumerate(lines) if value == day_label or
+                  (day_label == 'Upcoming' and (value in {'Today','Tomorrow'} or re.fullmatch(r'Mon|Tue|Wed|Thu|Fri|Sat|Sun', value)))]
     if not candidates:
         return None
     day_index = candidates[-1]
@@ -227,11 +275,11 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
     collected_at = datetime.now(timezone.utc).isoformat()
     match_day = datetime.now(PACIFIC).date()
     match_date = match_day.isoformat()
-    lookup = LiveSurfaceLookup(match_day) if surface == "Auto" else None
+    lookups = {}
     surface_failures = []
     surface_assignments = []
     if diagnostics is not None:
-        diagnostics["surface_lookup_errors"] = lookup.errors if lookup else []
+        diagnostics["surface_lookup_errors"] = []
         diagnostics["surface_failures"] = surface_failures
         diagnostics["surface_assignments"] = surface_assignments
     rows: list[dict] = []
@@ -253,15 +301,32 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
             ),
         )
         page.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+        inventory = {}
+        metadata = {}
+        def observe(response):
+            # Observe only the two public responses used by this page. Never
+            # record authentication, analytics or unrelated browser traffic.
+            try:
+                if response.url.startswith('https://api.novig.us/nbx/v1/trading/ATP/page?'):
+                    inventory.clear(); inventory.update(response.json())
+                elif response.url == 'https://api.novig.us/v1/graphql':
+                    for item in response.json().get('data', {}).get('event', []):
+                        if item.get('league') == 'ATP' and item.get('game'):
+                            metadata[item['id']] = item
+            except (ValueError, TypeError, KeyError):
+                pass
+        page.on('response', observe)
         page.goto(ATP_URL, wait_until="domcontentloaded", timeout=45_000)
-        wait_for_event_cards(page)
-        events = collect_event_cards(page, day_label)
+        for _ in range(80):
+            if inventory: break
+            page.wait_for_timeout(250)
+        events = scheduled_events(inventory, datetime.now(timezone.utc))
         if diagnostics is not None:
             diagnostics["events_found"] = len(events)
             diagnostics["events"] = [f'{event["player_a"]} vs {event["player_b"]}' for event in events]
         if not events:
             browser.close()
-            raise RuntimeError(f"No Novig ATP events labeled {day_label!r} were found.")
+            return pd.DataFrame(columns=OUTPUT_COLUMNS)
 
         spread_markets = 0
         parser_failures = []
@@ -269,16 +334,12 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
         started_events = []
         visited_urls = set()
         for event in events:
-            card = locate_event_card(page, event["player_a"], event["player_b"])
-            if card is None:
-                parser_failures.append(f"Event card unavailable: {event['player_a']} vs {event['player_b']}")
-                continue
-            open_event_card(card)
-            page.wait_for_url("**/event-markets/**", timeout=12_000)
+            metadata.pop(event['event_id'], None)
+            page.goto('https://novig.com/event-markets/' + event['event_id'], wait_until='domcontentloaded', timeout=45_000)
             if page.url in visited_urls:
                 continue
             visited_urls.add(page.url)
-            resolved_players, already_live = wait_for_event_players(page, day_label, event)
+            resolved_players, already_live = wait_for_event_players(page, 'Upcoming', event)
             if already_live:
                 started_events.append(f"{event['player_a']} vs {event['player_b']}")
                 continue
@@ -289,14 +350,37 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
                 continue
             player_a, player_b = resolved_players
             try:
+                for _ in range(32):
+                    if event['event_id'] in metadata: break
+                    page.wait_for_timeout(250)
+                item = metadata.get(event['event_id'], {})
+                start = verify_event_metadata(item, event, datetime.now(timezone.utc))
+                match_day = start.tz_convert('America/Los_Angeles').date()
+                match_date = match_day.isoformat()
+                if surface == 'Auto' and match_day not in lookups:
+                    lookups[match_day] = LiveSurfaceLookup(match_day)
+                    if diagnostics is not None:
+                        diagnostics['surface_lookup_errors'].extend(lookups[match_day].errors)
+                lookup = lookups.get(match_day)
                 assignment = lookup.resolve(player_a, player_b) if lookup else {"surface": surface, "tournament": tournament, "method": "explicit_override"}
             except Exception as exc:
                 surface_failures.append({"match": f"{player_a} vs {player_b}", "error": str(exc)})
                 continue
             resolved_surface = assignment["surface"]
             surface_assignments.append(assignment)
+            try:
+                category = lookup.tournament_metadata(assignment) if lookup else {}
+            except Exception as exc:
+                category = {'metadata_error': str(exc)}
             heading = page.get_by_text("Game Spread", exact=True)
+            has_spread = any(m.get('type') == 'SPREAD' and m.get('status') == 'OPEN' for m in item.get('markets', []))
+            if has_spread:
+                for _ in range(32):
+                    if heading.count() == 1: break
+                    page.wait_for_timeout(250)
             if heading.count() != 1:
+                if has_spread:
+                    parser_failures.append(f'Published spread market has no readable price section: {player_a} vs {player_b}')
                 continue
             spread_markets += 1
             # The spread ladder is the fourth ancestor of its heading.  Novig
@@ -328,6 +412,9 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
                     "odds_b": odds_b,
                     "collected_at": datetime.now(timezone.utc).isoformat(),
                     "event_url": page.url,
+                    'event_id': event['event_id'], 'market_start': start.isoformat(),
+                    'surface_source': assignment.get('source'), 'surface_source_date': assignment.get('source_date'),
+                    'event_description': item.get('description', ''), **category,
                 })
         browser.close()
     if diagnostics is not None:
@@ -343,7 +430,7 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
     if diagnostics is not None:
         diagnostics['partial_coverage'] = bool(parser_failures or surface_failures)
     frame = pd.DataFrame(rows, columns=OUTPUT_COLUMNS)
-    if frame.empty:
+    if frame.empty and (parser_failures or surface_failures):
         raise RuntimeError("Novig events were found, but no complete paired spread prices were extracted.")
     return frame.drop_duplicates(subset=["date", "player_a", "player_b", "spread_a", "odds_a", "odds_b"])
 
@@ -353,8 +440,8 @@ def main() -> None:
     parser.add_argument("--output", default="data/novig_spreads.csv")
     parser.add_argument("--tournament", required=True)
     parser.add_argument("--surface", required=True, choices=["Auto", "Hard", "Clay", "Grass", "Carpet"])
-    parser.add_argument("--day-label", default="Today")
-    parser.add_argument("--minimum-matches", type=int, default=2)
+    parser.add_argument("--day-label", default="Upcoming", help="Compatibility argument; absolute upcoming timestamps control collection")
+    parser.add_argument("--minimum-matches", type=int, default=0)
     parser.add_argument("--status-file", default="data/scrape_status.json")
     args = parser.parse_args()
 

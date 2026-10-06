@@ -39,6 +39,8 @@ def write_json(path,value):
 def archive_paper(scored, history, now, policy):
     history=list(history)
     keys={(r['date'],*sorted([name_key(r['player']),name_key(r['opponent'])])) for r in history}
+    event_ids = {str(r['event_url']) for r in history if r.get('event_url')}
+    competition_ids = {str(r['competition_id']) for r in history if r.get('competition_id')}
     for row in scored.to_dict('records'):
         if row.get('recommendation')!='PAPER': continue
         start=pd.Timestamp(row['scheduled_start']); quote=pd.Timestamp(row['collected_at']); stamp=pd.Timestamp(now)
@@ -46,9 +48,11 @@ def archive_paper(scored, history, now, policy):
             continue
         if (stamp-quote).total_seconds()>policy['max_quote_age_minutes']*60: continue
         key=(str(row['date']),*sorted([name_key(row['player']),name_key(row['opponent'])]))
-        if key in keys: continue
+        if key in keys or row.get('event_url') in event_ids or str(row.get('competition_id', '')) in competition_ids: continue
         history.append(json_safe({**row,'date':str(row['date']),'recorded_at':stamp.isoformat(),'result':'PENDING','risk_units':1.0,'profit_units':None,'settled_at':None}))
         keys.add(key)
+        if row.get('event_url'): event_ids.add(row['event_url'])
+        if row.get('competition_id'): competition_ids.add(str(row['competition_id']))
     return history
 
 
@@ -95,10 +99,12 @@ def main():
         history=settle_paper(history,matches,now)
         markets=pd.read_csv(ROOT/'data/novig_spreads.csv')
         scrape=json.loads((ROOT/'data/scrape_status.json').read_text())
-        today=pd.Timestamp(now).tz_convert('America/Los_Angeles').date().isoformat()
-        if not scrape.get('success') or scrape.get('match_date')!=today or markets.empty:
+        scrape_time = pd.Timestamp(scrape.get('checked_at'))
+        if not scrape.get('success') or scrape_time.tzinfo is None or not 0 <= (pd.Timestamp(now)-scrape_time).total_seconds() <= policy['max_quote_age_minutes']*60:
             raise ValueError('No fresh complete market collection')
-        if not (markets.date.astype(str)==today).all(): raise ValueError('Market date mismatch')
+        if markets.empty:
+            status.update(success=True, empty_slate=True, market_matchups=0, source_hash=receipt['source_hash'])
+            return
         enriched,excluded=enrich_markets(markets,matches,competitions,now)
         status['excluded'].extend(excluded)
         status['market_matchups']=len(markets[['player_a','player_b']].drop_duplicates())

@@ -4,6 +4,7 @@ from zoneinfo import ZoneInfo
 from html import unescape
 import re
 import unicodedata
+import hashlib
 from urllib.request import Request, urlopen
 
 BASE = 'https://www.tennisexplorer.com'
@@ -26,11 +27,13 @@ def aliases(name):
 
 def parse_schedule(html, source_date):
     tournament = None
+    tournament_source = None
     pairs = {}
     for attrs, body in re.findall(r'<tr\b([^>]*)>(.*?)</tr>', html, re.S | re.I):
         if 'head flags' in attrs:
             heading = re.search(r'<a href="([^\"]*/atp-men/)">(.*?)</a>', body, re.S)
             tournament = clean(heading[2]) if heading else None
+            tournament_source = BASE + heading[1] if heading else None
             continue
         row_id = re.search(r'id="(r\d+b?)"', attrs)
         players = re.findall(r'<a href="/player/[^\"]+">(.*?)</a>', body, re.S)
@@ -38,6 +41,7 @@ def parse_schedule(html, source_date):
             continue
         detail = re.search(r'href="(/match-detail/\?id=\d+)"', body)
         pairs[row_id[1]] = {'player': clean(players[0]), 'tournament': tournament,
+                            'tournament_source': tournament_source,
                             'url': BASE + detail[1] if detail else None}
     rows = []
     for key, first in pairs.items():
@@ -45,8 +49,30 @@ def parse_schedule(html, source_date):
         if key.endswith('b') or not second or not first['url'] or first['tournament'] != second['tournament']:
             continue
         rows.append({'player_a': first['player'], 'player_b': second['player'], 'tournament': first['tournament'],
+                     'tournament_source': first['tournament_source'],
                      'source': first['url'], 'source_date': source_date.isoformat()})
     return rows
+
+
+def parse_tournament_category(html, tournament, year):
+    """Read this edition's published singles winner points, not past results.
+
+    Only standard Tour categories are supported. Team events, Challenger,
+    exhibitions and novel formats cannot silently become ATP 250/BO3.
+    """
+    headings = [clean(h) for h in re.findall(r'<h1\b[^>]*>(.*?)</h1>', html, re.S | re.I)]
+    if not any(h.startswith(f'{tournament} {year} ') or h == f'{tournament} {year}' for h in headings):
+        raise ValueError('Tournament edition does not match the dated match')
+    tables = re.findall(r'<table\b[^>]*class="[^"]*moneydetails[^"]*"[^>]*>(.*?)</table>', html, re.S | re.I)
+    points = set()
+    for table in tables:
+        for body in re.findall(r'<tr\b[^>]*>(.*?)</tr>', table, re.S | re.I):
+            cells = {key: clean(value).lower() for key, value in re.findall(r'<td class="(round|points)">(.*?)</td>', body, re.S)}
+            if cells.get('round') == 'winner':
+                points.add(cells.get('points'))
+    if len(points) != 1 or next(iter(points)) not in {'250', '500', '1000', '2000'}:
+        raise ValueError('No supported current tournament category in published winner points')
+    return {'250': 'A', '500': 'A', '1000': 'M', '2000': 'G'}[points.pop()]
 
 
 def parse_match_surface(html, expected_date, tournament, source_today=None):
@@ -84,6 +110,7 @@ class LiveSurfaceLookup:
     def __init__(self, match_date, fetch=fetch_html):
         self.match_date, self.fetch = match_date, fetch
         self.matches, self.errors, self.cache = [], [], {}
+        self.tournaments = {}
         # Source is in Europe; its date can be one day ahead of Pacific.
         for offset in (0, 1):
             day = match_date + timedelta(days=offset)
@@ -107,3 +134,17 @@ class LiveSurfaceLookup:
             surface = parse_match_surface(self.fetch(row['source']), date.fromisoformat(row['source_date']), row['tournament'])
             self.cache[row['source']] = {**row, 'surface': surface, 'method': 'live_match_metadata'}
         return self.cache[row['source']]
+
+    def tournament_metadata(self, assignment):
+        url = assignment['tournament_source']
+        year = date.fromisoformat(assignment['source_date']).year
+        if not re.search(rf'/{year}/atp-men/$', url):
+            raise ValueError('Tournament link has no matching current edition')
+        if url not in self.tournaments:
+            html = self.fetch(url)
+            self.tournaments[url] = {
+                'tourney_level': parse_tournament_category(html, assignment['tournament'], year),
+                'format_source': url,
+                'format_source_hash': hashlib.sha256(html.encode()).hexdigest(),
+            }
+        return self.tournaments[url]

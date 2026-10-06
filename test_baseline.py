@@ -21,7 +21,7 @@ class BaselineTests(unittest.TestCase):
             def fetch(url):
                 requested.append(url)
                 if 'scoreboard?' in url:
-                    return json.dumps({'events':[{'name':'Future event','groupings':[{'grouping':{'slug':'mens-singles'},'competitions':[{'id':'future'}]}]}]}).encode()
+                    return json.dumps({'events':[{'id':f'future-{year}','name':'Future event','groupings':[{'grouping':{'slug':'mens-singles'},'competitions':[{'id':'future'}]}]}]}).encode()
                 season=year if 'ongoing_tourneys' in url else int(url.rsplit('/',1)[1][:4])
                 return pd.DataFrame([match(f'{season}0714',number=1),match(f'{season}0715',number=2)]).to_csv(index=False).encode()
             with tempfile.TemporaryDirectory() as directory:

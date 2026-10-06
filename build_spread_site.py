@@ -141,28 +141,11 @@ def build_payload() -> dict:
         "average_clv": sum(clv_values) / len(clv_values) if clv_values else None,
     }
 
-    today = datetime.now(timezone.utc).astimezone(ZoneInfo("America/Los_Angeles")).date().isoformat()
-    active_bets = [
-        row for row in picks
-        if row.get("recommendation") == "BET" and str(row.get("date")) == today
-    ]
-    strict_v2_current_picks = [row for row in active_bets if is_history_v2_eligible(row)]
-    fresh_scrape = scrape_status.get("success") and scrape_status.get("match_date") == today
-    if fresh_scrape and scoring_status.get("success"):
-        status = "ready"
-        message = (
-            f"{len(active_bets)} qualified spread play{'s' if len(active_bets) != 1 else ''} from "
-            f"{scoring_status.get('modeled_matchups', 0)} modeled matchup(s); "
-            f"{scrape_status.get('matches_parsed', 0)} executable Novig matchup(s) were captured."
-        )
-        surface_failures = scrape_status.get("surface_failures", [])
-        if surface_failures:
-            status = "partial_market_data"
-            message += f" Partial coverage: {len(surface_failures)} event(s) excluded because their surface could not be verified."
-    else:
-        status = "awaiting_market_data"
-        reason = scrape_status.get("error") or "No same-day Novig spread scrape is available."
-        message = f"Live board unavailable: {reason}"
+    try:
+        scrape_age = (datetime.now(timezone.utc)-datetime.fromisoformat(scrape_status['checked_at'])).total_seconds()
+        fresh_scrape = bool(scrape_status.get('success') and 0 <= scrape_age <= policy['max_quote_age_minutes']*60)
+    except (KeyError, ValueError, TypeError):
+        fresh_scrape = False
     # Hard paper-only release. Missing policy/status is CLOSED, never permission
     # to resume live betting. Old model files cannot bypass this publication gate.
     paper_history_path = ROOT / 'data' / 'paper_history.json'
@@ -175,7 +158,7 @@ def build_payload() -> dict:
             healthy = all(0 <= (now-datetime.fromisoformat(s['checked_at'])).total_seconds() <= 3600 for s in [source_status, scoring_status])
         except (KeyError, TypeError, ValueError):
             healthy = False
-    picks = [p for p in picks if p.get('recommendation') in ['PAPER','PASS'] and str(p.get('date')) == today and p.get('model_version') == policy.get('model_version') and p.get('source_hash') == source_status.get('source_hash')] if healthy else []
+    picks = [p for p in picks if p.get('recommendation') in ['PAPER','PASS'] and p.get('model_version') == policy.get('model_version') and p.get('source_hash') == source_status.get('source_hash')] if healthy else []
     validation = validation if healthy else []
     if picks:
         now = datetime.now(timezone.utc)
@@ -189,9 +172,11 @@ def build_payload() -> dict:
             except (KeyError, TypeError, ValueError):
                 continue
         picks = valid
-    status = 'paper_only' if healthy and picks else 'closed'
+    status = 'paper_only' if healthy and picks else ('no_markets' if healthy and scoring_status.get('empty_slate') else 'closed')
     failure = (scrape_status.get('error') if not fresh_scrape else None) or scoring_status.get('error') or 'No verified, unexpired model lines.'
     message = (f"{len(picks)} scored sides at verified, unexpired prices. Model evaluation is ongoing." if healthy and picks else 'FAILED/CLOSED: ' + str(failure))
+    if status == 'no_markets':
+        message = 'Collection completed: no priced upcoming spreads. Recorded captures remain below.'
     if scoring_status.get('excluded'):
         message += f" {len(scoring_status['excluded'])} market rows excluded by data checks."
     if scrape_status.get('partial_coverage'):
@@ -218,6 +203,7 @@ def build_payload() -> dict:
             "validation_method": "Expanding-window rolling validation",
         },
         "picks": picks,
+        "captured_lines": records_from_csv(ROOT/'data/novig_spreads.csv'),
         "strict_v2_current_picks": [],
         "paper_history": paper_history,
         "paper_evaluation": read_json(ROOT / 'data' / 'paper_evaluation.json'),

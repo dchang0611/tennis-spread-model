@@ -91,7 +91,7 @@ def fetch_inputs(now, root=Path('.'), fetch=download):
     competitions = {}
     # Scoreboards contain the active tournament draw as well as the requested
     # day's matches. Fetch adjacent days and dedupe stable competition IDs.
-    for offset in [1, 0, -1]:
+    for offset in [0, 1, 2, -1]:
         day = (now + pd.Timedelta(days=offset)).strftime('%Y%m%d')
         url = ESPN.format(date=day)
         content = fetch(url)
@@ -105,7 +105,13 @@ def fetch_inputs(now, root=Path('.'), fetch=download):
                 if group.get('grouping', {}).get('slug') != 'mens-singles':
                     continue
                 for comp in group.get('competitions', []):
-                    competitions[comp['id']] = {**comp,'event_name':event['name'], 'source':url}
+                    current = {**comp,'event_name':event['name'], 'event_major':event.get('major'),
+                               'event_id':event['id'], 'source':url}
+                    previous = competitions.get(comp['id'])
+                    if previous is None:
+                        competitions[comp['id']] = current
+                    elif (previous.get('date'), previous.get('status'), comp_names(previous)) != (current.get('date'), current.get('status'), comp_names(current)):
+                        previous['schedule_conflict'] = True
     if not competitions:
         raise ValueError('Independent schedule has no verifiable ATP competitions')
     digest = hashlib.sha256(json.dumps(receipts, sort_keys=True).encode()).hexdigest()
@@ -169,35 +175,47 @@ def enrich_markets(markets, matches, competitions, now):
             def same_pair(c):
                 values=[p.get('athlete',{}).get('displayName','') for p in c.get('competitors',[])]
                 return len(values)==2 and ((aliases(row.player_a)&aliases(values[0]) and aliases(row.player_b)&aliases(values[1])) or (aliases(row.player_a)&aliases(values[1]) and aliases(row.player_b)&aliases(values[0])))
-            candidates = [c for c in competitions if same_pair(c) and c.get('timeValid') is True
+            paired = [c for c in competitions if same_pair(c)]
+            candidates = [c for c in paired if c.get('timeValid') is True
                           and c.get('status',{}).get('type',{}).get('state')=='pre'
                           and pd.Timestamp(now) < pd.to_datetime(c.get('date'),utc=True) < pd.Timestamp(now)+pd.Timedelta(days=2)]
             if len(candidates)!=1:
+                if len(paired) == 1 and paired[0].get('timeValid') is False:
+                    raise ValueError('Independent schedule has not confirmed a start time yet')
                 raise ValueError('No unique independently verified future start time')
             comp = candidates[0]
+            if comp.get('schedule_conflict'):
+                raise ValueError('Independent schedule snapshots disagree for this competition')
             full_names=[p['athlete']['displayName'] for p in comp['competitors']]
             full_a=[n for n in full_names if aliases(row.player_a)&aliases(n)]
             full_b=[n for n in full_names if aliases(row.player_b)&aliases(n)]
             if len(full_a)!=1 or len(full_b)!=1 or full_a==full_b:
                 raise ValueError('Ambiguous player abbreviation')
             start=pd.to_datetime(comp['date'],utc=True)
-            if str(start.tz_convert('America/Los_Angeles').date()) != str(row['date']):
-                raise ValueError('Scraped day disagrees with independently scheduled match day')
+            market_start = pd.Timestamp(row['market_start'])
+            if market_start.tzinfo is None or not pd.Timestamp(now) < market_start <= pd.Timestamp(now)+pd.Timedelta(days=2):
+                raise ValueError('No verified future market timestamp')
+            source_day = str(row['surface_source_date'])
+            if any(str(t.tz_convert('Europe/Prague').date()) != source_day for t in (start, market_start)):
+                raise ValueError('Absolute match dates disagree with dated surface evidence')
+            # Two schedules can differ by court order. Both must still be
+            # pregame; the earlier time is the conservative collection cutoff.
+            cutoff = min(start, market_start)
             rnd = comp.get('round',{}).get('displayName','')
-            if not rnd or 'qualif' in rnd.lower():
+            if not rnd or 'qualif' in (rnd + ' ' + str(row.get('event_description', ''))).lower():
                 raise ValueError('Unverified main-draw format; qualifying excluded')
-            # Resolve the event against this season's observed event metadata.
-            # No global best-of-three fallback; unknown/new events stay closed.
-            context = matches[matches.date >= pd.Timestamp(now).tz_localize(None)-pd.Timedelta(days=30)]
-            tournament = str(row.tournament).casefold()
-            context = context[context.tourney_name.map(lambda t: len(str(t))>=4 and str(t).casefold() in tournament)]
-            signatures = context[['tourney_id','surface','best_of','tourney_level']].drop_duplicates()
-            if len(signatures)!=1 or signatures.iloc[0].surface != row.surface:
-                raise ValueError('No unique current event surface/format/level evidence')
-            signature=signatures.iloc[0]
-            rows.append({**row.to_dict(),'player_a':full_a[0],'player_b':full_b[0],'scheduled_start':start.isoformat(),
-                         'best_of':int(signature.best_of),'tourney_level':signature.tourney_level,
-                         'metadata_source':comp['source'], 'format_source':TML+'ongoing_tourneys.csv#'+str(signature.tourney_id)})
+            category = row.get('tourney_level')
+            if category not in {'A','M','G'} or not isinstance(row.get('format_source'), str) or not isinstance(row.get('format_source_hash'), str):
+                raise ValueError('Current tournament category unavailable: ' + str(row.get('metadata_error', 'missing edition evidence')))
+            if comp.get('event_major') is not (category == 'G'):
+                raise ValueError('Tournament category disagrees with independent Grand Slam classification')
+            best_of = 5 if category == 'G' else 3
+            rows.append({**row.to_dict(),'date':str(market_start.tz_convert('America/Los_Angeles').date()),
+                         'player_a':full_a[0],'player_b':full_b[0],'scheduled_start':cutoff.isoformat(),
+                         'independent_start':start.isoformat(),'competition_id':str(comp['id']),
+                         'best_of':best_of,'tourney_level':category,
+                         'metadata_source':comp['source'],
+                         'format_rule':'Grand Slam mens main draw BO5' if best_of == 5 else 'ATP Tour singles BO3'})
         except (ValueError, KeyError, TypeError) as exc:
             excluded.append({'player_a':row.player_a,'player_b':row.player_b,'reason':str(exc)})
     return pd.DataFrame(rows), excluded

@@ -8,25 +8,34 @@ const safe = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&am
 function renderBoard() {
   // Rationale text is generated from distinct model-driver families upstream.
   const root = document.querySelector('#board');
-  const currentDate = state.data?.scrape_status?.match_date;
-  const picks = visiblePaperPicks().filter(row => {
-    if (state.dateFrom || state.dateTo) return inDateRange(row.date);
-    return !currentDate || String(row.date) === String(currentDate);
-  });
+  const picks = visiblePaperPicks().filter(row => inDateRange(row.date));
   const excluded = [...new Map((state.data?.scoring_status?.excluded || []).map(row => [JSON.stringify([row.player_a, row.player_b, row.reason]), row])).values()];
   const scrape = state.data?.scrape_status || {};
+  excluded.push(...(scrape.surface_failures || []).map(row => ({player_a:row.match, player_b:'', reason:row.error})), ...(scrape.parser_failures || []).map(reason => ({player_a:'Collection',player_b:'',reason})));
+  const captures = renderCapturedLines();
   document.querySelector('#boardExclusions').innerHTML = excluded.length
-    ? `<div class="status-banner">Latest collection${scrape.checked_at ? ` · ${safe(new Date(scrape.checked_at).toLocaleString())}` : ''}: ${Number(scrape.matches_parsed) || 0} priced matchups, ${Number(scrape.rows_saved) || 0} paired spread lines. ${new Set(excluded.map(row => JSON.stringify([row.player_a,row.player_b]))).size} matchups excluded before scoring. These exclusions cover the full collected slate.</div><div class="history-table-wrap"><table class="history-table"><thead><tr><th>Matchup</th><th>Why no model line is shown</th></tr></thead><tbody>${excluded.map(row => `<tr><td>${safe(row.player_a)} vs ${safe(row.player_b)}</td><td>${safe(row.reason)}</td></tr>`).join('')}</tbody></table></div>` : '';
+    ? `<div class="status-banner">Latest collection${scrape.checked_at ? ` · ${safe(new Date(scrape.checked_at).toLocaleString())}` : ''}: ${Number(scrape.matches_parsed) || 0} priced matchups, ${Number(scrape.rows_saved) || 0} paired spread lines. ${new Set(excluded.map(row => JSON.stringify([row.player_a,row.player_b]))).size} matchups excluded before scoring. These exclusions cover the full collected slate.</div><div class="history-table-wrap"><table class="history-table"><thead><tr><th>Matchup</th><th>Why no model line is shown</th></tr></thead><tbody>${excluded.map(row => `<tr><td>${safe([row.player_a,row.player_b].filter(Boolean).join(' vs '))}</td><td>${safe(row.reason)}</td></tr>`).join('')}</tbody></table></div>` : '';
   if (!picks.length) {
     const expired = state.data?.status === 'paper_only' && !(state.data.picks || []).some(row => Date.parse(row.scheduled_start) > Date.now() && Date.parse(row.collected_at) <= Date.now() && Date.now() - Date.parse(row.collected_at) <= 30*60*1000);
     if (expired) document.querySelector('#statusBanner').textContent = 'Recorded quotes have expired or their matches have started. Awaiting fresh prices.';
-    root.innerHTML = `<div class="empty"><strong>No current model lines</strong>${expired ? 'The board does not present expired prices as current.' : excluded.length ? 'The captured matchups did not pass the checks listed above.' : `Awaiting verified lines for the selected dates and BO${state.format} format.`}</div>`;
+    root.innerHTML = `<div class="empty"><strong>No current model lines</strong>${expired ? 'The board does not present expired prices as current.' : excluded.length ? 'The captured matchups did not pass the checks listed above.' : `Awaiting verified lines for the selected dates and BO${state.format} format.`}</div>` + captures;
     return;
   }
   root.innerHTML = picks.map(row => {
     const isBet = row.recommendation === 'BET';
-    return `<article class="pick-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div><span class="metric-label">START</span><span class="metric-value">${safe(new Date(row.scheduled_start).toLocaleTimeString([], {hour: 'numeric', minute: '2-digit'}))}</span></div><div class="factor-chips">${renderBoardChips(row)}</div></article>`;
+    return `<article class="pick-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div><span class="metric-label">START</span><span class="metric-value">${safe(new Date(row.scheduled_start).toLocaleString([], {month:'short', day:'numeric', hour: 'numeric', minute: '2-digit'}))}</span></div><div class="factor-chips">${renderBoardChips(row)}</div></article>`;
+  }).join('') + captures;
+}
+
+function renderCapturedLines() {
+  const rows = (state.data?.captured_lines || []).filter(row => inDateRange(row.date));
+  if (!rows.length) return '';
+  const body = rows.map(row => {
+    const age = Date.now() - Date.parse(row.collected_at);
+    const status = !Number.isFinite(age) || age < 0 ? 'Unverified capture time' : age > 30*60*1000 ? 'Recorded price · expired' : Date.parse(row.market_start) <= Date.now() ? 'Recorded price · start time passed' : 'Captured price · not a model selection';
+    return `<tr><td>${safe(row.player_a)} ${Number(row.spread_a)>0?'+':''}${fmtNum(row.spread_a)}<br>${safe(row.player_b)} ${Number(row.spread_b)>0?'+':''}${fmtNum(row.spread_b)}</td><td>${fmtOdds(row.odds_a)}<br>${fmtOdds(row.odds_b)}</td><td>${safe(row.date)}<br>${safe(row.tournament)}</td><td>${safe(new Date(row.collected_at).toLocaleString())}<br>${safe(status)}</td></tr>`;
   }).join('');
+  return `<section class="history-day"><div class="history-day-heading"><strong>Captured spread lines</strong><span>All collected formats · timestamped prices</span></div><div class="history-table-wrap"><table class="history-table"><thead><tr><th>Lines</th><th>Prices</th><th>Match date</th><th>Captured</th></tr></thead><tbody>${body}</tbody></table></div></section>`;
 }
 
 const focusFactorDefinitions = [
@@ -95,11 +104,7 @@ function renderFocusControls() {
 }
 
 function currentPicks() {
-  const currentDate = state.data?.scrape_status?.match_date;
-  return visiblePaperPicks().filter(row => {
-    if (state.dateFrom || state.dateTo) return inDateRange(row.date);
-    return !currentDate || String(row.date) === String(currentDate);
-  });
+  return visiblePaperPicks().filter(row => inDateRange(row.date));
 }
 
 function renderFocus() {
@@ -113,7 +118,7 @@ function renderFocus() {
   document.querySelector('#focusBoard').innerHTML = qualifying.length ? qualifying.map(({ row, factors }) => {
     const isBet = row.recommendation === 'BET';
     const chips = state.focusSelected.map(label => `<span class="factor-chip ${factors.includes(label) ? 'matched' : ''}">${factors.includes(label) ? '&#10003;' : '&#8212;'} ${safe(label)}</span>`).join('');
-    return `<article class="pick-card focus-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="confluence-score">${factors.length}/${state.focusSelected.length}</div><div><span class="metric-label">START</span><span class="metric-value">${safe(new Date(row.scheduled_start).toLocaleTimeString([], {hour: 'numeric', minute: '2-digit'}))}</span></div><div class="factor-chips">${chips}</div></article>`;
+    return `<article class="pick-card focus-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="confluence-score">${factors.length}/${state.focusSelected.length}</div><div><span class="metric-label">START</span><span class="metric-value">${safe(new Date(row.scheduled_start).toLocaleString([], {month:'short', day:'numeric', hour: 'numeric', minute: '2-digit'}))}</span></div><div class="factor-chips">${chips}</div></article>`;
   }).join('') : '<div class="empty"><strong>No matching lines</strong>Choose a lower match rule, different factors, or another date range.</div>';
 }
 
@@ -340,7 +345,6 @@ function renderLegacy() {
   renderHistoryView({rows:state.data?.history || [],resultFilter:'ALL',metricsId:'#legacyMetrics',noticeId:'#legacyNotice',groupsId:'#legacyGroups',noticeSuffix:' INVALID MODEL INPUTS: archived outcomes only. Frozen-input probabilities and factors do not validate the rebuilt model.'});
 }
 async function load() {
-  bindControls();
   try {
     const response = await fetch('data/board.json', { cache: 'no-store' });
     if (!response.ok) throw new Error('Board data unavailable');
@@ -351,12 +355,15 @@ async function load() {
     if (state.data.generated_at) document.querySelector('#updatedText').textContent = `Updated ${new Date(state.data.generated_at).toLocaleString([], {dateStyle:'medium', timeStyle:'short'})}`;
     renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderReplay(); renderLegacy(); renderExperiment();
   } catch (error) {
+    if (state.data) state.data = {...state.data, status:'closed', picks:[]};
     document.querySelector('#statusBanner').textContent = 'The latest board could not be verified. No plays are displayed.';
     document.querySelector('#statusBanner').className = 'status-banner closed';
     renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderReplay(); renderLegacy(); renderExperiment();
   }
 }
 
+bindControls();
 load();
+setInterval(load, 5*60*1000);
 
 setInterval(() => { renderBoard(); renderFocus(); renderExperiment(); }, 30000);

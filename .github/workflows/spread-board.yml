@@ -2,12 +2,7 @@ name: Build and deploy tennis spread board
 on:
   workflow_dispatch:
   schedule:
-    - cron: '37 0 * * *'
-      timezone: America/Los_Angeles
-    - cron: '37 6 * * *'
-      timezone: America/Los_Angeles
-    - cron: '37 10 * * *'
-      timezone: America/Los_Angeles
+    - cron: '7,27,47 * * * *'
   push:
     branches: [main]
     paths: ['*.py', 'research/**', 'model_policy.json', 'small_edge_experiment.json', 'site/**', 'requirements.txt', '.github/workflows/spread-board.yml', 'data/verified_atp_results.csv', 'data/reconstructed_history.json', 'data/baseline_comparison.json']
@@ -39,7 +34,7 @@ jobs:
         run: python update_spread_history.py --mode settle
       - name: Collect current Novig spreads
         continue-on-error: true
-        run: python novig_scraper.py --output data/novig_spreads.csv --status-file data/scrape_status.json --tournament ATP --surface Auto --day-label Today --minimum-matches 1
+        run: python novig_scraper.py --output data/novig_spreads.csv --status-file data/scrape_status.json --tournament ATP --surface Auto --minimum-matches 0
       - name: Refresh sources and build prospective paper predictions
         run: python run_paper_pipeline.py
       - name: Publish paper-only or closed status
@@ -53,7 +48,7 @@ jobs:
           board = json.loads(Path('site/data/board.json').read_text())
           assert board['model']['live_enabled'] is False
           assert not any(p['recommendation'] == 'BET' for p in board['picks'])
-          ready = board['status'] == 'paper_only'
+          ready = board['status'] in ('paper_only', 'no_markets') and not board['scrape_status'].get('partial_coverage') and board['settlement_status'].get('complete') is True
           with open(os.environ['GITHUB_OUTPUT'], 'a') as out:
               out.write(f'pipeline_ready={str(ready).lower()}\n')
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
