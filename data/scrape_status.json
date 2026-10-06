@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-06T00:15:14.644313+00:00",
+  "checked_at": "2026-10-06T06:35:44.820938+00:00",
   "match_date": "2026-10-05",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
@@ -12,101 +12,11 @@
   ],
   "surface_assignments": [
     {
-      "player_a": "Safiullin R.",
-      "player_b": "Mochizuki S.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341203",
-      "source_date": "2026-10-06",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Dougaz A.",
-      "player_b": "Cina F.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341263",
-      "source_date": "2026-10-06",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Draxl L.",
-      "player_b": "Basilashvili N.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341265",
-      "source_date": "2026-10-06",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Tomic B.",
-      "player_b": "Skatov T.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341267",
-      "source_date": "2026-10-06",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Zheng M.",
-      "player_b": "Mejia N.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341509",
-      "source_date": "2026-10-06",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Te R.",
-      "player_b": "Simakin I.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341511",
-      "source_date": "2026-10-06",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Nishioka Y.",
-      "player_b": "Svrcina D.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341515",
-      "source_date": "2026-10-06",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
       "player_a": "Jacquet K.",
       "player_b": "Sakamoto R.",
       "tournament": "Shanghai",
       "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3341513",
-      "source_date": "2026-10-06",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Kotov P.",
-      "player_b": "Vukic A.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341521",
-      "source_date": "2026-10-06",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Sweeny D.",
-      "player_b": "Coppejans K.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341523",
       "source_date": "2026-10-06",
       "surface": "Hard",
       "method": "live_match_metadata"
@@ -127,6 +37,26 @@
       "tournament": "Shanghai",
       "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3341975",
+      "source_date": "2026-10-06",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Sweeny D.",
+      "player_b": "Coppejans K.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341523",
+      "source_date": "2026-10-06",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Kotov P.",
+      "player_b": "Vukic A.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341521",
       "source_date": "2026-10-06",
       "surface": "Hard",
       "method": "live_match_metadata"
@@ -342,20 +272,13 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 34,
+  "events_found": 27,
   "events": [
-    "Shintaro Mochizuki vs Roman Safiullin",
-    "Federico Cina vs Aziz Dougaz",
-    "Nikoloz Basilashvili vs Liam Draxl",
-    "Timofey Skatov vs Bernard Tomic",
-    "Nicolas Mejia vs Michael Zheng",
-    "Ilia Simakin vs Rigele Te",
-    "Dalibor Svrcina vs Yoshihito Nishioka",
     "Rei Sakamoto vs Kyrian Jacquet",
-    "Aleksandar Vukic vs Pavel Kotov",
-    "Kimmer Coppejans vs Dane Sweeny",
     "Alexandre Muller vs Mattia Bellucci",
     "Lloyd Harris vs Chak Lam Coleman Wong",
+    "Kimmer Coppejans vs Dane Sweeny",
+    "Aleksandar Vukic vs Pavel Kotov",
     "Jiri Lehecka vs Carlos Alcaraz",
     "Alex De Minaur vs Novak Djokovic",
     "Tomas Machac vs Zhizhen Zhang",
@@ -379,20 +302,18 @@
     "Daniel Altmaier vs Holger Rune",
     "Jan-Lennard Struff vs Martin Landaluce"
   ],
-  "spread_markets_found": 33,
-  "parser_failures": [
+  "spread_markets_found": 26,
+  "parser_failures": [],
+  "already_live_events": [],
+  "unique_event_pages": 27,
+  "unpriced_spread_markets": [
+    "Miomir Kecmanovic vs Sho Shimabukuro",
+    "Daniel Merida Aguilar vs Botic Van De Zandschulp",
     "James Duckworth vs Hubert Hurkacz"
   ],
-  "already_live_events": [],
-  "unique_event_pages": 34,
-  "unpriced_spread_markets": [
-    "Zizou Bergs vs Vit Kopriva",
-    "Jenson Brooksby vs Jaume Munar",
-    "Daniel Merida Aguilar vs Botic Van De Zandschulp"
-  ],
-  "executable_spread_markets": 29,
-  "matches_parsed": 29,
+  "executable_spread_markets": 23,
+  "matches_parsed": 23,
   "partial_coverage": true,
-  "rows_saved": 83,
+  "rows_saved": 61,
   "error": null
 }
