@@ -1,76 +1,20 @@
 {
   "success": true,
-  "checked_at": "2026-10-06T09:15:42.726502+00:00",
+  "checked_at": "2026-10-06T13:39:42.090049+00:00",
   "match_date": "2026-10-06",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
+    {
+      "match": "Denis Shapovalov vs Cameron Norrie",
+      "error": "Expected one live schedule match for Denis Shapovalov vs Cameron Norrie; found 0."
+    },
     {
       "match": "Yunchaokete Bu vs Luca Van Assche",
       "error": "Expected one live schedule match for Yunchaokete Bu vs Luca Van Assche; found 0."
     }
   ],
   "surface_assignments": [
-    {
-      "player_a": "Kotov P.",
-      "player_b": "Vukic A.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341521",
-      "source_date": "2026-10-06",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Djokovic N.",
-      "player_b": "De Minaur A.",
-      "tournament": "Beijing",
-      "tournament_source": "https://www.tennisexplorer.com/beijing/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3342083",
-      "source_date": "2026-10-06",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Zhang Z.",
-      "player_b": "Machac T.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341215",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Kopriva V.",
-      "player_b": "Bergs Z.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341253",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Marozsan F.",
-      "player_b": "Svajda Z.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341239",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Giron M.",
-      "player_b": "Baez S.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341251",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
     {
       "player_a": "Shimabukuro S.",
       "player_b": "Kecmanovic M.",
@@ -92,81 +36,21 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Borges N.",
-      "player_b": "Diaz Acosta F.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341235",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Tirante T.",
-      "player_b": "Medjedovic H.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341237",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Fery A.",
-      "player_b": "Cilic M.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341219",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Munar J.",
-      "player_b": "Brooksby J.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341229",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Van De Zandschulp B.",
-      "player_b": "Merida Aguilar D.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341233",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Norrie C.",
-      "player_b": "Shapovalov D.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341247",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Hurkacz H.",
-      "player_b": "Duckworth J.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341227",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
       "player_a": "Kovacevic A.",
       "player_b": "Berrettini M.",
       "tournament": "Shanghai",
       "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3341217",
+      "source_date": "2026-10-07",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Zhang Z.",
+      "player_b": "Machac T.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341215",
       "source_date": "2026-10-07",
       "surface": "Hard",
       "method": "live_match_metadata"
@@ -182,26 +66,6 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Vallejo A.",
-      "player_b": "Royer V.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341249",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Navone M.",
-      "player_b": "Carreno-Busta P.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341243",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
       "player_a": "Rune H.",
       "player_b": "Altmaier D.",
       "tournament": "Shanghai",
@@ -212,57 +76,161 @@
       "method": "live_match_metadata"
     },
     {
+      "player_a": "Fery A.",
+      "player_b": "Cilic M.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341219",
+      "source_date": "2026-10-07",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Kopriva V.",
+      "player_b": "Bergs Z.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341253",
+      "source_date": "2026-10-08",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Marozsan F.",
+      "player_b": "Svajda Z.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341239",
+      "source_date": "2026-10-08",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Giron M.",
+      "player_b": "Baez S.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341251",
+      "source_date": "2026-10-08",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Borges N.",
+      "player_b": "Diaz Acosta F.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341235",
+      "source_date": "2026-10-08",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Tirante T.",
+      "player_b": "Medjedovic H.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341237",
+      "source_date": "2026-10-08",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Munar J.",
+      "player_b": "Brooksby J.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341229",
+      "source_date": "2026-10-08",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Van De Zandschulp B.",
+      "player_b": "Merida Aguilar D.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341233",
+      "source_date": "2026-10-08",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Hurkacz H.",
+      "player_b": "Duckworth J.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341227",
+      "source_date": "2026-10-08",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Vallejo A.",
+      "player_b": "Royer V.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341249",
+      "source_date": "2026-10-08",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Navone M.",
+      "player_b": "Carreno-Busta P.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3341243",
+      "source_date": "2026-10-08",
+      "surface": "Hard",
+      "method": "live_match_metadata"
+    },
+    {
       "player_a": "Landaluce M.",
       "player_b": "Struff J.",
       "tournament": "Shanghai",
       "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3341245",
-      "source_date": "2026-10-07",
+      "source_date": "2026-10-08",
       "surface": "Hard",
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 22,
+  "events_found": 20,
   "events": [
-    "Aleksandar Vukic vs Pavel Kotov",
-    "Alex De Minaur vs Novak Djokovic",
+    "Miomir Kecmanovic vs Sho Shimabukuro",
+    "Jaime Faria vs Arthur Gea",
+    "Matteo Berrettini vs Aleksandar Kovacevic",
     "Tomas Machac vs Zhizhen Zhang",
+    "Kamil Majchrzak vs Yannick Hanfmann",
+    "Daniel Altmaier vs Holger Rune",
+    "Marin \u010cili\u0107 vs Arthur Fery",
     "Zizou Bergs vs Vit Kopriva",
     "Zachary Svajda vs Fabian Marozsan",
     "Sebastian Baez vs Marcos Giron",
-    "Miomir Kecmanovic vs Sho Shimabukuro",
-    "Jaime Faria vs Arthur Gea",
     "Facundo Diaz Acosta vs Nuno Borges",
     "Hamad Medjedovic vs Thiago Agustin Tirante",
-    "Marin \u010cili\u0107 vs Arthur Fery",
     "Jenson Brooksby vs Jaume Munar",
     "Daniel Merida Aguilar vs Botic Van De Zandschulp",
     "Denis Shapovalov vs Cameron Norrie",
     "James Duckworth vs Hubert Hurkacz",
-    "Matteo Berrettini vs Aleksandar Kovacevic",
-    "Kamil Majchrzak vs Yannick Hanfmann",
     "Valentin Royer vs Adolfo Daniel Vallejo",
     "Yunchaokete Bu vs Luca Van Assche",
     "Pablo Carreno Busta vs Mariano Navone",
-    "Daniel Altmaier vs Holger Rune",
     "Jan-Lennard Struff vs Martin Landaluce"
   ],
-  "spread_markets_found": 21,
-  "parser_failures": [
-    "Denis Shapovalov vs Cameron Norrie"
-  ],
+  "spread_markets_found": 18,
+  "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 22,
+  "unique_event_pages": 20,
   "unpriced_spread_markets": [
     "Zizou Bergs vs Vit Kopriva",
-    "Sebastian Baez vs Marcos Giron",
-    "Jaime Faria vs Arthur Gea",
-    "Pablo Carreno Busta vs Mariano Navone",
-    "Jan-Lennard Struff vs Martin Landaluce"
+    "Jenson Brooksby vs Jaume Munar",
+    "Daniel Merida Aguilar vs Botic Van De Zandschulp"
   ],
   "executable_spread_markets": 15,
   "matches_parsed": 15,
   "partial_coverage": true,
-  "rows_saved": 41,
+  "rows_saved": 32,
   "error": null
 }
