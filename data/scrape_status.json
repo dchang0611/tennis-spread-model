@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-06T19:07:14.209566+00:00",
+  "checked_at": "2026-10-06T23:00:02.782415+00:00",
   "match_date": "2026-10-06",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
@@ -361,13 +361,10 @@
   "parser_failures": [],
   "already_live_events": [],
   "unique_event_pages": 32,
-  "unpriced_spread_markets": [
-    "Daniel Merida Aguilar vs Botic Van De Zandschulp",
-    "Dalibor Svrcina vs Cameron Norrie"
-  ],
-  "executable_spread_markets": 29,
-  "matches_parsed": 29,
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 31,
+  "matches_parsed": 31,
   "partial_coverage": true,
-  "rows_saved": 94,
+  "rows_saved": 125,
   "error": null
 }
