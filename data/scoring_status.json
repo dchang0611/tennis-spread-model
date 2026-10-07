@@ -1,60 +1,10 @@
 {
   "success": true,
-  "checked_at": "2026-10-07T08:58:21.047447+00:00",
+  "checked_at": "2026-10-07T16:23:45.434909+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
     {
-      "player_a": "Yi Zhou",
-      "player_b": "Mattia Bellucci",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Yi Zhou",
-      "player_b": "Mattia Bellucci",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Yi Zhou",
-      "player_b": "Mattia Bellucci",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Yi Zhou",
-      "player_b": "Mattia Bellucci",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Michael Zheng",
-      "player_b": "Yibing Wu",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Michael Zheng",
-      "player_b": "Yibing Wu",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Michael Zheng",
-      "player_b": "Yibing Wu",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Michael Zheng",
-      "player_b": "Yibing Wu",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Michael Zheng",
-      "player_b": "Yibing Wu",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Michael Zheng",
-      "player_b": "Yibing Wu",
-      "reason": "No unique independently verified future start time"
-    },
-    {
       "player_a": "Daniel Merida Aguilar",
       "player_b": "Botic Van De Zandschulp",
       "reason": "No unique independently verified future start time"
@@ -75,28 +25,8 @@
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Daniel Altmaier",
-      "player_b": "Holger Rune",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Daniel Altmaier",
-      "player_b": "Holger Rune",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Daniel Altmaier",
-      "player_b": "Holger Rune",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Daniel Altmaier",
-      "player_b": "Holger Rune",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Daniel Altmaier",
-      "player_b": "Holger Rune",
+      "player_a": "Jenson Brooksby",
+      "player_b": "Jaume Munar",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
@@ -130,6 +60,21 @@
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
+      "player_a": "Stefanos Tsitsipas",
+      "player_b": "Kimmer Coppejans",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Ilia Simakin",
+      "player_b": "Camilo Ugo Carabelli",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Ilia Simakin",
+      "player_b": "Camilo Ugo Carabelli",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
       "player_a": "Ilia Simakin",
       "player_b": "Camilo Ugo Carabelli",
       "reason": "Recent result missing or ambiguous in statistics feed"
@@ -175,6 +120,11 @@
       "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
+      "player_a": "James Duckworth",
+      "player_b": "Hubert Hurkacz",
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
+    },
+    {
       "player_a": "Valentin Royer",
       "player_b": "Adolfo Daniel Vallejo",
       "reason": "Recent result missing or ambiguous in statistics feed"
@@ -292,6 +242,16 @@
     {
       "player_a": "Sebastian Baez",
       "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Jan-Lennard Struff",
+      "player_b": "Martin Landaluce",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
@@ -335,8 +295,8 @@
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Zizou Bergs",
-      "player_b": "Vit Kopriva",
+      "player_a": "Nicolas Mejia",
+      "player_b": "Juan Manuel Cerundolo",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
@@ -350,8 +310,13 @@
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Dalibor Svrcina",
-      "player_b": "Cameron Norrie",
+      "player_a": "Zizou Bergs",
+      "player_b": "Vit Kopriva",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Zizou Bergs",
+      "player_b": "Vit Kopriva",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
@@ -370,42 +335,17 @@
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Marin Cilic",
-      "player_b": "Arthur Fery",
-      "reason": "Player state too old"
+      "player_a": "Dalibor Svrcina",
+      "player_b": "Cameron Norrie",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Marin Cilic",
-      "player_b": "Arthur Fery",
-      "reason": "Player state too old"
-    },
-    {
-      "player_a": "Marin Cilic",
-      "player_b": "Arthur Fery",
-      "reason": "Player state too old"
-    },
-    {
-      "player_a": "Marin Cilic",
-      "player_b": "Arthur Fery",
-      "reason": "Player state too old"
-    },
-    {
-      "player_a": "Marin Cilic",
-      "player_b": "Arthur Fery",
-      "reason": "Player state too old"
-    },
-    {
-      "player_a": "Marin Cilic",
-      "player_b": "Arthur Fery",
-      "reason": "Player state too old"
-    },
-    {
-      "player_a": "Marin Cilic",
-      "player_b": "Arthur Fery",
-      "reason": "Player state too old"
+      "player_a": "Dalibor Svrcina",
+      "player_b": "Cameron Norrie",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     }
   ],
-  "market_matchups": 21,
+  "market_matchups": 17,
   "formats": {
     "3": {
       "status": "paper_only",
@@ -424,5 +364,5 @@
   "training_matches": 3617,
   "training_max_date": "2026-10-06",
   "paper_candidates": 2,
-  "source_hash": "5a68e07d35710791c1182f91d9aa00d0d2fbba6d03fd1159726272872733cfe5"
+  "source_hash": "2ec6920464573a670938c44c3b7c0c00f31c72f05a772e11c9842bae2eb3d109"
 }

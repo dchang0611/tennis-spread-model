@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-07T08:57:15.107532+00:00",
+  "checked_at": "2026-10-07T16:22:15.725632+00:00",
   "match_date": "2026-10-07",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
@@ -8,49 +8,57 @@
     {
       "match": "Yunchaokete Bu vs Luca Van Assche",
       "error": "Expected one live schedule match for Yunchaokete Bu vs Luca Van Assche; found 0."
+    },
+    {
+      "match": "Ugo Humbert vs Arthur Gea",
+      "error": "Expected one live schedule match for Ugo Humbert vs Arthur Gea; found 0."
+    },
+    {
+      "match": "Brandon Nakashima vs Matteo Berrettini",
+      "error": "Expected one live schedule match for Brandon Nakashima vs Matteo Berrettini; found 0."
+    },
+    {
+      "match": "Flavio Cobolli vs Adrian Mannarino",
+      "error": "Expected one live schedule match for Flavio Cobolli vs Adrian Mannarino; found 0."
+    },
+    {
+      "match": "Jakub Mensik vs Miomir Kecmanovic",
+      "error": "Expected one live schedule match for Jakub Mensik vs Miomir Kecmanovic; found 0."
+    },
+    {
+      "match": "Alex Molcan vs Alex De Minaur",
+      "error": "Expected one live schedule match for Alex Molcan vs Alex De Minaur; found 0."
+    },
+    {
+      "match": "Andrey Rublev vs Rei Sakamoto",
+      "error": "Expected one live schedule match for Andrey Rublev vs Rei Sakamoto; found 0."
+    },
+    {
+      "match": "Tomas Machac vs Alexander Bublik",
+      "error": "Expected one live schedule match for Tomas Machac vs Alexander Bublik; found 0."
+    },
+    {
+      "match": "Frances Tiafoe vs Yannick Hanfmann",
+      "error": "Expected one live schedule match for Frances Tiafoe vs Yannick Hanfmann; found 0."
+    },
+    {
+      "match": "Roman Safiullin vs Francisco Cerundolo",
+      "error": "Expected one live schedule match for Roman Safiullin vs Francisco Cerundolo; found 0."
+    },
+    {
+      "match": "Alexander Blockx vs Quentin Halys",
+      "error": "Expected one live schedule match for Alexander Blockx vs Quentin Halys; found 0."
+    },
+    {
+      "match": "Yibing Wu vs Alexander Zverev",
+      "error": "Expected one live schedule match for Yibing Wu vs Alexander Zverev; found 0."
+    },
+    {
+      "match": "Lorenzo Musetti vs Yi Zhou",
+      "error": "Expected one live schedule match for Lorenzo Musetti vs Yi Zhou; found 0."
     }
   ],
   "surface_assignments": [
-    {
-      "player_a": "Bellucci M.",
-      "player_b": "Zhou Y.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3342815",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Wu Y.",
-      "player_b": "Zheng M.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3342803",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Rune H.",
-      "player_b": "Altmaier D.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341221",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Fery A.",
-      "player_b": "Cilic M.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3341219",
-      "source_date": "2026-10-07",
-      "surface": "Hard",
-      "method": "live_match_metadata"
-    },
     {
       "player_a": "Borges N.",
       "player_b": "Diaz Acosta F.",
@@ -222,12 +230,8 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 22,
+  "events_found": 30,
   "events": [
-    "Yi Zhou vs Mattia Bellucci",
-    "Michael Zheng vs Yibing Wu",
-    "Daniel Altmaier vs Holger Rune",
-    "Marin \u010cili\u0107 vs Arthur Fery",
     "Facundo Diaz Acosta vs Nuno Borges",
     "Jenson Brooksby vs Jaume Munar",
     "Stefanos Tsitsipas vs Kimmer Coppejans",
@@ -245,16 +249,28 @@
     "Zizou Bergs vs Vit Kopriva",
     "Daniel Merida Aguilar vs Botic Van De Zandschulp",
     "Yunchaokete Bu vs Luca Van Assche",
-    "Dalibor Svrcina vs Cameron Norrie"
+    "Dalibor Svrcina vs Cameron Norrie",
+    "Ugo Humbert vs Arthur Gea",
+    "Brandon Nakashima vs Matteo Berrettini",
+    "Flavio Cobolli vs Adrian Mannarino",
+    "Jakub Mensik vs Miomir Kecmanovic",
+    "Alex Molcan vs Alex De Minaur",
+    "Andrey Rublev vs Rei Sakamoto",
+    "Tomas Machac vs Alexander Bublik",
+    "Frances Tiafoe vs Yannick Hanfmann",
+    "Roman Safiullin vs Francisco Cerundolo",
+    "Alexander Blockx vs Quentin Halys",
+    "Yibing Wu vs Alexander Zverev",
+    "Lorenzo Musetti vs Yi Zhou"
   ],
-  "spread_markets_found": 21,
+  "spread_markets_found": 17,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 22,
+  "unique_event_pages": 30,
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 21,
-  "matches_parsed": 21,
+  "executable_spread_markets": 17,
+  "matches_parsed": 17,
   "partial_coverage": true,
-  "rows_saved": 88,
+  "rows_saved": 77,
   "error": null
 }
