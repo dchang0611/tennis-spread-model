@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-07T16:23:45.434909+00:00",
+  "checked_at": "2026-10-07T21:26:35.658947+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
@@ -65,8 +65,8 @@
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Ilia Simakin",
-      "player_b": "Camilo Ugo Carabelli",
+      "player_a": "Stefanos Tsitsipas",
+      "player_b": "Kimmer Coppejans",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
@@ -175,8 +175,8 @@
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Matteo Arnaldi",
-      "player_b": "Bernard Tomic",
+      "player_a": "Pablo Carreno Busta",
+      "player_b": "Mariano Navone",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
@@ -197,6 +197,16 @@
     {
       "player_a": "Matteo Arnaldi",
       "player_b": "Bernard Tomic",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Matteo Arnaldi",
+      "player_b": "Bernard Tomic",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Zachary Svajda",
+      "player_b": "Fabian Marozsan",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
@@ -250,8 +260,13 @@
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Jan-Lennard Struff",
-      "player_b": "Martin Landaluce",
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
@@ -364,5 +379,5 @@
   "training_matches": 3617,
   "training_max_date": "2026-10-06",
   "paper_candidates": 2,
-  "source_hash": "2ec6920464573a670938c44c3b7c0c00f31c72f05a772e11c9842bae2eb3d109"
+  "source_hash": "e8f631da61b9c1df2f5e051e692695dda73a86e87eb14b4b558d20210c538c83"
 }

@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-07T16:22:15.725632+00:00",
+  "checked_at": "2026-10-07T21:25:13.135035+00:00",
   "match_date": "2026-10-07",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
@@ -56,6 +56,10 @@
     {
       "match": "Lorenzo Musetti vs Yi Zhou",
       "error": "Expected one live schedule match for Lorenzo Musetti vs Yi Zhou; found 0."
+    },
+    {
+      "match": "Daniel Altmaier vs Ben Shelton",
+      "error": "Expected one live schedule match for Daniel Altmaier vs Ben Shelton; found 0."
     }
   ],
   "surface_assignments": [
@@ -230,7 +234,7 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 30,
+  "events_found": 31,
   "events": [
     "Facundo Diaz Acosta vs Nuno Borges",
     "Jenson Brooksby vs Jaume Munar",
@@ -261,16 +265,17 @@
     "Roman Safiullin vs Francisco Cerundolo",
     "Alexander Blockx vs Quentin Halys",
     "Yibing Wu vs Alexander Zverev",
-    "Lorenzo Musetti vs Yi Zhou"
+    "Lorenzo Musetti vs Yi Zhou",
+    "Daniel Altmaier vs Ben Shelton"
   ],
   "spread_markets_found": 17,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 30,
+  "unique_event_pages": 31,
   "unpriced_spread_markets": [],
   "executable_spread_markets": 17,
   "matches_parsed": 17,
   "partial_coverage": true,
-  "rows_saved": 77,
+  "rows_saved": 80,
   "error": null
 }
