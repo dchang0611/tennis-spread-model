@@ -57,7 +57,7 @@
   "review_scope": "Only separately eligible formats; no automatic live promotion",
   "experiment_id": "small-edge-4-8-v1",
   "experiment_rule_hash": "086ca1cf89c41220e349feb0936ad8384301cff03f6d0cf732cae74bfa6f234c",
-  "checked_at": "2026-10-06T23:01:58.210492+00:00",
+  "checked_at": "2026-10-07T02:18:10.779531+00:00",
   "success": true,
   "activated_at": "2026-10-04T05:09:01+00:00"
 }
