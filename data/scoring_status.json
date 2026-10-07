@@ -1,40 +1,10 @@
 {
-  "success": false,
-  "checked_at": "2026-10-07T02:17:41.180582+00:00",
+  "success": true,
+  "checked_at": "2026-10-07T08:58:21.047447+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
     {
-      "player_a": "Tomas Machac",
-      "player_b": "Zhizhen Zhang",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Tomas Machac",
-      "player_b": "Zhizhen Zhang",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Tomas Machac",
-      "player_b": "Zhizhen Zhang",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Tomas Machac",
-      "player_b": "Zhizhen Zhang",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Tomas Machac",
-      "player_b": "Zhizhen Zhang",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Tomas Machac",
-      "player_b": "Zhizhen Zhang",
-      "reason": "No unique independently verified future start time"
-    },
-    {
       "player_a": "Yi Zhou",
       "player_b": "Mattia Bellucci",
       "reason": "No unique independently verified future start time"
@@ -85,604 +55,334 @@
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Michael Zheng",
-      "player_b": "Yibing Wu",
+      "player_a": "Daniel Merida Aguilar",
+      "player_b": "Botic Van De Zandschulp",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Zizou Bergs",
-      "player_b": "Vit Kopriva",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "player_a": "Daniel Merida Aguilar",
+      "player_b": "Botic Van De Zandschulp",
+      "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Zizou Bergs",
-      "player_b": "Vit Kopriva",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "player_a": "Daniel Merida Aguilar",
+      "player_b": "Botic Van De Zandschulp",
+      "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Zizou Bergs",
-      "player_b": "Vit Kopriva",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "player_a": "Daniel Merida Aguilar",
+      "player_b": "Botic Van De Zandschulp",
+      "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Zizou Bergs",
-      "player_b": "Vit Kopriva",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "player_a": "Daniel Altmaier",
+      "player_b": "Holger Rune",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Zachary Svajda",
-      "player_b": "Fabian Marozsan",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "player_a": "Daniel Altmaier",
+      "player_b": "Holger Rune",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Zachary Svajda",
-      "player_b": "Fabian Marozsan",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "player_a": "Daniel Altmaier",
+      "player_b": "Holger Rune",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Zachary Svajda",
-      "player_b": "Fabian Marozsan",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "player_a": "Daniel Altmaier",
+      "player_b": "Holger Rune",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Zachary Svajda",
-      "player_b": "Fabian Marozsan",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Zachary Svajda",
-      "player_b": "Fabian Marozsan",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Sebastian Baez",
-      "player_b": "Marcos Giron",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Sebastian Baez",
-      "player_b": "Marcos Giron",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Sebastian Baez",
-      "player_b": "Marcos Giron",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Sebastian Baez",
-      "player_b": "Marcos Giron",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Sebastian Baez",
-      "player_b": "Marcos Giron",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Facundo Diaz Acosta",
-      "player_b": "Nuno Borges",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Facundo Diaz Acosta",
-      "player_b": "Nuno Borges",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Facundo Diaz Acosta",
-      "player_b": "Nuno Borges",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Hamad Medjedovic",
-      "player_b": "Thiago Agustin Tirante",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Hamad Medjedovic",
-      "player_b": "Thiago Agustin Tirante",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Hamad Medjedovic",
-      "player_b": "Thiago Agustin Tirante",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Hamad Medjedovic",
-      "player_b": "Thiago Agustin Tirante",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Hamad Medjedovic",
-      "player_b": "Thiago Agustin Tirante",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "player_a": "Daniel Altmaier",
+      "player_b": "Holger Rune",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Jenson Brooksby",
       "player_b": "Jaume Munar",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Jenson Brooksby",
       "player_b": "Jaume Munar",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Jenson Brooksby",
       "player_b": "Jaume Munar",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Daniel Merida Aguilar",
-      "player_b": "Botic Van De Zandschulp",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Jenson Brooksby",
+      "player_b": "Jaume Munar",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Daniel Merida Aguilar",
-      "player_b": "Botic Van De Zandschulp",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Stefanos Tsitsipas",
+      "player_b": "Kimmer Coppejans",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Daniel Merida Aguilar",
-      "player_b": "Botic Van De Zandschulp",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Stefanos Tsitsipas",
+      "player_b": "Kimmer Coppejans",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Daniel Merida Aguilar",
-      "player_b": "Botic Van De Zandschulp",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Ilia Simakin",
+      "player_b": "Camilo Ugo Carabelli",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Ilia Simakin",
+      "player_b": "Camilo Ugo Carabelli",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Ilia Simakin",
+      "player_b": "Camilo Ugo Carabelli",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Tallon Griekspoor",
+      "player_b": "Pavel Kotov",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Tallon Griekspoor",
+      "player_b": "Pavel Kotov",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Tallon Griekspoor",
+      "player_b": "Pavel Kotov",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "James Duckworth",
       "player_b": "Hubert Hurkacz",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
       "player_a": "James Duckworth",
       "player_b": "Hubert Hurkacz",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
       "player_a": "James Duckworth",
       "player_b": "Hubert Hurkacz",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "James Duckworth",
-      "player_b": "Hubert Hurkacz",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
       "player_a": "Valentin Royer",
       "player_b": "Adolfo Daniel Vallejo",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Valentin Royer",
       "player_b": "Adolfo Daniel Vallejo",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Valentin Royer",
       "player_b": "Adolfo Daniel Vallejo",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Valentin Royer",
       "player_b": "Adolfo Daniel Vallejo",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Valentin Royer",
       "player_b": "Adolfo Daniel Vallejo",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Pablo Carreno Busta",
       "player_b": "Mariano Navone",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Pablo Carreno Busta",
       "player_b": "Mariano Navone",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Pablo Carreno Busta",
       "player_b": "Mariano Navone",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Pablo Carreno Busta",
       "player_b": "Mariano Navone",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Pablo Carreno Busta",
+      "player_b": "Mariano Navone",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Matteo Arnaldi",
+      "player_b": "Bernard Tomic",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Matteo Arnaldi",
+      "player_b": "Bernard Tomic",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Matteo Arnaldi",
+      "player_b": "Bernard Tomic",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Matteo Arnaldi",
+      "player_b": "Bernard Tomic",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Matteo Arnaldi",
+      "player_b": "Bernard Tomic",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Zachary Svajda",
+      "player_b": "Fabian Marozsan",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Zachary Svajda",
+      "player_b": "Fabian Marozsan",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Zachary Svajda",
+      "player_b": "Fabian Marozsan",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Zachary Svajda",
+      "player_b": "Fabian Marozsan",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Zachary Svajda",
+      "player_b": "Fabian Marozsan",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Jan-Lennard Struff",
       "player_b": "Martin Landaluce",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Jan-Lennard Struff",
       "player_b": "Martin Landaluce",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Jan-Lennard Struff",
       "player_b": "Martin Landaluce",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Jan-Lennard Struff",
       "player_b": "Martin Landaluce",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Jan-Lennard Struff",
       "player_b": "Martin Landaluce",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Nicolas Mejia",
+      "player_b": "Juan Manuel Cerundolo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Nicolas Mejia",
+      "player_b": "Juan Manuel Cerundolo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Nicolas Mejia",
+      "player_b": "Juan Manuel Cerundolo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Zizou Bergs",
+      "player_b": "Vit Kopriva",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Zizou Bergs",
+      "player_b": "Vit Kopriva",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Zizou Bergs",
+      "player_b": "Vit Kopriva",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Dalibor Svrcina",
       "player_b": "Cameron Norrie",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Dalibor Svrcina",
       "player_b": "Cameron Norrie",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Nicolas Mejia",
-      "player_b": "Juan Manuel Cerundolo",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Nicolas Mejia",
-      "player_b": "Juan Manuel Cerundolo",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Nicolas Mejia",
-      "player_b": "Juan Manuel Cerundolo",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Nicolas Mejia",
-      "player_b": "Juan Manuel Cerundolo",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Stefanos Tsitsipas",
-      "player_b": "Kimmer Coppejans",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Stefanos Tsitsipas",
-      "player_b": "Kimmer Coppejans",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Stefanos Tsitsipas",
-      "player_b": "Kimmer Coppejans",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Ilia Simakin",
-      "player_b": "Camilo Ugo Carabelli",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Ilia Simakin",
-      "player_b": "Camilo Ugo Carabelli",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Ilia Simakin",
-      "player_b": "Camilo Ugo Carabelli",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Ilia Simakin",
-      "player_b": "Camilo Ugo Carabelli",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Tallon Griekspoor",
-      "player_b": "Pavel Kotov",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Tallon Griekspoor",
-      "player_b": "Pavel Kotov",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Tallon Griekspoor",
-      "player_b": "Pavel Kotov",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Matteo Arnaldi",
-      "player_b": "Bernard Tomic",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Matteo Arnaldi",
-      "player_b": "Bernard Tomic",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Matteo Arnaldi",
-      "player_b": "Bernard Tomic",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Miomir Kecmanovic",
-      "player_b": "Sho Shimabukuro",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Miomir Kecmanovic",
-      "player_b": "Sho Shimabukuro",
+      "player_a": "Dalibor Svrcina",
+      "player_b": "Cameron Norrie",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Miomir Kecmanovic",
-      "player_b": "Sho Shimabukuro",
+      "player_a": "Dalibor Svrcina",
+      "player_b": "Cameron Norrie",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Miomir Kecmanovic",
-      "player_b": "Sho Shimabukuro",
-      "reason": "Recent result missing or ambiguous in statistics feed"
+      "player_a": "Marin Cilic",
+      "player_b": "Arthur Fery",
+      "reason": "Player state too old"
     },
     {
-      "player_a": "Miomir Kecmanovic",
-      "player_b": "Sho Shimabukuro",
-      "reason": "Recent result missing or ambiguous in statistics feed"
+      "player_a": "Marin Cilic",
+      "player_b": "Arthur Fery",
+      "reason": "Player state too old"
     },
     {
-      "player_a": "Jaime Faria",
-      "player_b": "Arthur Gea",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Jaime Faria",
-      "player_b": "Arthur Gea",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Jaime Faria",
-      "player_b": "Arthur Gea",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Jaime Faria",
-      "player_b": "Arthur Gea",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Jaime Faria",
-      "player_b": "Arthur Gea",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Matteo Berrettini",
-      "player_b": "Aleksandar Kovacevic",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Matteo Berrettini",
-      "player_b": "Aleksandar Kovacevic",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Matteo Berrettini",
-      "player_b": "Aleksandar Kovacevic",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Matteo Berrettini",
-      "player_b": "Aleksandar Kovacevic",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Matteo Berrettini",
-      "player_b": "Aleksandar Kovacevic",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Kamil Majchrzak",
-      "player_b": "Yannick Hanfmann",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Kamil Majchrzak",
-      "player_b": "Yannick Hanfmann",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Kamil Majchrzak",
-      "player_b": "Yannick Hanfmann",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Kamil Majchrzak",
-      "player_b": "Yannick Hanfmann",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Kamil Majchrzak",
-      "player_b": "Yannick Hanfmann",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Kamil Majchrzak",
-      "player_b": "Yannick Hanfmann",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Nikoloz Basilashvili",
-      "player_b": "Adrian Mannarino",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Nikoloz Basilashvili",
-      "player_b": "Adrian Mannarino",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Nikoloz Basilashvili",
-      "player_b": "Adrian Mannarino",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Nikoloz Basilashvili",
-      "player_b": "Adrian Mannarino",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Nikoloz Basilashvili",
-      "player_b": "Adrian Mannarino",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Nikoloz Basilashvili",
-      "player_b": "Adrian Mannarino",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Nikoloz Basilashvili",
-      "player_b": "Adrian Mannarino",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Federico Cina",
-      "player_b": "Alex Molcan",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Federico Cina",
-      "player_b": "Alex Molcan",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Federico Cina",
-      "player_b": "Alex Molcan",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Federico Cina",
-      "player_b": "Alex Molcan",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Federico Cina",
-      "player_b": "Alex Molcan",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Federico Cina",
-      "player_b": "Alex Molcan",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Rei Sakamoto",
-      "player_b": "Marco Trungelliti",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Rei Sakamoto",
-      "player_b": "Marco Trungelliti",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Rei Sakamoto",
-      "player_b": "Marco Trungelliti",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Roman Safiullin",
-      "player_b": "Rinky Hijikata",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Roman Safiullin",
-      "player_b": "Rinky Hijikata",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Roman Safiullin",
-      "player_b": "Rinky Hijikata",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Roman Safiullin",
-      "player_b": "Rinky Hijikata",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Roman Safiullin",
-      "player_b": "Rinky Hijikata",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Roman Safiullin",
-      "player_b": "Rinky Hijikata",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Daniel Altmaier",
-      "player_b": "Holger Rune",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Daniel Altmaier",
-      "player_b": "Holger Rune",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Daniel Altmaier",
-      "player_b": "Holger Rune",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Daniel Altmaier",
-      "player_b": "Holger Rune",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Chak Lam Coleman Wong",
-      "player_b": "Quentin Halys",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Chak Lam Coleman Wong",
-      "player_b": "Quentin Halys",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Chak Lam Coleman Wong",
-      "player_b": "Quentin Halys",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Chak Lam Coleman Wong",
-      "player_b": "Quentin Halys",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Chak Lam Coleman Wong",
-      "player_b": "Quentin Halys",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Chak Lam Coleman Wong",
-      "player_b": "Quentin Halys",
-      "reason": "Recent result missing or ambiguous in statistics feed"
+      "player_a": "Marin Cilic",
+      "player_b": "Arthur Fery",
+      "reason": "Player state too old"
     },
     {
       "player_a": "Marin Cilic",
@@ -705,6 +405,24 @@
       "reason": "Player state too old"
     }
   ],
-  "market_matchups": 31,
-  "error": "No players pass feature quality gates"
+  "market_matchups": 21,
+  "formats": {
+    "3": {
+      "status": "paper_only",
+      "training_rows": 2952,
+      "residuals": 1585,
+      "training_max_date": "2026-10-06 00:00:00"
+    },
+    "5": {
+      "status": "paper_only",
+      "training_rows": 665,
+      "residuals": 377,
+      "training_max_date": "2026-09-13 00:00:00"
+    }
+  },
+  "modeled_matchups": 2,
+  "training_matches": 3617,
+  "training_max_date": "2026-10-06",
+  "paper_candidates": 2,
+  "source_hash": "5a68e07d35710791c1182f91d9aa00d0d2fbba6d03fd1159726272872733cfe5"
 }
