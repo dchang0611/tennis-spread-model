@@ -1,8 +1,223 @@
 {
-  "success": false,
-  "checked_at": "2026-10-08T01:11:31.218115+00:00",
+  "success": true,
+  "checked_at": "2026-10-08T06:29:20.237911+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
-  "excluded": [],
-  "error": "Match feed ends 2026-10-06; lag 2 calendar days exceeds source freshness limit"
+  "excluded": [
+    {
+      "player_a": "Daniel Merida Aguilar",
+      "player_b": "Botic Van De Zandschulp",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Daniel Merida Aguilar",
+      "player_b": "Botic Van De Zandschulp",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Daniel Merida Aguilar",
+      "player_b": "Botic Van De Zandschulp",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Daniel Merida Aguilar",
+      "player_b": "Botic Van De Zandschulp",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Daniel Merida Aguilar",
+      "player_b": "Botic Van De Zandschulp",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Daniel Merida Aguilar",
+      "player_b": "Botic Van De Zandschulp",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Daniel Merida Aguilar",
+      "player_b": "Botic Van De Zandschulp",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Daniel Merida Aguilar",
+      "player_b": "Botic Van De Zandschulp",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Valentin Royer",
+      "player_b": "Adolfo Daniel Vallejo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Valentin Royer",
+      "player_b": "Adolfo Daniel Vallejo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Valentin Royer",
+      "player_b": "Adolfo Daniel Vallejo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Valentin Royer",
+      "player_b": "Adolfo Daniel Vallejo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Valentin Royer",
+      "player_b": "Adolfo Daniel Vallejo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Valentin Royer",
+      "player_b": "Adolfo Daniel Vallejo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Sebastian Baez",
+      "player_b": "Marcos Giron",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Jan-Lennard Struff",
+      "player_b": "Martin Landaluce",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Jan-Lennard Struff",
+      "player_b": "Martin Landaluce",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Jan-Lennard Struff",
+      "player_b": "Martin Landaluce",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Jan-Lennard Struff",
+      "player_b": "Martin Landaluce",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Jan-Lennard Struff",
+      "player_b": "Martin Landaluce",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Jan-Lennard Struff",
+      "player_b": "Martin Landaluce",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Nicolas Mejia",
+      "player_b": "Juan Manuel Cerundolo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Nicolas Mejia",
+      "player_b": "Juan Manuel Cerundolo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Nicolas Mejia",
+      "player_b": "Juan Manuel Cerundolo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Zizou Bergs",
+      "player_b": "Vit Kopriva",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Zizou Bergs",
+      "player_b": "Vit Kopriva",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Zizou Bergs",
+      "player_b": "Vit Kopriva",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Zizou Bergs",
+      "player_b": "Vit Kopriva",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Dalibor Svrcina",
+      "player_b": "Cameron Norrie",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Dalibor Svrcina",
+      "player_b": "Cameron Norrie",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Dalibor Svrcina",
+      "player_b": "Cameron Norrie",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Dalibor Svrcina",
+      "player_b": "Cameron Norrie",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    }
+  ],
+  "market_matchups": 8,
+  "formats": {
+    "3": {
+      "status": "paper_only",
+      "training_rows": 2960,
+      "residuals": 1593,
+      "training_max_date": "2026-10-07 00:00:00"
+    },
+    "5": {
+      "status": "paper_only",
+      "training_rows": 665,
+      "residuals": 377,
+      "training_max_date": "2026-09-13 00:00:00"
+    }
+  },
+  "modeled_matchups": 1,
+  "training_matches": 3625,
+  "training_max_date": "2026-10-07",
+  "paper_candidates": 1,
+  "source_hash": "8b8fcc6f305c935882c62bba623275bf677cbff607b76843aa041a5a6395fc44"
 }
