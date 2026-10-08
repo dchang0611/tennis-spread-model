@@ -151,3 +151,10 @@ footer { border-top: 1px solid var(--line); color: var(--muted); padding: 28px 2
   .metric-grid, .method-grid, .method-details, .metric-grid.compact { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Keep diagnostics and alternate prices available without burying the slate. */
+.board-details { margin: 12px 0; }
+.board-details > summary { cursor: pointer; padding: 14px 16px; border: 1px solid #244c6d; color: #aabdc9; }
+.board-details[open] > summary { margin-bottom: 12px; }
+.match-lines { min-width: 0; }
+.match-lines .board-details .pick-card { margin-top: 12px; }
