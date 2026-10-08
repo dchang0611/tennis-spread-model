@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-08T06:29:20.237911+00:00",
+  "checked_at": "2026-10-08T06:33:23.154889+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
@@ -160,6 +160,11 @@
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
+      "player_a": "Nicolas Mejia",
+      "player_b": "Juan Manuel Cerundolo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
       "player_a": "Zizou Bergs",
       "player_b": "Vit Kopriva",
       "reason": "Recent result missing or ambiguous in statistics feed"
@@ -219,5 +224,5 @@
   "training_matches": 3625,
   "training_max_date": "2026-10-07",
   "paper_candidates": 1,
-  "source_hash": "8b8fcc6f305c935882c62bba623275bf677cbff607b76843aa041a5a6395fc44"
+  "source_hash": "680b32791a2e9652d2461fa2f18ae2c4b22d298f96c15c496735964cf066d899"
 }
