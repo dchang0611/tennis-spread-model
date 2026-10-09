@@ -2,7 +2,7 @@
 import copy
 import unittest
 import pandas as pd
-from novig_scraper import scheduled_events, verify_event_metadata
+from novig_scraper import scheduled_events, verify_event_metadata, spread_player_order_matches
 from surface_calendar import parse_tournament_category, source_url, verify_source_timezone, aliases
 from match_data import enrich_markets
 from run_paper_pipeline import archive_paper
@@ -30,6 +30,8 @@ class EventMetadataTests(unittest.TestCase):
         self.assertFalse(aliases('Yunchaokete Bu') & aliases('Yibing Wu'))
         self.assertFalse(aliases('One Alpha') & aliases('One A.'))
         self.assertEqual(name_key('Bu Yunchaokete'),name_key('Yunchaokete Bu'))
+        self.assertTrue(spread_player_order_matches(['C. Ruud','Y. Bu'],('Casper Ruud','Yunchaokete Bu')))
+        self.assertFalse(spread_player_order_matches(['Y. Bu','C. Ruud'],('Casper Ruud','Yunchaokete Bu')))
     def test_source_setting_is_explicit_and_overrides_existing_timezone(self):
         url='https://www.tennisexplorer.com/match-detail/?id=123&timezone=8'
         self.assertEqual(source_url(url),'https://www.tennisexplorer.com/match-detail/?id=123&timezone=0')

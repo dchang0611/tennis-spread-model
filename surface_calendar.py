@@ -39,8 +39,9 @@ def aliases(name):
     # Verified source identity: /player/yunchaokete/ uses both "Bu Yunchaokete"
     # (page title) and "Yunchaokete Bu" (profile heading), with "Yunchaokete B."
     # on schedules. Do not reverse arbitrary names or expand ambiguous initials.
-    if words == ['yunchaokete', 'bu']:
-        words = ['bu', 'yunchaokete']
+    if words in (['yunchaokete', 'bu'], ['bu', 'yunchaokete']):
+        # Retain Novig's Y. Bu column label as well as the schedule's B. Yunchaokete.
+        return {'buy', 'yunchaoketeb'}
     if len(words) < 2:
         return set()
     if len(words[-1]) == 1:
