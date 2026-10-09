@@ -19,6 +19,9 @@ jobs:
       pipeline_ready: ${{ steps.health.outputs.pipeline_ready }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Queued runs must include the preceding run's immutable history.
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -52,6 +55,15 @@ jobs:
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
               out.write(board['status_message'] + '\n')
           PY
+      - name: Preserve run evidence before any history synchronization
+        if: always()
+        run: tar -czf "$RUNNER_TEMP/tennis-run-evidence.tar.gz" data tennis_model_output site/data
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: immutable-run-evidence
+          path: ${{ runner.temp }}/tennis-run-evidence.tar.gz
+          retention-days: 90
       - name: Persist immutable paper evidence and history
         run: |
           git config user.name 'github-actions[bot]'
