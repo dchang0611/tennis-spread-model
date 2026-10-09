@@ -10,6 +10,25 @@ const fmtNum = (value, digits = 1) => value !== null && value !== undefined && v
 const fmtOdds = value => { const number = Number(value); return Number.isFinite(number) ? `${number > 0 ? '+' : ''}${number}` : '—'; };
 const safe = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 
+const matchupKey = row => JSON.stringify([row.date, ...[row.player, row.opponent].map(name => String(name).toLowerCase().replace(/[^a-z0-9]/g, '')).sort()]);
+function recordedLineStatus(row) {
+  if (['WIN', 'LOSS', 'PUSH', 'VOID'].includes(row.result)) return `Settled: ${row.result}`;
+  const sameMatch = other => matchupKey(other) === matchupKey(row);
+  if (visiblePaperPicks().some(sameMatch)) return 'Matchup on current board · recorded line below stays locked';
+  const latest = (state.data?.picks || []).find(sameMatch) || row;
+  if (Date.parse(latest.scheduled_start) <= Date.now()) return 'Recorded start time passed · result pending';
+  if (Date.now() - Date.parse(latest.collected_at) > 30*60*1000) return 'Quote expired · awaiting refresh';
+  return 'No current verified line · recorded selection retained';
+}
+function renderRecordedLines() {
+  const today = new Intl.DateTimeFormat('en-CA', {timeZone:'America/Los_Angeles', year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date());
+  const rows = formatRows(state.data?.paper_history || []).filter(row => row.model_version === state.data?.model?.version && inDateRange(row.date) && (state.dateFrom || state.dateTo || row.date === today));
+  if (!rows.length) return '';
+  const current = new Set(visiblePaperPicks().filter(row => inDateRange(row.date)).map(matchupKey));
+  const onBoard = rows.filter(row => current.has(matchupKey(row))).length;
+  return `<section class="history-day"><div class="history-day-heading"><strong>Recorded selections · ${state.dateFrom || state.dateTo ? 'selected dates' : today + ' Pacific'}</strong><span>${rows.length} recorded · ${onBoard} matchups on current board · ${rows.length-onBoard} not currently shown</span></div><p>Same records as Historical Performance → Current model. Original lines and prices stay locked; current quotes can change or expire.</p><div class="history-table-wrap"><table class="history-table"><thead><tr><th>Recorded line</th><th>Recorded price</th><th>Current status</th></tr></thead><tbody>${rows.map(row => `<tr><td>${safe(row.player)} ${Number(row.spread)>0?'+':''}${fmtNum(row.spread)}<br>vs ${safe(row.opponent)}</td><td>${fmtOdds(row.odds)}</td><td>${safe(recordedLineStatus(row))}</td></tr>`).join('')}</tbody></table></div></section>`;
+}
+
 function renderBoard() {
   const root = document.querySelector('#board');
   const expanded = new Set([...document.querySelectorAll('details[data-disclosure][open]')].map(node => node.dataset.disclosure));
@@ -17,7 +36,7 @@ function renderBoard() {
   const excluded = [...new Map((state.data?.scoring_status?.excluded || []).map(row => [JSON.stringify([row.player_a, row.player_b, row.reason]), row])).values()];
   const scrape = state.data?.scrape_status || {};
   excluded.push(...(scrape.surface_failures || []).map(row => ({player_a:row.match, player_b:'', reason:row.error})), ...(scrape.parser_failures || []).map(reason => ({player_a:'Collection',player_b:'',reason})));
-  const captures = renderCapturedLines(expanded);
+  const captures = renderRecordedLines() + renderCapturedLines(expanded);
   document.querySelector('#boardExclusions').innerHTML = excluded.length
     ? `<details class="board-details" data-disclosure="excluded" ${expanded.has('excluded') ? 'open' : ''}><summary>Unavailable matchups · ${new Set(excluded.map(row => JSON.stringify([row.player_a,row.player_b]))).size} · View data issues</summary><div class="status-banner">Latest collection${scrape.checked_at ? ` · ${safe(new Date(scrape.checked_at).toLocaleString())}` : ''}: ${Number(scrape.matches_parsed) || 0} priced matchups, ${Number(scrape.rows_saved) || 0} paired spread lines. ${new Set(excluded.map(row => JSON.stringify([row.player_a,row.player_b]))).size} matchups excluded before scoring. These exclusions cover the full collected slate.</div><div class="history-table-wrap"><table class="history-table"><thead><tr><th>Matchup</th><th>Why no model line is shown</th></tr></thead><tbody>${excluded.map(row => `<tr><td>${safe([row.player_a,row.player_b].filter(Boolean).join(' vs '))}</td><td>${safe(row.reason)}</td></tr>`).join('')}</tbody></table></div></details>` : '';
   if (!picks.length) {
@@ -191,7 +210,7 @@ function renderHistoryView({ rows, resultFilter, metricsId, noticeId, groupsId, 
     const body = rows.map(row => {
       const result = String(row.result || '').toUpperCase();
       const rowUnits = row.profit_units === null || row.profit_units === undefined ? NaN : Number(row.profit_units);
-      return `<tr><td><strong>${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</strong><br><span class="match-context">vs ${safe(row.opponent)}</span>${showEdge ? `<br><span class="match-context">Recorded ${safe(new Date(row.recorded_at).toLocaleString())}</span>` : ''}</td><td>${fmtOdds(row.odds)}</td><td>${fmtPct(row.cover_probability)}</td><td>${fmtPct(row.market_no_vig_probability)}</td>${showEdge ? `<td>${fmtNum(Number(row.probability_edge) * 100, 2)} pp</td>` : ''}<td><span class="result-chip ${result.toLowerCase()}">${safe(result)}</span></td><td class="${rowUnits > 0 ? 'units-positive' : rowUnits < 0 ? 'units-negative' : ''}">${Number.isFinite(rowUnits) ? `${rowUnits > 0 ? '+' : ''}${rowUnits.toFixed(2)}` : '—'}</td></tr>`;
+      return `<tr><td><strong>${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</strong><br><span class="match-context">vs ${safe(row.opponent)}</span>${showEdge ? `<br><span class="match-context">Recorded ${safe(new Date(row.recorded_at).toLocaleString())}</span>` : ''}</td><td>${fmtOdds(row.odds)}</td><td>${fmtPct(row.cover_probability)}</td><td>${fmtPct(row.market_no_vig_probability)}</td>${showEdge ? `<td>${fmtNum(Number(row.probability_edge) * 100, 2)} pp</td>` : ''}<td><span class="result-chip ${result.toLowerCase()}">${safe(result)}</span>${row.recorded_at && row.model_version === state.data?.model?.version ? `<br><span class="match-context">${safe(recordedLineStatus(row))}</span>` : ''}</td><td class="${rowUnits > 0 ? 'units-positive' : rowUnits < 0 ? 'units-negative' : ''}">${Number.isFinite(rowUnits) ? `${rowUnits > 0 ? '+' : ''}${rowUnits.toFixed(2)}` : '—'}</td></tr>`;
     }).join('');
     return `<section class="history-day"><div class="history-day-heading"><strong>${safe(label)}</strong><span>${dayWins}-${dayLosses} · ${dayUnits > 0 ? '+' : ''}${dayUnits.toFixed(2)} units</span></div><div class="history-table-wrap"><table class="history-table"><thead><tr><th>${lineLabels ? 'Line' : 'Play'}</th><th>Price</th><th>Model</th><th>Market</th>${showEdge ? '<th>Claimed edge</th>' : ''}<th>Result</th><th>Units</th></tr></thead><tbody>${body}</tbody></table></div></section>`;
   }).join('') : `<div class="empty"><strong>No results in this range</strong>${lineLabels ? 'Qualifying lines will appear here as they are recorded.' : 'Change the dates or result filter.'}</div>`;

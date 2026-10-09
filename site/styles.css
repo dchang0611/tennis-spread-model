@@ -88,7 +88,7 @@ h2 { font-size: clamp(34px,5vw,58px); }
 .explain-card p { color: var(--muted); line-height: 1.65; margin-bottom: 0; }
 .history-table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); }
 .history-groups { display: grid; gap: 18px; }
-.history-day { border: 1px solid var(--line); background: var(--panel); }
+.history-day { min-width: 0; border: 1px solid var(--line); background: var(--panel); }
 .history-day-heading { display: flex; justify-content: space-between; gap: 16px; padding: 15px 17px; border-bottom: 1px solid var(--line); background: var(--panel-2); }
 .history-day-heading strong { font-family: var(--display); font-size: 22px; font-weight: 500; }
 .history-day-heading span { color: var(--muted); font-size: 12px; }
