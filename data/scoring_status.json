@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-09T05:24:35.005916+00:00",
+  "checked_at": "2026-10-09T05:34:51.475354+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
@@ -25,21 +25,6 @@
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Yibing Wu",
-      "player_b": "Alexander Zverev",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Yibing Wu",
-      "player_b": "Alexander Zverev",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Yibing Wu",
-      "player_b": "Alexander Zverev",
-      "reason": "No unique independently verified future start time"
-    },
-    {
       "player_a": "Lorenzo Musetti",
       "player_b": "Yi Zhou",
       "reason": "No unique independently verified future start time"
@@ -137,11 +122,6 @@
     {
       "player_a": "Taylor Fritz",
       "player_b": "Matteo Arnaldi",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Adolfo Daniel Vallejo",
-      "player_b": "Tommy Paul",
       "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
@@ -270,6 +250,11 @@
       "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
+      "player_a": "Alex Michelsen",
+      "player_b": "Botic Van De Zandschulp",
+      "reason": "Independent schedule has not confirmed a start time yet"
+    },
+    {
       "player_a": "Jan-Lennard Struff",
       "player_b": "Daniil Medvedev",
       "reason": "No unique independently verified future start time"
@@ -352,16 +337,6 @@
     {
       "player_a": "Frances Tiafoe",
       "player_b": "Yannick Hanfmann",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Frances Tiafoe",
-      "player_b": "Yannick Hanfmann",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Alexander Blockx",
-      "player_b": "Quentin Halys",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
@@ -529,5 +504,5 @@
   "training_matches": 3638,
   "training_max_date": "2026-10-08",
   "paper_candidates": 3,
-  "source_hash": "59f59ffb6998d2e28cab588d5b9dd2aaf617fe69a5c5f2ca9616055076bc9e1b"
+  "source_hash": "de4971e14ea0dd64f7f163cc60a14703a47b591445a445173c3b2af703b7dc49"
 }
