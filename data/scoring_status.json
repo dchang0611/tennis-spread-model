@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-09T04:55:15.207418+00:00",
+  "checked_at": "2026-10-09T05:10:49.175425+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
@@ -40,16 +40,6 @@
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Alex Molcan",
-      "player_b": "Alex De Minaur",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Alex Molcan",
-      "player_b": "Alex De Minaur",
-      "reason": "No unique independently verified future start time"
-    },
-    {
       "player_a": "Lorenzo Musetti",
       "player_b": "Yi Zhou",
       "reason": "No unique independently verified future start time"
@@ -245,6 +235,26 @@
       "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
+      "player_a": "Casper Ruud",
+      "player_b": "Yunchaokete Bu",
+      "reason": "Independent schedule has not confirmed a start time yet"
+    },
+    {
+      "player_a": "Casper Ruud",
+      "player_b": "Yunchaokete Bu",
+      "reason": "Independent schedule has not confirmed a start time yet"
+    },
+    {
+      "player_a": "Casper Ruud",
+      "player_b": "Yunchaokete Bu",
+      "reason": "Independent schedule has not confirmed a start time yet"
+    },
+    {
+      "player_a": "Casper Ruud",
+      "player_b": "Yunchaokete Bu",
+      "reason": "Independent schedule has not confirmed a start time yet"
+    },
+    {
       "player_a": "Alex Michelsen",
       "player_b": "Botic Van De Zandschulp",
       "reason": "Independent schedule has not confirmed a start time yet"
@@ -345,8 +355,8 @@
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Alexander Blockx",
-      "player_b": "Quentin Halys",
+      "player_a": "Frances Tiafoe",
+      "player_b": "Yannick Hanfmann",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
@@ -385,28 +395,8 @@
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Tomas Machac",
-      "player_b": "Alexander Bublik",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Tomas Machac",
-      "player_b": "Alexander Bublik",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Tomas Machac",
-      "player_b": "Alexander Bublik",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Tomas Machac",
-      "player_b": "Alexander Bublik",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Tomas Machac",
-      "player_b": "Alexander Bublik",
+      "player_a": "Alexander Blockx",
+      "player_b": "Quentin Halys",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
@@ -435,8 +425,28 @@
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Roman Safiullin",
-      "player_b": "Francisco Cerundolo",
+      "player_a": "Tomas Machac",
+      "player_b": "Alexander Bublik",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Tomas Machac",
+      "player_b": "Alexander Bublik",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Tomas Machac",
+      "player_b": "Alexander Bublik",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Tomas Machac",
+      "player_b": "Alexander Bublik",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Tomas Machac",
+      "player_b": "Alexander Bublik",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
@@ -468,11 +478,6 @@
       "player_a": "Roman Safiullin",
       "player_b": "Francisco Cerundolo",
       "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Hubert Hurkacz",
-      "player_b": "Novak Djokovic",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
       "player_a": "Hubert Hurkacz",
@@ -519,5 +524,5 @@
   "training_matches": 3638,
   "training_max_date": "2026-10-08",
   "paper_candidates": 3,
-  "source_hash": "852009c4551f471937a12885c2d92b1c401fabfa03c00490081e33c17300bf41"
+  "source_hash": "d52e43f8e58bd66273815f49503f6d88e28fdd43ef212ab857a2542ab610e20e"
 }

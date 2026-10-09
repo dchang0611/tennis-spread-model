@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-09T04:54:00.269981+00:00",
+  "checked_at": "2026-10-09T05:09:17.425474+00:00",
   "match_date": "2026-10-08",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
@@ -51,28 +51,6 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "De Minaur A.",
-      "player_b": "Molcan A.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3343465&timezone=0",
-      "source_date": "2026-10-09",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Bublik A.",
-      "player_b": "Machac T.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3343523&timezone=0",
-      "source_date": "2026-10-09",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
       "player_a": "Khachanov K.",
       "player_b": "Fery A.",
       "tournament": "Shanghai",
@@ -100,6 +78,17 @@
       "tournament": "Shanghai",
       "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3343391&timezone=0",
+      "source_date": "2026-10-09",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Bublik A.",
+      "player_b": "Machac T.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3343523&timezone=0",
       "source_date": "2026-10-09",
       "surface": "Hard",
       "source_timezone": "Europe/London",
@@ -315,17 +304,16 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 28,
+  "events_found": 27,
   "events": [
     "Brandon Nakashima vs Matteo Berrettini",
     "Frances Tiafoe vs Yannick Hanfmann",
     "Alexander Blockx vs Quentin Halys",
     "Yibing Wu vs Alexander Zverev",
-    "Alex Molcan vs Alex De Minaur",
-    "Tomas Machac vs Alexander Bublik",
     "Arthur Fery vs Karen Khachanov",
     "Jenson Brooksby vs Alejandro Davidovich Fokina",
     "Jakub Mensik vs Miomir Kecmanovic",
+    "Tomas Machac vs Alexander Bublik",
     "Roman Safiullin vs Francisco Cerundolo",
     "Hubert Hurkacz vs Novak Djokovic",
     "Lorenzo Musetti vs Yi Zhou",
@@ -346,16 +334,14 @@
     "Zizou Bergs vs Ignacio Buse",
     "Tomas Martin Etcheverry vs Dalibor Svrcina"
   ],
-  "spread_markets_found": 28,
-  "parser_failures": [
-    "Spread participant order could not be verified: Casper Ruud vs Yunchaokete Bu"
-  ],
+  "spread_markets_found": 27,
+  "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 28,
+  "unique_event_pages": 27,
   "unpriced_spread_markets": [],
   "executable_spread_markets": 27,
   "matches_parsed": 27,
-  "partial_coverage": true,
-  "rows_saved": 113,
+  "partial_coverage": false,
+  "rows_saved": 114,
   "error": null
 }
