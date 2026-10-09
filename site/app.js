@@ -93,10 +93,12 @@ function renderFocusChips(factors) {
 }
 
 function renderBoardChips(row) {
-  const rationale = String(row.feature_rationale || '');
-  return boardFactorDefinitions.map(([label, pattern]) => {
-    const matched = pattern.test(rationale);
-    return `<span class="factor-chip ${matched ? 'matched' : ''}">${matched ? '&#10003;' : '&#8212;'} ${safe(label)}</span>`;
+  return boardFactorDefinitions.map(([label]) => {
+    const raw = row[numericFactors[label]];
+    const recorded = raw !== null && raw !== undefined && String(raw).trim() !== '' && Number.isFinite(Number(raw));
+    const matched = recorded && positiveFactor(row, label);
+    const detail = !recorded ? 'Not recorded' : Number(raw) > 0 ? 'Favors this player' : Number(raw) < 0 ? 'Favors opponent' : 'Even';
+    return `<span class="factor-chip ${matched ? 'matched' : ''}" title="${safe(detail)}">${matched ? '&#10003;' : '&#8212;'} ${safe(label)}${recorded ? '' : ' · Not recorded'}</span>`;
   }).join('');
 }
 
