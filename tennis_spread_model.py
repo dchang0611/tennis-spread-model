@@ -340,7 +340,7 @@ def score_markets(
                 and conservative_edge >= thresholds.min_conservative_edge
             )
             scored.append({
-                **{key: row.get(key) for key in ['observation_id', 'competition_id', 'candidate', 'event_id', 'market_start', 'independent_start', 'surface_source', 'surface_source_date', 'format_source_hash', 'format_rule']},
+                **{key: row.get(key) for key in ['observation_id', 'competition_id', 'candidate', 'event_id', 'market_start', 'independent_start', 'surface_source', 'surface_source_date', 'surface_timezone', 'format_source_hash', 'format_rule']},
                 **{feature: float(row[feature]) * (1 if side == 'A' else -1) for feature in FEATURE_SETS['elo_serve_return_margin']},
                 **{key: row.get(key) for key in ['scheduled_start', 'collected_at', 'event_url', 'metadata_source', 'format_source', 'best_of', 'tourney_level', 'feature_id', 'model_version', 'source_hash']},
                 "date": row.get("date"),

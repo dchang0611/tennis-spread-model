@@ -6,8 +6,28 @@ import re
 import unicodedata
 import hashlib
 from urllib.request import Request, urlopen
+from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
 BASE = 'https://www.tennisexplorer.com'
+SOURCE_TIMEZONE = 'Europe/London'
+
+
+def source_url(url):
+    """Pin the site's London setting; its GMT label is a standard-time label.
+
+    London observes DST. Treat the rendered calendar as Europe/London, not UTC
+    or the tournament's location, and verify the returned setting on every fetch.
+    """
+    parts = urlsplit(url)
+    if parts.scheme != 'https' or parts.netloc != 'www.tennisexplorer.com':
+        raise RuntimeError('Unexpected surface source host.')
+    query = [(k,v) for k,v in parse_qsl(parts.query) if k != 'timezone']
+    return urlunsplit((parts.scheme,parts.netloc,parts.path,urlencode(query+[('timezone','0')]),''))
+
+
+def verify_source_timezone(html):
+    if not re.search(r'class="timezone"[^>]*title="Timezone: London, Dublin, Lisbon"', html):
+        raise RuntimeError('Surface source did not confirm the requested London timezone')
 
 
 def clean(value):
@@ -16,6 +36,11 @@ def clean(value):
 
 def aliases(name):
     words = re.findall(r'[a-z]+', unicodedata.normalize('NFKD', name).encode('ascii', 'ignore').decode().lower())
+    # Verified source identity: /player/yunchaokete/ uses both "Bu Yunchaokete"
+    # (page title) and "Yunchaokete Bu" (profile heading), with "Yunchaokete B."
+    # on schedules. Do not reverse arbitrary names or expand ambiguous initials.
+    if words == ['yunchaokete', 'bu']:
+        words = ['bu', 'yunchaokete']
     if len(words) < 2:
         return set()
     if len(words[-1]) == 1:
@@ -81,7 +106,7 @@ def parse_match_surface(html, expected_date, tournament, source_today=None):
     matches = []
     for header in headers:
         text = clean(header.split('<iframe', 1)[0])
-        source_today = source_today or datetime.now(ZoneInfo('Europe/Prague')).date()
+        source_today = source_today or datetime.now(ZoneInfo(SOURCE_TIMEZONE)).date()
         labels = {source_today: 'Today', source_today + timedelta(days=1): 'Tomorrow', source_today - timedelta(days=1): 'Yesterday'}
         accepted = [expected_date.strftime('%d.%m.%Y')]
         if expected_date in labels:
@@ -100,10 +125,10 @@ def parse_match_surface(html, expected_date, tournament, source_today=None):
 
 
 def fetch_html(url):
-    if not url.startswith(BASE + '/'):
-        raise RuntimeError('Unexpected surface source host.')
-    with urlopen(Request(url, headers={'User-Agent': 'Mozilla/5.0'}), timeout=30) as response:
-        return response.read().decode('utf-8')
+    with urlopen(Request(source_url(url), headers={'User-Agent': 'Mozilla/5.0'}), timeout=30) as response:
+        html = response.read().decode('utf-8')
+    verify_source_timezone(html)
+    return html
 
 
 class LiveSurfaceLookup:
@@ -114,7 +139,7 @@ class LiveSurfaceLookup:
         # Source is in Europe; its date can be one day ahead of Pacific.
         for offset in (0, 1):
             day = match_date + timedelta(days=offset)
-            url = f'{BASE}/next/?type=atp-single&year={day.year}&month={day:%m}&day={day:%d}'
+            url = source_url(f'{BASE}/next/?type=atp-single&year={day.year}&month={day:%m}&day={day:%d}')
             try:
                 self.matches.extend(parse_schedule(fetch(url), day))
             except Exception as exc:
@@ -128,11 +153,12 @@ class LiveSurfaceLookup:
             if (aa & ra and bb & rb) or (aa & rb and bb & ra):
                 candidates[row['source']] = row
         if len(candidates) != 1:
-            raise RuntimeError(f'Expected one live schedule match for {player_a} vs {player_b}; found {len(candidates)}.')
+            raise RuntimeError(f'No unique schedule match for {player_a} vs {player_b} on {self.match_date} or {self.match_date + timedelta(days=1)} ({SOURCE_TIMEZONE}); found {len(candidates)}.')
         row = next(iter(candidates.values()))
         if row['source'] not in self.cache:
-            surface = parse_match_surface(self.fetch(row['source']), date.fromisoformat(row['source_date']), row['tournament'])
-            self.cache[row['source']] = {**row, 'surface': surface, 'method': 'live_match_metadata'}
+            surface = parse_match_surface(self.fetch(source_url(row['source'])), date.fromisoformat(row['source_date']), row['tournament'])
+            self.cache[row['source']] = {**row, 'source':source_url(row['source']), 'surface': surface,
+                                       'source_timezone':SOURCE_TIMEZONE, 'method': 'live_match_metadata'}
         return self.cache[row['source']]
 
     def tournament_metadata(self, assignment):

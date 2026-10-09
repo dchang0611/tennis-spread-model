@@ -7,7 +7,10 @@ state again on the event response, and reads the displayed paired spread prices.
 Relative Today/Tomorrow labels are never used as the slate boundary.
 
 Each match uses its own Pacific date for the board and archive identity. Its
-dated Tennis Explorer schedule/header supplies the surface. The linked edition's
+dated Tennis Explorer schedule/header supplies the surface. Every request pins the
+site's London timezone setting and verifies the returned timezone label. Calendar
+dates use Europe/London (including DST), never the tournament location or an
+unverified site default; source timezone is preserved with each captured line. The linked edition's
 singles winner ranking points identify supported ATP 250/500/1000 or Grand Slam
 categories; no completed matches or previous year's tournament are required.
 Unknown editions/categories remain excluded. The format follows ATP Tour singles
@@ -21,7 +24,7 @@ Number of Sets (https://www.itftennis.com/en/about-us/governance/rules-and-regul
 Novel formats require an explicit reviewed implementation, never an ATP default.
 
 The independent schedule must confirm a future pregame start and agree with the
-surface record's European calendar date. If the two confirmed start times differ,
+surface record's explicitly verified London calendar date. If the two confirmed start times differ,
 the earlier time closes collection/scoring. A TBD time is not a verified start.
 Conflicting independent snapshots exclude the affected competition rather than
 allowing a later loop iteration to overwrite it silently.

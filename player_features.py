@@ -16,7 +16,10 @@ import tennis_betting_model_priority_features_v2_snapshotfix as base
 
 
 def name_key(value):
-    return ''.join(re.findall('[a-z0-9]+', unicodedata.normalize('NFKD', str(value)).encode('ascii', 'ignore').decode().lower()))
+    key = ''.join(re.findall('[a-z0-9]+', unicodedata.normalize('NFKD', str(value)).encode('ascii', 'ignore').decode().lower()))
+    # ESPN/profile title reverses the verified player name used by TML/Novig.
+    # Keep the existing training identity; never merge arbitrary reversed names.
+    return 'yunchaoketebu' if key == 'buyunchaokete' else key
 
 
 def level(value):

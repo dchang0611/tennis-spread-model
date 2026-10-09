@@ -8,7 +8,7 @@ from urllib.request import Request, urlopen
 
 import pandas as pd
 from player_features import name_key, normalize_matches, level, mark_date_precision
-from surface_calendar import aliases
+from surface_calendar import aliases, SOURCE_TIMEZONE
 
 TML = 'https://stats.tennismylife.org/data/'
 ESPN = 'https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates={date}&limit=1000'
@@ -196,8 +196,10 @@ def enrich_markets(markets, matches, competitions, now):
             if market_start.tzinfo is None or not pd.Timestamp(now) < market_start <= pd.Timestamp(now)+pd.Timedelta(days=2):
                 raise ValueError('No verified future market timestamp')
             source_day = str(row['surface_source_date'])
-            if any(str(t.tz_convert('Europe/Prague').date()) != source_day for t in (start, market_start)):
-                raise ValueError('Absolute match dates disagree with dated surface evidence')
+            if row.get('surface_timezone') != SOURCE_TIMEZONE:
+                raise ValueError('Surface calendar timezone was not explicitly verified')
+            if any(str(t.tz_convert(SOURCE_TIMEZONE).date()) != source_day for t in (start, market_start)):
+                raise ValueError(f'Schedule date conflict: Novig {market_start.isoformat()}, independent {start.isoformat()}, surface calendar {source_day} ({SOURCE_TIMEZONE})')
             # Two schedules can differ by court order. Both must still be
             # pregame; the earlier time is the conservative collection cutoff.
             cutoff = min(start, market_start)

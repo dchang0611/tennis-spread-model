@@ -3,15 +3,16 @@ import copy
 import unittest
 import pandas as pd
 from novig_scraper import scheduled_events, verify_event_metadata
-from surface_calendar import parse_tournament_category
+from surface_calendar import parse_tournament_category, source_url, verify_source_timezone, aliases
 from match_data import enrich_markets
 from run_paper_pipeline import archive_paper
 from test_model_repair import POLICY
+from player_features import name_key
 
 
 def market(start='2031-01-01T08:30:00Z'):
     return dict(date='2030-12-31', player_a='Alpha One', player_b='Beta Two',
-                market_start=start, surface='Hard', surface_source_date='2031-01-01',
+                market_start=start, surface='Hard', surface_source_date='2031-01-01', surface_timezone='Europe/London',
                 tournament='New Tournament', tourney_level='A', event_description='First Round',
                 format_source='https://www.tennisexplorer.com/new/2031/atp-men/', format_source_hash='a'*64)
 
@@ -23,6 +24,38 @@ def competition(start='2031-01-01T09:00:00Z'):
 
 
 class EventMetadataTests(unittest.TestCase):
+    def test_verified_bu_name_order_does_not_reverse_arbitrary_names(self):
+        self.assertTrue(aliases('Yunchaokete Bu') & aliases('Yunchaokete B.'))
+        self.assertTrue(aliases('Yunchaokete Bu') & aliases('Bu Yunchaokete'))
+        self.assertFalse(aliases('Yunchaokete Bu') & aliases('Yibing Wu'))
+        self.assertFalse(aliases('One Alpha') & aliases('One A.'))
+        self.assertEqual(name_key('Bu Yunchaokete'),name_key('Yunchaokete Bu'))
+    def test_source_setting_is_explicit_and_overrides_existing_timezone(self):
+        url='https://www.tennisexplorer.com/match-detail/?id=123&timezone=8'
+        self.assertEqual(source_url(url),'https://www.tennisexplorer.com/match-detail/?id=123&timezone=0')
+        self.assertEqual(source_url(source_url(url)),source_url(url))
+        verify_source_timezone('<span class="timezone" title="Timezone: London, Dublin, Lisbon">GMT+0</span>')
+        with self.assertRaises(RuntimeError):
+            verify_source_timezone('<span class="timezone" title="Timezone: Berlin, Prague, Vienna">GMT+1</span>')
+
+    def test_october_eighth_pacific_slate_is_october_ninth_source_day(self):
+        row={**market('2026-10-09T04:00:00Z'),'date':'2026-10-08','surface_source_date':'2026-10-09'}
+        rows,excluded=enrich_markets(pd.DataFrame([row]),pd.DataFrame(),[competition('2026-10-09T04:10:00Z')],'2026-10-08T20:00:00Z')
+        self.assertFalse(excluded)
+        self.assertEqual(rows.iloc[0]['date'],'2026-10-08')
+
+    def test_source_calendar_uses_verified_zone_across_midnight_and_dst(self):
+        # These instants are still the stated day in London but tomorrow in
+        # Prague. Never reinterpret the selected source calendar using Prague.
+        for day,stamp in [('2031-07-08','2031-07-08T22:30:00Z'),('2031-01-08','2031-01-08T23:30:00Z')]:
+            row={**market(stamp),'surface_source_date':day}
+            rows,excluded=enrich_markets(pd.DataFrame([row]),pd.DataFrame(),[competition(stamp)],pd.Timestamp(stamp)-pd.Timedelta(hours=2))
+            self.assertFalse(excluded)
+            self.assertEqual(len(rows),1)
+        rows,excluded=self.enrich({**market(),'surface_timezone':None})
+        self.assertTrue(rows.empty)
+        self.assertIn('timezone',excluded[0]['reason'])
+
     def enrich(self, row=None, comp=None):
         return enrich_markets(pd.DataFrame([row or market()]), pd.DataFrame(),
                               [comp or competition()], '2031-01-01T07:59:00Z')
@@ -43,7 +76,7 @@ class EventMetadataTests(unittest.TestCase):
     def test_independent_dated_surface_mismatch_is_rejected(self):
         rows, excluded = self.enrich({**market(), 'surface_source_date':'2031-01-02'})
         self.assertTrue(rows.empty)
-        self.assertIn('Absolute match dates', excluded[0]['reason'])
+        self.assertIn('Schedule date conflict', excluded[0]['reason'])
 
     def test_unknown_category_qualifying_and_conflicting_schedule_stay_closed(self):
         for row, comp in [({**market(),'tourney_level':None},competition()),
