@@ -1,22 +1,11 @@
 {
   "success": true,
-  "checked_at": "2026-10-09T05:33:26.834087+00:00",
+  "checked_at": "2026-10-09T05:45:41.856889+00:00",
   "match_date": "2026-10-08",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [],
   "surface_assignments": [
-    {
-      "player_a": "Berrettini M.",
-      "player_b": "Nakashima B.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3343467&timezone=0",
-      "source_date": "2026-10-09",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
     {
       "player_a": "Hanfmann Y.",
       "player_b": "Tiafoe F.",
@@ -51,22 +40,22 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Khachanov K.",
-      "player_b": "Fery A.",
+      "player_a": "Davidovich Fokina A.",
+      "player_b": "Brooksby J.",
       "tournament": "Shanghai",
       "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3343785&timezone=0",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3344085&timezone=0",
       "source_date": "2026-10-09",
       "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Davidovich Fokina A.",
-      "player_b": "Brooksby J.",
+      "player_a": "Khachanov K.",
+      "player_b": "Fery A.",
       "tournament": "Shanghai",
       "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3344085&timezone=0",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3343785&timezone=0",
       "source_date": "2026-10-09",
       "surface": "Hard",
       "source_timezone": "Europe/London",
@@ -304,14 +293,13 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 27,
+  "events_found": 26,
   "events": [
-    "Brandon Nakashima vs Matteo Berrettini",
     "Frances Tiafoe vs Yannick Hanfmann",
     "Alexander Blockx vs Quentin Halys",
     "Yibing Wu vs Alexander Zverev",
-    "Arthur Fery vs Karen Khachanov",
     "Jenson Brooksby vs Alejandro Davidovich Fokina",
+    "Arthur Fery vs Karen Khachanov",
     "Jakub Mensik vs Miomir Kecmanovic",
     "Tomas Machac vs Alexander Bublik",
     "Roman Safiullin vs Francisco Cerundolo",
@@ -334,14 +322,14 @@
     "Zizou Bergs vs Ignacio Buse",
     "Tomas Martin Etcheverry vs Dalibor Svrcina"
   ],
-  "spread_markets_found": 27,
+  "spread_markets_found": 26,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 27,
+  "unique_event_pages": 26,
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 27,
-  "matches_parsed": 27,
+  "executable_spread_markets": 26,
+  "matches_parsed": 26,
   "partial_coverage": false,
-  "rows_saved": 110,
+  "rows_saved": 104,
   "error": null
 }

@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-09T05:34:51.475354+00:00",
+  "checked_at": "2026-10-09T05:47:08.742099+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
@@ -50,6 +50,11 @@
       "reason": "No unique independently verified future start time"
     },
     {
+      "player_a": "Lorenzo Musetti",
+      "player_b": "Yi Zhou",
+      "reason": "No unique independently verified future start time"
+    },
+    {
       "player_a": "Nuno Borges",
       "player_b": "Jiri Lehecka",
       "reason": "Independent schedule has not confirmed a start time yet"
@@ -250,11 +255,6 @@
       "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
-      "player_a": "Alex Michelsen",
-      "player_b": "Botic Van De Zandschulp",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
       "player_a": "Jan-Lennard Struff",
       "player_b": "Daniil Medvedev",
       "reason": "No unique independently verified future start time"
@@ -337,11 +337,6 @@
     {
       "player_a": "Frances Tiafoe",
       "player_b": "Yannick Hanfmann",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Alexander Blockx",
-      "player_b": "Quentin Halys",
       "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
@@ -485,7 +480,7 @@
       "reason": "Recent incomplete match needs workload/injury reconciliation"
     }
   ],
-  "market_matchups": 27,
+  "market_matchups": 26,
   "formats": {
     "3": {
       "status": "paper_only",
@@ -500,9 +495,9 @@
       "training_max_date": "2026-09-13 00:00:00"
     }
   },
-  "modeled_matchups": 3,
+  "modeled_matchups": 2,
   "training_matches": 3638,
   "training_max_date": "2026-10-08",
-  "paper_candidates": 3,
-  "source_hash": "de4971e14ea0dd64f7f163cc60a14703a47b591445a445173c3b2af703b7dc49"
+  "paper_candidates": 2,
+  "source_hash": "941be6ed1654930211d5991976dd22f081b7c129031c768e899dbda8b7de2a9c"
 }
