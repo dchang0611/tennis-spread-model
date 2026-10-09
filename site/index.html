@@ -57,6 +57,7 @@
         </div>
       </div>
       <div id="statusBanner" class="status-banner loading">Loading the latest board…</div>
+      <p>Highest-ranked line per matchup is shown first; expand for both sides and alternate spreads. Highlights mean stronger recorded stats, not support for covering the spread. Elo factors feed the model; other factors are context.</p>
       <div id="board" class="board-grid" aria-live="polite"></div>
       <div id="boardExclusions"></div>
     </section>
@@ -152,10 +153,11 @@
         <div>
           <p class="eyebrow">BUILD YOUR FACTOR FILTER</p>
           <h2 id="focusTitle">Factor confluence</h2>
-          <p>The chosen dataset and match format apply here too. Factors use recorded numeric player-minus-opponent differences greater than zero. Historical replay and current paper results are never pooled.</p>
+          <p>A filtered view of the spread board, with identical lines, values and highlights. Choose which stronger-player stats to require. Highlights alone do not establish value at the offered spread.</p>
         </div>
       </div>
       <div class="focus-controls">
+        <label><input id="focusPositiveEdge" type="checkbox" checked> Positive model edge only (current lines)</label>
         <div><span class="metric-label">SELECT FACTORS</span><div id="focusFactorSelectors" class="factor-selector-list" role="group" aria-label="Select confluence factors"></div></div>
         <label class="match-control"><span class="metric-label">MATCH RULE</span><select id="focusMinMatches" aria-label="Minimum selected factors required"></select></label>
       </div>
@@ -167,7 +169,7 @@
         </table>
       </div>
       <div id="focusBoard" class="board-grid" aria-live="polite"></div>
-      <article class="explain-card"><h3>Custom view, same data checks</h3><p>Select the factors and minimum match count you want to study. The historical summary and current lines update together. These overlapping groups describe recorded factors; they do not establish a predictive edge.</p></article>
+      <article class="explain-card"><h3>Custom view, same data checks</h3><p>Select the factors and minimum match count you want to study. Factor choices apply to both history and current lines. The edge filter applies only to current lines; historical records are unchanged. These overlapping groups describe recorded factors; they do not establish a predictive edge.</p></article>
     </section>
 
     <section id="experimentPanel" class="panel" aria-labelledby="experimentTitle">

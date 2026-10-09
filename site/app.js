@@ -1,3 +1,8 @@
+function renderSpreadLine(row) {
+    const isBet = row.recommendation === 'BET';
+    return `<article class="pick-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div><span class="metric-label">START</span><span class="metric-value">${safe(new Date(row.scheduled_start).toLocaleString([], {month:'short', day:'numeric', hour: 'numeric', minute: '2-digit'}))}</span></div><div class="factor-chips">${Number(row.probability_edge) <= 0 ? '<span class="factor-chip">No positive model edge at this price</span>' : ''}${renderBoardChips(row)}</div></article>`;
+  }
+
 const state = { data: null, format: 3, historySource: 'paper', historyFilter: 'ALL', historyV2Filter: 'ALL', focusSelected: ['Recent surface game margin', 'Opponent-adjusted return', 'Surface-adjusted Elo'], focusMinMatches: 2, dateFrom: '', dateTo: '' };
 
 const fmtPct = value => value !== null && value !== undefined && value !== '' && Number.isFinite(Number(value)) ? `${(Number(value) * 100).toFixed(1)}%` : '—';
@@ -6,7 +11,6 @@ const fmtOdds = value => { const number = Number(value); return Number.isFinite(
 const safe = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 
 function renderBoard() {
-  // Rationale text is generated from distinct model-driver families upstream.
   const root = document.querySelector('#board');
   const expanded = new Set([...document.querySelectorAll('details[data-disclosure][open]')].map(node => node.dataset.disclosure));
   const picks = visiblePaperPicks().filter(row => inDateRange(row.date));
@@ -22,10 +26,6 @@ function renderBoard() {
     root.innerHTML = `<div class="empty"><strong>No current model lines</strong>${expired ? 'The board does not present expired prices as current.' : excluded.length ? 'The captured matchups did not pass the checks listed above.' : `Awaiting verified lines for the selected dates and BO${state.format} format.`}</div>` + captures;
     return;
   }
-  const renderLine = row => {
-    const isBet = row.recommendation === 'BET';
-    return `<article class="pick-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div><span class="metric-label">START</span><span class="metric-value">${safe(new Date(row.scheduled_start).toLocaleString([], {month:'short', day:'numeric', hour: 'numeric', minute: '2-digit'}))}</span></div><div class="factor-chips">${renderBoardChips(row)}</div></article>`;
-  };
   const groups = new Map();
   for (const row of picks) {
     const key = JSON.stringify([row.date, ...[row.player, row.opponent].sort()]);
@@ -34,7 +34,7 @@ function renderBoard() {
   }
   root.innerHTML = [...groups].map(([key, rows]) => {
     const identity = 'match:' + key;
-    return `<section class="match-lines">${renderLine(rows[0])}${rows.length > 1 ? `<details class="board-details" data-disclosure="${safe(identity)}" ${expanded.has(identity) ? 'open' : ''}><summary>${rows.length - 1} other scored lines for this matchup</summary>${rows.slice(1).map(renderLine).join('')}</details>` : ''}</section>`;
+    return `<section class="match-lines">${renderSpreadLine(rows[0])}${rows.length > 1 ? `<details class="board-details" data-disclosure="${safe(identity)}" ${expanded.has(identity) ? 'open' : ''}><summary>${rows.length - 1} other scored lines for this matchup</summary>${rows.slice(1).map(renderSpreadLine).join('')}</details>` : ''}</section>`;
   }).join('') + captures;
 }
 
@@ -83,27 +83,17 @@ function datasetNotice() {
     : ` BO${state.format} · Fixed retrospective baseline replay, not prospective validation. Original publication timestamps are unavailable; prior-UTC-day availability is assumed. Unresolved outcomes remain visible.`;
 }
 
-function focusFactors(row) {
-  const rationale = String(row.feature_rationale || '');
-  return focusFactorDefinitions.filter(([, pattern]) => pattern.test(rationale)).map(([label]) => label);
-}
-
-function renderFocusChips(factors) {
-  return focusFactorDefinitions.map(([label]) => `<span class="factor-chip ${factors.includes(label) ? 'matched' : ''}">${factors.includes(label) ? '&#10003;' : '&#8212;'} ${safe(label)}</span>`).join('');
-}
-
 function renderBoardChips(row) {
   return boardFactorDefinitions.map(([label]) => {
     const raw = row[numericFactors[label]];
     const recorded = raw !== null && raw !== undefined && String(raw).trim() !== '' && Number.isFinite(Number(raw));
     const matched = recorded && positiveFactor(row, label);
-    const detail = !recorded ? 'Not recorded' : Number(raw) > 0 ? 'Favors this player' : Number(raw) < 0 ? 'Favors opponent' : 'Even';
-    return `<span class="factor-chip ${matched ? 'matched' : ''}" title="${safe(detail)}">${matched ? '&#10003;' : '&#8212;'} ${safe(label)}${recorded ? '' : ' · Not recorded'}</span>`;
+    const detail = !recorded ? 'Not recorded' : Number(raw) > 0 ? 'Higher than opponent' : Number(raw) < 0 ? 'Lower than opponent' : 'Even';
+    return `<span class="factor-chip ${matched ? 'matched' : ''}" title="${safe(detail)}">${matched ? '&#10003;' : '&#8212;'} ${safe(label)} · ${!recorded ? 'Not recorded' : ['elo_diff', 'surface_elo_diff'].includes(numericFactors[label]) ? 'Model input' : 'Context only'}</span>`;
   }).join('');
 }
 
 function selectedConfluenceFactors(row) {
-  const rationale = String(row.feature_rationale || '');
   return confluenceFactorDefinitions
     .filter(([label, pattern]) => state.focusSelected.includes(label) && positiveFactor(row,label))
     .map(([label]) => label);
@@ -121,18 +111,16 @@ function currentPicks() {
 }
 
 function renderFocus() {
-  const qualifying = currentPicks().map(row => ({ row, factors: selectedConfluenceFactors(row) })).filter(item => item.factors.length >= state.focusMinMatches);
+  const positiveOnly = document.querySelector('#focusPositiveEdge').checked;
+  const qualifying = currentPicks().filter(row => !positiveOnly || Number(row.probability_edge) > 0).map(row => ({ row, factors: selectedConfluenceFactors(row) })).filter(item => item.factors.length >= state.focusMinMatches);
   const notice = document.querySelector('#focusNotice');
   notice.textContent = qualifying.length
     ? `${qualifying.length} line${qualifying.length === 1 ? '' : 's'} match at least ${state.focusMinMatches} of ${state.focusSelected.length} selected factors.`
     : `No lines in this slate match at least ${state.focusMinMatches} of ${state.focusSelected.length} selected factors.`;
+  notice.textContent += ` Same spread-board lines, prices, projections and highlights. ${positiveOnly ? 'Positive model edge only.' : 'Zero and negative edges included for comparison.'}`;
   notice.className = `status-banner ${qualifying.length ? '' : 'closed'}`;
   renderFocusPerformance();
-  document.querySelector('#focusBoard').innerHTML = qualifying.length ? qualifying.map(({ row, factors }) => {
-    const isBet = row.recommendation === 'BET';
-    const chips = state.focusSelected.map(label => `<span class="factor-chip ${factors.includes(label) ? 'matched' : ''}">${factors.includes(label) ? '&#10003;' : '&#8212;'} ${safe(label)}</span>`).join('');
-    return `<article class="pick-card focus-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div class="confluence-score">${factors.length}/${state.focusSelected.length}</div><div><span class="metric-label">START</span><span class="metric-value">${safe(new Date(row.scheduled_start).toLocaleString([], {month:'short', day:'numeric', hour: 'numeric', minute: '2-digit'}))}</span></div><div class="factor-chips">${chips}</div></article>`;
-  }).join('') : '<div class="empty"><strong>No matching lines</strong>Choose a lower match rule, different factors, or another date range.</div>';
+  document.querySelector('#focusBoard').innerHTML = qualifying.length ? qualifying.map(({ row }) => renderSpreadLine(row)).join('') : '<div class="empty"><strong>No matching lines</strong>No spread lines meet the edge and factor filters. Adjust the filters to inspect other lines.</div>';
 }
 
 function noRecordedFactorsRow(context) {
@@ -380,3 +368,5 @@ load();
 setInterval(load, 5*60*1000);
 
 setInterval(() => { renderBoard(); renderFocus(); renderExperiment(); }, 30000);
+
+document.querySelector('#focusPositiveEdge').addEventListener('change', renderFocus);
