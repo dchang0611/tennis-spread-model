@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-10T17:40:58.490377+00:00",
+  "checked_at": "2026-10-10T17:47:13.072497+00:00",
   "match_date": "2026-10-10",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
@@ -362,6 +362,6 @@
   "executable_spread_markets": 12,
   "matches_parsed": 12,
   "partial_coverage": false,
-  "rows_saved": 40,
+  "rows_saved": 42,
   "error": null
 }

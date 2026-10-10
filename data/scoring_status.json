@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-10T17:43:27.954312+00:00",
+  "checked_at": "2026-10-10T17:49:49.054608+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
@@ -63,6 +63,11 @@
       "player_a": "Dalibor Svrcina",
       "player_b": "Daniil Medvedev",
       "reason": "Independent schedule has not confirmed a start time yet"
+    },
+    {
+      "player_a": "Arthur Gea",
+      "player_b": "Ben Shelton",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Arthur Gea",
@@ -154,5 +159,5 @@
   "training_matches": 3652,
   "training_max_date": "2026-10-09",
   "paper_candidates": 3,
-  "source_hash": "683fae7eba3e1b4fe8d7ef77bed5b45f20dd9673fe3c164549bcdf387dc20775"
+  "source_hash": "8cd4f70f14cb83b3aafe3a995b81b52992763805f5536caf06580ce81fe740bf"
 }
