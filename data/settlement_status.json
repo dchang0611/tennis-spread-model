@@ -1,6 +1,14 @@
 {
-  "complete": false,
-  "checked_at": "2026-10-10T17:47:02.803976+00:00",
+  "complete": true,
+  "checked_at": "2026-10-10T17:54:49.496935+00:00",
+  "excluded_from_followup": [
+    {
+      "date": "2026-09-30",
+      "player": "Alex Molcan",
+      "opponent": "Arthur Rinderknech",
+      "result": "UNVERIFIED"
+    }
+  ],
   "sources": {
     "season_csv": {
       "ok": true,
@@ -23,11 +31,5 @@
       "matches": 405
     }
   },
-  "unsettled_prior_bets": [
-    {
-      "date": "2026-09-30",
-      "player": "Alex Molcan",
-      "opponent": "Arthur Rinderknech"
-    }
-  ]
+  "unsettled_prior_bets": []
 }

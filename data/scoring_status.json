@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-10T17:49:49.054608+00:00",
+  "checked_at": "2026-10-10T17:57:57.534946+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
@@ -57,11 +57,6 @@
     {
       "player_a": "Rafael Jodar",
       "player_b": "Jiri Lehecka",
-      "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Dalibor Svrcina",
-      "player_b": "Daniil Medvedev",
       "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
@@ -140,7 +135,7 @@
       "reason": "Recent result missing or ambiguous in statistics feed"
     }
   ],
-  "market_matchups": 12,
+  "market_matchups": 11,
   "formats": {
     "3": {
       "status": "paper_only",
@@ -159,5 +154,5 @@
   "training_matches": 3652,
   "training_max_date": "2026-10-09",
   "paper_candidates": 3,
-  "source_hash": "8cd4f70f14cb83b3aafe3a995b81b52992763805f5536caf06580ce81fe740bf"
+  "source_hash": "8bd9db20dbbe350363381e44c0164affdb9f2ae528342ef723249cedb37fc17b"
 }

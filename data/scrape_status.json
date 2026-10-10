@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-10T17:47:13.072497+00:00",
+  "checked_at": "2026-10-10T17:55:00.775841+00:00",
   "match_date": "2026-10-10",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
@@ -227,6 +227,17 @@
       "method": "live_match_metadata"
     },
     {
+      "player_a": "Fils A.",
+      "player_b": "Van De Zandschulp B.",
+      "tournament": "Shanghai",
+      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3345095&timezone=0",
+      "source_date": "2026-10-12",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
       "player_a": "Bergs Z.",
       "player_b": "Alcaraz C.",
       "tournament": "Shanghai",
@@ -315,7 +326,7 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 28,
+  "events_found": 29,
   "events": [
     "Yanaki Milev vs Francesco Passaro",
     "Alibek Kachmazov vs Jay Dylan Hara Friend",
@@ -337,6 +348,7 @@
     "Casper Ruud vs Learner Tien",
     "Taylor Fritz vs Stefanos Tsitsipas",
     "Valentin Vacherot vs Tommy Paul",
+    "Botic Van De Zandschulp vs Arthur Fils",
     "Carlos Alcaraz vs Zizou Bergs",
     "Jie Cui vs Fajing Sun",
     "Mattia Bellucci vs Elias Ymer",
@@ -346,22 +358,24 @@
     "Vit Kopriva vs Pavel Kotov",
     "Marin \u010cili\u0107 vs Adam Walton"
   ],
-  "spread_markets_found": 19,
+  "spread_markets_found": 20,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 28,
+  "unique_event_pages": 29,
   "unpriced_spread_markets": [
     "Laslo Djere vs Daniil Glinka",
     "Matej Dodig vs Elmer Moller",
+    "Dalibor Svrcina vs Daniil Medvedev",
     "Felix Auger-Aliassime vs Pablo Carreno Busta",
     "Casper Ruud vs Learner Tien",
     "Taylor Fritz vs Stefanos Tsitsipas",
     "Valentin Vacherot vs Tommy Paul",
+    "Botic Van De Zandschulp vs Arthur Fils",
     "Carlos Alcaraz vs Zizou Bergs"
   ],
-  "executable_spread_markets": 12,
-  "matches_parsed": 12,
+  "executable_spread_markets": 11,
+  "matches_parsed": 11,
   "partial_coverage": false,
-  "rows_saved": 42,
+  "rows_saved": 40,
   "error": null
 }
