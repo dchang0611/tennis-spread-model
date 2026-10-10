@@ -20,6 +20,9 @@ jobs:
     timeout-minutes: 30
     outputs:
       pipeline_ready: ${{ steps.health.outputs.pipeline_ready }}
+      board_sha: ${{ steps.receipt.outputs.board_sha }}
+      app_sha: ${{ steps.receipt.outputs.app_sha }}
+      styles_sha: ${{ steps.receipt.outputs.styles_sha }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -96,6 +99,16 @@ jobs:
             tennis_model_output/spread_rolling_predictions.csv
           retention-days: 90
       - uses: actions/configure-pages@v5
+      - name: Record exact publication receipts
+        id: receipt
+        run: |
+          python - <<'PY'
+          import hashlib, os
+          from pathlib import Path
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as out:
+              for key, path in [('board_sha','site/data/board.json'), ('app_sha','site/app.js'), ('styles_sha','site/styles.css')]:
+                  out.write(f'{key}={hashlib.sha256(Path(path).read_bytes()).hexdigest()}\n')
+          PY
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
@@ -109,6 +122,36 @@ jobs:
       - name: Deploy paper-only board and diagnostics
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify the public site matches this run
+        env:
+          BOARD_SHA: ${{ needs.build.outputs.board_sha }}
+          APP_SHA: ${{ needs.build.outputs.app_sha }}
+          STYLES_SHA: ${{ needs.build.outputs.styles_sha }}
+        run: |
+          python3 - <<'PY'
+          import hashlib, os, time, urllib.request
+          base = 'https://dchang0611.github.io/tennis-spread-model/'
+          paths = [('data/board.json','BOARD_SHA'), ('app.js','APP_SHA'), ('styles.css','STYLES_SHA')]
+          errors = []
+          for attempt in range(6):
+              errors = []
+              for path, key in paths:
+                  try:
+                      request = urllib.request.Request(base + path + '?verify=' + os.environ['GITHUB_RUN_ID'], headers={'Cache-Control':'no-cache'})
+                      with urllib.request.urlopen(request, timeout=20) as response:
+                          actual = hashlib.sha256(response.read()).hexdigest()
+                      if actual != os.environ[key]:
+                          errors.append(path + ': public content differs from this run')
+                  except Exception as exc:
+                      errors.append(path + ': ' + str(exc))
+              if not errors:
+                  break
+              if attempt < 5:
+                  time.sleep(10)
+          if errors:
+              raise SystemExit('Publication verification failed: ' + '; '.join(errors))
+          print('Verified public board, application and styles match this run exactly.')
+          PY
       - name: Fail closed when paper inputs are unavailable
         if: needs.build.outputs.pipeline_ready != 'true'
         run: |

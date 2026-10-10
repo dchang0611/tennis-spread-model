@@ -488,10 +488,20 @@ def main() -> None:
         (pd.to_datetime(history["date"], errors="coerce") < today)
     ]
     status_path = Path(args.status_file)
+    exclusions_path = Path(__file__).with_name('settlement_exclusions.json')
+    exclusions = json.loads(exclusions_path.read_text(encoding='utf-8')) if exclusions_path.exists() else []
+    excluded_keys = {bet_identity(r['date'], r['player'], r['opponent']) for r in exclusions}
+    excluded_mask = prior_pending.apply(lambda r: bet_identity(r['date'], r['player'], r['opponent']) in excluded_keys, axis=1) if not prior_pending.empty else pd.Series(False, index=prior_pending.index, dtype=bool)
+    ignored_pending = prior_pending[excluded_mask]
+    prior_pending = prior_pending[~excluded_mask]
     status_path.parent.mkdir(parents=True, exist_ok=True)
     status_path.write_text(json.dumps({
         "complete": prior_pending.empty,
         "checked_at": now,
+        "excluded_from_followup": [
+            {"date": str(row.date), "player": row.player, "opponent": row.opponent, "result": "UNVERIFIED"}
+            for row in ignored_pending.itertuples(index=False)
+        ],
         "sources": source_status if args.mode in {"all", "settle"} else {},
         "unsettled_prior_bets": [
             {"date": str(row.date), "player": row.player, "opponent": row.opponent}
@@ -503,7 +513,7 @@ def main() -> None:
             f"{row.player} vs {row.opponent} ({row.date})"
             for row in prior_pending.itertuples(index=False)
         )
-        print(f"Settlement incomplete; the board must remain closed: {pairs}")
+        print(f"Settlement follow-up remains incomplete: {pairs}")
     settled = history[history["result"].isin(["WIN", "LOSS", "PUSH", "VOID"])]
     pending = history[history["result"].astype(str).str.upper() == "PENDING"]
     print(f"History now contains {len(history)} tracked bets, {len(settled)} settled, {len(pending)} pending.")
