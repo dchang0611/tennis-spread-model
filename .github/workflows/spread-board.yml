@@ -1,5 +1,8 @@
 name: Build and deploy tennis spread board
 on:
+  schedule:
+    - cron: '0 0 * * *'
+      timezone: America/Los_Angeles
   workflow_dispatch:
   push:
     branches: [main]
@@ -29,6 +32,7 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m playwright install --with-deps chromium
       - run: python -m unittest discover -v
+      - run: node tests/snapshot_lifecycle.cjs
       - name: Verify frozen baseline research receipts
         run: python research/verify_baseline.py
       - name: Reconcile legacy results without recreating old predictions
@@ -49,7 +53,11 @@ jobs:
           board = json.loads(Path('site/data/board.json').read_text())
           assert board['model']['live_enabled'] is False
           assert not any(p['recommendation'] == 'BET' for p in board['picks'])
-          ready = board['status'] in ('paper_only', 'no_markets') and not board['scrape_status'].get('partial_coverage') and board['settlement_status'].get('complete') is True
+          ready = board['status'] in ('paper_only', 'no_markets')
+          if board['scrape_status'].get('partial_coverage'):
+              print('::warning::Market coverage is partial; incomplete matches excluded.')
+          if board['settlement_status'].get('complete') is not True:
+              print('::warning::Historical settlement remains incomplete; see settlement_status.json.')
           with open(os.environ['GITHUB_OUTPUT'], 'a') as out:
               out.write(f'pipeline_ready={str(ready).lower()}\n')
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:

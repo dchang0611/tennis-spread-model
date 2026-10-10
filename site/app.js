@@ -1,6 +1,6 @@
 function renderSpreadLine(row) {
     const isBet = row.recommendation === 'BET';
-    return `<article class="pick-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div><span class="metric-label">START</span><span class="metric-value">${safe(new Date(row.scheduled_start).toLocaleString([], {month:'short', day:'numeric', hour: 'numeric', minute: '2-digit'}))}</span></div><div class="factor-chips">${Number(row.probability_edge) <= 0 ? '<span class="factor-chip">No positive model edge at this price</span>' : ''}${renderBoardChips(row)}</div></article>`;
+    return `<article class="pick-card ${isBet ? 'bet' : ''}"><div><div class="player-name">${safe(row.player)} ${Number(row.spread) > 0 ? '+' : ''}${fmtNum(row.spread)}</div><div class="match-context">vs ${safe(row.opponent)} · ${safe(row.surface || 'Unknown surface')} · ${safe(row.tournament || '')}</div></div><div><span class="metric-label">PRICE</span><span class="metric-value">${fmtOdds(row.odds)}</span></div><div><span class="metric-label">COVER</span><span class="metric-value">${fmtPct(row.cover_probability)}</span></div><div><span class="metric-label">NO-VIG MARKET</span><span class="metric-value">${fmtPct(row.market_no_vig_probability)}</span></div><div><span class="metric-label">EDGE</span><span class="metric-value ${Number(row.probability_edge) > 0 ? 'positive' : ''}">${fmtPct(row.probability_edge)}</span></div><div><span class="metric-label">START</span><span class="metric-value">${safe(new Date(row.scheduled_start).toLocaleString([], {month:'short', day:'numeric', hour: 'numeric', minute: '2-digit'}))}</span></div><div class="factor-chips"><span class="factor-chip">${safe(snapshotLineStatus(row))}</span>${Number(row.probability_edge) <= 0 ? '<span class="factor-chip">No positive model edge at this price</span>' : ''}${renderBoardChips(row)}</div></article>`;
   }
 
 const state = { data: null, format: 3, historySource: 'paper', historyFilter: 'ALL', historyV2Filter: 'ALL', focusSelected: ['Recent surface game margin', 'Opponent-adjusted return', 'Surface-adjusted Elo'], focusMinMatches: 2, dateFrom: '', dateTo: '' };
@@ -32,7 +32,8 @@ function renderRecordedLines() {
 function renderBoard() {
   const root = document.querySelector('#board');
   const expanded = new Set([...document.querySelectorAll('details[data-disclosure][open]')].map(node => node.dataset.disclosure));
-  const picks = visiblePaperPicks().filter(row => inDateRange(row.date));
+  const picks = snapshotPicks().filter(row => inDateRange(row.date));
+  updateSnapshotBanner();
   const excluded = [...new Map((state.data?.scoring_status?.excluded || []).map(row => [JSON.stringify([row.player_a, row.player_b, row.reason]), row])).values()];
   const scrape = state.data?.scrape_status || {};
   excluded.push(...(scrape.surface_failures || []).map(row => ({player_a:row.match, player_b:'', reason:row.error})), ...(scrape.parser_failures || []).map(reason => ({player_a:'Collection',player_b:'',reason})));
@@ -41,8 +42,8 @@ function renderBoard() {
     ? `<details class="board-details" data-disclosure="excluded" ${expanded.has('excluded') ? 'open' : ''}><summary>Unavailable matchups · ${new Set(excluded.map(row => JSON.stringify([row.player_a,row.player_b]))).size} · View data issues</summary><div class="status-banner">Latest collection${scrape.checked_at ? ` · ${safe(new Date(scrape.checked_at).toLocaleString())}` : ''}: ${Number(scrape.matches_parsed) || 0} priced matchups, ${Number(scrape.rows_saved) || 0} paired spread lines. ${new Set(excluded.map(row => JSON.stringify([row.player_a,row.player_b]))).size} matchups excluded before scoring. These exclusions cover the full collected slate.</div><div class="history-table-wrap"><table class="history-table"><thead><tr><th>Matchup</th><th>Why no model line is shown</th></tr></thead><tbody>${excluded.map(row => `<tr><td>${safe([row.player_a,row.player_b].filter(Boolean).join(' vs '))}</td><td>${safe(row.reason)}</td></tr>`).join('')}</tbody></table></div></details>` : '';
   if (!picks.length) {
     const expired = state.data?.status === 'paper_only' && !(state.data.picks || []).some(row => Date.parse(row.scheduled_start) > Date.now() && Date.parse(row.collected_at) <= Date.now() && Date.now() - Date.parse(row.collected_at) <= 30*60*1000);
-    if (expired) document.querySelector('#statusBanner').textContent = 'Recorded quotes have expired or their matches have started. Awaiting fresh prices.';
-    root.innerHTML = `<div class="empty"><strong>No current model lines</strong>${expired ? 'The board does not present expired prices as current.' : excluded.length ? 'The captured matchups did not pass the checks listed above.' : `Awaiting verified lines for the selected dates and BO${state.format} format.`}</div>` + captures;
+
+    root.innerHTML = `<div class="empty"><strong>No scored snapshot lines for these dates</strong>No verified snapshot matches the selected dates and BO${state.format} format. Recorded history and captured prices remain below; data exclusions are listed separately.</div>` + captures;
     return;
   }
   const groups = new Map();
@@ -126,7 +127,7 @@ function renderFocusControls() {
 }
 
 function currentPicks() {
-  return visiblePaperPicks().filter(row => inDateRange(row.date));
+  return snapshotPicks().filter(row => inDateRange(row.date));
 }
 
 function renderFocus() {
@@ -337,6 +338,34 @@ function renderExperiment() {
     : 'Review progress is unavailable until the experiment update succeeds. Recorded results remain visible.';
 }
 
+function snapshotPicks() {
+  if (state.data?.model?.live_enabled !== false) return [];
+  const rows = state.data?.snapshot?.picks || state.data?.picks || [];
+  return formatRows(rows).filter(row => row.model_version === state.data.model.version &&
+    ['PAPER','PASS'].includes(row.recommendation) &&
+    Number.isFinite(Date.parse(row.collected_at)) && Date.parse(row.collected_at) <= Date.now());
+}
+function snapshotLineStatus(row) {
+  const captured = new Date(row.collected_at).toLocaleString([], {timeZone:'America/Los_Angeles', month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
+  const age = Date.now() - Date.parse(row.collected_at);
+  const status = Date.parse(row.scheduled_start) <= Date.now() ? 'Recorded start passed' :
+    state.data?.status !== 'paper_only' ? 'Refresh unavailable · recorded price' :
+    age > 30*60*1000 ? 'Price expired · daily snapshot' : 'Fresh captured price';
+  return status + ' · captured ' + captured + ' Pacific';
+}
+function updateSnapshotBanner() {
+  const stamp = state.data?.snapshot?.generated_at || state.data?.generated_at;
+  const age = Date.now() - Date.parse(stamp);
+  const failed = state.data?.status === 'closed' || state.data?.refresh_unavailable;
+  const stale = !Number.isFinite(age) || age > 26*60*60*1000;
+  const banner = document.querySelector('#statusBanner');
+  banner.textContent = (failed ? 'Latest refresh unavailable. ' : '') +
+    (stale ? 'Daily refresh overdue. ' : '') +
+    'Recorded snapshot' + (stamp ? ' from ' + new Date(stamp).toLocaleString([], {timeZone:'America/Los_Angeles',dateStyle:'medium',timeStyle:'short'}) + ' Pacific. ' : '. ') +
+    'Prices are timestamped; expired prices remain visible and are not current quotes.' +
+    (failed ? ' Refresh issue: ' + (state.data?.scoring_status?.error || state.data?.scrape_status?.error || 'Unable to verify latest data.') : '');
+  banner.className = 'status-banner' + (failed || stale ? ' closed' : '');
+}
 function visiblePaperPicks() {
   if (state.data?.status !== 'paper_only' || state.data?.model?.live_enabled !== false) return [];
   const now = Date.now();
@@ -375,8 +404,8 @@ async function load() {
     if (state.data.generated_at) document.querySelector('#updatedText').textContent = `Updated ${new Date(state.data.generated_at).toLocaleString([], {dateStyle:'medium', timeStyle:'short'})}`;
     renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderReplay(); renderLegacy(); renderExperiment();
   } catch (error) {
-    if (state.data) state.data = {...state.data, status:'closed', picks:[]};
-    document.querySelector('#statusBanner').textContent = 'The latest board could not be verified. No plays are displayed.';
+    if (state.data) state.data = {...state.data, status:'closed', refresh_unavailable:true};
+    document.querySelector('#statusBanner').textContent = 'The latest refresh could not be verified. Any displayed lines are recorded snapshots.';
     document.querySelector('#statusBanner').className = 'status-banner closed';
     renderPaper(); renderBoard(); renderStrictV2(); renderPerformance(); renderHistory(); renderHistoryV2(); renderFactors(); renderFocus(); renderReplay(); renderLegacy(); renderExperiment();
   }

@@ -229,6 +229,14 @@ def build_payload() -> dict:
 def main() -> None:
     SITE_DATA.mkdir(parents=True, exist_ok=True)
     payload = build_payload()
+    snapshot_path = ROOT / 'data' / 'last_successful_snapshot.json'
+    if payload['picks']:
+        snapshot = {'generated_at': payload['generated_at'], 'picks': payload['picks']}
+        snapshot_path.write_text(json.dumps(snapshot, allow_nan=False), encoding='utf-8')
+    else:
+        snapshot = read_json(snapshot_path) or {}
+    # A failed refresh may show old verified evidence, never current recommendations.
+    payload['snapshot'] = snapshot
     destination = SITE_DATA / "board.json"
     destination.write_text(json.dumps(payload, indent=2, allow_nan=False), encoding="utf-8")
     print(f"Built {destination} with {len(payload['picks'])} scored sides.")

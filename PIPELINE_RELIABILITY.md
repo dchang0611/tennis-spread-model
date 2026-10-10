@@ -36,9 +36,16 @@ The first recorded selection remains immutable; event URL and competition ID
 also prevent recording it again after a date change. Existing prediction hashes
 and experiment history are not rewritten.
 
-The midnight America/Los_Angeles Codex automation dispatches one daily refresh.
-The workflow has no separate scheduled trigger. Dispatch or execution can be late;
-the 30-minute quote limit is enforced at scoring, publication and in the browser.
+GitHub schedules one daily refresh at midnight America/Los_Angeles, including DST.
+The previous Codex dispatch automation is paused to avoid duplicate refreshes.
+Scheduling or execution can be late; the site marks snapshots overdue after 26 hours.
+The 30-minute quote limit remains enforced at scoring and publication. In the
+browser it distinguishes current quotes from expired recorded prices; it no longer
+deletes valid scored evidence. Recorded start times passing also change labels
+rather than removing snapshot lines. Date and format filters still apply.
+The last successful snapshot is persisted with its original timestamp. Failed
+refreshes expose it as recorded evidence with the current failure reason. History,
+experiment selection rules, and locked original prices are never recomputed from it.
 The browser reloads the published payload every five minutes and rechecks quote
 age every 30 seconds. Captured prices remain visible with timestamps and expiry
 labels, independently of whether they qualify for scoring. They are not enrolled
