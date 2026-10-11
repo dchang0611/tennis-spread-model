@@ -37,8 +37,12 @@ also prevent recording it again after a date change. Existing prediction hashes
 and experiment history are not rewritten.
 
 GitHub schedules one daily refresh at midnight America/Los_Angeles, including DST.
+At 1 a.m. Pacific, a recovery check refreshes only if today's successful scoring
+receipt is not already published. Scheduled runs check the public receipt before
+collecting; code pushes and explicit dispatches remain intentional refreshes.
 The previous Codex dispatch automation is paused to avoid duplicate refreshes.
-Scheduling or execution can be late; the site marks snapshots overdue after 26 hours.
+Scheduling or execution can be late; the site marks the daily refresh overdue after
+1 a.m. Pacific if its snapshot is still from a prior date, or after 26 hours.
 The 30-minute quote limit remains enforced at scoring and publication. In the
 browser it distinguishes current quotes from expired recorded prices; it no longer
 deletes valid scored evidence. Recorded start times passing also change labels

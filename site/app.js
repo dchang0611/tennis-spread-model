@@ -357,7 +357,9 @@ function updateSnapshotBanner() {
   const stamp = state.data?.snapshot?.generated_at || state.data?.generated_at;
   const age = Date.now() - Date.parse(stamp);
   const failed = state.data?.status === 'closed' || state.data?.refresh_unavailable;
-  const stale = !Number.isFinite(age) || age > 26*60*60*1000;
+  const pacificDate = value => new Intl.DateTimeFormat('en-CA', {timeZone:'America/Los_Angeles',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(value));
+  const pacificHour = Number(new Intl.DateTimeFormat('en-GB', {timeZone:'America/Los_Angeles',hour:'2-digit',hourCycle:'h23'}).format(new Date()));
+  const stale = !Number.isFinite(age) || age > 26*60*60*1000 || (pacificHour >= 1 && pacificDate(stamp) < pacificDate(Date.now()));
   const banner = document.querySelector('#statusBanner');
   banner.textContent = (failed ? 'Latest refresh unavailable. ' : '') +
     (stale ? 'Daily refresh overdue. ' : '') +
