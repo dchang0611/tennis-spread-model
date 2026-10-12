@@ -1,18 +1,10 @@
 {
   "success": true,
-  "checked_at": "2026-10-12T16:25:24.311019+00:00",
+  "checked_at": "2026-10-12T17:26:04.394747+00:00",
   "match_date": "2026-10-12",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Daniel Jade vs Hugo Gaston",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Francisco Rocha vs Pol Martin Tiffon",
-      "error": "Event start is missing, past or outside the collection window"
-    },
     {
       "match": "Benjamin Bonzi vs Hugo Grenier",
       "error": "Match header has no unique verified surface/date/tournament."
@@ -26,12 +18,20 @@
       "error": "No unique schedule match for Felipe Meligeni Alves vs Joaquin Aguilar Cardozo on 2026-10-12 or 2026-10-13 (Europe/London); found 0."
     },
     {
-      "match": "Max Schoenhaus vs Matteo Martineau",
+      "match": "Felix Balshaw vs Gauthier Onclin",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Felix Balshaw vs Gauthier Onclin",
-      "error": "Match header has no unique verified surface/date/tournament."
+      "match": "Lukas Neumayer vs Elmer Moller",
+      "error": "No unique schedule match for Lukas Neumayer vs Elmer Moller on 2026-10-14 or 2026-10-15 (Europe/London); found 0."
+    },
+    {
+      "match": "Tiago Torres vs Francesco Passaro",
+      "error": "No unique schedule match for Tiago Torres vs Francesco Passaro on 2026-10-14 or 2026-10-15 (Europe/London); found 0."
+    },
+    {
+      "match": "Matej Dodig vs Pedro Martinez",
+      "error": "No unique schedule match for Matej Dodig vs Pedro Martinez on 2026-10-14 or 2026-10-15 (Europe/London); found 0."
     },
     {
       "match": "Billy Harris vs Matisse Bobichon",
@@ -47,6 +47,17 @@
     }
   ],
   "surface_assignments": [
+    {
+      "player_a": "Martin Tiffon P.",
+      "player_b": "Rocha F.",
+      "tournament": "Maia challenger",
+      "tournament_source": "https://www.tennisexplorer.com/maia-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3345435&timezone=0",
+      "source_date": "2026-10-12",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
     {
       "player_a": "Alves M.",
       "player_b": "Fernandez B.",
@@ -312,6 +323,17 @@
       "method": "live_match_metadata"
     },
     {
+      "player_a": "Ribecai M.",
+      "player_b": "Papoe R.",
+      "tournament": "Catania challenger",
+      "tournament_source": "https://www.tennisexplorer.com/catania-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3346349&timezone=0",
+      "source_date": "2026-10-13",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
       "player_a": "Kachmazov A.",
       "player_b": "Friend J.",
       "tournament": "Jinan challenger",
@@ -389,11 +411,22 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Moller E.",
-      "player_b": "Neumayer L.",
-      "tournament": "Maia challenger",
-      "tournament_source": "https://www.tennisexplorer.com/maia-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3345427&timezone=0",
+      "player_a": "Iannaccone F.",
+      "player_b": "Jianu F.",
+      "tournament": "Catania challenger",
+      "tournament_source": "https://www.tennisexplorer.com/catania-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3347643&timezone=0",
+      "source_date": "2026-10-13",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Cadenasso G.",
+      "player_b": "Wehnelt K.",
+      "tournament": "Catania challenger",
+      "tournament_source": "https://www.tennisexplorer.com/catania-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3347641&timezone=0",
       "source_date": "2026-10-13",
       "surface": "Clay",
       "source_timezone": "Europe/London",
@@ -405,17 +438,6 @@
       "tournament": "Maia challenger",
       "tournament_source": "https://www.tennisexplorer.com/maia-challenger/2026/atp-men/",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3345433&timezone=0",
-      "source_date": "2026-10-13",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Passaro F.",
-      "player_b": "Torres T.",
-      "tournament": "Maia challenger",
-      "tournament_source": "https://www.tennisexplorer.com/maia-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3345423&timezone=0",
       "source_date": "2026-10-13",
       "surface": "Clay",
       "source_timezone": "Europe/London",
@@ -438,17 +460,6 @@
       "tournament": "Maia challenger",
       "tournament_source": "https://www.tennisexplorer.com/maia-challenger/2026/atp-men/",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3345431&timezone=0",
-      "source_date": "2026-10-13",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Martinez P.",
-      "player_b": "Dodig M.",
-      "tournament": "Maia challenger",
-      "tournament_source": "https://www.tennisexplorer.com/maia-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3345425&timezone=0",
       "source_date": "2026-10-13",
       "surface": "Clay",
       "source_timezone": "Europe/London",
@@ -543,6 +554,17 @@
       "method": "live_match_metadata"
     },
     {
+      "player_a": "Wiskandt M.",
+      "player_b": "Damas M.",
+      "tournament": "Catania challenger",
+      "tournament_source": "https://www.tennisexplorer.com/catania-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3346335&timezone=0",
+      "source_date": "2026-10-13",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
       "player_a": "Barton H.",
       "player_b": "Mrva M.",
       "tournament": "Olbia challenger",
@@ -583,6 +605,17 @@
       "source": "https://www.tennisexplorer.com/match-detail/?id=3346375&timezone=0",
       "source_date": "2026-10-13",
       "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Caniato C.",
+      "player_b": "Siniakov D.",
+      "tournament": "Catania challenger",
+      "tournament_source": "https://www.tennisexplorer.com/catania-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3347649&timezone=0",
+      "source_date": "2026-10-13",
+      "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
@@ -664,11 +697,10 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 66,
+  "events_found": 69,
   "events": [
-    "Daniel Jade vs Hugo Gaston",
-    "Francisco Rocha vs Pol Martin Tiffon",
     "Benjamin Bonzi vs Hugo Grenier",
+    "Francisco Rocha vs Pol Martin Tiffon",
     "Bruno Fernandez vs Mateus De Carvalho Cardoso Alves",
     "Federico Zeballos vs Lucio Ratti",
     "Wilson Leite vs Hernan Casanova",
@@ -695,14 +727,16 @@
     "Alexandre Muller vs Tomas Machac",
     "Alexander Shevchenko vs Miomir Kecmanovic",
     "Henry Searle vs Massimo Giunta",
+    "Radu Mihai Papoe vs Michele Ribecai",
     "Jay Dylan Hara Friend vs Alibek Kachmazov",
     "Daniel Rincon vs Samuele Pieri",
     "Niels Visker vs Tom Gentzsch",
     "Valentin Royer vs Mathys Erhard",
     "Pavel Lagutin vs Michael Geerts",
-    "Max Schoenhaus vs Matteo Martineau",
     "Federico Bondioli vs Enrico Dalla Valle",
     "Laslo Djere vs Michael Mmoh",
+    "Filip Cristian Jianu vs Federico Iannaccone",
+    "Kai Wehnelt vs Gianluca Cadenasso",
     "Felix Balshaw vs Gauthier Onclin",
     "Lukas Neumayer vs Elmer Moller",
     "Lorenzo Giustino vs Andrea Pellegrino",
@@ -718,10 +752,12 @@
     "George Loffhagen vs Jacob Fearnley",
     "Viktor Durasovic vs Stefano Travaglia",
     "Alejandro Davidovich Fokina vs Hubert Hurkacz",
+    "Miguel Damas vs Max Wiskandt",
     "Maxim Mrva vs Hynek Barton",
     "Simone Massellani vs Dimitar Kuzmanov",
     "August Holmgren vs Luca Nardi",
     "Francesco Maestrelli vs Mili Poljicak",
+    "Daniel Siniakov vs Carlo Alberto Caniato",
     "Murkel Dellien vs Luis Guto Miguel",
     "Facundo Mena vs Pedro Boscardin Dias",
     "Juan Carlos Prado Angelo vs Eduardo Ribeiro",
@@ -733,17 +769,19 @@
     "Jerome Kym vs Clement Chidekh",
     "Otto Virtanen vs Remy Bertola"
   ],
-  "spread_markets_found": 30,
-  "parser_failures": [],
+  "spread_markets_found": 43,
+  "parser_failures": [
+    "Wilson Leite vs Hernan Casanova"
+  ],
   "already_live_events": [],
-  "unique_event_pages": 66,
+  "unique_event_pages": 69,
   "unpriced_spread_markets": [
     "Bruno Fernandez vs Mateus De Carvalho Cardoso Alves",
-    "Felix Auger-Aliassime vs Casper Ruud"
+    "Valentin Royer vs Mathys Erhard"
   ],
-  "executable_spread_markets": 28,
-  "matches_parsed": 28,
+  "executable_spread_markets": 40,
+  "matches_parsed": 40,
   "partial_coverage": true,
-  "rows_saved": 73,
+  "rows_saved": 120,
   "error": null
 }
