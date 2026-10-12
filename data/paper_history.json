@@ -651,10 +651,10 @@
     "recommendation": "PAPER",
     "match_key": "Francisco Cerundolo|Jakub Mensik|2026-10-10|Shanghai",
     "recorded_at": "2026-10-10T17:44:01.209364+00:00",
-    "result": "PENDING",
+    "result": "LOSS",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": -1.0,
+    "settled_at": "2026-10-12T16:29:13.881667+00:00"
   },
   {
     "observation_id": null,
@@ -705,10 +705,10 @@
     "recommendation": "PAPER",
     "match_key": "Alejandro Davidovich Fokina|Frances Tiafoe|2026-10-11|Shanghai",
     "recorded_at": "2026-10-10T17:44:01.209364+00:00",
-    "result": "PENDING",
+    "result": "WIN",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": 0.7518796992481203,
+    "settled_at": "2026-10-12T16:29:13.881667+00:00"
   },
   {
     "observation_id": null,
@@ -759,10 +759,10 @@
     "recommendation": "PAPER",
     "match_key": "Alexander Bublik|Brandon Nakashima|2026-10-11|Shanghai",
     "recorded_at": "2026-10-10T17:44:01.209364+00:00",
-    "result": "PENDING",
+    "result": "WIN",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": 0.9615384615384616,
+    "settled_at": "2026-10-12T16:29:13.881667+00:00"
   },
   {
     "observation_id": null,

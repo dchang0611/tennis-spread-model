@@ -1,6 +1,6 @@
 {
   "complete": true,
-  "checked_at": "2026-10-11T08:02:05.866807+00:00",
+  "checked_at": "2026-10-12T16:25:11.631493+00:00",
   "excluded_from_followup": [
     {
       "date": "2026-09-30",
@@ -12,7 +12,7 @@
   "sources": {
     "season_csv": {
       "ok": true,
-      "matches": 2419
+      "matches": 2481
     },
     "verified_results": {
       "ok": true,
