@@ -1191,10 +1191,10 @@
     "recommendation": "PAPER",
     "match_key": "Alejandro Davidovich Fokina|Arthur Gea|2026-10-14|Shanghai",
     "recorded_at": "2026-10-14T12:39:55.240614+00:00",
-    "result": "PENDING",
+    "result": "VOID",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": 0.0,
+    "settled_at": "2026-10-16T12:05:20.577920+00:00"
   },
   {
     "observation_id": null,
