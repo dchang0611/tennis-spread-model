@@ -1,6 +1,6 @@
 {
   "success": false,
-  "checked_at": "2026-10-16T12:05:20.577920+00:00",
+  "checked_at": "2026-10-16T13:03:55.373572+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
@@ -45,38 +45,8 @@
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Maxim Mrva",
-      "player_b": "Jacob Fearnley",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Maxim Mrva",
-      "player_b": "Jacob Fearnley",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Maxim Mrva",
-      "player_b": "Jacob Fearnley",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Maxim Mrva",
-      "player_b": "Jacob Fearnley",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Maxim Mrva",
-      "player_b": "Jacob Fearnley",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Maxim Mrva",
-      "player_b": "Jacob Fearnley",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Maxim Mrva",
-      "player_b": "Jacob Fearnley",
+      "player_a": "Francesco Passaro",
+      "player_b": "Marco Trungelliti",
       "reason": "No unique independently verified future start time"
     },
     {
@@ -415,6 +385,6 @@
       "reason": "Recent incomplete match needs workload/injury reconciliation"
     }
   ],
-  "market_matchups": 11,
+  "market_matchups": 10,
   "error": "Independent recent-result coverage failed for all players"
 }

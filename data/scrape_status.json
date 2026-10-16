@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-16T12:04:28.884387+00:00",
+  "checked_at": "2026-10-16T13:02:58.927895+00:00",
   "match_date": "2026-10-16",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
@@ -27,17 +27,6 @@
       "source": "https://www.tennisexplorer.com/match-detail/?id=3350467&timezone=0",
       "source_date": "2026-10-16",
       "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Fearnley J.",
-      "player_b": "Mrva M.",
-      "tournament": "Olbia challenger",
-      "tournament_source": "https://www.tennisexplorer.com/olbia-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3350593&timezone=0",
-      "source_date": "2026-10-16",
-      "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
@@ -152,10 +141,9 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 15,
+  "events_found": 14,
   "events": [
     "Massimo Giunta vs Max Wiskandt",
-    "Maxim Mrva vs Jacob Fearnley",
     "Mika Brunold vs Felix Balshaw",
     "Francesco Passaro vs Marco Trungelliti",
     "Luca Nardi vs Michael Mmoh",
@@ -170,14 +158,14 @@
     "Shintaro Mochizuki vs Mattia Bellucci",
     "Alejandro Davidovich Fokina vs Alexander Zverev"
   ],
-  "spread_markets_found": 11,
+  "spread_markets_found": 10,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 15,
+  "unique_event_pages": 14,
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 11,
-  "matches_parsed": 11,
+  "executable_spread_markets": 10,
+  "matches_parsed": 10,
   "partial_coverage": true,
-  "rows_saved": 82,
+  "rows_saved": 76,
   "error": null
 }
