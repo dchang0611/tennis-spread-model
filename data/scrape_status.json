@@ -1,171 +1,186 @@
 {
   "success": true,
-  "checked_at": "2026-10-16T13:02:58.927895+00:00",
-  "match_date": "2026-10-16",
+  "checked_at": "2026-10-17T11:19:57.680495+00:00",
+  "match_date": "2026-10-17",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
     {
-      "match": "Mika Brunold vs Felix Balshaw",
+      "match": "Stefanos Sakellaridis vs Petr Bar Biryukov",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Nicolai Budkov Kjaer vs Hugo Gaston",
+      "match": "Gilles Arnaud Bailly vs Clement Chidekh",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Sascha Gueymard Wayenburg vs Matteo Martineau",
+      "match": "Remy Bertola vs Giovanni Mpetshi Perricard",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Daniil Glinka vs Alexander Shevchenko",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Mika Brunold vs Jerome Kym",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Andrea Guerrieri vs Kimmer Coppejans",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Edas Butvilas vs Nishesh Basavareddy",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Buvaysar Gadamauri vs Martin Damm",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Tom Gentzsch vs Aziz Dougaz",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Matteo Martineau vs Nicolai Budkov Kjaer",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Zizou Bergs vs Toby Samuel",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Damir Dzumhur vs Dino Prizmic",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Hugo Gaston vs Jacob Fearnley",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Juan Manuel Cerundolo vs Mariano Navone",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Raphael Collignon vs Holger Rune",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Max Schoenhaus vs Tallon Griekspoor",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Marcos Giron vs Jan-Lennard Struff",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Kamil Majchrzak vs Botic Van De Zandschulp",
       "error": "Match header has no unique verified surface/date/tournament."
     }
   ],
   "surface_assignments": [
     {
-      "player_a": "Wiskandt M.",
-      "player_b": "Giunta M.",
-      "tournament": "Catania challenger",
-      "tournament_source": "https://www.tennisexplorer.com/catania-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3350467&timezone=0",
-      "source_date": "2026-10-16",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Trungelliti M.",
-      "player_b": "Passaro F.",
+      "player_a": "Passaro F.",
+      "player_b": "Dodig M.",
       "tournament": "Maia challenger",
       "tournament_source": "https://www.tennisexplorer.com/maia-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3350489&timezone=0",
-      "source_date": "2026-10-16",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351149&timezone=0",
+      "source_date": "2026-10-17",
       "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Mmoh M.",
-      "player_b": "Nardi L.",
+      "player_a": "Giunta M.",
+      "player_b": "Cadenasso G.",
+      "tournament": "Catania challenger",
+      "tournament_source": "https://www.tennisexplorer.com/catania-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351133&timezone=0",
+      "source_date": "2026-10-17",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Kasnikowski M.",
+      "player_b": "Dzumhur D.",
       "tournament": "Olbia challenger",
       "tournament_source": "https://www.tennisexplorer.com/olbia-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3350061&timezone=0",
-      "source_date": "2026-10-16",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3350893&timezone=0",
+      "source_date": "2026-10-17",
       "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Cadenasso G.",
-      "player_b": "Moeller M.",
-      "tournament": "Catania challenger",
-      "tournament_source": "https://www.tennisexplorer.com/catania-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3350615&timezone=0",
-      "source_date": "2026-10-16",
-      "surface": "Clay",
+      "player_a": "Fearnley J.",
+      "player_b": "Nardi L.",
+      "tournament": "Olbia challenger",
+      "tournament_source": "https://www.tennisexplorer.com/olbia-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351061&timezone=0",
+      "source_date": "2026-10-17",
+      "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Dodig M.",
-      "player_b": "Boyer T.",
-      "tournament": "Maia challenger",
-      "tournament_source": "https://www.tennisexplorer.com/maia-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3350643&timezone=0",
-      "source_date": "2026-10-16",
+      "player_a": "La Serna J.",
+      "player_b": "Dellien H.",
+      "tournament": "Santa Cruz De La Sierra challenger",
+      "tournament_source": "https://www.tennisexplorer.com/santa-cruz-de-la-sierra-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351183&timezone=0",
+      "source_date": "2026-10-17",
       "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
       "player_a": "Comesana F.",
-      "player_b": "Olivieri G.",
+      "player_b": "Seyboth Wild T.",
       "tournament": "Santa Cruz De La Sierra challenger",
       "tournament_source": "https://www.tennisexplorer.com/santa-cruz-de-la-sierra-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3350219&timezone=0",
-      "source_date": "2026-10-16",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Queiroz Miguel L.",
-      "player_b": "Dellien H.",
-      "tournament": "Santa Cruz De La Sierra challenger",
-      "tournament_source": "https://www.tennisexplorer.com/santa-cruz-de-la-sierra-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3350195&timezone=0",
-      "source_date": "2026-10-16",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "La Serna J.",
-      "player_b": "Roncadelli F.",
-      "tournament": "Santa Cruz De La Sierra challenger",
-      "tournament_source": "https://www.tennisexplorer.com/santa-cruz-de-la-sierra-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3350693&timezone=0",
-      "source_date": "2026-10-16",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Seyboth Wild T.",
-      "player_b": "Kicker N.",
-      "tournament": "Santa Cruz De La Sierra challenger",
-      "tournament_source": "https://www.tennisexplorer.com/santa-cruz-de-la-sierra-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3350701&timezone=0",
-      "source_date": "2026-10-16",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Bellucci M.",
-      "player_b": "Mochizuki S.",
-      "tournament": "Jinan challenger",
-      "tournament_source": "https://www.tennisexplorer.com/jinan-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3350823&timezone=0",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351189&timezone=0",
       "source_date": "2026-10-17",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Zverev A.",
-      "player_b": "Davidovich Fokina A.",
-      "tournament": "Shanghai",
-      "tournament_source": "https://www.tennisexplorer.com/shanghai/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3350377&timezone=0",
-      "source_date": "2026-10-17",
-      "surface": "Hard",
+      "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 14,
+  "events_found": 24,
   "events": [
-    "Massimo Giunta vs Max Wiskandt",
-    "Mika Brunold vs Felix Balshaw",
-    "Francesco Passaro vs Marco Trungelliti",
-    "Luca Nardi vs Michael Mmoh",
-    "Marvin Moeller vs Gianluca Cadenasso",
-    "Tristan Boyer vs Matej Dodig",
-    "Nicolai Budkov Kjaer vs Hugo Gaston",
-    "Sascha Gueymard Wayenburg vs Matteo Martineau",
-    "Genaro Alberto Olivieri vs Francisco Comesana",
-    "Hugo Dellien vs Luis Guto Miguel",
-    "Franco Roncadelli vs Juan Manuel La Serna",
-    "Nicolas Kicker vs Thiago Seyboth Wild",
-    "Shintaro Mochizuki vs Mattia Bellucci",
-    "Alejandro Davidovich Fokina vs Alexander Zverev"
+    "Stefanos Sakellaridis vs Petr Bar Biryukov",
+    "Matej Dodig vs Francesco Passaro",
+    "Gilles Arnaud Bailly vs Clement Chidekh",
+    "Remy Bertola vs Giovanni Mpetshi Perricard",
+    "Daniil Glinka vs Alexander Shevchenko",
+    "Mika Brunold vs Jerome Kym",
+    "Gianluca Cadenasso vs Massimo Giunta",
+    "Andrea Guerrieri vs Kimmer Coppejans",
+    "Damir Dzumhur vs Maks Kasnikowski",
+    "Edas Butvilas vs Nishesh Basavareddy",
+    "Buvaysar Gadamauri vs Martin Damm",
+    "Tom Gentzsch vs Aziz Dougaz",
+    "Luca Nardi vs Jacob Fearnley",
+    "Matteo Martineau vs Nicolai Budkov Kjaer",
+    "Hugo Dellien vs Juan Manuel La Serna",
+    "Thiago Seyboth Wild vs Francisco Comesana",
+    "Zizou Bergs vs Toby Samuel",
+    "Damir Dzumhur vs Dino Prizmic",
+    "Hugo Gaston vs Jacob Fearnley",
+    "Juan Manuel Cerundolo vs Mariano Navone",
+    "Raphael Collignon vs Holger Rune",
+    "Max Schoenhaus vs Tallon Griekspoor",
+    "Marcos Giron vs Jan-Lennard Struff",
+    "Kamil Majchrzak vs Botic Van De Zandschulp"
   ],
-  "spread_markets_found": 10,
+  "spread_markets_found": 6,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 14,
+  "unique_event_pages": 24,
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 10,
-  "matches_parsed": 10,
+  "executable_spread_markets": 6,
+  "matches_parsed": 6,
   "partial_coverage": true,
-  "rows_saved": 76,
+  "rows_saved": 44,
   "error": null
 }
