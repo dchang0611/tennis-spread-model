@@ -1,49 +1,9 @@
 {
   "success": false,
-  "checked_at": "2026-10-17T11:21:08.763258+00:00",
+  "checked_at": "2026-10-17T12:01:29.816289+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
-    {
-      "player_a": "Matej Dodig",
-      "player_b": "Francesco Passaro",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Matej Dodig",
-      "player_b": "Francesco Passaro",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Matej Dodig",
-      "player_b": "Francesco Passaro",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Matej Dodig",
-      "player_b": "Francesco Passaro",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Matej Dodig",
-      "player_b": "Francesco Passaro",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Matej Dodig",
-      "player_b": "Francesco Passaro",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Matej Dodig",
-      "player_b": "Francesco Passaro",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Matej Dodig",
-      "player_b": "Francesco Passaro",
-      "reason": "No unique independently verified future start time"
-    },
     {
       "player_a": "Gianluca Cadenasso",
       "player_b": "Massimo Giunta",
@@ -225,6 +185,6 @@
       "reason": "No unique independently verified future start time"
     }
   ],
-  "market_matchups": 6,
+  "market_matchups": 5,
   "error": "No markets have verified metadata"
 }

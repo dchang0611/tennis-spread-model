@@ -1,24 +1,16 @@
 {
   "success": true,
-  "checked_at": "2026-10-17T11:19:57.680495+00:00",
+  "checked_at": "2026-10-17T12:00:28.255763+00:00",
   "match_date": "2026-10-17",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
     {
-      "match": "Stefanos Sakellaridis vs Petr Bar Biryukov",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Gilles Arnaud Bailly vs Clement Chidekh",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
       "match": "Remy Bertola vs Giovanni Mpetshi Perricard",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Daniil Glinka vs Alexander Shevchenko",
+      "match": "Gilles Arnaud Bailly vs Clement Chidekh",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
@@ -34,11 +26,11 @@
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Buvaysar Gadamauri vs Martin Damm",
+      "match": "Tom Gentzsch vs Aziz Dougaz",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Tom Gentzsch vs Aziz Dougaz",
+      "match": "Buvaysar Gadamauri vs Martin Damm",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
@@ -79,17 +71,6 @@
     }
   ],
   "surface_assignments": [
-    {
-      "player_a": "Passaro F.",
-      "player_b": "Dodig M.",
-      "tournament": "Maia challenger",
-      "tournament_source": "https://www.tennisexplorer.com/maia-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351149&timezone=0",
-      "source_date": "2026-10-17",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
     {
       "player_a": "Giunta M.",
       "player_b": "Cadenasso G.",
@@ -146,21 +127,18 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 24,
+  "events_found": 21,
   "events": [
-    "Stefanos Sakellaridis vs Petr Bar Biryukov",
-    "Matej Dodig vs Francesco Passaro",
-    "Gilles Arnaud Bailly vs Clement Chidekh",
     "Remy Bertola vs Giovanni Mpetshi Perricard",
-    "Daniil Glinka vs Alexander Shevchenko",
+    "Gilles Arnaud Bailly vs Clement Chidekh",
     "Mika Brunold vs Jerome Kym",
     "Gianluca Cadenasso vs Massimo Giunta",
-    "Andrea Guerrieri vs Kimmer Coppejans",
     "Damir Dzumhur vs Maks Kasnikowski",
+    "Andrea Guerrieri vs Kimmer Coppejans",
     "Edas Butvilas vs Nishesh Basavareddy",
-    "Buvaysar Gadamauri vs Martin Damm",
-    "Tom Gentzsch vs Aziz Dougaz",
     "Luca Nardi vs Jacob Fearnley",
+    "Tom Gentzsch vs Aziz Dougaz",
+    "Buvaysar Gadamauri vs Martin Damm",
     "Matteo Martineau vs Nicolai Budkov Kjaer",
     "Hugo Dellien vs Juan Manuel La Serna",
     "Thiago Seyboth Wild vs Francisco Comesana",
@@ -173,14 +151,14 @@
     "Marcos Giron vs Jan-Lennard Struff",
     "Kamil Majchrzak vs Botic Van De Zandschulp"
   ],
-  "spread_markets_found": 6,
+  "spread_markets_found": 5,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 24,
+  "unique_event_pages": 21,
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 6,
-  "matches_parsed": 6,
+  "executable_spread_markets": 5,
+  "matches_parsed": 5,
   "partial_coverage": true,
-  "rows_saved": 44,
+  "rows_saved": 36,
   "error": null
 }
