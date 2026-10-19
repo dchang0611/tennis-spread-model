@@ -1,30 +1,10 @@
 {
   "success": false,
-  "checked_at": "2026-10-19T14:21:35.218812+00:00",
+  "checked_at": "2026-10-19T15:22:38.439608+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
     {
-      "player_a": "Elmer Moller",
-      "player_b": "Tristan Boyer",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Elmer Moller",
-      "player_b": "Tristan Boyer",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Elmer Moller",
-      "player_b": "Tristan Boyer",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Elmer Moller",
-      "player_b": "Tristan Boyer",
-      "reason": "No unique independently verified future start time"
-    },
-    {
       "player_a": "Andres Andrade",
       "player_b": "Max Alcala Gurri",
       "reason": "No unique independently verified future start time"
@@ -75,73 +55,8 @@
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Jose Pereira",
-      "player_b": "Mateus De Carvalho Cardoso Alves",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Jose Pereira",
-      "player_b": "Mateus De Carvalho Cardoso Alves",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Jose Pereira",
-      "player_b": "Mateus De Carvalho Cardoso Alves",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Jose Pereira",
-      "player_b": "Mateus De Carvalho Cardoso Alves",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Jose Pereira",
-      "player_b": "Mateus De Carvalho Cardoso Alves",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Jose Pereira",
-      "player_b": "Mateus De Carvalho Cardoso Alves",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Jose Pereira",
-      "player_b": "Mateus De Carvalho Cardoso Alves",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Frazier Rengifo",
-      "player_b": "Deigo Dedura-Palomero",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Frazier Rengifo",
-      "player_b": "Deigo Dedura-Palomero",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Frazier Rengifo",
-      "player_b": "Deigo Dedura-Palomero",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Frazier Rengifo",
-      "player_b": "Deigo Dedura-Palomero",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Frazier Rengifo",
-      "player_b": "Deigo Dedura-Palomero",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Frazier Rengifo",
-      "player_b": "Deigo Dedura-Palomero",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Frazier Rengifo",
-      "player_b": "Deigo Dedura-Palomero",
+      "player_a": "Sander Jong",
+      "player_b": "Kenta Miyoshi",
       "reason": "No unique independently verified future start time"
     },
     {
@@ -217,6 +132,26 @@
     {
       "player_a": "Duncan Chan",
       "player_b": "Gavin Young",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Jose Pereira",
+      "player_b": "Mateus De Carvalho Cardoso Alves",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Jose Pereira",
+      "player_b": "Mateus De Carvalho Cardoso Alves",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Jose Pereira",
+      "player_b": "Mateus De Carvalho Cardoso Alves",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Frazier Rengifo",
+      "player_b": "Deigo Dedura-Palomero",
       "reason": "No unique independently verified future start time"
     },
     {
@@ -460,8 +395,18 @@
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Govind Nanda",
-      "player_b": "Daniel Milavsky",
+      "player_a": "Timo Legout",
+      "player_b": "Edward Winter",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Timo Legout",
+      "player_b": "Edward Winter",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Timo Legout",
+      "player_b": "Edward Winter",
       "reason": "No unique independently verified future start time"
     },
     {
@@ -472,6 +417,26 @@
     {
       "player_a": "Govind Nanda",
       "player_b": "Daniel Milavsky",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Govind Nanda",
+      "player_b": "Daniel Milavsky",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Mitchell Krueger",
+      "player_b": "Jenson Brooksby",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Mitchell Krueger",
+      "player_b": "Jenson Brooksby",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Mitchell Krueger",
+      "player_b": "Jenson Brooksby",
       "reason": "No unique independently verified future start time"
     },
     {
@@ -487,9 +452,199 @@
     {
       "player_a": "Mees Rottgering",
       "player_b": "Max Hans Rehberg",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Juan Pablo Varillas",
+      "player_b": "Daniel Elahi Galan",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Juan Pablo Varillas",
+      "player_b": "Daniel Elahi Galan",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Juan Pablo Varillas",
+      "player_b": "Daniel Elahi Galan",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Juan Pablo Varillas",
+      "player_b": "Daniel Elahi Galan",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Jay Dylan Hara Friend",
+      "player_b": "Ognjen Milic",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Jay Dylan Hara Friend",
+      "player_b": "Ognjen Milic",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Jay Dylan Hara Friend",
+      "player_b": "Ognjen Milic",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Kaichi Uchida",
+      "player_b": "Zhizhen Zhang",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Kaichi Uchida",
+      "player_b": "Zhizhen Zhang",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Kaichi Uchida",
+      "player_b": "Zhizhen Zhang",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Qian Sun",
+      "player_b": "Fajing Sun",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Qian Sun",
+      "player_b": "Fajing Sun",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Rigele Te",
+      "player_b": "Cruz Hewitt",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Rigele Te",
+      "player_b": "Cruz Hewitt",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Rigele Te",
+      "player_b": "Cruz Hewitt",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Tristan Schoolkate",
+      "player_b": "Sergey Fomin",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Tristan Schoolkate",
+      "player_b": "Sergey Fomin",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Tristan Schoolkate",
+      "player_b": "Sergey Fomin",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Jie Cui",
+      "player_b": "Yu Hsiou Hsu",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Jie Cui",
+      "player_b": "Yu Hsiou Hsu",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Jie Cui",
+      "player_b": "Yu Hsiou Hsu",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Jie Cui",
+      "player_b": "Yu Hsiou Hsu",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Gabriele Piraino",
+      "player_b": "Andrej Nedic",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Gabriele Piraino",
+      "player_b": "Andrej Nedic",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Gabriele Piraino",
+      "player_b": "Andrej Nedic",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Enrico Dalla Valle",
+      "player_b": "Ivan Ivanov",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Enrico Dalla Valle",
+      "player_b": "Ivan Ivanov",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Gianluca Cadenasso",
+      "player_b": "Sandro Kopp",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Gianluca Cadenasso",
+      "player_b": "Sandro Kopp",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Gianluca Cadenasso",
+      "player_b": "Sandro Kopp",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Filip Cristian Jianu",
+      "player_b": "Filippo Romano",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Filip Cristian Jianu",
+      "player_b": "Filippo Romano",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Filip Cristian Jianu",
+      "player_b": "Filippo Romano",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Massimo Giunta",
+      "player_b": "Henry Searle",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Massimo Giunta",
+      "player_b": "Henry Searle",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Yibing Wu",
+      "player_b": "Hayato Matsuoka",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Yibing Wu",
+      "player_b": "Hayato Matsuoka",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Yibing Wu",
+      "player_b": "Hayato Matsuoka",
       "reason": "No unique independently verified future start time"
     }
   ],
-  "market_matchups": 16,
+  "market_matchups": 30,
   "error": "No markets have verified metadata"
 }

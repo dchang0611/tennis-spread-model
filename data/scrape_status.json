@@ -1,18 +1,10 @@
 {
   "success": true,
-  "checked_at": "2026-10-19T14:16:38.579328+00:00",
+  "checked_at": "2026-10-19T15:19:51.646124+00:00",
   "match_date": "2026-10-19",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Lorenzo Musetti vs Matteo Arnaldi",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Stefanos Sakellaridis vs Mikhail Kukushkin",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
     {
       "match": "Moise Kouame vs Lorenzo Sonego",
       "error": "Match header has no unique verified surface/date/tournament."
@@ -120,39 +112,6 @@
   ],
   "surface_assignments": [
     {
-      "player_a": "Ribecai M.",
-      "player_b": "Vasami J.",
-      "tournament": "Florence challenger",
-      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351873&timezone=0",
-      "source_date": "2026-10-19",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Boyer T.",
-      "player_b": "Moller E.",
-      "tournament": "Lisbon challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lisbon-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351965&timezone=0",
-      "source_date": "2026-10-19",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Forti F.",
-      "player_b": "Forejtek J.",
-      "tournament": "Florence challenger",
-      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351867&timezone=0",
-      "source_date": "2026-10-19",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
       "player_a": "Alcala Gurri M.",
       "player_b": "Andrade A.",
       "tournament": "Lisbon challenger",
@@ -169,6 +128,28 @@
       "tournament": "Fort Worth challenger",
       "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3353669&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Rybakov A.",
+      "player_b": "Artnak B.",
+      "tournament": "Fort Worth challenger",
+      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353665&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Young G.",
+      "player_b": "Chan D.",
+      "tournament": "Fort Worth challenger",
+      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353667&timezone=0",
       "source_date": "2026-10-19",
       "surface": "Hard",
       "source_timezone": "Europe/London",
@@ -193,28 +174,6 @@
       "source": "https://www.tennisexplorer.com/match-detail/?id=3353673&timezone=0",
       "source_date": "2026-10-19",
       "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Rybakov A.",
-      "player_b": "Artnak B.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353665&timezone=0",
-      "source_date": "2026-10-19",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Young G.",
-      "player_b": "Chan D.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353667&timezone=0",
-      "source_date": "2026-10-19",
-      "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
@@ -494,21 +453,16 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 62,
+  "events_found": 57,
   "events": [
-    "Jacopo Vasami vs Michele Ribecai",
-    "Lorenzo Musetti vs Matteo Arnaldi",
-    "Elmer Moller vs Tristan Boyer",
-    "Stefanos Sakellaridis vs Mikhail Kukushkin",
-    "Jonas Forejtek vs Francesco Forti",
     "Andres Andrade vs Max Alcala Gurri",
-    "Moise Kouame vs Lorenzo Sonego",
-    "Daniel Salazar Martinez vs Alan Magadan",
     "Sander Jong vs Kenta Miyoshi",
-    "Jose Pereira vs Mateus De Carvalho Cardoso Alves",
-    "Frazier Rengifo vs Deigo Dedura-Palomero",
     "Bor Artnak vs Alex Rybakov",
     "Duncan Chan vs Gavin Young",
+    "Moise Kouame vs Lorenzo Sonego",
+    "Daniel Salazar Martinez vs Alan Magadan",
+    "Jose Pereira vs Mateus De Carvalho Cardoso Alves",
+    "Frazier Rengifo vs Deigo Dedura-Palomero",
     "Franco Ribero vs Alex Hernandez",
     "Juan Sebastian Gomez vs Felipe Meligeni Alves",
     "Sergio Luis Hernandez Ramirez vs Santiago Rodriguez Taverna",
@@ -559,32 +513,14 @@
     "Remy Bertola vs David Goffin",
     "Martin Landaluce vs Stan Wawrinka"
   ],
-  "spread_markets_found": 33,
+  "spread_markets_found": 30,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 62,
-  "unpriced_spread_markets": [
-    "Jacopo Vasami vs Michele Ribecai",
-    "Jonas Forejtek vs Francesco Forti",
-    "Timo Legout vs Edward Winter",
-    "Mitchell Krueger vs Jenson Brooksby",
-    "Juan Pablo Varillas vs Daniel Elahi Galan",
-    "Jay Dylan Hara Friend vs Ognjen Milic",
-    "Kaichi Uchida vs Zhizhen Zhang",
-    "Qian Sun vs Fajing Sun",
-    "Rigele Te vs Cruz Hewitt",
-    "Tristan Schoolkate vs Sergey Fomin",
-    "Jie Cui vs Yu Hsiou Hsu",
-    "Gabriele Piraino vs Andrej Nedic",
-    "Enrico Dalla Valle vs Ivan Ivanov",
-    "Gianluca Cadenasso vs Sandro Kopp",
-    "Filip Cristian Jianu vs Filippo Romano",
-    "Massimo Giunta vs Henry Searle",
-    "Yibing Wu vs Hayato Matsuoka"
-  ],
-  "executable_spread_markets": 16,
-  "matches_parsed": 16,
+  "unique_event_pages": 57,
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 30,
+  "matches_parsed": 30,
   "partial_coverage": true,
-  "rows_saved": 97,
+  "rows_saved": 128,
   "error": null
 }
