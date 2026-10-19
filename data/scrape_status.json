@@ -1,84 +1,16 @@
 {
   "success": true,
-  "checked_at": "2026-10-18T12:29:04.446784+00:00",
-  "match_date": "2026-10-18",
+  "checked_at": "2026-10-19T14:16:38.579328+00:00",
+  "match_date": "2026-10-19",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Gauthier Onclin vs Clement Chidekh",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Borna Gojo vs Francesco Maestrelli",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Clement Tabur vs Valentin Royer",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Mika Brunold vs Matteo Martineau",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Aziz Dougaz vs Nishesh Basavareddy",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Michael Mmoh vs Jan Kumstat",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Nicolai Budkov Kjaer vs Ugo Blanchet",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Andrea Guerrieri vs Martin Damm",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Nicolas Villalon Valdes vs Frazier Rengifo",
-      "error": "No unique schedule match for Nicolas Villalon Valdes vs Frazier Rengifo on 2026-10-18 or 2026-10-19 (Europe/London); found 0."
-    },
-    {
-      "match": "Daniel Salazar Martinez vs Benjamin Torrealba",
-      "error": "No unique schedule match for Daniel Salazar Martinez vs Benjamin Torrealba on 2026-10-18 or 2026-10-19 (Europe/London); found 0."
-    },
-    {
-      "match": "Matteo Covato vs Alex Hernandez",
-      "error": "No unique schedule match for Matteo Covato vs Alex Hernandez on 2026-10-18 or 2026-10-19 (Europe/London); found 0."
-    },
-    {
-      "match": "James Duckworth vs Miomir Kecmanovic",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Facundo Diaz Acosta vs Thiago Agustin Tirante",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Aleksandar Vukic vs Adrian Mannarino",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Brandon Nakashima vs Hamad Medjedovic",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Martin Landaluce vs Stan Wawrinka",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Corentin Moutet vs Ugo Humbert",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
     {
       "match": "Lorenzo Musetti vs Matteo Arnaldi",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Cameron Norrie vs Benjamin Bonzi",
+      "match": "Stefanos Sakellaridis vs Mikhail Kukushkin",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
@@ -86,31 +18,35 @@
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Titouan Droguet vs Daniel Altmaier",
+      "match": "Daniel Salazar Martinez vs Alan Magadan",
+      "error": "No unique schedule match for Daniel Salazar Martinez vs Alan Magadan on 2026-10-19 or 2026-10-20 (Europe/London); found 0."
+    },
+    {
+      "match": "Franco Ribero vs Alex Hernandez",
+      "error": "No unique schedule match for Franco Ribero vs Alex Hernandez on 2026-10-19 or 2026-10-20 (Europe/London); found 0."
+    },
+    {
+      "match": "Tomas Barrios Vera vs Nicolas Jarry",
+      "error": "No unique schedule match for Tomas Barrios Vera vs Nicolas Jarry on 2026-10-19 or 2026-10-20 (Europe/London); found 0."
+    },
+    {
+      "match": "Rinky Hijikata vs Terence Atmane",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Felix Balshaw vs Jaime Faria",
+      "match": "Roman Safiullin vs Sho Shimabukuro",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Zizou Bergs vs Toby Samuel",
+      "match": "Aleksandar Kovacevic vs Stefanos Tsitsipas",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Damir Dzumhur vs Dino Prizmic",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Hugo Gaston vs Jacob Fearnley",
+      "match": "Timofey Skatov vs Fabian Marozsan",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
       "match": "Juan Manuel Cerundolo vs Mariano Navone",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Raphael Collignon vs Holger Rune",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
@@ -122,19 +58,39 @@
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Kamil Majchrzak vs Botic Van De Zandschulp",
-      "error": "No unique schedule match for Kamil Majchrzak vs Botic Van De Zandschulp on 2026-10-19 or 2026-10-20 (Europe/London); found 0."
-    },
-    {
-      "match": "Timofey Skatov vs Fabian Marozsan",
+      "match": "Clement Chidekh vs Botic Van De Zandschulp",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Aleksandar Kovacevic vs Stefanos Tsitsipas",
+      "match": "Corentin Moutet vs Ugo Humbert",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Rinky Hijikata vs Terence Atmane",
+      "match": "Titouan Droguet vs Daniel Altmaier",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Cameron Norrie vs Benjamin Bonzi",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Hugo Gaston vs Jacob Fearnley",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Karen Khachanov vs Rei Sakamoto",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Zizou Bergs vs Toby Samuel",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Raphael Collignon vs Nishesh Basavareddy",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Brandon Nakashima vs Hamad Medjedovic",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
@@ -144,391 +100,33 @@
     {
       "match": "Tomas Machac vs Zangar Nurlanuly",
       "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Luciano Darderi vs James Duckworth",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Damir Dzumhur vs Dino Prizmic",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Remy Bertola vs David Goffin",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Martin Landaluce vs Stan Wawrinka",
+      "error": "Match header has no unique verified surface/date/tournament."
     }
   ],
   "surface_assignments": [
     {
-      "player_a": "Popko D.",
-      "player_b": "Rapagnetta D.",
+      "player_a": "Ribecai M.",
+      "player_b": "Vasami J.",
       "tournament": "Florence challenger",
       "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351905&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Fearnley J.",
-      "player_b": "Dzumhur D.",
-      "tournament": "Olbia challenger",
-      "tournament_source": "https://www.tennisexplorer.com/olbia-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3352729&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Donald M.",
-      "player_b": "Pennaforti G.",
-      "tournament": "Florence challenger",
-      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351901&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Schoen P.",
-      "player_b": "Rocha F.",
-      "tournament": "Lisbon challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lisbon-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351935&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Yuzuki T.",
-      "player_b": "Gulin S.",
-      "tournament": "Lisbon challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lisbon-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351937&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Lagutin P.",
-      "player_b": "Milev Y.",
-      "tournament": "Florence challenger",
-      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351909&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Taberner C.",
-      "player_b": "Marques G.",
-      "tournament": "Lisbon challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lisbon-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351931&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Wehnelt K.",
-      "player_b": "Karol M.",
-      "tournament": "Lisbon challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lisbon-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351941&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Pereira J.",
-      "player_b": "McCormick T.",
-      "tournament": "Cali challenger",
-      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353015&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Magadan A.",
-      "player_b": "Bolivar Idarraga J.",
-      "tournament": "Cali challenger",
-      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353017&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Poling K.",
-      "player_b": "Rybakov A.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3352993&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Miyoshi K.",
-      "player_b": "Chopra K.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3352989&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Rice K.",
-      "player_b": "Jong S.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3352991&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Flores J.",
-      "player_b": "Ribero F.",
-      "tournament": "Cali challenger",
-      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353021&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Meligeni Rodrigues Alves F.",
-      "player_b": "Claverie L.",
-      "tournament": "Cali challenger",
-      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353019&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Woestendick C.",
-      "player_b": "Artnak B.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3352995&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Pascual Ferra R.",
-      "player_b": "Chan D.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3352999&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Trotter J.",
-      "player_b": "Young G.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3352997&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Dedura-Palomero D.",
-      "player_b": "Soriano Barrera A.",
-      "tournament": "Cali challenger",
-      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353025&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Hernandez Ramirez S.",
-      "player_b": "Leite W.",
-      "tournament": "Cali challenger",
-      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353029&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Alves M.",
-      "player_b": "Munk Mesa B.",
-      "tournament": "Cali challenger",
-      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353027&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Vandecasteele Q.",
-      "player_b": "Antonius M.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353003&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Mitsui S.",
-      "player_b": "Zahraj P.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353001&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Pedrico Kravtsov A.",
-      "player_b": "Ostapenkov D.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353005&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Rodriguez Taverna S.",
-      "player_b": "Kestelboim M.",
-      "tournament": "Cali challenger",
-      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353033&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Del Pino M.",
-      "player_b": "Gomez J.",
-      "tournament": "Cali challenger",
-      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353031&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Johnson S.",
-      "player_b": "Arutiunian E.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353007&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Sheehy J.",
-      "player_b": "McHugh A.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353009&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Fenty A.",
-      "player_b": "Bigun K.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353011&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Seyboth Wild T.",
-      "player_b": "Dellien H.",
-      "tournament": "Santa Cruz De La Sierra challenger",
-      "tournament_source": "https://www.tennisexplorer.com/santa-cruz-de-la-sierra-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3352751&timezone=0",
-      "source_date": "2026-10-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Palan D.",
-      "player_b": "Pankin S.",
-      "tournament": "Guangzhou challenger",
-      "tournament_source": "https://www.tennisexplorer.com/guangzhou-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353061&timezone=0",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351873&timezone=0",
       "source_date": "2026-10-19",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Purtseladze S.",
-      "player_b": "Sultanov K.",
-      "tournament": "Guangzhou challenger",
-      "tournament_source": "https://www.tennisexplorer.com/guangzhou-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353063&timezone=0",
-      "source_date": "2026-10-19",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Purcell M.",
-      "player_b": "Zhu E.",
-      "tournament": "Guangzhou challenger",
-      "tournament_source": "https://www.tennisexplorer.com/guangzhou-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3353125&timezone=0",
-      "source_date": "2026-10-19",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "McCabe J.",
-      "player_b": "Ymer E.",
-      "tournament": "Guangzhou challenger",
-      "tournament_source": "https://www.tennisexplorer.com/guangzhou-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351529&timezone=0",
-      "source_date": "2026-10-19",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Alkaya M.",
-      "player_b": "Ilagan A.",
-      "tournament": "Guangzhou challenger",
-      "tournament_source": "https://www.tennisexplorer.com/guangzhou-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351533&timezone=0",
-      "source_date": "2026-10-19",
-      "surface": "Hard",
+      "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
@@ -544,68 +142,211 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Trungelliti M.",
-      "player_b": "Pereira T.",
-      "tournament": "Lisbon challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lisbon-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351951&timezone=0",
+      "player_a": "Forti F.",
+      "player_b": "Forejtek J.",
+      "tournament": "Florence challenger",
+      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351867&timezone=0",
       "source_date": "2026-10-19",
       "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Passaro F.",
-      "player_b": "Elias G.",
+      "player_a": "Alcala Gurri M.",
+      "player_b": "Andrade A.",
       "tournament": "Lisbon challenger",
       "tournament_source": "https://www.tennisexplorer.com/lisbon-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351961&timezone=0",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351963&timezone=0",
       "source_date": "2026-10-19",
       "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Pellegrino A.",
-      "player_b": "Martin Tiffon P.",
-      "tournament": "Lisbon challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lisbon-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351959&timezone=0",
-      "source_date": "2026-10-19",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Morais D.",
-      "player_b": "Caniato C.",
-      "tournament": "Lisbon challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lisbon-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351953&timezone=0",
-      "source_date": "2026-10-19",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Wong C.",
-      "player_b": "Delaney J.",
-      "tournament": "Guangzhou challenger",
-      "tournament_source": "https://www.tennisexplorer.com/guangzhou-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351525&timezone=0",
+      "player_a": "Miyoshi K.",
+      "player_b": "Jong S.",
+      "tournament": "Fort Worth challenger",
+      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353669&timezone=0",
       "source_date": "2026-10-19",
       "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Sun F.",
-      "player_b": "Sun Q.",
-      "tournament": "Guangzhou challenger",
-      "tournament_source": "https://www.tennisexplorer.com/guangzhou-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351535&timezone=0",
-      "source_date": "2026-10-20",
+      "player_a": "Alves M.",
+      "player_b": "Pereira J.",
+      "tournament": "Cali challenger",
+      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353675&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Dedura-Palomero D.",
+      "player_b": "Rengifo F.",
+      "tournament": "Cali challenger",
+      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353673&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Rybakov A.",
+      "player_b": "Artnak B.",
+      "tournament": "Fort Worth challenger",
+      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353665&timezone=0",
+      "source_date": "2026-10-19",
       "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Young G.",
+      "player_b": "Chan D.",
+      "tournament": "Fort Worth challenger",
+      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353667&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Meligeni Rodrigues Alves F.",
+      "player_b": "Gomez J.",
+      "tournament": "Cali challenger",
+      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353951&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Rodriguez Taverna S.",
+      "player_b": "Hernandez Ramirez S.",
+      "tournament": "Cali challenger",
+      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353953&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Antonius M.",
+      "player_b": "Pedrico Kravtsov A.",
+      "tournament": "Fort Worth challenger",
+      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353693&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Bigun K.",
+      "player_b": "Zahraj P.",
+      "tournament": "Fort Worth challenger",
+      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353695&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Arutiunian E.",
+      "player_b": "McHugh A.",
+      "tournament": "Fort Worth challenger",
+      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353697&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Casanova H.",
+      "player_b": "Bueno G.",
+      "tournament": "Cali challenger",
+      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353075&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Ambrogi L.",
+      "player_b": "Maloney P.",
+      "tournament": "Fort Worth challenger",
+      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353043&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Winter E.",
+      "player_b": "Legout T.",
+      "tournament": "Fort Worth challenger",
+      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353041&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Milavsky D.",
+      "player_b": "Nanda G.",
+      "tournament": "Fort Worth challenger",
+      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353057&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Brooksby J.",
+      "player_b": "Krueger M.",
+      "tournament": "Fort Worth challenger",
+      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353039&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Rehberg M.",
+      "player_b": "Rottgering M.",
+      "tournament": "Fort Worth challenger",
+      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353059&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Galan D.",
+      "player_b": "Varillas J.",
+      "tournament": "Cali challenger",
+      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3353065&timezone=0",
+      "source_date": "2026-10-19",
+      "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
@@ -621,11 +362,33 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Matsuoka H.",
-      "player_b": "Wu Y.",
+      "player_a": "Matsuda K.",
+      "player_b": "Zhou Y.",
       "tournament": "Guangzhou challenger",
       "tournament_source": "https://www.tennisexplorer.com/guangzhou-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351543&timezone=0",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3354259&timezone=0",
+      "source_date": "2026-10-20",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Zhang Z.",
+      "player_b": "Uchida K.",
+      "tournament": "Guangzhou challenger",
+      "tournament_source": "https://www.tennisexplorer.com/guangzhou-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351531&timezone=0",
+      "source_date": "2026-10-20",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Sun F.",
+      "player_b": "Sun Q.",
+      "tournament": "Guangzhou challenger",
+      "tournament_source": "https://www.tennisexplorer.com/guangzhou-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351535&timezone=0",
       "source_date": "2026-10-20",
       "surface": "Hard",
       "source_timezone": "Europe/London",
@@ -654,17 +417,6 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Zhang Z.",
-      "player_b": "Uchida K.",
-      "tournament": "Guangzhou challenger",
-      "tournament_source": "https://www.tennisexplorer.com/guangzhou-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351531&timezone=0",
-      "source_date": "2026-10-20",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
       "player_a": "Hsu Y.",
       "player_b": "Cui J.",
       "tournament": "Guangzhou challenger",
@@ -674,102 +426,165 @@
       "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Nedic A.",
+      "player_b": "Piraino G.",
+      "tournament": "Florence challenger",
+      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351877&timezone=0",
+      "source_date": "2026-10-20",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Ivanov I.",
+      "player_b": "Dalla Valle E.",
+      "tournament": "Florence challenger",
+      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351871&timezone=0",
+      "source_date": "2026-10-20",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Kopp S.",
+      "player_b": "Cadenasso G.",
+      "tournament": "Florence challenger",
+      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351881&timezone=0",
+      "source_date": "2026-10-20",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Romano F.",
+      "player_b": "Jianu F.",
+      "tournament": "Florence challenger",
+      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351885&timezone=0",
+      "source_date": "2026-10-20",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Searle H.",
+      "player_b": "Giunta M.",
+      "tournament": "Florence challenger",
+      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351883&timezone=0",
+      "source_date": "2026-10-20",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Matsuoka H.",
+      "player_b": "Wu Y.",
+      "tournament": "Guangzhou challenger",
+      "tournament_source": "https://www.tennisexplorer.com/guangzhou-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3351543&timezone=0",
+      "source_date": "2026-10-20",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
     }
   ],
-  "events_found": 83,
+  "events_found": 62,
   "events": [
-    "Gauthier Onclin vs Clement Chidekh",
-    "Daniele Rapagnetta vs Dmitry Popko",
-    "Borna Gojo vs Francesco Maestrelli",
-    "Clement Tabur vs Valentin Royer",
-    "Damir Dzumhur vs Jacob Fearnley",
-    "Mika Brunold vs Matteo Martineau",
-    "Gabriele Pennaforti vs Matthew William Donald",
-    "Aziz Dougaz vs Nishesh Basavareddy",
-    "Francisco Rocha vs Patrick Schoen",
-    "Svyatoslav Gulin vs Takeru Yuzuki",
-    "Yanaki Milev vs Pavel Lagutin",
-    "Goncalo Marques vs Carlos Taberner",
-    "Michael Mmoh vs Jan Kumstat",
-    "Nicolai Budkov Kjaer vs Ugo Blanchet",
-    "Andrea Guerrieri vs Martin Damm",
-    "Milos Karol vs Kai Wehnelt",
-    "Nicolas Villalon Valdes vs Frazier Rengifo",
-    "Tristan McCormick vs Jose Pereira",
-    "Juan Miguel Bolivar Idarraga vs Alan Magadan",
-    "Alex Rybakov vs Karl Poling",
-    "Keshav Chopra vs Kenta Miyoshi",
-    "Sander Jong vs Keegan Rice",
-    "Franco Ribero vs Jesse Flores",
-    "Lorenzo Claverie vs Felipe Meligeni Alves",
-    "Daniel Salazar Martinez vs Benjamin Torrealba",
-    "Bor Artnak vs Cooper Woestendick",
-    "Duncan Chan vs Roger Pascual Ferra",
-    "Gavin Young vs James Kent Trotter",
-    "Adria Soriano Barrera vs Deigo Dedura-Palomero",
-    "Wilson Leite vs Sergio Luis Hernandez Ramirez",
-    "Bernardo Munk Mesa vs Mateus De Carvalho Cardoso Alves",
-    "Michael Antonius vs Quinn Vandecasteele",
-    "Patrick Zahraj vs Shunsuke Mitsui",
-    "Daniil Ostapenkov vs Albert Pedrico Kravtsov",
-    "Mariano Kestelboim vs Santiago Rodriguez Taverna",
-    "Juan Sebastian Gomez vs Mateo Del Pino",
-    "Matteo Covato vs Alex Hernandez",
-    "Erik Arutiunian vs Spencer Johnson",
-    "Aidan McHugh vs Joshua Sheehy",
-    "Kaylan Bigun vs Andrew Fenty",
-    "Hugo Dellien vs Thiago Seyboth Wild",
-    "Semen Pankin vs Dominik Palan",
-    "Khumoyun Sultanov vs Saba Purtseladze",
-    "Evan Zhu vs Max Purcell",
-    "James Duckworth vs Miomir Kecmanovic",
-    "Facundo Diaz Acosta vs Thiago Agustin Tirante",
-    "Elias Ymer vs James McCabe",
-    "Andre Ilagan vs Mert Alkaya",
-    "Aleksandar Vukic vs Adrian Mannarino",
-    "Brandon Nakashima vs Hamad Medjedovic",
-    "Martin Landaluce vs Stan Wawrinka",
-    "Corentin Moutet vs Ugo Humbert",
+    "Jacopo Vasami vs Michele Ribecai",
     "Lorenzo Musetti vs Matteo Arnaldi",
-    "Cameron Norrie vs Benjamin Bonzi",
-    "Moise Kouame vs Lorenzo Sonego",
-    "Titouan Droguet vs Daniel Altmaier",
-    "Felix Balshaw vs Jaime Faria",
     "Elmer Moller vs Tristan Boyer",
-    "Tiago Pereira vs Marco Trungelliti",
-    "Gastao Elias vs Francesco Passaro",
-    "Pol Martin Tiffon vs Andrea Pellegrino",
-    "Carlo Alberto Caniato vs Diogo Morais",
-    "Jake Delaney vs Chak Lam Coleman Wong",
-    "Zizou Bergs vs Toby Samuel",
-    "Damir Dzumhur vs Dino Prizmic",
-    "Hugo Gaston vs Jacob Fearnley",
-    "Juan Manuel Cerundolo vs Mariano Navone",
-    "Raphael Collignon vs Holger Rune",
-    "Max Schoenhaus vs Tallon Griekspoor",
-    "Marcos Giron vs Jan-Lennard Struff",
-    "Kamil Majchrzak vs Botic Van De Zandschulp",
-    "Qian Sun vs Fajing Sun",
+    "Stefanos Sakellaridis vs Mikhail Kukushkin",
+    "Jonas Forejtek vs Francesco Forti",
+    "Andres Andrade vs Max Alcala Gurri",
+    "Moise Kouame vs Lorenzo Sonego",
+    "Daniel Salazar Martinez vs Alan Magadan",
+    "Sander Jong vs Kenta Miyoshi",
+    "Jose Pereira vs Mateus De Carvalho Cardoso Alves",
+    "Frazier Rengifo vs Deigo Dedura-Palomero",
+    "Bor Artnak vs Alex Rybakov",
+    "Duncan Chan vs Gavin Young",
+    "Franco Ribero vs Alex Hernandez",
+    "Juan Sebastian Gomez vs Felipe Meligeni Alves",
+    "Sergio Luis Hernandez Ramirez vs Santiago Rodriguez Taverna",
+    "Albert Pedrico Kravtsov vs Michael Antonius",
+    "Patrick Zahraj vs Kaylan Bigun",
+    "Aidan McHugh vs Erik Arutiunian",
+    "Gonzalo Bueno vs Hernan Casanova",
+    "Patrick Maloney vs Luciano Emanuel Ambrogi",
+    "Timo Legout vs Edward Winter",
+    "Govind Nanda vs Daniel Milavsky",
+    "Mitchell Krueger vs Jenson Brooksby",
+    "Mees Rottgering vs Max Hans Rehberg",
+    "Juan Pablo Varillas vs Daniel Elahi Galan",
+    "Tomas Barrios Vera vs Nicolas Jarry",
     "Jay Dylan Hara Friend vs Ognjen Milic",
-    "Yibing Wu vs Hayato Matsuoka",
-    "Rigele Te vs Cruz Hewitt",
-    "Tristan Schoolkate vs Sergey Fomin",
+    "Yi Zhou vs Koki Matsuda",
     "Kaichi Uchida vs Zhizhen Zhang",
-    "Jie Cui vs Yu Hsiou Hsu",
-    "Timofey Skatov vs Fabian Marozsan",
-    "Aleksandar Kovacevic vs Stefanos Tsitsipas",
+    "Qian Sun vs Fajing Sun",
+    "Rigele Te vs Cruz Hewitt",
     "Rinky Hijikata vs Terence Atmane",
+    "Tristan Schoolkate vs Sergey Fomin",
+    "Jie Cui vs Yu Hsiou Hsu",
+    "Roman Safiullin vs Sho Shimabukuro",
+    "Aleksandar Kovacevic vs Stefanos Tsitsipas",
+    "Gabriele Piraino vs Andrej Nedic",
+    "Enrico Dalla Valle vs Ivan Ivanov",
+    "Gianluca Cadenasso vs Sandro Kopp",
+    "Filip Cristian Jianu vs Filippo Romano",
+    "Massimo Giunta vs Henry Searle",
+    "Timofey Skatov vs Fabian Marozsan",
+    "Juan Manuel Cerundolo vs Mariano Navone",
+    "Max Schoenhaus vs Tallon Griekspoor",
+    "Yibing Wu vs Hayato Matsuoka",
+    "Marcos Giron vs Jan-Lennard Struff",
+    "Clement Chidekh vs Botic Van De Zandschulp",
+    "Corentin Moutet vs Ugo Humbert",
+    "Titouan Droguet vs Daniel Altmaier",
+    "Cameron Norrie vs Benjamin Bonzi",
+    "Hugo Gaston vs Jacob Fearnley",
+    "Karen Khachanov vs Rei Sakamoto",
+    "Zizou Bergs vs Toby Samuel",
+    "Raphael Collignon vs Nishesh Basavareddy",
+    "Brandon Nakashima vs Hamad Medjedovic",
     "Tomas Martin Etcheverry vs Mattia Bellucci",
-    "Tomas Machac vs Zangar Nurlanuly"
+    "Tomas Machac vs Zangar Nurlanuly",
+    "Luciano Darderi vs James Duckworth",
+    "Damir Dzumhur vs Dino Prizmic",
+    "Remy Bertola vs David Goffin",
+    "Martin Landaluce vs Stan Wawrinka"
   ],
-  "spread_markets_found": 32,
+  "spread_markets_found": 33,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 83,
-  "unpriced_spread_markets": [],
-  "executable_spread_markets": 32,
-  "matches_parsed": 32,
+  "unique_event_pages": 62,
+  "unpriced_spread_markets": [
+    "Jacopo Vasami vs Michele Ribecai",
+    "Jonas Forejtek vs Francesco Forti",
+    "Timo Legout vs Edward Winter",
+    "Mitchell Krueger vs Jenson Brooksby",
+    "Juan Pablo Varillas vs Daniel Elahi Galan",
+    "Jay Dylan Hara Friend vs Ognjen Milic",
+    "Kaichi Uchida vs Zhizhen Zhang",
+    "Qian Sun vs Fajing Sun",
+    "Rigele Te vs Cruz Hewitt",
+    "Tristan Schoolkate vs Sergey Fomin",
+    "Jie Cui vs Yu Hsiou Hsu",
+    "Gabriele Piraino vs Andrej Nedic",
+    "Enrico Dalla Valle vs Ivan Ivanov",
+    "Gianluca Cadenasso vs Sandro Kopp",
+    "Filip Cristian Jianu vs Filippo Romano",
+    "Massimo Giunta vs Henry Searle",
+    "Yibing Wu vs Hayato Matsuoka"
+  ],
+  "executable_spread_markets": 16,
+  "matches_parsed": 16,
   "partial_coverage": true,
-  "rows_saved": 235,
+  "rows_saved": 97,
   "error": null
 }

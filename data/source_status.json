@@ -1,32 +1,32 @@
 {
   "success": true,
-  "checked_at": "2026-10-18T12:33:16.441005+00:00",
-  "last_match_date": "2026-10-17",
-  "source_hash": "09afc20bdf8dc685d44c874763dc9f25b59b0644d1db8c5af5b342ef4f644121",
+  "checked_at": "2026-10-19T14:21:35.218812+00:00",
+  "last_match_date": "2026-10-18",
+  "source_hash": "25a8fbe9e9d9ec1a12b9eec40d8e5d7bb79cde6c0ae50534bfcd2c521b7cf94b",
   "sources": [
     {
       "url": "https://stats.tennismylife.org/data/2024.csv",
-      "fetched_at": "2026-10-18T12:33:16.441005+00:00",
+      "fetched_at": "2026-10-19T14:21:35.218812+00:00",
       "sha256": "d1127519d7bda61a9e10c4cadbf6dc4f7e35a74aec1dc1d7e4b480852981efb8",
       "rows": 3076
     },
     {
       "url": "https://stats.tennismylife.org/data/2025.csv",
-      "fetched_at": "2026-10-18T12:33:16.441005+00:00",
+      "fetched_at": "2026-10-19T14:21:35.218812+00:00",
       "sha256": "52ed81e4c83172ce23a31d00bf14cba088c419aa617d8c4774ed721dedce6550",
       "rows": 2944
     },
     {
       "url": "https://stats.tennismylife.org/data/2026.csv",
-      "fetched_at": "2026-10-18T12:33:16.441005+00:00",
-      "sha256": "a2bb4af3dfc06a60a0e527442f09b947f09805b6ae6babecc6962d0a337782d6",
-      "rows": 2481
+      "fetched_at": "2026-10-19T14:21:35.218812+00:00",
+      "sha256": "1ef84028f5bf40a410d00d898ab6e3abf63b5a8bf8e940865b28057473d59190",
+      "rows": 2576
     },
     {
       "url": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
-      "fetched_at": "2026-10-18T12:33:16.441005+00:00",
-      "sha256": "a9abe7a0a64993eabd2f0cdf21b90a0513b257669ad14549ec6de43338077462",
-      "rows": 95
+      "fetched_at": "2026-10-19T14:21:35.218812+00:00",
+      "sha256": "50cc90234c4fd1385514a51761a139284c0d5e29c7b81fe7a1bf0a2effc5473a",
+      "rows": 6
     },
     {
       "source": "independently recovered historical dates only",
@@ -34,26 +34,26 @@
       "matched_fresh_rows": 6783
     },
     {
-      "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261018&limit=1000",
-      "fetched_at": "2026-10-18T12:33:16.441005+00:00",
-      "sha256": "3439e204100fc990999fe1e6fdd6bed4098386e4892b7e4791f8c13577506d28"
-    },
-    {
       "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261019&limit=1000",
-      "fetched_at": "2026-10-18T12:33:16.441005+00:00",
-      "sha256": "ee1673fc62a51e0c3e236c1fc360b342193c5b7065795ddeff1134b6fb309c13"
+      "fetched_at": "2026-10-19T14:21:35.218812+00:00",
+      "sha256": "34127b9bc98eb867037e8e0f4a7896621f585978fe748dcd1b73fd35023c50d7"
     },
     {
       "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261020&limit=1000",
-      "fetched_at": "2026-10-18T12:33:16.441005+00:00",
-      "sha256": "ee1673fc62a51e0c3e236c1fc360b342193c5b7065795ddeff1134b6fb309c13"
+      "fetched_at": "2026-10-19T14:21:35.218812+00:00",
+      "sha256": "34127b9bc98eb867037e8e0f4a7896621f585978fe748dcd1b73fd35023c50d7"
     },
     {
-      "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261017&limit=1000",
-      "fetched_at": "2026-10-18T12:33:16.441005+00:00",
-      "sha256": "325f893e80ea9a2e8b8ab5be3b421a11eefadb64eb0e26a28dcf917abf503c9b"
+      "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261021&limit=1000",
+      "fetched_at": "2026-10-19T14:21:35.218812+00:00",
+      "sha256": "34127b9bc98eb867037e8e0f4a7896621f585978fe748dcd1b73fd35023c50d7"
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261018&limit=1000",
+      "fetched_at": "2026-10-19T14:21:35.218812+00:00",
+      "sha256": "ce679dd730d9245a0b0b5dfeb23649aea41905fd59b842c37528092bc50cfedd"
     }
   ],
-  "excluded_coarse_date_rows": 1464,
+  "excluded_coarse_date_rows": 1470,
   "date_policy": "Only events with observed per-match dates; tournament-only dates are excluded. Recent dates independently cross-checked."
 }
