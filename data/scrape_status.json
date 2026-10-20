@@ -1,16 +1,16 @@
 {
   "success": true,
-  "checked_at": "2026-10-20T12:30:12.351276+00:00",
+  "checked_at": "2026-10-20T13:23:10.506976+00:00",
   "match_date": "2026-10-20",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
     {
-      "match": "Titouan Droguet vs Daniel Altmaier",
+      "match": "Cameron Norrie vs Benjamin Bonzi",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Cameron Norrie vs Benjamin Bonzi",
+      "match": "Titouan Droguet vs Daniel Altmaier",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
@@ -18,11 +18,11 @@
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Clement Tabur vs Luca Van Assche",
+      "match": "Karen Khachanov vs Rei Sakamoto",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Karen Khachanov vs Rei Sakamoto",
+      "match": "Clement Tabur vs Luca Van Assche",
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
@@ -74,14 +74,6 @@
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
-      "match": "Remy Bertola vs David Goffin",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
-      "match": "Jaume Munar vs Arthur Fils",
-      "error": "Match header has no unique verified surface/date/tournament."
-    },
-    {
       "match": "Francisco Cerundolo vs Martin Damm",
       "error": "Match header has no unique verified surface/date/tournament."
     },
@@ -94,33 +86,19 @@
       "error": "Match header has no unique verified surface/date/tournament."
     },
     {
+      "match": "Remy Bertola vs David Goffin",
+      "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
       "match": "Sho Shimabukuro vs Daniil Medvedev",
       "error": "Match header has no unique verified surface/date/tournament."
+    },
+    {
+      "match": "Jaume Munar vs Arthur Fils",
+      "error": "No unique schedule match for Jaume Munar vs Arthur Fils on 2026-10-22 or 2026-10-23 (Europe/London); found 0."
     }
   ],
   "surface_assignments": [
-    {
-      "player_a": "Kopp S.",
-      "player_b": "Cadenasso G.",
-      "tournament": "Florence challenger",
-      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3351881&timezone=0",
-      "source_date": "2026-10-20",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Donald M.",
-      "player_b": "Sanchez Jover C.",
-      "tournament": "Florence challenger",
-      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3354703&timezone=0",
-      "source_date": "2026-10-20",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
     {
       "player_a": "Romano F.",
       "player_b": "Jianu F.",
@@ -408,19 +386,17 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 51,
+  "events_found": 49,
   "events": [
-    "Gianluca Cadenasso vs Sandro Kopp",
-    "Carlos Sanchez Jover vs Matthew William Donald",
     "Filip Cristian Jianu vs Filippo Romano",
-    "Titouan Droguet vs Daniel Altmaier",
     "Cameron Norrie vs Benjamin Bonzi",
+    "Titouan Droguet vs Daniel Altmaier",
     "Gastao Elias vs Francesco Passaro",
     "Lorenzo Giustino vs Yanaki Milev",
     "Hugo Gaston vs Jacob Fearnley",
+    "Karen Khachanov vs Rei Sakamoto",
     "Clement Tabur vs Luca Van Assche",
     "Andrej Martin vs Tiago Torres",
-    "Karen Khachanov vs Rei Sakamoto",
     "Juan Bautista Torres vs Daniel Salazar Martinez",
     "Matheus Pucinelli De Almeida vs Jose Pereira",
     "Alex Hernandez vs Gustavo Heide",
@@ -455,23 +431,23 @@
     "Nikoloz Basilashvili vs Facundo Diaz Acosta",
     "Andrey Rublev vs Adrian Mannarino",
     "Damir Dzumhur vs Dino Prizmic",
-    "Remy Bertola vs David Goffin",
-    "Jaume Munar vs Arthur Fils",
     "Francisco Cerundolo vs Martin Damm",
     "Martin Landaluce vs Stan Wawrinka",
     "Lorenzo Musetti vs Moise Kouame",
-    "Sho Shimabukuro vs Daniil Medvedev"
+    "Remy Bertola vs David Goffin",
+    "Sho Shimabukuro vs Daniil Medvedev",
+    "Jaume Munar vs Arthur Fils"
   ],
-  "spread_markets_found": 28,
+  "spread_markets_found": 26,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 51,
+  "unique_event_pages": 49,
   "unpriced_spread_markets": [
-    "Gianluca Cadenasso vs Sandro Kopp"
+    "Filip Cristian Jianu vs Filippo Romano"
   ],
-  "executable_spread_markets": 27,
-  "matches_parsed": 27,
+  "executable_spread_markets": 25,
+  "matches_parsed": 25,
   "partial_coverage": true,
-  "rows_saved": 148,
+  "rows_saved": 154,
   "error": null
 }
