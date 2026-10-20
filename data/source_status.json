@@ -1,32 +1,32 @@
 {
   "success": true,
-  "checked_at": "2026-10-19T15:22:38.439608+00:00",
-  "last_match_date": "2026-10-18",
-  "source_hash": "28fca9d0fe62328ea4d48d42a4e458321c20cd616bf7e23b9556d2885f01bccb",
+  "checked_at": "2026-10-20T12:32:53.858449+00:00",
+  "last_match_date": "2026-10-19",
+  "source_hash": "a2275708a226ee00ead3b95883a028887af35d41beb03b502a71ca7997e44f03",
   "sources": [
     {
       "url": "https://stats.tennismylife.org/data/2024.csv",
-      "fetched_at": "2026-10-19T15:22:38.439608+00:00",
-      "sha256": "d1127519d7bda61a9e10c4cadbf6dc4f7e35a74aec1dc1d7e4b480852981efb8",
+      "fetched_at": "2026-10-20T12:32:53.858449+00:00",
+      "sha256": "66140506d7c5f744e9d5a4d13a2b89ddb4b83786ade9ba2d98daa9210c885739",
       "rows": 3076
     },
     {
       "url": "https://stats.tennismylife.org/data/2025.csv",
-      "fetched_at": "2026-10-19T15:22:38.439608+00:00",
-      "sha256": "52ed81e4c83172ce23a31d00bf14cba088c419aa617d8c4774ed721dedce6550",
+      "fetched_at": "2026-10-20T12:32:53.858449+00:00",
+      "sha256": "8d8dda2752581559bfbba8d3dd3d4de4acf366b1b51ad85ef61dae27be6471c2",
       "rows": 2944
     },
     {
       "url": "https://stats.tennismylife.org/data/2026.csv",
-      "fetched_at": "2026-10-19T15:22:38.439608+00:00",
+      "fetched_at": "2026-10-20T12:32:53.858449+00:00",
       "sha256": "1ef84028f5bf40a410d00d898ab6e3abf63b5a8bf8e940865b28057473d59190",
       "rows": 2576
     },
     {
       "url": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
-      "fetched_at": "2026-10-19T15:22:38.439608+00:00",
-      "sha256": "3224bef5d6ce73d9ca7c5aed7c3b386a8b59672014773bb5fe71a8fba2be5dc5",
-      "rows": 8
+      "fetched_at": "2026-10-20T12:32:53.858449+00:00",
+      "sha256": "fe3ccc80aa0f2019bbd0d59fe5230479a02b7a5584bda4e0b256b0ecb2ad1480",
+      "rows": 17
     },
     {
       "source": "independently recovered historical dates only",
@@ -34,26 +34,26 @@
       "matched_fresh_rows": 6783
     },
     {
-      "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261019&limit=1000",
-      "fetched_at": "2026-10-19T15:22:38.439608+00:00",
-      "sha256": "cf377e226f8d1260f968376fed4fe91c152dbcb84675d6ccd973eca543a89d82"
-    },
-    {
       "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261020&limit=1000",
-      "fetched_at": "2026-10-19T15:22:38.439608+00:00",
-      "sha256": "cf377e226f8d1260f968376fed4fe91c152dbcb84675d6ccd973eca543a89d82"
+      "fetched_at": "2026-10-20T12:32:53.858449+00:00",
+      "sha256": "b15812d799364725bbc6afe1899f15b3a3f437f8afc95ee3a429549a631f15b1"
     },
     {
       "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261021&limit=1000",
-      "fetched_at": "2026-10-19T15:22:38.439608+00:00",
-      "sha256": "cf377e226f8d1260f968376fed4fe91c152dbcb84675d6ccd973eca543a89d82"
+      "fetched_at": "2026-10-20T12:32:53.858449+00:00",
+      "sha256": "b15812d799364725bbc6afe1899f15b3a3f437f8afc95ee3a429549a631f15b1"
     },
     {
-      "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261018&limit=1000",
-      "fetched_at": "2026-10-19T15:22:38.439608+00:00",
-      "sha256": "fd501b3a7b75a65bdde17ca9658ac2a8f1bd39846d4d420ffee2ec5e3151e869"
+      "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261022&limit=1000",
+      "fetched_at": "2026-10-20T12:32:53.858449+00:00",
+      "sha256": "b15812d799364725bbc6afe1899f15b3a3f437f8afc95ee3a429549a631f15b1"
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=20261019&limit=1000",
+      "fetched_at": "2026-10-20T12:32:53.858449+00:00",
+      "sha256": "b15812d799364725bbc6afe1899f15b3a3f437f8afc95ee3a429549a631f15b1"
     }
   ],
-  "excluded_coarse_date_rows": 1472,
+  "excluded_coarse_date_rows": 1464,
   "date_policy": "Only events with observed per-match dates; tournament-only dates are excluded. Recent dates independently cross-checked."
 }
