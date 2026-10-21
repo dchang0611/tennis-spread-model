@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-10-21T12:40:24.632394+00:00",
+  "checked_at": "2026-10-21T13:29:28.645372+00:00",
   "match_date": "2026-10-21",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
@@ -72,17 +72,6 @@
   ],
   "surface_assignments": [
     {
-      "player_a": "Roca Batalla O.",
-      "player_b": "Sakellaridis D.",
-      "tournament": "Florence challenger",
-      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3355825&timezone=0",
-      "source_date": "2026-10-21",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
       "player_a": "Dodig M.",
       "player_b": "Cecchinato M.",
       "tournament": "Lisbon challenger",
@@ -99,6 +88,17 @@
       "tournament": "Florence challenger",
       "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3355751&timezone=0",
+      "source_date": "2026-10-21",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Roca Batalla O.",
+      "player_b": "Sakellaridis D.",
+      "tournament": "Florence challenger",
+      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3355825&timezone=0",
       "source_date": "2026-10-21",
       "surface": "Clay",
       "source_timezone": "Europe/London",
@@ -127,17 +127,6 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Bondioli F.",
-      "player_b": "Forti F.",
-      "tournament": "Florence challenger",
-      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3354723&timezone=0",
-      "source_date": "2026-10-21",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
       "player_a": "Mena F.",
       "player_b": "Aboian V.",
       "tournament": "Cali challenger",
@@ -154,6 +143,17 @@
       "tournament": "Cali challenger",
       "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3356203&timezone=0",
+      "source_date": "2026-10-21",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Bondioli F.",
+      "player_b": "Forti F.",
+      "tournament": "Florence challenger",
+      "tournament_source": "https://www.tennisexplorer.com/florence-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3354723&timezone=0",
       "source_date": "2026-10-21",
       "surface": "Clay",
       "source_timezone": "Europe/London",
@@ -273,16 +273,16 @@
   "events_found": 34,
   "events": [
     "Jacob Fearnley vs Clement Chidekh",
-    "Dimitris Sakellaridis vs Oriol Roca-Batalla",
     "Marco Cecchinato vs Matej Dodig",
     "Felix Balshaw vs Corentin Moutet",
     "Max Houkes vs Michele Ribecai",
+    "Dimitris Sakellaridis vs Oriol Roca-Batalla",
+    "Mikhail Kukushkin vs Stefanos Tsitsipas",
     "Izan Almazan Valiente vs Filip Misolic",
     "Carlo Alberto Caniato vs Marco Trungelliti",
-    "Mikhail Kukushkin vs Stefanos Tsitsipas",
-    "Francesco Forti vs Federico Bondioli",
     "Valerio Aboian vs Facundo Mena",
     "Juan Bautista Torres vs Juan Manuel La Serna",
+    "Francesco Forti vs Federico Bondioli",
     "Remy Bertola vs David Goffin",
     "Darwin Blanch vs Daniel Milavsky",
     "Kenta Miyoshi vs Patrick Maloney",
@@ -312,12 +312,12 @@
   "already_live_events": [],
   "unique_event_pages": 34,
   "unpriced_spread_markets": [
-    "Dimitris Sakellaridis vs Oriol Roca-Batalla",
-    "Max Houkes vs Michele Ribecai"
+    "Max Houkes vs Michele Ribecai",
+    "Dimitris Sakellaridis vs Oriol Roca-Batalla"
   ],
   "executable_spread_markets": 16,
   "matches_parsed": 16,
   "partial_coverage": true,
-  "rows_saved": 80,
+  "rows_saved": 44,
   "error": null
 }
