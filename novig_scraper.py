@@ -21,6 +21,7 @@ OUTPUT_COLUMNS = [
     "date", "tournament", "surface", "best_of", "player_a", "player_b",
     "spread_a", "odds_a", "spread_b", "odds_b", "collected_at", "event_url",
     "event_id", "market_start", "surface_source", "surface_source_date", "surface_timezone",
+    "surface_detail_source", "surface_detail_hash", "surface_edition_id",
     "tourney_level", "format_source", "format_source_hash", "metadata_error",
     "event_description",
 ]
@@ -415,6 +416,9 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
                     'event_id': event['event_id'], 'market_start': start.isoformat(),
                     'surface_source': assignment.get('source'), 'surface_source_date': assignment.get('source_date'),
                     'surface_timezone': assignment.get('source_timezone'),
+                    'surface_detail_source': assignment.get('surface_detail_source'),
+                    'surface_detail_hash': assignment.get('surface_detail_hash'),
+                    'surface_edition_id': assignment.get('surface_edition_id'),
                     'event_description': item.get('description', ''), **category,
                 })
         browser.close()

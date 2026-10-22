@@ -5,11 +5,38 @@ from html import unescape
 import re
 import unicodedata
 import hashlib
+import csv
+import io
 from urllib.request import Request, urlopen
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
 BASE = 'https://www.tennisexplorer.com'
 SOURCE_TIMEZONE = 'Europe/London'
+INDOOR_METADATA_URL = 'https://stats.tennismylife.org/data/ongoing_tourneys.csv'
+
+
+def resolve_indoor_surface(content, tournament, match_day, today):
+    """Resolve roof-only labels from fresh, matching edition evidence, never a default."""
+    key = lambda value: re.sub(r'[^a-z0-9]', '', unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode().lower())
+    evidence = []
+    for row in csv.DictReader(io.StringIO(content)):
+        if key(row.get('tourney_name', '')) != key(tournament):
+            continue
+        try:
+            observed = datetime.strptime(row['tourney_date'], '%Y%m%d').date()
+        except (KeyError, ValueError):
+            continue
+        if match_day - timedelta(days=14) <= observed <= min(match_day, today):
+            evidence.append(row)
+    editions = {r.get('tourney_id') for r in evidence}
+    surfaces = {r.get('surface') for r in evidence}
+    if (not evidence or len(editions) != 1 or not next(iter(editions)) or len(surfaces) != 1
+            or not surfaces <= {'Hard', 'Clay', 'Grass', 'Carpet'}
+            or any(r.get('indoor') != 'I' for r in evidence)):
+        raise RuntimeError('Indoor header has no unique current-edition court surface evidence.')
+    return {'surface': surfaces.pop(), 'surface_detail_source': INDOOR_METADATA_URL,
+            'surface_detail_hash': hashlib.sha256(content.encode()).hexdigest(),
+            'surface_edition_id': editions.pop()}
 
 
 def source_url(url):
@@ -120,6 +147,8 @@ def parse_match_surface(html, expected_date, tournament, source_today=None):
         surfaces = {s.capitalize() for s in re.findall(r'\b(hard|clay|grass|carpet)\b', text.lower())}
         if len(surfaces) == 1:
             matches.append(surfaces.pop())
+        elif not surfaces and re.search(r'\bindoors\b', text.lower()):
+            matches.append('Indoor')
     if len(matches) != 1:
         raise RuntimeError('Match header has no unique verified surface/date/tournament.')
     return matches[0]
@@ -137,6 +166,7 @@ class LiveSurfaceLookup:
         self.match_date, self.fetch = match_date, fetch
         self.matches, self.errors, self.cache = [], [], {}
         self.tournaments = {}
+        self.indoor_metadata = None
         # Source is in Europe; its date can be one day ahead of Pacific.
         for offset in (0, 1):
             day = match_date + timedelta(days=offset)
@@ -158,8 +188,15 @@ class LiveSurfaceLookup:
         row = next(iter(candidates.values()))
         if row['source'] not in self.cache:
             surface = parse_match_surface(self.fetch(source_url(row['source'])), date.fromisoformat(row['source_date']), row['tournament'])
+            detail = {}
+            if surface == 'Indoor':
+                if self.indoor_metadata is None:
+                    with urlopen(Request(INDOOR_METADATA_URL, headers={'User-Agent':'TennisSpreadLab/2.0'}), timeout=30) as response:
+                        self.indoor_metadata = response.read().decode('utf-8-sig')
+                detail = resolve_indoor_surface(self.indoor_metadata, row['tournament'], date.fromisoformat(row['source_date']), datetime.now(ZoneInfo(SOURCE_TIMEZONE)).date())
+                surface = detail.pop('surface')
             self.cache[row['source']] = {**row, 'source':source_url(row['source']), 'surface': surface,
-                                       'source_timezone':SOURCE_TIMEZONE, 'method': 'live_match_metadata'}
+                                       'source_timezone':SOURCE_TIMEZONE, 'method': 'live_match_metadata', **detail}
         return self.cache[row['source']]
 
     def tournament_metadata(self, assignment):
