@@ -1,194 +1,462 @@
 {
   "success": true,
-  "checked_at": "2026-10-24T11:49:12.179503+00:00",
-  "match_date": "2026-10-24",
+  "checked_at": "2026-10-25T12:18:19.769629+00:00",
+  "match_date": "2026-10-25",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
     {
-      "match": "Daniel Altmaier vs Henry Bernet",
-      "error": "No unique schedule match for Daniel Altmaier vs Henry Bernet on 2026-10-24 or 2026-10-25 (Europe/London); found 0."
+      "match": "Dimitar Kuzmanov vs Robin Catry",
+      "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Hamad Medjedovic vs Alex Molcan",
-      "error": "No unique schedule match for Hamad Medjedovic vs Alex Molcan on 2026-10-24 or 2026-10-25 (Europe/London); found 0."
+      "match": "Adrien Gobat vs Calvin Hemery",
+      "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Sebastian Sorger vs Fabian Marozsan",
-      "error": "No unique schedule match for Sebastian Sorger vs Fabian Marozsan on 2026-10-24 or 2026-10-25 (Europe/London); found 0."
+      "match": "Remy Bertola vs Mika Brunold",
+      "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "James Duckworth vs Aleksandar Kovacevic",
-      "error": "No unique schedule match for James Duckworth vs Aleksandar Kovacevic on 2026-10-24 or 2026-10-25 (Europe/London); found 0."
+      "match": "Alex Molcan vs Adrian Mannarino",
+      "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Jakub Paul vs Remy Bertola",
-      "error": "No unique schedule match for Jakub Paul vs Remy Bertola on 2026-10-24 or 2026-10-25 (Europe/London); found 0."
+      "match": "Benjamin Hassan vs Ryan Peniston",
+      "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Tomas Machac vs Corentin Moutet",
-      "error": "No unique schedule match for Tomas Machac vs Corentin Moutet on 2026-10-24 or 2026-10-25 (Europe/London); found 0."
+      "match": "Timeo Trufelli vs Lucas Poullain",
+      "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Adrian Mannarino vs Thiago Agustin Tirante",
-      "error": "No unique schedule match for Adrian Mannarino vs Thiago Agustin Tirante on 2026-10-24 or 2026-10-25 (Europe/London); found 0."
+      "match": "Romain Faucon vs Tom Paris",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Lorenzo Joaquin Rodriguez vs Sergio Castro",
+      "error": "No unique schedule match for Lorenzo Joaquin Rodriguez vs Sergio Castro on 2026-10-25 or 2026-10-26 (Europe/London); found 0."
+    },
+    {
+      "match": "Maxwell Exsted vs Karl Poling",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Patrick Zahraj vs Govind Nanda",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Arthur Bouquier vs Kilian Feldbausch",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Yannik Kelm vs Matisse Bobichon",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Alex Hernandez vs Jose Pereira",
+      "error": "No unique schedule match for Alex Hernandez vs Jose Pereira on 2026-10-25 or 2026-10-26 (Europe/London); found 0."
+    },
+    {
+      "match": "Gavin Young vs Kenta Miyoshi",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Quinn Vandecasteele vs Daniil Ostapenkov",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Daniel Salazar Martinez vs Younes Lalami Laaroussi",
+      "error": "No unique schedule match for Daniel Salazar Martinez vs Younes Lalami Laaroussi on 2026-10-25 or 2026-10-26 (Europe/London); found 0."
+    },
+    {
+      "match": "Alessandro Rubini vs Lucio Ratti",
+      "error": "No unique schedule match for Alessandro Rubini vs Lucio Ratti on 2026-10-25 or 2026-10-26 (Europe/London); found 0."
+    },
+    {
+      "match": "Colin Sinclair vs Erik Arutiunian",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Jonah Braswell vs Spencer Johnson",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Andrew Fenty vs Cooper Woestendick",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Daniel de Jonge vs Timo Legout",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Hunter Heck vs Ozan Baris",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Trevor Svajda vs James Kent Trotter",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Sebastian Dominko vs Justin Boulais",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Duncan Chan vs Benjamin Willwerth",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Rafael Jodar vs Alejandro Tabilo",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Zizou Bergs vs Alejandro Davidovich Fokina",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Ugo Humbert vs Novak Djokovic",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Arthur Fils vs Hubert Hurkacz",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Stefanos Tsitsipas vs Taylor Fritz",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Arthur Rinderknech vs Jerome Kym",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Botic Van De Zandschulp vs Alex Michelsen",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Quentin Halys vs Holger Rune",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Mariano Navone vs Valentin Vacherot",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Jiri Lehecka vs Stan Wawrinka",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Casper Ruud vs Dominic Stricker",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Tomas Martin Etcheverry vs Matteo Berrettini",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Learner Tien vs Luca Van Assche",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Brandon Nakashima vs Tallon Griekspoor",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Francisco Cerundolo vs Cameron Norrie",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Matteo Arnaldi vs Luciano Darderi",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Frances Tiafoe vs Lorenzo Musetti",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Nikoloz Basilashvili vs Jurij Rodionov",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Martin Landaluce vs Alexander Zverev",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Andrey Rublev vs Tommy Paul",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Carlos Alcaraz vs Karen Khachanov",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Daniil Medvedev vs Daniel Merida Aguilar",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Grigor Dimitrov vs Flavio Cobolli",
+      "error": "Indoor header has no unique current-edition court surface evidence."
     }
   ],
   "surface_assignments": [
     {
-      "player_a": "Paul T.",
+      "player_a": "Kang K.",
+      "player_b": "Hurrion M.",
+      "tournament": "Ningbo challenger",
+      "tournament_source": "https://www.tennisexplorer.com/ningbo-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358225&timezone=0",
+      "source_date": "2026-10-25",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Castelnuovo L.",
+      "player_b": "Kusuhara Y.",
+      "tournament": "Ningbo challenger",
+      "tournament_source": "https://www.tennisexplorer.com/ningbo-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358229&timezone=0",
+      "source_date": "2026-10-25",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Musetti L.",
       "player_b": "Fritz T.",
       "tournament": "Lyon",
       "tournament_source": "https://www.tennisexplorer.com/lyon/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3357831&timezone=0",
-      "source_date": "2026-10-24",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358543&timezone=0",
+      "source_date": "2026-10-25",
       "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
-      "surface_detail_hash": "f75548053a19ec2271cb10c9da15b70915e0b562c8c6e1fc6b59ea95b264095b",
+      "surface_detail_hash": "6876e2eb304cb28d54624c4da200fcdb58460df6a8442651084264587e80abfa",
       "surface_edition_id": "2026-496"
     },
     {
-      "player_a": "Gulin S.",
-      "player_b": "Moller E.",
-      "tournament": "Lisbon challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lisbon-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3357837&timezone=0",
-      "source_date": "2026-10-24",
+      "player_a": "Galan D.",
+      "player_b": "Arias B.",
+      "tournament": "Guayaquil challenger",
+      "tournament_source": "https://www.tennisexplorer.com/guayaquil-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359537&timezone=0",
+      "source_date": "2026-10-25",
       "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Medvedev D.",
-      "player_b": "Bublik A.",
-      "tournament": "Almaty",
-      "tournament_source": "https://www.tennisexplorer.com/almaty/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3357835&timezone=0",
-      "source_date": "2026-10-24",
-      "surface": "Hard",
+      "player_a": "Nijboer R.",
+      "player_b": "Kestelboim M.",
+      "tournament": "Guayaquil challenger",
+      "tournament_source": "https://www.tennisexplorer.com/guayaquil-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359541&timezone=0",
+      "source_date": "2026-10-25",
+      "surface": "Clay",
       "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
-      "surface_detail_hash": "f75548053a19ec2271cb10c9da15b70915e0b562c8c6e1fc6b59ea95b264095b",
-      "surface_edition_id": "2026-9410"
+      "method": "live_match_metadata"
     },
     {
-      "player_a": "Cerundolo F.",
+      "player_a": "Struff J.",
       "player_b": "Griekspoor T.",
       "tournament": "Brussels",
       "tournament_source": "https://www.tennisexplorer.com/brussels/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3357825&timezone=0",
-      "source_date": "2026-10-24",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359197&timezone=0",
+      "source_date": "2026-10-25",
       "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
-      "surface_detail_hash": "f75548053a19ec2271cb10c9da15b70915e0b562c8c6e1fc6b59ea95b264095b",
+      "surface_detail_hash": "6876e2eb304cb28d54624c4da200fcdb58460df6a8442651084264587e80abfa",
       "surface_edition_id": "2026-7485"
     },
     {
-      "player_a": "Cobolli F.",
-      "player_b": "Musetti L.",
-      "tournament": "Lyon",
-      "tournament_source": "https://www.tennisexplorer.com/lyon/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3357947&timezone=0",
-      "source_date": "2026-10-24",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
-      "surface_detail_hash": "f75548053a19ec2271cb10c9da15b70915e0b562c8c6e1fc6b59ea95b264095b",
-      "surface_edition_id": "2026-496"
-    },
-    {
-      "player_a": "Meligeni Rodrigues Alves F.",
+      "player_a": "Pucinelli De Almeida M.",
       "player_b": "Aboian V.",
       "tournament": "Cali challenger",
       "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3357939&timezone=0",
-      "source_date": "2026-10-24",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359201&timezone=0",
+      "source_date": "2026-10-25",
       "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Fils A.",
-      "player_b": "Struff J.",
-      "tournament": "Brussels",
-      "tournament_source": "https://www.tennisexplorer.com/brussels/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3357931&timezone=0",
-      "source_date": "2026-10-24",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
-      "surface_detail_hash": "f75548053a19ec2271cb10c9da15b70915e0b562c8c6e1fc6b59ea95b264095b",
-      "surface_edition_id": "2026-7485"
-    },
-    {
-      "player_a": "Heide G.",
-      "player_b": "Pucinelli De Almeida M.",
-      "tournament": "Cali challenger",
-      "tournament_source": "https://www.tennisexplorer.com/cali-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3357945&timezone=0",
-      "source_date": "2026-10-24",
+      "player_a": "Del Pino M.",
+      "player_b": "Leite W.",
+      "tournament": "Guayaquil challenger",
+      "tournament_source": "https://www.tennisexplorer.com/guayaquil-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359543&timezone=0",
+      "source_date": "2026-10-25",
       "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Jong S.",
-      "player_b": "Blanch D.",
-      "tournament": "Fort Worth challenger",
-      "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3357937&timezone=0",
-      "source_date": "2026-10-24",
-      "surface": "Hard",
+      "player_a": "Munk Mesa B.",
+      "player_b": "McCormick T.",
+      "tournament": "Guayaquil challenger",
+      "tournament_source": "https://www.tennisexplorer.com/guayaquil-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359553&timezone=0",
+      "source_date": "2026-10-25",
+      "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
       "player_a": "Brooksby J.",
-      "player_b": "Debru G.",
+      "player_b": "Blanch D.",
       "tournament": "Fort Worth challenger",
       "tournament_source": "https://www.tennisexplorer.com/fort-worth-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3357949&timezone=0",
-      "source_date": "2026-10-24",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359207&timezone=0",
+      "source_date": "2026-10-25",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Magadan A.",
+      "player_b": "Galarraga M.",
+      "tournament": "Guayaquil challenger",
+      "tournament_source": "https://www.tennisexplorer.com/guayaquil-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359557&timezone=0",
+      "source_date": "2026-10-25",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Kachmazov A.",
+      "player_b": "Shin W.",
+      "tournament": "Seoul challenger",
+      "tournament_source": "https://www.tennisexplorer.com/seoul-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359209&timezone=0",
+      "source_date": "2026-10-26",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Jeong Y.",
+      "player_b": "Chung Y.",
+      "tournament": "Seoul challenger",
+      "tournament_source": "https://www.tennisexplorer.com/seoul-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359705&timezone=0",
+      "source_date": "2026-10-26",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Park U.",
+      "player_b": "Imai S.",
+      "tournament": "Seoul challenger",
+      "tournament_source": "https://www.tennisexplorer.com/seoul-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359703&timezone=0",
+      "source_date": "2026-10-26",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Leong M.",
+      "player_b": "Sun Q.",
+      "tournament": "Ningbo challenger",
+      "tournament_source": "https://www.tennisexplorer.com/ningbo-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358221&timezone=0",
+      "source_date": "2026-10-26",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Borisiouk M.",
+      "player_b": "Demin Y.",
+      "tournament": "Ningbo challenger",
+      "tournament_source": "https://www.tennisexplorer.com/ningbo-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358227&timezone=0",
+      "source_date": "2026-10-26",
       "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 17,
+  "events_found": 64,
   "events": [
-    "Taylor Fritz vs Tommy Paul",
-    "Elmer Moller vs Svyatoslav Gulin",
-    "Daniel Altmaier vs Henry Bernet",
-    "Hamad Medjedovic vs Alex Molcan",
-    "Sebastian Sorger vs Fabian Marozsan",
-    "James Duckworth vs Aleksandar Kovacevic",
-    "Alexander Bublik vs Daniil Medvedev",
-    "Jakub Paul vs Remy Bertola",
-    "Tallon Griekspoor vs Francisco Cerundolo",
-    "Tomas Machac vs Corentin Moutet",
-    "Lorenzo Musetti vs Flavio Cobolli",
-    "Adrian Mannarino vs Thiago Agustin Tirante",
-    "Valerio Aboian vs Felipe Meligeni Alves",
-    "Jan-Lennard Struff vs Arthur Fils",
-    "Matheus Pucinelli De Almeida vs Gustavo Heide",
-    "Darwin Blanch vs Sander Jong",
-    "Gabriel Debru vs Jenson Brooksby"
+    "Dimitar Kuzmanov vs Robin Catry",
+    "Millen Hurrion vs Kaigaoge Kang",
+    "Yusuke Kusuhara vs Luca Castelnuovo",
+    "Adrien Gobat vs Calvin Hemery",
+    "Remy Bertola vs Mika Brunold",
+    "Taylor Fritz vs Lorenzo Musetti",
+    "Alex Molcan vs Adrian Mannarino",
+    "Benjamin Hassan vs Ryan Peniston",
+    "Timeo Trufelli vs Lucas Poullain",
+    "Romain Faucon vs Tom Paris",
+    "Boris Arias vs Daniel Elahi Galan",
+    "Mariano Kestelboim vs Ryan Nijboer",
+    "Lorenzo Joaquin Rodriguez vs Sergio Castro",
+    "Maxwell Exsted vs Karl Poling",
+    "Patrick Zahraj vs Govind Nanda",
+    "Tallon Griekspoor vs Jan-Lennard Struff",
+    "Arthur Bouquier vs Kilian Feldbausch",
+    "Yannik Kelm vs Matisse Bobichon",
+    "Valerio Aboian vs Matheus Pucinelli De Almeida",
+    "Wilson Leite vs Mateo Del Pino",
+    "Alex Hernandez vs Jose Pereira",
+    "Gavin Young vs Kenta Miyoshi",
+    "Quinn Vandecasteele vs Daniil Ostapenkov",
+    "Daniel Salazar Martinez vs Younes Lalami Laaroussi",
+    "Tristan McCormick vs Bernardo Munk Mesa",
+    "Alessandro Rubini vs Lucio Ratti",
+    "Colin Sinclair vs Erik Arutiunian",
+    "Jonah Braswell vs Spencer Johnson",
+    "Darwin Blanch vs Jenson Brooksby",
+    "Andrew Fenty vs Cooper Woestendick",
+    "Daniel de Jonge vs Timo Legout",
+    "Hunter Heck vs Ozan Baris",
+    "Trevor Svajda vs James Kent Trotter",
+    "Mario Andre Galarraga vs Alan Magadan",
+    "Sebastian Dominko vs Justin Boulais",
+    "Duncan Chan vs Benjamin Willwerth",
+    "Woobin Shin vs Alibek Kachmazov",
+    "Yunseong Chung vs Yeonsu Jeong",
+    "Shintaro Imai vs Uisung Park",
+    "Qian Sun vs Mitsuki Wei Kang Leong",
+    "Yaroslav Demin vs Martin Borisiouk",
+    "Rafael Jodar vs Alejandro Tabilo",
+    "Zizou Bergs vs Alejandro Davidovich Fokina",
+    "Ugo Humbert vs Novak Djokovic",
+    "Arthur Fils vs Hubert Hurkacz",
+    "Stefanos Tsitsipas vs Taylor Fritz",
+    "Arthur Rinderknech vs Jerome Kym",
+    "Botic Van De Zandschulp vs Alex Michelsen",
+    "Quentin Halys vs Holger Rune",
+    "Mariano Navone vs Valentin Vacherot",
+    "Jiri Lehecka vs Stan Wawrinka",
+    "Casper Ruud vs Dominic Stricker",
+    "Tomas Martin Etcheverry vs Matteo Berrettini",
+    "Learner Tien vs Luca Van Assche",
+    "Brandon Nakashima vs Tallon Griekspoor",
+    "Francisco Cerundolo vs Cameron Norrie",
+    "Matteo Arnaldi vs Luciano Darderi",
+    "Frances Tiafoe vs Lorenzo Musetti",
+    "Nikoloz Basilashvili vs Jurij Rodionov",
+    "Martin Landaluce vs Alexander Zverev",
+    "Andrey Rublev vs Tommy Paul",
+    "Carlos Alcaraz vs Karen Khachanov",
+    "Daniil Medvedev vs Daniel Merida Aguilar",
+    "Grigor Dimitrov vs Flavio Cobolli"
   ],
-  "spread_markets_found": 10,
+  "spread_markets_found": 14,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 17,
+  "unique_event_pages": 64,
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 10,
-  "matches_parsed": 10,
+  "executable_spread_markets": 14,
+  "matches_parsed": 14,
   "partial_coverage": true,
-  "rows_saved": 38,
+  "rows_saved": 40,
   "error": null
 }

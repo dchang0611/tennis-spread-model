@@ -1,127 +1,177 @@
 {
   "success": true,
-  "checked_at": "2026-10-24T11:50:06.749730+00:00",
+  "checked_at": "2026-10-25T12:21:24.297241+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
     {
-      "player_a": "Elmer Moller",
-      "player_b": "Svyatoslav Gulin",
+      "player_a": "Millen Hurrion",
+      "player_b": "Kaigaoge Kang",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Elmer Moller",
-      "player_b": "Svyatoslav Gulin",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Elmer Moller",
-      "player_b": "Svyatoslav Gulin",
+      "player_a": "Boris Arias",
+      "player_b": "Daniel Elahi Galan",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Valerio Aboian",
-      "player_b": "Felipe Meligeni Alves",
+      "player_b": "Matheus Pucinelli De Almeida",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Valerio Aboian",
-      "player_b": "Felipe Meligeni Alves",
+      "player_b": "Matheus Pucinelli De Almeida",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Valerio Aboian",
-      "player_b": "Felipe Meligeni Alves",
+      "player_b": "Matheus Pucinelli De Almeida",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Matheus Pucinelli De Almeida",
-      "player_b": "Gustavo Heide",
+      "player_a": "Wilson Leite",
+      "player_b": "Mateo Del Pino",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Matheus Pucinelli De Almeida",
-      "player_b": "Gustavo Heide",
+      "player_a": "Wilson Leite",
+      "player_b": "Mateo Del Pino",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Matheus Pucinelli De Almeida",
-      "player_b": "Gustavo Heide",
+      "player_a": "Wilson Leite",
+      "player_b": "Mateo Del Pino",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Matheus Pucinelli De Almeida",
-      "player_b": "Gustavo Heide",
+      "player_a": "Tristan McCormick",
+      "player_b": "Bernardo Munk Mesa",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Tristan McCormick",
+      "player_b": "Bernardo Munk Mesa",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Tristan McCormick",
+      "player_b": "Bernardo Munk Mesa",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Darwin Blanch",
-      "player_b": "Sander Jong",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Darwin Blanch",
-      "player_b": "Sander Jong",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Darwin Blanch",
-      "player_b": "Sander Jong",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Gabriel Debru",
       "player_b": "Jenson Brooksby",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Gabriel Debru",
+      "player_a": "Darwin Blanch",
       "player_b": "Jenson Brooksby",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Alexander Bublik",
-      "player_b": "Daniil Medvedev",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
+      "player_a": "Darwin Blanch",
+      "player_b": "Jenson Brooksby",
+      "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Alexander Bublik",
-      "player_b": "Daniil Medvedev",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
+      "player_a": "Mario Andre Galarraga",
+      "player_b": "Alan Magadan",
+      "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Alexander Bublik",
-      "player_b": "Daniil Medvedev",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
+      "player_a": "Mario Andre Galarraga",
+      "player_b": "Alan Magadan",
+      "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Alexander Bublik",
-      "player_b": "Daniil Medvedev",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
+      "player_a": "Woobin Shin",
+      "player_b": "Alibek Kachmazov",
+      "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Alexander Bublik",
-      "player_b": "Daniil Medvedev",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
+      "player_a": "Woobin Shin",
+      "player_b": "Alibek Kachmazov",
+      "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Jan-Lennard Struff",
-      "player_b": "Arthur Fils",
-      "reason": "Recent result missing or ambiguous in statistics feed"
+      "player_a": "Yunseong Chung",
+      "player_b": "Yeonsu Jeong",
+      "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Jan-Lennard Struff",
-      "player_b": "Arthur Fils",
-      "reason": "Recent result missing or ambiguous in statistics feed"
+      "player_a": "Yunseong Chung",
+      "player_b": "Yeonsu Jeong",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Yunseong Chung",
+      "player_b": "Yeonsu Jeong",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Shintaro Imai",
+      "player_b": "Uisung Park",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Shintaro Imai",
+      "player_b": "Uisung Park",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Shintaro Imai",
+      "player_b": "Uisung Park",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Shintaro Imai",
+      "player_b": "Uisung Park",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Qian Sun",
+      "player_b": "Mitsuki Wei Kang Leong",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Qian Sun",
+      "player_b": "Mitsuki Wei Kang Leong",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Qian Sun",
+      "player_b": "Mitsuki Wei Kang Leong",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Yaroslav Demin",
+      "player_b": "Martin Borisiouk",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Yaroslav Demin",
+      "player_b": "Martin Borisiouk",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Yaroslav Demin",
+      "player_b": "Martin Borisiouk",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Yaroslav Demin",
+      "player_b": "Martin Borisiouk",
+      "reason": "No unique independently verified future start time"
     }
   ],
-  "market_matchups": 10,
+  "market_matchups": 14,
   "formats": {
     "3": {
       "status": "paper_only",
-      "training_rows": 3084,
-      "residuals": 1686,
-      "training_max_date": "2026-10-23 00:00:00"
+      "training_rows": 3070,
+      "residuals": 1689,
+      "training_max_date": "2026-10-24 00:00:00"
     },
     "5": {
       "status": "paper_only",
@@ -130,9 +180,9 @@
       "training_max_date": "2026-09-13 00:00:00"
     }
   },
-  "modeled_matchups": 3,
-  "training_matches": 3752,
-  "training_max_date": "2026-10-23",
-  "paper_candidates": 2,
-  "source_hash": "040c08d894e9bdc1f5d506693175011e94d0514bf06a860552862710e7499ff9"
+  "modeled_matchups": 2,
+  "training_matches": 3738,
+  "training_max_date": "2026-10-24",
+  "paper_candidates": 1,
+  "source_hash": "cc12f46530fa2668edeecd2a58580b0d3ca7d8214a80e1bf13ce591dbede147f"
 }
