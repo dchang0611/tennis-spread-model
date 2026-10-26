@@ -1,22 +1,10 @@
 {
   "success": true,
-  "checked_at": "2026-10-26T13:49:34.494051+00:00",
+  "checked_at": "2026-10-26T14:53:37.478704+00:00",
   "match_date": "2026-10-26",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Juan Manuel Cerundolo vs Daniel Altmaier",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Matisse Bobichon vs Lucas Poullain",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Tom Paris vs Kilian Feldbausch",
-      "error": "Event start is missing, past or outside the collection window"
-    },
     {
       "match": "Federico Cina vs Shintaro Mochizuki",
       "error": "Indoor header has no unique current-edition court surface evidence."
@@ -34,16 +22,16 @@
       "error": "No unique schedule match for Alex Hernandez vs Filip Misolic on 2026-10-26 or 2026-10-27 (Europe/London); found 0."
     },
     {
-      "match": "Juan Estevez vs Tomas Barrios Vera",
-      "error": "No unique schedule match for Juan Estevez vs Tomas Barrios Vera on 2026-10-26 or 2026-10-27 (Europe/London); found 0."
-    },
-    {
       "match": "Lukas Neumayer vs Jakub Mensik",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
       "match": "Jacob Fearnley vs Arthur Fery",
       "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Juan Estevez vs Tomas Barrios Vera",
+      "error": "No unique schedule match for Juan Estevez vs Tomas Barrios Vera on 2026-10-26 or 2026-10-27 (Europe/London); found 0."
     },
     {
       "match": "Tomasz Berkieta vs Spencer Johnson",
@@ -110,11 +98,7 @@
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Rafael Jodar vs Alejandro Tabilo",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Ugo Humbert vs Novak Djokovic",
+      "match": "Zizou Bergs vs Hubert Hurkacz",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
@@ -122,7 +106,19 @@
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
+      "match": "Rafael Jodar vs Alejandro Tabilo",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
       "match": "Botic Van De Zandschulp vs Alex Michelsen",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Arthur Fils vs Giovanni Mpetshi Perricard",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Aleksandar Kovacevic vs Ben Shelton",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
@@ -130,7 +126,7 @@
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Zizou Bergs vs Hubert Hurkacz",
+      "match": "Ugo Humbert vs Novak Djokovic",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
@@ -143,54 +139,6 @@
     },
     {
       "match": "Jan-Lennard Struff vs Yannick Hanfmann",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Arthur Fils vs Giovanni Mpetshi Perricard",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Aleksandar Kovacevic vs Ben Shelton",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Brandon Nakashima vs Tallon Griekspoor",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Francisco Cerundolo vs Cameron Norrie",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Frances Tiafoe vs Lorenzo Musetti",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Nikoloz Basilashvili vs Jurij Rodionov",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Martin Landaluce vs Alexander Zverev",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Andrey Rublev vs Tommy Paul",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Carlos Alcaraz vs Karen Khachanov",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Daniil Medvedev vs Daniel Merida Aguilar",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Grigor Dimitrov vs Flavio Cobolli",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Ignacio Buse vs Adrian Mannarino",
       "error": "Indoor header has no unique current-edition court surface evidence."
     }
   ],
@@ -427,6 +375,146 @@
       "method": "live_match_metadata"
     },
     {
+      "player_a": "Griekspoor T.",
+      "player_b": "Nakashima B.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358307&timezone=0",
+      "source_date": "2026-10-27",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
+      "surface_detail_hash": "2ea57471acc4325d0b904f83b6fc45eff4eda6a2f9f02863bb3a56d57ea231da",
+      "surface_edition_id": "2026-337"
+    },
+    {
+      "player_a": "Norrie C.",
+      "player_b": "Cerundolo F.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358317&timezone=0",
+      "source_date": "2026-10-27",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
+      "surface_detail_hash": "2ea57471acc4325d0b904f83b6fc45eff4eda6a2f9f02863bb3a56d57ea231da",
+      "surface_edition_id": "2026-337"
+    },
+    {
+      "player_a": "Musetti L.",
+      "player_b": "Tiafoe F.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358309&timezone=0",
+      "source_date": "2026-10-27",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
+      "surface_detail_hash": "2ea57471acc4325d0b904f83b6fc45eff4eda6a2f9f02863bb3a56d57ea231da",
+      "surface_edition_id": "2026-337"
+    },
+    {
+      "player_a": "Rodionov J.",
+      "player_b": "Basilashvili N.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358323&timezone=0",
+      "source_date": "2026-10-27",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
+      "surface_detail_hash": "2ea57471acc4325d0b904f83b6fc45eff4eda6a2f9f02863bb3a56d57ea231da",
+      "surface_edition_id": "2026-337"
+    },
+    {
+      "player_a": "Zverev A.",
+      "player_b": "Landaluce M.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358305&timezone=0",
+      "source_date": "2026-10-27",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
+      "surface_detail_hash": "2ea57471acc4325d0b904f83b6fc45eff4eda6a2f9f02863bb3a56d57ea231da",
+      "surface_edition_id": "2026-337"
+    },
+    {
+      "player_a": "Paul T.",
+      "player_b": "Rublev A.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358303&timezone=0",
+      "source_date": "2026-10-27",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
+      "surface_detail_hash": "2ea57471acc4325d0b904f83b6fc45eff4eda6a2f9f02863bb3a56d57ea231da",
+      "surface_edition_id": "2026-337"
+    },
+    {
+      "player_a": "Khachanov K.",
+      "player_b": "Alcaraz C.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358325&timezone=0",
+      "source_date": "2026-10-27",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
+      "surface_detail_hash": "2ea57471acc4325d0b904f83b6fc45eff4eda6a2f9f02863bb3a56d57ea231da",
+      "surface_edition_id": "2026-337"
+    },
+    {
+      "player_a": "Merida Aguilar D.",
+      "player_b": "Medvedev D.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358319&timezone=0",
+      "source_date": "2026-10-27",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
+      "surface_detail_hash": "2ea57471acc4325d0b904f83b6fc45eff4eda6a2f9f02863bb3a56d57ea231da",
+      "surface_edition_id": "2026-337"
+    },
+    {
+      "player_a": "Cobolli F.",
+      "player_b": "Dimitrov G.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358311&timezone=0",
+      "source_date": "2026-10-27",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
+      "surface_detail_hash": "2ea57471acc4325d0b904f83b6fc45eff4eda6a2f9f02863bb3a56d57ea231da",
+      "surface_edition_id": "2026-337"
+    },
+    {
+      "player_a": "Mannarino A.",
+      "player_b": "Buse I.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3360125&timezone=0",
+      "source_date": "2026-10-27",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://stats.tennismylife.org/data/ongoing_tourneys.csv",
+      "surface_detail_hash": "2ea57471acc4325d0b904f83b6fc45eff4eda6a2f9f02863bb3a56d57ea231da",
+      "surface_edition_id": "2026-337"
+    },
+    {
       "player_a": "Varillas J.",
       "player_b": "Pacheco Mendez R.",
       "tournament": "Guayaquil challenger",
@@ -438,30 +526,27 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 69,
+  "events_found": 66,
   "events": [
-    "Juan Manuel Cerundolo vs Daniel Altmaier",
-    "Matisse Bobichon vs Lucas Poullain",
-    "Tom Paris vs Kilian Feldbausch",
-    "Lorenzo Joaquin Rodriguez vs Daniel Elahi Galan",
     "Federico Cina vs Shintaro Mochizuki",
     "Patrick Zahraj vs Karl Poling",
+    "Lorenzo Joaquin Rodriguez vs Daniel Elahi Galan",
     "Daniil Ostapenkov vs Gavin Young",
     "Mateo Del Pino vs Lucio Ratti",
     "Alex Hernandez vs Filip Misolic",
     "Lorenzo Claverie vs Ryan Nijboer",
-    "Juan Estevez vs Tomas Barrios Vera",
-    "Juan Carlos Prado Angelo vs Pedro Boscardin Dias",
     "Lukas Neumayer vs Jakub Mensik",
     "Jacob Fearnley vs Arthur Fery",
+    "Juan Estevez vs Tomas Barrios Vera",
+    "Juan Carlos Prado Angelo vs Pedro Boscardin Dias",
     "Tomasz Berkieta vs Spencer Johnson",
     "Daniel Salazar Martinez vs Miguel Tobon",
     "Tristan McCormick vs Alan Magadan",
     "Andrew Fenty vs Timo Legout",
-    "Lautaro Midon vs Gonzalo Villanueva",
-    "Genaro Alberto Olivieri vs Deigo Dedura-Palomero",
     "Otto Virtanen vs Matteo Martineau",
     "Matteo Arnaldi vs Luciano Darderi",
+    "Lautaro Midon vs Gonzalo Villanueva",
+    "Genaro Alberto Olivieri vs Deigo Dedura-Palomero",
     "James Kent Trotter vs Ozan Baris",
     "Benjamin Willwerth vs Sebastian Dominko",
     "Nishesh Basavareddy vs Gabriel Diallo",
@@ -487,17 +572,8 @@
     "Chak Lam Coleman Wong vs Beibit Zhukayev",
     "Pierre-Hugues Herbert vs Stefano Travaglia",
     "Daniil Glinka vs Hugo Gaston",
-    "Rafael Jodar vs Alejandro Tabilo",
-    "Ugo Humbert vs Novak Djokovic",
-    "Arthur Rinderknech vs Jerome Kym",
-    "Botic Van De Zandschulp vs Alex Michelsen",
-    "Jiri Lehecka vs Stan Wawrinka",
     "Zizou Bergs vs Hubert Hurkacz",
-    "Denis Shapovalov vs Remy Bertola",
-    "Rinky Hijikata vs Taylor Fritz",
-    "Jan-Lennard Struff vs Yannick Hanfmann",
-    "Arthur Fils vs Giovanni Mpetshi Perricard",
-    "Aleksandar Kovacevic vs Ben Shelton",
+    "Arthur Rinderknech vs Jerome Kym",
     "Brandon Nakashima vs Tallon Griekspoor",
     "Francisco Cerundolo vs Cameron Norrie",
     "Frances Tiafoe vs Lorenzo Musetti",
@@ -508,18 +584,27 @@
     "Daniil Medvedev vs Daniel Merida Aguilar",
     "Grigor Dimitrov vs Flavio Cobolli",
     "Ignacio Buse vs Adrian Mannarino",
-    "Rodrigo Pacheco Mendez vs Juan Pablo Varillas"
+    "Rafael Jodar vs Alejandro Tabilo",
+    "Botic Van De Zandschulp vs Alex Michelsen",
+    "Arthur Fils vs Giovanni Mpetshi Perricard",
+    "Rodrigo Pacheco Mendez vs Juan Pablo Varillas",
+    "Aleksandar Kovacevic vs Ben Shelton",
+    "Jiri Lehecka vs Stan Wawrinka",
+    "Ugo Humbert vs Novak Djokovic",
+    "Denis Shapovalov vs Remy Bertola",
+    "Rinky Hijikata vs Taylor Fritz",
+    "Jan-Lennard Struff vs Yannick Hanfmann"
   ],
-  "spread_markets_found": 18,
+  "spread_markets_found": 28,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 69,
+  "unique_event_pages": 66,
   "unpriced_spread_markets": [
     "Rodrigo Pacheco Mendez vs Juan Pablo Varillas"
   ],
-  "executable_spread_markets": 17,
-  "matches_parsed": 17,
+  "executable_spread_markets": 27,
+  "matches_parsed": 27,
   "partial_coverage": true,
-  "rows_saved": 52,
+  "rows_saved": 88,
   "error": null
 }
