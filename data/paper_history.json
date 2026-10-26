@@ -1947,9 +1947,9 @@
     "recommendation": "PAPER",
     "match_key": "Lorenzo Musetti|Taylor Fritz|2026-10-25|Lyon",
     "recorded_at": "2026-10-25T12:22:21.616172+00:00",
-    "result": "PENDING",
+    "result": "WIN",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": 1.13,
+    "settled_at": "2026-10-26T13:52:35.843243+00:00"
   }
 ]
