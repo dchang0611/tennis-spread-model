@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>2026 ATP Schedule Today: Matches, Results &amp; Tennis Calendar</title>
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <meta name="description" content="View today's ATP tennis schedule in your local time, recent results and upcoming tournaments across the 2026 ATP Tour calendar.">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://www.atpschedule.com/">
+  <link rel="alternate" hreflang="en" href="https://www.atpschedule.com/">
+  <link rel="alternate" hreflang="x-default" href="https://www.atpschedule.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ATP Schedule">
+  <meta property="og:title" content="2026 ATP Schedule Today: Matches, Results &amp; Tennis Calendar">
+  <meta property="og:description" content="View today's ATP tennis schedule in your local time, recent results and upcoming tournaments across the 2026 ATP Tour calendar.">
+  <meta property="og:url" content="https://www.atpschedule.com/">
+  <meta property="og:image" content="https://www.atpschedule.com/images/atp-schedule-stadium.webp">
+  <meta property="og:image:width" content="1440">
+  <meta property="og:image:height" content="960">
+  <meta property="og:image:alt" content="Empty blue hard-court tennis stadium before an ATP match">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="2026 ATP Schedule Today: Matches, Results &amp; Tennis Calendar">
+  <meta name="twitter:description" content="View today's ATP tennis schedule in your local time, recent results and upcoming tournaments across the 2026 ATP Tour calendar.">
+  <meta name="twitter:image" content="https://www.atpschedule.com/images/atp-schedule-stadium.webp">
+  <meta name="twitter:image:alt" content="Empty blue hard-court tennis stadium before an ATP match">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"WebSite","@id":"https://www.atpschedule.com/#website","name":"ATP Schedule","url":"https://www.atpschedule.com/","inLanguage":"en","description":"View today's ATP tennis schedule in your local time, recent results and upcoming tournaments across the 2026 ATP Tour calendar.","publisher":{"@type":"Organization","@id":"https://www.atpschedule.com/#publisher","name":"ATP Schedule","url":"https://www.atpschedule.com/"},"about":{"@type":"SportsOrganization","name":"ATP Tour","url":"https://www.atptour.com/"}},
+    {"@type":"CollectionPage","@id":"https://www.atpschedule.com/#webpage","name":"2026 ATP Schedule Today: Matches, Results & Tennis Calendar","url":"https://www.atpschedule.com/","description":"View today's ATP tennis schedule in your local time, recent results and upcoming tournaments across the 2026 ATP Tour calendar.","inLanguage":"en","isPartOf":{"@id":"https://www.atpschedule.com/#website"},"mainEntity":{"@id":"https://www.atpschedule.com/#schedule-tool"},"hasPart":[{"@id":"https://www.atpschedule.com/#tournaments"},{"@id":"https://www.atpschedule.com/#faq"}]},
+    {"@type":"WebApplication","@id":"https://www.atpschedule.com/#schedule-tool","name":"2026 ATP Schedule and Local Time Tool","url":"https://www.atpschedule.com/","description":"Check today's ATP matches, recent results and upcoming tournaments with automatic time-zone conversion.","applicationCategory":"SportsApplication","operatingSystem":"Any","browserRequirements":"JavaScript enabled for automatic time-zone conversion","isAccessibleForFree":true,"inLanguage":"en","audience":{"@type":"Audience","audienceType":"Tennis fans"},"featureList":["ATP matches today grouped by tournament","Automatic local start times","Singles and doubles schedules","Recent ATP results and set scores","Upcoming ATP tournament calendar","Tournament, player, venue and viewing guides"]},
+    {"@type":"ItemList","@id":"https://www.atpschedule.com/#tournaments","name":"Current and upcoming 2026 ATP tournaments","numberOfItems":7,"itemListElement":[{"@type":"ListItem","position":1,"name":"Erste Bank Open","url":"https://www.atpschedule.com/tournaments/2026/erste-bank-open-vienna"},{"@type":"ListItem","position":2,"name":"Swiss Indoors Basel","url":"https://www.atpschedule.com/tournaments/2026/swiss-indoors-basel"},{"@type":"ListItem","position":3,"name":"Paris Masters","url":"https://www.atpschedule.com/tournaments/2026/paris-masters"},{"@type":"ListItem","position":4,"name":"ATP 250 Event ? TBA","url":"https://www.atpschedule.com/tournaments/2026/november-atp-250-tba"},{"@type":"ListItem","position":5,"name":"Stockholm Open","url":"https://www.atpschedule.com/tournaments/2026/stockholm-open"},{"@type":"ListItem","position":6,"name":"Nitto ATP Finals","url":"https://www.atpschedule.com/tournaments/2026/nitto-atp-finals"},{"@type":"ListItem","position":7,"name":"Next Gen ATP Finals","url":"https://www.atpschedule.com/tournaments/2026/next-gen-atp-finals"}]},
+    {"@type":"FAQPage","@id":"https://www.atpschedule.com/#faq","mainEntity":[
+      {"@type":"Question","name":"What ATP matches are on today?","acceptedAnswer":{"@type":"Answer","text":"The ATP Tennis Schedule Today section groups today's main-tour matches by tournament and shows the players, round, court, match status and confirmed start time."}},
+      {"@type":"Question","name":"Are ATP match times shown in my local time zone?","acceptedAnswer":{"@type":"Answer","text":"Yes. Confirmed UTC start times are converted automatically to the time zone detected by your browser. You can also choose another time zone in the page header."}},
+      {"@type":"Question","name":"Which tournaments are included in this ATP schedule?","acceptedAnswer":{"@type":"Answer","text":"The 2026 calendar covers the main men's tour, including Grand Slams, ATP Masters 1000, ATP 500, ATP 250, ATP Finals and Next Gen ATP Finals events. Challenger, ITF, WTA and exhibition events are outside this site's current scope."}},
+      {"@type":"Question","name":"Where can I find recent ATP results?","acceptedAnswer":{"@type":"Answer","text":"Use the Latest ATP Results section for recently completed tournaments, or open the results tool to choose a specific date and see winners and set scores."}},
+      {"@type":"Question","name":"Where can I watch ATP tennis?","acceptedAnswer":{"@type":"Answer","text":"Use the Where to Watch guide to select your country and review listed legal TV and streaming providers. Rights can vary by tournament and package, so confirm the match in the provider's current schedule."}}
+    ]}
+  ]}
+  </script>
+  <link rel="stylesheet" href="/site.css?v=20261002-ad-simple">
+  <script defer src="/site.js"></script>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-950 antialiased">
+  <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <div class="mx-auto flex max-w-[90rem] items-center justify-between gap-4 px-4 py-3 lg:px-8">
+      <a href="/" class="flex items-center gap-2 font-black tracking-tight"><span class="grid h-9 w-9 place-items-center rounded-full bg-lime-300 text-sm">ATP</span><span>ATP Schedule</span></a>
+      <nav class="hidden items-center gap-5 text-sm font-semibold lg:flex">
+        <a href="/today" title="ATP matches today">Today</a><a href="/this-week" title="ATP schedule this week">This week</a><a href="/tournaments" title="ATP tournament calendar">Tournaments</a><a href="/results" title="Latest ATP results">Results</a><a href="/players" title="ATP player directory">Players</a><a href="/watch" title="Where to watch ATP tennis">Watch</a><a href="/blog" title="ATP tennis blog">Blog</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <label for="atp-timezone" class="hidden text-xs text-slate-500 sm:block">Times in</label>
+        <select id="atp-timezone" data-timezone-select class="max-w-44 rounded-lg border border-slate-300 bg-white px-2 py-2 text-xs font-semibold" aria-label="Display time zone">
+          <option value="auto">My local time</option><option value="UTC">UTC</option><option value="America/New_York">New York</option><option value="America/Los_Angeles">Los Angeles</option><option value="Europe/London">London</option><option value="Europe/Paris">Paris</option><option value="Asia/Shanghai">Shanghai</option><option value="Asia/Kolkata">India</option><option value="Australia/Sydney">Sydney</option>
+        </select>
+        <button data-menu-button class="rounded-lg border border-slate-300 p-2 lg:hidden" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+    <nav data-mobile-menu class="hidden border-t border-slate-100 bg-white px-4 py-3 text-sm font-semibold lg:hidden"><div class="mx-auto grid max-w-[90rem] grid-cols-3 gap-3"><a href="/today" title="ATP matches today">Today</a><a href="/this-week" title="ATP schedule this week">This week</a><a href="/tournaments" title="ATP tournament calendar">Tournaments</a><a href="/results" title="Latest ATP results">Results</a><a href="/players" title="ATP player directory">Players</a><a href="/watch" title="Where to watch ATP tennis">Watch</a><a href="/blog" title="ATP tennis blog">Blog</a></div></nav>
+  </header>
+  <main><section class="border-b border-slate-200 bg-white">
+  <div class="mx-auto grid max-w-[90rem] gap-8 px-4 py-14 lg:grid-cols-[1.15fr_.85fr] lg:px-8 lg:py-16">
+    <div class="self-center">
+      <p class="eyebrow">2026 men’s tennis schedule</p>
+      <h1 class="mt-4 max-w-4xl text-5xl font-black leading-none tracking-tight sm:text-6xl">2026 ATP Schedule: Today’s Matches, Results & Tournament Calendar</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-600">See what ATP tennis is on today, when each match starts in your time zone, who has already won and which tournaments are coming next. Follow singles and doubles from the Grand Slams and Masters 1000s through ATP 500 and ATP 250 events.</p>
+      <div class="mt-6 flex flex-wrap gap-2 text-xs font-bold"><span class="tag">61 calendar events</span><span class="tag">Singles + doubles</span><span class="tag">Automatic local times</span><span class="tag">Scores by set</span></div>
+      <p class="mt-4 text-xs text-slate-500">Start times remain subject to tournament changes.</p>
+      <div class="mt-8 flex flex-wrap gap-3"><a class="btn-primary" href="/today">See ATP matches today</a><a class="btn-secondary" href="/results/today">Check today’s results</a><a class="btn-secondary" href="/tournaments">Open the 2026 ATP tournaments</a></div>
+    </div>
+    <figure class="editorial-visual home-hero-visual"><img src="/images/atp-schedule-stadium.webp" width="1440" height="960" alt="Empty blue hard-court tennis stadium before an ATP match" decoding="async" fetchpriority="high"></figure>
+    <aside class="rounded-3xl bg-slate-950 p-6 text-white lg:col-span-2 lg:p-7">
+      <div class="grid gap-6 lg:grid-cols-[.9fr_1.4fr] lg:items-center">
+        <div><p class="text-sm font-bold text-lime-300">Your ATP time-zone tool</p><p class="mt-2 text-2xl font-black" data-user-zone>Detecting your time zone…</p><p class="mt-3 max-w-2xl text-sm leading-6 text-slate-300">Match times are converted automatically to your selected time zone. Use the selector in the header to check another supported zone.</p></div>
+        <dl class="grid gap-3 text-sm sm:grid-cols-3"><div class="rounded-xl bg-slate-900 p-4"><dt class="text-slate-400">Today means</dt><dd class="mt-1 font-bold" data-local-date>Your local calendar date</dd></div><div class="rounded-xl bg-slate-900 p-4"><dt class="text-slate-400">Schedule scope</dt><dd class="mt-1 font-bold">Main ATP Tour events</dd></div><div class="rounded-xl bg-slate-900 p-4"><dt class="text-slate-400">Cost</dt><dd class="mt-1 font-bold">Free to use</dd></div></dl>
+      </div>
+    </aside>
+  </div>
+</section>
+
+  <div class="atp-ad atp-ad--rectangle" aria-label="Advertisement" data-atp-ad-placement="opening" data-atp-ad-size="300x250" data-ad-container>
+
+      <script>
+        atOptions = {
+          'key' : '98fc3f11203691d87dee536a66a0658a',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://czernik.org/22/98fc3f11203691d87dee536a66a0658a"></script>
+
+  </div>
+
+<section class="section" data-home-events><div class="section-head"><div><p class="eyebrow">ATP schedule today</p><h2>ATP Tennis Schedule Today</h2><p class="mt-2 max-w-3xl text-sm leading-6 text-slate-500">Today’s ATP matches are grouped by tournament. Each row shows the players or teams, round, court, singles or doubles draw, live status and confirmed start in your selected time zone.</p></div><a href="/today">Full ATP match schedule →</a></div><div class="grid gap-5 lg:grid-cols-2" data-local-schedule><article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" data-home-event data-event-page-size="8" data-today-event="true" data-has-matches="true">
+  <header class="border-b border-slate-100 p-5">
+    <div class="flex items-start justify-between gap-4">
+      <div><p class="text-xs font-black uppercase tracking-widest text-emerald-700">ATP 500</p><h3 class="mt-1 text-xl font-black"><a href="/tournaments/2026/erste-bank-open-vienna">Erste Bank Open</a></h3></div>
+      <span class="surface-badge">Hard</span>
+    </div>
+    <p class="mt-3 text-sm text-slate-500">Oct 26 – Nov 1, 2026 · Vienna, AT</p>
+  </header>
+  <div class="divide-y divide-slate-100" data-event-matches>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTgy/tomas-martin-etcheverry-vs-matteo-berrettini" data-match data-event-match data-start="2026-10-26T12:40Z" data-status="final" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Tomas Martin Etcheverry</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Matteo Berrettini <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · Centre Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T12:40Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">3–6, 4–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTk1/alex-de-minaur-vs-tomas-machac" data-match data-event-match data-start="2026-10-26T14:20Z" data-status="final" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold text-emerald-700">Alex de Minaur <span class="winner-badge">Winner</span></p><p class="mt-1 truncate text-sm font-bold ">Tomas Machac</p><p class="mt-2 text-xs text-slate-400">Round 1 · Centre Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T14:20Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">1–6, 6–4, 6–3</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTc2/jacob-fearnley-vs-arthur-fery" data-match data-event-match data-start="2026-10-26T16:35Z" data-status="final" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Jacob Fearnley</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Arthur Fery <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · Glaubandich Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T16:35Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">1–5</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTk3/lukas-neumayer-vs-jakub-mensik" data-match data-event-match data-start="2026-10-26T16:50Z" data-status="final" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Lukas Neumayer</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Jakub Mensik <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · Centre Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T16:50Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">2–6, 2–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTc3/matteo-arnaldi-vs-luciano-darderi" data-match data-event-match data-start="2026-10-26T17:45Z" data-status="final" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Matteo Arnaldi</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Luciano Darderi <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · Glaubandich Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T17:45Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">5–7, 2–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTc1/learner-tien-vs-luca-van-assche" data-match data-event-match data-start="2026-10-26T19:15Z" data-status="final" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold text-emerald-700">Learner Tien <span class="winner-badge">Winner</span></p><p class="mt-1 truncate text-sm font-bold ">Luca Van Assche</p><p class="mt-2 text-xs text-slate-400">Round 1 · Centre Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T19:15Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">6–3, 6–1</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg3MjY0/maximo-gonzalez-andres-molteni-vs-santiago-gonzalez-bart-stevens" data-match data-event-match data-start="2026-10-27T04:00Z" data-status="upcoming" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Maximo Gonzalez / Andres Molteni</p><p class="mt-1 truncate text-sm font-bold ">Santiago Gonzalez / Bart Stevens</p><p class="mt-2 text-xs text-slate-400">Qualifying 1st Round · Glaubandich Court</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg3MjYz/skander-mansouri-maximilian-neuchrist-vs-sander-arends-luke-johnson" data-match data-event-match data-start="2026-10-27T12:00Z" data-status="upcoming" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Skander Mansouri / Maximilian Neuchrist</p><p class="mt-1 truncate text-sm font-bold ">Sander Arends / Luke Johnson</p><p class="mt-2 text-xs text-slate-400">Qualifying 1st Round · Glaubandich Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T12:00Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTky/andrey-rublev-vs-tommy-paul" data-match data-event-match data-start="2026-10-27T12:30Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Andrey Rublev</p><p class="mt-1 truncate text-sm font-bold ">Tommy Paul</p><p class="mt-2 text-xs text-slate-400">Round 1 · Centre Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T12:30Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTgx/carlos-alcaraz-vs-karen-khachanov" data-match data-event-match data-start="2026-10-27T14:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Carlos Alcaraz</p><p class="mt-1 truncate text-sm font-bold ">Karen Khachanov</p><p class="mt-2 text-xs text-slate-400">Round 1 · Centre Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T14:00Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTg0/ignacio-buse-vs-adrian-mannarino" data-match data-event-match data-start="2026-10-27T14:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Ignacio Buse</p><p class="mt-1 truncate text-sm font-bold ">Adrian Mannarino</p><p class="mt-2 text-xs text-slate-400">Round 1 · Glaubandich Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T14:00Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTg2/francisco-cerundolo-vs-cameron-norrie" data-match data-event-match data-start="2026-10-27T15:30Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Francisco Cerundolo</p><p class="mt-1 truncate text-sm font-bold ">Cameron Norrie</p><p class="mt-2 text-xs text-slate-400">Round 1 · Glaubandich Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T15:30Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTg4/martin-landaluce-vs-alexander-zverev" data-match data-event-match data-start="2026-10-27T16:30Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Martin Landaluce</p><p class="mt-1 truncate text-sm font-bold ">Alexander Zverev</p><p class="mt-2 text-xs text-slate-400">Round 1 · Centre Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T16:30Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTgw/grigor-dimitrov-vs-flavio-cobolli" data-match data-event-match data-start="2026-10-27T19:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Grigor Dimitrov</p><p class="mt-1 truncate text-sm font-bold ">Flavio Cobolli</p><p class="mt-2 text-xs text-slate-400">Round 1 · Centre Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T19:00Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTc4/frances-tiafoe-vs-lorenzo-musetti" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Frances Tiafoe</p><p class="mt-1 truncate text-sm font-bold ">Lorenzo Musetti</p><p class="mt-2 text-xs text-slate-400">Round 1 · Vienna, Austria</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTc5/nikoloz-basilashvili-vs-jurij-rodionov" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Nikoloz Basilashvili</p><p class="mt-1 truncate text-sm font-bold ">Jurij Rodionov</p><p class="mt-2 text-xs text-slate-400">Round 1 · Vienna, Austria</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTg5/daniil-medvedev-vs-daniel-merida" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Daniil Medvedev</p><p class="mt-1 truncate text-sm font-bold ">Daniel Merida</p><p class="mt-2 text-xs text-slate-400">Round 1 · Vienna, Austria</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTkx/brandon-nakashima-vs-tallon-griekspoor" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Brandon Nakashima</p><p class="mt-1 truncate text-sm font-bold ">Tallon Griekspoor</p><p class="mt-2 text-xs text-slate-400">Round 1 · Vienna, Austria</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MjA2/petr-nouza-michael-venus-vs-lucas-miedler-neil-oberleitner" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Petr Nouza / Michael Venus</p><p class="mt-1 truncate text-sm font-bold ">Lucas Miedler / Neil Oberleitner</p><p class="mt-2 text-xs text-slate-400">Round 1 · Vienna, Austria</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MjA4/marcelo-arevalo-mate-pavic-vs-francisco-cerundolo-tomas-martin-etcheverry" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Marcelo Arevalo / Mate Pavic</p><p class="mt-1 truncate text-sm font-bold ">Francisco Cerundolo / Tomas Martin Etcheverry</p><p class="mt-2 text-xs text-slate-400">Round 1 · Vienna, Austria</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MjA5/lukas-neumayer-jurij-rodionov-vs-ryan-seggerman-learner-tien" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Lukas Neumayer / Jurij Rodionov</p><p class="mt-1 truncate text-sm font-bold ">Ryan Seggerman / Learner Tien</p><p class="mt-2 text-xs text-slate-400">Round 1 · Vienna, Austria</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MjEw/austin-krajicek-nikola-mektic-vs-harri-heliovaara-henry-patten" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Austin Krajicek / Nikola Mektic</p><p class="mt-1 truncate text-sm font-bold ">Harri Heliovaara / Henry Patten</p><p class="mt-2 text-xs text-slate-400">Round 1 · Vienna, Austria</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MjEz/marcelo-melo-alexander-zverev-vs-simone-bolelli-andrea-vavassori" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Marcelo Melo / Alexander Zverev</p><p class="mt-1 truncate text-sm font-bold ">Simone Bolelli / Andrea Vavassori</p><p class="mt-2 text-xs text-slate-400">Round 1 · Vienna, Austria</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MjE1/guido-andreozzi-manuel-guinard-vs-robert-cash-alexander-erler" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Guido Andreozzi / Manuel Guinard</p><p class="mt-1 truncate text-sm font-bold ">Robert Cash / Alexander Erler</p><p class="mt-2 text-xs text-slate-400">Round 1 · Vienna, Austria</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MjE2/christian-harrison-neal-skupski-vs-orlando-luz-rafael-matos" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Christian Harrison / Neal Skupski</p><p class="mt-1 truncate text-sm font-bold ">Orlando Luz / Rafael Matos</p><p class="mt-2 text-xs text-slate-400">Round 1 · Vienna, Austria</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTk4/alex-de-minaur-vs-learner-tien" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Alex de Minaur</p><p class="mt-1 truncate text-sm font-bold ">Learner Tien</p><p class="mt-2 text-xs text-slate-400">Round 2 · Vienna, Austria</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    
+  </div>
+  <nav class="flex items-center justify-between gap-3 border-t border-slate-100 bg-white px-5 py-3" data-event-pagination aria-label="Erste Bank Open match pages" hidden>
+    <button class="event-page-button" type="button" data-event-page-prev aria-label="Previous match page">←</button>
+    <div class="flex flex-wrap justify-center gap-1" data-event-page-numbers></div>
+    <button class="event-page-button" type="button" data-event-page-next aria-label="Next match page">→</button>
+  </nav>
+  <footer class="flex items-center justify-between gap-3 bg-slate-50 px-5 py-3 text-xs"><span data-event-match-summary>26 listed matches</span><a class="shrink-0 font-bold text-slate-950" href="/tournaments/2026/erste-bank-open-vienna">Tournament details →</a></footer>
+</article>
+<article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" data-home-event data-event-page-size="8" data-today-event="true" data-has-matches="true">
+  <header class="border-b border-slate-100 p-5">
+    <div class="flex items-start justify-between gap-4">
+      <div><p class="text-xs font-black uppercase tracking-widest text-emerald-700">ATP 500</p><h3 class="mt-1 text-xl font-black"><a href="/tournaments/2026/swiss-indoors-basel">Swiss Indoors Basel</a></h3></div>
+      <span class="surface-badge">Hard</span>
+    </div>
+    <p class="mt-3 text-sm text-slate-500">Oct 26 – Nov 1, 2026 · Basel, CH</p>
+  </header>
+  <div class="divide-y divide-slate-100" data-event-matches>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTYx/alex-michelsen-botic-van-de-zandschulp-vs-jakub-paul-matej-vocel" data-match data-event-match data-start="2026-10-26T11:10Z" data-status="final" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold text-emerald-700">Alex Michelsen / Botic Van De Zandschulp <span class="winner-badge">Winner</span></p><p class="mt-1 truncate text-sm font-bold ">Jakub Paul / Matej Vocel</p><p class="mt-2 text-xs text-slate-400">Round 1 · IWB Court 1</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T11:10Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">7–5, 6–1</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTMx/mariano-navone-vs-valentin-vacherot" data-match data-event-match data-start="2026-10-26T12:40Z" data-status="final" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Mariano Navone</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Valentin Vacherot <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T12:40Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">3–6, 6–7 (4–7)</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTM2/nuno-borges-vs-mika-brunold" data-match data-event-match data-start="2026-10-26T12:40Z" data-status="final" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold text-emerald-700">Nuno Borges <span class="winner-badge">Winner</span></p><p class="mt-1 truncate text-sm font-bold ">Mika Brunold</p><p class="mt-2 text-xs text-slate-400">Round 1 · IWB Court 1</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T12:40Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">6–3, 6–1</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTQx/juan-manuel-cerundolo-vs-daniel-altmaier" data-match data-event-match data-start="2026-10-26T14:05Z" data-status="final" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Juan Manuel Cerundolo</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Daniel Altmaier <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · IWB Court 1</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T14:05Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">7–6 (7–5), 6–7 (4–7), 4–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTMw/quentin-halys-vs-holger-rune" data-match data-event-match data-start="2026-10-26T15:00Z" data-status="final" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Quentin Halys</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Holger Rune <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T15:00Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">4–6, 7–6 (7–2), 6–7 (5–7)</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTcy/jakob-schnaitter-mark-wallner-vs-kevin-krawietz-tim-puetz" data-match data-event-match data-start="2026-10-26T17:05Z" data-status="final" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Jakob Schnaitter / Mark Wallner</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Kevin Krawietz / Tim Puetz <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · IWB Court 1</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T17:05Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">6–7 (5–7), 3–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTM3/casper-ruud-vs-dominic-stricker" data-match data-event-match data-start="2026-10-26T19:55Z" data-status="final" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold text-emerald-700">Casper Ruud <span class="winner-badge">Winner</span></p><p class="mt-1 truncate text-sm font-bold ">Dominic Stricker</p><p class="mt-2 text-xs text-slate-400">Round 1 · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T19:55Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">4–6, 7–5, 6–3</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTI5/zizou-bergs-vs-hubert-hurkacz" data-match data-event-match data-start="2026-10-27T11:00Z" data-status="upcoming" data-local-today="true" >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Zizou Bergs</p><p class="mt-1 truncate text-sm font-bold ">Hubert Hurkacz</p><p class="mt-2 text-xs text-slate-400">Round 1 · IWB Court 1</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T11:00Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTQw/arthur-rinderknech-vs-jerome-kym" data-match data-event-match data-start="2026-10-27T12:30Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Arthur Rinderknech</p><p class="mt-1 truncate text-sm font-bold ">Jerome Kym</p><p class="mt-2 text-xs text-slate-400">Round 1 · IWB Court 1</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T12:30Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTMy/rafael-jodar-vs-alejandro-tabilo" data-match data-event-match data-start="2026-10-27T13:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Rafael Jodar</p><p class="mt-1 truncate text-sm font-bold ">Alejandro Tabilo</p><p class="mt-2 text-xs text-slate-400">Round 1 · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T13:00Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTQ0/botic-van-de-zandschulp-vs-alex-michelsen" data-match data-event-match data-start="2026-10-27T14:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Botic Van De Zandschulp</p><p class="mt-1 truncate text-sm font-bold ">Alex Michelsen</p><p class="mt-2 text-xs text-slate-400">Round 1 · IWB Court 1</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T14:00Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTM0/arthur-fils-vs-giovanni-mpetshi-perricard" data-match data-event-match data-start="2026-10-27T14:30Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Arthur Fils</p><p class="mt-1 truncate text-sm font-bold ">Giovanni Mpetshi Perricard</p><p class="mt-2 text-xs text-slate-400">Round 1 · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T14:30Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTY3/sadio-doumbia-david-pel-vs-henry-bernet-dominic-stricker" data-match data-event-match data-start="2026-10-27T15:30Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Sadio Doumbia / David Pel</p><p class="mt-1 truncate text-sm font-bold ">Henry Bernet / Dominic Stricker</p><p class="mt-2 text-xs text-slate-400">Round 1 · IWB Court 1</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T15:30Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTM5/aleksandar-kovacevic-vs-ben-shelton" data-match data-event-match data-start="2026-10-27T17:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Aleksandar Kovacevic</p><p class="mt-1 truncate text-sm font-bold ">Ben Shelton</p><p class="mt-2 text-xs text-slate-400">Round 1 · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T17:00Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTYy/arthur-reymond-luca-sanchez-vs-francisco-cabral-jj-tracy" data-match data-event-match data-start="2026-10-27T17:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Arthur Reymond / Luca Sanchez</p><p class="mt-1 truncate text-sm font-bold ">Francisco Cabral / JJ Tracy</p><p class="mt-2 text-xs text-slate-400">Round 1 · IWB Court 1</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T17:00Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTQz/jiri-lehecka-vs-stan-wawrinka" data-match data-event-match data-start="2026-10-27T18:30Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Jiri Lehecka</p><p class="mt-1 truncate text-sm font-bold ">Stan Wawrinka</p><p class="mt-2 text-xs text-slate-400">Round 1 · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-27T18:30Z">Loading time…</time><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTMz/ugo-humbert-vs-novak-djokovic" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Ugo Humbert</p><p class="mt-1 truncate text-sm font-bold ">Novak Djokovic</p><p class="mt-2 text-xs text-slate-400">Round 1 · Basel, Switzerland</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTM1/jan-lennard-struff-vs-yannick-hanfmann" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Jan-Lennard Struff</p><p class="mt-1 truncate text-sm font-bold ">Yannick Hanfmann</p><p class="mt-2 text-xs text-slate-400">Round 1 · Basel, Switzerland</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTM4/rinky-hijikata-vs-taylor-fritz" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Rinky Hijikata</p><p class="mt-1 truncate text-sm font-bold ">Taylor Fritz</p><p class="mt-2 text-xs text-slate-400">Round 1 · Basel, Switzerland</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTQy/denis-shapovalov-vs-remy-bertola" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Denis Shapovalov</p><p class="mt-1 truncate text-sm font-bold ">Remy Bertola</p><p class="mt-2 text-xs text-slate-400">Round 1 · Basel, Switzerland</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTYw/theo-arribage-albano-olivetti-vs-hugo-nys-edouard-roger-vasselin" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Theo Arribage / Albano Olivetti</p><p class="mt-1 truncate text-sm font-bold ">Hugo Nys / Edouard Roger-Vasselin</p><p class="mt-2 text-xs text-slate-400">Round 1 · Basel, Switzerland</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTYz/julian-cash-lloyd-glasspool-vs-adam-pavlasek-patrik-rikl" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Julian Cash / Lloyd Glasspool</p><p class="mt-1 truncate text-sm font-bold ">Adam Pavlasek / Patrik Rikl</p><p class="mt-2 text-xs text-slate-400">Round 1 · Basel, Switzerland</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTY4/constantin-frantzen-robin-haase-vs-mariano-navone-alejandro-tabilo" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Constantin Frantzén / Robin Haase</p><p class="mt-1 truncate text-sm font-bold ">Mariano Navone / Alejandro Tabilo</p><p class="mt-2 text-xs text-slate-400">Round 1 · Basel, Switzerland</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTcz/marc-polmans-jan-zielinski-vs-robert-galloway-andre-goransson" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Marc Polmans / Jan Zielinski</p><p class="mt-1 truncate text-sm font-bold ">Robert Galloway / Andre Goransson</p><p class="mt-2 text-xs text-slate-400">Round 1 · Basel, Switzerland</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTQ1/casper-ruud-vs-nuno-borges" data-match data-event-match data-start="2026-10-28T04:00Z" data-status="upcoming" data-local-today="true" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Casper Ruud</p><p class="mt-1 truncate text-sm font-bold ">Nuno Borges</p><p class="mt-2 text-xs text-slate-400">Round 2 · Basel, Switzerland</p></div>
+        <div class="shrink-0 text-right text-xs"><span class="font-bold">Time TBA</span><p class="mt-2 text-slate-500">scheduled</p></div>
+      </div>
+    </a>
+    
+  </div>
+  <nav class="flex items-center justify-between gap-3 border-t border-slate-100 bg-white px-5 py-3" data-event-pagination aria-label="Swiss Indoors Basel match pages" hidden>
+    <button class="event-page-button" type="button" data-event-page-prev aria-label="Previous match page">←</button>
+    <div class="flex flex-wrap justify-center gap-1" data-event-page-numbers></div>
+    <button class="event-page-button" type="button" data-event-page-next aria-label="Next match page">→</button>
+  </nav>
+  <footer class="flex items-center justify-between gap-3 bg-slate-50 px-5 py-3 text-xs"><span data-event-match-summary>25 listed matches</span><a class="shrink-0 font-bold text-slate-950" href="/tournaments/2026/swiss-indoors-basel">Tournament details →</a></footer>
+</article>
+</div><div class="empty-state" data-home-empty hidden><h3>No main-tour ATP tournament is active today</h3><p>Open the upcoming ATP tournaments below to see when the next event begins.</p></div></section>
+
+<section class="border-y border-slate-200 bg-white"><div class="section" data-home-events><div class="section-head"><div><p class="eyebrow">Finished scores</p><h2>Latest ATP Results</h2><p class="mt-2 max-w-3xl text-sm leading-6 text-slate-500">Catch up on recently completed ATP tournaments without searching through the full calendar. Winners and available set scores appear beside each finished match.</p></div><a href="/results">ATP results by date →</a></div><div class="grid gap-5 lg:grid-cols-2"><article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" data-home-event data-event-page-size="8" >
+  <header class="border-b border-slate-100 p-5">
+    <div class="flex items-start justify-between gap-4">
+      <div><p class="text-xs font-black uppercase tracking-widest text-emerald-700">ATP 500</p><h3 class="mt-1 text-xl font-black"><a href="/tournaments/2026/erste-bank-open-vienna">Erste Bank Open</a></h3></div>
+      <span class="surface-badge">Hard</span>
+    </div>
+    <p class="mt-3 text-sm text-slate-500">Oct 26 – Nov 1, 2026 · Vienna, AT</p>
+  </header>
+  <div class="divide-y divide-slate-100" data-event-matches>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTc1/learner-tien-vs-luca-van-assche" data-match data-event-match data-start="2026-10-26T19:15Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold text-emerald-700">Learner Tien <span class="winner-badge">Winner</span></p><p class="mt-1 truncate text-sm font-bold ">Luca Van Assche</p><p class="mt-2 text-xs text-slate-400">Round 1 · Centre Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T19:15Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">6–3, 6–1</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTc3/matteo-arnaldi-vs-luciano-darderi" data-match data-event-match data-start="2026-10-26T17:45Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Matteo Arnaldi</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Luciano Darderi <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · Glaubandich Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T17:45Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">5–7, 2–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTk3/lukas-neumayer-vs-jakub-mensik" data-match data-event-match data-start="2026-10-26T16:50Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Lukas Neumayer</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Jakub Mensik <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · Centre Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T16:50Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">2–6, 2–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTc2/jacob-fearnley-vs-arthur-fery" data-match data-event-match data-start="2026-10-26T16:35Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Jacob Fearnley</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Arthur Fery <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · Glaubandich Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T16:35Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">1–5</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTk1/alex-de-minaur-vs-tomas-machac" data-match data-event-match data-start="2026-10-26T14:20Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold text-emerald-700">Alex de Minaur <span class="winner-badge">Winner</span></p><p class="mt-1 truncate text-sm font-bold ">Tomas Machac</p><p class="mt-2 text-xs text-slate-400">Round 1 · Centre Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T14:20Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">1–6, 6–4, 6–3</strong></p></div>
+      </div>
+    </a>
+    
+  </div>
+  <nav class="flex items-center justify-between gap-3 border-t border-slate-100 bg-white px-5 py-3" data-event-pagination aria-label="Erste Bank Open match pages" hidden>
+    <button class="event-page-button" type="button" data-event-page-prev aria-label="Previous match page">←</button>
+    <div class="flex flex-wrap justify-center gap-1" data-event-page-numbers></div>
+    <button class="event-page-button" type="button" data-event-page-next aria-label="Next match page">→</button>
+  </nav>
+  <footer class="flex items-center justify-between gap-3 bg-slate-50 px-5 py-3 text-xs"><span data-event-match-summary>5 listed matches</span><a class="shrink-0 font-bold text-slate-950" href="/tournaments/2026/erste-bank-open-vienna">Tournament details →</a></footer>
+</article>
+<article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" data-home-event data-event-page-size="8" >
+  <header class="border-b border-slate-100 p-5">
+    <div class="flex items-start justify-between gap-4">
+      <div><p class="text-xs font-black uppercase tracking-widest text-emerald-700">ATP 500</p><h3 class="mt-1 text-xl font-black"><a href="/tournaments/2026/swiss-indoors-basel">Swiss Indoors Basel</a></h3></div>
+      <span class="surface-badge">Hard</span>
+    </div>
+    <p class="mt-3 text-sm text-slate-500">Oct 26 – Nov 1, 2026 · Basel, CH</p>
+  </header>
+  <div class="divide-y divide-slate-100" data-event-matches>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTM3/casper-ruud-vs-dominic-stricker" data-match data-event-match data-start="2026-10-26T19:55Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold text-emerald-700">Casper Ruud <span class="winner-badge">Winner</span></p><p class="mt-1 truncate text-sm font-bold ">Dominic Stricker</p><p class="mt-2 text-xs text-slate-400">Round 1 · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T19:55Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">4–6, 7–5, 6–3</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTcy/jakob-schnaitter-mark-wallner-vs-kevin-krawietz-tim-puetz" data-match data-event-match data-start="2026-10-26T17:05Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Jakob Schnaitter / Mark Wallner</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Kevin Krawietz / Tim Puetz <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · IWB Court 1</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T17:05Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">6–7 (5–7), 3–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTMw/quentin-halys-vs-holger-rune" data-match data-event-match data-start="2026-10-26T15:00Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Quentin Halys</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Holger Rune <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T15:00Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">4–6, 7–6 (7–2), 6–7 (5–7)</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTQx/juan-manuel-cerundolo-vs-daniel-altmaier" data-match data-event-match data-start="2026-10-26T14:05Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Juan Manuel Cerundolo</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Daniel Altmaier <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · IWB Court 1</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T14:05Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">7–6 (7–5), 6–7 (4–7), 4–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MTMx/mariano-navone-vs-valentin-vacherot" data-match data-event-match data-start="2026-10-26T12:40Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Mariano Navone</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Valentin Vacherot <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Round 1 · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-26T12:40Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">3–6, 6–7 (4–7)</strong></p></div>
+      </div>
+    </a>
+    
+  </div>
+  <nav class="flex items-center justify-between gap-3 border-t border-slate-100 bg-white px-5 py-3" data-event-pagination aria-label="Swiss Indoors Basel match pages" hidden>
+    <button class="event-page-button" type="button" data-event-page-prev aria-label="Previous match page">←</button>
+    <div class="flex flex-wrap justify-center gap-1" data-event-page-numbers></div>
+    <button class="event-page-button" type="button" data-event-page-next aria-label="Next match page">→</button>
+  </nav>
+  <footer class="flex items-center justify-between gap-3 bg-slate-50 px-5 py-3 text-xs"><span data-event-match-summary>5 listed matches</span><a class="shrink-0 font-bold text-slate-950" href="/tournaments/2026/swiss-indoors-basel">Tournament details →</a></footer>
+</article>
+<article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" data-home-event data-event-page-size="8" >
+  <header class="border-b border-slate-100 p-5">
+    <div class="flex items-start justify-between gap-4">
+      <div><p class="text-xs font-black uppercase tracking-widest text-emerald-700">ATP 250</p><h3 class="mt-1 text-xl font-black"><a href="/tournaments/2026/almaty-open">Almaty Open</a></h3></div>
+      <span class="surface-badge">Hard</span>
+    </div>
+    <p class="mt-3 text-sm text-slate-500">Oct 19 – Oct 25, 2026 · Almaty, KZ</p>
+  </header>
+  <div class="divide-y divide-slate-100" data-event-matches>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MDIx/nikoloz-basilashvili-vs-daniil-medvedev" data-match data-event-match data-start="2026-10-25T10:05Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Nikoloz Basilashvili</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Daniil Medvedev <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Final · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-25T10:05Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">7–6 (8–6), 1–6, 3–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MDM2/yuki-bhambri-ryan-seggerman-vs-lucas-miedler-neil-oberleitner" data-match data-event-match data-start="2026-10-25T07:05Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold text-emerald-700">Yuki Bhambri / Ryan Seggerman <span class="winner-badge">Winner</span></p><p class="mt-1 truncate text-sm font-bold ">Lucas Miedler / Neil Oberleitner</p><p class="mt-2 text-xs text-slate-400">Final · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-25T07:05Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">7–6 (7–3), 6–7 (1–7), 1–0 (10–2)</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MDE5/alexander-bublik-vs-daniil-medvedev" data-match data-event-match data-start="2026-10-24T13:20Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Alexander Bublik</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Daniil Medvedev <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Semifinal · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-24T13:20Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">3–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MDIw/stefanos-tsitsipas-vs-nikoloz-basilashvili" data-match data-event-match data-start="2026-10-24T10:10Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Stefanos Tsitsipas</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Nikoloz Basilashvili <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Semifinal · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-24T10:10Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">4–6, 7–6 (7–5), 3–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg1MDIy/n-sriram-balaji-evan-king-vs-lucas-miedler-neil-oberleitner" data-match data-event-match data-start="2026-10-24T07:05Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">N.Sriram Balaji / Evan King</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Lucas Miedler / Neil Oberleitner <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Semifinal · Center Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-24T07:05Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">6–7 (4–7), 6–4, 0–1 (3–10)</strong></p></div>
+      </div>
+    </a>
+    
+  </div>
+  <nav class="flex items-center justify-between gap-3 border-t border-slate-100 bg-white px-5 py-3" data-event-pagination aria-label="Almaty Open match pages" hidden>
+    <button class="event-page-button" type="button" data-event-page-prev aria-label="Previous match page">←</button>
+    <div class="flex flex-wrap justify-center gap-1" data-event-page-numbers></div>
+    <button class="event-page-button" type="button" data-event-page-next aria-label="Next match page">→</button>
+  </nav>
+  <footer class="flex items-center justify-between gap-3 bg-slate-50 px-5 py-3 text-xs"><span data-event-match-summary>5 listed matches</span><a class="shrink-0 font-bold text-slate-950" href="/tournaments/2026/almaty-open">Tournament details →</a></footer>
+</article>
+<article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" data-home-event data-event-page-size="8" >
+  <header class="border-b border-slate-100 p-5">
+    <div class="flex items-start justify-between gap-4">
+      <div><p class="text-xs font-black uppercase tracking-widest text-emerald-700">Masters 1000</p><h3 class="mt-1 text-xl font-black"><a href="/tournaments/2026/shanghai-masters">Shanghai Masters</a></h3></div>
+      <span class="surface-badge">Hard</span>
+    </div>
+    <p class="mt-3 text-sm text-slate-500">Oct 7 – Oct 18, 2026 · Shanghai, CN</p>
+  </header>
+  <div class="divide-y divide-slate-100" data-event-matches>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg0OTQ3/rafael-jodar-vs-alejandro-davidovich-fokina" data-match data-event-match data-start="2026-10-18T08:40Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Rafael Jodar</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Alejandro Davidovich Fokina <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Final · Stadium Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-18T08:40Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">6–1, 6–7 (5–7), 4–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg0OTkw/francisco-cabral-jj-tracy-vs-lucas-miedler-neil-oberleitner" data-match data-event-match data-start="2026-10-18T06:05Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold ">Francisco Cabral / JJ Tracy</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Lucas Miedler / Neil Oberleitner <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Final · Stadium Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-18T06:05Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">3–6, 4–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg0OTQ2/daniil-medvedev-vs-rafael-jodar" data-match data-event-match data-start="2026-10-17T11:05Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold ">Daniil Medvedev</p><p class="mt-1 truncate text-sm font-bold text-emerald-700">Rafael Jodar <span class="winner-badge">Winner</span></p><p class="mt-2 text-xs text-slate-400">Semifinal · Stadium Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-17T11:05Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">3–6, 4–6</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg0OTQ1/alejandro-davidovich-fokina-vs-alexander-zverev" data-match data-event-match data-start="2026-10-17T08:40Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-singles">Men’s Singles</span><p class="mt-2 truncate text-sm font-bold text-emerald-700">Alejandro Davidovich Fokina <span class="winner-badge">Winner</span></p><p class="mt-1 truncate text-sm font-bold ">Alexander Zverev</p><p class="mt-2 text-xs text-slate-400">Semifinal · Stadium Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-17T08:40Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">5–7, 6–4, 6–3</strong></p></div>
+      </div>
+    </a>
+    <a class="group block px-5 py-4 hover:bg-slate-50" href="/matches/ZXNwbi1hdHAtMTg0OTg4/lucas-miedler-neil-oberleitner-vs-jakob-schnaitter-mark-wallner" data-match data-event-match data-start="2026-10-17T06:05Z" data-status="final"  >
+      <div class="flex items-start justify-between gap-4">
+        <div class="min-w-0"><span class="draw-badge is-doubles">Men’s Doubles</span><p class="mt-2 truncate text-sm font-bold text-emerald-700">Lucas Miedler / Neil Oberleitner <span class="winner-badge">Winner</span></p><p class="mt-1 truncate text-sm font-bold ">Jakob Schnaitter / Mark Wallner</p><p class="mt-2 text-xs text-slate-400">Semifinal · Stadium Court</p></div>
+        <div class="shrink-0 text-right text-xs"><time class="font-bold text-slate-900" data-utc="2026-10-17T06:05Z">Loading time…</time><p class="mt-2 text-slate-500">Final<br><strong class="mt-1 inline-block font-mono text-slate-900">7–5, 6–3</strong></p></div>
+      </div>
+    </a>
+    
+  </div>
+  <nav class="flex items-center justify-between gap-3 border-t border-slate-100 bg-white px-5 py-3" data-event-pagination aria-label="Shanghai Masters match pages" hidden>
+    <button class="event-page-button" type="button" data-event-page-prev aria-label="Previous match page">←</button>
+    <div class="flex flex-wrap justify-center gap-1" data-event-page-numbers></div>
+    <button class="event-page-button" type="button" data-event-page-next aria-label="Next match page">→</button>
+  </nav>
+  <footer class="flex items-center justify-between gap-3 bg-slate-50 px-5 py-3 text-xs"><span data-event-match-summary>5 listed matches</span><a class="shrink-0 font-bold text-slate-950" href="/tournaments/2026/shanghai-masters">Tournament details →</a></footer>
+</article>
+</div><div class="empty-state" data-home-empty hidden><h3>No recent ATP results are available</h3><p>Check back after the next matches finish.</p></div></div></section>
+
+<section class="section" data-home-events><div class="section-head"><div><p class="eyebrow">Next on tour</p><h2>Upcoming ATP Tournaments</h2><p class="mt-2 max-w-3xl text-sm leading-6 text-slate-500">Plan the next part of the season by tournament start date. Individual matches appear after the draw and daily order of play are confirmed.</p></div><a href="/tournaments">Complete 2026 tournament directory →</a></div><div class="grid gap-5 lg:grid-cols-2"><article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" data-home-event data-event-page-size="8" >
+  <header class="border-b border-slate-100 p-5">
+    <div class="flex items-start justify-between gap-4">
+      <div><p class="text-xs font-black uppercase tracking-widest text-emerald-700">Masters 1000</p><h3 class="mt-1 text-xl font-black"><a href="/tournaments/2026/paris-masters">Paris Masters</a></h3></div>
+      <span class="surface-badge">Hard</span>
+    </div>
+    <p class="mt-3 text-sm text-slate-500">Nov 2 – Nov 8, 2026 · Paris, FR</p>
+  </header>
+  <div class="divide-y divide-slate-100" data-event-matches>
+    <div class="px-5 py-6 text-sm text-slate-500">The order of play and individual match times have not been confirmed yet.</div>
+  </div>
+  <nav class="flex items-center justify-between gap-3 border-t border-slate-100 bg-white px-5 py-3" data-event-pagination aria-label="Paris Masters match pages" hidden>
+    <button class="event-page-button" type="button" data-event-page-prev aria-label="Previous match page">←</button>
+    <div class="flex flex-wrap justify-center gap-1" data-event-page-numbers></div>
+    <button class="event-page-button" type="button" data-event-page-next aria-label="Next match page">→</button>
+  </nav>
+  <footer class="flex items-center justify-between gap-3 bg-slate-50 px-5 py-3 text-xs"><span data-event-match-summary>Event dates confirmed</span><a class="shrink-0 font-bold text-slate-950" href="/tournaments/2026/paris-masters">Tournament details →</a></footer>
+</article>
+<article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" data-home-event data-event-page-size="8" >
+  <header class="border-b border-slate-100 p-5">
+    <div class="flex items-start justify-between gap-4">
+      <div><p class="text-xs font-black uppercase tracking-widest text-emerald-700">ATP 250</p><h3 class="mt-1 text-xl font-black"><a href="/tournaments/2026/november-atp-250-tba">ATP 250 Event ? TBA</a></h3></div>
+      <span class="surface-badge">Hard</span>
+    </div>
+    <p class="mt-3 text-sm text-slate-500">Nov 8 – Nov 14, 2026 · Location TBA</p>
+  </header>
+  <div class="divide-y divide-slate-100" data-event-matches>
+    <div class="px-5 py-6 text-sm text-slate-500">The order of play and individual match times have not been confirmed yet.</div>
+  </div>
+  <nav class="flex items-center justify-between gap-3 border-t border-slate-100 bg-white px-5 py-3" data-event-pagination aria-label="ATP 250 Event ? TBA match pages" hidden>
+    <button class="event-page-button" type="button" data-event-page-prev aria-label="Previous match page">←</button>
+    <div class="flex flex-wrap justify-center gap-1" data-event-page-numbers></div>
+    <button class="event-page-button" type="button" data-event-page-next aria-label="Next match page">→</button>
+  </nav>
+  <footer class="flex items-center justify-between gap-3 bg-slate-50 px-5 py-3 text-xs"><span data-event-match-summary>Event dates confirmed</span><a class="shrink-0 font-bold text-slate-950" href="/tournaments/2026/november-atp-250-tba">Tournament details →</a></footer>
+</article>
+<article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" data-home-event data-event-page-size="8" >
+  <header class="border-b border-slate-100 p-5">
+    <div class="flex items-start justify-between gap-4">
+      <div><p class="text-xs font-black uppercase tracking-widest text-emerald-700">ATP 250</p><h3 class="mt-1 text-xl font-black"><a href="/tournaments/2026/stockholm-open">Stockholm Open</a></h3></div>
+      <span class="surface-badge">Hard</span>
+    </div>
+    <p class="mt-3 text-sm text-slate-500">Nov 8 – Nov 14, 2026 · Stockholm, SE</p>
+  </header>
+  <div class="divide-y divide-slate-100" data-event-matches>
+    <div class="px-5 py-6 text-sm text-slate-500">The order of play and individual match times have not been confirmed yet.</div>
+  </div>
+  <nav class="flex items-center justify-between gap-3 border-t border-slate-100 bg-white px-5 py-3" data-event-pagination aria-label="Stockholm Open match pages" hidden>
+    <button class="event-page-button" type="button" data-event-page-prev aria-label="Previous match page">←</button>
+    <div class="flex flex-wrap justify-center gap-1" data-event-page-numbers></div>
+    <button class="event-page-button" type="button" data-event-page-next aria-label="Next match page">→</button>
+  </nav>
+  <footer class="flex items-center justify-between gap-3 bg-slate-50 px-5 py-3 text-xs"><span data-event-match-summary>Event dates confirmed</span><a class="shrink-0 font-bold text-slate-950" href="/tournaments/2026/stockholm-open">Tournament details →</a></footer>
+</article>
+<article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" data-home-event data-event-page-size="8" >
+  <header class="border-b border-slate-100 p-5">
+    <div class="flex items-start justify-between gap-4">
+      <div><p class="text-xs font-black uppercase tracking-widest text-emerald-700">ATP Finals</p><h3 class="mt-1 text-xl font-black"><a href="/tournaments/2026/nitto-atp-finals">Nitto ATP Finals</a></h3></div>
+      <span class="surface-badge">Hard</span>
+    </div>
+    <p class="mt-3 text-sm text-slate-500">Nov 15 – Nov 22, 2026 · Turin, IT</p>
+  </header>
+  <div class="divide-y divide-slate-100" data-event-matches>
+    <div class="px-5 py-6 text-sm text-slate-500">The order of play and individual match times have not been confirmed yet.</div>
+  </div>
+  <nav class="flex items-center justify-between gap-3 border-t border-slate-100 bg-white px-5 py-3" data-event-pagination aria-label="Nitto ATP Finals match pages" hidden>
+    <button class="event-page-button" type="button" data-event-page-prev aria-label="Previous match page">←</button>
+    <div class="flex flex-wrap justify-center gap-1" data-event-page-numbers></div>
+    <button class="event-page-button" type="button" data-event-page-next aria-label="Next match page">→</button>
+  </nav>
+  <footer class="flex items-center justify-between gap-3 bg-slate-50 px-5 py-3 text-xs"><span data-event-match-summary>Event dates confirmed</span><a class="shrink-0 font-bold text-slate-950" href="/tournaments/2026/nitto-atp-finals">Tournament details →</a></footer>
+</article>
+<article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" data-home-event data-event-page-size="8" >
+  <header class="border-b border-slate-100 p-5">
+    <div class="flex items-start justify-between gap-4">
+      <div><p class="text-xs font-black uppercase tracking-widest text-emerald-700">Next Gen Finals</p><h3 class="mt-1 text-xl font-black"><a href="/tournaments/2026/next-gen-atp-finals">Next Gen ATP Finals</a></h3></div>
+      <span class="surface-badge">Hard</span>
+    </div>
+    <p class="mt-3 text-sm text-slate-500">Dec 8 – Dec 13, 2026 · Jeddah, SA</p>
+  </header>
+  <div class="divide-y divide-slate-100" data-event-matches>
+    <div class="px-5 py-6 text-sm text-slate-500">The order of play and individual match times have not been confirmed yet.</div>
+  </div>
+  <nav class="flex items-center justify-between gap-3 border-t border-slate-100 bg-white px-5 py-3" data-event-pagination aria-label="Next Gen ATP Finals match pages" hidden>
+    <button class="event-page-button" type="button" data-event-page-prev aria-label="Previous match page">←</button>
+    <div class="flex flex-wrap justify-center gap-1" data-event-page-numbers></div>
+    <button class="event-page-button" type="button" data-event-page-next aria-label="Next match page">→</button>
+  </nav>
+  <footer class="flex items-center justify-between gap-3 bg-slate-50 px-5 py-3 text-xs"><span data-event-match-summary>Event dates confirmed</span><a class="shrink-0 font-bold text-slate-950" href="/tournaments/2026/next-gen-atp-finals">Tournament details →</a></footer>
+</article>
+</div><div class="empty-state" data-home-empty hidden><h3>No upcoming ATP tournaments found</h3><p>The next confirmed main-tour calendar entries will appear here.</p></div></section>
+
+  <div class="atp-ad atp-ad--rectangle" aria-label="Advertisement" data-atp-ad-placement="middle" data-atp-ad-size="300x250" data-ad-container>
+
+      <script>
+        atOptions = {
+          'key' : '98fc3f11203691d87dee536a66a0658a',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://czernik.org/22/98fc3f11203691d87dee536a66a0658a"></script>
+
+  </div>
+
+<section class="border-y border-slate-200 bg-white"><div class="section"><div class="max-w-3xl"><p class="eyebrow">Browse the men’s tour</p><h2>Explore the 2026 ATP Tour Schedule</h2><p class="mt-3 text-base leading-7 text-slate-600">The season moves through different tournament levels, court surfaces, countries and time zones. Use these focused ATP schedule tools when you already know what kind of event, player or viewing information you need.</p></div><div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+  <a class="info-card hover:border-emerald-500" href="/tournaments"><p class="eyebrow">All 61 events</p><h3 class="mt-2 text-lg font-black">2026 ATP tournament directory</h3><p class="mt-2 text-sm leading-6 text-slate-600">Filter the full season by current, upcoming or completed status, level, surface, tournament name and city.</p><span class="mt-4 block text-sm font-bold">Browse all tournaments →</span></a>
+  <a class="info-card hover:border-emerald-500" href="/levels"><p class="eyebrow">Points and importance</p><h3 class="mt-2 text-lg font-black">ATP tournament levels</h3><p class="mt-2 text-sm leading-6 text-slate-600">Understand Grand Slams, Masters 1000, ATP 500, ATP 250, ATP Finals and Next Gen Finals.</p><span class="mt-4 block text-sm font-bold">Compare tournament levels →</span></a>
+  <a class="info-card hover:border-emerald-500" href="/surfaces"><p class="eyebrow">Hard, clay and grass</p><h3 class="mt-2 text-lg font-black">ATP schedule by court surface</h3><p class="mt-2 text-sm leading-6 text-slate-600">Follow the hard-court, clay-court and grass-court swings or find indoor tournaments.</p><span class="mt-4 block text-sm font-bold">Choose a surface →</span></a>
+  <a class="info-card hover:border-emerald-500" href="/players"><p class="eyebrow">Next match and form</p><h3 class="mt-2 text-lg font-black">ATP player schedules</h3><p class="mt-2 text-sm leading-6 text-slate-600">Search a player to find linked upcoming matches, recent opponents and final scores.</p><span class="mt-4 block text-sm font-bold">Find an ATP player →</span></a>
+  <a class="info-card hover:border-emerald-500" href="/venues"><p class="eyebrow">Cities and stadiums</p><h3 class="mt-2 text-lg font-black">ATP tournament venues</h3><p class="mt-2 text-sm leading-6 text-slate-600">Check the host city, court surface, stadium capacity, venue time zone and map.</p><span class="mt-4 block text-sm font-bold">Explore ATP venues →</span></a>
+  <a class="info-card hover:border-emerald-500" href="/watch"><p class="eyebrow">TV and streaming</p><h3 class="mt-2 text-lg font-black">Where to watch ATP tennis</h3><p class="mt-2 text-sm leading-6 text-slate-600">Select your country and review listed legal broadcasters and streaming services.</p><span class="mt-4 block text-sm font-bold">Find viewing options →</span></a>
+</div></div></section>
+
+<section class="section"><div class="grid gap-8 lg:grid-cols-[1fr_.85fr]"><div><p class="eyebrow">Calendar basics</p><h2>How the 2026 ATP Schedule Works</h2><p class="mt-4 leading-8 text-slate-600">The ATP season is a worldwide men’s professional tennis calendar. Several tournaments can run during the same week, so the event dates tell you which tournaments are active while individual match times tell you when a specific player actually takes the court.</p><p class="mt-4 leading-8 text-slate-600">This site covers the main men’s tour: Grand Slams, ATP Masters 1000, ATP 500, ATP 250, ATP Finals and Next Gen ATP Finals. ATP Challenger, ITF, WTA, team and exhibition events are outside the current schedule scope.</p><h3 class="mt-7 text-lg font-black">Tournament dates are not match start times</h3><p class="mt-2 leading-7 text-slate-600">A tournament can be in progress even when no match is live at that moment. Draws develop round by round, and the next day’s order of play may not be confirmed until the current day finishes.</p></div><aside class="rounded-3xl bg-emerald-50 p-6"><h3 class="text-xl font-black">What each ATP match listing tells you</h3><ul class="mt-5 grid gap-3 text-sm leading-6 text-emerald-950"><li><strong>Start:</strong> confirmed time converted to your selected zone</li><li><strong>Status:</strong> Scheduled, Live or Final</li><li><strong>Draw:</strong> singles or doubles</li><li><strong>Context:</strong> tournament, round and court</li><li><strong>Result:</strong> winner and available set score</li></ul><p class="mt-5 border-t border-emerald-200 pt-5 text-sm leading-6">Start times may move because of weather, withdrawals or a long earlier match. Recheck the match page before play.</p></aside></div></section>
+
+<section class="border-y border-slate-200 bg-white"><div class="section"><div class="max-w-3xl"><p class="eyebrow">Quick answers</p><h2>ATP Schedule FAQ</h2><p class="mt-3 leading-7 text-slate-600">Straight answers to the questions tennis fans usually ask when checking today’s ATP schedule.</p></div><div class="mt-8 grid gap-4 md:grid-cols-2">
+  <article class="info-card"><h3 class="text-lg font-black">What ATP matches are on today?</h3><p class="mt-3 text-sm leading-6 text-slate-600">The ATP Tennis Schedule Today section groups today’s main-tour matches by tournament and shows the players, round, court, match status and confirmed start time.</p></article>
+  <article class="info-card"><h3 class="text-lg font-black">Are ATP match times shown in my local time zone?</h3><p class="mt-3 text-sm leading-6 text-slate-600">Yes. Confirmed UTC start times are converted automatically to the time zone detected by your browser. You can also choose another time zone in the page header.</p></article>
+  <article class="info-card"><h3 class="text-lg font-black">Which tournaments are included in this ATP schedule?</h3><p class="mt-3 text-sm leading-6 text-slate-600">The 2026 calendar covers the main men’s tour, including Grand Slams, ATP Masters 1000, ATP 500, ATP 250, ATP Finals and Next Gen ATP Finals events. Challenger, ITF, WTA and exhibition events are outside this site’s current scope.</p></article>
+  <article class="info-card"><h3 class="text-lg font-black">Where can I find recent ATP results?</h3><p class="mt-3 text-sm leading-6 text-slate-600">Use Latest ATP Results for recently completed tournaments, or open the <a class="font-bold" href="/results">results tool</a> to choose a specific date and see winners and set scores.</p></article>
+  <article class="info-card md:col-span-2"><h3 class="text-lg font-black">Where can I watch ATP tennis?</h3><p class="mt-3 text-sm leading-6 text-slate-600">Use the <a class="font-bold" href="/watch">Where to Watch guide</a> to select your country and review listed legal TV and streaming providers. Rights can vary by tournament and package, so confirm the match in the provider’s current schedule.</p></article>
+</div></div></section>
+
+<section class="section"><section class="tool-guide" aria-labelledby="tool-guide-use-the-atp-schedule">
+  <p class="eyebrow">How to use this tool</p>
+  <h2 id="tool-guide-use-the-atp-schedule" class="mt-2">Use the ATP schedule</h2>
+  <ol class="mt-6 grid gap-4 md:grid-cols-3"><li class="tool-step"><span>1</span><p>Check ATP Tennis Schedule Today for active tournaments and match-by-match start times in your own time zone.</p></li><li class="tool-step"><span>2</span><p>Use the pages under each tournament card when more than eight matches are listed.</p></li><li class="tool-step"><span>3</span><p>Open a match for its court, round, score, viewing guide and calendar reminder.</p></li></ol>
+  <p class="mt-5 rounded-xl bg-emerald-50 px-4 py-3 text-sm leading-6 text-emerald-950"><strong>Fan tip:</strong> A tournament can be in progress even when no match is live at this exact moment. Look for Live beside an individual match.</p>
+</section>
+</section>
+</main>
+  <div class="atp-ad atp-ad--banner" aria-label="Advertisement" data-atp-ad-placement="banner" data-atp-ad-size="responsive-banner" data-ad-container>
+
+      <script>
+        if (window.matchMedia('(max-width: 767px)').matches) {
+          atOptions = {
+            'key' : 'fcc9368672123a7130bdf3872cd8c0a5',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
+          };
+          document.write('<script src="https://czernik.org/22/fcc9368672123a7130bdf3872cd8c0a5"><\/script>');
+        } else {
+          atOptions = {
+            'key' : '69bb644accbf5161528624881ceef403',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+          document.write('<script src="https://czernik.org/22/69bb644accbf5161528624881ceef403"><\/script>');
+        }
+      </script>
+
+  </div>
+  <footer class="mt-20 border-t border-slate-200 bg-white"><div class="mx-auto grid max-w-[90rem] gap-8 px-4 py-10 text-sm text-slate-600 md:grid-cols-3 lg:px-8"><div><p class="font-bold text-slate-950">ATP Schedule</p><p class="mt-2">A timezone-aware planning tool for the main men's professional tennis tour. Not affiliated with ATP Tour.</p><p class="mt-3"><a class="font-semibold text-slate-950" href="/cdn-cgi/l/email-protection#afccc0c1dbceccdbefcedbdfdcccc7cacbdac3ca81ccc0c2" title="Email ATP Schedule">Contact: <span class="__cf_email__" data-cfemail="6f0c00011b0e0c1b2f0e1b1f1c0c070a0b1a030a410c0002">[email&#160;protected]</span></a></p></div><div class="grid grid-cols-2 gap-2"><a href="/levels" title="ATP tournament levels">Levels</a><a href="/surfaces" title="ATP court surfaces">Surfaces</a><a href="/venues" title="ATP tennis venues">Venues</a><a href="/watch" title="Where to watch ATP tennis">Where to watch</a><a href="/blog" title="ATP tennis blog">Blog</a></div><div><p>Displayed time zone: <strong data-user-zone>detecting…</strong></p><p class="mt-2 text-xs">Schedules and broadcasters can change. Confirm with the tournament and broadcaster before watching or travelling.</p></div></div></footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"66f2d5bddb9e4beaac46333414fa9765","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
