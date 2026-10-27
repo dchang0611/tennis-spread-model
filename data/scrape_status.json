@@ -1,17 +1,17 @@
 {
   "success": true,
-  "checked_at": "2026-10-27T12:56:15.562956+00:00",
+  "checked_at": "2026-10-27T14:01:01.577450+00:00",
   "match_date": "2026-10-27",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
     {
-      "match": "Ugo Blanchet vs Felix Balshaw",
+      "match": "Max Hans Rehberg vs Braden Shick",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Nicolai Budkov Kjaer vs Kilian Feldbausch",
-      "error": "No unique schedule match for Nicolai Budkov Kjaer vs Kilian Feldbausch on 2026-10-27 or 2026-10-28 (Europe/London); found 0."
+      "match": "Abdullah Shelbayh vs J.J. Wolf",
+      "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
       "match": "Sascha Gueymard Wayenburg vs Martin Damm",
@@ -19,14 +19,6 @@
     },
     {
       "match": "Laslo Djere vs Zsombor Piros",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Max Hans Rehberg vs Braden Shick",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Abdullah Shelbayh vs J.J. Wolf",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
@@ -96,17 +88,17 @@
   ],
   "surface_assignments": [
     {
-      "player_a": "Tabilo A.",
-      "player_b": "Jodar R.",
+      "player_a": "Mpetshi Perricard G.",
+      "player_b": "Fils A.",
       "tournament": "Basel",
       "tournament_source": "https://www.tennisexplorer.com/basel/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3358357&timezone=0",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3360177&timezone=0",
       "source_date": "2026-10-27",
       "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "4ebdb7ab61232332f47dec83f4e612bd676168a0dfd7cff8e2c6fea2c480e407",
+      "surface_detail_hash": "c8828a5456b34e3f720633f5e715ad14eae5d24a27d9a25af51b517570d47f85",
       "surface_edition_id": "/tournaments/2026/swiss-indoors-basel"
     },
     {
@@ -120,7 +112,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "4ebdb7ab61232332f47dec83f4e612bd676168a0dfd7cff8e2c6fea2c480e407",
+      "surface_detail_hash": "c8828a5456b34e3f720633f5e715ad14eae5d24a27d9a25af51b517570d47f85",
       "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
     },
     {
@@ -134,35 +126,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "4ebdb7ab61232332f47dec83f4e612bd676168a0dfd7cff8e2c6fea2c480e407",
-      "surface_edition_id": "/tournaments/2026/swiss-indoors-basel"
-    },
-    {
-      "player_a": "Mannarino A.",
-      "player_b": "Buse I.",
-      "tournament": "Vienna",
-      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3360125&timezone=0",
-      "source_date": "2026-10-27",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "4ebdb7ab61232332f47dec83f4e612bd676168a0dfd7cff8e2c6fea2c480e407",
-      "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
-    },
-    {
-      "player_a": "Mpetshi Perricard G.",
-      "player_b": "Fils A.",
-      "tournament": "Basel",
-      "tournament_source": "https://www.tennisexplorer.com/basel/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3360177&timezone=0",
-      "source_date": "2026-10-27",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "4ebdb7ab61232332f47dec83f4e612bd676168a0dfd7cff8e2c6fea2c480e407",
+      "surface_detail_hash": "c8828a5456b34e3f720633f5e715ad14eae5d24a27d9a25af51b517570d47f85",
       "surface_edition_id": "/tournaments/2026/swiss-indoors-basel"
     },
     {
@@ -176,7 +140,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "4ebdb7ab61232332f47dec83f4e612bd676168a0dfd7cff8e2c6fea2c480e407",
+      "surface_detail_hash": "c8828a5456b34e3f720633f5e715ad14eae5d24a27d9a25af51b517570d47f85",
       "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
     },
     {
@@ -201,19 +165,8 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "4ebdb7ab61232332f47dec83f4e612bd676168a0dfd7cff8e2c6fea2c480e407",
+      "surface_detail_hash": "c8828a5456b34e3f720633f5e715ad14eae5d24a27d9a25af51b517570d47f85",
       "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
-    },
-    {
-      "player_a": "Ugo Carabelli C.",
-      "player_b": "Coria F.",
-      "tournament": "Guayaquil challenger",
-      "tournament_source": "https://www.tennisexplorer.com/guayaquil-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3359563&timezone=0",
-      "source_date": "2026-10-27",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
     },
     {
       "player_a": "Villanueva G.",
@@ -237,26 +190,15 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "4ebdb7ab61232332f47dec83f4e612bd676168a0dfd7cff8e2c6fea2c480e407",
+      "surface_detail_hash": "c8828a5456b34e3f720633f5e715ad14eae5d24a27d9a25af51b517570d47f85",
       "surface_edition_id": "/tournaments/2026/swiss-indoors-basel"
     },
     {
-      "player_a": "Varillas J.",
-      "player_b": "Pacheco Mendez R.",
+      "player_a": "Ugo Carabelli C.",
+      "player_b": "Coria F.",
       "tournament": "Guayaquil challenger",
       "tournament_source": "https://www.tennisexplorer.com/guayaquil-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3359579&timezone=0",
-      "source_date": "2026-10-27",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Jarry N.",
-      "player_b": "Dellien H.",
-      "tournament": "Guayaquil challenger",
-      "tournament_source": "https://www.tennisexplorer.com/guayaquil-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3359581&timezone=0",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359563&timezone=0",
       "source_date": "2026-10-27",
       "surface": "Clay",
       "source_timezone": "Europe/London",
@@ -284,7 +226,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "4ebdb7ab61232332f47dec83f4e612bd676168a0dfd7cff8e2c6fea2c480e407",
+      "surface_detail_hash": "c8828a5456b34e3f720633f5e715ad14eae5d24a27d9a25af51b517570d47f85",
       "surface_edition_id": "/tournaments/2026/swiss-indoors-basel"
     },
     {
@@ -299,11 +241,22 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Dedura-Palomero D.",
-      "player_b": "Olivieri G.",
+      "player_a": "Varillas J.",
+      "player_b": "Pacheco Mendez R.",
       "tournament": "Guayaquil challenger",
       "tournament_source": "https://www.tennisexplorer.com/guayaquil-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3359571&timezone=0",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359579&timezone=0",
+      "source_date": "2026-10-27",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Jarry N.",
+      "player_b": "Dellien H.",
+      "tournament": "Guayaquil challenger",
+      "tournament_source": "https://www.tennisexplorer.com/guayaquil-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359581&timezone=0",
       "source_date": "2026-10-27",
       "surface": "Clay",
       "source_timezone": "Europe/London",
@@ -320,8 +273,19 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "4ebdb7ab61232332f47dec83f4e612bd676168a0dfd7cff8e2c6fea2c480e407",
+      "surface_detail_hash": "c8828a5456b34e3f720633f5e715ad14eae5d24a27d9a25af51b517570d47f85",
       "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
+    },
+    {
+      "player_a": "Dedura-Palomero D.",
+      "player_b": "Olivieri G.",
+      "tournament": "Guayaquil challenger",
+      "tournament_source": "https://www.tennisexplorer.com/guayaquil-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3359571&timezone=0",
+      "source_date": "2026-10-27",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
     },
     {
       "player_a": "Bueno G.",
@@ -346,76 +310,6 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Griekspoor T.",
-      "player_b": "Nakashima B.",
-      "tournament": "Vienna",
-      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3358307&timezone=0",
-      "source_date": "2026-10-28",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "6676bb429ca1196ccb0598a7e9da580c61238c56dd0f6512b875c28075953b2e",
-      "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
-    },
-    {
-      "player_a": "Musetti L.",
-      "player_b": "Tiafoe F.",
-      "tournament": "Vienna",
-      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3358309&timezone=0",
-      "source_date": "2026-10-28",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "6676bb429ca1196ccb0598a7e9da580c61238c56dd0f6512b875c28075953b2e",
-      "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
-    },
-    {
-      "player_a": "Rodionov J.",
-      "player_b": "Basilashvili N.",
-      "tournament": "Vienna",
-      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3358323&timezone=0",
-      "source_date": "2026-10-28",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "6676bb429ca1196ccb0598a7e9da580c61238c56dd0f6512b875c28075953b2e",
-      "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
-    },
-    {
-      "player_a": "Merida Aguilar D.",
-      "player_b": "Medvedev D.",
-      "tournament": "Vienna",
-      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3358319&timezone=0",
-      "source_date": "2026-10-28",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "6676bb429ca1196ccb0598a7e9da580c61238c56dd0f6512b875c28075953b2e",
-      "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
-    },
-    {
-      "player_a": "Tien L.",
-      "player_b": "De Minaur A.",
-      "tournament": "Vienna",
-      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3361775&timezone=0",
-      "source_date": "2026-10-28",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "6676bb429ca1196ccb0598a7e9da580c61238c56dd0f6512b875c28075953b2e",
-      "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
-    },
-    {
       "player_a": "Djokovic N.",
       "player_b": "Humbert U.",
       "tournament": "Basel",
@@ -426,7 +320,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "6676bb429ca1196ccb0598a7e9da580c61238c56dd0f6512b875c28075953b2e",
+      "surface_detail_hash": "e6cc31eed26f683414d38fd6cce79b1e9a2878643b5705c2116040a084a0dd74",
       "surface_edition_id": "/tournaments/2026/swiss-indoors-basel"
     },
     {
@@ -440,7 +334,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "6676bb429ca1196ccb0598a7e9da580c61238c56dd0f6512b875c28075953b2e",
+      "surface_detail_hash": "e6cc31eed26f683414d38fd6cce79b1e9a2878643b5705c2116040a084a0dd74",
       "surface_edition_id": "/tournaments/2026/swiss-indoors-basel"
     },
     {
@@ -454,7 +348,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "6676bb429ca1196ccb0598a7e9da580c61238c56dd0f6512b875c28075953b2e",
+      "surface_detail_hash": "e6cc31eed26f683414d38fd6cce79b1e9a2878643b5705c2116040a084a0dd74",
       "surface_edition_id": "/tournaments/2026/swiss-indoors-basel"
     },
     {
@@ -468,7 +362,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "6676bb429ca1196ccb0598a7e9da580c61238c56dd0f6512b875c28075953b2e",
+      "surface_detail_hash": "e6cc31eed26f683414d38fd6cce79b1e9a2878643b5705c2116040a084a0dd74",
       "surface_edition_id": "/tournaments/2026/swiss-indoors-basel"
     },
     {
@@ -482,73 +376,141 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "6676bb429ca1196ccb0598a7e9da580c61238c56dd0f6512b875c28075953b2e",
+      "surface_detail_hash": "e6cc31eed26f683414d38fd6cce79b1e9a2878643b5705c2116040a084a0dd74",
       "surface_edition_id": "/tournaments/2026/swiss-indoors-basel"
+    },
+    {
+      "player_a": "Griekspoor T.",
+      "player_b": "Nakashima B.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358307&timezone=0",
+      "source_date": "2026-10-28",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://www.atpschedule.com/",
+      "surface_detail_hash": "e6cc31eed26f683414d38fd6cce79b1e9a2878643b5705c2116040a084a0dd74",
+      "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
+    },
+    {
+      "player_a": "Merida Aguilar D.",
+      "player_b": "Medvedev D.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358319&timezone=0",
+      "source_date": "2026-10-28",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://www.atpschedule.com/",
+      "surface_detail_hash": "e6cc31eed26f683414d38fd6cce79b1e9a2878643b5705c2116040a084a0dd74",
+      "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
+    },
+    {
+      "player_a": "Musetti L.",
+      "player_b": "Tiafoe F.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358309&timezone=0",
+      "source_date": "2026-10-28",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://www.atpschedule.com/",
+      "surface_detail_hash": "e6cc31eed26f683414d38fd6cce79b1e9a2878643b5705c2116040a084a0dd74",
+      "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
+    },
+    {
+      "player_a": "Rodionov J.",
+      "player_b": "Basilashvili N.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3358323&timezone=0",
+      "source_date": "2026-10-28",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://www.atpschedule.com/",
+      "surface_detail_hash": "e6cc31eed26f683414d38fd6cce79b1e9a2878643b5705c2116040a084a0dd74",
+      "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
+    },
+    {
+      "player_a": "Tien L.",
+      "player_b": "De Minaur A.",
+      "tournament": "Vienna",
+      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3361775&timezone=0",
+      "source_date": "2026-10-28",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://www.atpschedule.com/",
+      "surface_detail_hash": "e6cc31eed26f683414d38fd6cce79b1e9a2878643b5705c2116040a084a0dd74",
+      "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
     }
   ],
-  "events_found": 52,
+  "events_found": 50,
   "events": [
-    "Rafael Jodar vs Alejandro Tabilo",
-    "Ugo Blanchet vs Felix Balshaw",
-    "Nicolai Budkov Kjaer vs Kilian Feldbausch",
+    "Arthur Fils vs Giovanni Mpetshi Perricard",
     "Carlos Alcaraz vs Karen Khachanov",
     "Botic Van De Zandschulp vs Alex Michelsen",
-    "Ignacio Buse vs Adrian Mannarino",
-    "Arthur Fils vs Giovanni Mpetshi Perricard",
-    "Sascha Gueymard Wayenburg vs Martin Damm",
-    "Laslo Djere vs Zsombor Piros",
     "Max Hans Rehberg vs Braden Shick",
     "Abdullah Shelbayh vs J.J. Wolf",
     "Francisco Cerundolo vs Cameron Norrie",
+    "Sascha Gueymard Wayenburg vs Martin Damm",
+    "Laslo Djere vs Zsombor Piros",
     "Tristan McCormick vs Alan Magadan",
     "Murphy Cassone vs Stefan Kozlov",
     "Hynek Barton vs Aidan Mayo",
     "Martin Landaluce vs Alexander Zverev",
-    "Federico Coria vs Camilo Ugo Carabelli",
     "Lautaro Midon vs Gonzalo Villanueva",
     "Aleksandar Kovacevic vs Ben Shelton",
-    "Rodrigo Pacheco Mendez vs Juan Pablo Varillas",
     "Bryce Nakashima vs Jenson Brooksby",
     "Maks Kasnikowski vs James Kent Trotter",
     "Moise Kouame vs Hugo Grenier",
-    "Hugo Dellien vs Nicolas Jarry",
+    "Federico Coria vs Camilo Ugo Carabelli",
     "Juan Manuel La Serna vs Nick Hardt",
     "Jiri Lehecka vs Stan Wawrinka",
     "Valerio Aboian vs Franco Roncadelli",
-    "Genaro Alberto Olivieri vs Deigo Dedura-Palomero",
+    "Rodrigo Pacheco Mendez vs Juan Pablo Varillas",
     "Andres Andrade vs Mitchell Krueger",
     "Tomasz Berkieta vs Liam Draxl",
+    "Hugo Dellien vs Nicolas Jarry",
     "Grigor Dimitrov vs Flavio Cobolli",
     "Juan Estevez vs Tomas Barrios Vera",
+    "Genaro Alberto Olivieri vs Deigo Dedura-Palomero",
     "Pierre-Hugues Herbert vs Stefano Travaglia",
-    "Alex Barrena vs Gonzalo Bueno",
     "Karl Poling vs Sebastian Dominko",
     "Valentin Royer vs Timo Legout",
+    "Alex Barrena vs Gonzalo Bueno",
     "Darwin Blanch vs Sebastian Gorzny",
     "Patrick Maloney vs Daniil Ostapenkov",
     "Angel Veliz vs Emilio Camacho",
+    "Yaroslav Demin vs Charles Broom",
+    "Yu Hsiou Hsu vs Yuta Shimizu",
     "Filippo Romano vs Clement Tabur",
     "Toby Samuel vs Inaki Montes-De La Torre",
     "Daniil Glinka vs Hugo Gaston",
-    "Brandon Nakashima vs Tallon Griekspoor",
-    "Frances Tiafoe vs Lorenzo Musetti",
-    "Nikoloz Basilashvili vs Jurij Rodionov",
-    "Daniil Medvedev vs Daniel Merida Aguilar",
-    "Alex De Minaur vs Learner Tien",
     "Ugo Humbert vs Novak Djokovic",
     "Denis Shapovalov vs Remy Bertola",
     "Rinky Hijikata vs Taylor Fritz",
     "Jan-Lennard Struff vs Yannick Hanfmann",
-    "Casper Ruud vs Nuno Borges"
+    "Casper Ruud vs Nuno Borges",
+    "Brandon Nakashima vs Tallon Griekspoor",
+    "Daniil Medvedev vs Daniel Merida Aguilar",
+    "Frances Tiafoe vs Lorenzo Musetti",
+    "Nikoloz Basilashvili vs Jurij Rodionov",
+    "Alex De Minaur vs Learner Tien"
   ],
-  "spread_markets_found": 52,
+  "spread_markets_found": 48,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 52,
+  "unique_event_pages": 50,
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 30,
-  "matches_parsed": 30,
+  "executable_spread_markets": 28,
+  "matches_parsed": 28,
   "partial_coverage": true,
-  "rows_saved": 99,
+  "rows_saved": 91,
   "error": null
 }
