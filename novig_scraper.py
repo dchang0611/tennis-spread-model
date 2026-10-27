@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import hashlib
 import re
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -17,6 +18,22 @@ from surface_calendar import LiveSurfaceLookup, aliases
 ATP_URL = "https://novig.com/trading/atp"
 MORE_MARKETS_RE = re.compile(r"^\s*\d+\s+More\s*$", re.IGNORECASE)
 PACIFIC = ZoneInfo("America/Los_Angeles")
+
+
+def preserve_raw_prices(event_id, player_a, player_b, start, prices, tokens, captured_at, root=None):
+    """Persist observed prices before any external tournament lookup can fail."""
+    folder = (Path(root) if root else Path(__file__).resolve().parent / 'data' / 'raw_market_history') / str(captured_at.astimezone(PACIFIC).date())
+    folder.mkdir(parents=True, exist_ok=True)
+    content = json.dumps({'event_id': event_id, 'player_a': player_a, 'player_b': player_b,
+                          'market_start': start, 'collected_at': captured_at.isoformat(),
+                          'paired_prices': prices, 'section_text': tokens,
+                          'status': 'unvalidated_capture'}, sort_keys=True)
+    path = folder / (hashlib.sha256(content.encode()).hexdigest() + '.json')
+    if not path.exists():
+        path.write_text(content, encoding='utf-8')
+    return path
+
+
 OUTPUT_COLUMNS = [
     "date", "tournament", "surface", "best_of", "player_a", "player_b",
     "spread_a", "odds_a", "spread_b", "odds_b", "collected_at", "event_url",
@@ -358,21 +375,9 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
                 start = verify_event_metadata(item, event, datetime.now(timezone.utc))
                 match_day = start.tz_convert('America/Los_Angeles').date()
                 match_date = match_day.isoformat()
-                if surface == 'Auto' and match_day not in lookups:
-                    lookups[match_day] = LiveSurfaceLookup(match_day)
-                    if diagnostics is not None:
-                        diagnostics['surface_lookup_errors'].extend(lookups[match_day].errors)
-                lookup = lookups.get(match_day)
-                assignment = lookup.resolve(player_a, player_b) if lookup else {"surface": surface, "tournament": tournament, "method": "explicit_override"}
             except Exception as exc:
                 surface_failures.append({"match": f"{player_a} vs {player_b}", "error": str(exc)})
                 continue
-            resolved_surface = assignment["surface"]
-            surface_assignments.append(assignment)
-            try:
-                category = lookup.tournament_metadata(assignment) if lookup else {}
-            except Exception as exc:
-                category = {'metadata_error': str(exc)}
             heading = page.get_by_text("Game Spread", exact=True)
             has_spread = any(m.get('type') == 'SPREAD' and m.get('status') == 'OPEN' for m in item.get('markets', []))
             if has_spread:
@@ -399,6 +404,25 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
                     for token in tokens
                 )
                 (parser_failures if has_displayed_price else unpriced_markets).append(matchup)
+            captured_at = datetime.now(timezone.utc)
+            preserve_raw_prices(event['event_id'], player_a, player_b, start.isoformat(),
+                                parsed_prices, tokens, captured_at)
+            try:
+                if surface == 'Auto' and match_day not in lookups:
+                    lookups[match_day] = LiveSurfaceLookup(match_day)
+                    if diagnostics is not None:
+                        diagnostics['surface_lookup_errors'].extend(lookups[match_day].errors)
+                lookup = lookups.get(match_day)
+                assignment = lookup.resolve(player_a, player_b) if lookup else {"surface": surface, "tournament": tournament, "method": "explicit_override"}
+            except Exception as exc:
+                surface_failures.append({"match": f"{player_a} vs {player_b}", "error": str(exc)})
+                continue
+            resolved_surface = assignment["surface"]
+            surface_assignments.append(assignment)
+            try:
+                category = lookup.tournament_metadata(assignment) if lookup else {}
+            except Exception as exc:
+                category = {'metadata_error': str(exc)}
             for spread_a, odds_a, spread_b, odds_b in parsed_prices:
                 rows.append({
                     "date": match_date,
@@ -411,7 +435,7 @@ def scrape_markets(tournament: str, surface: str, day_label: str = "Today", diag
                     "odds_a": odds_a,
                     "spread_b": spread_b,
                     "odds_b": odds_b,
-                    "collected_at": datetime.now(timezone.utc).isoformat(),
+                    "collected_at": captured_at.isoformat(),
                     "event_url": page.url,
                     'event_id': event['event_id'], 'market_start': start.isoformat(),
                     'surface_source': assignment.get('source'), 'surface_source_date': assignment.get('source_date'),

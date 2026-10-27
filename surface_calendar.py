@@ -7,12 +7,56 @@ import unicodedata
 import hashlib
 import csv
 import io
+from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
 BASE = 'https://www.tennisexplorer.com'
 SOURCE_TIMEZONE = 'Europe/London'
 INDOOR_METADATA_URL = 'https://stats.tennismylife.org/data/ongoing_tourneys.csv'
+CALENDAR_URL = 'https://www.atpschedule.com/'
+
+
+def resolve_calendar_surface(html, tournament, match_day):
+    """Use dated current tournament cards, independent of completed results."""
+    candidates = []
+    for card in re.findall(r'<article\b[^>]*data-home-event[^>]*>(.*?)</article>', html, re.S):
+        header = card.split('</header>', 1)[0]
+        span = re.search(r'class="surface-badge">(Hard|Clay|Grass|Carpet)</span>', header)
+        link = re.search(r'href="(/tournaments/(\d{4})/[^"?#]+)"', header)
+        when = re.search(r'([A-Z][a-z]{2}) (\d{1,2}) [–-] (?:([A-Z][a-z]{2}) )?(\d{1,2}), (\d{4}) · ([^,<]+),', clean(header))
+        if not (span and link and when):
+            continue
+        month_a, day_a, month_b, day_b, year, city = when.groups()
+        if city.strip().casefold() != tournament.strip().casefold():
+            continue
+        end = datetime.strptime(f'{month_b or month_a} {day_b} {year}', '%b %d %Y').date()
+        start = datetime.strptime(f'{month_a} {day_a} {year}', '%b %d %Y').date()
+        if start > end:
+            start = start.replace(year=start.year - 1)
+        if int(link[2]) != end.year or not start <= match_day <= end or (end-start).days > 21:
+            continue
+        candidates.append((span[1], link[1]))
+    if len(set(candidates)) > 1:
+        raise ValueError('Conflicting dated tournament surface evidence.')
+    if not candidates:
+        raise RuntimeError('Calendar has no unique dated ATP tournament surface.')
+    surface, edition = candidates[0]
+    return {'surface': surface, 'surface_detail_source': CALENDAR_URL,
+            'surface_detail_hash': hashlib.sha256(html.encode()).hexdigest(),
+            'surface_edition_id': edition}
+
+
+def fetch_surface_evidence(url):
+    with urlopen(Request(url, headers={'User-Agent': 'Mozilla/5.0'}), timeout=20) as response:
+        content = response.read().decode('utf-8-sig')
+    digest = hashlib.sha256(content.encode()).hexdigest()
+    folder = Path(__file__).resolve().parent / 'data' / 'surface_evidence'
+    folder.mkdir(parents=True, exist_ok=True)
+    path = folder / (digest + '.txt')
+    if not path.exists():
+        path.write_text(content, encoding='utf-8')
+    return content
 
 
 def resolve_indoor_surface(content, tournament, match_day, today):
@@ -167,6 +211,7 @@ class LiveSurfaceLookup:
         self.matches, self.errors, self.cache = [], [], {}
         self.tournaments = {}
         self.indoor_metadata = None
+        self.calendar = None
         # Source is in Europe; its date can be one day ahead of Pacific.
         for offset in (0, 1):
             day = match_date + timedelta(days=offset)
@@ -190,10 +235,16 @@ class LiveSurfaceLookup:
             surface = parse_match_surface(self.fetch(source_url(row['source'])), date.fromisoformat(row['source_date']), row['tournament'])
             detail = {}
             if surface == 'Indoor':
-                if self.indoor_metadata is None:
-                    with urlopen(Request(INDOOR_METADATA_URL, headers={'User-Agent':'TennisSpreadLab/2.0'}), timeout=30) as response:
-                        self.indoor_metadata = response.read().decode('utf-8-sig')
-                detail = resolve_indoor_surface(self.indoor_metadata, row['tournament'], date.fromisoformat(row['source_date']), datetime.now(ZoneInfo(SOURCE_TIMEZONE)).date())
+                try:
+                    if self.calendar is None:
+                        self.calendar = ''  # One bounded attempt per lookup, even during outages.
+                        self.calendar = fetch_surface_evidence(CALENDAR_URL)
+                    detail = resolve_calendar_surface(self.calendar, row['tournament'], date.fromisoformat(row['source_date']))
+                except (OSError, RuntimeError):
+                    if self.indoor_metadata is None:
+                        self.indoor_metadata = ''
+                        self.indoor_metadata = fetch_surface_evidence(INDOOR_METADATA_URL)
+                    detail = resolve_indoor_surface(self.indoor_metadata, row['tournament'], date.fromisoformat(row['source_date']), datetime.now(ZoneInfo(SOURCE_TIMEZONE)).date())
                 surface = detail.pop('surface')
             self.cache[row['source']] = {**row, 'source':source_url(row['source']), 'surface': surface,
                                        'source_timezone':SOURCE_TIMEZONE, 'method': 'live_match_metadata', **detail}
