@@ -1,217 +1,107 @@
 {
   "success": true,
-  "checked_at": "2026-10-29T13:56:34.460720+00:00",
+  "checked_at": "2026-10-30T13:48:26.962499+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
     {
-      "player_a": "Hugo Dellien",
-      "player_b": "Rodrigo Pacheco Mendez",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Hugo Dellien",
-      "player_b": "Rodrigo Pacheco Mendez",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Hugo Dellien",
-      "player_b": "Rodrigo Pacheco Mendez",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Valerio Aboian",
-      "player_b": "Deigo Dedura-Palomero",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Valerio Aboian",
-      "player_b": "Deigo Dedura-Palomero",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Valerio Aboian",
-      "player_b": "Deigo Dedura-Palomero",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Juan Carlos Prado Angelo",
-      "player_b": "Nick Hardt",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Juan Carlos Prado Angelo",
-      "player_b": "Nick Hardt",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Juan Carlos Prado Angelo",
-      "player_b": "Nick Hardt",
+      "player_a": "Lautaro Midon",
+      "player_b": "Joaquin Aguilar Cardozo",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Lautaro Midon",
-      "player_b": "Daniel Elahi Galan",
+      "player_b": "Joaquin Aguilar Cardozo",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Lautaro Midon",
-      "player_b": "Daniel Elahi Galan",
+      "player_b": "Joaquin Aguilar Cardozo",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Lautaro Midon",
-      "player_b": "Daniel Elahi Galan",
+      "player_b": "Joaquin Aguilar Cardozo",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Carlos Maria Zarate",
-      "player_b": "Gonzalo Bueno",
+      "player_a": "Hugo Dellien",
+      "player_b": "Carlos Maria Zarate",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Carlos Maria Zarate",
-      "player_b": "Gonzalo Bueno",
+      "player_a": "Hugo Dellien",
+      "player_b": "Carlos Maria Zarate",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Carlos Maria Zarate",
-      "player_b": "Gonzalo Bueno",
+      "player_a": "Nick Hardt",
+      "player_b": "Valerio Aboian",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Joao Lucas Da Silva",
-      "player_b": "Emilio Camacho",
+      "player_a": "Nick Hardt",
+      "player_b": "Valerio Aboian",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Joao Lucas Da Silva",
-      "player_b": "Emilio Camacho",
+      "player_a": "Nick Hardt",
+      "player_b": "Valerio Aboian",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Joao Lucas Da Silva",
-      "player_b": "Emilio Camacho",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Arthur Fery",
+      "player_b": "Alexander Zverev",
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
-      "player_a": "Chak Lam Coleman Wong",
-      "player_b": "Sho Shimabukuro",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Arthur Fery",
+      "player_b": "Alexander Zverev",
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
-      "player_a": "Chak Lam Coleman Wong",
-      "player_b": "Sho Shimabukuro",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Arthur Fery",
+      "player_b": "Alexander Zverev",
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
-      "player_a": "Chak Lam Coleman Wong",
-      "player_b": "Sho Shimabukuro",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Alex de Minaur",
+      "player_b": "Matteo Berrettini",
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
-      "player_a": "Yunseong Chung",
-      "player_b": "Omar Jasika",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Alex de Minaur",
+      "player_b": "Matteo Berrettini",
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
-      "player_a": "Yunseong Chung",
-      "player_b": "Omar Jasika",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Yunseong Chung",
-      "player_b": "Omar Jasika",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Yunseong Chung",
-      "player_b": "Omar Jasika",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Billy Harris",
-      "player_b": "Rei Sakamoto",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Billy Harris",
-      "player_b": "Rei Sakamoto",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Harold Mayot",
-      "player_b": "Yaroslav Demin",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Harold Mayot",
-      "player_b": "Yaroslav Demin",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Harold Mayot",
-      "player_b": "Yaroslav Demin",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Yu Hsiou Hsu",
-      "player_b": "Mert Alkaya",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Yu Hsiou Hsu",
-      "player_b": "Mert Alkaya",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Yu Hsiou Hsu",
-      "player_b": "Mert Alkaya",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Alex de Minaur",
+      "player_b": "Matteo Berrettini",
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
       "player_a": "Jiri Lehecka",
-      "player_b": "Daniel Altmaier",
-      "reason": "Recent result disagrees across sources"
-    },
-    {
-      "player_a": "Jiri Lehecka",
-      "player_b": "Daniel Altmaier",
-      "reason": "Recent result disagrees across sources"
-    },
-    {
-      "player_a": "Lorenzo Musetti",
-      "player_b": "Arthur Fery",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
-    },
-    {
-      "player_a": "Lorenzo Musetti",
-      "player_b": "Arthur Fery",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
-    },
-    {
-      "player_a": "Lorenzo Musetti",
-      "player_b": "Arthur Fery",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
-    },
-    {
-      "player_a": "Jerome Kym",
-      "player_b": "Ben Shelton",
+      "player_b": "Jerome Kym",
       "reason": "Insufficient player/surface history"
     },
     {
-      "player_a": "Jerome Kym",
-      "player_b": "Ben Shelton",
+      "player_a": "Jiri Lehecka",
+      "player_b": "Jerome Kym",
+      "reason": "Insufficient player/surface history"
+    },
+    {
+      "player_a": "Jiri Lehecka",
+      "player_b": "Jerome Kym",
       "reason": "Insufficient player/surface history"
     }
   ],
-  "market_matchups": 19,
+  "market_matchups": 9,
   "formats": {
     "3": {
       "status": "paper_only",
-      "training_rows": 3084,
-      "residuals": 1704,
-      "training_max_date": "2026-10-28 00:00:00"
+      "training_rows": 3094,
+      "residuals": 1708,
+      "training_max_date": "2026-10-29 00:00:00"
     },
     "5": {
       "status": "paper_only",
@@ -220,9 +110,9 @@
       "training_max_date": "2026-09-13 00:00:00"
     }
   },
-  "modeled_matchups": 5,
-  "training_matches": 3749,
-  "training_max_date": "2026-10-28",
-  "paper_candidates": 5,
-  "source_hash": "e62994f508f651ddda31af85ca838dde66a393553479d444ca6c91ae64e434d6"
+  "modeled_matchups": 3,
+  "training_matches": 3759,
+  "training_max_date": "2026-10-29",
+  "paper_candidates": 2,
+  "source_hash": "6eb28c96d1ab343b0e79cccfffe5b9503f788474722186e0239620daa9d2d0c3"
 }
