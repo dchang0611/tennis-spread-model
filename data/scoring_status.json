@@ -1,107 +1,62 @@
 {
   "success": true,
-  "checked_at": "2026-10-30T13:48:26.962499+00:00",
+  "checked_at": "2026-10-31T13:18:56.765307+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
     {
-      "player_a": "Lautaro Midon",
-      "player_b": "Joaquin Aguilar Cardozo",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Lautaro Midon",
-      "player_b": "Joaquin Aguilar Cardozo",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Lautaro Midon",
-      "player_b": "Joaquin Aguilar Cardozo",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Lautaro Midon",
-      "player_b": "Joaquin Aguilar Cardozo",
+      "player_a": "Hugo Dellien",
+      "player_b": "Valerio Aboian",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Hugo Dellien",
-      "player_b": "Carlos Maria Zarate",
+      "player_b": "Valerio Aboian",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Hugo Dellien",
-      "player_b": "Carlos Maria Zarate",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Nick Hardt",
       "player_b": "Valerio Aboian",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Nick Hardt",
-      "player_b": "Valerio Aboian",
+      "player_a": "Joaquin Aguilar Cardozo",
+      "player_b": "Joao Lucas Da Silva",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Nick Hardt",
-      "player_b": "Valerio Aboian",
+      "player_a": "Joaquin Aguilar Cardozo",
+      "player_b": "Joao Lucas Da Silva",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Arthur Fery",
-      "player_b": "Alexander Zverev",
+      "player_a": "Joaquin Aguilar Cardozo",
+      "player_b": "Joao Lucas Da Silva",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Joaquin Aguilar Cardozo",
+      "player_b": "Joao Lucas Da Silva",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Taylor Fritz",
+      "player_b": "Valentin Vacherot",
       "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
-      "player_a": "Arthur Fery",
-      "player_b": "Alexander Zverev",
+      "player_a": "Taylor Fritz",
+      "player_b": "Valentin Vacherot",
       "reason": "Recent incomplete match needs workload/injury reconciliation"
-    },
-    {
-      "player_a": "Arthur Fery",
-      "player_b": "Alexander Zverev",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
-    },
-    {
-      "player_a": "Alex de Minaur",
-      "player_b": "Matteo Berrettini",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
-    },
-    {
-      "player_a": "Alex de Minaur",
-      "player_b": "Matteo Berrettini",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
-    },
-    {
-      "player_a": "Alex de Minaur",
-      "player_b": "Matteo Berrettini",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
-    },
-    {
-      "player_a": "Jiri Lehecka",
-      "player_b": "Jerome Kym",
-      "reason": "Insufficient player/surface history"
-    },
-    {
-      "player_a": "Jiri Lehecka",
-      "player_b": "Jerome Kym",
-      "reason": "Insufficient player/surface history"
-    },
-    {
-      "player_a": "Jiri Lehecka",
-      "player_b": "Jerome Kym",
-      "reason": "Insufficient player/surface history"
     }
   ],
-  "market_matchups": 9,
+  "market_matchups": 6,
   "formats": {
     "3": {
       "status": "paper_only",
-      "training_rows": 3094,
-      "residuals": 1708,
-      "training_max_date": "2026-10-29 00:00:00"
+      "training_rows": 3100,
+      "residuals": 1714,
+      "training_max_date": "2026-10-30 00:00:00"
     },
     "5": {
       "status": "paper_only",
@@ -111,8 +66,8 @@
     }
   },
   "modeled_matchups": 3,
-  "training_matches": 3759,
-  "training_max_date": "2026-10-29",
-  "paper_candidates": 2,
-  "source_hash": "6eb28c96d1ab343b0e79cccfffe5b9503f788474722186e0239620daa9d2d0c3"
+  "training_matches": 3765,
+  "training_max_date": "2026-10-30",
+  "paper_candidates": 3,
+  "source_hash": "d4bd9f1f442474aad76fbb251e7ead89ce57565cfa27683f591f0a1ede0bb474"
 }
