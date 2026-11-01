@@ -1,123 +1,292 @@
 {
   "success": true,
-  "checked_at": "2026-10-31T13:15:42.827971+00:00",
-  "match_date": "2026-10-31",
+  "checked_at": "2026-11-01T14:00:06.881895+00:00",
+  "match_date": "2026-11-01",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
     {
-      "match": "Yannick Hanfmann vs Felix Balshaw",
+      "match": "Matthew William Donald vs Marko Bekeni",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Damir Dzumhur vs Sebastian Baez",
+      "match": "Samuel Heredia vs Giles Hussey",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Dino Prizmic vs Martin Damm",
+      "match": "Justin Boulais vs Joshua Sheehy",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Grigor Dimitrov vs Adolfo Daniel Vallejo",
+      "match": "Eero Vasa vs Andrej Martin",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Daniel Altmaier vs Alex Molcan",
+      "match": "Ryan Seggerman vs Jonas Forejtek",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Adrian Mannarino vs Nuno Borges",
+      "match": "Joshua Charlton vs Daniel Milavsky",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Otto Virtanen vs Moise Kouame",
+      "match": "Geoffrey Blancaneaux vs Shunsuke Mitsui",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Aidan Mayo vs Dylan Dietrich",
+      "match": "Ozan Baris vs Jangjun Kim",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Sebastian Dominko vs Liam Draxl",
+      "match": "Karl Poling vs Andrew Fenty",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Marcel Latak vs Mitchell Krueger",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Liam Draxl vs Dylan Dietrich",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Patrick Zahraj vs Andres Martin",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Emile Hudd vs Stiles Brockett",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Duncan Chan vs Aidan Mayo",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Kenta Miyoshi vs Dominick Mosejczuk",
       "error": "Indoor header has no unique current-edition court surface evidence."
     }
   ],
   "surface_assignments": [
     {
-      "player_a": "Medvedev D.",
-      "player_b": "Alcaraz C.",
-      "tournament": "Vienna",
-      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3364719&timezone=0",
-      "source_date": "2026-10-31",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "ca768598cdaa0b18383f73ee0e0dc6923a182cdf6341e3c2f621f9b1047f6e19",
-      "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
-    },
-    {
-      "player_a": "Vacherot V.",
-      "player_b": "Fritz T.",
-      "tournament": "Basel",
-      "tournament_source": "https://www.tennisexplorer.com/basel/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3364721&timezone=0",
-      "source_date": "2026-10-31",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "ca768598cdaa0b18383f73ee0e0dc6923a182cdf6341e3c2f621f9b1047f6e19",
-      "surface_edition_id": "/tournaments/2026/swiss-indoors-basel"
-    },
-    {
-      "player_a": "Zverev A.",
-      "player_b": "De Minaur A.",
-      "tournament": "Vienna",
-      "tournament_source": "https://www.tennisexplorer.com/vienna/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3364885&timezone=0",
-      "source_date": "2026-10-31",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "ca768598cdaa0b18383f73ee0e0dc6923a182cdf6341e3c2f621f9b1047f6e19",
-      "surface_edition_id": "/tournaments/2026/erste-bank-open-vienna"
-    },
-    {
-      "player_a": "Lehecka J.",
-      "player_b": "Struff J.",
-      "tournament": "Basel",
-      "tournament_source": "https://www.tennisexplorer.com/basel/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3364887&timezone=0",
-      "source_date": "2026-10-31",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "ca768598cdaa0b18383f73ee0e0dc6923a182cdf6341e3c2f621f9b1047f6e19",
-      "surface_edition_id": "/tournaments/2026/swiss-indoors-basel"
-    },
-    {
-      "player_a": "Aboian V.",
-      "player_b": "Dellien H.",
-      "tournament": "Guayaquil challenger",
-      "tournament_source": "https://www.tennisexplorer.com/guayaquil-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3364907&timezone=0",
-      "source_date": "2026-10-31",
+      "player_a": "Gagliardo L.",
+      "player_b": "Meneo T.",
+      "tournament": "Villa Maria challenger",
+      "tournament_source": "https://www.tennisexplorer.com/villa-maria-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365557&timezone=0",
+      "source_date": "2026-11-01",
       "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Reis Da Silva J.",
-      "player_b": "Aguilar Cardozo J.",
+      "player_a": "De La Fuente S.",
+      "player_b": "Boffelli F.",
+      "tournament": "Villa Maria challenger",
+      "tournament_source": "https://www.tennisexplorer.com/villa-maria-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365545&timezone=0",
+      "source_date": "2026-11-01",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Vertberger I.",
+      "player_b": "Klok D.",
+      "tournament": "Villa Maria challenger",
+      "tournament_source": "https://www.tennisexplorer.com/villa-maria-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365559&timezone=0",
+      "source_date": "2026-11-01",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Lehecka J.",
+      "player_b": "Vacherot V.",
+      "tournament": "Basel",
+      "tournament_source": "https://www.tennisexplorer.com/basel/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365453&timezone=0",
+      "source_date": "2026-11-01",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://www.atpschedule.com/",
+      "surface_detail_hash": "89f59b1c4071557a3e4e9368c5d73b77409bdc9f92c015cccdfe0e64e87a231d",
+      "surface_edition_id": "/tournaments/2026/swiss-indoors-basel"
+    },
+    {
+      "player_a": "Ribero F.",
+      "player_b": "Carballo M.",
+      "tournament": "Villa Maria challenger",
+      "tournament_source": "https://www.tennisexplorer.com/villa-maria-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365541&timezone=0",
+      "source_date": "2026-11-01",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Remondy Pagotto V.",
+      "player_b": "Lingua Lavallen A.",
+      "tournament": "Villa Maria challenger",
+      "tournament_source": "https://www.tennisexplorer.com/villa-maria-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365549&timezone=0",
+      "source_date": "2026-11-01",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Garay V.",
+      "player_b": "Bruna N.",
+      "tournament": "Villa Maria challenger",
+      "tournament_source": "https://www.tennisexplorer.com/villa-maria-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365543&timezone=0",
+      "source_date": "2026-11-01",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "De Dios F.",
+      "player_b": "Loureiro J.",
+      "tournament": "Villa Maria challenger",
+      "tournament_source": "https://www.tennisexplorer.com/villa-maria-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365539&timezone=0",
+      "source_date": "2026-11-01",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Dreycopp I.",
+      "player_b": "Tenti F.",
+      "tournament": "Villa Maria challenger",
+      "tournament_source": "https://www.tennisexplorer.com/villa-maria-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365551&timezone=0",
+      "source_date": "2026-11-01",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Aguilar Cardozo J.",
+      "player_b": "Dellien H.",
       "tournament": "Guayaquil challenger",
       "tournament_source": "https://www.tennisexplorer.com/guayaquil-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3364913&timezone=0",
-      "source_date": "2026-10-31",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365637&timezone=0",
+      "source_date": "2026-11-01",
       "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Tobon M.",
+      "player_b": "Bogo E.",
+      "tournament": "Costa do Sauipe challenger",
+      "tournament_source": "https://www.tennisexplorer.com/costa-do-sauipe-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365533&timezone=0",
+      "source_date": "2026-11-01",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Storck Franca L.",
+      "player_b": "Pereira J.",
+      "tournament": "Costa do Sauipe challenger",
+      "tournament_source": "https://www.tennisexplorer.com/costa-do-sauipe-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365535&timezone=0",
+      "source_date": "2026-11-01",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Lalami Laaroussi Y.",
+      "player_b": "Tosetto R.",
+      "tournament": "Costa do Sauipe challenger",
+      "tournament_source": "https://www.tennisexplorer.com/costa-do-sauipe-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365531&timezone=0",
+      "source_date": "2026-11-01",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Schenekenberg G.",
+      "player_b": "Schiessl J.",
+      "tournament": "Costa do Sauipe challenger",
+      "tournament_source": "https://www.tennisexplorer.com/costa-do-sauipe-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365525&timezone=0",
+      "source_date": "2026-11-01",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Zormann M.",
+      "player_b": "Misolic F.",
+      "tournament": "Costa do Sauipe challenger",
+      "tournament_source": "https://www.tennisexplorer.com/costa-do-sauipe-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365527&timezone=0",
+      "source_date": "2026-11-01",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Erel Y.",
+      "player_b": "Imamura M.",
+      "tournament": "Taipei challenger",
+      "tournament_source": "https://www.tennisexplorer.com/taipei-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365645&timezone=0",
+      "source_date": "2026-11-02",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Zhu E.",
+      "player_b": "Shimizu Y.",
+      "tournament": "Taipei challenger",
+      "tournament_source": "https://www.tennisexplorer.com/taipei-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365649&timezone=0",
+      "source_date": "2026-11-02",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Delaney J.",
+      "player_b": "Langmo C.",
+      "tournament": "Taipei challenger",
+      "tournament_source": "https://www.tennisexplorer.com/taipei-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365743&timezone=0",
+      "source_date": "2026-11-02",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Watanuki Y.",
+      "player_b": "Leong M.",
+      "tournament": "Taipei challenger",
+      "tournament_source": "https://www.tennisexplorer.com/taipei-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3365795&timezone=0",
+      "source_date": "2026-11-02",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Samrej K.",
+      "player_b": "Jasika O.",
+      "tournament": "Taipei challenger",
+      "tournament_source": "https://www.tennisexplorer.com/taipei-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3366567&timezone=0",
+      "source_date": "2026-11-02",
+      "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
@@ -132,7 +301,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f4b9acb6b4db0db8e91b10605e22afc8600a70f74dac1527146a4e7c73689a7c",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -146,7 +315,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f4b9acb6b4db0db8e91b10605e22afc8600a70f74dac1527146a4e7c73689a7c",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -160,7 +329,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f4b9acb6b4db0db8e91b10605e22afc8600a70f74dac1527146a4e7c73689a7c",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -174,7 +343,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f4b9acb6b4db0db8e91b10605e22afc8600a70f74dac1527146a4e7c73689a7c",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -188,7 +357,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f4b9acb6b4db0db8e91b10605e22afc8600a70f74dac1527146a4e7c73689a7c",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -202,7 +371,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f4b9acb6b4db0db8e91b10605e22afc8600a70f74dac1527146a4e7c73689a7c",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -216,7 +385,21 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f4b9acb6b4db0db8e91b10605e22afc8600a70f74dac1527146a4e7c73689a7c",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
+      "surface_edition_id": "/tournaments/2026/paris-masters"
+    },
+    {
+      "player_a": "Djokovic N.",
+      "player_b": "Vacherot V.",
+      "tournament": "Paris",
+      "tournament_source": "https://www.tennisexplorer.com/paris/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3364769&timezone=0",
+      "source_date": "2026-11-02",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://www.atpschedule.com/",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -230,7 +413,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f4b9acb6b4db0db8e91b10605e22afc8600a70f74dac1527146a4e7c73689a7c",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -244,7 +427,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f4b9acb6b4db0db8e91b10605e22afc8600a70f74dac1527146a4e7c73689a7c",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -258,7 +441,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f4b9acb6b4db0db8e91b10605e22afc8600a70f74dac1527146a4e7c73689a7c",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -272,7 +455,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f4b9acb6b4db0db8e91b10605e22afc8600a70f74dac1527146a4e7c73689a7c",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -286,7 +469,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f4b9acb6b4db0db8e91b10605e22afc8600a70f74dac1527146a4e7c73689a7c",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -300,27 +483,91 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f4b9acb6b4db0db8e91b10605e22afc8600a70f74dac1527146a4e7c73689a7c",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
+      "surface_edition_id": "/tournaments/2026/paris-masters"
+    },
+    {
+      "player_a": "Davidovich Fokina A.",
+      "player_b": "Kouame M.",
+      "tournament": "Paris",
+      "tournament_source": "https://www.tennisexplorer.com/paris/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3364785&timezone=0",
+      "source_date": "2026-11-02",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://www.atpschedule.com/",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
+      "surface_edition_id": "/tournaments/2026/paris-masters"
+    },
+    {
+      "player_a": "Michelsen A.",
+      "player_b": "Lehecka J.",
+      "tournament": "Paris",
+      "tournament_source": "https://www.tennisexplorer.com/paris/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3364795&timezone=0",
+      "source_date": "2026-11-02",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://www.atpschedule.com/",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
+      "surface_edition_id": "/tournaments/2026/paris-masters"
+    },
+    {
+      "player_a": "Tabilo A.",
+      "player_b": "Jodar R.",
+      "tournament": "Paris",
+      "tournament_source": "https://www.tennisexplorer.com/paris/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3364783&timezone=0",
+      "source_date": "2026-11-02",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://www.atpschedule.com/",
+      "surface_detail_hash": "08dc83c25f427b670ca371112c9674aaa0ee104d8dab2cbbd6d13f3319368dd4",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     }
   ],
-  "events_found": 30,
+  "events_found": 55,
   "events": [
-    "Yannick Hanfmann vs Felix Balshaw",
-    "Damir Dzumhur vs Sebastian Baez",
-    "Carlos Alcaraz vs Daniil Medvedev",
-    "Taylor Fritz vs Valentin Vacherot",
-    "Dino Prizmic vs Martin Damm",
-    "Grigor Dimitrov vs Adolfo Daniel Vallejo",
-    "Daniel Altmaier vs Alex Molcan",
-    "Adrian Mannarino vs Nuno Borges",
-    "Otto Virtanen vs Moise Kouame",
-    "Alex De Minaur vs Alexander Zverev",
-    "Jan-Lennard Struff vs Jiri Lehecka",
-    "Aidan Mayo vs Dylan Dietrich",
-    "Hugo Dellien vs Valerio Aboian",
-    "Sebastian Dominko vs Liam Draxl",
-    "Joaquin Aguilar Cardozo vs Joao Lucas Da Silva",
+    "Tadeo Meneo vs Lorenzo Gagliardo",
+    "Faustino Boffelli vs Santiago De la Fuente",
+    "Denis Klok vs Ian Luca Vertberger",
+    "Valentin Vacherot vs Jiri Lehecka",
+    "Matthew William Donald vs Marko Bekeni",
+    "Samuel Heredia vs Giles Hussey",
+    "Justin Boulais vs Joshua Sheehy",
+    "Mateo Del Pino vs Arklon Huertas Del Pino Cordova",
+    "Mateo Carballo vs Franco Ribero",
+    "Alejo Lorenzo Lingua Lavallen vs Victor Hugo Remondy Pagotto",
+    "Eero Vasa vs Andrej Martin",
+    "Ryan Seggerman vs Jonas Forejtek",
+    "Joshua Charlton vs Daniel Milavsky",
+    "Geoffrey Blancaneaux vs Shunsuke Mitsui",
+    "Nicolas Bruna vs Valentin Garay",
+    "Joao Victor Couto Loureiro vs Felipe de Dios",
+    "Fermin Tenti vs Ivan Dreycopp",
+    "Hugo Dellien vs Joaquin Aguilar Cardozo",
+    "Ozan Baris vs Jangjun Kim",
+    "Karl Poling vs Andrew Fenty",
+    "Marcel Latak vs Mitchell Krueger",
+    "Enrique Bogo vs Miguel Tobon",
+    "Jose Pereira vs Leonardo Storck Franca",
+    "Liam Draxl vs Dylan Dietrich",
+    "Patrick Zahraj vs Andres Martin",
+    "Emile Hudd vs Stiles Brockett",
+    "Rafael Tosetto vs Younes Lalami Laaroussi",
+    "Joao Eduardo Schiessl vs Gabriel Schenekenberg",
+    "Duncan Chan vs Aidan Mayo",
+    "Kenta Miyoshi vs Dominick Mosejczuk",
+    "Filip Misolic vs Marcelo Zormann",
+    "Masamichi Imamura vs Yanki Erel",
+    "Yuta Shimizu vs Evan Zhu",
+    "Christian Langmo vs Jake Delaney",
+    "Mitsuki Wei Kang Leong vs Yosuke Watanuki",
+    "Omar Jasika vs Kasidit Samrej",
+    "Marvin Moeller vs Hugo Grenier",
     "Karen Khachanov vs Denis Shapovalov",
     "Zizou Bergs vs Ignacio Buse",
     "Mariano Navone vs Luca Van Assche",
@@ -328,6 +575,7 @@
     "Tomas Martin Etcheverry vs Andrey Rublev",
     "Alexander Blockx vs Daniel Merida Aguilar",
     "Francisco Cerundolo vs Arthur Rinderknech",
+    "Valentin Vacherot vs Novak Djokovic",
     "Matteo Berrettini vs Brandon Nakashima",
     "Hubert Hurkacz vs Lorenzo Musetti",
     "Arthur Fery vs Quentin Halys",
@@ -335,30 +583,21 @@
     "Matteo Arnaldi vs Cameron Norrie",
     "Botic Van De Zandschulp vs Ugo Humbert",
     "Moise Kouame vs Alejandro Davidovich Fokina",
-    "Jiri Lehecka vs Alex Michelsen"
+    "Jiri Lehecka vs Alex Michelsen",
+    "Rafael Jodar vs Alejandro Tabilo",
+    "Gonzalo Villanueva vs Carlos Maria Zarate"
   ],
-  "spread_markets_found": 28,
+  "spread_markets_found": 52,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 30,
+  "unique_event_pages": 55,
   "unpriced_spread_markets": [
-    "Karen Khachanov vs Denis Shapovalov",
-    "Zizou Bergs vs Ignacio Buse",
-    "Mariano Navone vs Luca Van Assche",
-    "Holger Rune vs Tommy Paul",
-    "Tomas Martin Etcheverry vs Andrey Rublev",
-    "Alexander Blockx vs Daniel Merida Aguilar",
-    "Francisco Cerundolo vs Arthur Rinderknech",
-    "Matteo Berrettini vs Brandon Nakashima",
-    "Hubert Hurkacz vs Lorenzo Musetti",
-    "Arthur Fery vs Quentin Halys",
-    "Learner Tien vs Stefanos Tsitsipas",
-    "Matteo Arnaldi vs Cameron Norrie",
-    "Botic Van De Zandschulp vs Ugo Humbert"
+    "Omar Jasika vs Kasidit Samrej",
+    "Jiri Lehecka vs Alex Michelsen"
   ],
-  "executable_spread_markets": 6,
-  "matches_parsed": 6,
+  "executable_spread_markets": 35,
+  "matches_parsed": 35,
   "partial_coverage": true,
-  "rows_saved": 19,
+  "rows_saved": 94,
   "error": null
 }
