@@ -1,18 +1,10 @@
 {
   "success": true,
-  "checked_at": "2026-11-06T15:34:59.509363+00:00",
+  "checked_at": "2026-11-06T16:37:57.691155+00:00",
   "match_date": "2026-11-06",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Zsombor Piros vs Dalibor Svrcina",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Aidan Mayo vs Max Hans Rehberg",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
     {
       "match": "Jurij Rodionov vs Kimmer Coppejans",
       "error": "Indoor header has no unique current-edition court surface evidence."
@@ -31,17 +23,6 @@
     }
   ],
   "surface_assignments": [
-    {
-      "player_a": "La Serna J.",
-      "player_b": "Zarate C.",
-      "tournament": "Villa Maria challenger",
-      "tournament_source": "https://www.tennisexplorer.com/villa-maria-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3370843&timezone=0",
-      "source_date": "2026-11-06",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
     {
       "player_a": "Maestrelli F.",
       "player_b": "Caniato C.",
@@ -86,7 +67,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "decd2bcfd2cb38207100fd36a89068e5209f20dba45074c63a2ae1bc4b734c2c",
+      "surface_detail_hash": "57c81c31bdf25d13720f84269529d19cc2d15e48675570bddbec475c58d8b804",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -111,7 +92,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "decd2bcfd2cb38207100fd36a89068e5209f20dba45074c63a2ae1bc4b734c2c",
+      "surface_detail_hash": "57c81c31bdf25d13720f84269529d19cc2d15e48675570bddbec475c58d8b804",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -170,12 +151,9 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 18,
+  "events_found": 15,
   "events": [
-    "Carlos Maria Zarate vs Juan Manuel La Serna",
     "Carlo Alberto Caniato vs Francesco Maestrelli",
-    "Zsombor Piros vs Dalibor Svrcina",
-    "Aidan Mayo vs Max Hans Rehberg",
     "Genaro Alberto Olivieri vs Juan Bautista Torres",
     "Jurij Rodionov vs Kimmer Coppejans",
     "Braden Shick vs Stefan Kozlov",
@@ -191,15 +169,13 @@
     "Jan Kumstat vs Yuta Shimizu",
     "Yosuke Watanuki vs Chak Lam Coleman Wong"
   ],
-  "spread_markets_found": 18,
+  "spread_markets_found": 15,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 18,
-  "unpriced_spread_markets": [
-    "Andres Andrade vs Maks Kasnikowski"
-  ],
-  "executable_spread_markets": 12,
-  "matches_parsed": 12,
+  "unique_event_pages": 15,
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 11,
+  "matches_parsed": 11,
   "partial_coverage": true,
   "rows_saved": 40,
   "error": null
