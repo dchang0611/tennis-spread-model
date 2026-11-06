@@ -3675,10 +3675,10 @@
     "recommendation": "PAPER",
     "match_key": "Casper Ruud|Jan-Lennard Struff|2026-11-05|Paris",
     "recorded_at": "2026-11-05T17:11:00.211385+00:00",
-    "result": "PENDING",
+    "result": "LOSS",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": -1.0,
+    "settled_at": "2026-11-06T15:36:09.879977+00:00"
   },
   {
     "observation_id": null,
@@ -3729,9 +3729,9 @@
     "recommendation": "PAPER",
     "match_key": "Arthur Fils|Taylor Fritz|2026-11-05|Paris",
     "recorded_at": "2026-11-05T17:11:00.211385+00:00",
-    "result": "PENDING",
+    "result": "LOSS",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": -1.0,
+    "settled_at": "2026-11-06T15:36:09.879977+00:00"
   }
 ]
