@@ -1,210 +1,90 @@
 {
   "success": false,
-  "checked_at": "2026-11-06T16:38:56.757916+00:00",
+  "checked_at": "2026-11-07T14:41:48.793320+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
     {
-      "player_a": "Carlo Alberto Caniato",
-      "player_b": "Francesco Maestrelli",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Carlo Alberto Caniato",
-      "player_b": "Francesco Maestrelli",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Carlo Alberto Caniato",
-      "player_b": "Francesco Maestrelli",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Genaro Alberto Olivieri",
-      "player_b": "Juan Bautista Torres",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Genaro Alberto Olivieri",
-      "player_b": "Juan Bautista Torres",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Genaro Alberto Olivieri",
-      "player_b": "Juan Bautista Torres",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Genaro Alberto Olivieri",
-      "player_b": "Juan Bautista Torres",
-      "reason": "No unique independently verified future start time"
-    },
-    {
       "player_a": "Camilo Ugo Carabelli",
-      "player_b": "Juan Carlos Prado Angelo",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Camilo Ugo Carabelli",
-      "player_b": "Juan Carlos Prado Angelo",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Camilo Ugo Carabelli",
-      "player_b": "Juan Carlos Prado Angelo",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Camilo Ugo Carabelli",
-      "player_b": "Juan Carlos Prado Angelo",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Lautaro Midon",
       "player_b": "Gonzalo Bueno",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Lautaro Midon",
+      "player_a": "Camilo Ugo Carabelli",
       "player_b": "Gonzalo Bueno",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Lautaro Midon",
+      "player_a": "Camilo Ugo Carabelli",
       "player_b": "Gonzalo Bueno",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Marco Cecchinato",
+      "player_a": "Thiago Seyboth Wild",
       "player_b": "Facundo Diaz Acosta",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Marco Cecchinato",
+      "player_a": "Thiago Seyboth Wild",
       "player_b": "Facundo Diaz Acosta",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Marco Cecchinato",
+      "player_a": "Thiago Seyboth Wild",
       "player_b": "Facundo Diaz Acosta",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Federico Coria",
-      "player_b": "Juan Pablo Ficovich",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Federico Coria",
-      "player_b": "Juan Pablo Ficovich",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Federico Coria",
-      "player_b": "Juan Pablo Ficovich",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Federico Coria",
-      "player_b": "Juan Pablo Ficovich",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Joao Lucas Da Silva",
-      "player_b": "Thiago Seyboth Wild",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Joao Lucas Da Silva",
-      "player_b": "Thiago Seyboth Wild",
+      "player_a": "Thiago Seyboth Wild",
+      "player_b": "Facundo Diaz Acosta",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Jan Kumstat",
-      "player_b": "Yuta Shimizu",
+      "player_b": "Yosuke Watanuki",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Jan Kumstat",
-      "player_b": "Yuta Shimizu",
+      "player_b": "Yosuke Watanuki",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Jan Kumstat",
-      "player_b": "Yuta Shimizu",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Jan Kumstat",
-      "player_b": "Yuta Shimizu",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Yosuke Watanuki",
-      "player_b": "Chak Lam Coleman Wong",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Yosuke Watanuki",
-      "player_b": "Chak Lam Coleman Wong",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Yosuke Watanuki",
-      "player_b": "Chak Lam Coleman Wong",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Yosuke Watanuki",
-      "player_b": "Chak Lam Coleman Wong",
+      "player_b": "Yosuke Watanuki",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Carlos Alcaraz",
-      "player_b": "Taylor Fritz",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
-    },
-    {
-      "player_a": "Carlos Alcaraz",
-      "player_b": "Taylor Fritz",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
-    },
-    {
-      "player_a": "Carlos Alcaraz",
-      "player_b": "Taylor Fritz",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
-    },
-    {
-      "player_a": "Carlos Alcaraz",
-      "player_b": "Taylor Fritz",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
-    },
-    {
-      "player_a": "Carlos Alcaraz",
-      "player_b": "Taylor Fritz",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
-    },
-    {
-      "player_a": "Nuno Borges",
       "player_b": "Casper Ruud",
-      "reason": "Recent result missing or ambiguous in statistics feed"
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
-      "player_a": "Nuno Borges",
+      "player_a": "Carlos Alcaraz",
       "player_b": "Casper Ruud",
-      "reason": "Recent result missing or ambiguous in statistics feed"
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
-      "player_a": "Nuno Borges",
+      "player_a": "Carlos Alcaraz",
       "player_b": "Casper Ruud",
-      "reason": "Recent result missing or ambiguous in statistics feed"
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
-      "player_a": "Nuno Borges",
+      "player_a": "Carlos Alcaraz",
       "player_b": "Casper Ruud",
-      "reason": "Recent result missing or ambiguous in statistics feed"
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
+    },
+    {
+      "player_a": "Carlos Alcaraz",
+      "player_b": "Casper Ruud",
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
+    },
+    {
+      "player_a": "Carlos Alcaraz",
+      "player_b": "Casper Ruud",
+      "reason": "Recent incomplete match needs workload/injury reconciliation"
     }
   ],
-  "market_matchups": 11,
+  "market_matchups": 4,
   "error": "Independent recent-result coverage failed for all players"
 }
