@@ -1,10 +1,30 @@
 {
   "success": false,
-  "checked_at": "2026-11-07T14:41:48.793320+00:00",
+  "checked_at": "2026-11-07T15:31:45.756987+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
     {
+      "player_a": "Genaro Alberto Olivieri",
+      "player_b": "Federico Coria",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Genaro Alberto Olivieri",
+      "player_b": "Federico Coria",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Genaro Alberto Olivieri",
+      "player_b": "Federico Coria",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Genaro Alberto Olivieri",
+      "player_b": "Federico Coria",
+      "reason": "No unique independently verified future start time"
+    },
+    {
       "player_a": "Camilo Ugo Carabelli",
       "player_b": "Gonzalo Bueno",
       "reason": "No unique independently verified future start time"
@@ -53,11 +73,6 @@
       "player_a": "Jan Kumstat",
       "player_b": "Yosuke Watanuki",
       "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Carlos Alcaraz",
-      "player_b": "Casper Ruud",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
     },
     {
       "player_a": "Carlos Alcaraz",
@@ -85,6 +100,6 @@
       "reason": "Recent incomplete match needs workload/injury reconciliation"
     }
   ],
-  "market_matchups": 4,
+  "market_matchups": 5,
   "error": "Independent recent-result coverage failed for all players"
 }

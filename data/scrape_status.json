@@ -1,14 +1,10 @@
 {
   "success": true,
-  "checked_at": "2026-11-07T14:37:06.204492+00:00",
+  "checked_at": "2026-11-07T15:27:11.716902+00:00",
   "match_date": "2026-11-07",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Jan Simonsson vs Adrian Mannarino",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
     {
       "match": "Arthur Nagel vs Jacob Fearnley",
       "error": "Indoor header has no unique current-edition court surface evidence."
@@ -24,6 +20,17 @@
   ],
   "surface_assignments": [
     {
+      "player_a": "Coria F.",
+      "player_b": "Olivieri G.",
+      "tournament": "Villa Maria challenger",
+      "tournament_source": "https://www.tennisexplorer.com/villa-maria-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3371567&timezone=0",
+      "source_date": "2026-11-07",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
       "player_a": "Ruud C.",
       "player_b": "Alcaraz C.",
       "tournament": "Paris",
@@ -34,7 +41,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "c5c9b51df76d1a97a3dfdfbd5e5d485aebb79036ea2798031095237256ea7977",
+      "surface_detail_hash": "a4b2465c677e6488fe4909debce6444f8b55f11d3932677c43d02a4a9acb6078",
       "surface_edition_id": "/tournaments/2026/paris-masters"
     },
     {
@@ -81,7 +88,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "6cc92f5422ba31ef2c2eb3a65240bdf1ae1d99e4628fdc79d023e8287fda2f15",
+      "surface_detail_hash": "89f1ba4030bcfc6784180b0f1562eeb3d82cb402a8a2f6807ba5f14b6f290112",
       "surface_edition_id": "/tournaments/2026/stockholm-open"
     },
     {
@@ -95,7 +102,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "6cc92f5422ba31ef2c2eb3a65240bdf1ae1d99e4628fdc79d023e8287fda2f15",
+      "surface_detail_hash": "89f1ba4030bcfc6784180b0f1562eeb3d82cb402a8a2f6807ba5f14b6f290112",
       "surface_edition_id": "/tournaments/2026/stockholm-open"
     },
     {
@@ -208,7 +215,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f31ba0de633a899b4918884817548367fa50e4eb3dcf63766a91431a461c9638",
+      "surface_detail_hash": "d70c8c55dc2a0721a588e3984e991e8afae3eeb80f29d8a20a2a1e689d235a2b",
       "surface_edition_id": "/tournaments/2026/stockholm-open"
     },
     {
@@ -222,7 +229,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f31ba0de633a899b4918884817548367fa50e4eb3dcf63766a91431a461c9638",
+      "surface_detail_hash": "d70c8c55dc2a0721a588e3984e991e8afae3eeb80f29d8a20a2a1e689d235a2b",
       "surface_edition_id": "/tournaments/2026/stockholm-open"
     },
     {
@@ -236,7 +243,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f31ba0de633a899b4918884817548367fa50e4eb3dcf63766a91431a461c9638",
+      "surface_detail_hash": "d70c8c55dc2a0721a588e3984e991e8afae3eeb80f29d8a20a2a1e689d235a2b",
       "surface_edition_id": "/tournaments/2026/stockholm-open"
     },
     {
@@ -250,7 +257,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f31ba0de633a899b4918884817548367fa50e4eb3dcf63766a91431a461c9638",
+      "surface_detail_hash": "d70c8c55dc2a0721a588e3984e991e8afae3eeb80f29d8a20a2a1e689d235a2b",
       "surface_edition_id": "/tournaments/2026/stockholm-open"
     },
     {
@@ -264,7 +271,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f31ba0de633a899b4918884817548367fa50e4eb3dcf63766a91431a461c9638",
+      "surface_detail_hash": "d70c8c55dc2a0721a588e3984e991e8afae3eeb80f29d8a20a2a1e689d235a2b",
       "surface_edition_id": "/tournaments/2026/stockholm-open"
     },
     {
@@ -278,14 +285,14 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "f31ba0de633a899b4918884817548367fa50e4eb3dcf63766a91431a461c9638",
+      "surface_detail_hash": "d70c8c55dc2a0721a588e3984e991e8afae3eeb80f29d8a20a2a1e689d235a2b",
       "surface_edition_id": "/tournaments/2026/stockholm-open"
     }
   ],
-  "events_found": 59,
+  "events_found": 61,
   "events": [
-    "Jan Simonsson vs Adrian Mannarino",
     "Arthur Nagel vs Jacob Fearnley",
+    "Genaro Alberto Olivieri vs Federico Coria",
     "Carlos Alcaraz vs Casper Ruud",
     "Camilo Ugo Carabelli vs Gonzalo Bueno",
     "Andres Andrade vs Aidan Mayo",
@@ -316,6 +323,7 @@
     "Stefan Vujic vs Christian Langmo",
     "Sam Ryan Ziegann vs Li Tu",
     "Jan Kumstat vs Yosuke Watanuki",
+    "Borna Gojo vs Nikoloz Basilashvili",
     "Juan Manuel Cerundolo vs Elias Ymer",
     "Jaume Munar vs Thiago Agustin Tirante",
     "Jan Kumstat vs James McCabe",
@@ -332,6 +340,7 @@
     "Yuta Shimizu vs Kasidit Samrej",
     "Taro Daniel vs Yosuke Watanuki",
     "Yusuke Kusuhara vs Jay Dylan Hara Friend",
+    "David Jorda Sanchis vs Shunsuke Nakagawa",
     "Yu Hsiou Hsu vs Keegan Smith",
     "Mitsuki Wei Kang Leong vs Joel Josef Schwaerzler",
     "Stefanos Sakellaridis vs Naoya Honda",
@@ -347,7 +356,7 @@
   "spread_markets_found": 25,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 59,
+  "unique_event_pages": 61,
   "unpriced_spread_markets": [
     "Juan Manuel Cerundolo vs Elias Ymer",
     "Jaume Munar vs Thiago Agustin Tirante",
@@ -367,9 +376,9 @@
     "Ugo Humbert vs Adolfo Daniel Vallejo",
     "Max Dahlin vs Tomas Martin Etcheverry"
   ],
-  "executable_spread_markets": 4,
-  "matches_parsed": 4,
+  "executable_spread_markets": 5,
+  "matches_parsed": 5,
   "partial_coverage": true,
-  "rows_saved": 16,
+  "rows_saved": 19,
   "error": null
 }
