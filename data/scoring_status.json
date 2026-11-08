@@ -1,35 +1,10 @@
 {
   "success": false,
-  "checked_at": "2026-11-08T14:48:13.208413+00:00",
+  "checked_at": "2026-11-08T15:54:49.432072+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
     {
-      "player_a": "Ignacio Monzon",
-      "player_b": "Santiago De la Fuente",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Ignacio Monzon",
-      "player_b": "Santiago De la Fuente",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Ignacio Monzon",
-      "player_b": "Santiago De la Fuente",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Ryo Tabata",
-      "player_b": "Igor Marcondes",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Ryo Tabata",
-      "player_b": "Igor Marcondes",
-      "reason": "No unique independently verified future start time"
-    },
-    {
       "player_a": "Alan Magadan",
       "player_b": "Nicolas Barrientos",
       "reason": "No unique independently verified future start time"
@@ -90,9 +65,34 @@
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Miomir Kecmanovic",
-      "player_b": "Arthur Rinderknech",
-      "reason": "Independent schedule has not confirmed a start time yet"
+      "player_a": "Dominik Palan",
+      "player_b": "Anton Shepp",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Dominik Palan",
+      "player_b": "Anton Shepp",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Chase Ferguson",
+      "player_b": "Sam Ryan Ziegann",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Chase Ferguson",
+      "player_b": "Sam Ryan Ziegann",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Kokoro Isomura",
+      "player_b": "Christian Langmo",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Kokoro Isomura",
+      "player_b": "Christian Langmo",
+      "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Miomir Kecmanovic",
@@ -105,8 +105,8 @@
       "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
-      "player_a": "Zizou Bergs",
-      "player_b": "Holger Rune",
+      "player_a": "Miomir Kecmanovic",
+      "player_b": "Arthur Rinderknech",
       "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
@@ -128,26 +128,6 @@
       "player_a": "Zizou Bergs",
       "player_b": "Holger Rune",
       "reason": "Independent schedule has not confirmed a start time yet"
-    },
-    {
-      "player_a": "Juan Manuel Cerundolo",
-      "player_b": "Elias Ymer",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Juan Manuel Cerundolo",
-      "player_b": "Elias Ymer",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Juan Manuel Cerundolo",
-      "player_b": "Elias Ymer",
-      "reason": "Recent result missing or ambiguous in statistics feed"
-    },
-    {
-      "player_a": "Juan Manuel Cerundolo",
-      "player_b": "Elias Ymer",
-      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
       "player_a": "Jaume Munar",

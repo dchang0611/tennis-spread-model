@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-11-08T14:43:05.612594+00:00",
+  "checked_at": "2026-11-08T15:49:13.462367+00:00",
   "match_date": "2026-11-08",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
@@ -10,8 +10,12 @@
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Juan Sebastian Gomez vs Diego Gomez",
-      "error": "No unique schedule match for Juan Sebastian Gomez vs Diego Gomez on 2026-11-08 or 2026-11-09 (Europe/London); found 0."
+      "match": "Jordan Lee vs Andres Martin",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Karl Poling vs Filip Jeff Planinsek",
+      "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
       "match": "Alexander Ritschard vs Ferdinand Livet Novkirichka",
@@ -22,7 +26,39 @@
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
+      "match": "Samir Banerjee vs Mitchell Krueger",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Quinn Vandecasteele vs Ozan Baris",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
       "match": "Aidan Mayo vs Stefan Kozlov",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Geoffrey Blancaneaux vs Shunsuke Mitsui",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Lui Maxted vs Jamie Mackenzie",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Kenta Miyoshi vs Andrew Fenty",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Sebastian Dominko vs Patrick Zahraj",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Luca Wiedenmann vs Daniel Milavsky",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Kaylan Bigun vs Giles Hussey",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
@@ -42,6 +78,10 @@
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
+      "match": "Stefan Kozlov vs Alexis Galarneau",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
       "match": "Clement Chidekh vs Marcel Latak",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
@@ -52,34 +92,13 @@
     {
       "match": "Jack Kennedy vs Nicolas Mejia",
       "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Andres Andrade vs Braden Shick",
+      "error": "Indoor header has no unique current-edition court surface evidence."
     }
   ],
   "surface_assignments": [
-    {
-      "player_a": "Ymer E.",
-      "player_b": "Cerundolo J.",
-      "tournament": "Stockholm",
-      "tournament_source": "https://www.tennisexplorer.com/stockholm/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3371803&timezone=0",
-      "source_date": "2026-11-08",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "d13e9930be84d8a0aa5d2a714fe33b5b036ad8d8db13a0444e0a45f7b1ced047",
-      "surface_edition_id": "/tournaments/2026/stockholm-open"
-    },
-    {
-      "player_a": "De La Fuente S.",
-      "player_b": "Monzon I.",
-      "tournament": "Lima 3 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3373161&timezone=0",
-      "source_date": "2026-11-08",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
     {
       "player_a": "Tirante T.",
       "player_b": "Munar J.",
@@ -91,19 +110,8 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "d13e9930be84d8a0aa5d2a714fe33b5b036ad8d8db13a0444e0a45f7b1ced047",
+      "surface_detail_hash": "9bd42cbdf6a82d8bc2ccab6a4ff0ed7e7e5440631219fb627c8cdad62c007e76",
       "surface_edition_id": "/tournaments/2026/stockholm-open"
-    },
-    {
-      "player_a": "Marcondes I.",
-      "player_b": "Tabata R.",
-      "tournament": "Lima 3 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3373165&timezone=0",
-      "source_date": "2026-11-08",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
     },
     {
       "player_a": "Barrientos N.",
@@ -150,6 +158,28 @@
       "method": "live_match_metadata"
     },
     {
+      "player_a": "Shepp A.",
+      "player_b": "Palan D.",
+      "tournament": "Brisbane 4 challenger",
+      "tournament_source": "https://www.tennisexplorer.com/brisbane-4-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3373275&timezone=0",
+      "source_date": "2026-11-09",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Ryan Ziegann S.",
+      "player_b": "Ferguson C.",
+      "tournament": "Brisbane 4 challenger",
+      "tournament_source": "https://www.tennisexplorer.com/brisbane-4-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3373283&timezone=0",
+      "source_date": "2026-11-09",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
       "player_a": "Ayeni A.",
       "player_b": "Winter E.",
       "tournament": "Brisbane 4 challenger",
@@ -172,18 +202,15 @@
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Rinderknech A.",
-      "player_b": "Kecmanovic M.",
-      "tournament": "Stockholm",
-      "tournament_source": "https://www.tennisexplorer.com/stockholm/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3371797&timezone=0",
+      "player_a": "Langmo C.",
+      "player_b": "Isomura K.",
+      "tournament": "Brisbane 4 challenger",
+      "tournament_source": "https://www.tennisexplorer.com/brisbane-4-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3373285&timezone=0",
       "source_date": "2026-11-09",
       "surface": "Hard",
       "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "e37c1395cf98c3287b5c29918d75980de4c51925eda7c6c152f2f6e46c31495c",
-      "surface_edition_id": "/tournaments/2026/stockholm-open"
+      "method": "live_match_metadata"
     },
     {
       "player_a": "Michelsen A.",
@@ -196,21 +223,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "e37c1395cf98c3287b5c29918d75980de4c51925eda7c6c152f2f6e46c31495c",
-      "surface_edition_id": "/tournaments/2026/stockholm-open"
-    },
-    {
-      "player_a": "Rune H.",
-      "player_b": "Bergs Z.",
-      "tournament": "Stockholm",
-      "tournament_source": "https://www.tennisexplorer.com/stockholm/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3371799&timezone=0",
-      "source_date": "2026-11-09",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "e37c1395cf98c3287b5c29918d75980de4c51925eda7c6c152f2f6e46c31495c",
+      "surface_detail_hash": "b9a52a1e1160ed7d20419e96e92d8acaed07281182dcf2a5aa42fbe5c8cec903",
       "surface_edition_id": "/tournaments/2026/stockholm-open"
     },
     {
@@ -224,7 +237,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "e37c1395cf98c3287b5c29918d75980de4c51925eda7c6c152f2f6e46c31495c",
+      "surface_detail_hash": "b9a52a1e1160ed7d20419e96e92d8acaed07281182dcf2a5aa42fbe5c8cec903",
       "surface_edition_id": "/tournaments/2026/stockholm-open"
     },
     {
@@ -238,7 +251,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "e37c1395cf98c3287b5c29918d75980de4c51925eda7c6c152f2f6e46c31495c",
+      "surface_detail_hash": "b9a52a1e1160ed7d20419e96e92d8acaed07281182dcf2a5aa42fbe5c8cec903",
       "surface_edition_id": "/tournaments/2026/stockholm-open"
     },
     {
@@ -252,7 +265,7 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "e37c1395cf98c3287b5c29918d75980de4c51925eda7c6c152f2f6e46c31495c",
+      "surface_detail_hash": "b9a52a1e1160ed7d20419e96e92d8acaed07281182dcf2a5aa42fbe5c8cec903",
       "surface_edition_id": "/tournaments/2026/stockholm-open"
     },
     {
@@ -342,34 +355,56 @@
       "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Rinderknech A.",
+      "player_b": "Kecmanovic M.",
+      "tournament": "Stockholm",
+      "tournament_source": "https://www.tennisexplorer.com/stockholm/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3371797&timezone=0",
+      "source_date": "2026-11-10",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://www.atpschedule.com/",
+      "surface_detail_hash": "df4e58e1310e15b4e4f1d0658ad63d01f3f7f58633372b1a00f68031d58c6455",
+      "surface_edition_id": "/tournaments/2026/stockholm-open"
+    },
+    {
+      "player_a": "Rune H.",
+      "player_b": "Bergs Z.",
+      "tournament": "Stockholm",
+      "tournament_source": "https://www.tennisexplorer.com/stockholm/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3371799&timezone=0",
+      "source_date": "2026-11-10",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://www.atpschedule.com/",
+      "surface_detail_hash": "df4e58e1310e15b4e4f1d0658ad63d01f3f7f58633372b1a00f68031d58c6455",
+      "surface_edition_id": "/tournaments/2026/stockholm-open"
     }
   ],
-  "events_found": 92,
+  "events_found": 93,
   "events": [
     "Alexander Donski vs Luca Nardi",
-    "Juan Manuel Cerundolo vs Elias Ymer",
-    "Colin Sinclair vs Timo Legout",
-    "Justin Boulais vs Emile Hudd",
-    "Ignacio Monzon vs Santiago De la Fuente",
-    "Juan Sebastian Gomez vs Diego Gomez",
-    "Franco Davila Blotte vs Carlos Sanchez Jover",
-    "Alexander Ritschard vs Ferdinand Livet Novkirichka",
-    "Lucas Poullain vs Pierre Delage",
-    "Jaume Munar vs Thiago Agustin Tirante",
     "Jordan Lee vs Andres Martin",
     "Karl Poling vs Filip Jeff Planinsek",
     "Ricardo Sebastian Ramos Vargas vs Franco Roncadelli",
-    "Ryo Tabata vs Igor Marcondes",
-    "Yanis Ghazouani Durand vs Calvin Hemery",
+    "Alexander Ritschard vs Ferdinand Livet Novkirichka",
+    "Jaume Munar vs Thiago Agustin Tirante",
+    "Lucas Poullain vs Pierre Delage",
     "Samir Banerjee vs Mitchell Krueger",
     "Quinn Vandecasteele vs Ozan Baris",
     "Alan Magadan vs Nicolas Barrientos",
     "Nicolas Jarry vs Felipe Meligeni Alves",
     "Filip Misolic vs Ryan Nijboer",
+    "Yanis Ghazouani Durand vs Calvin Hemery",
     "Aidan Mayo vs Stefan Kozlov",
     "Geoffrey Blancaneaux vs Shunsuke Mitsui",
     "Lui Maxted vs Jamie Mackenzie",
     "Maximo Zeitune vs Conner Huertas Del Pino",
+    "Alex Hernandez vs Federico Zeballos",
     "Emilio Camacho vs Oriol Roca-Batalla",
     "Camilo Ugo Carabelli vs Thiago Seyboth Wild",
     "Kenta Miyoshi vs Andrew Fenty",
@@ -393,6 +428,9 @@
     "Shintaro Imai vs Sho Katayama",
     "Yu Hsiou Hsu vs Keegan Smith",
     "Liam Broady vs Billy Harris",
+    "Yusuke Kusuhara vs Jay Dylan Hara Friend",
+    "Odysseas Geladaris vs Jack Loge",
+    "Oskari Paldanius vs Oleksii Krutykh",
     "Aziz Dougaz vs Bernardo Munk Mesa",
     "Eliakim Coulibaly vs Mert Alkaya",
     "Luka Mikrut vs Sandro Kopp",
@@ -404,21 +442,23 @@
     "Marko Topo vs Dali Blanch",
     "Francesco Forti vs Massimo Giunta",
     "Georgii Kravchenko vs Johannus Monday",
-    "Miomir Kecmanovic vs Arthur Rinderknech",
     "Yannick Hanfmann vs Alex Michelsen",
-    "Zizou Bergs vs Holger Rune",
+    "Henry Searle vs Ryan Peniston",
     "Cameron Norrie vs James Duckworth",
     "Ugo Humbert vs Adolfo Daniel Vallejo",
-    "Max Dahlin vs Tomas Martin Etcheverry",
-    "Henry Searle vs Ryan Peniston",
     "Michael Mmoh vs Aidan Mayo",
     "Darwin Blanch vs Alastair Gray",
     "Max Hans Rehberg vs Trevor Svajda",
     "Maks Kasnikowski vs Marcos Giron",
+    "Stefan Kozlov vs Alexis Galarneau",
     "Clement Chidekh vs Marcel Latak",
     "Duncan Chan vs Liam Draxl",
     "Jack Kennedy vs Nicolas Mejia",
+    "Andres Andrade vs Braden Shick",
+    "Lukas Neumayer vs Clement Tabur",
     "Tom Gentzsch vs Max Houkes",
+    "Max Dahlin vs Tomas Martin Etcheverry",
+    "Sascha Gueymard Wayenburg vs Nicolai Budkov Kjaer",
     "Jan Kumstat vs James McCabe",
     "Dhakshineswar Suresh vs Omar Jasika",
     "Charles Broom vs Sebastian Gorzny",
@@ -437,12 +477,14 @@
     "Juan Cruz Martin Manzano vs Michael Geerts",
     "Menelaos Efstathiou vs Felix Gill",
     "Sumit Nagal vs Karim Bennani",
-    "Gilles Arnaud Bailly vs Carlo Alberto Caniato"
+    "Gilles Arnaud Bailly vs Carlo Alberto Caniato",
+    "Miomir Kecmanovic vs Arthur Rinderknech",
+    "Zizou Bergs vs Holger Rune"
   ],
-  "spread_markets_found": 36,
+  "spread_markets_found": 47,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 92,
+  "unique_event_pages": 93,
   "unpriced_spread_markets": [
     "Edward Winter vs Alafia ayeni",
     "Blake Ellis vs Bernard Tomic",
@@ -450,9 +492,11 @@
     "Darwin Blanch vs Alastair Gray",
     "Max Hans Rehberg vs Trevor Svajda",
     "Maks Kasnikowski vs Marcos Giron",
+    "Stefan Kozlov vs Alexis Galarneau",
     "Clement Chidekh vs Marcel Latak",
     "Duncan Chan vs Liam Draxl",
     "Jack Kennedy vs Nicolas Mejia",
+    "Andres Andrade vs Braden Shick",
     "Jan Kumstat vs James McCabe",
     "Dhakshineswar Suresh vs Omar Jasika",
     "Charles Broom vs Sebastian Gorzny",
@@ -465,6 +509,6 @@
   "executable_spread_markets": 14,
   "matches_parsed": 14,
   "partial_coverage": true,
-  "rows_saved": 46,
+  "rows_saved": 42,
   "error": null
 }
