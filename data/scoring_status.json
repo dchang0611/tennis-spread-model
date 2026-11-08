@@ -1,105 +1,240 @@
 {
   "success": false,
-  "checked_at": "2026-11-07T15:31:45.756987+00:00",
+  "checked_at": "2026-11-08T14:48:13.208413+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
     {
-      "player_a": "Genaro Alberto Olivieri",
-      "player_b": "Federico Coria",
+      "player_a": "Ignacio Monzon",
+      "player_b": "Santiago De la Fuente",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Genaro Alberto Olivieri",
-      "player_b": "Federico Coria",
+      "player_a": "Ignacio Monzon",
+      "player_b": "Santiago De la Fuente",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Genaro Alberto Olivieri",
-      "player_b": "Federico Coria",
+      "player_a": "Ignacio Monzon",
+      "player_b": "Santiago De la Fuente",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Genaro Alberto Olivieri",
-      "player_b": "Federico Coria",
+      "player_a": "Ryo Tabata",
+      "player_b": "Igor Marcondes",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Ryo Tabata",
+      "player_b": "Igor Marcondes",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Alan Magadan",
+      "player_b": "Nicolas Barrientos",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Alan Magadan",
+      "player_b": "Nicolas Barrientos",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Alan Magadan",
+      "player_b": "Nicolas Barrientos",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Nicolas Jarry",
+      "player_b": "Felipe Meligeni Alves",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Nicolas Jarry",
+      "player_b": "Felipe Meligeni Alves",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Nicolas Jarry",
+      "player_b": "Felipe Meligeni Alves",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Filip Misolic",
+      "player_b": "Ryan Nijboer",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Filip Misolic",
+      "player_b": "Ryan Nijboer",
+      "reason": "No unique independently verified future start time"
+    },
+    {
+      "player_a": "Filip Misolic",
+      "player_b": "Ryan Nijboer",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Camilo Ugo Carabelli",
-      "player_b": "Gonzalo Bueno",
+      "player_b": "Thiago Seyboth Wild",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Camilo Ugo Carabelli",
-      "player_b": "Gonzalo Bueno",
+      "player_b": "Thiago Seyboth Wild",
       "reason": "No unique independently verified future start time"
     },
     {
       "player_a": "Camilo Ugo Carabelli",
-      "player_b": "Gonzalo Bueno",
+      "player_b": "Thiago Seyboth Wild",
       "reason": "No unique independently verified future start time"
     },
     {
-      "player_a": "Thiago Seyboth Wild",
-      "player_b": "Facundo Diaz Acosta",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Miomir Kecmanovic",
+      "player_b": "Arthur Rinderknech",
+      "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
-      "player_a": "Thiago Seyboth Wild",
-      "player_b": "Facundo Diaz Acosta",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Miomir Kecmanovic",
+      "player_b": "Arthur Rinderknech",
+      "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
-      "player_a": "Thiago Seyboth Wild",
-      "player_b": "Facundo Diaz Acosta",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Miomir Kecmanovic",
+      "player_b": "Arthur Rinderknech",
+      "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
-      "player_a": "Thiago Seyboth Wild",
-      "player_b": "Facundo Diaz Acosta",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Zizou Bergs",
+      "player_b": "Holger Rune",
+      "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
-      "player_a": "Jan Kumstat",
-      "player_b": "Yosuke Watanuki",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Zizou Bergs",
+      "player_b": "Holger Rune",
+      "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
-      "player_a": "Jan Kumstat",
-      "player_b": "Yosuke Watanuki",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Zizou Bergs",
+      "player_b": "Holger Rune",
+      "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
-      "player_a": "Jan Kumstat",
-      "player_b": "Yosuke Watanuki",
-      "reason": "No unique independently verified future start time"
+      "player_a": "Zizou Bergs",
+      "player_b": "Holger Rune",
+      "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
-      "player_a": "Carlos Alcaraz",
-      "player_b": "Casper Ruud",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
+      "player_a": "Zizou Bergs",
+      "player_b": "Holger Rune",
+      "reason": "Independent schedule has not confirmed a start time yet"
     },
     {
-      "player_a": "Carlos Alcaraz",
-      "player_b": "Casper Ruud",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
+      "player_a": "Juan Manuel Cerundolo",
+      "player_b": "Elias Ymer",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Carlos Alcaraz",
-      "player_b": "Casper Ruud",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
+      "player_a": "Juan Manuel Cerundolo",
+      "player_b": "Elias Ymer",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Carlos Alcaraz",
-      "player_b": "Casper Ruud",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
+      "player_a": "Juan Manuel Cerundolo",
+      "player_b": "Elias Ymer",
+      "reason": "Recent result missing or ambiguous in statistics feed"
     },
     {
-      "player_a": "Carlos Alcaraz",
-      "player_b": "Casper Ruud",
-      "reason": "Recent incomplete match needs workload/injury reconciliation"
+      "player_a": "Juan Manuel Cerundolo",
+      "player_b": "Elias Ymer",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Jaume Munar",
+      "player_b": "Thiago Agustin Tirante",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Jaume Munar",
+      "player_b": "Thiago Agustin Tirante",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Jaume Munar",
+      "player_b": "Thiago Agustin Tirante",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Jaume Munar",
+      "player_b": "Thiago Agustin Tirante",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Jaume Munar",
+      "player_b": "Thiago Agustin Tirante",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Yannick Hanfmann",
+      "player_b": "Alex Michelsen",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Yannick Hanfmann",
+      "player_b": "Alex Michelsen",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Yannick Hanfmann",
+      "player_b": "Alex Michelsen",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Cameron Norrie",
+      "player_b": "James Duckworth",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Cameron Norrie",
+      "player_b": "James Duckworth",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Cameron Norrie",
+      "player_b": "James Duckworth",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Ugo Humbert",
+      "player_b": "Adolfo Daniel Vallejo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Ugo Humbert",
+      "player_b": "Adolfo Daniel Vallejo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Ugo Humbert",
+      "player_b": "Adolfo Daniel Vallejo",
+      "reason": "Recent result missing or ambiguous in statistics feed"
+    },
+    {
+      "player_a": "Max Dahlin",
+      "player_b": "Tomas Martin Etcheverry",
+      "reason": "Insufficient player/surface history"
+    },
+    {
+      "player_a": "Max Dahlin",
+      "player_b": "Tomas Martin Etcheverry",
+      "reason": "Insufficient player/surface history"
+    },
+    {
+      "player_a": "Max Dahlin",
+      "player_b": "Tomas Martin Etcheverry",
+      "reason": "Insufficient player/surface history"
     }
   ],
-  "market_matchups": 5,
-  "error": "Independent recent-result coverage failed for all players"
+  "market_matchups": 14,
+  "error": "No players pass feature quality gates"
 }
