@@ -1,308 +1,36 @@
 {
   "success": true,
-  "checked_at": "2026-11-10T16:01:21.064295+00:00",
-  "match_date": "2026-11-10",
+  "checked_at": "2026-11-11T16:55:46.950671+00:00",
+  "match_date": "2026-11-11",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
     {
-      "match": "Darwin Blanch vs Alastair Gray",
+      "match": "Michael Mmoh vs Daniel Milavsky",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Timo Legout vs Petr Nesterov",
+      "match": "Tom Gentzsch vs Benjamin Bonzi",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Oliver Tarvet vs Ozan Baris",
+      "match": "Sascha Gueymard Wayenburg vs Mattia Bellucci",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Murphy Cassone vs Daniel Milavsky",
+      "match": "Petr Nesterov vs Liam Draxl",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Pierre-Hugues Herbert vs Nishesh Basavareddy",
+      "match": "Max Hans Rehberg vs Nicolas Mejia",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Michael Mmoh vs Aidan Mayo",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Stefan Kozlov vs Alexis Galarneau",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Kyrian Jacquet vs Hugo Grenier",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Andres Andrade vs Braden Shick",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Franco Roncadelli vs Alessandro Rubini",
-      "error": "No unique schedule match for Franco Roncadelli vs Alessandro Rubini on 2026-11-10 or 2026-11-11 (Europe/London); found 0."
-    },
-    {
-      "match": "Harry Wendelken vs Abdullah Shelbayh",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Michael Zheng vs Giles Hussey",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Tomas Barrios Vera vs Juan Pablo Varillas",
-      "error": "No unique schedule match for Tomas Barrios Vera vs Juan Pablo Varillas on 2026-11-10 or 2026-11-11 (Europe/London); found 0."
-    },
-    {
-      "match": "Maks Kasnikowski vs Marcos Giron",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Hugo Gaston vs Matteo Martineau",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Pedro Martinez vs Jurij Rodionov",
+      "match": "Otto Virtanen vs Dalibor Svrcina",
       "error": "Indoor header has no unique current-edition court surface evidence."
     }
   ],
   "surface_assignments": [
-    {
-      "player_a": "Magadan A.",
-      "player_b": "Roca Batalla O.",
-      "tournament": "Lima 3 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3375303&timezone=0",
-      "source_date": "2026-11-10",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Monteiro T.",
-      "player_b": "Misolic F.",
-      "tournament": "Lima 3 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3375315&timezone=0",
-      "source_date": "2026-11-10",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Sanchez Izquierdo N.",
-      "player_b": "Jarry N.",
-      "tournament": "Lima 3 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3375313&timezone=0",
-      "source_date": "2026-11-10",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Debru G.",
-      "player_b": "Malige M.",
-      "tournament": "Monastir challenger",
-      "tournament_source": "https://www.tennisexplorer.com/monastir-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3375207&timezone=0",
-      "source_date": "2026-11-10",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Rune H.",
-      "player_b": "Bergs Z.",
-      "tournament": "Stockholm",
-      "tournament_source": "https://www.tennisexplorer.com/stockholm/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3371799&timezone=0",
-      "source_date": "2026-11-10",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "1c734022e19898c6013c903ec4f6e62321c77ab93ffe7e5c59918a01c2042144",
-      "surface_edition_id": "/tournaments/2026/stockholm-open"
-    },
-    {
-      "player_a": "Blanch D.",
-      "player_b": "Topo M.",
-      "tournament": "Monastir challenger",
-      "tournament_source": "https://www.tennisexplorer.com/monastir-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3372207&timezone=0",
-      "source_date": "2026-11-10",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Tepmahc N.",
-      "player_b": "Giustino L.",
-      "tournament": "Monastir challenger",
-      "tournament_source": "https://www.tennisexplorer.com/monastir-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3375201&timezone=0",
-      "source_date": "2026-11-10",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Cecchinato M.",
-      "player_b": "Comesana F.",
-      "tournament": "Lima 3 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3373213&timezone=0",
-      "source_date": "2026-11-10",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Moller E.",
-      "player_b": "Olivieri G.",
-      "tournament": "Lima 3 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3373215&timezone=0",
-      "source_date": "2026-11-10",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Kolar Z.",
-      "player_b": "Reis Da Silva J.",
-      "tournament": "Lima 3 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3373217&timezone=0",
-      "source_date": "2026-11-10",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Musetti L.",
-      "player_b": "Samuel T.",
-      "tournament": "Stockholm",
-      "tournament_source": "https://www.tennisexplorer.com/stockholm/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3375519&timezone=0",
-      "source_date": "2026-11-10",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "1c734022e19898c6013c903ec4f6e62321c77ab93ffe7e5c59918a01c2042144",
-      "surface_edition_id": "/tournaments/2026/stockholm-open"
-    },
-    {
-      "player_a": "Bueno G.",
-      "player_b": "Sanchez Jover C.",
-      "tournament": "Lima 3 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3375311&timezone=0",
-      "source_date": "2026-11-11",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "McCabe J.",
-      "player_b": "Kumstat J.",
-      "tournament": "Brisbane 4 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/brisbane-4-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3371857&timezone=0",
-      "source_date": "2026-11-11",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Tomic B.",
-      "player_b": "Jasika O.",
-      "tournament": "Brisbane 4 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/brisbane-4-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3375901&timezone=0",
-      "source_date": "2026-11-11",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Friend J.",
-      "player_b": "Honda N.",
-      "tournament": "Matsuyama challenger",
-      "tournament_source": "https://www.tennisexplorer.com/matsuyama-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3375527&timezone=0",
-      "source_date": "2026-11-11",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Schwaerzler J.",
-      "player_b": "Uchida K.",
-      "tournament": "Matsuyama challenger",
-      "tournament_source": "https://www.tennisexplorer.com/matsuyama-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3375533&timezone=0",
-      "source_date": "2026-11-11",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Hsu Y.",
-      "player_b": "McDonald N.",
-      "tournament": "Matsuyama challenger",
-      "tournament_source": "https://www.tennisexplorer.com/matsuyama-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3375909&timezone=0",
-      "source_date": "2026-11-11",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Feldbausch K.",
-      "player_b": "Pereira T.",
-      "tournament": "Monastir challenger",
-      "tournament_source": "https://www.tennisexplorer.com/monastir-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3372213&timezone=0",
-      "source_date": "2026-11-11",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Fritz T.",
-      "player_b": "Norrie C.",
-      "tournament": "Stockholm",
-      "tournament_source": "https://www.tennisexplorer.com/stockholm/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3374621&timezone=0",
-      "source_date": "2026-11-11",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "9043a86300d4e46bae9a45c5c92b14e90f9b5d5ba92293b9ca3a196113f3f789",
-      "surface_edition_id": "/tournaments/2026/stockholm-open"
-    },
-    {
-      "player_a": "Gojo B.",
-      "player_b": "Humbert U.",
-      "tournament": "Stockholm",
-      "tournament_source": "https://www.tennisexplorer.com/stockholm/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3374625&timezone=0",
-      "source_date": "2026-11-11",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "9043a86300d4e46bae9a45c5c92b14e90f9b5d5ba92293b9ca3a196113f3f789",
-      "surface_edition_id": "/tournaments/2026/stockholm-open"
-    },
     {
       "player_a": "Shevchenko A.",
       "player_b": "Ruud C.",
@@ -314,8 +42,33 @@
       "source_timezone": "Europe/London",
       "method": "live_match_metadata",
       "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "9043a86300d4e46bae9a45c5c92b14e90f9b5d5ba92293b9ca3a196113f3f789",
+      "surface_detail_hash": "86635d29d92aa556f48444150961727d8dcc95de0688adb902a693944e9e87cf",
       "surface_edition_id": "/tournaments/2026/stockholm-open"
+    },
+    {
+      "player_a": "Kecmanovic M.",
+      "player_b": "Rune H.",
+      "tournament": "Stockholm",
+      "tournament_source": "https://www.tennisexplorer.com/stockholm/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3376377&timezone=0",
+      "source_date": "2026-11-11",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://www.atpschedule.com/",
+      "surface_detail_hash": "86635d29d92aa556f48444150961727d8dcc95de0688adb902a693944e9e87cf",
+      "surface_edition_id": "/tournaments/2026/stockholm-open"
+    },
+    {
+      "player_a": "Midon L.",
+      "player_b": "Tobon M.",
+      "tournament": "Lima 3 challenger",
+      "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3375525&timezone=0",
+      "source_date": "2026-11-12",
+      "surface": "Clay",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
     },
     {
       "player_a": "Sweeny D.",
@@ -323,17 +76,6 @@
       "tournament": "Brisbane 4 challenger",
       "tournament_source": "https://www.tennisexplorer.com/brisbane-4-challenger/2026/atp-men/",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3375523&timezone=0",
-      "source_date": "2026-11-12",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Overbeck C.",
-      "player_b": "Shang J.",
-      "tournament": "Brisbane 4 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/brisbane-4-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3375535&timezone=0",
       "source_date": "2026-11-12",
       "surface": "Hard",
       "source_timezone": "Europe/London",
@@ -351,6 +93,28 @@
       "method": "live_match_metadata"
     },
     {
+      "player_a": "Noguchi R.",
+      "player_b": "Zhou Y.",
+      "tournament": "Matsuyama challenger",
+      "tournament_source": "https://www.tennisexplorer.com/matsuyama-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3375923&timezone=0",
+      "source_date": "2026-11-12",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Langmo C.",
+      "player_b": "McCabe J.",
+      "tournament": "Brisbane 4 challenger",
+      "tournament_source": "https://www.tennisexplorer.com/brisbane-4-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3376697&timezone=0",
+      "source_date": "2026-11-12",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
       "player_a": "Sakamoto R.",
       "player_b": "Samrej K.",
       "tournament": "Matsuyama challenger",
@@ -360,79 +124,109 @@
       "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Schoenhaus M.",
+      "player_b": "Daniel T.",
+      "tournament": "Matsuyama challenger",
+      "tournament_source": "https://www.tennisexplorer.com/matsuyama-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3375921&timezone=0",
+      "source_date": "2026-11-12",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Overbeck C.",
+      "player_b": "Shang J.",
+      "tournament": "Brisbane 4 challenger",
+      "tournament_source": "https://www.tennisexplorer.com/brisbane-4-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3375535&timezone=0",
+      "source_date": "2026-11-12",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
+    },
+    {
+      "player_a": "Michelsen A.",
+      "player_b": "Tabilo A.",
+      "tournament": "Stockholm",
+      "tournament_source": "https://www.tennisexplorer.com/stockholm/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3377037&timezone=0",
+      "source_date": "2026-11-12",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata",
+      "surface_detail_source": "https://www.atpschedule.com/",
+      "surface_detail_hash": "23881419dcb9c075edd101e793ac597906630a72a3f04c0b277336b539725e8d",
+      "surface_edition_id": "/tournaments/2026/stockholm-open"
+    },
+    {
+      "player_a": "Hewitt C.",
+      "player_b": "Santillan A.",
+      "tournament": "Brisbane 4 challenger",
+      "tournament_source": "https://www.tennisexplorer.com/brisbane-4-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3376009&timezone=0",
+      "source_date": "2026-11-12",
+      "surface": "Hard",
+      "source_timezone": "Europe/London",
+      "method": "live_match_metadata"
     }
   ],
-  "events_found": 58,
+  "events_found": 41,
   "events": [
-    "Darwin Blanch vs Alastair Gray",
-    "Oriol Roca-Batalla vs Alan Magadan",
-    "Filip Misolic vs Thiago Monteiro",
-    "Nicolas Jarry vs Nikolas Sanchez Izquierdo",
-    "Timo Legout vs Petr Nesterov",
-    "Mae Malige vs Gabriel Debru",
-    "Zizou Bergs vs Holger Rune",
-    "Marko Topo vs Dali Blanch",
-    "Lorenzo Giustino vs Nicolas Tepmahc",
-    "Oliver Tarvet vs Ozan Baris",
-    "Murphy Cassone vs Daniel Milavsky",
-    "Pierre-Hugues Herbert vs Nishesh Basavareddy",
-    "Francisco Comesana vs Marco Cecchinato",
-    "Genaro Alberto Olivieri vs Elmer Moller",
-    "Joao Lucas Da Silva vs Zdenek Kolar",
-    "Toby Samuel vs Lorenzo Musetti",
-    "Michael Mmoh vs Aidan Mayo",
-    "Stefan Kozlov vs Alexis Galarneau",
-    "Kyrian Jacquet vs Hugo Grenier",
-    "Andres Andrade vs Braden Shick",
-    "Franco Roncadelli vs Alessandro Rubini",
-    "Harry Wendelken vs Abdullah Shelbayh",
-    "Michael Zheng vs Giles Hussey",
-    "Tomas Barrios Vera vs Juan Pablo Varillas",
-    "Maks Kasnikowski vs Marcos Giron",
-    "Carlos Sanchez Jover vs Gonzalo Bueno",
-    "Sebastian Gorzny vs Matthew Dellavedova",
-    "Jan Kumstat vs James McCabe",
-    "Omar Jasika vs Bernard Tomic",
-    "Naoya Honda vs Jay Dylan Hara Friend",
-    "Kaichi Uchida vs Joel Josef Schwaerzler",
-    "Niels McDonald vs Yu Hsiou Hsu",
-    "Christopher O'Connell vs August Holmgren",
-    "Billy Harris vs Fajing Sun",
-    "Alex Bolt vs Alafia ayeni",
-    "Henry Searle vs Robin Bertrand",
-    "Sumit Nagal vs Michael Geerts",
-    "Johannus Monday vs Francesco Maestrelli",
-    "Massimo Giunta vs Felix Gill",
-    "Hugo Gaston vs Matteo Martineau",
-    "Pedro Martinez vs Jurij Rodionov",
-    "Tom Gentzsch vs Benjamin Bonzi",
-    "Otto Virtanen vs Dalibor Svrcina",
-    "Sascha Gueymard Wayenburg vs Mattia Bellucci",
-    "Tiago Pereira vs Kilian Feldbausch",
-    "Cameron Norrie vs Taylor Fritz",
-    "Ugo Humbert vs Borna Gojo",
     "Casper Ruud vs Alexander Shevchenko",
+    "Michael Mmoh vs Daniel Milavsky",
+    "Tom Gentzsch vs Benjamin Bonzi",
+    "Holger Rune vs Miomir Kecmanovic",
+    "Sascha Gueymard Wayenburg vs Mattia Bellucci",
+    "Petr Nesterov vs Liam Draxl",
     "Max Hans Rehberg vs Nicolas Mejia",
     "Miguel Tobon vs Lautaro Midon",
     "Casey Hoole vs Dane Sweeny",
-    "Juncheng Shang vs Carl Emil Overbeck",
-    "Akira Santillan vs Cruz Hewitt",
     "Shunsuke Nakagawa vs Ognjen Milic",
+    "Yi Zhou vs Rio Noguchi",
+    "James McCabe vs Christian Langmo",
     "Kasidit Samrej vs Rei Sakamoto",
     "Taro Daniel vs Max Schoenhaus",
-    "Yi Zhou vs Rio Noguchi",
-    "Ioannis Xilas vs Lorenzo Carboni"
+    "Juncheng Shang vs Carl Emil Overbeck",
+    "Ioannis Xilas vs Lorenzo Carboni",
+    "Carlo Alberto Caniato vs Michele Ribecai",
+    "Philip Henning vs Cezar Cretu",
+    "Otto Virtanen vs Dalibor Svrcina",
+    "Calvin Hemery vs Sebastian Baez",
+    "Kyrian Jacquet vs Nishesh Basavareddy",
+    "Aziz Ouakaa vs Marvin Moeller",
+    "Mika Petkovic vs Moez Echargui",
+    "Lorenzo Giustino vs Dali Blanch",
+    "Alejandro Tabilo vs Alex Michelsen",
+    "Alejandro Moro Canas vs Pedro Vives Marcos",
+    "Alex Barrena vs Alan Magadan",
+    "Francisco Comesana vs Franco Roncadelli",
+    "Juan Pablo Varillas vs Genaro Alberto Olivieri",
+    "Gonzalo Bueno vs Joao Lucas Da Silva",
+    "Alastair Gray vs Filip Jeff Planinsek",
+    "Michael Zheng vs Ozan Baris",
+    "Braden Shick vs Stefan Kozlov",
+    "Abdullah Shelbayh vs Marcos Giron",
+    "Akira Santillan vs Cruz Hewitt",
+    "August Holmgren vs Bernard Tomic",
+    "Alex Bolt vs Sebastian Gorzny",
+    "Jay Dylan Hara Friend vs Yu Hsiou Hsu",
+    "Billy Harris vs Kaichi Uchida",
+    "Henry Searle vs Massimo Giunta",
+    "Sumit Nagal vs Francesco Maestrelli"
   ],
-  "spread_markets_found": 41,
+  "spread_markets_found": 18,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 58,
+  "unique_event_pages": 41,
   "unpriced_spread_markets": [
-    "Oriol Roca-Batalla vs Alan Magadan"
+    "Alejandro Tabilo vs Alex Michelsen"
   ],
-  "executable_spread_markets": 24,
-  "matches_parsed": 24,
+  "executable_spread_markets": 11,
+  "matches_parsed": 11,
   "partial_coverage": true,
-  "rows_saved": 91,
+  "rows_saved": 41,
   "error": null
 }
