@@ -1,6 +1,6 @@
 {
   "success": true,
-  "checked_at": "2026-11-13T15:53:15.891852+00:00",
+  "checked_at": "2026-11-13T16:58:28.652435+00:00",
   "match_date": "2026-11-13",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
@@ -31,20 +31,6 @@
     }
   ],
   "surface_assignments": [
-    {
-      "player_a": "Fritz T.",
-      "player_b": "Musetti L.",
-      "tournament": "Stockholm",
-      "tournament_source": "https://www.tennisexplorer.com/stockholm/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3378153&timezone=0",
-      "source_date": "2026-11-13",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata",
-      "surface_detail_source": "https://www.atpschedule.com/",
-      "surface_detail_hash": "89e13082302adb5286f259b27bc031f9bc4894eaac371c89cfbb7853c77e1188",
-      "surface_edition_id": "/tournaments/2026/stockholm-open"
-    },
     {
       "player_a": "Boyer T.",
       "player_b": "Alcala Gurri M.",
@@ -134,9 +120,8 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 17,
+  "events_found": 18,
   "events": [
-    "Lorenzo Musetti vs Taylor Fritz",
     "Max Alcala Gurri vs Tristan Boyer",
     "Clement Chidekh vs Liam Draxl",
     "Franco Roncadelli vs Alan Magadan",
@@ -152,21 +137,18 @@
     "Christian Langmo vs Juncheng Shang",
     "Henry Searle vs Michele Ribecai",
     "Philip Henning vs Francesco Maestrelli",
+    "Marvin Moeller vs Jonas Forejtek",
+    "Daniel Altmaier vs Nishesh Basavareddy",
     "Rafael Jodar vs Alexander Zverev"
   ],
-  "spread_markets_found": 15,
-  "parser_failures": [
-    "Joao Lucas Da Silva vs Genaro Alberto Olivieri"
-  ],
+  "spread_markets_found": 14,
+  "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 17,
-  "unpriced_spread_markets": [
-    "Franco Roncadelli vs Alan Magadan",
-    "Billy Harris vs Rei Sakamoto"
-  ],
-  "executable_spread_markets": 6,
-  "matches_parsed": 6,
+  "unique_event_pages": 18,
+  "unpriced_spread_markets": [],
+  "executable_spread_markets": 8,
+  "matches_parsed": 8,
   "partial_coverage": true,
-  "rows_saved": 14,
+  "rows_saved": 30,
   "error": null
 }
