@@ -3837,9 +3837,9 @@
     "recommendation": "PAPER",
     "match_key": "Holger Rune|Taylor Fritz|2026-11-12|Stockholm",
     "recorded_at": "2026-11-12T16:32:54.686432+00:00",
-    "result": "PENDING",
+    "result": "VOID",
     "risk_units": 1.0,
-    "profit_units": null,
-    "settled_at": null
+    "profit_units": 0.0,
+    "settled_at": "2026-11-13T15:54:47.423251+00:00"
   }
 ]
