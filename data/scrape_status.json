@@ -1,154 +1,111 @@
 {
   "success": true,
-  "checked_at": "2026-11-13T16:58:28.652435+00:00",
-  "match_date": "2026-11-13",
+  "checked_at": "2026-11-14T14:43:13.751723+00:00",
+  "match_date": "2026-11-14",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
     {
-      "match": "Clement Chidekh vs Liam Draxl",
+      "match": "Otto Virtanen vs Pedro Martinez",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Otto Virtanen vs Sascha Gueymard Wayenburg",
+      "match": "Daniel Milavsky vs Abdullah Shelbayh",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Daniel Milavsky vs Max Hans Rehberg",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Alastair Gray vs Abdullah Shelbayh",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Michael Zheng vs Stefan Kozlov",
+      "match": "Michael Zheng vs Clement Chidekh",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
       "match": "Rafael Jodar vs Alexander Zverev",
       "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Arthur Fils vs Ben Shelton",
+      "error": "Indoor header has no unique current-edition court surface evidence."
+    },
+    {
+      "match": "Frances Tiafoe vs Carlos Alcaraz",
+      "error": "Indoor header has no unique current-edition court surface evidence."
     }
   ],
   "surface_assignments": [
     {
-      "player_a": "Boyer T.",
+      "player_a": "Roncadelli F.",
       "player_b": "Alcala Gurri M.",
       "tournament": "Lima 3 challenger",
       "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3377359&timezone=0",
-      "source_date": "2026-11-13",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Magadan A.",
-      "player_b": "Roncadelli F.",
-      "tournament": "Lima 3 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3377997&timezone=0",
-      "source_date": "2026-11-13",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Sanchez Izquierdo N.",
-      "player_b": "Tobon M.",
-      "tournament": "Lima 3 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3377419&timezone=0",
-      "source_date": "2026-11-13",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Olivieri G.",
-      "player_b": "Reis Da Silva J.",
-      "tournament": "Lima 3 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3378071&timezone=0",
-      "source_date": "2026-11-13",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Noguchi R.",
-      "player_b": "Hsu Y.",
-      "tournament": "Matsuyama challenger",
-      "tournament_source": "https://www.tennisexplorer.com/matsuyama-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3378077&timezone=0",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3378421&timezone=0",
       "source_date": "2026-11-14",
-      "surface": "Hard",
+      "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Sakamoto R.",
-      "player_b": "Harris B.",
-      "tournament": "Matsuyama challenger",
-      "tournament_source": "https://www.tennisexplorer.com/matsuyama-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3378209&timezone=0",
+      "player_a": "Reis Da Silva J.",
+      "player_b": "Sanchez Izquierdo N.",
+      "tournament": "Lima 3 challenger",
+      "tournament_source": "https://www.tennisexplorer.com/lima-3-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3378435&timezone=0",
       "source_date": "2026-11-14",
-      "surface": "Hard",
+      "surface": "Clay",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Gorzny S.",
+      "player_a": "Langmo C.",
       "player_b": "Holmgren A.",
       "tournament": "Brisbane 4 challenger",
       "tournament_source": "https://www.tennisexplorer.com/brisbane-4-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3378203&timezone=0",
-      "source_date": "2026-11-14",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3378553&timezone=0",
+      "source_date": "2026-11-15",
       "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     },
     {
-      "player_a": "Shang J.",
-      "player_b": "Langmo C.",
-      "tournament": "Brisbane 4 challenger",
-      "tournament_source": "https://www.tennisexplorer.com/brisbane-4-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3378217&timezone=0",
-      "source_date": "2026-11-14",
+      "player_a": "Harris B.",
+      "player_b": "Hsu Y.",
+      "tournament": "Matsuyama challenger",
+      "tournament_source": "https://www.tennisexplorer.com/matsuyama-challenger/2026/atp-men/",
+      "source": "https://www.tennisexplorer.com/match-detail/?id=3378441&timezone=0",
+      "source_date": "2026-11-15",
       "surface": "Hard",
       "source_timezone": "Europe/London",
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 18,
+  "events_found": 19,
   "events": [
-    "Max Alcala Gurri vs Tristan Boyer",
-    "Clement Chidekh vs Liam Draxl",
-    "Franco Roncadelli vs Alan Magadan",
-    "Otto Virtanen vs Sascha Gueymard Wayenburg",
-    "Daniel Milavsky vs Max Hans Rehberg",
-    "Alastair Gray vs Abdullah Shelbayh",
-    "Miguel Tobon vs Nikolas Sanchez Izquierdo",
-    "Michael Zheng vs Stefan Kozlov",
-    "Joao Lucas Da Silva vs Genaro Alberto Olivieri",
-    "Yu Hsiou Hsu vs Rio Noguchi",
-    "Billy Harris vs Rei Sakamoto",
-    "August Holmgren vs Sebastian Gorzny",
-    "Christian Langmo vs Juncheng Shang",
-    "Henry Searle vs Michele Ribecai",
-    "Philip Henning vs Francesco Maestrelli",
-    "Marvin Moeller vs Jonas Forejtek",
-    "Daniel Altmaier vs Nishesh Basavareddy",
-    "Rafael Jodar vs Alexander Zverev"
+    "Otto Virtanen vs Pedro Martinez",
+    "Daniel Milavsky vs Abdullah Shelbayh",
+    "Michael Zheng vs Clement Chidekh",
+    "Max Alcala Gurri vs Franco Roncadelli",
+    "Nikolas Sanchez Izquierdo vs Joao Lucas Da Silva",
+    "Shintaro Imai vs Koki Matsuda",
+    "August Holmgren vs Christian Langmo",
+    "Hiromasa Koyama vs Masamichi Imamura",
+    "Kosuke Ogura vs Yusuke Takahashi",
+    "Yu Hsiou Hsu vs Billy Harris",
+    "Yunseong Chung vs Renta Tokuda",
+    "Toya Ishikawa vs Dimitris Sakellaridis",
+    "Taisei Ichikawa vs Yuta Kikuchi",
+    "Hikaru Shiraishi vs Yusuke Kusuhara",
+    "Jumpei Yamasaki vs Benjamin Hassan",
+    "Yuki Mochizuki vs Maximus Jones",
+    "Rafael Jodar vs Alexander Zverev",
+    "Arthur Fils vs Ben Shelton",
+    "Frances Tiafoe vs Carlos Alcaraz"
   ],
-  "spread_markets_found": 14,
+  "spread_markets_found": 10,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 18,
+  "unique_event_pages": 19,
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 8,
-  "matches_parsed": 8,
+  "executable_spread_markets": 4,
+  "matches_parsed": 4,
   "partial_coverage": true,
-  "rows_saved": 30,
+  "rows_saved": 14,
   "error": null
 }
