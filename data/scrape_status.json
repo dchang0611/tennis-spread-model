@@ -1,14 +1,10 @@
 {
   "success": true,
-  "checked_at": "2026-11-14T14:43:13.751723+00:00",
+  "checked_at": "2026-11-14T15:36:10.967117+00:00",
   "match_date": "2026-11-14",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Otto Virtanen vs Pedro Martinez",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
     {
       "match": "Daniel Milavsky vs Abdullah Shelbayh",
       "error": "Indoor header has no unique current-edition court surface evidence."
@@ -78,7 +74,6 @@
   ],
   "events_found": 19,
   "events": [
-    "Otto Virtanen vs Pedro Martinez",
     "Daniel Milavsky vs Abdullah Shelbayh",
     "Michael Zheng vs Clement Chidekh",
     "Max Alcala Gurri vs Franco Roncadelli",
@@ -94,11 +89,12 @@
     "Hikaru Shiraishi vs Yusuke Kusuhara",
     "Jumpei Yamasaki vs Benjamin Hassan",
     "Yuki Mochizuki vs Maximus Jones",
+    "Michele Ribecai vs Philip Henning",
     "Rafael Jodar vs Alexander Zverev",
     "Arthur Fils vs Ben Shelton",
     "Frances Tiafoe vs Carlos Alcaraz"
   ],
-  "spread_markets_found": 10,
+  "spread_markets_found": 9,
   "parser_failures": [],
   "already_live_events": [],
   "unique_event_pages": 19,
