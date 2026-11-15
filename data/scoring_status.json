@@ -1,27 +1,12 @@
 {
   "success": false,
-  "checked_at": "2026-11-15T15:24:35.480664+00:00",
+  "checked_at": "2026-11-15T16:15:43.087288+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
     {
-      "player_a": "Ignacio Carou",
-      "player_b": "Carlos Sanchez Jover",
-      "reason": "No unique independently verified future start time"
-    },
-    {
       "player_a": "Ryan Nijboer",
       "player_b": "Nicolas Hollender",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Nicolas Barrientos",
-      "player_b": "Gonzalo Villanueva",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Nicolas Barrientos",
-      "player_b": "Gonzalo Villanueva",
       "reason": "No unique independently verified future start time"
     },
     {
@@ -85,6 +70,6 @@
       "reason": "No unique independently verified future start time"
     }
   ],
-  "market_matchups": 7,
+  "market_matchups": 5,
   "error": "No markets have verified metadata"
 }

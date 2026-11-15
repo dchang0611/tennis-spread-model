@@ -1,42 +1,10 @@
 {
   "success": true,
-  "checked_at": "2026-11-15T15:13:59.809746+00:00",
+  "checked_at": "2026-11-15T16:06:36.326613+00:00",
   "match_date": "2026-11-15",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Viktor Durasovic vs Michael Agwi",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Jonas Forejtek vs Lenny Couturier",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Nishesh Basavareddy vs Otto Virtanen",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Gabi Adrian Boitan vs Kai Wehnelt",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Antoine Ghibaudo vs Maximilian Neuchrist",
-      "error": "No unique schedule match for Antoine Ghibaudo vs Maximilian Neuchrist on 2026-11-15 or 2026-11-16 (Europe/London); found 0."
-    },
-    {
-      "match": "Hoyoung Roh vs Adam Faragcao",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Shunsuke Mitsui vs William Mroz",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Nikola Slavic vs Benjamin Thomas George",
-      "error": "No unique schedule match for Nikola Slavic vs Benjamin Thomas George on 2026-11-15 or 2026-11-16 (Europe/London); found 0."
-    },
     {
       "match": "Carlos Taberner vs Filip Cristian Jianu",
       "error": "Indoor header has no unique current-edition court surface evidence."
@@ -146,10 +114,6 @@
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Marvin Moeller vs Stefano Travaglia",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
       "match": "Elias Ymer vs Andrea Guerrieri",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
@@ -163,7 +127,7 @@
     },
     {
       "match": "Lorenzo Giustino vs Shintaro Mochizuki",
-      "error": "Indoor header has no unique current-edition court surface evidence."
+      "error": "Match header has no unique verified surface/date/tournament."
     },
     {
       "match": "Mika Brunold vs Nicolai Budkov Kjaer",
@@ -252,33 +216,11 @@
   ],
   "surface_assignments": [
     {
-      "player_a": "Sanchez Jover C.",
-      "player_b": "Carou I.",
-      "tournament": "Montevideo challenger",
-      "tournament_source": "https://www.tennisexplorer.com/montevideo-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3379951&timezone=0",
-      "source_date": "2026-11-15",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
       "player_a": "Hollender N.",
       "player_b": "Nijboer R.",
       "tournament": "Montevideo challenger",
       "tournament_source": "https://www.tennisexplorer.com/montevideo-challenger/2026/atp-men/",
       "source": "https://www.tennisexplorer.com/match-detail/?id=3379949&timezone=0",
-      "source_date": "2026-11-15",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Villanueva G.",
-      "player_b": "Barrientos N.",
-      "tournament": "Montevideo challenger",
-      "tournament_source": "https://www.tennisexplorer.com/montevideo-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3379953&timezone=0",
       "source_date": "2026-11-15",
       "surface": "Clay",
       "source_timezone": "Europe/London",
@@ -461,20 +403,9 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 104,
+  "events_found": 97,
   "events": [
-    "Viktor Durasovic vs Michael Agwi",
-    "Jonas Forejtek vs Lenny Couturier",
-    "Nishesh Basavareddy vs Otto Virtanen",
-    "Gabi Adrian Boitan vs Kai Wehnelt",
-    "Antoine Ghibaudo vs Maximilian Neuchrist",
-    "Ignacio Carou vs Carlos Sanchez Jover",
     "Ryan Nijboer vs Nicolas Hollender",
-    "Nicolas Barrientos vs Gonzalo Villanueva",
-    "Hoyoung Roh vs Adam Faragcao",
-    "Shunsuke Mitsui vs William Mroz",
-    "Nikola Slavic vs Benjamin Thomas George",
-    "Hiroki Sakagawa vs Bryce Nakashima",
     "Carlos Taberner vs Filip Cristian Jianu",
     "Robin Catry vs Alejandro Moro Canas",
     "Clement Chidekh vs Abdullah Shelbayh",
@@ -484,8 +415,8 @@
     "Tomas Zurmendi vs Pedro Boscardin Dias",
     "Drew Van Orderlain vs Oskar Brostrom Poulsen",
     "Theodore Dean vs Joshua Peck",
-    "Eliakim Coulibaly vs Filippo Moroni",
     "Nikolas Sanchez Izquierdo vs Franco Roncadelli",
+    "Eliakim Coulibaly vs Filippo Moroni",
     "Tom Hands vs Lui Maxted",
     "Axel Nefve vs David Bakonyi",
     "Jannik Opitz vs Jared Horwood",
@@ -498,7 +429,6 @@
     "Sasha Colleu vs Kaylan Bigun",
     "Gianluca Carlini vs Sebastian Dominko",
     "Samuel Heredia vs Zack Viiala",
-    "Khololwam Montsi vs Liam Krall",
     "Joshua Charlton vs Niels Peter van Noord",
     "Chase Ferguson vs Jason Kubler",
     "Ben Jones vs Maximilian Marterer",
@@ -520,7 +450,6 @@
     "Yunseong Chung vs Benjamin Hassan",
     "Yusuke Kusuhara vs Maximus Jones",
     "Jacob Fearnley vs Gianluca Cadenasso",
-    "Marvin Moeller vs Stefano Travaglia",
     "Elias Ymer vs Andrea Guerrieri",
     "Edas Butvilas vs Michele Ribecai",
     "Nishesh Basavareddy vs Daniil Glinka",
@@ -530,8 +459,14 @@
     "Toby Samuel vs Ilya Ivashka",
     "Leo Borg vs Dalibor Svrcina",
     "Zsombor Piros vs Alexandre Muller",
+    "SoonWoo Kwon vs Vitaliy Sachko",
+    "Kyrian Jacquet vs Maxim Mrva",
+    "Sascha Gueymard Wayenburg vs Benjamin Bonzi",
     "Hugo Gaston vs Philip Henning",
+    "Max Houkes vs Nikoloz Basilashvili",
     "Clement Tabur vs Matej Dodig",
+    "Dusan Lajovic vs Arthur Nagel",
+    "Dino Prizmic vs Deigo Dedura-Palomero",
     "Frances Tiafoe vs Carlos Alcaraz",
     "Gonzalo Bueno vs Juan Pablo Varillas",
     "Lautaro Midon vs Juan Carlos Prado Angelo",
@@ -568,14 +503,11 @@
     "Yuta Tomida vs Kasidit Samrej",
     "Jay Dylan Hara Friend vs Mili Poljicak"
   ],
-  "spread_markets_found": 80,
-  "parser_failures": [
-    "Antoine Ghibaudo vs Maximilian Neuchrist"
-  ],
+  "spread_markets_found": 69,
+  "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 104,
+  "unique_event_pages": 97,
   "unpriced_spread_markets": [
-    "Viktor Durasovic vs Michael Agwi",
     "Tomas Zurmendi vs Pedro Boscardin Dias",
     "Tom Hands vs Lui Maxted",
     "Sasha Colleu vs Kaylan Bigun",
@@ -587,7 +519,6 @@
     "Fajing Sun vs Ryuki Matsuda",
     "Jie Cui vs Yosuke Watanuki",
     "Jacob Fearnley vs Gianluca Cadenasso",
-    "Marvin Moeller vs Stefano Travaglia",
     "Elias Ymer vs Andrea Guerrieri",
     "Edas Butvilas vs Michele Ribecai",
     "Nishesh Basavareddy vs Daniil Glinka",
@@ -620,9 +551,9 @@
     "Yuta Tomida vs Kasidit Samrej",
     "Jay Dylan Hara Friend vs Mili Poljicak"
   ],
-  "executable_spread_markets": 7,
-  "matches_parsed": 7,
+  "executable_spread_markets": 5,
+  "matches_parsed": 5,
   "partial_coverage": true,
-  "rows_saved": 16,
+  "rows_saved": 13,
   "error": null
 }
