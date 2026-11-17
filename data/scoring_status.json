@@ -1,74 +1,9 @@
 {
   "success": false,
-  "checked_at": "2026-11-17T17:22:29.311621+00:00",
+  "checked_at": "2026-11-17T18:15:11.823571+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [
-    {
-      "player_a": "Thiago Cigarran",
-      "player_b": "Elmer Moller",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Thiago Cigarran",
-      "player_b": "Elmer Moller",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Federico Aguilar Cardozo",
-      "player_b": "Henrique Rocha",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Federico Aguilar Cardozo",
-      "player_b": "Henrique Rocha",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Federico Aguilar Cardozo",
-      "player_b": "Henrique Rocha",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Gonzalo Villanueva",
-      "player_b": "Genaro Alberto Olivieri",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Gonzalo Villanueva",
-      "player_b": "Genaro Alberto Olivieri",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Gonzalo Villanueva",
-      "player_b": "Genaro Alberto Olivieri",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Gonzalo Villanueva",
-      "player_b": "Genaro Alberto Olivieri",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Gonzalo Villanueva",
-      "player_b": "Genaro Alberto Olivieri",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Daniel Rincon",
-      "player_b": "Guido Ivan Justo",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Daniel Rincon",
-      "player_b": "Guido Ivan Justo",
-      "reason": "No unique independently verified future start time"
-    },
-    {
-      "player_a": "Daniel Rincon",
-      "player_b": "Guido Ivan Justo",
-      "reason": "No unique independently verified future start time"
-    },
     {
       "player_a": "Thiago Seyboth Wild",
       "player_b": "Nicolas Kicker",
@@ -210,6 +145,6 @@
       "reason": "No unique independently verified future start time"
     }
   ],
-  "market_matchups": 13,
+  "market_matchups": 9,
   "error": "No markets have verified metadata"
 }
