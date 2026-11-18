@@ -1,32 +1,20 @@
 {
   "success": true,
-  "checked_at": "2026-11-18T16:53:54.583127+00:00",
+  "checked_at": "2026-11-18T17:49:43.267512+00:00",
   "match_date": "2026-11-18",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
     {
-      "match": "Inaki Montes-De La Torre vs Clement Tabur",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Ozan Baris vs Oliver Tarvet",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Justin Boulais vs Cannon Kingsley",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
       "match": "Francesco Passaro vs Nikoloz Basilashvili",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Shunsuke Mitsui vs Aidan McHugh",
+      "match": "Clement Chidekh vs Mikael Arseneault",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
-      "match": "Clement Chidekh vs Mikael Arseneault",
+      "match": "Shunsuke Mitsui vs Aidan McHugh",
       "error": "Indoor header has no unique current-edition court surface evidence."
     },
     {
@@ -199,15 +187,12 @@
       "method": "live_match_metadata"
     }
   ],
-  "events_found": 44,
+  "events_found": 41,
   "events": [
-    "Inaki Montes-De La Torre vs Clement Tabur",
-    "Ozan Baris vs Oliver Tarvet",
-    "Justin Boulais vs Cannon Kingsley",
     "Alex Barrena vs Felipe Meligeni Alves",
     "Francesco Passaro vs Nikoloz Basilashvili",
-    "Shunsuke Mitsui vs Aidan McHugh",
     "Clement Chidekh vs Mikael Arseneault",
+    "Shunsuke Mitsui vs Aidan McHugh",
     "Frances Tiafoe vs Flavio Cobolli",
     "Lui Maxted vs Jack Kennedy",
     "Tristan Boyer vs Genaro Alberto Olivieri",
@@ -246,14 +231,14 @@
     "Enzo Aguiard vs Philip Sekulic",
     "Omar Jasika vs Hiroki Moriya"
   ],
-  "spread_markets_found": 32,
+  "spread_markets_found": 29,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 44,
+  "unique_event_pages": 41,
   "unpriced_spread_markets": [],
   "executable_spread_markets": 9,
   "matches_parsed": 9,
   "partial_coverage": true,
-  "rows_saved": 29,
+  "rows_saved": 28,
   "error": null
 }
