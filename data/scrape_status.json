@@ -1,26 +1,10 @@
 {
   "success": false,
-  "checked_at": "2026-11-19T17:00:29.840158+00:00",
+  "checked_at": "2026-11-19T17:59:32.112368+00:00",
   "match_date": "2026-11-19",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Geoffrey Blancaneaux vs Harry Wendelken",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Hynek Barton vs Aidan Mayo",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "James Kent Trotter vs Louis Wessels",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Thiago Seyboth Wild vs Carlos Sanchez Jover",
-      "error": "Event metadata identity mismatch"
-    },
     {
       "match": "Zsombor Piros vs Pierre-Hugues Herbert",
       "error": "Event metadata identity mismatch"
@@ -90,6 +74,10 @@
       "error": "Event metadata identity mismatch"
     },
     {
+      "match": "Dino Prizmic vs SoonWoo Kwon",
+      "error": "Event metadata identity mismatch"
+    },
+    {
       "match": "Nishesh Basavareddy vs Edas Butvilas",
       "error": "Event metadata identity mismatch"
     },
@@ -119,12 +107,8 @@
     }
   ],
   "surface_assignments": [],
-  "events_found": 28,
+  "events_found": 25,
   "events": [
-    "Geoffrey Blancaneaux vs Harry Wendelken",
-    "Hynek Barton vs Aidan Mayo",
-    "James Kent Trotter vs Louis Wessels",
-    "Thiago Seyboth Wild vs Carlos Sanchez Jover",
     "Zsombor Piros vs Pierre-Hugues Herbert",
     "Andres Martin vs Jordan Lee",
     "Arthur Fils vs Alexander Zverev",
@@ -142,6 +126,7 @@
     "Taro Daniel vs Yosuke Watanuki",
     "Toby Samuel vs Svyatoslav Gulin",
     "Laslo Djere vs Nicolai Budkov Kjaer",
+    "Dino Prizmic vs SoonWoo Kwon",
     "Nishesh Basavareddy vs Edas Butvilas",
     "Flavio Cobolli vs Carlos Alcaraz",
     "Spencer Johnson vs Oliver Tarvet",
@@ -153,7 +138,7 @@
   "spread_markets_found": 0,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 28,
+  "unique_event_pages": 25,
   "unpriced_spread_markets": [],
   "executable_spread_markets": 0,
   "matches_parsed": 0,
