@@ -1,244 +1,162 @@
 {
-  "success": true,
-  "checked_at": "2026-11-18T17:49:43.267512+00:00",
-  "match_date": "2026-11-18",
+  "success": false,
+  "checked_at": "2026-11-19T17:00:29.840158+00:00",
+  "match_date": "2026-11-19",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
     {
-      "match": "Francesco Passaro vs Nikoloz Basilashvili",
-      "error": "Indoor header has no unique current-edition court surface evidence."
+      "match": "Geoffrey Blancaneaux vs Harry Wendelken",
+      "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Clement Chidekh vs Mikael Arseneault",
-      "error": "Indoor header has no unique current-edition court surface evidence."
+      "match": "Hynek Barton vs Aidan Mayo",
+      "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Shunsuke Mitsui vs Aidan McHugh",
-      "error": "Indoor header has no unique current-edition court surface evidence."
+      "match": "James Kent Trotter vs Louis Wessels",
+      "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Frances Tiafoe vs Flavio Cobolli",
-      "error": "Indoor header has no unique current-edition court surface evidence."
+      "match": "Thiago Seyboth Wild vs Carlos Sanchez Jover",
+      "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Lui Maxted vs Jack Kennedy",
-      "error": "Indoor header has no unique current-edition court surface evidence."
+      "match": "Zsombor Piros vs Pierre-Hugues Herbert",
+      "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Duncan Chan vs Maks Kasnikowski",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Samir Banerjee vs Darwin Blanch",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Kasidit Samrej vs Luca Staeheli",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Keegan Smith vs Benjamin Hassan",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Rio Noguchi vs Jay Dylan Hara Friend",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Taro Daniel vs Masamichi Imamura",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Max Schoenhaus vs Billy Harris",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Yi Zhou vs Yu Hsiou Hsu",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Nishesh Basavareddy vs Borna Gojo",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Stefano Travaglia vs Dalibor Svrcina",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Arthur Nagel vs Sascha Gueymard Wayenburg",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Rafael Jodar vs Ben Shelton",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Kyrian Jacquet vs Luca Nardi",
-      "error": "Indoor header has no unique current-edition court surface evidence."
-    },
-    {
-      "match": "Otto Virtanen vs Alexander Ritschard",
-      "error": "Indoor header has no unique current-edition court surface evidence."
+      "match": "Andres Martin vs Jordan Lee",
+      "error": "Event metadata identity mismatch"
     },
     {
       "match": "Arthur Fils vs Alexander Zverev",
-      "error": "Indoor header has no unique current-edition court surface evidence."
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Guido Ivan Justo vs Henrique Rocha",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Justin Boulais vs Dylan Dietrich",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Juan Manuel La Serna vs Franco Roncadelli",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Liam Draxl vs Daniel Milavsky",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Sebastian Gorzny vs Christian Langmo",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Li Tu vs Tristan Schoolkate",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Enzo Aguiard vs Philip Sekulic",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Omar Jasika vs Hiroki Moriya",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Liam Broady vs Kasidit Samrej",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Jay Dylan Hara Friend vs Yi Zhou",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Benjamin Hassan vs Billy Harris",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Taro Daniel vs Yosuke Watanuki",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Toby Samuel vs Svyatoslav Gulin",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Laslo Djere vs Nicolai Budkov Kjaer",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Nishesh Basavareddy vs Edas Butvilas",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Flavio Cobolli vs Carlos Alcaraz",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Spencer Johnson vs Oliver Tarvet",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Shunsuke Mitsui vs Lui Maxted",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Matheus Pucinelli De Almeida vs Felipe Meligeni Alves",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Tristan Boyer vs Elmer Moller",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Frances Tiafoe vs Daniil Medvedev",
+      "error": "Event metadata identity mismatch"
     }
   ],
-  "surface_assignments": [
-    {
-      "player_a": "Meligeni Rodrigues Alves F.",
-      "player_b": "Barrena A.",
-      "tournament": "Montevideo challenger",
-      "tournament_source": "https://www.tennisexplorer.com/montevideo-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3383485&timezone=0",
-      "source_date": "2026-11-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Olivieri G.",
-      "player_b": "Boyer T.",
-      "tournament": "Montevideo challenger",
-      "tournament_source": "https://www.tennisexplorer.com/montevideo-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3383315&timezone=0",
-      "source_date": "2026-11-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Becroft I.",
-      "player_b": "Tu L.",
-      "tournament": "Sydney challenger",
-      "tournament_source": "https://www.tennisexplorer.com/sydney-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3382625&timezone=0",
-      "source_date": "2026-11-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Langmo C.",
-      "player_b": "Broska F.",
-      "tournament": "Sydney challenger",
-      "tournament_source": "https://www.tennisexplorer.com/sydney-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3382699&timezone=0",
-      "source_date": "2026-11-18",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Moller E.",
-      "player_b": "Bueno G.",
-      "tournament": "Montevideo challenger",
-      "tournament_source": "https://www.tennisexplorer.com/montevideo-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3383293&timezone=0",
-      "source_date": "2026-11-18",
-      "surface": "Clay",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Gorzny S.",
-      "player_b": "Bouzige M.",
-      "tournament": "Sydney challenger",
-      "tournament_source": "https://www.tennisexplorer.com/sydney-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3382701&timezone=0",
-      "source_date": "2026-11-19",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Schoolkate T.",
-      "player_b": "Ayeni A.",
-      "tournament": "Sydney challenger",
-      "tournament_source": "https://www.tennisexplorer.com/sydney-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3382703&timezone=0",
-      "source_date": "2026-11-19",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Sekulic P.",
-      "player_b": "Aguiard E.",
-      "tournament": "Sydney challenger",
-      "tournament_source": "https://www.tennisexplorer.com/sydney-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3383373&timezone=0",
-      "source_date": "2026-11-19",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    },
-    {
-      "player_a": "Moriya H.",
-      "player_b": "Jasika O.",
-      "tournament": "Sydney challenger",
-      "tournament_source": "https://www.tennisexplorer.com/sydney-challenger/2026/atp-men/",
-      "source": "https://www.tennisexplorer.com/match-detail/?id=3383505&timezone=0",
-      "source_date": "2026-11-19",
-      "surface": "Hard",
-      "source_timezone": "Europe/London",
-      "method": "live_match_metadata"
-    }
-  ],
-  "events_found": 41,
+  "surface_assignments": [],
+  "events_found": 28,
   "events": [
-    "Alex Barrena vs Felipe Meligeni Alves",
-    "Francesco Passaro vs Nikoloz Basilashvili",
-    "Clement Chidekh vs Mikael Arseneault",
-    "Shunsuke Mitsui vs Aidan McHugh",
-    "Frances Tiafoe vs Flavio Cobolli",
-    "Lui Maxted vs Jack Kennedy",
-    "Tristan Boyer vs Genaro Alberto Olivieri",
-    "Li Tu vs Isaac Becroft",
-    "Florian Broska vs Christian Langmo",
-    "Gonzalo Bueno vs Elmer Moller",
-    "Duncan Chan vs Maks Kasnikowski",
-    "Moerani Bouzige vs Sebastian Gorzny",
-    "Samir Banerjee vs Darwin Blanch",
-    "Alafia ayeni vs Tristan Schoolkate",
-    "Kasidit Samrej vs Luca Staeheli",
-    "Keegan Smith vs Benjamin Hassan",
-    "Rio Noguchi vs Jay Dylan Hara Friend",
-    "Taro Daniel vs Masamichi Imamura",
-    "Max Schoenhaus vs Billy Harris",
-    "Yi Zhou vs Yu Hsiou Hsu",
-    "Nishesh Basavareddy vs Borna Gojo",
-    "SoonWoo Kwon vs Matthew William Donald",
-    "Stefano Travaglia vs Dalibor Svrcina",
-    "Arthur Nagel vs Sascha Gueymard Wayenburg",
-    "Rafael Jodar vs Ben Shelton",
-    "Kyrian Jacquet vs Luca Nardi",
-    "Otto Virtanen vs Alexander Ritschard",
-    "Alastair Gray vs Bor Artnak",
-    "Andres Martin vs Jordan Lee",
-    "Vignesh Gogineni vs Stefan Kozlov",
-    "Hynek Barton vs Aidan Mayo",
     "Geoffrey Blancaneaux vs Harry Wendelken",
-    "Liam Draxl vs Daniel Milavsky",
-    "Guido Ivan Justo vs Henrique Rocha",
+    "Hynek Barton vs Aidan Mayo",
+    "James Kent Trotter vs Louis Wessels",
     "Thiago Seyboth Wild vs Carlos Sanchez Jover",
-    "Juan Manuel La Serna vs Franco Roncadelli",
-    "Zdenek Kolar vs Oriol Roca-Batalla",
     "Zsombor Piros vs Pierre-Hugues Herbert",
+    "Andres Martin vs Jordan Lee",
     "Arthur Fils vs Alexander Zverev",
+    "Guido Ivan Justo vs Henrique Rocha",
+    "Justin Boulais vs Dylan Dietrich",
+    "Juan Manuel La Serna vs Franco Roncadelli",
+    "Liam Draxl vs Daniel Milavsky",
+    "Sebastian Gorzny vs Christian Langmo",
+    "Li Tu vs Tristan Schoolkate",
     "Enzo Aguiard vs Philip Sekulic",
-    "Omar Jasika vs Hiroki Moriya"
+    "Omar Jasika vs Hiroki Moriya",
+    "Liam Broady vs Kasidit Samrej",
+    "Jay Dylan Hara Friend vs Yi Zhou",
+    "Benjamin Hassan vs Billy Harris",
+    "Taro Daniel vs Yosuke Watanuki",
+    "Toby Samuel vs Svyatoslav Gulin",
+    "Laslo Djere vs Nicolai Budkov Kjaer",
+    "Nishesh Basavareddy vs Edas Butvilas",
+    "Flavio Cobolli vs Carlos Alcaraz",
+    "Spencer Johnson vs Oliver Tarvet",
+    "Shunsuke Mitsui vs Lui Maxted",
+    "Matheus Pucinelli De Almeida vs Felipe Meligeni Alves",
+    "Tristan Boyer vs Elmer Moller",
+    "Frances Tiafoe vs Daniil Medvedev"
   ],
-  "spread_markets_found": 29,
+  "spread_markets_found": 0,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 41,
+  "unique_event_pages": 28,
   "unpriced_spread_markets": [],
-  "executable_spread_markets": 9,
-  "matches_parsed": 9,
+  "executable_spread_markets": 0,
+  "matches_parsed": 0,
   "partial_coverage": true,
-  "rows_saved": 28,
-  "error": null
+  "error": "Novig events were found, but no complete paired spread prices were extracted."
 }
