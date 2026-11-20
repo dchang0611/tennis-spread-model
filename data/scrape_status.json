@@ -1,96 +1,32 @@
 {
   "success": false,
-  "checked_at": "2026-11-19T17:59:32.112368+00:00",
-  "match_date": "2026-11-19",
+  "checked_at": "2026-11-20T16:37:23.350059+00:00",
+  "match_date": "2026-11-20",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
     {
-      "match": "Zsombor Piros vs Pierre-Hugues Herbert",
+      "match": "Harold Mayot vs Inaki Montes-De La Torre",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Andres Martin vs Jordan Lee",
+      "match": "Jordan Lee vs Harry Wendelken",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Arthur Fils vs Alexander Zverev",
+      "match": "Thiago Seyboth Wild vs Oriol Roca-Batalla",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Guido Ivan Justo vs Henrique Rocha",
+      "match": "Clement Chidekh vs Stefan Kozlov",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Justin Boulais vs Dylan Dietrich",
+      "match": "Pierre-Hugues Herbert vs Francesco Passaro",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Juan Manuel La Serna vs Franco Roncadelli",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Liam Draxl vs Daniel Milavsky",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Sebastian Gorzny vs Christian Langmo",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Li Tu vs Tristan Schoolkate",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Enzo Aguiard vs Philip Sekulic",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Omar Jasika vs Hiroki Moriya",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Liam Broady vs Kasidit Samrej",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Jay Dylan Hara Friend vs Yi Zhou",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Benjamin Hassan vs Billy Harris",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Taro Daniel vs Yosuke Watanuki",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Toby Samuel vs Svyatoslav Gulin",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Laslo Djere vs Nicolai Budkov Kjaer",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Dino Prizmic vs SoonWoo Kwon",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Nishesh Basavareddy vs Edas Butvilas",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Flavio Cobolli vs Carlos Alcaraz",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Spencer Johnson vs Oliver Tarvet",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Shunsuke Mitsui vs Lui Maxted",
+      "match": "Bor Artnak vs Gavin Young",
       "error": "Event metadata identity mismatch"
     },
     {
@@ -98,47 +34,76 @@
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Tristan Boyer vs Elmer Moller",
+      "match": "Frances Tiafoe vs Daniil Medvedev",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Frances Tiafoe vs Daniil Medvedev",
+      "match": "Shunsuke Mitsui vs Lui Maxted",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Duncan Chan vs Dylan Dietrich",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Liam Draxl vs Darwin Blanch",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Franco Roncadelli vs Guido Ivan Justo",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Aidan Mayo vs James Kent Trotter",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Philip Sekulic vs Omar Jasika",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Jay Dylan Hara Friend vs Liam Broady",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Li Tu vs Sebastian Gorzny",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Yosuke Watanuki vs Benjamin Hassan",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Laslo Djere vs Toby Samuel",
       "error": "Event metadata identity mismatch"
     }
   ],
   "surface_assignments": [],
-  "events_found": 25,
+  "events_found": 18,
   "events": [
-    "Zsombor Piros vs Pierre-Hugues Herbert",
-    "Andres Martin vs Jordan Lee",
-    "Arthur Fils vs Alexander Zverev",
-    "Guido Ivan Justo vs Henrique Rocha",
-    "Justin Boulais vs Dylan Dietrich",
-    "Juan Manuel La Serna vs Franco Roncadelli",
-    "Liam Draxl vs Daniel Milavsky",
-    "Sebastian Gorzny vs Christian Langmo",
-    "Li Tu vs Tristan Schoolkate",
-    "Enzo Aguiard vs Philip Sekulic",
-    "Omar Jasika vs Hiroki Moriya",
-    "Liam Broady vs Kasidit Samrej",
-    "Jay Dylan Hara Friend vs Yi Zhou",
-    "Benjamin Hassan vs Billy Harris",
-    "Taro Daniel vs Yosuke Watanuki",
-    "Toby Samuel vs Svyatoslav Gulin",
-    "Laslo Djere vs Nicolai Budkov Kjaer",
-    "Dino Prizmic vs SoonWoo Kwon",
-    "Nishesh Basavareddy vs Edas Butvilas",
-    "Flavio Cobolli vs Carlos Alcaraz",
-    "Spencer Johnson vs Oliver Tarvet",
-    "Shunsuke Mitsui vs Lui Maxted",
+    "Harold Mayot vs Inaki Montes-De La Torre",
+    "Jordan Lee vs Harry Wendelken",
+    "Thiago Seyboth Wild vs Oriol Roca-Batalla",
+    "Clement Chidekh vs Stefan Kozlov",
+    "Pierre-Hugues Herbert vs Francesco Passaro",
+    "Bor Artnak vs Gavin Young",
     "Matheus Pucinelli De Almeida vs Felipe Meligeni Alves",
-    "Tristan Boyer vs Elmer Moller",
-    "Frances Tiafoe vs Daniil Medvedev"
+    "Frances Tiafoe vs Daniil Medvedev",
+    "Shunsuke Mitsui vs Lui Maxted",
+    "Duncan Chan vs Dylan Dietrich",
+    "Liam Draxl vs Darwin Blanch",
+    "Franco Roncadelli vs Guido Ivan Justo",
+    "Aidan Mayo vs James Kent Trotter",
+    "Philip Sekulic vs Omar Jasika",
+    "Jay Dylan Hara Friend vs Liam Broady",
+    "Li Tu vs Sebastian Gorzny",
+    "Yosuke Watanuki vs Benjamin Hassan",
+    "Laslo Djere vs Toby Samuel"
   ],
   "spread_markets_found": 0,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 25,
+  "unique_event_pages": 18,
   "unpriced_spread_markets": [],
   "executable_spread_markets": 0,
   "matches_parsed": 0,
