@@ -1,18 +1,10 @@
 {
   "success": false,
-  "checked_at": "2026-11-20T16:37:23.350059+00:00",
+  "checked_at": "2026-11-20T17:34:56.028927+00:00",
   "match_date": "2026-11-20",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Harold Mayot vs Inaki Montes-De La Torre",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Jordan Lee vs Harry Wendelken",
-      "error": "Event metadata identity mismatch"
-    },
     {
       "match": "Thiago Seyboth Wild vs Oriol Roca-Batalla",
       "error": "Event metadata identity mismatch"
@@ -76,13 +68,19 @@
     {
       "match": "Laslo Djere vs Toby Samuel",
       "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Ben Shelton vs Carlos Alcaraz",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Sascha Gueymard Wayenburg vs SoonWoo Kwon",
+      "error": "Event metadata identity mismatch"
     }
   ],
   "surface_assignments": [],
   "events_found": 18,
   "events": [
-    "Harold Mayot vs Inaki Montes-De La Torre",
-    "Jordan Lee vs Harry Wendelken",
     "Thiago Seyboth Wild vs Oriol Roca-Batalla",
     "Clement Chidekh vs Stefan Kozlov",
     "Pierre-Hugues Herbert vs Francesco Passaro",
@@ -98,7 +96,9 @@
     "Jay Dylan Hara Friend vs Liam Broady",
     "Li Tu vs Sebastian Gorzny",
     "Yosuke Watanuki vs Benjamin Hassan",
-    "Laslo Djere vs Toby Samuel"
+    "Laslo Djere vs Toby Samuel",
+    "Ben Shelton vs Carlos Alcaraz",
+    "Sascha Gueymard Wayenburg vs SoonWoo Kwon"
   ],
   "spread_markets_found": 0,
   "parser_failures": [],
