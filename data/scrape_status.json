@@ -1,136 +1,128 @@
 {
   "success": false,
-  "checked_at": "2026-11-21T16:38:08.853729+00:00",
-  "match_date": "2026-11-21",
+  "checked_at": "2026-11-22T15:51:52.102497+00:00",
+  "match_date": "2026-11-22",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
     {
-      "match": "Oliver Tarvet vs Jordan Lee",
+      "match": "Rafael Botran Neutze vs Niels Peter van Noord",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Shunsuke Mitsui vs Bor Artnak",
+      "match": "Kyle Overmyer vs Gray Voelzke",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Clement Chidekh vs Dylan Dietrich",
+      "match": "Santiago De la Fuente vs Enzo Camargo Lima",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Daniil Medvedev vs Alexander Zverev",
+      "match": "Carlos Alcaraz vs Alexander Zverev",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Thiago Seyboth Wild vs Elmer Moller",
+      "match": "Dylan Dietrich vs Liam Draxl",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Liam Draxl vs James Kent Trotter",
+      "match": "Carlos Eduardo Lino vs Oscar Jose Gutierrez",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Guido Ivan Justo vs Matheus Pucinelli De Almeida",
+      "match": "Andres Urrea vs Juan Carlos Fuentes Vasquez",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Sam Ryan Ziegann vs Ethan Cook",
+      "match": "Miles Clark vs Elijah Strode",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Chase Ferguson vs Jesse Delaney",
+      "match": "Volodymyr Gurenko vs Ben Weintraub",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Eric Padgham vs Casey Hoole",
+      "match": "Jose Pereira vs Enzo Costanzo Prediger",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Mustafa Ege Sik vs Thomas Fancutt",
+      "match": "Boris Arias vs Thiago Cigarran",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Benjamin O'Connell vs Zane Stevens",
+      "match": "Marcelo Zormann vs Daniel Dutra da Silva",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Taisei Ichikawa vs Hiromasa Koyama",
+      "match": "Shunsuke Mitsui vs Oliver Tarvet",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Yuma Tobe vs Ryuki Matsuda",
+      "match": "Ryo Tabata vs Pedro Albuquerque Dietrich",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Jumpei Yamasaki vs Yunseong Chung",
+      "match": "Rafael Tosetto vs Joao Victor Couto Loureiro",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Shinji Hazawa vs Reece Falck",
+      "match": "Natan Rodrigues vs Nicolas Zanellato",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Harrison Satara vs Pavle Marinkov",
+      "match": "Joao Cunha Cunha vs Javier Barranco Cosano",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Stefan Vujic vs Billy Suarez",
+      "match": "Thiago Seyboth Wild vs Matheus Pucinelli De Almeida",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Omar Jasika vs Sebastian Gorzny",
+      "match": "Jody Maginley vs Juan Miguel Bolivar Idarraga",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Kosuke Ogura vs Yuki Mochizuki",
+      "match": "Jeffrey Fradkin vs Stephen Slocombe",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Nitin Kumar Sinha vs S D Prajwal Dev",
+      "match": "Ethan Cook vs Evan Zhu",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Yusuke Takahashi vs Adhithya Ganesan",
+      "match": "Jesse Delaney vs Eric Padgham",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Chen Dong vs Dominik Palan",
+      "match": "Reece Falck vs Jason Kubler",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Herman Hoeyeraal vs Yamato Sueoka",
+      "match": "Zane Stevens vs Mustafa Ege Sik",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Taiyo Yamanaka vs Shogo Sanada",
+      "match": "Stefan Vujic vs Harrison Satara",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Noritaka Koizumi vs Hikaru Shiraishi",
+      "match": "Herman Hoeyeraal vs Chen Dong",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Yosuke Watanuki vs Liam Broady",
+      "match": "Yuta Shimizu vs Naoya Honda",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Finn Bass vs Thanapet Chanta",
+      "match": "Yusuke Takahashi vs Ryuki Matsuda",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Maxim Zhukov vs David Poljak",
+      "match": "Taisei Ichikawa vs Yunseong Chung",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Kokoro Isomura vs Shinnosuke Iwamoto",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Toby Samuel vs Otto Virtanen",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Alex Bolt vs Alafia ayeni",
+      "match": "Yuki Mochizuki vs S D Prajwal Dev",
       "error": "Event metadata identity mismatch"
     },
     {
@@ -138,27 +130,7 @@
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Carl Emil Overbeck vs Isaac Becroft",
-      "error": "Event metadata identity mismatch"
-    },
-    {
       "match": "Akira Santillan vs August Holmgren",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Blake Ellis vs Enzo Aguiard",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Jake Delaney vs Dane Sweeny",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Christian Langmo vs Tai Leonard Sach",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Moerani Bouzige vs Dhakshineswar Suresh",
       "error": "Event metadata identity mismatch"
     },
     {
@@ -166,19 +138,27 @@
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Li Tu vs Edward Winter",
+      "match": "Taiyo Yamanaka vs Hikaru Shiraishi",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Kokoro Isomura vs Finn Bass",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "David Poljak vs Takuya Kumasaka",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Blake Ellis vs Enzo Aguiard",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Moerani Bouzige vs Dhakshineswar Suresh",
       "error": "Event metadata identity mismatch"
     },
     {
       "match": "Masamichi Imamura vs Max Schoenhaus",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Hayato Matsuoka vs Koki Matsuda",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Liam Broady vs Constantin Bittoun Kouzmine",
       "error": "Event metadata identity mismatch"
     },
     {
@@ -194,15 +174,199 @@
       "error": "Event metadata identity mismatch"
     },
     {
+      "match": "Lennon Roark Jones vs Rintarou Ono",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Rares Teodor Pieleanu vs Gilles Arnaud Bailly",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Anas Mazdrashki vs Imanol Lopez Morillo",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Nikita Bilozertsev vs Aaron Funk",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Jannik Maute vs Vardan Manukyan",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Miles Jones vs Gabriel Ghetu",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Leo Raquillet vs Alexander Vasilev",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Karol Malirz vs Oleksandr Ovcharenko",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Benjamin Pietri vs Arvid Nordquist",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Robin Catry vs Gabi Adrian Boitan",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Menelaos Efstathiou vs Gianluca Cadenasso",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Michael Geerts vs Alejo Sanchez Quilez",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Cem Ilkel vs Matthew William Donald",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Ioannis Kountourakis vs Federico Arnaboldi",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Jacopo Vasami vs Georgii Kravchenko",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Dali Blanch vs Kasra Rahmani",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Toufik Sahtali vs Pedro Vives Marcos",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Tiago Pereira vs Robert Strombachs",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Sandro Kopp vs Gabriel Debru",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Leo Borg vs Aziz Ouakaa",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Lorenzo Claverie vs Timo Legout",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Segundo Goity Zapico vs Blaise Bicknell",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Benjamin Thomas George vs Juan Sebastian Gomez",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Theodore Dean vs Darian King",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Luis Guto Miguel vs Matteo Covato",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Mateus De Carvalho Cardoso Alves vs Benjamin Willwerth",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Yannick Theodor Alexandrescou vs Samuel Heredia",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Joaquin Guilleme vs Cesar Cruz",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Oliver Bonding vs Juan Sebastian Osorio",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Gonzalo Villanueva vs Max Alcala Gurri",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Eduardo Ribeiro vs Andrey Chepelev",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Franco Roncadelli vs Juan Estevez",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Joaquin Aguilar Cardozo vs Lucio Ratti",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Bruno Fernandez vs Ryan Nijboer",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Genaro Alberto Olivieri vs Alvaro Guillen Meza",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Pedro Boscardin Dias vs Johan Nikles",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Guido Ivan Justo vs Pedro Sakamoto",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Felipe Meligeni Alves vs Juan Bautista Torres",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Elmer Moller vs Nicolas Kicker",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Alex Bolt vs Alafia ayeni",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Carl Emil Overbeck vs Isaac Becroft",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Jake Delaney vs Dane Sweeny",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Christian Langmo vs Tai Leonard Sach",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Li Tu vs Edward Winter",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Sebastian Gorzny vs Omar Jasika",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Hayato Matsuoka vs Koki Matsuda",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Liam Broady vs Constantin Bittoun Kouzmine",
+      "error": "Event metadata identity mismatch"
+    },
+    {
       "match": "Maximus Jones vs Rio Noguchi",
       "error": "Event metadata identity mismatch"
     },
     {
       "match": "Luca Staeheli vs Niels McDonald",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Yuta Shimizu vs Naoya Honda",
       "error": "Event metadata identity mismatch"
     },
     {
@@ -212,68 +376,199 @@
     {
       "match": "Kaichi Uchida vs Yosuke Watanuki",
       "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Dimitar Kuzmanov vs Demetris Azoidis",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Sergey Fomin vs Ioannis Xilas",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Joao Domingues vs Thomas Faurel",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Radu Mihai Papoe vs Andres Martin",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Matisse Bobichon vs Alexandr Binda",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Philip Henning vs Johannus Monday",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Daniel Rincon vs Leonardo Rossi",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Andrej Martin vs Ergi Kirkin",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Yanki Erel vs Tuncay Duran",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Oleksii Krutykh vs Ryan Peniston",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Vladyslav Orlov vs Juan Cruz Martin Manzano",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Oleg Prihodko vs Yanaki Milev",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Max Wiskandt vs Jelle Sels",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Carlos Taberner vs Yannik Kelm",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Giulio Perego vs Lorenzo Giustino",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Duje Ajdukovic vs Eliakim Coulibaly",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Nicolas Parizzia vs Federico Bondioli",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Nikolai Barsukov vs Semen Pankin",
+      "error": "Event metadata identity mismatch"
     }
   ],
   "surface_assignments": [],
-  "events_found": 52,
+  "events_found": 111,
   "events": [
-    "Oliver Tarvet vs Jordan Lee",
-    "Shunsuke Mitsui vs Bor Artnak",
-    "Clement Chidekh vs Dylan Dietrich",
-    "Daniil Medvedev vs Alexander Zverev",
-    "Thiago Seyboth Wild vs Elmer Moller",
-    "Liam Draxl vs James Kent Trotter",
-    "Guido Ivan Justo vs Matheus Pucinelli De Almeida",
-    "Sam Ryan Ziegann vs Ethan Cook",
-    "Chase Ferguson vs Jesse Delaney",
-    "Eric Padgham vs Casey Hoole",
-    "Mustafa Ege Sik vs Thomas Fancutt",
-    "Benjamin O'Connell vs Zane Stevens",
-    "Taisei Ichikawa vs Hiromasa Koyama",
-    "Yuma Tobe vs Ryuki Matsuda",
-    "Jumpei Yamasaki vs Yunseong Chung",
-    "Shinji Hazawa vs Reece Falck",
-    "Harrison Satara vs Pavle Marinkov",
-    "Stefan Vujic vs Billy Suarez",
-    "Omar Jasika vs Sebastian Gorzny",
-    "Kosuke Ogura vs Yuki Mochizuki",
-    "Nitin Kumar Sinha vs S D Prajwal Dev",
-    "Yusuke Takahashi vs Adhithya Ganesan",
-    "Chen Dong vs Dominik Palan",
-    "Herman Hoeyeraal vs Yamato Sueoka",
-    "Taiyo Yamanaka vs Shogo Sanada",
-    "Noritaka Koizumi vs Hikaru Shiraishi",
-    "Yosuke Watanuki vs Liam Broady",
-    "Finn Bass vs Thanapet Chanta",
-    "Maxim Zhukov vs David Poljak",
-    "Kokoro Isomura vs Shinnosuke Iwamoto",
-    "Toby Samuel vs Otto Virtanen",
-    "Alex Bolt vs Alafia ayeni",
+    "Rafael Botran Neutze vs Niels Peter van Noord",
+    "Kyle Overmyer vs Gray Voelzke",
+    "Santiago De la Fuente vs Enzo Camargo Lima",
+    "Carlos Alcaraz vs Alexander Zverev",
+    "Dylan Dietrich vs Liam Draxl",
+    "Carlos Eduardo Lino vs Oscar Jose Gutierrez",
+    "Andres Urrea vs Juan Carlos Fuentes Vasquez",
+    "Miles Clark vs Elijah Strode",
+    "Volodymyr Gurenko vs Ben Weintraub",
+    "Jose Pereira vs Enzo Costanzo Prediger",
+    "Boris Arias vs Thiago Cigarran",
+    "Marcelo Zormann vs Daniel Dutra da Silva",
+    "Shunsuke Mitsui vs Oliver Tarvet",
+    "Ryo Tabata vs Pedro Albuquerque Dietrich",
+    "Rafael Tosetto vs Joao Victor Couto Loureiro",
+    "Natan Rodrigues vs Nicolas Zanellato",
+    "Joao Cunha Cunha vs Javier Barranco Cosano",
+    "Thiago Seyboth Wild vs Matheus Pucinelli De Almeida",
+    "Jody Maginley vs Juan Miguel Bolivar Idarraga",
+    "Jeffrey Fradkin vs Stephen Slocombe",
+    "Ethan Cook vs Evan Zhu",
+    "Jesse Delaney vs Eric Padgham",
+    "Reece Falck vs Jason Kubler",
+    "Zane Stevens vs Mustafa Ege Sik",
+    "Stefan Vujic vs Harrison Satara",
+    "Herman Hoeyeraal vs Chen Dong",
+    "Yuta Shimizu vs Naoya Honda",
+    "Yusuke Takahashi vs Ryuki Matsuda",
+    "Taisei Ichikawa vs Yunseong Chung",
+    "Yuki Mochizuki vs S D Prajwal Dev",
     "Daniel Jovanovski vs Hiroki Moriya",
-    "Carl Emil Overbeck vs Isaac Becroft",
     "Akira Santillan vs August Holmgren",
-    "Blake Ellis vs Enzo Aguiard",
-    "Jake Delaney vs Dane Sweeny",
-    "Christian Langmo vs Tai Leonard Sach",
-    "Moerani Bouzige vs Dhakshineswar Suresh",
     "Anton Shepp vs Florian Broska",
-    "Li Tu vs Edward Winter",
+    "Taiyo Yamanaka vs Hikaru Shiraishi",
+    "Kokoro Isomura vs Finn Bass",
+    "David Poljak vs Takuya Kumasaka",
+    "Blake Ellis vs Enzo Aguiard",
+    "Moerani Bouzige vs Dhakshineswar Suresh",
     "Masamichi Imamura vs Max Schoenhaus",
-    "Hayato Matsuoka vs Koki Matsuda",
-    "Liam Broady vs Constantin Bittoun Kouzmine",
     "Gai Ando vs Mitsuki Wei Kang Leong",
     "Dimitris Sakellaridis vs Kasidit Samrej",
     "Keegan Smith vs Ognjen Milic",
+    "Lennon Roark Jones vs Rintarou Ono",
+    "Rares Teodor Pieleanu vs Gilles Arnaud Bailly",
+    "Anas Mazdrashki vs Imanol Lopez Morillo",
+    "Nikita Bilozertsev vs Aaron Funk",
+    "Jannik Maute vs Vardan Manukyan",
+    "Miles Jones vs Gabriel Ghetu",
+    "Leo Raquillet vs Alexander Vasilev",
+    "Karol Malirz vs Oleksandr Ovcharenko",
+    "Benjamin Pietri vs Arvid Nordquist",
+    "Robin Catry vs Gabi Adrian Boitan",
+    "Menelaos Efstathiou vs Gianluca Cadenasso",
+    "Michael Geerts vs Alejo Sanchez Quilez",
+    "Cem Ilkel vs Matthew William Donald",
+    "Ioannis Kountourakis vs Federico Arnaboldi",
+    "Jacopo Vasami vs Georgii Kravchenko",
+    "Dali Blanch vs Kasra Rahmani",
+    "Toufik Sahtali vs Pedro Vives Marcos",
+    "Tiago Pereira vs Robert Strombachs",
+    "Sandro Kopp vs Gabriel Debru",
+    "Leo Borg vs Aziz Ouakaa",
+    "Lorenzo Claverie vs Timo Legout",
+    "Segundo Goity Zapico vs Blaise Bicknell",
+    "Benjamin Thomas George vs Juan Sebastian Gomez",
+    "Theodore Dean vs Darian King",
+    "Luis Guto Miguel vs Matteo Covato",
+    "Mateus De Carvalho Cardoso Alves vs Benjamin Willwerth",
+    "Yannick Theodor Alexandrescou vs Samuel Heredia",
+    "Joaquin Guilleme vs Cesar Cruz",
+    "Oliver Bonding vs Juan Sebastian Osorio",
+    "Gonzalo Villanueva vs Max Alcala Gurri",
+    "Eduardo Ribeiro vs Andrey Chepelev",
+    "Franco Roncadelli vs Juan Estevez",
+    "Joaquin Aguilar Cardozo vs Lucio Ratti",
+    "Bruno Fernandez vs Ryan Nijboer",
+    "Genaro Alberto Olivieri vs Alvaro Guillen Meza",
+    "Pedro Boscardin Dias vs Johan Nikles",
+    "Guido Ivan Justo vs Pedro Sakamoto",
+    "Felipe Meligeni Alves vs Juan Bautista Torres",
+    "Elmer Moller vs Nicolas Kicker",
+    "Alex Bolt vs Alafia ayeni",
+    "Carl Emil Overbeck vs Isaac Becroft",
+    "Jake Delaney vs Dane Sweeny",
+    "Christian Langmo vs Tai Leonard Sach",
+    "Li Tu vs Edward Winter",
+    "Sebastian Gorzny vs Omar Jasika",
+    "Hayato Matsuoka vs Koki Matsuda",
+    "Liam Broady vs Constantin Bittoun Kouzmine",
     "Maximus Jones vs Rio Noguchi",
     "Luca Staeheli vs Niels McDonald",
-    "Yuta Shimizu vs Naoya Honda",
     "Benjamin Hassan vs Jie Cui",
-    "Kaichi Uchida vs Yosuke Watanuki"
+    "Kaichi Uchida vs Yosuke Watanuki",
+    "Dimitar Kuzmanov vs Demetris Azoidis",
+    "Sergey Fomin vs Ioannis Xilas",
+    "Joao Domingues vs Thomas Faurel",
+    "Radu Mihai Papoe vs Andres Martin",
+    "Matisse Bobichon vs Alexandr Binda",
+    "Philip Henning vs Johannus Monday",
+    "Daniel Rincon vs Leonardo Rossi",
+    "Andrej Martin vs Ergi Kirkin",
+    "Yanki Erel vs Tuncay Duran",
+    "Oleksii Krutykh vs Ryan Peniston",
+    "Vladyslav Orlov vs Juan Cruz Martin Manzano",
+    "Oleg Prihodko vs Yanaki Milev",
+    "Max Wiskandt vs Jelle Sels",
+    "Carlos Taberner vs Yannik Kelm",
+    "Giulio Perego vs Lorenzo Giustino",
+    "Duje Ajdukovic vs Eliakim Coulibaly",
+    "Nicolas Parizzia vs Federico Bondioli",
+    "Nikolai Barsukov vs Semen Pankin"
   ],
   "spread_markets_found": 0,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 52,
+  "unique_event_pages": 111,
   "unpriced_spread_markets": [],
   "executable_spread_markets": 0,
   "matches_parsed": 0,
