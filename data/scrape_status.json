@@ -1,14 +1,10 @@
 {
   "success": false,
-  "checked_at": "2026-11-23T19:45:02.769655+00:00",
+  "checked_at": "2026-11-23T20:54:20.898267+00:00",
   "match_date": "2026-11-23",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Segundo Goity Zapico vs Blaise Bicknell",
-      "error": "Event metadata identity mismatch"
-    },
     {
       "match": "Jesse Flores vs Diego Duran",
       "error": "Event metadata identity mismatch"
@@ -206,43 +202,7 @@
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Gonzalo Villanueva vs Max Alcala Gurri",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Eduardo Ribeiro vs Andrey Chepelev",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Carlos Maria Zarate vs Matheus Pucinelli De Almeida",
-      "error": "Event metadata identity mismatch"
-    },
-    {
       "match": "Joaquin Aguilar Cardozo vs Lucio Ratti",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Bruno Fernandez vs Ryan Nijboer",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Genaro Alberto Olivieri vs Alvaro Guillen Meza",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Pedro Boscardin Dias vs Johan Nikles",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Guido Ivan Justo vs Pedro Sakamoto",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Felipe Meligeni Alves vs Juan Bautista Torres",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Elmer Moller vs Nicolas Kicker",
       "error": "Event metadata identity mismatch"
     },
     {
@@ -266,6 +226,14 @@
       "error": "Event metadata identity mismatch"
     },
     {
+      "match": "Gonzalo Villanueva vs Max Alcala Gurri",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Genaro Alberto Olivieri vs Alvaro Guillen Meza",
+      "error": "Event metadata identity mismatch"
+    },
+    {
       "match": "Nicolas Parizzia vs Federico Bondioli",
       "error": "Event metadata identity mismatch"
     },
@@ -275,6 +243,14 @@
     },
     {
       "match": "Giorgio Tabacco vs Alberto Barroso Campos",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Eduardo Ribeiro vs Andrey Chepelev",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Bruno Fernandez vs Ryan Nijboer",
       "error": "Event metadata identity mismatch"
     },
     {
@@ -310,6 +286,26 @@
       "error": "Event metadata identity mismatch"
     },
     {
+      "match": "Guido Ivan Justo vs Pedro Sakamoto",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Elmer Moller vs Nicolas Kicker",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Pedro Boscardin Dias vs Johan Nikles",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Felipe Meligeni Alves vs Juan Bautista Torres",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Carlos Maria Zarate vs Matheus Pucinelli De Almeida",
+      "error": "Event metadata identity mismatch"
+    },
+    {
       "match": "Moerani Bouzige vs Anton Shepp",
       "error": "Event metadata identity mismatch"
     },
@@ -328,12 +324,15 @@
     {
       "match": "Robin Catry vs Matthew William Donald",
       "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Dali Blanch vs Leo Borg",
+      "error": "Event metadata identity mismatch"
     }
   ],
   "surface_assignments": [],
   "events_found": 81,
   "events": [
-    "Segundo Goity Zapico vs Blaise Bicknell",
     "Jesse Flores vs Diego Duran",
     "Alex Bolt vs Alafia ayeni",
     "Chen Dong vs Derek Pham",
@@ -383,24 +382,19 @@
     "Pavlos Tsitsipas vs Oleksandr Ovcharenko",
     "Federico Iannaccone vs Branko Djuric",
     "Wojciech Marek vs Kimmer Coppejans",
-    "Gonzalo Villanueva vs Max Alcala Gurri",
-    "Eduardo Ribeiro vs Andrey Chepelev",
-    "Carlos Maria Zarate vs Matheus Pucinelli De Almeida",
     "Joaquin Aguilar Cardozo vs Lucio Ratti",
-    "Bruno Fernandez vs Ryan Nijboer",
-    "Genaro Alberto Olivieri vs Alvaro Guillen Meza",
-    "Pedro Boscardin Dias vs Johan Nikles",
-    "Guido Ivan Justo vs Pedro Sakamoto",
-    "Felipe Meligeni Alves vs Juan Bautista Torres",
-    "Elmer Moller vs Nicolas Kicker",
     "Franco Roncadelli vs Daniel Dutra da Silva",
     "Sergey Fomin vs Ioannis Xilas",
     "Duje Ajdukovic vs Eliakim Coulibaly",
     "Nikolai Barsukov vs Semen Pankin",
     "Petr Bar Biryukov vs Yassine Smiej",
+    "Gonzalo Villanueva vs Max Alcala Gurri",
+    "Genaro Alberto Olivieri vs Alvaro Guillen Meza",
     "Nicolas Parizzia vs Federico Bondioli",
     "Wissam Abderrahman vs Mathieu Scaglia",
     "Giorgio Tabacco vs Alberto Barroso Campos",
+    "Eduardo Ribeiro vs Andrey Chepelev",
+    "Bruno Fernandez vs Ryan Nijboer",
     "Carlos Taberner vs Yannik Kelm",
     "Filippo Romano vs Niklas Schell",
     "Lorenzo Claverie vs Timo Legout",
@@ -409,11 +403,17 @@
     "Mateus De Carvalho Cardoso Alves vs Benjamin Willwerth",
     "Yannick Theodor Alexandrescou vs Samuel Heredia",
     "Oliver Bonding vs Juan Sebastian Osorio",
+    "Guido Ivan Justo vs Pedro Sakamoto",
+    "Elmer Moller vs Nicolas Kicker",
+    "Pedro Boscardin Dias vs Johan Nikles",
+    "Felipe Meligeni Alves vs Juan Bautista Torres",
+    "Carlos Maria Zarate vs Matheus Pucinelli De Almeida",
     "Moerani Bouzige vs Anton Shepp",
     "Ognjen Milic vs Kasidit Samrej",
     "Andrej Martin vs Ergi Kirkin",
     "Max Wiskandt vs Jelle Sels",
-    "Robin Catry vs Matthew William Donald"
+    "Robin Catry vs Matthew William Donald",
+    "Dali Blanch vs Leo Borg"
   ],
   "spread_markets_found": 0,
   "parser_failures": [],
