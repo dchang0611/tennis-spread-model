@@ -1,18 +1,10 @@
 {
   "success": false,
-  "checked_at": "2026-11-24T19:17:39.658287+00:00",
+  "checked_at": "2026-11-24T19:58:00.930090+00:00",
   "match_date": "2026-11-24",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Elmer Moller vs Nicolas Kicker",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Alan Fernando Rubio Fierros vs Axel Nefve",
-      "error": "Event metadata identity mismatch"
-    },
     {
       "match": "Pedro Boscardin Dias vs Johan Nikles",
       "error": "Event metadata identity mismatch"
@@ -22,23 +14,7 @@
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Mateus De Carvalho Cardoso Alves vs Benjamin Willwerth",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Guido Ivan Justo vs Pedro Sakamoto",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Amit Vales vs Juan Carlos Fuentes Vasquez",
-      "error": "Event metadata identity mismatch"
-    },
-    {
       "match": "Luis Carlos Alvarez vs Patricio Alvarado",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Karl Poling vs Jeffrey Fradkin",
       "error": "Event metadata identity mismatch"
     },
     {
@@ -46,11 +22,15 @@
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Lorenzo Claverie vs Timo Legout",
+      "match": "Karl Poling vs Jeffrey Fradkin",
       "error": "Event metadata identity mismatch"
     },
     {
       "match": "Carlos Maria Zarate vs Matheus Pucinelli De Almeida",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Lorenzo Claverie vs Timo Legout",
       "error": "Event metadata identity mismatch"
     },
     {
@@ -162,6 +142,10 @@
       "error": "Event metadata identity mismatch"
     },
     {
+      "match": "Diego Duran vs Lucas Andrade Da Silva",
+      "error": "Event metadata identity mismatch"
+    },
+    {
       "match": "Alex Bolt vs Derek Pham",
       "error": "Event metadata identity mismatch"
     },
@@ -208,23 +192,26 @@
     {
       "match": "Petr Bar Biryukov vs Semen Pankin",
       "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Mathieu Scaglia vs Federico Bondioli",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Filippo Romano vs Yannik Kelm",
+      "error": "Event metadata identity mismatch"
     }
   ],
   "surface_assignments": [],
-  "events_found": 51,
+  "events_found": 49,
   "events": [
-    "Elmer Moller vs Nicolas Kicker",
-    "Alan Fernando Rubio Fierros vs Axel Nefve",
     "Pedro Boscardin Dias vs Johan Nikles",
     "Felipe Meligeni Alves vs Ryo Tabata",
-    "Mateus De Carvalho Cardoso Alves vs Benjamin Willwerth",
-    "Guido Ivan Justo vs Pedro Sakamoto",
-    "Amit Vales vs Juan Carlos Fuentes Vasquez",
     "Luis Carlos Alvarez vs Patricio Alvarado",
-    "Karl Poling vs Jeffrey Fradkin",
     "Leonardo Storck Franca vs Conner Huertas Del Pino",
-    "Lorenzo Claverie vs Timo Legout",
+    "Karl Poling vs Jeffrey Fradkin",
     "Carlos Maria Zarate vs Matheus Pucinelli De Almeida",
+    "Lorenzo Claverie vs Timo Legout",
     "Luis Guto Miguel vs Matteo Covato",
     "Moerani Bouzige vs Anton Shepp",
     "Matthew Dellavedova vs Hiroki Moriya",
@@ -252,6 +239,7 @@
     "Franco Roncadelli vs Ryan Nijboer",
     "Eduardo Ribeiro vs Max Alcala Gurri",
     "Theodore Dean vs Blaise Bicknell",
+    "Diego Duran vs Lucas Andrade Da Silva",
     "Alex Bolt vs Derek Pham",
     "Carl Emil Overbeck vs Jason Kubler",
     "Hayden Jones vs Dane Sweeny",
@@ -263,12 +251,14 @@
     "Oleksandr Ovcharenko vs Georgii Kravchenko",
     "Benjamin Pietri vs Yaroslav Demin",
     "Ioannis Xilas vs Ryan Peniston",
-    "Petr Bar Biryukov vs Semen Pankin"
+    "Petr Bar Biryukov vs Semen Pankin",
+    "Mathieu Scaglia vs Federico Bondioli",
+    "Filippo Romano vs Yannik Kelm"
   ],
   "spread_markets_found": 0,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 51,
+  "unique_event_pages": 49,
   "unpriced_spread_markets": [],
   "executable_spread_markets": 0,
   "matches_parsed": 0,
