@@ -1,8 +1,8 @@
 {
   "success": false,
-  "checked_at": "2026-11-24T20:05:30.407195+00:00",
+  "checked_at": "2026-11-25T18:28:24.969829+00:00",
   "mode": "paper",
   "model_version": "3.0.0-elo-paper",
   "excluded": [],
-  "error": "Match feed ends 2026-11-22; lag 2 calendar days exceeds source freshness limit"
+  "error": "Match feed ends 2026-11-22; lag 3 calendar days exceeds source freshness limit"
 }
