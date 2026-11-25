@@ -1,14 +1,10 @@
 {
   "success": false,
-  "checked_at": "2026-11-25T18:22:19.289579+00:00",
+  "checked_at": "2026-11-25T19:00:17.774418+00:00",
   "match_date": "2026-11-25",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Pedro Boscardin Dias vs Johan Nikles",
-      "error": "Event metadata identity mismatch"
-    },
     {
       "match": "Luis Guto Miguel vs Oliver Bonding",
       "error": "Event metadata identity mismatch"
@@ -163,9 +159,8 @@
     }
   ],
   "surface_assignments": [],
-  "events_found": 39,
+  "events_found": 38,
   "events": [
-    "Pedro Boscardin Dias vs Johan Nikles",
     "Luis Guto Miguel vs Oliver Bonding",
     "Carl Emil Overbeck vs Jason Kubler",
     "Li Tu vs Omar Jasika",
@@ -208,7 +203,7 @@
   "spread_markets_found": 0,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 39,
+  "unique_event_pages": 38,
   "unpriced_spread_markets": [],
   "executable_spread_markets": 0,
   "matches_parsed": 0,
