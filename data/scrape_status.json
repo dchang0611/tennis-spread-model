@@ -1,14 +1,10 @@
 {
   "success": false,
-  "checked_at": "2026-11-26T18:03:03.931721+00:00",
+  "checked_at": "2026-11-26T18:51:16.890636+00:00",
   "match_date": "2026-11-26",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
-    {
-      "match": "Benjamin Willwerth vs Axel Nefve",
-      "error": "Event metadata identity mismatch"
-    },
     {
       "match": "Diego Duran vs Lucas Andrade Da Silva",
       "error": "Event metadata identity mismatch"
@@ -98,14 +94,21 @@
       "error": "Event metadata identity mismatch"
     },
     {
+      "match": "Franco Roncadelli vs Eduardo Ribeiro",
+      "error": "Event metadata identity mismatch"
+    },
+    {
+      "match": "Guido Ivan Justo vs Igor Marcondes",
+      "error": "Event metadata identity mismatch"
+    },
+    {
       "match": "Luis Guto Miguel vs Blaise Bicknell",
       "error": "Event metadata identity mismatch"
     }
   ],
   "surface_assignments": [],
-  "events_found": 24,
+  "events_found": 25,
   "events": [
-    "Benjamin Willwerth vs Axel Nefve",
     "Diego Duran vs Lucas Andrade Da Silva",
     "Karl Poling vs Timo Legout",
     "Matthew Dellavedova vs Christian Langmo",
@@ -128,12 +131,14 @@
     "Benjamin Pietri vs Gilles Arnaud Bailly",
     "Semen Pankin vs Federico Bondioli",
     "Yannik Kelm vs Giorgio Tabacco",
+    "Franco Roncadelli vs Eduardo Ribeiro",
+    "Guido Ivan Justo vs Igor Marcondes",
     "Luis Guto Miguel vs Blaise Bicknell"
   ],
   "spread_markets_found": 0,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 24,
+  "unique_event_pages": 25,
   "unpriced_spread_markets": [],
   "executable_spread_markets": 0,
   "matches_parsed": 0,

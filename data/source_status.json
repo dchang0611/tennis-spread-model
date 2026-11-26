@@ -1,5 +1,5 @@
 {
   "success": false,
-  "checked_at": "2026-11-26T18:06:47.013265+00:00",
+  "checked_at": "2026-11-26T18:55:11.424014+00:00",
   "error": "Match feed ends 2026-11-22; lag 4 calendar days exceeds source freshness limit"
 }
