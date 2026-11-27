@@ -1,12 +1,12 @@
 {
   "success": false,
-  "checked_at": "2026-11-27T17:47:21.350992+00:00",
+  "checked_at": "2026-11-27T18:42:53.630232+00:00",
   "match_date": "2026-11-27",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
     {
-      "match": "Luciano Emanuel Ambrogi vs Lucas Andrade Da Silva",
+      "match": "Franco Roncadelli vs Eduardo Ribeiro",
       "error": "Event metadata identity mismatch"
     },
     {
@@ -65,7 +65,7 @@
   "surface_assignments": [],
   "events_found": 14,
   "events": [
-    "Luciano Emanuel Ambrogi vs Lucas Andrade Da Silva",
+    "Franco Roncadelli vs Eduardo Ribeiro",
     "Genaro Alberto Olivieri vs Juan Manuel La Serna",
     "Axel Nefve vs Luis Carlos Alvarez",
     "Samuel Heredia vs Timo Legout",
