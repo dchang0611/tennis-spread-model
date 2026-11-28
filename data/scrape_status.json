@@ -1,89 +1,54 @@
 {
   "success": false,
-  "checked_at": "2026-11-27T18:42:53.630232+00:00",
-  "match_date": "2026-11-27",
+  "checked_at": "2026-11-28T16:35:27.268712+00:00",
+  "match_date": "2026-11-28",
   "day_label": "Upcoming",
   "surface_lookup_errors": [],
   "surface_failures": [
     {
-      "match": "Franco Roncadelli vs Eduardo Ribeiro",
+      "match": "Lucas Andrade Da Silva vs Luis Carlos Alvarez",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Genaro Alberto Olivieri vs Juan Manuel La Serna",
+      "match": "Luis Guto Miguel vs Timo Legout",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Axel Nefve vs Luis Carlos Alvarez",
+      "match": "Tristan Schoolkate vs Dane Sweeny",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Samuel Heredia vs Timo Legout",
+      "match": "Masamichi Imamura vs Hayato Matsuoka",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Luis Guto Miguel vs Blaise Bicknell",
+      "match": "Philip Henning vs Oleksandr Ovcharenko",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Christian Langmo vs Dane Sweeny",
+      "match": "Tuncay Duran vs Thomas Faurel",
       "error": "Event metadata identity mismatch"
     },
     {
-      "match": "Hayato Matsuoka vs Naoya Honda",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Kaichi Uchida vs Masamichi Imamura",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Tristan Schoolkate vs Omar Jasika",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Matthew William Donald vs Tuncay Duran",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Oleksandr Ovcharenko vs Andres Martin",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Thomas Faurel vs Deigo Dedura-Palomero",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Philip Henning vs Gilles Arnaud Bailly",
-      "error": "Event metadata identity mismatch"
-    },
-    {
-      "match": "Gabriel Debru vs Kimmer Coppejans",
+      "match": "Giorgio Tabacco vs Gabriel Debru",
       "error": "Event metadata identity mismatch"
     }
   ],
   "surface_assignments": [],
-  "events_found": 14,
+  "events_found": 7,
   "events": [
-    "Franco Roncadelli vs Eduardo Ribeiro",
-    "Genaro Alberto Olivieri vs Juan Manuel La Serna",
-    "Axel Nefve vs Luis Carlos Alvarez",
-    "Samuel Heredia vs Timo Legout",
-    "Luis Guto Miguel vs Blaise Bicknell",
-    "Christian Langmo vs Dane Sweeny",
-    "Hayato Matsuoka vs Naoya Honda",
-    "Kaichi Uchida vs Masamichi Imamura",
-    "Tristan Schoolkate vs Omar Jasika",
-    "Matthew William Donald vs Tuncay Duran",
-    "Oleksandr Ovcharenko vs Andres Martin",
-    "Thomas Faurel vs Deigo Dedura-Palomero",
-    "Philip Henning vs Gilles Arnaud Bailly",
-    "Gabriel Debru vs Kimmer Coppejans"
+    "Lucas Andrade Da Silva vs Luis Carlos Alvarez",
+    "Luis Guto Miguel vs Timo Legout",
+    "Tristan Schoolkate vs Dane Sweeny",
+    "Masamichi Imamura vs Hayato Matsuoka",
+    "Philip Henning vs Oleksandr Ovcharenko",
+    "Tuncay Duran vs Thomas Faurel",
+    "Giorgio Tabacco vs Gabriel Debru"
   ],
   "spread_markets_found": 0,
   "parser_failures": [],
   "already_live_events": [],
-  "unique_event_pages": 14,
+  "unique_event_pages": 7,
   "unpriced_spread_markets": [],
   "executable_spread_markets": 0,
   "matches_parsed": 0,
